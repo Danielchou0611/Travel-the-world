@@ -1,0 +1,2 @@
+# Week 1 pipeline uses only the Python standard library.
+# pandas/matplotlib/plotly can be added in later weeks for analysis charts.
