@@ -16,68 +16,89 @@ import {
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import { useMemo, useState } from "react";
-
-type ItineraryItem = {
-  id: string;
-  time: string;
-  placeName: string;
-  region: string;
-  xaiScore: number;
-  xaiReason: string;
-  imageUrl: string;
-};
+import { deleteItineraryItem, updateItineraryOrder } from "./api/itineraryApi";
+import { recalculateSchedule } from "./lib/schedule";
+import type { ItineraryItem } from "./types";
 
 const initialItems: ItineraryItem[] = [
   {
     id: "sensoji",
-    time: "09:00",
     placeName: "Senso-ji",
     region: "Tokyo",
-    xaiScore: 0.9032,
+    baseScore: 0.9316,
     xaiReason: "歷史文化符合度高，評論量穩定，距離適中。",
     imageUrl:
       "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&w=900&q=80",
+    visitDurationMin: 90,
+    order: 1,
+    travelTimeFromPreviousMin: 0,
+    startTime: "09:00",
+    endTime: "10:30",
+    scheduleScore: 1,
+    finalScore: 0,
   },
   {
     id: "tsukiji",
-    time: "11:30",
     placeName: "Tsukiji Outer Market",
     region: "Tokyo",
-    xaiScore: 0.8444,
+    baseScore: 0.8704,
     xaiReason: "美食偏好符合度高，適合安排午餐與市場散步。",
     imageUrl:
       "https://images.unsplash.com/photo-1554797589-7241bb691973?auto=format&fit=crop&w=900&q=80",
+    visitDurationMin: 75,
+    order: 2,
+    travelTimeFromPreviousMin: 30,
+    startTime: "11:00",
+    endTime: "12:15",
+    scheduleScore: 0.9,
+    finalScore: 0,
   },
   {
     id: "meiji",
-    time: "14:00",
     placeName: "Meiji Jingu",
     region: "Tokyo",
-    xaiScore: 0.8816,
+    baseScore: 0.9099,
     xaiReason: "自然與神社主題兼具，午後節奏較輕鬆。",
     imageUrl:
       "https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=900&q=80",
+    visitDurationMin: 90,
+    order: 3,
+    travelTimeFromPreviousMin: 30,
+    startTime: "12:45",
+    endTime: "14:15",
+    scheduleScore: 0.9,
+    finalScore: 0,
   },
   {
     id: "shibuya",
-    time: "17:00",
     placeName: "Shibuya Crossing",
     region: "Tokyo",
-    xaiScore: 0.8475,
-    xaiReason: "城市步行與拍照體驗強，距離效率佳。",
+    baseScore: 0.8882,
+    xaiReason: "城市步行與拍照體驗強，周邊景點密度高。",
     imageUrl:
       "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=900&q=80",
+    visitDurationMin: 75,
+    order: 4,
+    travelTimeFromPreviousMin: 30,
+    startTime: "14:45",
+    endTime: "16:00",
+    scheduleScore: 0.9,
+    finalScore: 0,
   },
 ];
+
+const scheduledInitialItems = recalculateSchedule(initialItems);
 
 function SortableItineraryItem({
   item,
   index,
   onDelete,
+  isSaving,
 }: {
   item: ItineraryItem;
   index: number;
   onDelete: (id: string) => void;
+  isSaving: boolean;
 }) {
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } =
     useSortable({ id: item.id });
@@ -100,15 +121,25 @@ function SortableItineraryItem({
       <img src={item.imageUrl} alt={item.placeName} />
       <div className="item-copy">
         <div className="item-meta">
-          <span>Day 1 · #{index + 1}</span>
-          <span>{item.time}</span>
+          <span>Day 1 · #{item.order}</span>
+          <span>{item.startTime}-{item.endTime}</span>
           <span>{item.region}</span>
+          <span>移動 {item.travelTimeFromPreviousMin} min</span>
         </div>
         <h2>{item.placeName}</h2>
         <p>{item.xaiReason}</p>
-        <strong>XAI Score {item.xaiScore.toFixed(4)}</strong>
+        <div className="score-row">
+          <strong>Base {item.baseScore.toFixed(4)}</strong>
+          <strong>Schedule {item.scheduleScore.toFixed(4)}</strong>
+          <strong>Final {item.finalScore.toFixed(4)}</strong>
+        </div>
       </div>
-      <button className="delete-button" type="button" onClick={() => onDelete(item.id)}>
+      <button
+        className="delete-button"
+        type="button"
+        disabled={isSaving}
+        onClick={() => onDelete(item.id)}
+      >
         刪除
       </button>
     </article>
@@ -116,7 +147,9 @@ function SortableItineraryItem({
 }
 
 export function App() {
-  const [items, setItems] = useState(initialItems);
+  const [items, setItems] = useState(scheduledInitialItems);
+  const [savingItemId, setSavingItemId] = useState<string | null>(null);
+  const [syncStatus, setSyncStatus] = useState("尚未同步");
   const sensors = useSensors(
     useSensor(PointerSensor),
     useSensor(KeyboardSensor, {
@@ -125,21 +158,49 @@ export function App() {
   );
   const ids = useMemo(() => items.map((item) => item.id), [items]);
 
-  function handleDragEnd(event: DragEndEvent) {
+  async function handleDragEnd(event: DragEndEvent) {
     const { active, over } = event;
     if (!over || active.id === over.id) {
       return;
     }
 
-    setItems((currentItems) => {
-      const oldIndex = currentItems.findIndex((item) => item.id === active.id);
-      const newIndex = currentItems.findIndex((item) => item.id === over.id);
-      return arrayMove(currentItems, oldIndex, newIndex);
-    });
+    const activeIndex = items.findIndex((item) => item.id === active.id);
+    const overIndex = items.findIndex((item) => item.id === over.id);
+    if (activeIndex < 0 || overIndex < 0) {
+      return;
+    }
+
+    const reorderedItems = recalculateSchedule(arrayMove(items, activeIndex, overIndex));
+    setItems(reorderedItems);
+    setSyncStatus("儲存排序中...");
+
+    const result = await updateItineraryOrder(reorderedItems);
+    setSyncStatus(result.ok ? "排序已送出" : `排序尚未送出：${result.message}`);
   }
 
-  function handleDelete(id: string) {
-    setItems((currentItems) => currentItems.filter((item) => item.id !== id));
+  async function handleDelete(id: string) {
+    const itemToDelete = items.find((item) => item.id === id);
+    if (!itemToDelete) {
+      return;
+    }
+
+    setSavingItemId(id);
+    setItems((currentItems) => recalculateSchedule(currentItems.filter((item) => item.id !== id)));
+    setSyncStatus("刪除景點中...");
+
+    const result = await deleteItineraryItem(id);
+    if (result.ok) {
+      setSyncStatus("刪除已送出");
+    } else {
+      setItems((currentItems) => {
+        const previousIndex = items.findIndex((item) => item.id === id);
+        const nextItems = [...currentItems];
+        nextItems.splice(Math.max(previousIndex, 0), 0, itemToDelete);
+        return recalculateSchedule(nextItems);
+      });
+      setSyncStatus(`刪除尚未送出：${result.message}`);
+    }
+    setSavingItemId(null);
   }
 
   return (
@@ -152,6 +213,7 @@ export function App() {
         <div className="summary">
           <span>{items.length} stops</span>
           <span>Drag to reorder</span>
+          <span>{syncStatus}</span>
         </div>
       </section>
 
@@ -163,6 +225,7 @@ export function App() {
                 item={item}
                 index={index}
                 key={item.id}
+                isSaving={savingItemId === item.id}
                 onDelete={handleDelete}
               />
             ))}

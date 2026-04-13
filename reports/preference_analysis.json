@@ -1,0 +1,146 @@
+{
+  "total_users": 12,
+  "top_interests": [
+    {
+      "name": "food",
+      "count": 4
+    },
+    {
+      "name": "nature",
+      "count": 3
+    },
+    {
+      "name": "history",
+      "count": 2
+    },
+    {
+      "name": "culture",
+      "count": 2
+    },
+    {
+      "name": "shopping",
+      "count": 2
+    },
+    {
+      "name": "photo",
+      "count": 2
+    },
+    {
+      "name": "anime",
+      "count": 2
+    },
+    {
+      "name": "indoor",
+      "count": 2
+    },
+    {
+      "name": "family",
+      "count": 2
+    },
+    {
+      "name": "temple",
+      "count": 1
+    }
+  ],
+  "travel_style_distribution": {
+    "relaxed": 5,
+    "intensive": 4,
+    "theme": 3
+  },
+  "budget_distribution": {
+    "medium": 7,
+    "high": 3,
+    "low": 2
+  },
+  "mobility_distribution": {
+    "high": 5,
+    "medium": 5,
+    "low": 2
+  },
+  "personas": {
+    "A": {
+      "users": 4,
+      "top_interests": [
+        {
+          "name": "food",
+          "count": 2
+        },
+        {
+          "name": "photo",
+          "count": 2
+        },
+        {
+          "name": "history",
+          "count": 1
+        },
+        {
+          "name": "culture",
+          "count": 1
+        },
+        {
+          "name": "nature",
+          "count": 1
+        }
+      ],
+      "dominant_style": "relaxed",
+      "dominant_mobility": "high",
+      "itinerary_hint": "每日 3-4 個景點，適合輕鬆型行程。"
+    },
+    "B": {
+      "users": 4,
+      "top_interests": [
+        {
+          "name": "anime",
+          "count": 2
+        },
+        {
+          "name": "museum",
+          "count": 1
+        },
+        {
+          "name": "indoor",
+          "count": 1
+        },
+        {
+          "name": "nature",
+          "count": 1
+        },
+        {
+          "name": "hot_spring",
+          "count": 1
+        }
+      ],
+      "dominant_style": "intensive",
+      "dominant_mobility": "high",
+      "itinerary_hint": "每日 5-6 個景點，但需要檢查交通時間。"
+    },
+    "C": {
+      "users": 4,
+      "top_interests": [
+        {
+          "name": "history",
+          "count": 1
+        },
+        {
+          "name": "castle",
+          "count": 1
+        },
+        {
+          "name": "heritage",
+          "count": 1
+        },
+        {
+          "name": "park",
+          "count": 1
+        },
+        {
+          "name": "family",
+          "count": 1
+        }
+      ],
+      "dominant_style": "relaxed",
+      "dominant_mobility": "medium",
+      "itinerary_hint": "每日 3-4 個景點，適合輕鬆型行程。"
+    }
+  }
+}

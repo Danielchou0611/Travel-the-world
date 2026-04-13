@@ -2,6 +2,13 @@
 
 Week 1 delivers the first data pipeline, scoring formula documentation, a 55-attraction sample dataset, and a React itinerary editor prototype using `dnd-kit`.
 
+Week 2 adds API-ready itinerary update/delete logic and a Python user preference analysis flow. The 200+ real attraction dataset is intentionally left pending until the formal data source is available.
+
+Scoring and schedule recalculation notes:
+
+- `docs/scoring_formula.md`
+- `docs/schedule_logic.md`
+
 ## Data Pipeline
 
 ```bash
@@ -28,9 +35,32 @@ npm install
 npm run dev
 ```
 
+Use this when the Django API runs on another origin:
+
+```bash
+VITE_API_BASE_URL=http://127.0.0.1:8000 npm run dev
+```
+
+When `VITE_API_BASE_URL` is not set, the frontend uses a mock API so drag-and-drop and delete can be tested before the Django backend exists.
+
 Build check:
 
 ```bash
 cd frontend
 npm run build
 ```
+
+## User Preference Analysis
+
+```bash
+python3 scripts/analyze_preferences.py
+```
+
+Input:
+
+- `data/raw/user_preferences_sample.csv`
+
+Output:
+
+- `reports/preference_analysis.json`
+- `reports/preference_analysis.md`

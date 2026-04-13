@@ -1,0 +1,13 @@
+user_id,persona,travel_style,budget_level,mobility,interests
+u001,A,relaxed,medium,high,history|culture|food
+u002,A,relaxed,medium,medium,nature|temple|food
+u003,A,intensive,low,high,city_walk|shopping|photo
+u004,B,theme,high,medium,anime|museum|indoor
+u005,B,relaxed,medium,low,nature|hot_spring|family
+u006,B,intensive,high,high,night_view|food|city_view
+u007,C,theme,medium,medium,history|castle|heritage
+u008,C,relaxed,low,low,park|family|walk
+u009,C,intensive,medium,high,market|local|food
+u010,A,theme,high,medium,art|photo|indoor
+u011,B,intensive,medium,high,theme_park|anime|shopping
+u012,C,relaxed,medium,medium,coast|nature|culture

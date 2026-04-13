@@ -138,7 +138,8 @@ button {
 }
 
 .item-meta span,
-.item-copy strong {
+.item-copy strong,
+.score-row strong {
   color: #386641;
   font-size: 0.9rem;
   font-weight: 800;
@@ -156,6 +157,12 @@ button {
   margin: 10px 0;
   color: #4e5651;
   line-height: 1.6;
+}
+
+.score-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .sr-only {
