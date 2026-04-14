@@ -1,0 +1,2802 @@
+[
+    {
+        "id": "Q11402968",
+        "name": "北海道立旭川美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(142.355361 43.774139)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%8C%97%E6%B5%B7%E9%81%93%E7%AB%8B%E6%97%AD%E5%B7%9D%E7%BE%8E%E8%A1%93%E9%A4%A8.JPG"
+    },
+    {
+        "id": "Q22120303",
+        "name": "北海道立函館美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(140.754638888 41.793416666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hakodate%20Museum%20of%20Art%20Hokkaido%20Japan04s3.jpg"
+    },
+    {
+        "id": "Q135972050",
+        "name": "夕張市美術館",
+        "type": "美術館",
+        "coordinates": "Point(141.975 43.058)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yubari%20Municipal%20Art%20Museum%20Collapse.JPG"
+    },
+    {
+        "id": "Q17225728",
+        "name": "中札内美術村",
+        "type": "庭園",
+        "coordinates": "Point(143.1625 42.6775)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131013%20Nakasatsunai%20Art%20Village%20Hokkaido%20Japan00s3.jpg"
+    },
+    {
+        "id": "Q11402955",
+        "name": "北海道立三岸好太郎美術館",
+        "type": "美術館",
+        "coordinates": "Point(141.332833 43.061583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%89%E5%B2%B8%E5%A5%BD%E5%A4%AA%E9%83%8E.JPG"
+    },
+    {
+        "id": "Q11641304",
+        "name": "道の駅愛ランド湧別",
+        "type": "主題樂園",
+        "coordinates": "Point(143.719222222 44.13075)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michinoeki%20Ailand%20Yubetsu.jpg"
+    },
+    {
+        "id": "Q109603910",
+        "name": "きたみファミリーランド",
+        "type": "主題樂園",
+        "coordinates": "Point(143.9188439 43.7558101)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11402997",
+        "name": "北海道立釧路藝術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(144.379806 42.982722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kushiro%20Art%20Museum%20Hokkaido%20Japan01s5.jpg"
+    },
+    {
+        "id": "Q11659823",
+        "name": "雪の美術館",
+        "type": "廃止された博物館",
+        "coordinates": "Point(142.30847222 43.77172222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Snow%20Crystals%20Museum-20160725-1.jpg"
+    },
+    {
+        "id": "Q30227146",
+        "name": "小樽芸術村",
+        "type": "公司博物館",
+        "coordinates": "Point(141.001944444 43.198055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nitori%20Otaru%20Art%20Base%2002.jpg"
+    },
+    {
+        "id": "Q1298335",
+        "name": "莫埃來沼公園",
+        "type": "総合公園 (日本)",
+        "coordinates": "Point(141.42991389 43.12447222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Moere02.jpg"
+    },
+    {
+        "id": "Q11607218",
+        "name": "網走市立美術館",
+        "type": "美術館",
+        "coordinates": "Point(144.267639 44.019333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Abashiri%20Municipal%20Art%20Museum01s3.jpg"
+    },
+    {
+        "id": "Q123124756",
+        "name": "小原道城書道美術館",
+        "type": "美術館",
+        "coordinates": "Point(141.353191 43.063646)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11648286",
+        "name": "釧路市立美術館",
+        "type": "美術館",
+        "coordinates": "Point(144.386 42.978028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Manabot%20Nusamai%20Kushiro%20Hokkaido%20Japan02n.jpg"
+    },
+    {
+        "id": "Q11641304",
+        "name": "道の駅愛ランド湧別",
+        "type": "道之驛",
+        "coordinates": "Point(143.719222222 44.13075)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michinoeki%20Ailand%20Yubetsu.jpg"
+    },
+    {
+        "id": "Q11403934",
+        "name": "北網圏北見文化センター",
+        "type": "歷史博物館",
+        "coordinates": "Point(143.90361111 43.81833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/HokumoukenKitamiBunkaCenter.JPG"
+    },
+    {
+        "id": "Q11402955",
+        "name": "北海道立三岸好太郎美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(141.332833 43.061583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%89%E5%B2%B8%E5%A5%BD%E5%A4%AA%E9%83%8E.JPG"
+    },
+    {
+        "id": "Q7382688",
+        "name": "留壽都度假村",
+        "type": "高爾夫球場",
+        "coordinates": "Point(140.90329 42.74968)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rusutsu%20WestMt%28200703%29.jpg"
+    },
+    {
+        "id": "Q17222455",
+        "name": "苫小牧市美術博物館",
+        "type": "博物館",
+        "coordinates": "Point(141.612952 42.637496)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tomakomai%20City%20Museum%201.JPG"
+    },
+    {
+        "id": "Q1298335",
+        "name": "莫埃來沼公園",
+        "type": "美術館",
+        "coordinates": "Point(141.42991389 43.12447222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Moere02.jpg"
+    },
+    {
+        "id": "Q11402992",
+        "name": "北海道立近代美術館",
+        "type": "美術館",
+        "coordinates": "Point(141.330389 43.060278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%8C%97%E6%B5%B7%E9%81%93%E7%AB%8B%E8%BF%91%E4%BB%A3%E7%BE%8E%E8%A1%93%E9%A4%A8.JPG"
+    },
+    {
+        "id": "Q17225728",
+        "name": "中札内美術村",
+        "type": "設施",
+        "coordinates": "Point(143.1625 42.6775)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131013%20Nakasatsunai%20Art%20Village%20Hokkaido%20Japan00s3.jpg"
+    },
+    {
+        "id": "Q11364150",
+        "name": "中山峠写真の森美術館",
+        "type": "美術館",
+        "coordinates": "Point(141.09675 42.85519444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q133282721",
+        "name": "釧路湿原美術館",
+        "type": "纪念博物馆",
+        "coordinates": "Point(144.14631 43.143119)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q17222455",
+        "name": "苫小牧市美術博物館",
+        "type": "美術館",
+        "coordinates": "Point(141.612952 42.637496)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tomakomai%20City%20Museum%201.JPG"
+    },
+    {
+        "id": "Q11403934",
+        "name": "北網圏北見文化センター",
+        "type": "科學博物館",
+        "coordinates": "Point(143.90361111 43.81833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/HokumoukenKitamiBunkaCenter.JPG"
+    },
+    {
+        "id": "Q11659823",
+        "name": "雪の美術館",
+        "type": "美術館",
+        "coordinates": "Point(142.30847222 43.77172222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Snow%20Crystals%20Museum-20160725-1.jpg"
+    },
+    {
+        "id": "Q11475619",
+        "name": "岩見沢市絵画ホール・松島正幸記念館",
+        "type": "美術館",
+        "coordinates": "Point(141.768083 43.201056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iwamizawa-city-picture-gallery-and-Matsushima-Masayuki-memorial-hall.JPG"
+    },
+    {
+        "id": "Q11402964",
+        "name": "北海道立帶廣美術館",
+        "type": "美術館",
+        "coordinates": "Point(143.185528 42.904583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131012%20Hokkaido%20Obihiro%20Museum%20of%20Art01s3.jpg"
+    },
+    {
+        "id": "Q133282721",
+        "name": "釧路湿原美術館",
+        "type": "美術館",
+        "coordinates": "Point(144.14631 43.143119)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q121268815",
+        "name": "北一ヴェネツィア美術館",
+        "type": "美術館",
+        "coordinates": "Point(141.0068999 43.194163167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sakaimachi%20street%20Otaru%20Hokkaido05s3.jpg"
+    },
+    {
+        "id": "Q11402472",
+        "name": "北海道Greenland",
+        "type": "主題樂園",
+        "coordinates": "Point(141.78 43.165833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hokkaido-Greenland-amusement-park.JPG"
+    },
+    {
+        "id": "Q11402992",
+        "name": "北海道立近代美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(141.330389 43.060278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%8C%97%E6%B5%B7%E9%81%93%E7%AB%8B%E8%BF%91%E4%BB%A3%E7%BE%8E%E8%A1%93%E9%A4%A8.JPG"
+    },
+    {
+        "id": "Q11462169",
+        "name": "市立小樽美術館",
+        "type": "美術館",
+        "coordinates": "Point(140.999833 43.196778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Otaru%20City%20Museum%20Branch01s5.jpg"
+    },
+    {
+        "id": "Q132541511",
+        "name": "木田金次郎美術館",
+        "type": "美術館",
+        "coordinates": "Point(140.515156 42.983915)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q2420835",
+        "name": "札幌宮の森美術館",
+        "type": "美術館",
+        "coordinates": "Point(141.30245 43.05716111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bottazzi%20and%20Miyanomori.jpg"
+    },
+    {
+        "id": "Q7382688",
+        "name": "留壽都度假村",
+        "type": "滑雪場",
+        "coordinates": "Point(140.90329 42.74968)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rusutsu%20WestMt%28200703%29.jpg"
+    },
+    {
+        "id": "Q7382688",
+        "name": "留壽都度假村",
+        "type": "主題樂園",
+        "coordinates": "Point(140.90329 42.74968)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rusutsu%20WestMt%28200703%29.jpg"
+    },
+    {
+        "id": "Q11285668",
+        "name": "アートホール東洲館",
+        "type": "美術館",
+        "coordinates": "Point(142.04252778 43.72116667)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11502473",
+        "name": "新星館 須田剋太・島岡達三美術館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(142.47233333 43.52147222)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11402964",
+        "name": "北海道立帶廣美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(143.185528 42.904583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131012%20Hokkaido%20Obihiro%20Museum%20of%20Art01s3.jpg"
+    },
+    {
+        "id": "Q123252986",
+        "name": "神田日勝記念美術館",
+        "type": "美術館",
+        "coordinates": "Point(142.990094 43.096717)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kandanissho%20memorial%20museum%20of%20art.jpg"
+    },
+    {
+        "id": "Q2420835",
+        "name": "札幌宮の森美術館",
+        "type": "藝廊",
+        "coordinates": "Point(141.30245 43.05716111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bottazzi%20and%20Miyanomori.jpg"
+    },
+    {
+        "id": "Q17225728",
+        "name": "中札内美術村",
+        "type": "ミュージアム・コンプレックス",
+        "coordinates": "Point(143.1625 42.6775)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131013%20Nakasatsunai%20Art%20Village%20Hokkaido%20Japan00s3.jpg"
+    },
+    {
+        "id": "Q30922602",
+        "name": "置戶波波美術館",
+        "type": "美術館",
+        "coordinates": "Point(143.58958333 43.67694444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%BD%AE%E6%88%B8%E3%81%BD%E3%81%A3%E3%81%BD%E7%B5%B5%E7%94%BB%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q30227146",
+        "name": "小樽芸術村",
+        "type": "ミュージアム・コンプレックス",
+        "coordinates": "Point(141.001944444 43.198055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nitori%20Otaru%20Art%20Base%2002.jpg"
+    },
+    {
+        "id": "Q11502473",
+        "name": "新星館 須田剋太・島岡達三美術館",
+        "type": "美術館",
+        "coordinates": "Point(142.47233333 43.52147222)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11402955",
+        "name": "北海道立三岸好太郎美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(141.332833 43.061583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%89%E5%B2%B8%E5%A5%BD%E5%A4%AA%E9%83%8E.JPG"
+    },
+    {
+        "id": "Q1298335",
+        "name": "莫埃來沼公園",
+        "type": "公園",
+        "coordinates": "Point(141.42991389 43.12447222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Moere02.jpg"
+    },
+    {
+        "id": "Q11502473",
+        "name": "新星館 須田剋太・島岡達三美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(142.47233333 43.52147222)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q123464807",
+        "name": "西村計雄記念美術館",
+        "type": "美術館",
+        "coordinates": "Point(140.609123 42.974995)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11249478",
+        "name": "札幌藝術之森美術館",
+        "type": "美術館",
+        "coordinates": "Point(141.34013889 42.93922222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sapporo%20art%20museum.jpg"
+    },
+    {
+        "id": "Q17225728",
+        "name": "中札内美術村",
+        "type": "美術館",
+        "coordinates": "Point(143.1625 42.6775)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131013%20Nakasatsunai%20Art%20Village%20Hokkaido%20Japan00s3.jpg"
+    },
+    {
+        "id": "Q30227146",
+        "name": "小樽芸術村",
+        "type": "美術館",
+        "coordinates": "Point(141.001944444 43.198055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nitori%20Otaru%20Art%20Base%2002.jpg"
+    },
+    {
+        "id": "Q135972050",
+        "name": "夕張市美術館",
+        "type": "廃止された博物館",
+        "coordinates": "Point(141.975 43.058)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yubari%20Municipal%20Art%20Museum%20Collapse.JPG"
+    },
+    {
+        "id": "Q11403934",
+        "name": "北網圏北見文化センター",
+        "type": "美術館",
+        "coordinates": "Point(143.90361111 43.81833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/HokumoukenKitamiBunkaCenter.JPG"
+    },
+    {
+        "id": "Q28691367",
+        "name": "HOKUBU記念絵画館",
+        "type": "美術館",
+        "coordinates": "Point(141.36516 43.04985)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11402968",
+        "name": "北海道立旭川美術館",
+        "type": "美術館",
+        "coordinates": "Point(142.355361 43.774139)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%8C%97%E6%B5%B7%E9%81%93%E7%AB%8B%E6%97%AD%E5%B7%9D%E7%BE%8E%E8%A1%93%E9%A4%A8.JPG"
+    },
+    {
+        "id": "Q132544758",
+        "name": "荒井記念美術館",
+        "type": "纪念博物馆",
+        "coordinates": "Point(140.514622 42.950084)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132545224",
+        "name": "小川原脩記念美術館",
+        "type": "纪念博物馆",
+        "coordinates": "Point(140.767758 42.906621)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q22120303",
+        "name": "北海道立函館美術館",
+        "type": "美術館",
+        "coordinates": "Point(140.754638888 41.793416666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hakodate%20Museum%20of%20Art%20Hokkaido%20Japan04s3.jpg"
+    },
+    {
+        "id": "Q132544758",
+        "name": "荒井記念美術館",
+        "type": "美術館",
+        "coordinates": "Point(140.514622 42.950084)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132545224",
+        "name": "小川原脩記念美術館",
+        "type": "美術館",
+        "coordinates": "Point(140.767758 42.906621)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q7382688",
+        "name": "留壽都度假村",
+        "type": "度假村",
+        "coordinates": "Point(140.90329 42.74968)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rusutsu%20WestMt%28200703%29.jpg"
+    },
+    {
+        "id": "Q11402997",
+        "name": "北海道立釧路藝術館",
+        "type": "美術館",
+        "coordinates": "Point(144.379806 42.982722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kushiro%20Art%20Museum%20Hokkaido%20Japan01s5.jpg"
+    },
+    {
+        "id": "Q11462160",
+        "name": "小樽市綜合博物館",
+        "type": "博物館",
+        "coordinates": "Point(141.001298 43.211254)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Otaru%20city%20museum%20main%20entrance.jpg"
+    },
+    {
+        "id": "Q11403710",
+        "name": "北海道開拓村",
+        "type": "戶外博物館",
+        "coordinates": "Point(141.497056 43.048278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%8C%97%E6%B5%B7%E9%81%93%E9%96%8B%E6%8B%93%E3%81%AE%E6%9D%91%28Historical%20Village%20of%20Hokkaido%29%20-%20panoramio%20%281%29.jpg"
+    },
+    {
+        "id": "Q11403710",
+        "name": "北海道開拓村",
+        "type": "戶外博物館",
+        "coordinates": "Point(141.497056 43.048278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%8C%97%E6%B5%B7%E9%81%93%E9%96%8B%E6%8B%93%E3%81%AE%E6%9D%91%28Historical%20Village%20of%20Hokkaido%29%20-%20panoramio%20%284%29.jpg"
+    },
+    {
+        "id": "Q11403710",
+        "name": "北海道開拓村",
+        "type": "戶外博物館",
+        "coordinates": "Point(141.497056 43.048278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/220722%20Historical%20Village%20of%20Hokkaido%20Sapporo%20Hokkaido%20Japan25s12.jpg"
+    },
+    {
+        "id": "Q11521485",
+        "name": "札幌農学校第2農場",
+        "type": "戶外博物館",
+        "coordinates": "Point(141.340416666 43.08175)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/151010%20Sapporo%20Agricultural%20College%20Hokkaido%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q123124887",
+        "name": "札幌市下水道科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(141.342609 43.116976)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sapporo%20Sewerage%20Science%20Museum.JPG"
+    },
+    {
+        "id": "Q11542208",
+        "name": "標津鮭魚科學館",
+        "type": "水族館",
+        "coordinates": "Point(145.116139 43.660083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shibetsu%20Salmon%20Museum.JPG"
+    },
+    {
+        "id": "Q131431537",
+        "name": "はこだてみらい館",
+        "type": "科學博物館",
+        "coordinates": "Point(140.728492 41.772871)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11305053",
+        "name": "サホロリゾート ベア・マウンテン",
+        "type": "クマ牧場",
+        "coordinates": "Point(142.807777777 43.178055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sahoro%20Resort%20Bear%20Mountain%20%E3%82%B5%E3%83%9B%E3%83%AD%E3%83%AA%E3%82%BE%E3%83%BC%E3%83%88%20%E3%83%99%E3%82%A2%E3%83%9E%E3%82%A6%E3%83%B3%E3%83%86%E3%83%B306.jpg"
+    },
+    {
+        "id": "Q76283211",
+        "name": "民族共生象徵空間",
+        "type": "民族誌学博物館",
+        "coordinates": "Point(141.365527777 42.560277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shiraoi-upopoy%2035.jpg"
+    },
+    {
+        "id": "Q11521430",
+        "name": "札幌市青少年科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(141.472127 43.036229)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Seishounen%20Kagakukan%28Sapporo%29.jpg"
+    },
+    {
+        "id": "Q11403710",
+        "name": "北海道開拓村",
+        "type": "歷史博物館",
+        "coordinates": "Point(141.497056 43.048278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%8C%97%E6%B5%B7%E9%81%93%E9%96%8B%E6%8B%93%E3%81%AE%E6%9D%91%28Historical%20Village%20of%20Hokkaido%29%20-%20panoramio%20%281%29.jpg"
+    },
+    {
+        "id": "Q11403710",
+        "name": "北海道開拓村",
+        "type": "歷史博物館",
+        "coordinates": "Point(141.497056 43.048278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%8C%97%E6%B5%B7%E9%81%93%E9%96%8B%E6%8B%93%E3%81%AE%E6%9D%91%28Historical%20Village%20of%20Hokkaido%29%20-%20panoramio%20%284%29.jpg"
+    },
+    {
+        "id": "Q11403710",
+        "name": "北海道開拓村",
+        "type": "歷史博物館",
+        "coordinates": "Point(141.497056 43.048278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/220722%20Historical%20Village%20of%20Hokkaido%20Sapporo%20Hokkaido%20Japan25s12.jpg"
+    },
+    {
+        "id": "Q21652708",
+        "name": "帶廣市兒童會館",
+        "type": "公開天文台",
+        "coordinates": "Point(143.186111111 42.905277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131012%20Obihiro%20Municipal%20Children%20Hall01s3.jpg"
+    },
+    {
+        "id": "Q11511737",
+        "name": "旭川市科学館サイパル",
+        "type": "公開天文台",
+        "coordinates": "Point(142.3705 43.75630556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%82%B5%E3%82%A4%E3%83%91%E3%83%AB.JPG"
+    },
+    {
+        "id": "Q123127795",
+        "name": "北見市ところ遺跡の森",
+        "type": "戶外博物館",
+        "coordinates": "Point(143.975985 44.124939)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokoro%20Site%20%28Tokoro%20Forest%20Park%20of%20Archaeological%20Sites%29.jpg"
+    },
+    {
+        "id": "Q117312350",
+        "name": "洞爺湖町立火山科学館",
+        "type": "火山博物館",
+        "coordinates": "Point(140.815111111 42.563944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toyako%20volcano%20science%20museum.JPG"
+    },
+    {
+        "id": "Q2842754",
+        "name": "北海道大學植物園",
+        "type": "植物園",
+        "coordinates": "Point(141.3426479 43.063892)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131103%20Hokkaido%20University%20Botanical%20Gardens%20Sapporo%20Hokkaido%20Japan18o.jpg"
+    },
+    {
+        "id": "Q132555459",
+        "name": "稚内市青少年科学館",
+        "type": "天象儀",
+        "coordinates": "Point(141.645206 45.448985)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Wakkanai%20municipal%20youth%20science%20museum%20and%20NOSHAPPU%20Kan-ryu%20aquarium.JPG"
+    },
+    {
+        "id": "Q132550120",
+        "name": "滝川市こども科学館",
+        "type": "兒童博物館",
+        "coordinates": "Point(141.914889 43.552518)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132555459",
+        "name": "稚内市青少年科学館",
+        "type": "兒童博物館",
+        "coordinates": "Point(141.645206 45.448985)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Wakkanai%20municipal%20youth%20science%20museum%20and%20NOSHAPPU%20Kan-ryu%20aquarium.JPG"
+    },
+    {
+        "id": "Q21652708",
+        "name": "帶廣市兒童會館",
+        "type": "科學博物館",
+        "coordinates": "Point(143.186111111 42.905277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131012%20Obihiro%20Municipal%20Children%20Hall01s3.jpg"
+    },
+    {
+        "id": "Q11511737",
+        "name": "旭川市科学館サイパル",
+        "type": "科學博物館",
+        "coordinates": "Point(142.3705 43.75630556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%82%B5%E3%82%A4%E3%83%91%E3%83%AB.JPG"
+    },
+    {
+        "id": "Q123125643",
+        "name": "札幌国際大学博物館",
+        "type": "大學博物館",
+        "coordinates": "Point(141.425193 43.001323)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q123126971",
+        "name": "DENZAI環境科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(140.973916 42.31339)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11475628",
+        "name": "岩見沢郷土科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(141.783694 43.161556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iwamizawa-park%20local-history-and-science-museum.JPG"
+    },
+    {
+        "id": "Q11521430",
+        "name": "札幌市青少年科学館",
+        "type": "社会教育施設",
+        "coordinates": "Point(141.472127 43.036229)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Seishounen%20Kagakukan%28Sapporo%29.jpg"
+    },
+    {
+        "id": "Q11325868",
+        "name": "ノースサファリサッポロ",
+        "type": "違法建築物",
+        "coordinates": "Point(141.223028 42.947028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Enter%20front.JPG"
+    },
+    {
+        "id": "Q11462160",
+        "name": "小樽市綜合博物館",
+        "type": "科學博物館",
+        "coordinates": "Point(141.001298 43.211254)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Otaru%20city%20museum%20main%20entrance.jpg"
+    },
+    {
+        "id": "Q11521485",
+        "name": "札幌農学校第2農場",
+        "type": "dairy farm",
+        "coordinates": "Point(141.340416666 43.08175)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/151010%20Sapporo%20Agricultural%20College%20Hokkaido%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q11521425",
+        "name": "札幌市豊平川さけ科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(141.34333333 43.00111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/ToyohiragawaSakeKakagukan2004-5.jpg"
+    },
+    {
+        "id": "Q11305053",
+        "name": "サホロリゾート ベア・マウンテン",
+        "type": "野生动物园",
+        "coordinates": "Point(142.807777777 43.178055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sahoro%20Resort%20Bear%20Mountain%20%E3%82%B5%E3%83%9B%E3%83%AD%E3%83%AA%E3%82%BE%E3%83%BC%E3%83%88%20%E3%83%99%E3%82%A2%E3%83%9E%E3%82%A6%E3%83%B3%E3%83%86%E3%83%B306.jpg"
+    },
+    {
+        "id": "Q132551264",
+        "name": "北海道立オホーツク流氷科学センター",
+        "type": "科學博物館",
+        "coordinates": "Point(143.375015 44.328326)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michinoeki%20Okhotsk%20monbetsu.jpg"
+    },
+    {
+        "id": "Q18339280",
+        "name": "北海道大學綜合博物館",
+        "type": "大學博物館",
+        "coordinates": "Point(141.34166667 43.07222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Hokkaido%20University%20Museum.png"
+    },
+    {
+        "id": "Q11325868",
+        "name": "ノースサファリサッポロ",
+        "type": "野生动物园",
+        "coordinates": "Point(141.223028 42.947028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Enter%20front.JPG"
+    },
+    {
+        "id": "Q11521430",
+        "name": "札幌市青少年科学館",
+        "type": "天文台",
+        "coordinates": "Point(141.472127 43.036229)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Seishounen%20Kagakukan%28Sapporo%29.jpg"
+    },
+    {
+        "id": "Q11462160",
+        "name": "小樽市綜合博物館",
+        "type": "交通博物館",
+        "coordinates": "Point(141.001298 43.211254)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Otaru%20city%20museum%20main%20entrance.jpg"
+    },
+    {
+        "id": "Q11521425",
+        "name": "札幌市豊平川さけ科学館",
+        "type": "水族館",
+        "coordinates": "Point(141.34333333 43.00111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/ToyohiragawaSakeKakagukan2004-5.jpg"
+    },
+    {
+        "id": "Q117312350",
+        "name": "洞爺湖町立火山科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(140.815111111 42.563944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toyako%20volcano%20science%20museum.JPG"
+    },
+    {
+        "id": "Q11475628",
+        "name": "岩見沢郷土科学館",
+        "type": "地方文化館",
+        "coordinates": "Point(141.783694 43.161556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iwamizawa-park%20local-history-and-science-museum.JPG"
+    },
+    {
+        "id": "Q11511737",
+        "name": "旭川市科学館サイパル",
+        "type": "社会教育施設",
+        "coordinates": "Point(142.3705 43.75630556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%82%B5%E3%82%A4%E3%83%91%E3%83%AB.JPG"
+    },
+    {
+        "id": "Q11292382",
+        "name": "鄂霍次克流冰館",
+        "type": "科學博物館",
+        "coordinates": "Point(144.239778 44.001056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tentozan02.JPG"
+    },
+    {
+        "id": "Q11648277",
+        "name": "釧路市こども遊学館",
+        "type": "科學博物館",
+        "coordinates": "Point(144.37888889 42.98666667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%93%E3%81%A9%E3%82%82%E9%81%8A%E5%AD%A6%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q132555459",
+        "name": "稚内市青少年科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(141.645206 45.448985)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Wakkanai%20municipal%20youth%20science%20museum%20and%20NOSHAPPU%20Kan-ryu%20aquarium.JPG"
+    },
+    {
+        "id": "Q76283211",
+        "name": "民族共生象徵空間",
+        "type": "國立博物館",
+        "coordinates": "Point(141.365527777 42.560277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shiraoi-upopoy%2035.jpg"
+    },
+    {
+        "id": "Q2842754",
+        "name": "北海道大學植物園",
+        "type": "大學博物館",
+        "coordinates": "Point(141.3426479 43.063892)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131103%20Hokkaido%20University%20Botanical%20Gardens%20Sapporo%20Hokkaido%20Japan18o.jpg"
+    },
+    {
+        "id": "Q76283211",
+        "name": "民族共生象徵空間",
+        "type": "戶外博物館",
+        "coordinates": "Point(141.365527777 42.560277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shiraoi-upopoy%2035.jpg"
+    },
+    {
+        "id": "Q11648277",
+        "name": "釧路市こども遊学館",
+        "type": "児童館",
+        "coordinates": "Point(144.37888889 42.98666667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%93%E3%81%A9%E3%82%82%E9%81%8A%E5%AD%A6%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11521485",
+        "name": "札幌農学校第2農場",
+        "type": "示範農場",
+        "coordinates": "Point(141.340416666 43.08175)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/151010%20Sapporo%20Agricultural%20College%20Hokkaido%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q11521430",
+        "name": "札幌市青少年科学館",
+        "type": "公開天文台",
+        "coordinates": "Point(141.472127 43.036229)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Seishounen%20Kagakukan%28Sapporo%29.jpg"
+    },
+    {
+        "id": "Q11511737",
+        "name": "旭川市科学館サイパル",
+        "type": "天象儀",
+        "coordinates": "Point(142.3705 43.75630556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%82%B5%E3%82%A4%E3%83%91%E3%83%AB.JPG"
+    },
+    {
+        "id": "Q11453087",
+        "name": "室蘭市青少年科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(140.973639 42.314167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%AE%A4%E8%98%AD%E5%B8%82%E9%9D%92%E5%B0%91%E5%B9%B4%E7%A7%91%E5%AD%A6%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11542208",
+        "name": "標津鮭魚科學館",
+        "type": "科學博物館",
+        "coordinates": "Point(145.116139 43.660083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shibetsu%20Salmon%20Museum.JPG"
+    },
+    {
+        "id": "Q132550120",
+        "name": "滝川市こども科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(141.914889 43.552518)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11616823",
+        "name": "苫小牧市科学センター",
+        "type": "科學博物館",
+        "coordinates": "Point(141.605 42.63194444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tomakomai%20Science%20Center.jpg"
+    },
+    {
+        "id": "Q21652708",
+        "name": "帶廣市兒童會館",
+        "type": "児童文化センター",
+        "coordinates": "Point(143.186111111 42.905277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131012%20Obihiro%20Municipal%20Children%20Hall01s3.jpg"
+    },
+    {
+        "id": "Q11475628",
+        "name": "岩見沢郷土科学館",
+        "type": "天象儀",
+        "coordinates": "Point(141.783694 43.161556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iwamizawa-park%20local-history-and-science-museum.JPG"
+    },
+    {
+        "id": "Q132553185",
+        "name": "余市宇宙記念館",
+        "type": "科學博物館",
+        "coordinates": "Point(140.788624 43.189229)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yoichi%20Space%20Dome%2C%20Hokkaido%20-%20Jun%2018%2C%202024.jpg"
+    },
+    {
+        "id": "Q11430194",
+        "name": "夕張市石炭博物館",
+        "type": "礦業博物館",
+        "coordinates": "Point(141.989167 43.068389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yubari-coalmine-museum.JPG"
+    },
+    {
+        "id": "Q11521250",
+        "name": "札幌市交通資料館",
+        "type": "交通博物館",
+        "coordinates": "Point(141.364436 43.004692)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sapporo%20Transportation%20Museum.JPG"
+    },
+    {
+        "id": "Q85880992",
+        "name": "有島記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(140.703944444 42.8105)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Arishima%20Takeo%20Memorial%20Museum%20-%20Aug%2025%2C%202016%20%284%29.jpg"
+    },
+    {
+        "id": "Q132199866",
+        "name": "モヨロ貝塚館",
+        "type": "考古博物館",
+        "coordinates": "Point(144.269244 44.02466)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/2013%E5%B9%B44%E6%9C%88%E3%83%A2%E3%83%A8%E3%83%AD%E8%B2%9D%E5%A1%9A%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11465797",
+        "name": "山之水族館",
+        "type": "水族館",
+        "coordinates": "Point(143.500278 43.754278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yama-no-aquarium.jpg"
+    },
+    {
+        "id": "Q11368387",
+        "name": "丸瀬布森林公園いこいの森",
+        "type": "森林公園",
+        "coordinates": "Point(143.33613889 43.93141667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Amemiya%2021gou%20Steam%20Locomotive%20Hokkaido%20Japan.jpg"
+    },
+    {
+        "id": "Q11517161",
+        "name": "望郷の塔",
+        "type": "觀光塔",
+        "coordinates": "Point(145.808389 43.385083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hokkaido%20pref%20road%20No35%20Nosappu%20Cape.jpg"
+    },
+    {
+        "id": "Q385351",
+        "name": "大倉山跳台競技場",
+        "type": "skiing stadium",
+        "coordinates": "Point(141.28630556 43.05066667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okurayama%20August%202007.jpg"
+    },
+    {
+        "id": "Q56963453",
+        "name": "白い恋人パーク",
+        "type": "主題公園",
+        "coordinates": "Point(141.271666666 43.088611111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q107437271",
+        "name": "塩狩峠記念館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(142.454555555 43.968611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shiokari%20Mountain%20Pass%20Memorial%20Hall.jpg"
+    },
+    {
+        "id": "Q109364441",
+        "name": "知里幸恵 銀のしずく記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(141.167138888 42.451361111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chiri%20Yukie%20Memorial%20Museum.jpg"
+    },
+    {
+        "id": "Q11368387",
+        "name": "丸瀬布森林公園いこいの森",
+        "type": "观光铁路",
+        "coordinates": "Point(143.33613889 43.93141667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Amemiya%2021gou%20Steam%20Locomotive%20Hokkaido%20Japan.jpg"
+    },
+    {
+        "id": "Q11403709",
+        "name": "北海道博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(141.496611 43.053)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hokkaido%20Museum.JPG"
+    },
+    {
+        "id": "Q926475",
+        "name": "函館市文學館",
+        "type": "文學館",
+        "coordinates": "Point(140.713237 41.766335)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hakodate%20City%20Museum%20of%20Literature02n.jpg"
+    },
+    {
+        "id": "Q20043116",
+        "name": "北海道大学遺跡保存庭园",
+        "type": "考古学公園",
+        "coordinates": "Point(141.33491667 43.07988889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Garden%20for%20Preserving%20Ruins%20in%20Hokkaido%20University.JPG"
+    },
+    {
+        "id": "Q11550930",
+        "name": "江差町鄉土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(140.12875 41.868194)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hiyamanishi%20gun-office.JPG"
+    },
+    {
+        "id": "Q85880992",
+        "name": "有島記念館",
+        "type": "文學館",
+        "coordinates": "Point(140.703944444 42.8105)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Arishima%20Takeo%20Memorial%20Museum%20-%20Aug%2025%2C%202016%20%284%29.jpg"
+    },
+    {
+        "id": "Q11305917",
+        "name": "サンピアザ水族館",
+        "type": "水族館",
+        "coordinates": "Point(141.471666666 43.036944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sanpiaza%20Suizokukan.jpg"
+    },
+    {
+        "id": "Q385351",
+        "name": "大倉山跳台競技場",
+        "type": "國家訓練中心",
+        "coordinates": "Point(141.28630556 43.05066667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okurayama%20August%202007.jpg"
+    },
+    {
+        "id": "Q22341618",
+        "name": "羅臼國後展望塔",
+        "type": "觀景台",
+        "coordinates": "Point(145.18633333 44.01561111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rausu%20Kunashiri%20Observatory%20Deck%202.jpg"
+    },
+    {
+        "id": "Q11404903",
+        "name": "十勝岳望岳台",
+        "type": "觀景台",
+        "coordinates": "Point(142.649194444 43.448583333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q109364441",
+        "name": "知里幸恵 銀のしずく記念館",
+        "type": "文學館",
+        "coordinates": "Point(141.167138888 42.451361111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chiri%20Yukie%20Memorial%20Museum.jpg"
+    },
+    {
+        "id": "Q11596338",
+        "name": "稚內市開基百年記念塔及北方紀念館",
+        "type": "觀光塔",
+        "coordinates": "Point(141.663333 45.416917)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Exploitation%20100years%20commemoration%20tower.JPG"
+    },
+    {
+        "id": "Q11331252",
+        "name": "ピアソン記念館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(143.886888888 43.806472222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pierson%20museum.jpg"
+    },
+    {
+        "id": "Q11405627",
+        "name": "サケのふるさと 千歳水族館",
+        "type": "水族館",
+        "coordinates": "Point(141.659167 42.832722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chitose%20Salmon%20Aquarium.jpg"
+    },
+    {
+        "id": "Q11593178",
+        "name": "福島町青函トンネル記念館",
+        "type": "科技博物館",
+        "coordinates": "Point(140.254639 41.48525)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Seikan%20Tunnel%20Museum%20of%20Fukushima%20Town.jpg"
+    },
+    {
+        "id": "Q11596319",
+        "name": "稚内市立ノシャップ寒流水族館",
+        "type": "水族館",
+        "coordinates": "Point(141.644916666 45.449333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Wakkanai%20municipal%20youth%20science%20museum%20and%20NOSHAPPU%20Kan-ryu%20aquarium.JPG"
+    },
+    {
+        "id": "Q11279539",
+        "name": "むかわ町穂別地球体験館",
+        "type": "自然歷史博物館",
+        "coordinates": "Point(142.13488333 42.76681389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hobetsu%20Earth%20Experience%20Museum.jpg"
+    },
+    {
+        "id": "Q17192195",
+        "name": "安田侃彫刻美術館 アルテピアッツァ美唄",
+        "type": "雕塑公园",
+        "coordinates": "Point(141.91091667 43.33252778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ja-hokkaido-artepiazzabibai-3.jpg"
+    },
+    {
+        "id": "Q11462161",
+        "name": "市立小樽文學館",
+        "type": "文學館",
+        "coordinates": "Point(140.999833 43.196778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Otaru%20City%20Museum%20Branch02s3.jpg"
+    },
+    {
+        "id": "Q11249476",
+        "name": "札幌藝術之森",
+        "type": "雕塑公园",
+        "coordinates": "Point(141.337222222 42.933888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sapporo%20art%20museum.jpg"
+    },
+    {
+        "id": "Q11387679",
+        "name": "優佳良織工芸館",
+        "type": "工藝博物館",
+        "coordinates": "Point(142.30833333 43.77194444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yukara%20Ori%20Craft%20Museum-20160725.jpg"
+    },
+    {
+        "id": "Q11441802",
+        "name": "大雪展望台",
+        "type": "觀景台",
+        "coordinates": "Point(142.760638888 43.856833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bells%20of%20Espoir%2C%20Daisetsu%20Observatory.jpg"
+    },
+    {
+        "id": "Q28685000",
+        "name": "函館市縄文文化交流センター",
+        "type": "考古博物館",
+        "coordinates": "Point(140.94474972 41.92792139)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michinoeki%20jyoumonRoman.JPG"
+    },
+    {
+        "id": "Q385351",
+        "name": "大倉山跳台競技場",
+        "type": "觀景台",
+        "coordinates": "Point(141.28630556 43.05066667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okurayama%20August%202007.jpg"
+    },
+    {
+        "id": "Q11402965",
+        "name": "北海道立文学館",
+        "type": "文學館",
+        "coordinates": "Point(141.356167 43.04425)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%9C%AD%E5%B9%8C%E3%81%AE%E6%96%87%E5%AD%A6%E9%A4%A8.JPG"
+    },
+    {
+        "id": "Q104238072",
+        "name": "星の降る里百年記念館",
+        "type": "地方文化館",
+        "coordinates": "Point(142.188936 43.525918)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hoshi%20no%20furu%20Hyakunen%20Museum.jpg"
+    },
+    {
+        "id": "Q11396003",
+        "name": "函館市青函連絡船紀念館摩周丸",
+        "type": "博物館船",
+        "coordinates": "Point(140.721889 41.772944)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mashu-maru%20zenkei.JPG"
+    },
+    {
+        "id": "Q85138042",
+        "name": "江別市郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(141.548055555 43.113611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ebetsu%20City%20Local%20Museum.JPG"
+    },
+    {
+        "id": "Q11249476",
+        "name": "札幌藝術之森",
+        "type": "城市公園",
+        "coordinates": "Point(141.337222222 42.933888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sapporo%20art%20museum.jpg"
+    },
+    {
+        "id": "Q11596338",
+        "name": "稚內市開基百年記念塔及北方紀念館",
+        "type": "歷史博物館",
+        "coordinates": "Point(141.663333 45.416917)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Exploitation%20100years%20commemoration%20tower.JPG"
+    },
+    {
+        "id": "Q11454073",
+        "name": "宮尾登美子文学記念館",
+        "type": "文學館",
+        "coordinates": "Point(140.873333333 42.471666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tomiko%20miyao%20memorials%20literature.jpg"
+    },
+    {
+        "id": "Q11373285",
+        "name": "井上靖纪念馆",
+        "type": "人物紀念館",
+        "coordinates": "Point(142.363611 43.805222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yasushi-Inoue-Gedankstaette.jpg"
+    },
+    {
+        "id": "Q11402956",
+        "name": "北海道立北方民族博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(144.239667 43.99675)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/130713%20Hokkaido%20Museum%20of%20Northern%20Peoples%20Abashiri%20Hokkaido%20Japan02s3.jpg"
+    },
+    {
+        "id": "Q85774341",
+        "name": "木古内町郷土資料館",
+        "type": "旧学校施設",
+        "coordinates": "Point(140.412842 41.671342)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kikonai%20Town%20Museum.JPG"
+    },
+    {
+        "id": "Q85770107",
+        "name": "はまます郷土資料館",
+        "type": "鰊御殿",
+        "coordinates": "Point(141.374013 43.612611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hamamasu%20Folk%20Museum.jpg"
+    },
+    {
+        "id": "Q11356532",
+        "name": "三浦綾子記念文学館",
+        "type": "人物紀念館",
+        "coordinates": "Point(142.347833 43.753583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/AyakoMiuraMemorial.jpg"
+    },
+    {
+        "id": "Q107437271",
+        "name": "塩狩峠記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(142.454555555 43.968611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shiokari%20Mountain%20Pass%20Memorial%20Hall.jpg"
+    },
+    {
+        "id": "Q11521442",
+        "name": "札幌村郷土記念館",
+        "type": "地方文化館",
+        "coordinates": "Point(141.37694444 43.08055556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%9C%AD%E5%B9%8C%E6%9D%91%E9%83%B7%E5%9C%9F%E8%A8%98%E5%BF%B5%E9%A4%A8.JPG"
+    },
+    {
+        "id": "Q11480658",
+        "name": "市立室蘭水族館",
+        "type": "水族館",
+        "coordinates": "Point(140.94375 42.33975)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Muroran%20Aquarium%2840848993613%29.jpg"
+    },
+    {
+        "id": "Q11579106",
+        "name": "登別マリンパークニクス",
+        "type": "水族館",
+        "coordinates": "Point(141.182194 42.454972)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/20181106%20Nixe%205427%20%2848435586636%29.jpg"
+    },
+    {
+        "id": "Q11396003",
+        "name": "函館市青函連絡船紀念館摩周丸",
+        "type": "保存された船舶",
+        "coordinates": "Point(140.721889 41.772944)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mashu-maru%20zenkei.JPG"
+    },
+    {
+        "id": "Q11322179",
+        "name": "トロッコ王国美深",
+        "type": "主題公園",
+        "coordinates": "Point(142.569833 44.5475)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bifuka%20Torokko%20Oukoku%20draisines.jpg"
+    },
+    {
+        "id": "Q11261729",
+        "name": "小樽水族館",
+        "type": "水族館",
+        "coordinates": "Point(141.01125 43.236806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Otaruaquarium%2001.jpg"
+    },
+    {
+        "id": "Q106967657",
+        "name": "市立旭川郷土博物館",
+        "type": "地方文化館",
+        "coordinates": "Point(142.3647 43.805211111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q85770107",
+        "name": "はまます郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(141.374013 43.612611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hamamasu%20Folk%20Museum.jpg"
+    },
+    {
+        "id": "Q85796118",
+        "name": "羅臼町郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(145.093629085 43.880683575)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Luminous%20moss%20in%20Makkausu%20Cave%2C%20Rausu%2C%20Hokkaido.JPG"
+    },
+    {
+        "id": "Q132184263",
+        "name": "利尻町立博物館",
+        "type": "地方文化館",
+        "coordinates": "Point(141.21607 45.112874)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11294440",
+        "name": "カナディアンワールド公園",
+        "type": "公園",
+        "coordinates": "Point(142.239166666 43.566111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/CanadianWorldPark.jpg"
+    },
+    {
+        "id": "Q11373285",
+        "name": "井上靖纪念馆",
+        "type": "文學館",
+        "coordinates": "Point(142.363611 43.805222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yasushi-Inoue-Gedankstaette.jpg"
+    },
+    {
+        "id": "Q11579107",
+        "name": "登別伊達時代村",
+        "type": "主題公園",
+        "coordinates": "Point(141.160667 42.463889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Noboribetsu%20Date%20Jidaimura.jpg"
+    },
+    {
+        "id": "Q105473971",
+        "name": "厚岸町郷土館",
+        "type": "地方文化館",
+        "coordinates": "Point(144.839219 43.032765)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11579120",
+        "name": "登別市郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(141.08202778 42.42056667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Noboribetsu%20Local%20History%20Museum.jpg"
+    },
+    {
+        "id": "Q64143355",
+        "name": "いしかり砂丘の風資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(141.35025 43.246361)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ishikari%20Sakyu-no-Kaze%20Museum.jpg"
+    },
+    {
+        "id": "Q17192195",
+        "name": "安田侃彫刻美術館 アルテピアッツァ美唄",
+        "type": "彫刻美術館",
+        "coordinates": "Point(141.91091667 43.33252778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ja-hokkaido-artepiazzabibai-3.jpg"
+    },
+    {
+        "id": "Q11404346",
+        "name": "北鎮記念館",
+        "type": "軍事博物館",
+        "coordinates": "Point(142.3649 43.7884)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hokuchin%20Museum.jpg"
+    },
+    {
+        "id": "Q11356532",
+        "name": "三浦綾子記念文学館",
+        "type": "文學館",
+        "coordinates": "Point(142.347833 43.753583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/AyakoMiuraMemorial.jpg"
+    },
+    {
+        "id": "Q17219401",
+        "name": "恵庭市郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(141.59975 42.909167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/EniwaMuseumCropped.jpg"
+    },
+    {
+        "id": "Q133264692",
+        "name": "鷹栖町郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(142.358926 43.846595)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132533520",
+        "name": "浦河町立郷土博物館",
+        "type": "地方文化館",
+        "coordinates": "Point(142.840013 42.143756)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q385351",
+        "name": "大倉山跳台競技場",
+        "type": "スキージャンプ競技施設",
+        "coordinates": "Point(141.28630556 43.05066667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okurayama%20August%202007.jpg"
+    },
+    {
+        "id": "Q11260956",
+        "name": "えこりん村",
+        "type": "主題公園",
+        "coordinates": "Point(141.547222222 42.872222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ecorin-mura2.jpg"
+    },
+    {
+        "id": "Q85774341",
+        "name": "木古内町郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(140.412842 41.671342)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kikonai%20Town%20Museum.JPG"
+    },
+    {
+        "id": "Q11331252",
+        "name": "ピアソン記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(143.886888888 43.806472222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pierson%20museum.jpg"
+    },
+    {
+        "id": "Q11454073",
+        "name": "宮尾登美子文学記念館",
+        "type": "博物館",
+        "coordinates": "Point(140.873333333 42.471666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tomiko%20miyao%20memorials%20literature.jpg"
+    },
+    {
+        "id": "Q17222936",
+        "name": "五稜郭塔",
+        "type": "觀光塔",
+        "coordinates": "Point(140.754003 41.794689)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Goryokaku%20Tower%20Hakodate%20Hokkaido%20Japan01n.jpg"
+    },
+    {
+        "id": "Q926475",
+        "name": "函館市文學館",
+        "type": "银行建筑物",
+        "coordinates": "Point(140.713237 41.766335)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hakodate%20City%20Museum%20of%20Literature02n.jpg"
+    },
+    {
+        "id": "Q11605826",
+        "name": "細岡展望台",
+        "type": "觀景台",
+        "coordinates": "Point(144.449333333 43.098111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kushirositsugen%20Hosooka%20Tenboudai.jpg"
+    },
+    {
+        "id": "Q56963453",
+        "name": "白い恋人パーク",
+        "type": "工廠",
+        "coordinates": "Point(141.271666666 43.088611111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132197172",
+        "name": "北方館・望郷の家",
+        "type": "博物館",
+        "coordinates": "Point(145.8117197 43.386173)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hoppo-kan%20and%20Bokyo-no-ie%2001.jpg"
+    },
+    {
+        "id": "Q3348373",
+        "name": "札幌羊丘瞭望台",
+        "type": "觀光景點",
+        "coordinates": "Point(141.39472222 42.99916667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hitsujigaoka-sheep.jpg"
+    },
+    {
+        "id": "Q3348373",
+        "name": "札幌羊丘瞭望台",
+        "type": "觀景台",
+        "coordinates": "Point(141.39472222 42.99916667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hitsujigaoka-sheep.jpg"
+    },
+    {
+        "id": "Q11521269",
+        "name": "札幌市手稲記念館",
+        "type": "地方文化館",
+        "coordinates": "Point(141.273583 43.085722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sapporo-City-Teine-Memorial-Museum.JPG"
+    },
+    {
+        "id": "Q5774785",
+        "name": "石炭の歴史村",
+        "type": "主題公園",
+        "coordinates": "Point(141.987986 43.067264)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yubari-coalmine-museum.JPG"
+    },
+    {
+        "id": "Q11294440",
+        "name": "カナディアンワールド公園",
+        "type": "主題公園",
+        "coordinates": "Point(142.239166666 43.566111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/CanadianWorldPark.jpg"
+    },
+    {
+        "id": "Q132197172",
+        "name": "北方館・望郷の家",
+        "type": "觀景台",
+        "coordinates": "Point(145.8117197 43.386173)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hoppo-kan%20and%20Bokyo-no-ie%2001.jpg"
+    },
+    {
+        "id": "Q11402956",
+        "name": "北海道立北方民族博物館",
+        "type": "民族誌学博物館",
+        "coordinates": "Point(144.239667 43.99675)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/130713%20Hokkaido%20Museum%20of%20Northern%20Peoples%20Abashiri%20Hokkaido%20Japan02s3.jpg"
+    },
+    {
+        "id": "Q66363170",
+        "name": "松前町郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(140.112142 41.435757)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Byobu%20of%20Matsumae%20by%20Kodama%20Teiryo.jpg"
+    },
+    {
+        "id": "Q132197013",
+        "name": "別海北方展望塔",
+        "type": "觀光塔",
+        "coordinates": "Point(145.23687 43.53334)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11402965",
+        "name": "北海道立文学館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(141.356167 43.04425)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%9C%AD%E5%B9%8C%E3%81%AE%E6%96%87%E5%AD%A6%E9%A4%A8.JPG"
+    },
+    {
+        "id": "Q56963453",
+        "name": "白い恋人パーク",
+        "type": "公司博物館",
+        "coordinates": "Point(141.271666666 43.088611111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132223826",
+        "name": "ピリカ旧石器文化館",
+        "type": "考古博物館",
+        "coordinates": "Point(140.2018315 42.47721)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q48748643",
+        "name": "江別市ガラス工芸館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(141.5225 43.09626944)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ebetsu%20City%20Glass%20Crafts%20Museum.JPG"
+    },
+    {
+        "id": "Q11655331",
+        "name": "開陽台",
+        "type": "觀景台",
+        "coordinates": "Point(144.870556 43.613056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kaiyodai%202.jpg"
+    },
+    {
+        "id": "Q11387679",
+        "name": "優佳良織工芸館",
+        "type": "織物博物館",
+        "coordinates": "Point(142.30833333 43.77194444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yukara%20Ori%20Craft%20Museum-20160725.jpg"
+    },
+    {
+        "id": "Q123124840",
+        "name": "渡辺淳一文学館",
+        "type": "文學館",
+        "coordinates": "Point(141.351334 43.044457)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Junichi%20Watanabe%20Bungakukan01bs5s3200.jpg"
+    },
+    {
+        "id": "Q48748643",
+        "name": "江別市ガラス工芸館",
+        "type": "工藝博物館",
+        "coordinates": "Point(141.5225 43.09626944)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ebetsu%20City%20Glass%20Crafts%20Museum.JPG"
+    },
+    {
+        "id": "Q11396003",
+        "name": "函館市青函連絡船紀念館摩周丸",
+        "type": "火车渡轮",
+        "coordinates": "Point(140.721889 41.772944)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mashu-maru%20zenkei.JPG"
+    },
+    {
+        "id": "Q123127809",
+        "name": "ところ遺跡の館",
+        "type": "考古博物館",
+        "coordinates": "Point(143.973217 44.125182)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q30576578",
+        "name": "十勝ヒルズ",
+        "type": "主題公園",
+        "coordinates": "Point(143.243333333 42.863333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokachi%20Hills%2C%20Makubetsu%2C%20Hokkaido%20-%20Aug%2013%2C%202025%20%281%29.jpg"
+    },
+    {
+        "id": "Q11292366",
+        "name": "オホーツクとっかりセンター",
+        "type": "水族館",
+        "coordinates": "Point(143.373528 44.333583)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11607220",
+        "name": "網走市立郷土博物館",
+        "type": "地方文化館",
+        "coordinates": "Point(144.269111111 44.017722222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Abashiri%20City%20Folk%20Museum01s5.jpg"
+    },
+    {
+        "id": "Q11387679",
+        "name": "優佳良織工芸館",
+        "type": "廃止された博物館",
+        "coordinates": "Point(142.30833333 43.77194444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yukara%20Ori%20Craft%20Museum-20160725.jpg"
+    },
+    {
+        "id": "Q11356913",
+        "name": "三笠市立博物館",
+        "type": "古生物博物馆",
+        "coordinates": "Point(141.962722 43.261278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mikasa%2001.JPG"
+    },
+    {
+        "id": "Q11511727",
+        "name": "旭川市博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(142.35055556 43.75944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%97%AD%E5%B7%9D%E5%B8%82%E5%8D%9A%E7%89%A9%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11465750",
+        "name": "層雲峽溫泉",
+        "type": "単純温泉",
+        "coordinates": "Point(142.94792 43.72695)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sounkyo%20Promenade.JPG"
+    },
+    {
+        "id": "Q26457215",
+        "name": "滝川市航空科学センター",
+        "type": "場外離着陸場",
+        "coordinates": "Point(141.731111111 43.545833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takikawa%20Sky%20Museum.jpg"
+    },
+    {
+        "id": "Q104236770",
+        "name": "馬の資料館",
+        "type": "農業博物館",
+        "coordinates": "Point(143.184245876 42.921456628)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Obihiro%20Racecourse%20Museum%20of%20Horses.jpg"
+    },
+    {
+        "id": "Q21652713",
+        "name": "帶廣百年紀念館",
+        "type": "市立博物館",
+        "coordinates": "Point(143.186388888 42.906944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131012%20Obihiro%20Centennial%20City%20Museum01s3.jpg"
+    },
+    {
+        "id": "Q27644574",
+        "name": "函館市北方民族資料館",
+        "type": "银行建筑物",
+        "coordinates": "Point(140.711965 41.767132)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hakodate%20City%20Museum%20of%20Northern%20Peoples01n.jpg"
+    },
+    {
+        "id": "Q28154110",
+        "name": "Bihoro Aviation Park",
+        "type": "航空博物館",
+        "coordinates": "Point(144.0786635 43.8157724)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11404905",
+        "name": "十勝川溫泉",
+        "type": "温泉镇",
+        "coordinates": "Point(143.296111111 42.934166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131012%20Tokachigawa%20Onsen%20Otofuke%20Hokkaido%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q133264926",
+        "name": "土の館",
+        "type": "農業博物館",
+        "coordinates": "Point(142.451801 43.462916)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Museum%20of%20Soils%20and%20Plows%20of%20the%20World%20Kamifurano%20Hokkaido%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q26457215",
+        "name": "滝川市航空科学センター",
+        "type": "航空博物館",
+        "coordinates": "Point(141.731111111 43.545833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takikawa%20Sky%20Museum.jpg"
+    },
+    {
+        "id": "Q11648285",
+        "name": "釧路市立博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(144.403582 42.974629)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kushiro%20Museum.jpg"
+    },
+    {
+        "id": "Q11465750",
+        "name": "層雲峽溫泉",
+        "type": "温泉镇",
+        "coordinates": "Point(142.946972222 43.725166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sounkyo%20Promenade.JPG"
+    },
+    {
+        "id": "Q27644574",
+        "name": "函館市北方民族資料館",
+        "type": "民族誌学博物館",
+        "coordinates": "Point(140.711965 41.767132)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hakodate%20City%20Museum%20of%20Northern%20Peoples01n.jpg"
+    },
+    {
+        "id": "Q104239410",
+        "name": "厚岸町海事記念館",
+        "type": "海事博物館",
+        "coordinates": "Point(144.849127 43.051196)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Akkeshi%20Maritime%20Museum.jpg"
+    },
+    {
+        "id": "Q11480647",
+        "name": "市立函館博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(140.714639 41.755944)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hakodate%20City%20Museum%20in%20May%202024.jpg"
+    },
+    {
+        "id": "Q11465750",
+        "name": "層雲峽溫泉",
+        "type": "単純温泉",
+        "coordinates": "Point(142.946972222 43.725166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sounkyo%20Promenade.JPG"
+    },
+    {
+        "id": "Q123126930",
+        "name": "室蘭市民俗資料館",
+        "type": "市立博物館",
+        "coordinates": "Point(140.95098 42.368929)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11324367",
+        "name": "新雪谷溫泉鄉",
+        "type": "温泉郷",
+        "coordinates": "Point(140.68 42.8)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11563081",
+        "name": "港文館",
+        "type": "海事博物館",
+        "coordinates": "Point(144.38222222 42.98016667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kobunkan%20Kushiro%20Hokkaido%20Japan01bs.jpg"
+    },
+    {
+        "id": "Q11404905",
+        "name": "十勝川溫泉",
+        "type": "碳酸氫鹽泉",
+        "coordinates": "Point(143.296111111 42.934166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131012%20Tokachigawa%20Onsen%20Otofuke%20Hokkaido%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q11521277",
+        "name": "札幌市水道紀念館",
+        "type": "水廠博物館",
+        "coordinates": "Point(141.328778 43.032997)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sapporo%20Waterworks%20Museum.JPG"
+    },
+    {
+        "id": "Q11465750",
+        "name": "層雲峽溫泉",
+        "type": "温泉镇",
+        "coordinates": "Point(142.94792 43.72695)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sounkyo%20Promenade.JPG"
+    },
+    {
+        "id": "Q11356913",
+        "name": "三笠市立博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(141.962722 43.261278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mikasa%2001.JPG"
+    },
+    {
+        "id": "Q11563081",
+        "name": "港文館",
+        "type": "人物紀念館",
+        "coordinates": "Point(144.38222222 42.98016667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kobunkan%20Kushiro%20Hokkaido%20Japan01bs.jpg"
+    },
+    {
+        "id": "Q11422465",
+        "name": "国際染織美術館",
+        "type": "織物博物館",
+        "coordinates": "Point(142.30772222 43.77202778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/International%20Dyeing%20and%20Weaving%20Art%20Museum-20160725.jpg"
+    },
+    {
+        "id": "Q30066271",
+        "name": "拓真館",
+        "type": "藝廊",
+        "coordinates": "Point(142.489444444 43.53)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takushin-kan%20%E7%BE%8E%E7%91%9B%EF%BC%8D%E6%8B%93%E7%9C%9F%E9%A4%A8%20P6300055.jpg"
+    },
+    {
+        "id": "Q11402962",
+        "name": "北海道立埋蔵文化財センター",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(141.494397 43.060181)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hokkaido%20Archaeological%20Operations%20Center.JPG"
+    },
+    {
+        "id": "Q48765500",
+        "name": "小樽オルゴール堂",
+        "type": "音楽博物館",
+        "coordinates": "Point(141.00777 43.190602)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Otaru-orgel-do%2CMusical%20box%20museum%2C%E5%B0%8F%E6%A8%BD%E3%82%AA%E3%83%AB%E3%82%B4%E3%83%BC%E3%83%AB%E5%A0%826180194.JPG"
+    },
+    {
+        "id": "Q22337430",
+        "name": "東藻琴乳酪館",
+        "type": "チーズ工場",
+        "coordinates": "Point(144.284916666 43.838361111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Higashimokoto%20Nyurakukan%202.jpg"
+    },
+    {
+        "id": "Q104236424",
+        "name": "箱館高田屋嘉兵衛資料館",
+        "type": "人物紀念館",
+        "coordinates": "Point(140.717605 41.765874)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q22337430",
+        "name": "東藻琴乳酪館",
+        "type": "食物博物館",
+        "coordinates": "Point(144.284916666 43.838361111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Higashimokoto%20Nyurakukan%202.jpg"
+    },
+    {
+        "id": "Q11584569",
+        "name": "知床世界遺產中心",
+        "type": "遊客中心",
+        "coordinates": "Point(144.991194 44.0695)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shiretoko%20World%20Heritage%20Conservation%20Center01n.jpg"
+    },
+    {
+        "id": "Q132160481",
+        "name": "ウトナイ湖野生鳥獣保護センター",
+        "type": "自然中心",
+        "coordinates": "Point(141.696183 42.700729)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132160473",
+        "name": "厚岸水鳥観察館",
+        "type": "自然中心",
+        "coordinates": "Point(144.862763 43.096736)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q17212946",
+        "name": "蘭越町貝の館",
+        "type": "動物学博物館",
+        "coordinates": "Point(140.37002778 42.88066667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shell%20fish%20museum%20of%20Rankoshi.JPG"
+    },
+    {
+        "id": "Q132160492",
+        "name": "浜頓別クッチャロ湖水鳥観察館",
+        "type": "自然中心",
+        "coordinates": "Point(142.346052 45.124581)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11087091",
+        "name": "旭川拉麵村",
+        "type": "商號",
+        "coordinates": "Point(142.414444444 43.781944444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11404041",
+        "name": "北見瀧之上站",
+        "type": "鐵路車站",
+        "coordinates": "Point(143.0708333 44.19375)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kitami-Takinoue%20station%20building.jpg"
+    },
+    {
+        "id": "Q116872384",
+        "name": "国立爱奴民族博物馆",
+        "type": "アイヌ博物館",
+        "coordinates": "Point(141.366885 42.561347)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shiraoi-upopoy%2038.jpg"
+    },
+    {
+        "id": "Q85881092",
+        "name": "札幌オリンピックミュージアム",
+        "type": "體育博物館",
+        "coordinates": "Point(141.291021 43.051804)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sapporo%20Olympic%20Museum.jpg"
+    },
+    {
+        "id": "Q11487390",
+        "name": "大鵬相撲紀念館",
+        "type": "體育博物館",
+        "coordinates": "Point(144.437597 43.635303)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11404041",
+        "name": "北見瀧之上站",
+        "type": "鐵路博物館",
+        "coordinates": "Point(143.0708333 44.19375)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kitami-Takinoue%20station%20building.jpg"
+    },
+    {
+        "id": "Q123125257",
+        "name": "地図と鉱石の山の手博物館",
+        "type": "地図博物館",
+        "coordinates": "Point(141.284744 43.071069)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132160326",
+        "name": "濤沸湖水鳥・湿地センター",
+        "type": "自然中心",
+        "coordinates": "Point(144.358623 43.952473)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q133249040",
+        "name": "遠軽町埋蔵文化財センター",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(143.192729 43.886624)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q133283586",
+        "name": "阿寒湖畔ビジターセンター",
+        "type": "自然中心",
+        "coordinates": "Point(144.1010273 43.435198)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11521088",
+        "name": "札幌拉麵共和國",
+        "type": "餐館",
+        "coordinates": "Point(141.352777777 43.0675)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sapporo%20ramen%20Kyowakoku1.jpg"
+    },
+    {
+        "id": "Q11553075",
+        "name": "沙流川歴史館",
+        "type": "歷史博物館",
+        "coordinates": "Point(142.155889 42.637361)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sarugawa%20museum.jpg"
+    },
+    {
+        "id": "Q132197139",
+        "name": "北海道立北方四島交流センター",
+        "type": "遊客中心",
+        "coordinates": "Point(145.549361 43.312038)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132160153",
+        "name": "宮島沼水鳥・湿地センター",
+        "type": "自然中心",
+        "coordinates": "Point(141.715795 43.329043)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bibai%20Miyajimanuma%20Waterbird%20%26%20Wetlands%20Center%20001.jpg"
+    },
+    {
+        "id": "Q116872384",
+        "name": "国立爱奴民族博物馆",
+        "type": "國立博物館",
+        "coordinates": "Point(141.366885 42.561347)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shiraoi-upopoy%2038.jpg"
+    },
+    {
+        "id": "Q11585314",
+        "name": "石原裕次郎記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(141.022777777 43.185277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yujiro%20kinenkan.jpg"
+    },
+    {
+        "id": "Q11521088",
+        "name": "札幌拉麵共和國",
+        "type": "食品主题園區",
+        "coordinates": "Point(141.352777777 43.0675)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sapporo%20ramen%20Kyowakoku1.jpg"
+    },
+    {
+        "id": "Q123272575",
+        "name": "千歳市埋蔵文化財センター",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(141.641275 42.887254)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chitose%20City%20Archaeological%20Center.jpg"
+    },
+    {
+        "id": "Q11290335",
+        "name": "エドウィン・ダン記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(141.35222222 42.98888889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%82%A8%E3%83%89%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%BB%E3%83%80%E3%83%B3%E8%A8%98%E5%BF%B5%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q4803387",
+        "name": "中原悌二郎記念旭川市彫刻美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(142.3647 43.805212)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Asahikawa%20Museum%20of%20Sculpture.JPG"
+    },
+    {
+        "id": "Q11543443",
+        "name": "横綱千代の山・千代の富士記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(140.255583 41.479111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokozuna%20Ciyonoyama-Chiyonofuji%20kinenkan.jpg"
+    },
+    {
+        "id": "Q11402650",
+        "name": "北海道坂本龍馬記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(140.718639 41.763842)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hokkaido%20Sakamoto%20Ryoma%20Museum.jpg"
+    },
+    {
+        "id": "Q4803387",
+        "name": "中原悌二郎記念旭川市彫刻美術館",
+        "type": "彫刻美術館",
+        "coordinates": "Point(142.3647 43.805212)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Asahikawa%20Museum%20of%20Sculpture.JPG"
+    },
+    {
+        "id": "Q11087091",
+        "name": "旭川拉麵村",
+        "type": "食品主题園區",
+        "coordinates": "Point(142.414444444 43.781944444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q123125257",
+        "name": "地図と鉱石の山の手博物館",
+        "type": "地質学博物館",
+        "coordinates": "Point(141.284744 43.071069)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11409007",
+        "name": "博物館網走監獄",
+        "type": "監獄博物館",
+        "coordinates": "Point(144.229278 43.995694)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/130713%20Abashiri%20Prison%20Museum%20Abashiri%20Hokkaido%20Japan04n.jpg"
+    },
+    {
+        "id": "Q68620047",
+        "name": "本郷新記念札幌彫刻美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(141.29648 43.055181)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hongo%20Shin%20Memorial%20Museum%20of%20Sculpture%2C%20Sapporo%20-%20Main%20Hall.jpg"
+    },
+    {
+        "id": "Q11510809",
+        "name": "日高山脈博物館",
+        "type": "地質学博物館",
+        "coordinates": "Point(142.442277 42.877112)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hidaka%20Mountains%20Museum%20in%20Hidaka%2C%20Hokkaido%2C%20Japan.jpg"
+    },
+    {
+        "id": "Q11521426",
+        "name": "札幌市資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(141.337417 43.058556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/SapporoShiShiryokan201109.JPG"
+    },
+    {
+        "id": "Q11409007",
+        "name": "博物館網走監獄",
+        "type": "博物館",
+        "coordinates": "Point(144.229278 43.995694)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/130713%20Abashiri%20Prison%20Museum%20Abashiri%20Hokkaido%20Japan04n.jpg"
+    },
+    {
+        "id": "Q11516088",
+        "name": "月形樺戸博物館",
+        "type": "監獄博物館",
+        "coordinates": "Point(141.668972 43.339111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tsukigata%20Kabato%20museum.jpg"
+    },
+    {
+        "id": "Q68620047",
+        "name": "本郷新記念札幌彫刻美術館",
+        "type": "彫刻美術館",
+        "coordinates": "Point(141.29648 43.055181)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hongo%20Shin%20Memorial%20Museum%20of%20Sculpture%2C%20Sapporo%20-%20Main%20Hall.jpg"
+    },
+    {
+        "id": "Q132794285",
+        "name": "屯田郷土資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(141.330261 43.133407)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tonden%20Local%20Museum.JPG"
+    },
+    {
+        "id": "Q30066271",
+        "name": "拓真館",
+        "type": "攝影博物館",
+        "coordinates": "Point(142.489444444 43.53)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takushin-kan%20%E7%BE%8E%E7%91%9B%EF%BC%8D%E6%8B%93%E7%9C%9F%E9%A4%A8%20P6300055.jpg"
+    },
+    {
+        "id": "Q133283612",
+        "name": "マリモ展示観察センター",
+        "type": "自然中心",
+        "coordinates": "Point(144.108105 43.469559)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11087091",
+        "name": "旭川拉麵村",
+        "type": "工商企業",
+        "coordinates": "Point(142.414444444 43.781944444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132160481",
+        "name": "ウトナイ湖野生鳥獣保護センター",
+        "type": "wildlife rehabilitation center",
+        "coordinates": "Point(141.696183 42.700729)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11521426",
+        "name": "札幌市資料館",
+        "type": "旧裁判所庁舎",
+        "coordinates": "Point(141.337417 43.058556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/SapporoShiShiryokan201109.JPG"
+    },
+    {
+        "id": "Q11487390",
+        "name": "大鵬相撲紀念館",
+        "type": "纪念博物馆",
+        "coordinates": "Point(144.437597 43.635303)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q133283713",
+        "name": "川湯ビジターセンター",
+        "type": "自然中心",
+        "coordinates": "Point(144.433762 43.636646)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kawayu%20Eco-Museum%20Center.jpg"
+    },
+    {
+        "id": "Q68888166",
+        "name": "稚内市樺太記念館",
+        "type": "歷史博物館",
+        "coordinates": "Point(141.676642 45.408216)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Wakkanai%20Fukukoichiba%2018-06-02%202.jpg"
+    },
+    {
+        "id": "Q48751350",
+        "name": "宮部金吾記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(141.34427778 43.06394444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131103%20Hokkaido%20University%20Botanical%20Gardens%20Sapporo%20Hokkaido%20Japan05s3.jpg"
+    },
+    {
+        "id": "Q11356924",
+        "name": "三笠铁道纪念馆",
+        "type": "鐵路博物館",
+        "coordinates": "Point(141.904083 43.227306)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mikasa%20railroad%20memorial%20hall.JPG"
+    },
+    {
+        "id": "Q48751350",
+        "name": "宮部金吾記念館",
+        "type": "旧学校施設",
+        "coordinates": "Point(141.34427778 43.06394444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131103%20Hokkaido%20University%20Botanical%20Gardens%20Sapporo%20Hokkaido%20Japan05s3.jpg"
+    },
+    {
+        "id": "Q17228241",
+        "name": "北島三郎紀念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(140.713056 41.766611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kitajima%20Saburo%20Museum%2001.jpg"
+    },
+    {
+        "id": "Q104142410",
+        "name": "花の拠点「はなふる」",
+        "type": "庭園",
+        "coordinates": "Point(141.586388888 42.898055555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q10333378",
+        "name": "阿伊努民族博物館",
+        "type": "廃止された博物館",
+        "coordinates": "Point(141.366944444 42.561388888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ainu%20Museum%20building.JPG"
+    },
+    {
+        "id": "Q130437898",
+        "name": "小林家 (栗山町)",
+        "type": "建築物",
+        "coordinates": "Point(141.769777777 43.061305555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kobayashi%20House%20main%20house%20ac%20%284%29.jpg"
+    },
+    {
+        "id": "Q10333378",
+        "name": "阿伊努民族博物館",
+        "type": "アイヌ博物館",
+        "coordinates": "Point(141.366944444 42.561388888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ainu%20Museum%20building.JPG"
+    },
+    {
+        "id": "Q104142410",
+        "name": "花の拠点「はなふる」",
+        "type": "觀光景點",
+        "coordinates": "Point(141.586388888 42.898055555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q130437898",
+        "name": "小林家 (栗山町)",
+        "type": "觀光景點",
+        "coordinates": "Point(141.769777777 43.061305555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kobayashi%20House%20main%20house%20ac%20%284%29.jpg"
+    },
+    {
+        "id": "Q11509315",
+        "name": "日本銀行舊小樽支店金融資料館",
+        "type": "銀行博物館",
+        "coordinates": "Point(141.000333 43.196194)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/130823%20Bank%20of%20Japan%20Otaru%20Museum02s4.jpg"
+    },
+    {
+        "id": "Q11509315",
+        "name": "日本銀行舊小樽支店金融資料館",
+        "type": "建築物",
+        "coordinates": "Point(141.000333 43.196194)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/130823%20Bank%20of%20Japan%20Otaru%20Museum02s4.jpg"
+    },
+    {
+        "id": "Q22120589",
+        "name": "穗别博物馆",
+        "type": "古生物博物馆",
+        "coordinates": "Point(142.13571389 42.76611667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hobetsu%20Museum.jpg"
+    },
+    {
+        "id": "Q11272925",
+        "name": "とうや水の駅",
+        "type": "觀光景點",
+        "coordinates": "Point(140.83277778 42.64675)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mizunoeki.JPG"
+    },
+    {
+        "id": "Q11677337",
+        "name": "麓郷の森",
+        "type": "觀光景點",
+        "coordinates": "Point(142.540527777 43.312427777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%BA%93%E9%83%B7%E3%81%AE%E6%A3%AE%20%E9%BB%92%E6%9D%BF%E4%BA%94%E9%83%8E%E3%81%AE%E4%B8%B8%E5%A4%AA%E5%B0%8F%E5%B1%8B%20Akiyoshi%27s%20RoomP6220389.jpg"
+    },
+    {
+        "id": "Q135972011",
+        "name": "金田心象書道美術館",
+        "type": "書法美術館",
+        "coordinates": "Point(141.845833279 45.02064227)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kaneda%20Shinsho%20Calligraphy%20Museum%20190526.jpg"
+    },
+    {
+        "id": "Q16919166",
+        "name": "坂本九思い出記念館",
+        "type": "纪念博物馆",
+        "coordinates": "Point(141.847605 43.01754)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q108662694",
+        "name": "沼田町化石体験館",
+        "type": "古生物博物馆",
+        "coordinates": "Point(141.924581 43.888221)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11636869",
+        "name": "足寄動物化石博物館",
+        "type": "古生物博物馆",
+        "coordinates": "Point(143.54337222 43.23111944)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q1055944",
+        "name": "札幌啤酒博物館",
+        "type": "啤酒博物館",
+        "coordinates": "Point(141.368888888 43.071666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sapporo%20Beer%20Museum.JPG"
+    },
+    {
+        "id": "Q85752435",
+        "name": "忠類ナウマン象記念館",
+        "type": "古生物博物馆",
+        "coordinates": "Point(143.300106 42.557976)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Churui%20naumanzou%20museum.jpg"
+    },
+    {
+        "id": "Q11478739",
+        "name": "川村カ子トアイヌ記念館",
+        "type": "アイヌ博物館",
+        "coordinates": "Point(142.343539 43.787275)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11487391",
+        "name": "弟子屈町屈斜路コタンアイヌ民族資料館",
+        "type": "アイヌ博物館",
+        "coordinates": "Point(144.34225 43.56372222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Teshikaga%20Town%20Kussharo%20Kotan%20Ainu%20Museum.jpg"
+    },
+    {
+        "id": "Q17217927",
+        "name": "新ひだか町アイヌ民俗資料館",
+        "type": "アイヌ博物館",
+        "coordinates": "Point(142.376806 42.330306)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/01%E6%96%B0%E3%81%B2%E3%81%A0%E3%81%8B%E3%82%A2%E3%82%A4%E3%83%8C%E8%B3%87%E6%96%99%E9%A4%A8IMG%206310.jpg"
+    },
+    {
+        "id": "Q11395994",
+        "name": "函馆市北洋资料馆",
+        "type": "漁業博物館",
+        "coordinates": "Point(140.756 41.79366667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hakodate%20Citizens%20Arts%20Hall%20Hokkaido%20Japan01bs.jpg"
+    },
+    {
+        "id": "Q11371926",
+        "name": "二風谷アイヌ文化博物館",
+        "type": "アイヌ博物館",
+        "coordinates": "Point(142.156721 42.636932)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nibutani%20Ainu%20Culture%20Museum.JPG"
+    },
+    {
+        "id": "Q11620529",
+        "name": "萱野茂二風谷アイヌ資料館",
+        "type": "アイヌ博物館",
+        "coordinates": "Point(142.161556 42.635306)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/P1040186-2.jpg"
+    },
+    {
+        "id": "Q11521197",
+        "name": "札幌市アイヌ文化交流センター",
+        "type": "アイヌ博物館",
+        "coordinates": "Point(141.21982694 42.96897694)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sapporo%20Ainu%20Culture%20Promotion%20Center%20201705.jpg"
+    },
+    {
+        "id": "Q104236395",
+        "name": "神恵内村郷土資料館",
+        "type": "博物館",
+        "coordinates": "Point(140.420485 43.148252)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q130736368",
+        "name": "小平町郷土資料館",
+        "type": "博物館",
+        "coordinates": "Point(141.65513875 44.13696233)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Straw%20boots.JPG"
+    },
+    {
+        "id": "Q11366289",
+        "name": "中標津町郷土館",
+        "type": "博物館",
+        "coordinates": "Point(144.97078 43.553504)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q48748731",
+        "name": "江差追分会館・江差山車会館",
+        "type": "山車会館",
+        "coordinates": "Point(140.126666666 41.868722222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/02-%E6%B1%9F%E5%B7%AE%E8%BF%BD%E5%88%86%E4%BC%9A%E9%A4%A8%E3%83%BB%E4%BC%9D%E7%BF%92%E6%BC%94%E7%A4%BA%E5%AE%A4%E6%A3%9F.jpg"
+    },
+    {
+        "id": "Q138647692",
+        "name": "Q138647692",
+        "type": "博物館",
+        "coordinates": "Point(140.77187785 42.545365777)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q109524390",
+        "name": "士別市立博物館",
+        "type": "博物館",
+        "coordinates": "Point(142.375111111 44.166666666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104234425",
+        "name": "伝承遊学館",
+        "type": "博物館",
+        "coordinates": "Point(142.323041 44.542335)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q28154411",
+        "name": "滝川市郷土館",
+        "type": "博物館",
+        "coordinates": "Point(141.917411 43.552018)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q48748731",
+        "name": "江差追分会館・江差山車会館",
+        "type": "博物館",
+        "coordinates": "Point(140.126666666 41.868722222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/02-%E6%B1%9F%E5%B7%AE%E8%BF%BD%E5%88%86%E4%BC%9A%E9%A4%A8%E3%83%BB%E4%BC%9D%E7%BF%92%E6%BC%94%E7%A4%BA%E5%AE%A4%E6%A3%9F.jpg"
+    },
+    {
+        "id": "Q130638467",
+        "name": "江別市セラミックアートセンター",
+        "type": "博物館",
+        "coordinates": "Point(141.540277777 43.070833333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104236749",
+        "name": "厚沢部町郷土資料館",
+        "type": "博物館",
+        "coordinates": "Point(140.226419 41.92167)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132197073",
+        "name": "北方領土館",
+        "type": "博物館",
+        "coordinates": "Point(145.132029 43.662765)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shibetsu%20Town%20Northern%20Territories%20Museum.JPG"
+    },
+    {
+        "id": "Q22118516",
+        "name": "北見ハッカ記念館",
+        "type": "博物館",
+        "coordinates": "Point(143.893888888 43.799722222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kitami%20mint%20memorial%20museum001.jpg"
+    },
+    {
+        "id": "Q11402954",
+        "name": "北海道立アイヌ総合センター",
+        "type": "博物館",
+        "coordinates": "Point(141.345433 43.06305)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kaederu%202.%207%20%28Hokkaido%20Ritsumin%20Activities%20Center%29.JPG"
+    },
+    {
+        "id": "Q104237892",
+        "name": "えりも町郷土資料館",
+        "type": "博物館",
+        "coordinates": "Point(143.153554 42.009393)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104236483",
+        "name": "伊達市噴火湾文化研究所",
+        "type": "博物館",
+        "coordinates": "Point(140.85512 42.481179)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q85875502",
+        "name": "中川町エコミュージアムセンター",
+        "type": "博物館",
+        "coordinates": "Point(142.035166666 44.744805555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104237185",
+        "name": "幕別町ふるさと館",
+        "type": "博物館",
+        "coordinates": "Point(143.256299 42.899515)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q28154411",
+        "name": "滝川市郷土館",
+        "type": "建築物",
+        "coordinates": "Point(141.917411 43.552018)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q130638467",
+        "name": "江別市セラミックアートセンター",
+        "type": "建築物",
+        "coordinates": "Point(141.540277777 43.070833333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11400781",
+        "name": "北の国から資料館",
+        "type": "博物館",
+        "coordinates": "Point(142.389528 43.348861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kitanokunikara%20Museum%2001.JPG"
+    },
+    {
+        "id": "Q11511731",
+        "name": "旭川市大雪水晶館",
+        "type": "博物館",
+        "coordinates": "Point(142.350833333 43.759722222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%97%AD%E5%B7%9D%E5%B8%82%E5%8D%9A%E7%89%A9%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11578560",
+        "name": "留萌市海之故里館",
+        "type": "博物館",
+        "coordinates": "Point(141.629726 43.946096)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Uminofurusatokan.JPG"
+    },
+    {
+        "id": "Q11263579",
+        "name": "かかし古里館",
+        "type": "博物館",
+        "coordinates": "Point(140.60551667 42.98016389)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104240265",
+        "name": "奥尻島津波館",
+        "type": "博物館",
+        "coordinates": "Point(139.449653 42.054145)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104239002",
+        "name": "湧別町ふるさと館JRY",
+        "type": "博物館",
+        "coordinates": "Point(143.58058 44.159767)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yubetsu-Furusato-JRY.JPG"
+    },
+    {
+        "id": "Q11391845",
+        "name": "八雲町郷土資料館",
+        "type": "博物館",
+        "coordinates": "Point(140.268256 42.254544)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yamuko%20Town%20Museum.jpg"
+    },
+    {
+        "id": "Q11526802",
+        "name": "東川町郷土館",
+        "type": "博物館",
+        "coordinates": "Point(142.511012 43.699595)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104236413",
+        "name": "仙台藩白老元陣屋資料館",
+        "type": "博物館",
+        "coordinates": "Point(141.343945 42.565528)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104239175",
+        "name": "浦幌町立博物館",
+        "type": "博物館",
+        "coordinates": "Point(143.657907 42.809827)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q65560391",
+        "name": "だて歴史文化ミュージアム",
+        "type": "博物館",
+        "coordinates": "Point(140.873611111 42.471388888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q138647708",
+        "name": "Q138647708",
+        "type": "博物館",
+        "coordinates": "Point(140.924660498 41.958466947)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q1140619",
+        "name": "札幌市鐘樓",
+        "type": "多功能大厅",
+        "coordinates": "Point(141.353681 43.062602)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/20200119%20Sapporo%20Clock%20Tower.jpg"
+    },
+    {
+        "id": "Q28154406",
+        "name": "旭川兵村記念館",
+        "type": "博物館",
+        "coordinates": "Point(142.442267 43.769565)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q85766966",
+        "name": "北斗市郷土資料館",
+        "type": "博物館",
+        "coordinates": "Point(140.643918 41.883523)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Amount%20Hokuto%20Town%20Hall.jpg"
+    },
+    {
+        "id": "Q104205678",
+        "name": "上富良野町郷土館",
+        "type": "博物館",
+        "coordinates": "Point(142.4663 43.45823)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kamifuranocho%20Folk%20Museum%20Kamifurano%20Hokkaido%20Japan01s.jpg"
+    },
+    {
+        "id": "Q104239738",
+        "name": "美幌博物館",
+        "type": "博物館",
+        "coordinates": "Point(144.088451 43.835988)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11430209",
+        "name": "夕張鹿鳴館",
+        "type": "博物館",
+        "coordinates": "Point(141.960167 43.037111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q26257945",
+        "name": "オホーツクミュージアムえさし",
+        "type": "博物館",
+        "coordinates": "Point(142.571896 44.943994)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/OME%20-%20outside.jpg"
+    },
+    {
+        "id": "Q11400781",
+        "name": "北の国から資料館",
+        "type": "former warehouse",
+        "coordinates": "Point(142.389528 43.348861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kitanokunikara%20Museum%2001.JPG"
+    },
+    {
+        "id": "Q55541826",
+        "name": "厚岸町太田屯田開拓記念館",
+        "type": "博物館",
+        "coordinates": "Point(144.787972222 43.0935)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104240125",
+        "name": "稲穂ふれあい研修センター内 奥尻町歴史民俗資料館",
+        "type": "博物館",
+        "coordinates": "Point(139.551378 42.24006)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132552414",
+        "name": "妹背牛町郷土館",
+        "type": "博物館",
+        "coordinates": "Point(141.965616 43.696385)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132197023",
+        "name": "根室市北方領土資料館",
+        "type": "博物館",
+        "coordinates": "Point(145.811459 43.384981)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11417220",
+        "name": "和寒町郷土資料館",
+        "type": "博物館",
+        "coordinates": "Point(142.410583333 44.029833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%92%8C%E5%AF%92%E7%94%BA%E9%83%B7%E5%9C%9F%E8%B3%87%E6%96%99%E9%A4%A8%E6%AD%A3%E9%9D%A2.jpg"
+    },
+    {
+        "id": "Q28154206",
+        "name": "滝川市美術自然史館",
+        "type": "博物館",
+        "coordinates": "Point(141.914647 43.552012)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takikawa%20Museum%20of%20Art%20and%20Natural%20History%2002.jpg"
+    },
+    {
+        "id": "Q104847273",
+        "name": "根室市歴史と自然の資料館",
+        "type": "博物館",
+        "coordinates": "Point(145.5903 43.2887)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q26257944",
+        "name": "斜里町立知床博物館",
+        "type": "博物館",
+        "coordinates": "Point(144.672984 43.913167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shiretoko%20Museum%20-%20entrance.jpg"
+    },
+    {
+        "id": "Q133054588",
+        "name": "おたるみなと資料館",
+        "type": "博物館",
+        "coordinates": "Point(141.034435 43.182777)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11400781",
+        "name": "北の国から資料館",
+        "type": "红砖仓库",
+        "coordinates": "Point(142.389528 43.348861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kitanokunikara%20Museum%2001.JPG"
+    },
+    {
+        "id": "Q104234965",
+        "name": "砂川市郷土資料室",
+        "type": "博物館",
+        "coordinates": "Point(141.902241 43.495053)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q1140619",
+        "name": "札幌市鐘樓",
+        "type": "博物館",
+        "coordinates": "Point(141.353681 43.062602)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/20200119%20Sapporo%20Clock%20Tower.jpg"
+    },
+    {
+        "id": "Q104236175",
+        "name": "増毛町総合交流促進施設元陣屋",
+        "type": "博物館",
+        "coordinates": "Point(141.522843 43.855311)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104240374",
+        "name": "旧青山別邸",
+        "type": "博物館",
+        "coordinates": "Point(141.007957 43.231727)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q105728168",
+        "name": "紋別市立博物館",
+        "type": "博物館",
+        "coordinates": "Point(143.353027777 44.355472222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mombetsu%20city%20museum.jpg"
+    },
+    {
+        "id": "Q104236548",
+        "name": "史跡 北黄金貝塚情報センター",
+        "type": "博物館",
+        "coordinates": "Point(140.910065 42.402473)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%8C%97%E9%BB%84%E9%87%91%E8%B2%9D%E5%A1%9A%E6%83%85%E5%A0%B1%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC.jpg"
+    },
+    {
+        "id": "Q11511731",
+        "name": "旭川市大雪水晶館",
+        "type": "音樂廳",
+        "coordinates": "Point(142.350833333 43.759722222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%97%AD%E5%B7%9D%E5%B8%82%E5%8D%9A%E7%89%A9%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q1140619",
+        "name": "札幌市鐘樓",
+        "type": "西式鐘樓",
+        "coordinates": "Point(141.353681 43.062602)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/20200119%20Sapporo%20Clock%20Tower.jpg"
+    },
+    {
+        "id": "Q123128203",
+        "name": "札幌市博物館活動センター",
+        "type": "博物館",
+        "coordinates": "Point(141.372363 43.018914)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sapporo%20Museum%20Activity%20Center.jpg"
+    },
+    {
+        "id": "Q106967662",
+        "name": "北海道開拓記念館",
+        "type": "博物館",
+        "coordinates": "Point(141.496666666 43.053055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Historical%20Museum%20of%20Hokkaido.JPG"
+    },
+    {
+        "id": "Q104237785",
+        "name": "勇武津資料館",
+        "type": "博物館",
+        "coordinates": "Point(141.734031 42.631049)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q123127197",
+        "name": "阿寒国際ツルセンター",
+        "type": "博物館",
+        "coordinates": "Point(144.149205 43.1429)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Japanse%20kraanvogels%20in%20Akan%20International%20Crane%20Centre%2C%20-24%20februari%202012%20a.jpg"
+    },
+    {
+        "id": "Q104239862",
+        "name": "苫前町郷土資料館",
+        "type": "博物館",
+        "coordinates": "Point(141.658576 44.307774)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q70203108",
+        "name": "名寄市北國博物館",
+        "type": "博物館",
+        "coordinates": "Point(142.46735 44.341547)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nayoro%20City%20Kitaguni%20Museum.jpg"
+    },
+    {
+        "id": "Q11511731",
+        "name": "旭川市大雪水晶館",
+        "type": "展覽館",
+        "coordinates": "Point(142.350833333 43.759722222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%97%AD%E5%B7%9D%E5%B8%82%E5%8D%9A%E7%89%A9%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q104240646",
+        "name": "新ひだか町博物館",
+        "type": "博物館",
+        "coordinates": "Point(142.358333 42.343876)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104234557",
+        "name": "美深町郷土博物館",
+        "type": "博物館",
+        "coordinates": "Point(142.340271 44.481155)",
+        "image": "No Image"
+    }
+]

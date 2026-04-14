@@ -1,0 +1,338 @@
+[
+    {
+        "id": "Q137656274",
+        "name": "吉野ヶ里遺跡展示室",
+        "type": "考古博物館",
+        "coordinates": "Point(130.385501 33.324317)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%90%89%E9%87%8E%E3%83%B6%E9%87%8C%E9%81%BA%E8%B7%A1%E5%B1%95%E7%A4%BA%E5%AE%A4.JPG"
+    },
+    {
+        "id": "Q104784030",
+        "name": "佐賀県立佐賀城本丸歴史館",
+        "type": "歷史博物館",
+        "coordinates": "Point(130.30267 33.245426)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saga%20Castle%20History%20Museum%2020171112-1.jpg"
+    },
+    {
+        "id": "Q128213480",
+        "name": "太良町歴史民俗資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(130.179582 33.019868)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q4801489",
+        "name": "佐賀縣立名護屋城博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(129.87027778 33.52777778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/NagoyaC%20museum.jpg"
+    },
+    {
+        "id": "Q22118826",
+        "name": "佐賀縣立美術館",
+        "type": "美術館",
+        "coordinates": "Point(130.299972222 33.244611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saga%20Prefectural%20Art%20Museum%202008.jpg"
+    },
+    {
+        "id": "Q104784028",
+        "name": "有田町歴史民俗資料館・有田焼参考館",
+        "type": "歷史博物館",
+        "coordinates": "Point(129.91106 33.19507)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Karausu%20Arita%20Town%20Museum%20of%20History%20and%20Folklore.JPG"
+    },
+    {
+        "id": "Q128213520",
+        "name": "村岡総本舗羊羹資料館",
+        "type": "食物博物館",
+        "coordinates": "Point(130.20431 33.30134)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%9D%91%E5%B2%A1%E7%B7%8F%E6%9C%AC%E8%88%97%E7%BE%8A%E7%BE%B9%E8%B3%87%E6%96%99%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q137656274",
+        "name": "吉野ヶ里遺跡展示室",
+        "type": "展览空间",
+        "coordinates": "Point(130.385501 33.324317)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%90%89%E9%87%8E%E3%83%B6%E9%87%8C%E9%81%BA%E8%B7%A1%E5%B1%95%E7%A4%BA%E5%AE%A4.JPG"
+    },
+    {
+        "id": "Q134777085",
+        "name": "下合瀬の大カツラ",
+        "type": "巨樹",
+        "coordinates": "Point(130.26025 33.44362)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shimo-Ose%20no%20Okatsura%20in%20Fuji%2C%20Saga%20full%20view.jpg"
+    },
+    {
+        "id": "Q112167804",
+        "name": "川古のクス",
+        "type": "巨樹",
+        "coordinates": "Point(129.993333 33.251833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kawako%20camphor%20tree.jpg"
+    },
+    {
+        "id": "Q66685041",
+        "name": "河村美術館",
+        "type": "美術館",
+        "coordinates": "Point(129.971675 33.453246)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Sea%20at%20Sunset%20by%20Aoki%20Shigeru%20%28Kawamura%20Art%20Museum%29.jpg"
+    },
+    {
+        "id": "Q11546631",
+        "name": "武雄市圖書館",
+        "type": "地方文化館",
+        "coordinates": "Point(130.023653 33.189119)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takeo%20cl%2000.JPG"
+    },
+    {
+        "id": "Q65243130",
+        "name": "森之遊园地童话村",
+        "type": "主題公園",
+        "coordinates": "Point(129.973777777 33.131111111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q127463276",
+        "name": "旧田代家西洋館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(129.89776 33.19044)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Arita%20Ijinkan.jpg"
+    },
+    {
+        "id": "Q4902941",
+        "name": "末卢馆",
+        "type": "考古博物館",
+        "coordinates": "Point(129.95805556 33.44847222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nabatake%20Site%20Matsuro-kan%20Museum.JPG"
+    },
+    {
+        "id": "Q22118826",
+        "name": "佐賀縣立美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(130.299972222 33.244611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saga%20Prefectural%20Art%20Museum%202008.jpg"
+    },
+    {
+        "id": "Q111605751",
+        "name": "有田のイチョウ",
+        "type": "巨樹",
+        "coordinates": "Point(129.905166666 33.193194444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ginkgo%20Tree%20Arita%2001.jpg"
+    },
+    {
+        "id": "Q3364242",
+        "name": "有田ポーセリンパーク",
+        "type": "酒博物館",
+        "coordinates": "Point(129.908266 33.165792)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Zwinger%20Palace%20%28Arita%20Porcelain%20Park%29.jpg"
+    },
+    {
+        "id": "Q131194323",
+        "name": "吉野ヶ里歴史公園センター",
+        "type": "遊客中心",
+        "coordinates": "Point(130.3887 33.3238)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yoshinogari%20Historical%20Park%20Center%2020230312%2002.jpg"
+    },
+    {
+        "id": "Q11516626",
+        "name": "有田陶瓷美術館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(129.898756 33.190469)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Arita%20Ceramic%20Art%20Museum%2020170429.jpg"
+    },
+    {
+        "id": "Q96323719",
+        "name": "武雄温泉新館",
+        "type": "博物館",
+        "coordinates": "Point(130.01438 33.1966)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/New%20Hall%20of%20Takeo%20Hot%20Spring.jpg"
+    },
+    {
+        "id": "Q11384745",
+        "name": "佐賀県立宇宙科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(130.03527778 33.17916667)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q107322654",
+        "name": "祐徳博物館",
+        "type": "博物館",
+        "coordinates": "Point(130.1097653 33.0739075)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%A5%90%E5%BE%B3%E7%A8%B2%E8%8D%B7%E7%A5%9E%E7%A4%BE%E5%A4%96%E8%8B%91%20%E7%A5%90%E5%BE%B3%E5%8D%9A%E7%89%A9%E9%A4%A8.JPG"
+    },
+    {
+        "id": "Q3364242",
+        "name": "有田ポーセリンパーク",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(129.908266 33.165792)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Zwinger%20Palace%20%28Arita%20Porcelain%20Park%29.jpg"
+    },
+    {
+        "id": "Q96323719",
+        "name": "武雄温泉新館",
+        "type": "公共浴場",
+        "coordinates": "Point(130.01438 33.1966)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/New%20Hall%20of%20Takeo%20Hot%20Spring.jpg"
+    },
+    {
+        "id": "Q11353344",
+        "name": "屋形石七釜",
+        "type": "觀光景點",
+        "coordinates": "Point(129.932444 33.549)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yakataishi%20no%20Nanatsugama%20on%20the%20sea%20around.jpg"
+    },
+    {
+        "id": "Q6371422",
+        "name": "佐賀縣立博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(130.30055556 33.245)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saga%20Prefectural%20Museum%202008.jpg"
+    },
+    {
+        "id": "Q11353344",
+        "name": "屋形石七釜",
+        "type": "海蝕洞",
+        "coordinates": "Point(129.932444 33.549)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yakataishi%20no%20Nanatsugama%20on%20the%20sea%20around.jpg"
+    },
+    {
+        "id": "Q11384745",
+        "name": "佐賀県立宇宙科学館",
+        "type": "宇宙工学博物館",
+        "coordinates": "Point(130.03527778 33.17916667)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q108604813",
+        "name": "川上峡温泉",
+        "type": "温泉镇",
+        "coordinates": "Point(130.2696 33.32727)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11363052",
+        "name": "中富記念藥物博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(130.51095278 33.3978)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nakatomi%20Memorial%20Medicine%20Museum.jpg"
+    },
+    {
+        "id": "Q64796766",
+        "name": "徵古館",
+        "type": "歷史博物館",
+        "coordinates": "Point(130.301407 33.251586)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chokokan%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q28685850",
+        "name": "佐賀バルーンミュージアム",
+        "type": "航空博物館",
+        "coordinates": "Point(130.30041667 33.25241667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saga%20balloon%20museum%202016-10-15.jpg"
+    },
+    {
+        "id": "Q123516469",
+        "name": "多久市郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(130.08829 33.25728)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q3364242",
+        "name": "有田ポーセリンパーク",
+        "type": "主題公園",
+        "coordinates": "Point(129.908266 33.165792)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Zwinger%20Palace%20%28Arita%20Porcelain%20Park%29.jpg"
+    },
+    {
+        "id": "Q11546631",
+        "name": "武雄市圖書館",
+        "type": "市区町村立図書館",
+        "coordinates": "Point(130.023653 33.189119)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takeo%20cl%2000.JPG"
+    },
+    {
+        "id": "Q6452794",
+        "name": "佐賀県立九州陶磁文化館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(129.880694444 33.178944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyushu%20Ceramic%20Museum%20front.JPG"
+    },
+    {
+        "id": "Q6452794",
+        "name": "佐賀県立九州陶磁文化館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(129.880694444 33.178944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyushu%20Ceramic%20Museum%20front.JPG"
+    },
+    {
+        "id": "Q28684603",
+        "name": "佐賀大学美術館",
+        "type": "大學博物館",
+        "coordinates": "Point(130.29224444 33.24439444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saga%20University%20Art%20Museum%202016.JPG"
+    },
+    {
+        "id": "Q127463276",
+        "name": "旧田代家西洋館",
+        "type": "擬洋風建築",
+        "coordinates": "Point(129.89776 33.19044)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Arita%20Ijinkan.jpg"
+    },
+    {
+        "id": "Q64796766",
+        "name": "徵古館",
+        "type": "历史建筑",
+        "coordinates": "Point(130.301407 33.251586)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chokokan%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q11356637",
+        "name": "三瀬ルベール牧場 どんぐり村",
+        "type": "主題公園",
+        "coordinates": "Point(130.27379722 33.40563333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mitsuse%20Donguri%20Village%20front.jpg"
+    },
+    {
+        "id": "Q131194323",
+        "name": "吉野ヶ里歴史公園センター",
+        "type": "建築物",
+        "coordinates": "Point(130.3887 33.3238)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yoshinogari%20Historical%20Park%20Center%2020230312%2002.jpg"
+    },
+    {
+        "id": "Q137569482",
+        "name": "東よか干潟ビジターセンター",
+        "type": "遊客中心",
+        "coordinates": "Point(130.2701348 33.1750714)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Higasasu.jpg"
+    },
+    {
+        "id": "Q104784028",
+        "name": "有田町歴史民俗資料館・有田焼参考館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(129.91106 33.19507)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Karausu%20Arita%20Town%20Museum%20of%20History%20and%20Folklore.JPG"
+    },
+    {
+        "id": "Q28684603",
+        "name": "佐賀大学美術館",
+        "type": "美術館",
+        "coordinates": "Point(130.29224444 33.24439444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saga%20University%20Art%20Museum%202016.JPG"
+    },
+    {
+        "id": "Q11353344",
+        "name": "屋形石七釜",
+        "type": "節理",
+        "coordinates": "Point(129.932444 33.549)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yakataishi%20no%20Nanatsugama%20on%20the%20sea%20around.jpg"
+    },
+    {
+        "id": "Q104784028",
+        "name": "有田町歴史民俗資料館・有田焼参考館",
+        "type": "民俗博物館",
+        "coordinates": "Point(129.91106 33.19507)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Karausu%20Arita%20Town%20Museum%20of%20History%20and%20Folklore.JPG"
+    }
+]

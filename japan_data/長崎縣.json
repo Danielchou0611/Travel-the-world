@@ -1,0 +1,618 @@
+[
+    {
+        "id": "Q11644616",
+        "name": "里田原歴史民俗資料館",
+        "type": "考古博物館",
+        "coordinates": "Point(129.591167 33.358389)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11427886",
+        "name": "堂崎天主堂",
+        "type": "キリスト教博物館",
+        "coordinates": "Point(128.837194 32.755861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Douzaki%20Church%20in%20Nagasaki.JPG"
+    },
+    {
+        "id": "Q18339489",
+        "name": "峰町歴史民俗資料館",
+        "type": "考古博物館",
+        "coordinates": "Point(129.316381 34.469547)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tsushima%20City%20Mine%20Historical%20Museum.jpg"
+    },
+    {
+        "id": "Q63465",
+        "name": "哥拉巴園",
+        "type": "戶外博物館",
+        "coordinates": "Point(129.86888889 32.73444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki-Glover-Garden-5415.jpg"
+    },
+    {
+        "id": "Q63465",
+        "name": "哥拉巴園",
+        "type": "庭園",
+        "coordinates": "Point(129.86888889 32.73444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki-Glover-Garden-5415.jpg"
+    },
+    {
+        "id": "Q11323718",
+        "name": "長崎和平博物館",
+        "type": "和平博物館",
+        "coordinates": "Point(129.868194444 32.736222222)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q111274293",
+        "name": "鄭成功記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(129.52039 33.331)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%84%AD%E6%88%90%E5%8A%9F%E8%A8%98%E5%BF%B5%E9%A4%A8%E5%A4%96%E8%A6%B3.jpg"
+    },
+    {
+        "id": "Q105557496",
+        "name": "岡正治記念長崎平和資料館",
+        "type": "和平博物館",
+        "coordinates": "Point(129.872143 32.755232)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q93490",
+        "name": "和平公園",
+        "type": "紀念公園",
+        "coordinates": "Point(129.86312 32.77558)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fountain%20at%20Nagasaki%20Peace%20Park.jpg"
+    },
+    {
+        "id": "Q11482968",
+        "name": "平戸市切支丹資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(129.447222 33.290111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11429588",
+        "name": "壹岐市立一支国博物館",
+        "type": "博物館",
+        "coordinates": "Point(129.755361 33.767611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iki%20City%20Ikikoku%20Museum.jpg"
+    },
+    {
+        "id": "Q117052982",
+        "name": "长崎市恐龙博物馆",
+        "type": "古生物博物馆",
+        "coordinates": "Point(129.76175 32.593777777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki%20City%20Dinosaur%20Museum%2020221024.jpg"
+    },
+    {
+        "id": "Q11427886",
+        "name": "堂崎天主堂",
+        "type": "天主教教堂建筑",
+        "coordinates": "Point(128.837194 32.755861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Douzaki%20Church%20in%20Nagasaki.JPG"
+    },
+    {
+        "id": "Q11382536",
+        "name": "佐世保市博物館島瀨美術中心",
+        "type": "美術館",
+        "coordinates": "Point(129.72063889 33.17275)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sasebo%20city%20museum%20shimanose%20art%20center.jpg"
+    },
+    {
+        "id": "Q1191845",
+        "name": "豪斯登堡",
+        "type": "主題樂園",
+        "coordinates": "Point(129.786889 33.0865)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Huis%20Ten%20Bosch%20-%2001.jpg"
+    },
+    {
+        "id": "Q133628",
+        "name": "國立長崎原爆死歿者追悼和平祈念館",
+        "type": "和平博物館",
+        "coordinates": "Point(129.865 32.77277778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki%20peace%20memorial%20hall.jpg"
+    },
+    {
+        "id": "Q11409338",
+        "name": "原の辻ガイダンス",
+        "type": "考古博物館",
+        "coordinates": "Point(129.748944 33.763472)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Harunotsuji%20Guidance.JPG"
+    },
+    {
+        "id": "Q18337566",
+        "name": "長崎縣立對馬歷史民俗資料館",
+        "type": "民俗博物館",
+        "coordinates": "Point(129.287556 34.203694)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki%20Prefectural%20Tsushima%20Historical%20Museum.jpg"
+    },
+    {
+        "id": "Q21654699",
+        "name": "松永安左エ門記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(129.75144444 33.74497222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iki%20City%20Matsunaga%20Museum.jpg"
+    },
+    {
+        "id": "Q107323093",
+        "name": "ドロ神父記念館",
+        "type": "纪念博物馆",
+        "coordinates": "Point(129.700916666 32.843944444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11465727",
+        "name": "展海峰",
+        "type": "风景点",
+        "coordinates": "Point(129.692861111 33.132361111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Observation%20Deck%20at%20Tenkaiho.JPG"
+    },
+    {
+        "id": "Q108611178",
+        "name": "平戸温泉",
+        "type": "温泉镇",
+        "coordinates": "Point(129.505372 33.349699)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q93490",
+        "name": "和平公園",
+        "type": "雕塑公园",
+        "coordinates": "Point(129.86312 32.77558)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fountain%20at%20Nagasaki%20Peace%20Park.jpg"
+    },
+    {
+        "id": "Q18337535",
+        "name": "豊玉町郷土館",
+        "type": "考古博物館",
+        "coordinates": "Point(129.31936667 34.39468056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tsushima%20City%20Toyotama%20Museum.jpg"
+    },
+    {
+        "id": "Q11652770",
+        "name": "長崎縣美術館",
+        "type": "美術館",
+        "coordinates": "Point(129.871057 32.741679)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki%20art%20museum%20IMG%202093.JPG"
+    },
+    {
+        "id": "Q11652770",
+        "name": "長崎縣美術館",
+        "type": "美術館",
+        "coordinates": "Point(129.871057 32.741679)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki%20Prefectural%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q11652469",
+        "name": "長崎市科學館",
+        "type": "科學博物館",
+        "coordinates": "Point(129.85333333 32.77888889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki%20prefectural%20gymnasium.JPG"
+    },
+    {
+        "id": "Q11511148",
+        "name": "舊長崎稅關下松派出所",
+        "type": "工藝博物館",
+        "coordinates": "Point(129.86966667 32.73672222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki%20Customs%20Sagarimastu%20branch01s3.jpg"
+    },
+    {
+        "id": "Q73613",
+        "name": "長崎歷史文化博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(129.879557 32.752813)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki%20Museum%20of%20History%20and%20Culture%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q11652324",
+        "name": "長崎荷蘭村",
+        "type": "主題公園",
+        "coordinates": "Point(129.757467 32.997006)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki%20Holland%20Village%202011.JPG"
+    },
+    {
+        "id": "Q11652324",
+        "name": "長崎荷蘭村",
+        "type": "主題樂園",
+        "coordinates": "Point(129.757467 32.997006)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki%20Holland%20Village%202011.JPG"
+    },
+    {
+        "id": "Q1099077",
+        "name": "长崎原爆资料馆",
+        "type": "軍事博物館",
+        "coordinates": "Point(129.864513888 32.772652777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%95%B7%E5%B4%8E%E5%8E%9F%E7%88%86%E8%B3%87%E6%96%99%E9%A4%A8%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q11482968",
+        "name": "平戸市切支丹資料館",
+        "type": "キリスト教博物館",
+        "coordinates": "Point(129.447222 33.290111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11526710",
+        "name": "東山手十二番館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(129.873583 32.737806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Higashiyamate%2012bankan%20westside.jpg"
+    },
+    {
+        "id": "Q11526710",
+        "name": "東山手十二番館",
+        "type": "洋樓",
+        "coordinates": "Point(129.873583 32.737806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Higashiyamate%2012bankan%20westside.jpg"
+    },
+    {
+        "id": "Q18337566",
+        "name": "長崎縣立對馬歷史民俗資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(129.287556 34.203694)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki%20Prefectural%20Tsushima%20Historical%20Museum.jpg"
+    },
+    {
+        "id": "Q73613",
+        "name": "長崎歷史文化博物館",
+        "type": "文化博物館",
+        "coordinates": "Point(129.879557 32.752813)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki%20Museum%20of%20History%20and%20Culture%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q11511148",
+        "name": "舊長崎稅關下松派出所",
+        "type": "海關樓",
+        "coordinates": "Point(129.86966667 32.73672222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki%20Customs%20Sagarimastu%20branch01s3.jpg"
+    },
+    {
+        "id": "Q11652770",
+        "name": "長崎縣美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(129.871057 32.741679)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki%20art%20museum%20IMG%202093.JPG"
+    },
+    {
+        "id": "Q11652770",
+        "name": "長崎縣美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(129.871057 32.741679)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki%20Prefectural%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q1049762",
+        "name": "西博爾德紀念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(129.892214 32.755839)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Siebold%20Memorial%20Museum%20002.jpg"
+    },
+    {
+        "id": "Q11652552",
+        "name": "長崎市野口彌太郎記念美術館",
+        "type": "美術館",
+        "coordinates": "Point(129.865 32.77280556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki%20City%20Peace%20Hall.jpg"
+    },
+    {
+        "id": "Q11511148",
+        "name": "舊長崎稅關下松派出所",
+        "type": "派出所",
+        "coordinates": "Point(129.86966667 32.73672222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki%20Customs%20Sagarimastu%20branch01s3.jpg"
+    },
+    {
+        "id": "Q11531777",
+        "name": "松浦史料博物馆",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(129.552278 33.372942)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Matsura%20Museum%201.jpg"
+    },
+    {
+        "id": "Q18337565",
+        "name": "上対馬町歴史民俗資料室",
+        "type": "民俗博物館",
+        "coordinates": "Point(129.4585 34.653861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kamitsushima%20Historical%20Museum.jpg"
+    },
+    {
+        "id": "Q1191845",
+        "name": "豪斯登堡",
+        "type": "娛樂港",
+        "coordinates": "Point(129.786889 33.0865)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Huis%20Ten%20Bosch%20-%2001.jpg"
+    },
+    {
+        "id": "Q11531803",
+        "name": "松浦市立埋蔵文化財センター",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(129.762389 33.436611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/753takasima%20iriguti%20P11007532.jpg"
+    },
+    {
+        "id": "Q118111277",
+        "name": "長崎市永井隆記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(129.865714 32.779007)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki%20City%20Nagai%20Takashi%20Memorial%20Museum.jpg"
+    },
+    {
+        "id": "Q28691707",
+        "name": "雲仙岳災害紀念館",
+        "type": "火山博物館",
+        "coordinates": "Point(130.37572222 32.74363889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt%20Unzen%20Disaster%20Memorial%20Hall.jpg"
+    },
+    {
+        "id": "Q11357149",
+        "name": "三菱重工業長崎造船所史料館",
+        "type": "公司博物館",
+        "coordinates": "Point(129.85565 32.74304)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%95%B7%E5%B4%8E%E9%80%A0%E8%88%B9%E6%89%80%20%E6%97%A7%E6%9C%A8%E5%9E%8B%E5%A0%B41.JPG"
+    },
+    {
+        "id": "Q1191845",
+        "name": "豪斯登堡",
+        "type": "海之站",
+        "coordinates": "Point(129.786889 33.0865)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Huis%20Ten%20Bosch%20-%2001.jpg"
+    },
+    {
+        "id": "Q107323653",
+        "name": "長崎市立博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(129.8795 32.752833333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q18337565",
+        "name": "上対馬町歴史民俗資料室",
+        "type": "考古博物館",
+        "coordinates": "Point(129.4585 34.653861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kamitsushima%20Historical%20Museum.jpg"
+    },
+    {
+        "id": "Q11588461",
+        "name": "祈禱之丘繪本美術館",
+        "type": "繪本博物館",
+        "coordinates": "Point(129.869722 32.735222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Inorino-oka%20Picture%20Book%20Museum01s5.jpg"
+    },
+    {
+        "id": "Q63465",
+        "name": "哥拉巴園",
+        "type": "博物館",
+        "coordinates": "Point(129.86888889 32.73444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki-Glover-Garden-5415.jpg"
+    },
+    {
+        "id": "Q11531777",
+        "name": "松浦史料博物馆",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(129.552333 33.373083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Matsura%20Museum%201.jpg"
+    },
+    {
+        "id": "Q11357149",
+        "name": "三菱重工業長崎造船所史料館",
+        "type": "海事博物館",
+        "coordinates": "Point(129.85565 32.74304)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%95%B7%E5%B4%8E%E9%80%A0%E8%88%B9%E6%89%80%20%E6%97%A7%E6%9C%A8%E5%9E%8B%E5%A0%B41.JPG"
+    },
+    {
+        "id": "Q11357149",
+        "name": "三菱重工業長崎造船所史料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(129.85565 32.74304)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%95%B7%E5%B4%8E%E9%80%A0%E8%88%B9%E6%89%80%20%E6%97%A7%E6%9C%A8%E5%9E%8B%E5%A0%B41.JPG"
+    },
+    {
+        "id": "Q7400110",
+        "name": "九十九島珍珠海洋遊覽區",
+        "type": "主題樂園",
+        "coordinates": "Point(129.67944444 33.16138889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/200320%20Kujukushima%20Pearl%20Sea%20Resort%20Sasebo%20Nagasaki%20pref%20Japan10s3.jpg"
+    },
+    {
+        "id": "Q93429",
+        "name": "远藤周作文学馆",
+        "type": "人物紀念館",
+        "coordinates": "Point(129.702693 32.835865)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shusaku%20Endo%20Literary%20Museum.jpg"
+    },
+    {
+        "id": "Q11531777",
+        "name": "松浦史料博物馆",
+        "type": "歷史博物館",
+        "coordinates": "Point(129.552278 33.372942)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Matsura%20Museum%201.jpg"
+    },
+    {
+        "id": "Q11664299",
+        "name": "音浴博物館",
+        "type": "音楽博物館",
+        "coordinates": "Point(129.708639 32.926278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MG%200121%20%E9%9F%B3%E6%B5%B4%E5%8D%9A%E7%89%A9%E9%A4%A8.JPG"
+    },
+    {
+        "id": "Q133628",
+        "name": "國立長崎原爆死歿者追悼和平祈念館",
+        "type": "戰爭紀念建築",
+        "coordinates": "Point(129.865 32.77277778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki%20peace%20memorial%20hall.jpg"
+    },
+    {
+        "id": "Q28691707",
+        "name": "雲仙岳災害紀念館",
+        "type": "紀念物",
+        "coordinates": "Point(130.37572222 32.74363889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt%20Unzen%20Disaster%20Memorial%20Hall.jpg"
+    },
+    {
+        "id": "Q7400110",
+        "name": "九十九島珍珠海洋遊覽區",
+        "type": "水族館",
+        "coordinates": "Point(129.67944444 33.16138889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/200320%20Kujukushima%20Pearl%20Sea%20Resort%20Sasebo%20Nagasaki%20pref%20Japan10s3.jpg"
+    },
+    {
+        "id": "Q1099077",
+        "name": "长崎原爆资料馆",
+        "type": "和平博物館",
+        "coordinates": "Point(129.864513888 32.772652777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%95%B7%E5%B4%8E%E5%8E%9F%E7%88%86%E8%B3%87%E6%96%99%E9%A4%A8%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q11526710",
+        "name": "東山手十二番館",
+        "type": "教育博物館",
+        "coordinates": "Point(129.873583 32.737806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Higashiyamate%2012bankan%20westside.jpg"
+    },
+    {
+        "id": "Q11429588",
+        "name": "壹岐市立一支国博物館",
+        "type": "地方文化館",
+        "coordinates": "Point(129.755361 33.767611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iki%20City%20Ikikoku%20Museum.jpg"
+    },
+    {
+        "id": "Q11558706",
+        "name": "海上自衛隊佐世保史料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(129.713611 33.173889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sail-Tower%2C%20JMSDF%20Sasebo%20Museum%20001.jpg"
+    },
+    {
+        "id": "Q11382536",
+        "name": "佐世保市博物館島瀨美術中心",
+        "type": "市立博物館",
+        "coordinates": "Point(129.72063889 33.17275)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sasebo%20city%20museum%20shimanose%20art%20center.jpg"
+    },
+    {
+        "id": "Q11558706",
+        "name": "海上自衛隊佐世保史料館",
+        "type": "海軍博物館",
+        "coordinates": "Point(129.713611 33.173889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sail-Tower%2C%20JMSDF%20Sasebo%20Museum%20001.jpg"
+    },
+    {
+        "id": "Q93429",
+        "name": "远藤周作文学馆",
+        "type": "文學館",
+        "coordinates": "Point(129.702693 32.835865)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shusaku%20Endo%20Literary%20Museum.jpg"
+    },
+    {
+        "id": "Q11531777",
+        "name": "松浦史料博物馆",
+        "type": "歷史博物館",
+        "coordinates": "Point(129.552333 33.373083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Matsura%20Museum%201.jpg"
+    },
+    {
+        "id": "Q11652552",
+        "name": "長崎市野口彌太郎記念美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(129.865 32.77280556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagasaki%20City%20Peace%20Hall.jpg"
+    },
+    {
+        "id": "Q84029",
+        "name": "日本二十六聖人紀念館",
+        "type": "キリスト教博物館",
+        "coordinates": "Point(129.871666666 32.754722222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/26%20martyrs%20museum.jpg"
+    },
+    {
+        "id": "Q11511154",
+        "name": "舊香港上海銀行長崎支店",
+        "type": "博物館",
+        "coordinates": "Point(129.869182 32.736334)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Former%20Hongkong%20and%20Shanghai%20Bank%20Nagasaki%20Branch%2020180714%2001.jpg"
+    },
+    {
+        "id": "Q123517238",
+        "name": "外海歴史民俗資料館",
+        "type": "博物館",
+        "coordinates": "Point(129.69966 32.842728)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%A4%96%E6%B5%B7%E6%AD%B4%E5%8F%B2%E6%B0%91%E4%BF%97%E8%B3%87%E6%96%99%E9%A4%A8%2001.jpg"
+    },
+    {
+        "id": "Q1043953",
+        "name": "九十九島",
+        "type": "溺灣",
+        "coordinates": "Point(129.6 33.16666667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sasebo%20Kujukushima%20Islands%202010-08.JPG"
+    },
+    {
+        "id": "Q11372346",
+        "name": "五島觀光歴史資料館",
+        "type": "博物館",
+        "coordinates": "Point(128.846894 32.693953)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gotoh%20tourism-history-museum-20150427.png"
+    },
+    {
+        "id": "Q11511154",
+        "name": "舊香港上海銀行長崎支店",
+        "type": "银行建筑物",
+        "coordinates": "Point(129.869182 32.736334)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Former%20Hongkong%20and%20Shanghai%20Bank%20Nagasaki%20Branch%2020180714%2001.jpg"
+    },
+    {
+        "id": "Q1043953",
+        "name": "九十九島",
+        "type": "觀光景點",
+        "coordinates": "Point(129.6 33.16666667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sasebo%20Kujukushima%20Islands%202010-08.JPG"
+    },
+    {
+        "id": "Q1043953",
+        "name": "九十九島",
+        "type": "島群",
+        "coordinates": "Point(129.6 33.16666667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sasebo%20Kujukushima%20Islands%202010-08.JPG"
+    },
+    {
+        "id": "Q1043953",
+        "name": "九十九島",
+        "type": "溺灣",
+        "coordinates": "Point(129.54 33.268333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sasebo%20Kujukushima%20Islands%202010-08.JPG"
+    },
+    {
+        "id": "Q97312460",
+        "name": "対馬博物館",
+        "type": "博物館",
+        "coordinates": "Point(129.287945 34.203701)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tsushima%20Museum.jpg"
+    },
+    {
+        "id": "Q11370877",
+        "name": "龜山社中紀念館",
+        "type": "博物館",
+        "coordinates": "Point(129.886814 32.748756)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q1043953",
+        "name": "九十九島",
+        "type": "觀光景點",
+        "coordinates": "Point(129.54 33.268333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sasebo%20Kujukushima%20Islands%202010-08.JPG"
+    },
+    {
+        "id": "Q1043953",
+        "name": "九十九島",
+        "type": "島群",
+        "coordinates": "Point(129.54 33.268333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sasebo%20Kujukushima%20Islands%202010-08.JPG"
+    },
+    {
+        "id": "Q104784044",
+        "name": "南島原市口之津歴史民俗資料館",
+        "type": "博物館",
+        "coordinates": "Point(130.19562 32.605087)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%8F%A3%E4%B9%8B%E6%B4%A5%E6%AD%B4%E5%8F%B2%E6%B0%91%E4%BF%97%E8%B3%87%E6%96%99%E9%A4%A8%20-%20panoramio.jpg"
+    }
+]

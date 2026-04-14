@@ -1,0 +1,331 @@
+[
+    {
+        "id": "Q97495956",
+        "name": "大分香りの博物館",
+        "type": "博物館",
+        "coordinates": "Point(131.488805555 33.312)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oita%20Fragrance%20Museum.jpg"
+    },
+    {
+        "id": "Q11370332",
+        "name": "九州自然動物公園非洲野生",
+        "type": "野生动物园",
+        "coordinates": "Point(131.41152778 33.354)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%B9%9D%E5%B7%9E%E8%87%AA%E7%84%B6%E5%8B%95%E7%89%A9%E5%85%AC%E5%9C%92%E3%82%A2%E3%83%95%E3%83%AA%E3%82%AB%E3%83%B3%E3%82%B5%E3%83%95%E3%82%A1%E3%83%AA1.jpg"
+    },
+    {
+        "id": "Q123378080",
+        "name": "血の池地獄",
+        "type": "池塘",
+        "coordinates": "Point(131.47816 33.3272)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20Blood%20Pond%20Hell%20Hot%20Spring%201.jpg"
+    },
+    {
+        "id": "Q11507150",
+        "name": "日本丸館",
+        "type": "製薬博物館",
+        "coordinates": "Point(130.937431 33.327458)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nihongan%20Museum%20in%20Mamedamachi%20Area.jpg"
+    },
+    {
+        "id": "Q11346676",
+        "name": "樂天地",
+        "type": "動物園",
+        "coordinates": "Point(131.481333 33.275167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Beppu%20rakutenchi.jpg"
+    },
+    {
+        "id": "Q11507150",
+        "name": "日本丸館",
+        "type": "藥房",
+        "coordinates": "Point(130.937431 33.327458)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nihongan%20Museum%20in%20Mamedamachi%20Area.jpg"
+    },
+    {
+        "id": "Q3329680",
+        "name": "大分縣立歷史博物館",
+        "type": "博物館",
+        "coordinates": "Point(131.365 33.5425)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oita%20Prefectural%20Museum%20of%20History%20in%20Usa%20city%2C%20Oita%20prefecture.JPG"
+    },
+    {
+        "id": "Q11432755",
+        "name": "大分市美術館",
+        "type": "美術館",
+        "coordinates": "Point(131.60202778 33.22341667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oita%20Municipal%20Museum.jpg"
+    },
+    {
+        "id": "Q84580248",
+        "name": "野上弥生子文学記念館",
+        "type": "文學館",
+        "coordinates": "Point(131.797138888 33.120416666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nogami%20Yaeko%20Literary%20Memorial%20Museum%20ac.jpg"
+    },
+    {
+        "id": "Q11346676",
+        "name": "樂天地",
+        "type": "主題樂園",
+        "coordinates": "Point(131.481333 33.275167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Beppu%20rakutenchi.jpg"
+    },
+    {
+        "id": "Q11571767",
+        "name": "狹霧台",
+        "type": "风景点",
+        "coordinates": "Point(131.3825 33.26)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%8B%AD%E9%9C%A7%E5%8F%B0%E9%A7%90%E8%BB%8A%E5%A0%B4.jpg"
+    },
+    {
+        "id": "Q48747201",
+        "name": "九州自動車歴史館",
+        "type": "汽車博物館",
+        "coordinates": "Point(131.36546667 33.26694444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11370334",
+        "name": "九州芸術の杜",
+        "type": "美術館",
+        "coordinates": "Point(131.24925 33.14630556)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q124459383",
+        "name": "血の池地獄",
+        "type": "溫泉",
+        "coordinates": "Point(131.47815 33.3272)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chinoike%20Jigoku.jpg"
+    },
+    {
+        "id": "Q11432695",
+        "name": "大分市歴史資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(131.552914 33.195268)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oita%20city%20historical%20museum.jpg"
+    },
+    {
+        "id": "Q17219176",
+        "name": "天領日田資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(130.93138889 33.3155)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hita%20Tenryo%20Museum%2020161231.jpg"
+    },
+    {
+        "id": "Q3190121",
+        "name": "ジュピター",
+        "type": "木质过山车",
+        "coordinates": "Point(131.428075 33.261697)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jupiter%20roller%20coaster%20at%20Kijima%20Kogen.jpg"
+    },
+    {
+        "id": "Q123366317",
+        "name": "二階堂美術館",
+        "type": "美術館",
+        "coordinates": "Point(131.54248 33.367767)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11641576",
+        "name": "道の駅鯛生金山",
+        "type": "道之驛",
+        "coordinates": "Point(130.882694444 33.129166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Taio%20mine%20shoppingCenter.jpg"
+    },
+    {
+        "id": "Q3196520",
+        "name": "城岛高原公园",
+        "type": "主題樂園",
+        "coordinates": "Point(131.426694 33.264722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jupiter%20roller%20coaster%20at%20Kijima%20Kogen.jpg"
+    },
+    {
+        "id": "Q11486411",
+        "name": "廣瀨資料館",
+        "type": "人物紀念館",
+        "coordinates": "Point(130.93657778 33.32673889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Japanese%20old%20street%20of%20Oita%20hita%20mameda%20uo%20street%28%E5%A4%A7%E5%88%86%E7%9C%8C%E6%97%A5%E7%94%B0%E5%B8%82%E8%B1%86%E7%94%B0%E9%AD%9A%E7%94%BA%29.png"
+    },
+    {
+        "id": "Q11509923",
+        "name": "日田祇園山鉾會館",
+        "type": "山車会館",
+        "coordinates": "Point(130.93142778 33.31555556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hita%20Gion%20Museum.jpg"
+    },
+    {
+        "id": "Q28688543",
+        "name": "日田市立博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(130.941861111 33.326055555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q124459383",
+        "name": "血の池地獄",
+        "type": "觀光景點",
+        "coordinates": "Point(131.47815 33.3272)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chinoike%20Jigoku.jpg"
+    },
+    {
+        "id": "Q127691503",
+        "name": "湯布院フローラルビレッジ",
+        "type": "主題公園",
+        "coordinates": "Point(131.365513888 33.267425)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yufuin%20Floral%20Village.jpg"
+    },
+    {
+        "id": "Q11432896",
+        "name": "大分縣立藝術會館",
+        "type": "多功能大厅",
+        "coordinates": "Point(131.634444444 33.238333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oita%20geikan1.jpg"
+    },
+    {
+        "id": "Q28519675",
+        "name": "わたくし美術館",
+        "type": "美術館",
+        "coordinates": "Point(131.368805555 33.275666666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11641576",
+        "name": "道の駅鯛生金山",
+        "type": "博物館",
+        "coordinates": "Point(130.882694444 33.129166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Taio%20mine%20shoppingCenter.jpg"
+    },
+    {
+        "id": "Q30930299",
+        "name": "久留島武彦記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(131.15855556 33.30330556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E8%A8%98%E5%BF%B5%E9%A4%A8%EF%BC%91.jpg"
+    },
+    {
+        "id": "Q818646",
+        "name": "別府塔",
+        "type": "觀光塔",
+        "coordinates": "Point(131.50581111 33.28210889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Beppu%20Tower%2020230212.jpg"
+    },
+    {
+        "id": "Q11432816",
+        "name": "大分縣立埋藏文化財中心",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(131.63475 33.23841667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oita%20geikan1.jpg"
+    },
+    {
+        "id": "Q137995481",
+        "name": "臼杵市歴史資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(131.793304 33.119473)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Usuki%20City%20History%20Museum%20ac.jpg"
+    },
+    {
+        "id": "Q11507150",
+        "name": "日本丸館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(130.937431 33.327458)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nihongan%20Museum%20in%20Mamedamachi%20Area.jpg"
+    },
+    {
+        "id": "Q11432891",
+        "name": "大分縣立美術館",
+        "type": "美術館",
+        "coordinates": "Point(131.60138889 33.23947222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oita%20OPAM%201.jpg"
+    },
+    {
+        "id": "Q137772957",
+        "name": "宇佐市平和資料館",
+        "type": "和平博物館",
+        "coordinates": "Point(131.334461 33.528522)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104784114",
+        "name": "大分市海部古墳資料館",
+        "type": "考古博物館",
+        "coordinates": "Point(131.739769 33.233558)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Amabe%20kohun%20siryokan%2001.jpg"
+    },
+    {
+        "id": "Q55525428",
+        "name": "別府アートミュージアム",
+        "type": "美術館",
+        "coordinates": "Point(131.50177778 33.27625)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q123378080",
+        "name": "血の池地獄",
+        "type": "觀光景點",
+        "coordinates": "Point(131.47816 33.3272)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20Blood%20Pond%20Hell%20Hot%20Spring%201.jpg"
+    },
+    {
+        "id": "Q3196520",
+        "name": "城岛高原公园",
+        "type": "主題樂園",
+        "coordinates": "Point(131.427 33.2644)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jupiter%20roller%20coaster%20at%20Kijima%20Kogen.jpg"
+    },
+    {
+        "id": "Q125272543",
+        "name": "天領日田洋酒博物館",
+        "type": "博物館",
+        "coordinates": "Point(130.932639 33.318833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tenryo%20Hita%20Whisky%20Museum%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q11327370",
+        "name": "三麗鷗和諧樂園",
+        "type": "主題公園",
+        "coordinates": "Point(131.546569 33.401619)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Harmony%20Land%2001.jpg"
+    },
+    {
+        "id": "Q11432896",
+        "name": "大分縣立藝術會館",
+        "type": "美術館",
+        "coordinates": "Point(131.634444444 33.238333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oita%20geikan1.jpg"
+    },
+    {
+        "id": "Q11432633",
+        "name": "大分海洋宮殿水族館",
+        "type": "水族館",
+        "coordinates": "Point(131.53555556 33.25877778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Umitamago1.JPG"
+    },
+    {
+        "id": "Q11486411",
+        "name": "廣瀨資料館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(130.93657778 33.32673889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Japanese%20old%20street%20of%20Oita%20hita%20mameda%20uo%20street%28%E5%A4%A7%E5%88%86%E7%9C%8C%E6%97%A5%E7%94%B0%E5%B8%82%E8%B1%86%E7%94%B0%E9%AD%9A%E7%94%BA%29.png"
+    },
+    {
+        "id": "Q11432891",
+        "name": "大分縣立美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(131.60138889 33.23947222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oita%20OPAM%201.jpg"
+    },
+    {
+        "id": "Q24874639",
+        "name": "別府市美術館",
+        "type": "美術館",
+        "coordinates": "Point(131.50133333 33.31286111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Beppu%20City%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q11285663",
+        "name": "アートプラザ",
+        "type": "美術館",
+        "coordinates": "Point(131.6095 33.24055556)",
+        "image": "No Image"
+    }
+]

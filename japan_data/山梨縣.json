@@ -1,0 +1,674 @@
+[
+    {
+        "id": "Q788077",
+        "name": "富士山 (雲霄飛車)",
+        "type": "機動遊戲",
+        "coordinates": "Point(138.777006 35.485856)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fujiyama%20rollercoaster%202005-05.JPG"
+    },
+    {
+        "id": "Q49492343",
+        "name": "富士すばるランド",
+        "type": "主題公園",
+        "coordinates": "Point(138.758888888 35.457222222)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q109361733",
+        "name": "アフリカンアートミュージアム",
+        "type": "美術館",
+        "coordinates": "Point(138.360166666 35.824)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q28688227",
+        "name": "都留市商家資料館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(138.90783333 35.551)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Appearance%20of%20Turu%20City%20merchant%20museum.jpg"
+    },
+    {
+        "id": "Q11543302",
+        "name": "横溝正史館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.66152778 35.70441667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokomizoseishi-kan.jpg"
+    },
+    {
+        "id": "Q21654770",
+        "name": "三岛由纪夫文学馆",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.87013889 35.40436111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mishima%20Yukio%20Literature%20Museum.JPG"
+    },
+    {
+        "id": "Q27628135",
+        "name": "河口湖自動車博物館・飛行舘",
+        "type": "航空博物館",
+        "coordinates": "Point(138.7414 35.4532)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lockheed%20F-104DJ%20Starfighter%20%2826-5007%29%20at%20Kawaguchiko%20Motor%20Museum%2C%20Yamanashi%20Prefecture%2C%20Japan.jpg"
+    },
+    {
+        "id": "Q11469703",
+        "name": "山梨県立富士ビジターセンター",
+        "type": "遊客中心",
+        "coordinates": "Point(138.77055556 35.48583333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fuji%20Visitor%20Center.JPG"
+    },
+    {
+        "id": "Q11469696",
+        "name": "山梨县立博物馆",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(138.64855556 35.64036667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yamanashi%20Prefectural%20Museum.jpg"
+    },
+    {
+        "id": "Q11469712",
+        "name": "山梨県立文学館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(138.53944444 35.66013889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yamanashi-Pref-LP.jpg"
+    },
+    {
+        "id": "Q27628135",
+        "name": "河口湖自動車博物館・飛行舘",
+        "type": "汽車博物館",
+        "coordinates": "Point(138.7414 35.4532)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lockheed%20F-104DJ%20Starfighter%20%2826-5007%29%20at%20Kawaguchiko%20Motor%20Museum%2C%20Yamanashi%20Prefecture%2C%20Japan.jpg"
+    },
+    {
+        "id": "Q1192174",
+        "name": "富士急高原樂園",
+        "type": "主題樂園",
+        "coordinates": "Point(138.78019 35.48749)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/170505%20Views%20of%20Fujikyu%20Highland%20from%20Tenjoyama%20Park%20Fujikawaguchiko%20Yamanashi%20pref%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q17211390",
+        "name": "富士河口湖溫泉鄉",
+        "type": "温泉郷",
+        "coordinates": "Point(138.758833 35.528056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yatenburo%20Tensui.jpg"
+    },
+    {
+        "id": "Q11536453",
+        "name": "根津記念館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(138.66830556 35.67880556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nezu%20Memorial%20Museum%20in%20Yamanashi%20City%20Yamanashi%20Pref.jpg"
+    },
+    {
+        "id": "Q22119906",
+        "name": "韮崎大村美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.42944444 35.70083333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nirasaki-Omura-Artmuseum%20A.JPG"
+    },
+    {
+        "id": "Q11469688",
+        "name": "山梨県立フラワーセンター ハイジの村",
+        "type": "植物園",
+        "coordinates": "Point(138.46494444 35.78080556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yamanashi%20Prefectural%20Flower%20Center%20%22Heidi%27s%20Village%22%2003.jpg"
+    },
+    {
+        "id": "Q74403368",
+        "name": "Giant Coaster (Fuji-Q Highland)",
+        "type": "スチール・ローラー・コースター",
+        "coordinates": "Point(138.78 35.487)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q21654770",
+        "name": "三岛由纪夫文学馆",
+        "type": "文學館",
+        "coordinates": "Point(138.87013889 35.40436111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mishima%20Yukio%20Literature%20Museum.JPG"
+    },
+    {
+        "id": "Q130601177",
+        "name": "久保田一竹美術館",
+        "type": "織物博物館",
+        "coordinates": "Point(138.7597662 35.5273256)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Itchiku%20Kubota%20Art%20Museum%202018c.jpg"
+    },
+    {
+        "id": "Q11629111",
+        "name": "西湖的療癒之里根場",
+        "type": "民家園",
+        "coordinates": "Point(138.6615 35.505)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iyashinosato%20village%2004.jpg"
+    },
+    {
+        "id": "Q1295262",
+        "name": "ええじゃないか",
+        "type": "スチール・ローラー・コースター",
+        "coordinates": "Point(138.780842 35.48842)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eejanaika%20coaster%20FujiQ%201024.jpg"
+    },
+    {
+        "id": "Q11511095",
+        "name": "旧田中銀行博物館",
+        "type": "銀行博物館",
+        "coordinates": "Point(138.729528 35.662)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Museum%20Bank%20of%20Yamanashi%20Tanaka.JPG"
+    },
+    {
+        "id": "Q11469696",
+        "name": "山梨县立博物馆",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(138.648623 35.640259)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yamanashi%20Prefectural%20Museum.jpg"
+    },
+    {
+        "id": "Q17192099",
+        "name": "アルカディア南部文化館",
+        "type": "圖書館",
+        "coordinates": "Point(138.45545278 35.27968333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q28687167",
+        "name": "ミュージアム都留",
+        "type": "博物館",
+        "coordinates": "Point(138.90494444 35.54977778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Museum%20Tsuru.December%202016.jpg"
+    },
+    {
+        "id": "Q125253746",
+        "name": "山梨県埋蔵文化財センター",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(138.582745 35.594223)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11665452",
+        "name": "風土伝承館杉浦醫院",
+        "type": "醫學博物館",
+        "coordinates": "Point(138.53255556 35.64036111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dr.%20Sugiura-kenzo.JPG"
+    },
+    {
+        "id": "Q17192099",
+        "name": "アルカディア南部文化館",
+        "type": "美術館",
+        "coordinates": "Point(138.45545278 35.27968333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11560662",
+        "name": "清春白樺美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.35327778 35.82258333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mus%C3%A9e%20Kiyoharu%20Shirakaba%20December%20%C2%B421%20%EF%BC%8D04.jpg"
+    },
+    {
+        "id": "Q65278116",
+        "name": "精進の大スギ",
+        "type": "神木",
+        "coordinates": "Point(138.609055555 35.496333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shoji%27s%20Big%20Cedar%20A.jpg"
+    },
+    {
+        "id": "Q11599754",
+        "name": "笛吹市立青楓美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.70583333 35.66058333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Seifu%20Art%20Museum.JPG"
+    },
+    {
+        "id": "Q788077",
+        "name": "富士山 (雲霄飛車)",
+        "type": "スチール・ローラー・コースター",
+        "coordinates": "Point(138.777006 35.485856)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fujiyama%20rollercoaster%202005-05.JPG"
+    },
+    {
+        "id": "Q11553670",
+        "name": "河口湖音樂盒之森",
+        "type": "美術館",
+        "coordinates": "Point(138.768611111 35.522222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fountain%20show%20on%20the%20hour%20every%20hour%2C%20Kawaguchi-ko%20Music%20Forest%20Museum%20%28%E6%B2%B3%E5%8F%A3%E6%B9%96%E3%82%AA%E3%83%AB%E3%82%B4%E3%83%BC%E3%83%AB%E3%81%AE%E6%A3%AE%E3%81%A7%E6%AF%8E%E6%AD%A3%E6%99%82%E3%81%AB%E8%A1%8C%E3%82%8F%E3%82%8C%E3%82%8B%E5%99%B4%E6%B0%B4%E3%82%B7%E3%83%A7%E3%83%BC%29.jpg"
+    },
+    {
+        "id": "Q11469688",
+        "name": "山梨県立フラワーセンター ハイジの村",
+        "type": "主題公園",
+        "coordinates": "Point(138.46494444 35.78080556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yamanashi%20Prefectural%20Flower%20Center%20%22Heidi%27s%20Village%22%2003.jpg"
+    },
+    {
+        "id": "Q4683550",
+        "name": "山梨県立科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(138.580278 35.669444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yamanashi%20Prefectural%20Science%20Center.jpg"
+    },
+    {
+        "id": "Q11665452",
+        "name": "風土伝承館杉浦醫院",
+        "type": "醫學博物館",
+        "coordinates": "Point(138.53255556 35.64036111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dr.Sugiura%20Memorial%20Museum%20Dozo.JPG"
+    },
+    {
+        "id": "Q11665452",
+        "name": "風土伝承館杉浦醫院",
+        "type": "醫學博物館",
+        "coordinates": "Point(138.53255556 35.64036111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dr.Sugiura%20Memorial%20Museum%20Main.JPG"
+    },
+    {
+        "id": "Q11665452",
+        "name": "風土伝承館杉浦醫院",
+        "type": "醫學博物館",
+        "coordinates": "Point(138.53255556 35.64036111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dr.Sugiura%20Memorial%20Museum%20Naya.JPG"
+    },
+    {
+        "id": "Q11665452",
+        "name": "風土伝承館杉浦醫院",
+        "type": "醫學博物館",
+        "coordinates": "Point(138.53255556 35.64036111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dr.Sugiura%20Memorial%20Museum%20Omoya.JPG"
+    },
+    {
+        "id": "Q11665452",
+        "name": "風土伝承館杉浦醫院",
+        "type": "醫學博物館",
+        "coordinates": "Point(138.53255556 35.64036111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dr.Sugiura%20Memorial%20Museum%20Yashiki-Gura.JPG"
+    },
+    {
+        "id": "Q11665452",
+        "name": "風土伝承館杉浦醫院",
+        "type": "醫學博物館",
+        "coordinates": "Point(138.53255556 35.64036111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Medical%20office%20of%20Dr.%20Sugiura.JPG"
+    },
+    {
+        "id": "Q11455940",
+        "name": "富士吉田市立富士山レーダードーム館",
+        "type": "気象博物館",
+        "coordinates": "Point(138.803611 35.457778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Fuji%20Radar%20Dome%20Museum%20s2.JPG"
+    },
+    {
+        "id": "Q11665452",
+        "name": "風土伝承館杉浦醫院",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.53255556 35.64036111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dr.%20Sugiura-kenzo.JPG"
+    },
+    {
+        "id": "Q17211390",
+        "name": "富士河口湖溫泉鄉",
+        "type": "日式溫泉",
+        "coordinates": "Point(138.758833 35.528056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yatenburo%20Tensui.jpg"
+    },
+    {
+        "id": "Q104709458",
+        "name": "身延町歴史民俗資料館",
+        "type": "博物館",
+        "coordinates": "Point(138.442823 35.450765)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%A4%A7%E8%81%96%E5%AF%BA%E3%83%BB%E8%BA%AB%E5%BB%B6%E7%94%BA%E7%AB%8B%E6%AD%B4%E5%8F%B2%E6%B0%91%E6%97%8F%E8%B3%87%E6%96%99%E9%A4%A8%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q117218555",
+        "name": "山梨県立考古博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(138.582769 35.594234)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q49492343",
+        "name": "富士すばるランド",
+        "type": "森林公園",
+        "coordinates": "Point(138.758888888 35.457222222)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q108661147",
+        "name": "芦安温泉",
+        "type": "温泉镇",
+        "coordinates": "Point(138.357236 35.624529)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q137770045",
+        "name": "山梨いちごの王さまミュージアム",
+        "type": "公司博物館",
+        "coordinates": "Point(138.511637 35.676828)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11536453",
+        "name": "根津記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.66830556 35.67880556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nezu%20Memorial%20Museum%20in%20Yamanashi%20City%20Yamanashi%20Pref.jpg"
+    },
+    {
+        "id": "Q30930493",
+        "name": "ド・ドドンパ",
+        "type": "スチール・ローラー・コースター",
+        "coordinates": "Point(138.782258333 35.4877)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%83%89%E3%83%BB%E3%83%89%E3%83%89%E3%83%B3%E3%83%91%E3%81%AE%E5%9E%82%E7%9B%B4%E3%83%AB%E3%83%BC%E3%83%97.jpg"
+    },
+    {
+        "id": "Q63457212",
+        "name": "甲府市武田氏館跡歴史館",
+        "type": "歷史博物館",
+        "coordinates": "Point(138.577105555 35.685219444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shingen%20Museum%202019a.jpg"
+    },
+    {
+        "id": "Q65278116",
+        "name": "精進の大スギ",
+        "type": "巨樹",
+        "coordinates": "Point(138.609055555 35.496333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shoji%27s%20Big%20Cedar%20A.jpg"
+    },
+    {
+        "id": "Q21655058",
+        "name": "山梨県立リニア見学センター",
+        "type": "鐵路博物館",
+        "coordinates": "Point(138.92733333 35.58286111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yamanashi-Linear-visitor-center.JPG"
+    },
+    {
+        "id": "Q11665452",
+        "name": "風土伝承館杉浦醫院",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.53255556 35.64036111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dr.Sugiura%20Memorial%20Museum%20Dozo.JPG"
+    },
+    {
+        "id": "Q11665452",
+        "name": "風土伝承館杉浦醫院",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.53255556 35.64036111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dr.Sugiura%20Memorial%20Museum%20Main.JPG"
+    },
+    {
+        "id": "Q11665452",
+        "name": "風土伝承館杉浦醫院",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.53255556 35.64036111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dr.Sugiura%20Memorial%20Museum%20Naya.JPG"
+    },
+    {
+        "id": "Q11665452",
+        "name": "風土伝承館杉浦醫院",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.53255556 35.64036111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dr.Sugiura%20Memorial%20Museum%20Omoya.JPG"
+    },
+    {
+        "id": "Q11665452",
+        "name": "風土伝承館杉浦醫院",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.53255556 35.64036111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dr.Sugiura%20Memorial%20Museum%20Yashiki-Gura.JPG"
+    },
+    {
+        "id": "Q11665452",
+        "name": "風土伝承館杉浦醫院",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.53255556 35.64036111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Medical%20office%20of%20Dr.%20Sugiura.JPG"
+    },
+    {
+        "id": "Q117218555",
+        "name": "山梨県立考古博物館",
+        "type": "考古博物館",
+        "coordinates": "Point(138.582769 35.594234)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q60988980",
+        "name": "甲斐黃金村·湯之奧金山博物館",
+        "type": "博物館",
+        "coordinates": "Point(138.47189 35.42387)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Yu-no-oku%20Museum%20of%20Gold%20Mining%20History.jpg"
+    },
+    {
+        "id": "Q11543302",
+        "name": "横溝正史館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(138.66152778 35.70441667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokomizoseishi-kan.jpg"
+    },
+    {
+        "id": "Q3329567",
+        "name": "河口湖美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.770555555 35.519166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/170504%20Kawaguchiko%20Museum%20of%20Art%20Fujikawaguchiko%20Yamanashi%20pref%20Japan02s3.jpg"
+    },
+    {
+        "id": "Q11629111",
+        "name": "西湖的療癒之里根場",
+        "type": "民家園",
+        "coordinates": "Point(138.661487 35.504996)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iyashinosato%20village%2004.jpg"
+    },
+    {
+        "id": "Q11469712",
+        "name": "山梨県立文学館",
+        "type": "文學館",
+        "coordinates": "Point(138.53944444 35.66013889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yamanashi-Pref-LP.jpg"
+    },
+    {
+        "id": "Q11561407",
+        "name": "清里ポーセリンミュージアム",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(138.43458333 35.91719444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/100612%20Kiyosato%20Porcelain%20Museum%20Hokuto%20Yamanashi%20pref%20Japan03s3.jpg"
+    },
+    {
+        "id": "Q1295262",
+        "name": "ええじゃないか",
+        "type": "hypercoaster",
+        "coordinates": "Point(138.780842 35.48842)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eejanaika%20coaster%20FujiQ%201024.jpg"
+    },
+    {
+        "id": "Q11515320",
+        "name": "曾根丘陵公園",
+        "type": "風土記之丘",
+        "coordinates": "Point(138.5825 35.59222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%94%B2%E6%96%90%E9%A2%A8%E5%9C%9F%E8%A8%98%E3%81%AE%E4%B8%98%E3%81%AE%E9%81%8A%E5%85%B7%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q11469706",
+        "name": "山梨県立富士湧水の里水族館",
+        "type": "水族館",
+        "coordinates": "Point(138.82392778 35.45554444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fuji%20Spring%20Water%20Aquarium.JPG"
+    },
+    {
+        "id": "Q11469731",
+        "name": "山梨县立美术馆",
+        "type": "美術館",
+        "coordinates": "Point(138.53733333 35.66038889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Art%20museums%20in%20Yamanashi%20prefecture%2020231028a2.jpg"
+    },
+    {
+        "id": "Q24873848",
+        "name": "山梨縣立富士山世界遺產中心",
+        "type": "遊客中心",
+        "coordinates": "Point(138.77055556 35.48583333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fujisan%20World%20heritage%20Center%2C%20Yamanashi%201.jpg"
+    },
+    {
+        "id": "Q112090672",
+        "name": "平山郁夫シルクロード美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.359423 35.879371)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%B9%B3%E5%B1%B1%E9%83%81%E5%A4%AB%E3%82%B7%E3%83%AB%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%89%E7%BE%8E%E8%A1%93%E9%A4%A820220618-P1380431.jpg"
+    },
+    {
+        "id": "Q85877328",
+        "name": "北杜市考古資料館",
+        "type": "考古博物館",
+        "coordinates": "Point(138.385444444 35.858111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%8C%97%E6%9D%9C%E5%B8%82%E8%80%83%E5%8F%A4%E8%B3%87%E6%96%99%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q508159",
+        "name": "高飛車",
+        "type": "launched roller coaster",
+        "coordinates": "Point(138.779616 35.485788)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takabisha%20under%20construction%203.jpg"
+    },
+    {
+        "id": "Q11511095",
+        "name": "旧田中銀行博物館",
+        "type": "银行建筑物",
+        "coordinates": "Point(138.729528 35.662)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Museum%20Bank%20of%20Yamanashi%20Tanaka.JPG"
+    },
+    {
+        "id": "Q11515320",
+        "name": "曾根丘陵公園",
+        "type": "城市公園",
+        "coordinates": "Point(138.5825 35.59222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%94%B2%E6%96%90%E9%A2%A8%E5%9C%9F%E8%A8%98%E3%81%AE%E4%B8%98%E3%81%AE%E9%81%8A%E5%85%B7%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q508159",
+        "name": "高飛車",
+        "type": "スチール・ローラー・コースター",
+        "coordinates": "Point(138.779616 35.485788)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takabisha%20under%20construction%203.jpg"
+    },
+    {
+        "id": "Q788077",
+        "name": "富士山 (雲霄飛車)",
+        "type": "hypercoaster",
+        "coordinates": "Point(138.777006 35.485856)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fujiyama%20rollercoaster%202005-05.JPG"
+    },
+    {
+        "id": "Q59154259",
+        "name": "忍野 しのびの里",
+        "type": "主題公園",
+        "coordinates": "Point(138.818194444 35.457194444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q1295262",
+        "name": "ええじゃないか",
+        "type": "機動遊戲",
+        "coordinates": "Point(138.780842 35.48842)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eejanaika%20coaster%20FujiQ%201024.jpg"
+    },
+    {
+        "id": "Q11469731",
+        "name": "山梨县立美术馆",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(138.53733333 35.66038889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Art%20museums%20in%20Yamanashi%20prefecture%2020231028a2.jpg"
+    },
+    {
+        "id": "Q5421529",
+        "name": "清里フォトアートミュージアム",
+        "type": "美術館",
+        "coordinates": "Point(138.4321 35.883044)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11644532",
+        "name": "釈迦堂遺跡博物館",
+        "type": "考古博物館",
+        "coordinates": "Point(138.71549167 35.64457778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shakado%20relics%20museum.JPG"
+    },
+    {
+        "id": "Q1295262",
+        "name": "ええじゃないか",
+        "type": "4次元コースター",
+        "coordinates": "Point(138.780842 35.48842)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eejanaika%20coaster%20FujiQ%201024.jpg"
+    },
+    {
+        "id": "Q39231",
+        "name": "富士山",
+        "type": "活火山",
+        "coordinates": "Point(138.7275 35.360555555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kodaki%20fuji%20frm%20shojinko%20refurb.jpg"
+    },
+    {
+        "id": "Q135801024",
+        "name": "ローソン 河口湖駅前",
+        "type": "觀光景點",
+        "coordinates": "Point(138.76716 35.49861)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11277442",
+        "name": "ぶどうの丘",
+        "type": "觀光景點",
+        "coordinates": "Point(138.73675 35.67475)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%8B%9D%E6%B2%BC%E3%81%B6%E3%81%A9%E3%81%86%E9%83%B7%E9%A7%85%E3%81%8B%E3%82%89%E3%81%B6%E3%81%A9%E3%81%86%E3%81%AE%E4%B8%98%E3%82%92%E8%A6%8B%E3%82%8B%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q39231",
+        "name": "富士山",
+        "type": "独立峰",
+        "coordinates": "Point(138.7275 35.360555555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kodaki%20fuji%20frm%20shojinko%20refurb.jpg"
+    },
+    {
+        "id": "Q39231",
+        "name": "富士山",
+        "type": "最高点",
+        "coordinates": "Point(138.7275 35.360555555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kodaki%20fuji%20frm%20shojinko%20refurb.jpg"
+    },
+    {
+        "id": "Q135801024",
+        "name": "ローソン 河口湖駅前",
+        "type": "便利商店",
+        "coordinates": "Point(138.76716 35.49861)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q20044182",
+        "name": "甲州夢小路",
+        "type": "觀光景點",
+        "coordinates": "Point(138.57138889 35.66688889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kofu%20yume%20kouji%201.JPG"
+    },
+    {
+        "id": "Q39231",
+        "name": "富士山",
+        "type": "複式火山",
+        "coordinates": "Point(138.7275 35.360555555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kodaki%20fuji%20frm%20shojinko%20refurb.jpg"
+    },
+    {
+        "id": "Q39231",
+        "name": "富士山",
+        "type": "山",
+        "coordinates": "Point(138.7275 35.360555555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kodaki%20fuji%20frm%20shojinko%20refurb.jpg"
+    },
+    {
+        "id": "Q39231",
+        "name": "富士山",
+        "type": "神體山",
+        "coordinates": "Point(138.7275 35.360555555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kodaki%20fuji%20frm%20shojinko%20refurb.jpg"
+    },
+    {
+        "id": "Q39231",
+        "name": "富士山",
+        "type": "觀光景點",
+        "coordinates": "Point(138.7275 35.360555555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kodaki%20fuji%20frm%20shojinko%20refurb.jpg"
+    }
+]

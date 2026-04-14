@@ -1,0 +1,905 @@
+[
+    {
+        "id": "Q19946369",
+        "name": "九州大学医学歴史館",
+        "type": "大學博物館",
+        "coordinates": "Point(130.416453 33.607484)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyushu%20University%20Medical%20History%20Museum%2020181101.jpg"
+    },
+    {
+        "id": "Q11401264",
+        "name": "北原白秋記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(130.39417 33.15889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Memorial%20Museum%20of%20Kitahara%20Hakushu%2020141111.JPG"
+    },
+    {
+        "id": "Q17210881",
+        "name": "北九州市立松本清張紀念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(130.8725 33.88388889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/140721%20Matsumoto%20Seicho%20Memorial%20Museum%20Kitakyushu%20Japan01bs3.jpg"
+    },
+    {
+        "id": "Q11592587",
+        "name": "福岡縣立美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(130.39875 33.597306)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukuoka%20Museum%20of%20Art.JPG"
+    },
+    {
+        "id": "Q11380926",
+        "name": "伊都團歷史博物館",
+        "type": "考古博物館",
+        "coordinates": "Point(130.251778 33.536278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ito-koku-History-Museum.jpg"
+    },
+    {
+        "id": "Q11598468",
+        "name": "童話館",
+        "type": "美術館",
+        "coordinates": "Point(129.873833 32.752194)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11401262",
+        "name": "北原白秋生家",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(130.394058 33.158972)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hakushu%20Kitahara01s3200.jpg"
+    },
+    {
+        "id": "Q132173876",
+        "name": "大川市立清力美術館",
+        "type": "美術館",
+        "coordinates": "Point(130.387429 33.238278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okawa%20City%20Seiriki%20Art%20Museum%20front.jpg"
+    },
+    {
+        "id": "Q1568000",
+        "name": "博多港塔",
+        "type": "通讯塔",
+        "coordinates": "Point(130.39777778 33.60444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Baysideplace001.jpg"
+    },
+    {
+        "id": "Q3330163",
+        "name": "福岡亞洲美術館",
+        "type": "アジア美術館",
+        "coordinates": "Point(130.405917 33.595028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%8D%9A%E5%A4%9A%E3%83%AA%E3%83%90%E3%83%AC%E3%82%A4%E3%83%B3%E3%83%A2%E3%83%BC%E3%83%AB%20by%20TAKASHIMAYA.JPG"
+    },
+    {
+        "id": "Q11592423",
+        "name": "福岡東洋陶磁美術館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(130.363297 33.552231)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukuoka%20Oriental%20Ceramics%20Museum%2020170720.jpg"
+    },
+    {
+        "id": "Q122973288",
+        "name": "福岡市下水道博物館",
+        "type": "建築物",
+        "coordinates": "Point(130.410472222 33.591555555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pomplaza%20Hall%208-3%20Gionmachi%20Hakata-ku%20Fukuoka%2020230801.jpg"
+    },
+    {
+        "id": "Q3297769",
+        "name": "北九州市立美術館",
+        "type": "美術館",
+        "coordinates": "Point(130.826527777 33.869861111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kitakyushu%20Municipal%20Museum%20of%20Art%2020090728.JPG"
+    },
+    {
+        "id": "Q11370311",
+        "name": "九州産業大学美術館",
+        "type": "大学美术馆",
+        "coordinates": "Point(130.443306 33.671944)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyushu%20Sangyo%20Univ%20Art%20Museum.JPG"
+    },
+    {
+        "id": "Q11576742",
+        "name": "田川市美術館",
+        "type": "美術館",
+        "coordinates": "Point(130.80627778 33.64394444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tagawa-city%20culture%20area%20Tagawa%20Museum%20of%20Art%201.jpg"
+    },
+    {
+        "id": "Q124867042",
+        "name": "北九州市科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(130.808611111 33.871666666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11400953",
+        "name": "北九州市立自然史・歷史博物館",
+        "type": "自然歷史博物館",
+        "coordinates": "Point(130.808547 33.869172)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kitakyusyu%20museum%20of%20natural%20history%20and%20human%20history.JPG"
+    },
+    {
+        "id": "Q132946169",
+        "name": "広川町古墳公園資料館",
+        "type": "考古博物館",
+        "coordinates": "Point(130.517627 33.238145)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%BA%83%E5%B7%9D%E7%94%BA%E5%8F%A4%E5%A2%B3%E5%85%AC%E5%9C%92%E8%B3%87%E6%96%99%E9%A4%A8.JPG"
+    },
+    {
+        "id": "Q116767986",
+        "name": "織田廣喜美術館",
+        "type": "美術館",
+        "coordinates": "Point(130.711647 33.563325)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hiroki%20Oda%20Art%20Museum%2001.jpg"
+    },
+    {
+        "id": "Q11558907",
+        "name": "海峽戲劇船",
+        "type": "レトロテーマパーク",
+        "coordinates": "Point(130.956694 33.944)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dramaship.jpg"
+    },
+    {
+        "id": "Q575508",
+        "name": "王貞治ベースボールミュージアム",
+        "type": "人物紀念館",
+        "coordinates": "Point(130.36191667 33.59516667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%8E%8B%E8%B2%9E%E6%B2%BB%E3%83%99%E3%83%BC%E3%82%B9%E3%83%9C%E3%83%BC%E3%83%AB%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%A2%E3%83%A0%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q11401262",
+        "name": "北原白秋生家",
+        "type": "生家",
+        "coordinates": "Point(130.394058 33.158972)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hakushu%20Kitahara01s3200.jpg"
+    },
+    {
+        "id": "Q11558907",
+        "name": "海峽戲劇船",
+        "type": "海事博物館",
+        "coordinates": "Point(130.956694 33.944)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dramaship.jpg"
+    },
+    {
+        "id": "Q907464",
+        "name": "天空之夢福岡",
+        "type": "摩天輪",
+        "coordinates": "Point(130.3225279 33.5956845)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/SkyDreamFukuoka%20%26%20EvergreenMarinoa.jpg"
+    },
+    {
+        "id": "Q11592423",
+        "name": "福岡東洋陶磁美術館",
+        "type": "アジア美術館",
+        "coordinates": "Point(130.363297 33.552231)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukuoka%20Oriental%20Ceramics%20Museum%2020170720.jpg"
+    },
+    {
+        "id": "Q3073273",
+        "name": "福岡市美術館",
+        "type": "美術館",
+        "coordinates": "Point(130.37980556 33.58388889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukuoka%20art%20museum.JPG"
+    },
+    {
+        "id": "Q1568000",
+        "name": "博多港塔",
+        "type": "觀光塔",
+        "coordinates": "Point(130.39777778 33.60444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Baysideplace001.jpg"
+    },
+    {
+        "id": "Q28684107",
+        "name": "松永文庫",
+        "type": "電影博物館",
+        "coordinates": "Point(130.95741028 33.94346583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyuudairen.jpg"
+    },
+    {
+        "id": "Q28684107",
+        "name": "松永文庫",
+        "type": "文庫",
+        "coordinates": "Point(130.95741028 33.94346583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyuudairen.jpg"
+    },
+    {
+        "id": "Q132173864",
+        "name": "伊都郷土美術館",
+        "type": "美術館",
+        "coordinates": "Point(130.204657 33.560532)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ito%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q132173914",
+        "name": "筑後市郷土資料館",
+        "type": "市立博物館",
+        "coordinates": "Point(130.486247 33.198726)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chikugo%20City%20Museum%2020161102.jpg"
+    },
+    {
+        "id": "Q168754",
+        "name": "太空世界",
+        "type": "已廢止組織",
+        "coordinates": "Point(130.81215 33.87352)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Space%20World%2001.jpg"
+    },
+    {
+        "id": "Q11437770",
+        "name": "大牟田市石炭産業科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(130.424388888 33.031083333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Omuta%20City%20Coal%20Industrial%20Science%20Museum%2020170717.jpg"
+    },
+    {
+        "id": "Q11592224",
+        "name": "福岡市博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(130.353083333 33.58975)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/FukuokaCity%20Museum%202018.jpg"
+    },
+    {
+        "id": "Q124309635",
+        "name": "旧三浦家住宅",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(130.411388888 33.593611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Former%20Miura%20Residence%20the%20fa%C3%A7ade%20Reisenmachi%20Hakata-ku%20Fukuoka%2020240119.jpg"
+    },
+    {
+        "id": "Q11592225",
+        "name": "福岡市埋藏文化財中心",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(130.462533 33.555484)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukuoka%20City%20Archaeology%20Center.jpg"
+    },
+    {
+        "id": "Q11602784",
+        "name": "筑前町立大刀洗平和紀念館",
+        "type": "和平博物館",
+        "coordinates": "Point(130.619528 33.412333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chikuzen%20municipal%20Tachiarai%20peace%20memorial%20hall.JPG"
+    },
+    {
+        "id": "Q19946369",
+        "name": "九州大学医学歴史館",
+        "type": "醫學博物館",
+        "coordinates": "Point(130.416453 33.607484)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyushu%20University%20Medical%20History%20Museum%2020181101.jpg"
+    },
+    {
+        "id": "Q10889644",
+        "name": "元寇史料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(130.42039167 33.60720833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%85%83%E5%AF%87%E5%8F%B2%E6%96%99%E9%A4%A82.jpg"
+    },
+    {
+        "id": "Q125801404",
+        "name": "博多歴史の散歩道",
+        "type": "戶外博物館",
+        "coordinates": "Point(130.410833333 33.596944444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q168754",
+        "name": "太空世界",
+        "type": "主題樂園",
+        "coordinates": "Point(130.81215 33.87352)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Space%20World%2001.jpg"
+    },
+    {
+        "id": "Q11400906",
+        "name": "北九州創新館",
+        "type": "科技博物館",
+        "coordinates": "Point(130.806083333 33.868863888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kitakyushu%20Innovation%20Gallery%20and%20Studio.JPG"
+    },
+    {
+        "id": "Q122973288",
+        "name": "福岡市下水道博物館",
+        "type": "下水道博物館",
+        "coordinates": "Point(130.410472222 33.591555555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pomplaza%20Hall%208-3%20Gionmachi%20Hakata-ku%20Fukuoka%2020230801.jpg"
+    },
+    {
+        "id": "Q11437770",
+        "name": "大牟田市石炭産業科学館",
+        "type": "礦業博物館",
+        "coordinates": "Point(130.424388888 33.031083333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Omuta%20City%20Coal%20Industrial%20Science%20Museum%2020170717.jpg"
+    },
+    {
+        "id": "Q11592228",
+        "name": "福岡市文學館",
+        "type": "文學館",
+        "coordinates": "Point(130.401861 33.593111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11193101",
+        "name": "CCA北九州",
+        "type": "現代美術館",
+        "coordinates": "Point(130.79688889 33.86505556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/CCA%20KItakyushu%202.jpg"
+    },
+    {
+        "id": "Q133326888",
+        "name": "岩戸山歴史資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(130.552351 33.229017)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11586698",
+        "name": "久留米市美術館",
+        "type": "美術館",
+        "coordinates": "Point(130.530366 33.312033)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rakusuinoike%20Pond%20and%20Kurume%20City%20Museum%20of%20Art.jpg"
+    },
+    {
+        "id": "Q11592913",
+        "name": "福岡縣青少年科學館",
+        "type": "科學博物館",
+        "coordinates": "Point(130.528361 33.318083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukuoka%20Science%20Museum%2020170203-2.jpg"
+    },
+    {
+        "id": "Q38277412",
+        "name": "福岡市科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(130.377833333 33.577361111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukuoka%20City%20Science%20Museum%2020171103-3.jpg"
+    },
+    {
+        "id": "Q28684107",
+        "name": "松永文庫",
+        "type": "電影圖書館",
+        "coordinates": "Point(130.95741028 33.94346583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyuudairen.jpg"
+    },
+    {
+        "id": "Q116939503",
+        "name": "鴻臚館跡展示館",
+        "type": "展览场地",
+        "coordinates": "Point(130.385361111 33.585972222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/K%C5%8Drokan%20Historical%20Museum%20the%20exhibition%20hall%201%20J%C5%8Dnai%20Ch%C5%AB%C5%8D-ku%20Fukuoka%20City%2020221018.jpg"
+    },
+    {
+        "id": "Q11592225",
+        "name": "福岡市埋藏文化財中心",
+        "type": "考古博物館",
+        "coordinates": "Point(130.462533 33.555484)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukuoka%20City%20Archaeology%20Center.jpg"
+    },
+    {
+        "id": "Q11271553",
+        "name": "太宰府遊園地",
+        "type": "主題樂園",
+        "coordinates": "Point(130.536806 33.521139)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dazaifu%20Amuzement%20Park%2020150815.jpg"
+    },
+    {
+        "id": "Q85883647",
+        "name": "西南学院大学博物馆",
+        "type": "大學博物館",
+        "coordinates": "Point(130.357694444 33.585388888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/SGU%20museum.jpg"
+    },
+    {
+        "id": "Q6764266",
+        "name": "海之中道海洋世界",
+        "type": "水族館",
+        "coordinates": "Point(130.36333333 33.66083333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Grampus%20griseus%20by%20OpenCage.jpg"
+    },
+    {
+        "id": "Q6764266",
+        "name": "海之中道海洋世界",
+        "type": "水族館",
+        "coordinates": "Point(130.36333333 33.66083333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Marine%20World%20Uminonakamichi%202.JPG"
+    },
+    {
+        "id": "Q11370222",
+        "name": "九州大学综合研究博物馆",
+        "type": "大學博物館",
+        "coordinates": "Point(130.425226 33.622336)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Former%20faculty%20of%20engineering%20main%20building%2C%20Hakozaki%2C%20Kyushu%20University%2020150203.jpg"
+    },
+    {
+        "id": "Q11446615",
+        "name": "奴國之丘歷史公園",
+        "type": "考古学公園",
+        "coordinates": "Point(130.45166667 33.53805556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%B2%A1%E6%9C%AC%E9%81%BA%E8%B7%A1%E3%81%AE%E8%A6%86%E5%B1%8B%20Up200608032200.jpg"
+    },
+    {
+        "id": "Q11370222",
+        "name": "九州大学综合研究博物馆",
+        "type": "博物館",
+        "coordinates": "Point(130.425226 33.622336)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Former%20faculty%20of%20engineering%20main%20building%2C%20Hakozaki%2C%20Kyushu%20University%2020150203.jpg"
+    },
+    {
+        "id": "Q11193101",
+        "name": "CCA北九州",
+        "type": "艺术中心",
+        "coordinates": "Point(130.79688889 33.86505556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/CCA%20KItakyushu%202.jpg"
+    },
+    {
+        "id": "Q11654990",
+        "name": "門司電氣通信懷舊館",
+        "type": "历史建筑",
+        "coordinates": "Point(130.966944 33.950278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Moji%20Telecommunication%20Museum%20ac.jpg"
+    },
+    {
+        "id": "Q122918221",
+        "name": "南公園西展望台",
+        "type": "觀景台",
+        "coordinates": "Point(130.384944444 33.573694444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Minami-k%C5%8Den-nishi%20Observation%20Deck%20the%20fa%C3%A7ade%201%20Terukuni-1-ch%C5%8Dme%20Ch%C5%AB%C5%8D-ku%20Fukuoka%20City%2020230505.jpg"
+    },
+    {
+        "id": "Q11400990",
+        "name": "北九州市立文學館",
+        "type": "文學館",
+        "coordinates": "Point(130.87325 33.88225)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kitakyusyu%20Central%20Library.jpg"
+    },
+    {
+        "id": "Q11581782",
+        "name": "直方谷尾美術館",
+        "type": "美術館",
+        "coordinates": "Point(130.72844444 33.74325)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nogata%20Tanio%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q11592225",
+        "name": "福岡市埋藏文化財中心",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(130.462642 33.55545)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukuoka%20City%20Archaeology%20Center.jpg"
+    },
+    {
+        "id": "Q10889644",
+        "name": "元寇史料館",
+        "type": "軍事博物館",
+        "coordinates": "Point(130.42039167 33.60720833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%85%83%E5%AF%87%E5%8F%B2%E6%96%99%E9%A4%A82.jpg"
+    },
+    {
+        "id": "Q11400953",
+        "name": "北九州市立自然史・歷史博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(130.808547 33.869172)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kitakyusyu%20museum%20of%20natural%20history%20and%20human%20history.JPG"
+    },
+    {
+        "id": "Q11602784",
+        "name": "筑前町立大刀洗平和紀念館",
+        "type": "航空博物館",
+        "coordinates": "Point(130.619528 33.412333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chikuzen%20municipal%20Tachiarai%20peace%20memorial%20hall.JPG"
+    },
+    {
+        "id": "Q847033",
+        "name": "福岡塔",
+        "type": "觀景台",
+        "coordinates": "Point(130.3515 33.593305555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukuoka%20Tower%20October%202011%2001.jpg"
+    },
+    {
+        "id": "Q116767986",
+        "name": "織田廣喜美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(130.711647 33.563325)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hiroki%20Oda%20Art%20Museum%2001.jpg"
+    },
+    {
+        "id": "Q113371298",
+        "name": "キッザニア福岡",
+        "type": "主題公園",
+        "coordinates": "Point(130.440277777 33.565)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q122897885",
+        "name": "平和南緑地展望台",
+        "type": "觀景台",
+        "coordinates": "Point(130.405194444 33.562444444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q65258063",
+        "name": "大宰府展示館",
+        "type": "考古博物館",
+        "coordinates": "Point(130.516194444 33.513305555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dazaifu%20Museum%2020170104.jpg"
+    },
+    {
+        "id": "Q575508",
+        "name": "王貞治ベースボールミュージアム",
+        "type": "體育博物館",
+        "coordinates": "Point(130.36191667 33.59516667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%8E%8B%E8%B2%9E%E6%B2%BB%E3%83%99%E3%83%BC%E3%82%B9%E3%83%9C%E3%83%BC%E3%83%AB%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%A2%E3%83%A0%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q85883647",
+        "name": "西南学院大学博物馆",
+        "type": "キリスト教博物館",
+        "coordinates": "Point(130.357694444 33.585388888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/SGU%20museum.jpg"
+    },
+    {
+        "id": "Q11592225",
+        "name": "福岡市埋藏文化財中心",
+        "type": "考古博物館",
+        "coordinates": "Point(130.462642 33.55545)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukuoka%20City%20Archaeology%20Center.jpg"
+    },
+    {
+        "id": "Q11602784",
+        "name": "筑前町立大刀洗平和紀念館",
+        "type": "軍事博物館",
+        "coordinates": "Point(130.619528 33.412333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chikuzen%20municipal%20Tachiarai%20peace%20memorial%20hall.JPG"
+    },
+    {
+        "id": "Q11629923",
+        "name": "西鐵香椎花園",
+        "type": "主題樂園",
+        "coordinates": "Point(130.434889 33.666889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kashii-kaen.jpg"
+    },
+    {
+        "id": "Q11592587",
+        "name": "福岡縣立美術館",
+        "type": "美術館",
+        "coordinates": "Point(130.39875 33.597306)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukuoka%20Museum%20of%20Art.JPG"
+    },
+    {
+        "id": "Q133326888",
+        "name": "岩戸山歴史資料館",
+        "type": "廃止された博物館",
+        "coordinates": "Point(130.552351 33.229017)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q847033",
+        "name": "福岡塔",
+        "type": "电视塔",
+        "coordinates": "Point(130.3515 33.593305555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukuoka%20Tower%20October%202011%2001.jpg"
+    },
+    {
+        "id": "Q11598468",
+        "name": "童話館",
+        "type": "商號",
+        "coordinates": "Point(129.873833 32.752194)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11654990",
+        "name": "門司電氣通信懷舊館",
+        "type": "電気通信博物館",
+        "coordinates": "Point(130.966944 33.950278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Moji%20Telecommunication%20Museum%20ac.jpg"
+    },
+    {
+        "id": "Q118334339",
+        "name": "五郎山古墳館",
+        "type": "考古博物館",
+        "coordinates": "Point(130.54443 33.451532)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gorouyama-kohun-kan.JPG"
+    },
+    {
+        "id": "Q11576740",
+        "name": "田川市煤炭·歷史博物館",
+        "type": "礦業博物館",
+        "coordinates": "Point(130.814 33.64094444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tawaga%20City%20Coal%20Mining%20Historical%20Museum.jpg"
+    },
+    {
+        "id": "Q55528690",
+        "name": "「博多町家」ふるさと館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(130.411388888 33.593638888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hakata-Machiya%20Furusato%20Museum%2020170918.jpg"
+    },
+    {
+        "id": "Q113371298",
+        "name": "キッザニア福岡",
+        "type": "主題樂園",
+        "coordinates": "Point(130.440277777 33.565)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q133264733",
+        "name": "北九州市平和のまちミュージアム",
+        "type": "和平博物館",
+        "coordinates": "Point(130.872654 33.882933)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q116795957",
+        "name": "宮若市石炭記念館",
+        "type": "礦業博物館",
+        "coordinates": "Point(130.673944444 33.713944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Miyawaka%20Coal%20Museum%2001.jpg"
+    },
+    {
+        "id": "Q116939503",
+        "name": "鴻臚館跡展示館",
+        "type": "考古博物館",
+        "coordinates": "Point(130.385361111 33.585972222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/K%C5%8Drokan%20Historical%20Museum%20the%20exhibition%20hall%201%20J%C5%8Dnai%20Ch%C5%AB%C5%8D-ku%20Fukuoka%20City%2020221018.jpg"
+    },
+    {
+        "id": "Q122887879",
+        "name": "鴻巣山展望台",
+        "type": "觀景台",
+        "coordinates": "Point(130.393416666 33.55925)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/K%C5%8Dnosu%20Yama%20Observation%20Deck%20133-1%20Ozasa%201-ch%C5%8Dme%20Ch%C5%AB%C5%8D-ku%20Fukuoka%2020230602.jpg"
+    },
+    {
+        "id": "Q11574275",
+        "name": "甘木歴史資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(130.659888888 33.414333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Amagi%20Histrical%20Museum.JPG"
+    },
+    {
+        "id": "Q123486959",
+        "name": "櫛田の銀杏",
+        "type": "古树",
+        "coordinates": "Point(130.411222222 33.593055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kushida%20no%20Ginan%20the%20W%20side%201-41%20Kami-kawabatamachi%20Hakata-ku%20Fukuoka%2020230801.jpg"
+    },
+    {
+        "id": "Q43925727",
+        "name": "平尾台自然観察センター",
+        "type": "遊客中心",
+        "coordinates": "Point(130.89441667 33.75627778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hiraodai%20Nature%20Observation%20Center%2001.jpg"
+    },
+    {
+        "id": "Q4141386",
+        "name": "九州历史资料馆",
+        "type": "建築物",
+        "coordinates": "Point(130.558 33.4393)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyushu%20Historical%20Museum02.jpg"
+    },
+    {
+        "id": "Q148543",
+        "name": "九州國立博物館",
+        "type": "國立博物館",
+        "coordinates": "Point(130.53829722 33.51835556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyushu-national-museum01.jpg"
+    },
+    {
+        "id": "Q11370126",
+        "name": "九州能源館",
+        "type": "エネルギー博物館",
+        "coordinates": "Point(130.396028 33.578333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyusyu%20enekan.JPG"
+    },
+    {
+        "id": "Q112167792",
+        "name": "太宰府神社のクス",
+        "type": "巨樹",
+        "coordinates": "Point(130.534278 33.52125)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Grand%20camphor%20tree%20in%20Dazaifu%20Temman%20Shrine%203.jpg"
+    },
+    {
+        "id": "Q112167792",
+        "name": "太宰府神社のクス",
+        "type": "巨樹",
+        "coordinates": "Point(130.534278 33.52125)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Grand%20camphor%20trees%20in%20Dazaifu%20Temman%20Shrine.jpg"
+    },
+    {
+        "id": "Q104783988",
+        "name": "立花家史料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(130.39731 33.15884)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Entrance%20of%20Tononokura%20Warehouse%20and%20Historical%20Museum%20of%20the%20Tachibana%20Clan.JPG"
+    },
+    {
+        "id": "Q148543",
+        "name": "九州國立博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(130.53829722 33.51835556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyushu-national-museum01.jpg"
+    },
+    {
+        "id": "Q123591501",
+        "name": "博多歴史館",
+        "type": "歷史博物館",
+        "coordinates": "Point(130.410833333 33.592777777)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q68488330",
+        "name": "求菩提資料館",
+        "type": "宗教博物馆",
+        "coordinates": "Point(131.017565 33.536352)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kubote%20Museum.jpg"
+    },
+    {
+        "id": "Q104783956",
+        "name": "太宰府市文化ふれあい館",
+        "type": "歷史博物館",
+        "coordinates": "Point(130.50938 33.520255)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dazaifu%20City%20Fureai%20Cultural%20Hall.jpg"
+    },
+    {
+        "id": "Q11370354",
+        "name": "九州鐵道紀念館",
+        "type": "鐵路博物館",
+        "coordinates": "Point(130.961806 33.943139)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyushu%20Railway%20History%20Museum%2001.JPG"
+    },
+    {
+        "id": "Q104783956",
+        "name": "太宰府市文化ふれあい館",
+        "type": "文化博物館",
+        "coordinates": "Point(130.50938 33.520255)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dazaifu%20City%20Fureai%20Cultural%20Hall.jpg"
+    },
+    {
+        "id": "Q123486959",
+        "name": "櫛田の銀杏",
+        "type": "神木",
+        "coordinates": "Point(130.411222222 33.593055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kushida%20no%20Ginan%20the%20W%20side%201-41%20Kami-kawabatamachi%20Hakata-ku%20Fukuoka%2020230801.jpg"
+    },
+    {
+        "id": "Q4141386",
+        "name": "九州历史资料馆",
+        "type": "歷史博物館",
+        "coordinates": "Point(130.558 33.4393)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyushu%20Historical%20Museum02.jpg"
+    },
+    {
+        "id": "Q123591501",
+        "name": "博多歴史館",
+        "type": "建築物",
+        "coordinates": "Point(130.410833333 33.592777777)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q21654514",
+        "name": "二見ヶ浦",
+        "type": "觀光景點",
+        "coordinates": "Point(130.19663889 33.64047222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Futamigaura%20Beach%20from%20observation%20deck%20of%20Futamigaura%20Cemetery%201.JPG"
+    },
+    {
+        "id": "Q133269306",
+        "name": "宇美八幡宮宝物殿",
+        "type": "宝物館",
+        "coordinates": "Point(130.50876 33.57035)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Warehouse%20and%20Treasure%20Hall%20of%20Umi%20Hachiman%20Shrine.JPG"
+    },
+    {
+        "id": "Q123486959",
+        "name": "櫛田の銀杏",
+        "type": "巨樹",
+        "coordinates": "Point(130.411222222 33.593055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kushida%20no%20Ginan%20the%20W%20side%201-41%20Kami-kawabatamachi%20Hakata-ku%20Fukuoka%2020230801.jpg"
+    },
+    {
+        "id": "Q123486959",
+        "name": "櫛田の銀杏",
+        "type": "木本植物",
+        "coordinates": "Point(130.411222222 33.593055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kushida%20no%20Ginan%20the%20W%20side%201-41%20Kami-kawabatamachi%20Hakata-ku%20Fukuoka%2020230801.jpg"
+    },
+    {
+        "id": "Q123486959",
+        "name": "櫛田の銀杏",
+        "type": "自然纪念物",
+        "coordinates": "Point(130.411222222 33.593055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kushida%20no%20Ginan%20the%20W%20side%201-41%20Kami-kawabatamachi%20Hakata-ku%20Fukuoka%2020230801.jpg"
+    },
+    {
+        "id": "Q21654514",
+        "name": "二見ヶ浦",
+        "type": "浦",
+        "coordinates": "Point(130.19663889 33.64047222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Futamigaura%20Beach%20from%20observation%20deck%20of%20Futamigaura%20Cemetery%201.JPG"
+    },
+    {
+        "id": "Q4141386",
+        "name": "九州历史资料馆",
+        "type": "資料庫",
+        "coordinates": "Point(130.558 33.4393)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyushu%20Historical%20Museum02.jpg"
+    },
+    {
+        "id": "Q130357844",
+        "name": "宇美町立歴史民俗資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(130.508962 33.569665)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Umi%20Town%20History%20and%20Folklore%20Museum%20ac.jpg"
+    },
+    {
+        "id": "Q68488330",
+        "name": "求菩提資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(131.017565 33.536352)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kubote%20Museum.jpg"
+    },
+    {
+        "id": "Q123466701",
+        "name": "TOTOミュージアム",
+        "type": "博物館",
+        "coordinates": "Point(130.872264918 33.872171587)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/TOTO%20%2839011274594%29.jpg"
+    },
+    {
+        "id": "Q100878901",
+        "name": "兵士・庶民の戦争資料館",
+        "type": "博物館",
+        "coordinates": "Point(130.71525 33.706805555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q121084173",
+        "name": "北九州市漫画ミュージアム",
+        "type": "博物館",
+        "coordinates": "Point(130.884722222 33.8875)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11400952",
+        "name": "北九州市環境博物館",
+        "type": "博物館",
+        "coordinates": "Point(130.807497 33.867875)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kitakyushu%20Environment%20Museum.JPG"
+    },
+    {
+        "id": "Q132952518",
+        "name": "菅公歴史館",
+        "type": "博物館",
+        "coordinates": "Point(130.534594 33.521868)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kanko%20Historical%20Museum%20in%20Dazaifu%20Temman%20Shrine%203.jpg"
+    },
+    {
+        "id": "Q123517219",
+        "name": "山辺道文化館",
+        "type": "博物館",
+        "coordinates": "Point(130.63333 33.31819)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104784023",
+        "name": "観世音寺宝蔵",
+        "type": "博物館",
+        "coordinates": "Point(130.522242 33.514919)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Museum%20of%20Kanzeonji%20Temple.jpg"
+    },
+    {
+        "id": "Q104784019",
+        "name": "八女市岩戸山歴史文化交流館",
+        "type": "文化中心",
+        "coordinates": "Point(130.553388 33.230991)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104784019",
+        "name": "八女市岩戸山歴史文化交流館",
+        "type": "博物館",
+        "coordinates": "Point(130.553388 33.230991)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q28689523",
+        "name": "朝倉市秋月博物館",
+        "type": "博物館",
+        "coordinates": "Point(130.694056 33.469056)",
+        "image": "No Image"
+    }
+]

@@ -1,0 +1,702 @@
+[
+    {
+        "id": "Q123555253",
+        "name": "諏訪神社の翁スギ媼スギ",
+        "type": "巨樹",
+        "coordinates": "Point(140.6606 37.25552)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q114231317",
+        "name": "いわき市アンモナイトセンター",
+        "type": "古生物博物馆",
+        "coordinates": "Point(140.943444444 37.175611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iwaki%20city%20anmonite%20center%20appearance.jpg"
+    },
+    {
+        "id": "Q11443742",
+        "name": "天鏡閣",
+        "type": "别墅",
+        "coordinates": "Point(140.044 37.5214)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tenkyokaku.jpg"
+    },
+    {
+        "id": "Q65261124",
+        "name": "安達ヶ原ふるさと村",
+        "type": "主題公園",
+        "coordinates": "Point(140.463805555 37.593583333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11643185",
+        "name": "郡山市開成館",
+        "type": "戶外博物館",
+        "coordinates": "Point(140.35277778 37.39583333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kaiseikan.JPG"
+    },
+    {
+        "id": "Q11371180",
+        "name": "事故歷史展示館",
+        "type": "鐵路博物館",
+        "coordinates": "Point(140.21747222 37.10069444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11419839",
+        "name": "四季の里",
+        "type": "農業テーマパーク",
+        "coordinates": "Point(140.36347222 37.71269444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11643134",
+        "name": "郡山カルチャーパーク",
+        "type": "主題樂園",
+        "coordinates": "Point(140.32886111 37.36669444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/201505%E9%83%A1%E5%B1%B1%E3%82%AB%E3%83%AB%E3%83%81%E3%83%A3%E3%83%BC%E3%83%91%E3%83%BC%E3%82%AF.JPG"
+    },
+    {
+        "id": "Q7572157",
+        "name": "スパリゾートハワイアンズ",
+        "type": "水上遊樂園",
+        "coordinates": "Point(140.81652 36.993634)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Spa%20Resort%20Hawaiians%20appearance.Jan.2014.JPG"
+    },
+    {
+        "id": "Q11643178",
+        "name": "郡山市立美術館",
+        "type": "美術館",
+        "coordinates": "Point(140.419861 37.392667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Koriyama%20City%20Museum%20of%20Art.jpg"
+    },
+    {
+        "id": "Q97188943",
+        "name": "相馬市歴史資料収蔵館",
+        "type": "歷史博物館",
+        "coordinates": "Point(140.919583333 37.799583333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%9B%B8%E9%A6%AC%E5%B8%82%E6%AD%B4%E5%8F%B2%E8%B3%87%E6%96%99%E5%8F%8E%E8%94%B5%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q5507735",
+        "name": "福島縣立美術館",
+        "type": "美術館",
+        "coordinates": "Point(140.45652778 37.76791667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukushima-Pref-Museum-of-Art02.jpg"
+    },
+    {
+        "id": "Q11260150",
+        "name": "いわき市暮らしの伝承郷",
+        "type": "民俗博物館",
+        "coordinates": "Point(140.915 37.008361)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iwaki%20city%20Kurashi-no-denshogo.JPG"
+    },
+    {
+        "id": "Q4670566",
+        "name": "あぶくま洞",
+        "type": "觀光洞穴",
+        "coordinates": "Point(140.673472222 37.344716666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Flowstones%20and%20Mushroom%20Rocks%20inside%20Abukuma-do%20Cave.JPG"
+    },
+    {
+        "id": "Q108428600",
+        "name": "新田川温泉",
+        "type": "温泉镇",
+        "coordinates": "Point(140.916186 37.667091)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q4352239",
+        "name": "福島縣立博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(139.934553 37.488923)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukushima%20Museum%202022.jpg"
+    },
+    {
+        "id": "Q24867517",
+        "name": "郡山市野鳥の森学習館",
+        "type": "動物学博物館",
+        "coordinates": "Point(140.363778 37.381306)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Koriyama%20Museum%20of%20Birds1.jpg"
+    },
+    {
+        "id": "Q106967257",
+        "name": "若松城天守閣",
+        "type": "天守",
+        "coordinates": "Point(139.929722222 37.487777777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/080904Aidu-Wakamatu-jo.jpg"
+    },
+    {
+        "id": "Q11505553",
+        "name": "日本きもの文化美術館",
+        "type": "美術館",
+        "coordinates": "Point(140.2645 37.48536111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Japan%20Kimono%20Culture%20Museum.JPG"
+    },
+    {
+        "id": "Q30266032",
+        "name": "福島県歴史資料館",
+        "type": "公共檔案館",
+        "coordinates": "Point(140.472184 37.768178)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q4670566",
+        "name": "あぶくま洞",
+        "type": "保護區",
+        "coordinates": "Point(140.673472222 37.344716666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Flowstones%20and%20Mushroom%20Rocks%20inside%20Abukuma-do%20Cave.JPG"
+    },
+    {
+        "id": "Q38266933",
+        "name": "アクアマリンいなわしろカワセミ水族館",
+        "type": "水族館",
+        "coordinates": "Point(140.07458333 37.56138889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%82%A2%E3%82%AF%E3%82%A2%E3%83%9E%E3%83%AA%E3%83%B3%E3%81%84%E3%81%AA%E3%82%8F%E3%81%97%E3%82%8D%E3%82%AB%E3%83%AF%E3%82%BB%E3%83%9F%E6%B0%B4%E6%97%8F%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q4782699",
+        "name": "磐城水族馆",
+        "type": "水族館",
+        "coordinates": "Point(140.9015 36.94275)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aquamarine%20Fukushima%2020100124.JPG"
+    },
+    {
+        "id": "Q28475533",
+        "name": "郡山市歴史資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(140.372972222 37.394555555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%83%A1%E5%B1%B1%E5%B8%82%E6%AD%B4%E5%8F%B2%E8%B3%87%E6%96%99%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q5507735",
+        "name": "福島縣立美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(140.45652778 37.76791667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukushima-Pref-Museum-of-Art02.jpg"
+    },
+    {
+        "id": "Q111599804",
+        "name": "磐梯山噴火紀念館",
+        "type": "火山博物館",
+        "coordinates": "Point(140.079472222 37.659666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.%20Bandai%20eruption%20memorial%20museum.jpg"
+    },
+    {
+        "id": "Q28688791",
+        "name": "喜多方市美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.861722222 37.651166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Museum%2CKitakata%20%281390820482%29.jpg"
+    },
+    {
+        "id": "Q11260157",
+        "name": "いわき市石炭・化石館",
+        "type": "礦業博物館",
+        "coordinates": "Point(140.84833333 37.0125)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%84%E3%82%8F%E3%81%8D%E5%B8%82%E7%9F%B3%E7%82%AD%E5%8C%96%E7%9F%B3%E9%A4%A8.JPG"
+    },
+    {
+        "id": "Q97371151",
+        "name": "久米正雄記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(140.363963299 37.396134135)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%B9%85%E7%B1%B3%E6%AD%A3%E9%9B%84%E8%A8%98%E5%BF%B5%E9%A4%A8%20%E9%83%A1%E5%B1%B1%E5%B8%82.jpg"
+    },
+    {
+        "id": "Q11571945",
+        "name": "猪苗代緑の村",
+        "type": "主題公園",
+        "coordinates": "Point(140.074555555 37.560888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%A3%90%E8%B6%8A%E8%A5%BF%E7%B7%9A%E3%83%BB%E7%BF%81%E5%B3%B6%E9%A7%85%E3%83%BB%E6%97%A7%E9%A7%85%E6%9C%AC%E5%B1%8B%28%E7%A7%BB%E7%AF%89%E4%BF%9D%E5%AD%98%29%E3%83%BB%E7%B7%91%E3%81%AE%E6%9D%91%281993.5.5%29%28s43-15%29.jpg"
+    },
+    {
+        "id": "Q112579027",
+        "name": "會津壹番館",
+        "type": "飲茶店",
+        "coordinates": "Point(139.927333333 37.497638888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aizu%20ichibankan%2001.JPG"
+    },
+    {
+        "id": "Q11669123",
+        "name": "高子沼グリーンランド",
+        "type": "廢墟",
+        "coordinates": "Point(140.519166666 37.805)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11443742",
+        "name": "天鏡閣",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(140.044 37.5214)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tenkyokaku.jpg"
+    },
+    {
+        "id": "Q11645213",
+        "name": "野口英世記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(140.073611 37.536111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hideyo%20Noguchi%20Memorial%20Hall.JPG"
+    },
+    {
+        "id": "Q11443742",
+        "name": "天鏡閣",
+        "type": "會議室",
+        "coordinates": "Point(140.044 37.5214)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tenkyokaku.jpg"
+    },
+    {
+        "id": "Q108070085",
+        "name": "玉梨温泉",
+        "type": "温泉镇",
+        "coordinates": "Point(139.544638888 37.421583333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11669123",
+        "name": "高子沼グリーンランド",
+        "type": "主題樂園",
+        "coordinates": "Point(140.519166666 37.805)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q1053582",
+        "name": "CCGA現代グラフィックアートセンター",
+        "type": "美術館",
+        "coordinates": "Point(140.448975 37.300584)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q112033912",
+        "name": "会津武家屋敷",
+        "type": "戶外博物館",
+        "coordinates": "Point(139.953666666 37.485194444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukushima-Aizu%20Buke-Yashiki%20%28Samurai%20Residence%29-m.jpg"
+    },
+    {
+        "id": "Q11260168",
+        "name": "いわき市立美術館",
+        "type": "美術館",
+        "coordinates": "Point(140.889556 37.051806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iwaki%20City%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q11266882",
+        "name": "こむこむ",
+        "type": "科學博物館",
+        "coordinates": "Point(140.46061111 37.75213889)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11443742",
+        "name": "天鏡閣",
+        "type": "日本皇室設施",
+        "coordinates": "Point(140.044 37.5214)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tenkyokaku.jpg"
+    },
+    {
+        "id": "Q30266032",
+        "name": "福島県歴史資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(140.472184 37.768178)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11451160",
+        "name": "安積歴史博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(140.35061111 37.39166667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%AE%89%E7%A9%8D%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1%20%E5%AE%89%E7%A9%8D%E6%AD%B4%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A4%A8%28%E6%98%A5%29.jpg"
+    },
+    {
+        "id": "Q11593084",
+        "name": "福島市写真美術館",
+        "type": "攝影博物館",
+        "coordinates": "Point(140.463147 37.764414)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukushima%20City%20Museum%20of%20Photography.JPG"
+    },
+    {
+        "id": "Q767776",
+        "name": "いわき・ら・ら・ミュウ",
+        "type": "道之驛",
+        "coordinates": "Point(140.905472 36.944333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iwaki%20Lalamew%201.JPG"
+    },
+    {
+        "id": "Q11545719",
+        "name": "正雲寺会津美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.99922222 37.40619444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q117827029",
+        "name": "旧花水館",
+        "type": "建成遗产",
+        "coordinates": "Point(140.45246 37.83451)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ky%C5%AB%20Kasuikan%2009.jpg"
+    },
+    {
+        "id": "Q11266221",
+        "name": "こおりやま文学の森資料館",
+        "type": "文學館",
+        "coordinates": "Point(140.363138888 37.395944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Koriyama%20Museum%20of%20Literature1.jpg"
+    },
+    {
+        "id": "Q11260116",
+        "name": "いわきマリンタワー",
+        "type": "觀光塔",
+        "coordinates": "Point(140.92 36.939389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%84%E3%82%8F%E3%81%8D%E3%83%9E%E3%83%AA%E3%83%B3%E3%82%BF%E3%83%AF%E3%83%BC.jpg"
+    },
+    {
+        "id": "Q11260157",
+        "name": "いわき市石炭・化石館",
+        "type": "古生物博物馆",
+        "coordinates": "Point(140.84833333 37.0125)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%84%E3%82%8F%E3%81%8D%E5%B8%82%E7%9F%B3%E7%82%AD%E5%8C%96%E7%9F%B3%E9%A4%A8.JPG"
+    },
+    {
+        "id": "Q132201722",
+        "name": "種徳美術館",
+        "type": "美術館",
+        "coordinates": "Point(140.518412 37.843408)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q4981824",
+        "name": "いわき市考古資料館",
+        "type": "考古博物館",
+        "coordinates": "Point(140.825389 36.996861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iwaki%20City%20Archaeological%20Museum.JPG"
+    },
+    {
+        "id": "Q11505553",
+        "name": "日本きもの文化美術館",
+        "type": "時裝博物館",
+        "coordinates": "Point(140.2645 37.48536111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Japan%20Kimono%20Culture%20Museum.JPG"
+    },
+    {
+        "id": "Q30266032",
+        "name": "福島県歴史資料館",
+        "type": "公共檔案館",
+        "coordinates": "Point(140.472368055 37.768116944)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q30266032",
+        "name": "福島県歴史資料館",
+        "type": "公共檔案館",
+        "coordinates": "Point(140.472368 37.768117)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11451160",
+        "name": "安積歴史博物館",
+        "type": "旧学校施設",
+        "coordinates": "Point(140.35061111 37.39166667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%AE%89%E7%A9%8D%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1%20%E5%AE%89%E7%A9%8D%E6%AD%B4%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A4%A8%28%E6%98%A5%29.jpg"
+    },
+    {
+        "id": "Q11260170",
+        "name": "いわき市立草野心平記念文学館",
+        "type": "人物紀念館",
+        "coordinates": "Point(140.833222 37.128972)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kusano%20Shinpei%20Memorial%20Centre%2CIwaki%20City.JPG"
+    },
+    {
+        "id": "Q11343100",
+        "name": "ムシテックワールド",
+        "type": "昆虫博物館",
+        "coordinates": "Point(140.46222222 37.25083333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MUSHITEC%20WORLD%20FUKUSHIMA.jpg"
+    },
+    {
+        "id": "Q97311274",
+        "name": "相馬市伝承鎮魂祈念館",
+        "type": "海嘯博物館",
+        "coordinates": "Point(140.964027777 37.829972222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Haragama%20Obama%20Seaside%20Park%201.jpg"
+    },
+    {
+        "id": "Q11664795",
+        "name": "須賀川市立博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(140.379194 37.291417)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sukagawa%20City%20museum.jpg"
+    },
+    {
+        "id": "Q97312067",
+        "name": "ブリティッシュヒルズ",
+        "type": "主題公園",
+        "coordinates": "Point(140.061111111 37.258333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%83%96%E3%83%AA%E3%83%86%E3%82%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%83%92%E3%83%AB%E3%82%BA%20%E3%83%9E%E3%83%8A%E3%83%BC%E3%83%8F%E3%82%A6%E3%82%B9%2020150524.jpg"
+    },
+    {
+        "id": "Q106967257",
+        "name": "若松城天守閣",
+        "type": "地方文化館",
+        "coordinates": "Point(139.929722222 37.487777777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/080904Aidu-Wakamatu-jo.jpg"
+    },
+    {
+        "id": "Q104696512",
+        "name": "小峰城歴史館",
+        "type": "歷史博物館",
+        "coordinates": "Point(140.212477 37.131295)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q3248015",
+        "name": "諸橋近代美術館",
+        "type": "现代美术馆",
+        "coordinates": "Point(140.09638889 37.65361111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Morohashi%20Museum%20of%20Modern%20Art.JPG"
+    },
+    {
+        "id": "Q11260116",
+        "name": "いわきマリンタワー",
+        "type": "摩天大樓",
+        "coordinates": "Point(140.92 36.939389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%84%E3%82%8F%E3%81%8D%E3%83%9E%E3%83%AA%E3%83%B3%E3%82%BF%E3%83%AF%E3%83%BC.jpg"
+    },
+    {
+        "id": "Q767776",
+        "name": "いわき・ら・ら・ミュウ",
+        "type": "食品主题園區",
+        "coordinates": "Point(140.905472 36.944333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iwaki%20Lalamew%201.JPG"
+    },
+    {
+        "id": "Q11443742",
+        "name": "天鏡閣",
+        "type": "历史建筑",
+        "coordinates": "Point(140.044 37.5214)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tenkyokaku.jpg"
+    },
+    {
+        "id": "Q112579027",
+        "name": "會津壹番館",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.927333333 37.497638888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aizu%20ichibankan%2001.JPG"
+    },
+    {
+        "id": "Q11451160",
+        "name": "安積歴史博物館",
+        "type": "教育博物館",
+        "coordinates": "Point(140.35061111 37.39166667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%AE%89%E7%A9%8D%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1%20%E5%AE%89%E7%A9%8D%E6%AD%B4%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A4%A8%28%E6%98%A5%29.jpg"
+    },
+    {
+        "id": "Q11260170",
+        "name": "いわき市立草野心平記念文学館",
+        "type": "文學館",
+        "coordinates": "Point(140.833222 37.128972)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kusano%20Shinpei%20Memorial%20Centre%2CIwaki%20City.JPG"
+    },
+    {
+        "id": "Q21652646",
+        "name": "大安場史跡公園",
+        "type": "考古学公園",
+        "coordinates": "Point(140.4025 37.35611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ohyasuba-park.jpg"
+    },
+    {
+        "id": "Q11593098",
+        "name": "福島市飯野UFO交流館",
+        "type": "天文博物館",
+        "coordinates": "Point(140.534111111 37.687722222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/UFO%20fureaikan.jpg"
+    },
+    {
+        "id": "Q7572157",
+        "name": "スパリゾートハワイアンズ",
+        "type": "康樂中心",
+        "coordinates": "Point(140.81652 36.993634)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Spa%20Resort%20Hawaiians%20appearance.Jan.2014.JPG"
+    },
+    {
+        "id": "Q30266032",
+        "name": "福島県歴史資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(140.472368055 37.768116944)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q17193670",
+        "name": "いわき回廊美術館",
+        "type": "美術館",
+        "coordinates": "Point(140.927361 37.070444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q30266032",
+        "name": "福島県歴史資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(140.472368 37.768117)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11593090",
+        "name": "福島市民家園",
+        "type": "民家園",
+        "coordinates": "Point(140.372972222 37.731194444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukushima%20City%20Minka-en%20entrance.jpg"
+    },
+    {
+        "id": "Q98929263",
+        "name": "東日本大震災・原子力災害伝承館",
+        "type": "纪念博物馆",
+        "coordinates": "Point(141.026446 37.458138)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%9D%B1%E6%97%A5%E6%9C%AC%E5%A4%A7%E9%9C%87%E7%81%BD%E3%83%BB%E5%8E%9F%E5%AD%90%E5%8A%9B%E7%81%BD%E5%AE%B3%E4%BC%9D%E6%89%BF%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q7191151",
+        "name": "絵本美術館「まどのそとのそのまたむこう」",
+        "type": "繪本博物館",
+        "coordinates": "Point(140.96641667 36.97372222)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q97371151",
+        "name": "久米正雄記念館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(140.363963299 37.396134135)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%B9%85%E7%B1%B3%E6%AD%A3%E9%9B%84%E8%A8%98%E5%BF%B5%E9%A4%A8%20%E9%83%A1%E5%B1%B1%E5%B8%82.jpg"
+    },
+    {
+        "id": "Q11526117",
+        "name": "東北サファリパーク",
+        "type": "野生动物园",
+        "coordinates": "Point(140.366666666 37.638611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%94%BE%E3%81%97%E9%A3%BC%E3%81%84%E3%82%A8%E3%83%AA%E3%82%A2.jpg"
+    },
+    {
+        "id": "Q11282592",
+        "name": "アウシュヴィッツ平和博物館",
+        "type": "博物館",
+        "coordinates": "Point(140.188472 37.095694)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q111495958",
+        "name": "南相馬市博物館",
+        "type": "博物館",
+        "coordinates": "Point(140.963055555 37.623388888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132643729",
+        "name": "郡山市歴史情報博物館",
+        "type": "博物館",
+        "coordinates": "Point(140.373729 37.39392)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q21654421",
+        "name": "福島さくら遊学舎",
+        "type": "旧学校施設",
+        "coordinates": "Point(140.47230556 37.415)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukushima%20Sakura%20Yugakusha%20Museum.jpeg"
+    },
+    {
+        "id": "Q65248685",
+        "name": "法國寺会津別院（会津村）",
+        "type": "佛寺",
+        "coordinates": "Point(139.952361111 37.554138888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aizu%20Kannon%20and%20Three-storied%20Pagoda%2815624662648%29.jpg"
+    },
+    {
+        "id": "Q65248685",
+        "name": "法國寺会津別院（会津村）",
+        "type": "觀光景點",
+        "coordinates": "Point(139.952361111 37.554138888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aizu%20Kannon%20and%20Three-storied%20Pagoda%2815624662648%29.jpg"
+    },
+    {
+        "id": "Q104696511",
+        "name": "白河市歴史民俗資料館",
+        "type": "博物館",
+        "coordinates": "Point(140.228533 37.12058)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11320382",
+        "name": "デコ屋敷",
+        "type": "人類聚居地",
+        "coordinates": "Point(140.456444444 37.460611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%AB%98%E6%9F%B4%E3%83%87%E3%82%B3%E5%B1%8B%E6%95%B7.jpg"
+    },
+    {
+        "id": "Q11320382",
+        "name": "デコ屋敷",
+        "type": "觀光景點",
+        "coordinates": "Point(140.456444444 37.460611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%AB%98%E6%9F%B4%E3%83%87%E3%82%B3%E5%B1%8B%E6%95%B7.jpg"
+    },
+    {
+        "id": "Q21654421",
+        "name": "福島さくら遊学舎",
+        "type": "博物館",
+        "coordinates": "Point(140.47230556 37.415)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukushima%20Sakura%20Yugakusha%20Museum.jpeg"
+    },
+    {
+        "id": "Q11381224",
+        "name": "ただみ・モノとくらしのミュージアム",
+        "type": "博物館",
+        "coordinates": "Point(139.44473611 37.3102)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aizu%20Tadami%20Old%20Material%20Museum.jpg"
+    },
+    {
+        "id": "Q104696506",
+        "name": "会津民俗館",
+        "type": "博物館",
+        "coordinates": "Point(140.075454 37.535533)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104696509",
+        "name": "三春町歴史民俗資料館",
+        "type": "博物館",
+        "coordinates": "Point(140.491827 37.440181)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q28689069",
+        "name": "喜多方蔵の里",
+        "type": "博物館",
+        "coordinates": "Point(139.86142222 37.65150833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%9C%9F%E8%94%B5%20%281389928661%29.jpg"
+    },
+    {
+        "id": "Q11445606",
+        "name": "奥会津博物館",
+        "type": "博物館",
+        "coordinates": "Point(139.720278 37.146111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Old%20Otake-ke%20house.JPG"
+    },
+    {
+        "id": "Q104696519",
+        "name": "いわき市勿来関文学歴史館",
+        "type": "博物館",
+        "coordinates": "Point(140.780388 36.866732)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11364267",
+        "name": "中山義秀記念文学館",
+        "type": "博物館",
+        "coordinates": "Point(140.2475 37.202917)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132179184",
+        "name": "伊達市保原歴史文化資料館",
+        "type": "博物館",
+        "coordinates": "Point(140.569816 37.819696)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kameoka%20House.jpg"
+    }
+]

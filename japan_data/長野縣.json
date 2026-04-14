@@ -1,0 +1,1549 @@
+[
+    {
+        "id": "Q11390430",
+        "name": "八ヶ岳美術館",
+        "type": "民俗博物館",
+        "coordinates": "Point(138.27683333 35.96805556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yatsugatake%20Museum%20of%20Art.JPG"
+    },
+    {
+        "id": "Q109370433",
+        "name": "諏訪市美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.113131 36.047769)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/130607%20Suwa%20City%20Museum%20of%20Art%20Suwa%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q17190581",
+        "name": "安曇野アートヒルズミュージアム",
+        "type": "美術館",
+        "coordinates": "Point(137.84205556 36.34013889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Azumino%20Arthills%20Museum.jpg"
+    },
+    {
+        "id": "Q61393839",
+        "name": "北齋館",
+        "type": "美術館",
+        "coordinates": "Point(138.317166666 36.694361111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hokusai%20Museum.jpg"
+    },
+    {
+        "id": "Q114674643",
+        "name": "軽井沢安東美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.63946375 36.346864977)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/240308%20Mus%C3%A9e%20Ando%20%C3%A0%20Karuizawa%20Karuizawa%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q28682337",
+        "name": "Harmo美术馆",
+        "type": "美術館",
+        "coordinates": "Point(138.08824 36.06524)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11450773",
+        "name": "安曇野ジャンセン美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(137.84222222 36.35)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gaikan.jpg"
+    },
+    {
+        "id": "Q11549453",
+        "name": "水野美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.193028 36.628222)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11552021",
+        "name": "池田滿壽夫美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.196667 36.564444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ikeda%20Masuo%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q11390430",
+        "name": "八ヶ岳美術館",
+        "type": "歷史博物館",
+        "coordinates": "Point(138.27683333 35.96805556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yatsugatake%20Museum%20of%20Art.JPG"
+    },
+    {
+        "id": "Q133288742",
+        "name": "山ノ内町立志賀高原ロマン美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.444207 36.727903)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11608719",
+        "name": "美原高原美術館",
+        "type": "戶外博物館",
+        "coordinates": "Point(138.14036111 36.23066667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/250426%20Utsukushi-ga-hara%20Open-Air%20Museum%20Ueda%20Nagano%20pref%20Japan14s3.jpg"
+    },
+    {
+        "id": "Q78129958",
+        "name": "市立岡谷美術考古館",
+        "type": "考古博物館",
+        "coordinates": "Point(138.047083333 36.058805555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okaya%20Art%20%26%20Archaeological%20Museum.jpg"
+    },
+    {
+        "id": "Q11337327",
+        "name": "ペイネ美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.5945 36.329139)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Peynet%20museum01s3872.jpg"
+    },
+    {
+        "id": "Q133226827",
+        "name": "信州大学自然科学館",
+        "type": "大學博物館",
+        "coordinates": "Point(137.981224 36.252456)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11462647",
+        "name": "小海町高原美术馆",
+        "type": "美術館",
+        "coordinates": "Point(138.44008333 36.05927222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Koumi-machi%20Kougen%20Museum%20of%20Art%2C%20Exhibition%20of%20%E2%80%9Dyour%20name%E2%80%9D%2020161113-140815.jpg"
+    },
+    {
+        "id": "Q11577117",
+        "name": "田淵行男記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(137.90397222 36.32555556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%94%B0%E6%B7%B5%E8%A1%8C%E7%94%B7%E8%A8%98%E5%BF%B5%E9%A4%A8%E5%85%A8%E5%AE%B9P8149156.jpg"
+    },
+    {
+        "id": "Q11666522",
+        "name": "飯田市川本喜八郎人形美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.825694 35.514942)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iida%20City%20Kawamoto%20Kihachiro%20Puppet%20Museum.jpg"
+    },
+    {
+        "id": "Q85879363",
+        "name": "安曇野山岳美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.835722222 36.352333333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11567510",
+        "name": "無言館",
+        "type": "圖書館",
+        "coordinates": "Point(138.200028 36.345417)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mugonkan.jpg"
+    },
+    {
+        "id": "Q11531052",
+        "name": "松本市美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.976472222 36.231611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Matsumoto%20city%20museum%20of%20art07nt3200.jpg"
+    },
+    {
+        "id": "Q11608719",
+        "name": "美原高原美術館",
+        "type": "雕塑公园",
+        "coordinates": "Point(138.14036111 36.23066667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/250426%20Utsukushi-ga-hara%20Open-Air%20Museum%20Ueda%20Nagano%20pref%20Japan14s3.jpg"
+    },
+    {
+        "id": "Q105334745",
+        "name": "おぶせミュージアム",
+        "type": "美術館",
+        "coordinates": "Point(138.318988888 36.698494444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11587726",
+        "name": "碌山美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(137.881389 36.343694)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/150921%20Rokuzan%20Art%20Museum%20Azumino%20Nagano%20pref%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q11567510",
+        "name": "無言館",
+        "type": "戰爭紀念建築",
+        "coordinates": "Point(138.200028 36.345417)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mugonkan.jpg"
+    },
+    {
+        "id": "Q11404260",
+        "name": "北野カルチュラルセンター",
+        "type": "美術館",
+        "coordinates": "Point(138.187083 36.653083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kitano%20Cultural%20Centre.jpg"
+    },
+    {
+        "id": "Q11631864",
+        "name": "诹访市原田泰治美术馆",
+        "type": "美術館",
+        "coordinates": "Point(138.098361 36.038889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/140606%20Taizi%20Harada%20Art%20Museum%20Suwa%20Nagano%20pref%20Japan03s3.jpg"
+    },
+    {
+        "id": "Q11621785",
+        "name": "蓼科テディベア美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.234494 36.108714)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lake%20Shirakaba38s5s3200.jpg"
+    },
+    {
+        "id": "Q11668569",
+        "name": "驥山館",
+        "type": "美術館",
+        "coordinates": "Point(138.145917 36.579556)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11666522",
+        "name": "飯田市川本喜八郎人形美術館",
+        "type": "剧院博物馆",
+        "coordinates": "Point(137.825694 35.514942)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iida%20City%20Kawamoto%20Kihachiro%20Puppet%20Museum.jpg"
+    },
+    {
+        "id": "Q11463703",
+        "name": "小諸市立小山敬三美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.414944 36.328139)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Koyama%20Keizo%20Museum%20of%20Art%20Komoro%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q86743350",
+        "name": "袋屋美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.370805555 36.745472222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E8%A2%8B%E5%B1%8B%E7%BE%8E%E8%A1%93%E9%A4%A8%EF%BC%882020-2-21%EF%BC%89.jpg"
+    },
+    {
+        "id": "Q11567510",
+        "name": "無言館",
+        "type": "美術館",
+        "coordinates": "Point(138.200028 36.345417)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mugonkan.jpg"
+    },
+    {
+        "id": "Q78072490",
+        "name": "北アルプス展望美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.895916666 36.385805555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q131457036",
+        "name": "奥村土牛記念美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.476653 36.134144)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okumura%20Togyu%20Memorial%20Museum%20of%20Art.jpg"
+    },
+    {
+        "id": "Q11306065",
+        "name": "三立服部美术馆",
+        "type": "美術館",
+        "coordinates": "Point(138.111889 36.055167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/160603%20Sunritz%20Hattori%20Museum%20of%20Art%20Suwa%20Nagano%20pref%20Japan01n.jpg"
+    },
+    {
+        "id": "Q11560128",
+        "name": "深沢紅子野の花美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.597527777 36.330888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fknb02s3872.jpg"
+    },
+    {
+        "id": "Q28683263",
+        "name": "脇田美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.63344444 36.351)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Wakita%20Museum%20of%20Art.JPG"
+    },
+    {
+        "id": "Q64416043",
+        "name": "梅野記念絵画館・ふれあい館",
+        "type": "美術館",
+        "coordinates": "Point(138.3221613 36.3238042)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Umeno%20Memorial%20Picture%20Gallery%20%C2%B7%20Fureai%20Hall%203.jpg"
+    },
+    {
+        "id": "Q11666529",
+        "name": "飯田市美術博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(137.83021 35.512042)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iida%20City%20Museum%20exterior%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q85874646",
+        "name": "ルヴァン美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.584827 36.327562)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/160729%20Le%20Vent%20Museum%20of%20Contemporary%20Art%20Karuizawa%20Nagano%20pref%20Japan02s3.jpg"
+    },
+    {
+        "id": "Q11621785",
+        "name": "蓼科テディベア美術館",
+        "type": "泰迪熊博物馆",
+        "coordinates": "Point(138.234494 36.108714)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lake%20Shirakaba38s5s3200.jpg"
+    },
+    {
+        "id": "Q123190139",
+        "name": "白馬三枝美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.84594 36.690159)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q133226827",
+        "name": "信州大学自然科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(137.981224 36.252456)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q86743771",
+        "name": "日本のあかり博物館",
+        "type": "美術館",
+        "coordinates": "Point(138.315138888 36.695111111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11654278",
+        "name": "長野縣信濃美術館・東山魁夷館",
+        "type": "美術館",
+        "coordinates": "Point(138.191111 36.661667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagano%20Prefectural%20Shinano%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q11666529",
+        "name": "飯田市美術博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(137.83044444 35.512)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iida%20City%20Museum%20exterior%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q114674643",
+        "name": "軽井沢安東美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.63946375 36.346864977)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/240308%20Mus%C3%A9e%20Ando%20%C3%A0%20Karuizawa%20Karuizawa%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q11631824",
+        "name": "SUWA玻璃之乡美术馆",
+        "type": "美術館",
+        "coordinates": "Point(138.080333 36.028417)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/SUWA%20Glass-no-Sato%20Museum.JPG"
+    },
+    {
+        "id": "Q11450773",
+        "name": "安曇野ジャンセン美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.84222222 36.35)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gaikan.jpg"
+    },
+    {
+        "id": "Q11552021",
+        "name": "池田滿壽夫美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.196667 36.564444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ikeda%20Masuo%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q11382612",
+        "name": "佐久市兒童未來館",
+        "type": "科學博物館",
+        "coordinates": "Point(138.475833 36.271611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saku%20Children%27s%20Science%20Dome.JPG"
+    },
+    {
+        "id": "Q61393839",
+        "name": "北齋館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.317166666 36.694361111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hokusai%20Museum.jpg"
+    },
+    {
+        "id": "Q11450795",
+        "name": "安曇野高橋節郎記念美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.89136111 36.35455556)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11577117",
+        "name": "田淵行男記念館",
+        "type": "美術館",
+        "coordinates": "Point(137.90397222 36.32555556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%94%B0%E6%B7%B5%E8%A1%8C%E7%94%B7%E8%A8%98%E5%BF%B5%E9%A4%A8%E5%85%A8%E5%AE%B9P8149156.jpg"
+    },
+    {
+        "id": "Q85882441",
+        "name": "田崎美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.583611111 36.358611111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q85879727",
+        "name": "小諸高原美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.4204 36.34397)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%B8%82%E7%AB%8B%E5%B0%8F%E8%AB%B8%E9%AB%98%E5%8E%9F%E7%BE%8E%E8%A1%93%E9%A4%A8%E3%83%BB%E7%99%BD%E9%B3%A5%E6%98%A0%E9%9B%AA%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11666529",
+        "name": "飯田市美術博物館",
+        "type": "美術館",
+        "coordinates": "Point(137.83021 35.512042)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iida%20City%20Museum%20exterior%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q11386158",
+        "name": "KAITA EPITAPH 残照館",
+        "type": "美術館",
+        "coordinates": "Point(138.19752778 36.34205556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kaita%20Epitaph%20Zanshou%20Museum.jpg"
+    },
+    {
+        "id": "Q11450795",
+        "name": "安曇野高橋節郎記念美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(137.89136111 36.35455556)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q110245475",
+        "name": "長野縣立美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.191018 36.661575)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagano%20Prefectural%20Art%20Museum%202021-12%201.jpg"
+    },
+    {
+        "id": "Q11337327",
+        "name": "ペイネ美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.5945 36.329139)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Peynet%20museum01s3872.jpg"
+    },
+    {
+        "id": "Q11654278",
+        "name": "長野縣信濃美術館・東山魁夷館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(138.191111 36.661667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagano%20Prefectural%20Shinano%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q11587726",
+        "name": "碌山美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.881389 36.343694)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/150921%20Rokuzan%20Art%20Museum%20Azumino%20Nagano%20pref%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q11314323",
+        "name": "Sezon现代美术馆",
+        "type": "美術館",
+        "coordinates": "Point(138.580778 36.369806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/220930%20Sezon%20Museum%20of%20Modern%20Art%20Karuizawa%20Nagano%20pref%20Japan04s3.jpg"
+    },
+    {
+        "id": "Q11666529",
+        "name": "飯田市美術博物館",
+        "type": "美術館",
+        "coordinates": "Point(137.83044444 35.512)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iida%20City%20Museum%20exterior%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q11654177",
+        "name": "長野市少年科学センター",
+        "type": "科學博物館",
+        "coordinates": "Point(138.1945 36.66575)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagano%20City%20Youth%20Science%20Museum.jpg"
+    },
+    {
+        "id": "Q11390430",
+        "name": "八ヶ岳美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.27683333 35.96805556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yatsugatake%20Museum%20of%20Art.JPG"
+    },
+    {
+        "id": "Q6157886",
+        "name": "浮世繪博物館",
+        "type": "美術館",
+        "coordinates": "Point(137.93508056 36.2303)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MatsumotoJapanUkiyoeMuseum.jpg"
+    },
+    {
+        "id": "Q86743771",
+        "name": "日本のあかり博物館",
+        "type": "博物館",
+        "coordinates": "Point(138.315138888 36.695111111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q78129958",
+        "name": "市立岡谷美術考古館",
+        "type": "美術館",
+        "coordinates": "Point(138.047083333 36.058805555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okaya%20Art%20%26%20Archaeological%20Museum.jpg"
+    },
+    {
+        "id": "Q11458738",
+        "name": "小さな美術館軽井沢草花館",
+        "type": "美術館",
+        "coordinates": "Point(138.635417 36.346806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%B0%8F%E3%81%95%E3%81%AA%E7%BE%8E%E8%A1%93%E9%A4%A8%E8%BB%BD%E4%BA%95%E6%B2%A2%E8%8D%89%E8%8A%B1%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11344069",
+        "name": "メルシャン軽井沢美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.507778 36.322361)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Musee%20d%27art%20Mercian%20KARUIZAWA.jpg"
+    },
+    {
+        "id": "Q11463703",
+        "name": "小諸市立小山敬三美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.414944 36.328139)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Koyama%20Keizo%20Museum%20of%20Art%20Komoro%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q28328237",
+        "name": "信州高遠美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.062722222 35.831305555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takato%20Ina%20Takato%20Museum%20of%20Art-a.JPG"
+    },
+    {
+        "id": "Q86743350",
+        "name": "袋屋美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.370805555 36.745472222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E8%A2%8B%E5%B1%8B%E7%BE%8E%E8%A1%93%E9%A4%A8%EF%BC%882020-2-21%EF%BC%89.jpg"
+    },
+    {
+        "id": "Q105334745",
+        "name": "おぶせミュージアム",
+        "type": "藝廊",
+        "coordinates": "Point(138.318988888 36.698494444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11631864",
+        "name": "诹访市原田泰治美术馆",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.098361 36.038889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/140606%20Taizi%20Harada%20Art%20Museum%20Suwa%20Nagano%20pref%20Japan03s3.jpg"
+    },
+    {
+        "id": "Q110245475",
+        "name": "長野縣立美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(138.191018 36.661575)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagano%20Prefectural%20Art%20Museum%202021-12%201.jpg"
+    },
+    {
+        "id": "Q63565237",
+        "name": "北野美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.252778 36.617722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kitano%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q11666522",
+        "name": "飯田市川本喜八郎人形美術館",
+        "type": "人形博物館",
+        "coordinates": "Point(137.825694 35.514942)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iida%20City%20Kawamoto%20Kihachiro%20Puppet%20Museum.jpg"
+    },
+    {
+        "id": "Q11403773",
+        "name": "北泽美术馆",
+        "type": "美術館",
+        "coordinates": "Point(138.111722 36.055806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/130607%20Kitazawa%20Museum%20of%20Art%20Suwa%20Japan01n.jpg"
+    },
+    {
+        "id": "Q84468012",
+        "name": "康耀堂美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.276833333 35.968055555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11560128",
+        "name": "深沢紅子野の花美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.597527777 36.330888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fknb02s3872.jpg"
+    },
+    {
+        "id": "Q11608719",
+        "name": "美原高原美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.14036111 36.23066667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/250426%20Utsukushi-ga-hara%20Open-Air%20Museum%20Ueda%20Nagano%20pref%20Japan14s3.jpg"
+    },
+    {
+        "id": "Q78314906",
+        "name": "佐久市立近代美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.48378 36.25572)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saku%20Municipal%20Museum%20of%20Modern%20Art.jpg"
+    },
+    {
+        "id": "Q131457036",
+        "name": "奥村土牛記念美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.476653 36.134144)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okumura%20Togyu%20Memorial%20Museum%20of%20Art.jpg"
+    },
+    {
+        "id": "Q11285428",
+        "name": "アンフォルメル中川村美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.954681 35.646611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/INFORMEL%20NAKAGAWAMURA%20MUSEUM%2C%20main%20building%20and%20symbol%20tower%20exterior%20in%202012-11-24.jpg"
+    },
+    {
+        "id": "Q11621781",
+        "name": "蓼科アミューズメント水族館",
+        "type": "水族館",
+        "coordinates": "Point(138.302764 36.066572)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tateshina%20Amusement%20Aquarium%20in%202014-8-15%20No%2C25.JPG"
+    },
+    {
+        "id": "Q11450770",
+        "name": "安曇野知弘美術館",
+        "type": "繪本博物館",
+        "coordinates": "Point(137.84416667 36.41491667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/150922%20Chihiro%20Art%20Museum%20Azumino%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q11531029",
+        "name": "松本市旧司祭館",
+        "type": "牧師館",
+        "coordinates": "Point(137.967639 36.243222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/130608%20Former%20Matsumoto%20Catholic%20church%20priest%20house%20Matumoto%20Japan01n.jpg"
+    },
+    {
+        "id": "Q11678081",
+        "name": "黒姫童話館",
+        "type": "文學館",
+        "coordinates": "Point(138.16783333 36.8215)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/230807%20Kurohime%20Fairy%20Tale%20Museum%20Shinano%20Nagano%20pref%20Japan05s3.jpg"
+    },
+    {
+        "id": "Q21653908",
+        "name": "長野縣立歷史館",
+        "type": "公共檔案館",
+        "coordinates": "Point(138.13513889 36.53391667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagano%20Prefectural%20Museum%20of%20History.JPG"
+    },
+    {
+        "id": "Q11463706",
+        "name": "小諸市立藤村記念館",
+        "type": "文學館",
+        "coordinates": "Point(138.417667 36.327333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toson%20Memorial%20Museum02s3200.jpg"
+    },
+    {
+        "id": "Q11637576",
+        "name": "軽井沢高原文庫",
+        "type": "文學館",
+        "coordinates": "Point(138.597111 36.32725)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kkb01s3872.jpg"
+    },
+    {
+        "id": "Q11539448",
+        "name": "森將軍塚古墳館",
+        "type": "考古博物館",
+        "coordinates": "Point(138.13763333 36.53434444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mori-Syogun%20Kofun%20kan.JPG"
+    },
+    {
+        "id": "Q85880711",
+        "name": "日本土人形資料館",
+        "type": "人形博物館",
+        "coordinates": "Point(138.381972222 36.741833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%97%A5%E6%9C%AC%E5%9C%9F%E4%BA%BA%E5%BD%A2%E8%B3%87%E6%96%99%E9%A4%A8%E5%85%A8%E6%99%AF%EF%BC%882020-2-6%EF%BC%89.jpg"
+    },
+    {
+        "id": "Q11450770",
+        "name": "安曇野知弘美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(137.84416667 36.41491667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/150922%20Chihiro%20Art%20Museum%20Azumino%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q84454736",
+        "name": "高野辰之記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.307777777 36.79575)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takano%20Tatsuyuki%20Memorial%20Hall%202.jpg"
+    },
+    {
+        "id": "Q739612",
+        "name": "松本城",
+        "type": "日式城堡",
+        "coordinates": "Point(137.969166666 36.238888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Matsumoto%20Castle05s5s4592.jpg"
+    },
+    {
+        "id": "Q85878445",
+        "name": "塩の道ちょうじや",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(137.860333333 36.504166666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11291053",
+        "name": "エルツおもちゃ博物館・軽井沢",
+        "type": "玩具博物館",
+        "coordinates": "Point(138.595861 36.326417)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/070922%20Erzgebirge%20Toys%20Museum%20of%20Karuizawa%20Karuizawa%20Nagano%20pref%20Japan01bs20.jpg"
+    },
+    {
+        "id": "Q11637576",
+        "name": "軽井沢高原文庫",
+        "type": "文庫",
+        "coordinates": "Point(138.597111 36.32725)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kkb01s3872.jpg"
+    },
+    {
+        "id": "Q85878449",
+        "name": "塩尻短歌館",
+        "type": "文學館",
+        "coordinates": "Point(137.945305555 36.152666666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11531038",
+        "name": "松本市立博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(137.970614 36.237578)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/220728%20Matsumoto%20City%20Museum%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q81383363",
+        "name": "中野市立博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(138.342527777 36.750083333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11654184",
+        "name": "長野市立博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(138.187917 36.591556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagano%20City%20Museum.jpg"
+    },
+    {
+        "id": "Q11308244",
+        "name": "ショーハウス記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.63875 36.362333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shaw%20house01s2040.jpg"
+    },
+    {
+        "id": "Q84163072",
+        "name": "堀辰雄文学記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.544138888 36.338777777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/160730%20Tatsuo%20Hori%20literature%20Memorial%20Karuizawa%20Nagano%20pref%20Japan01n.jpg"
+    },
+    {
+        "id": "Q85880990",
+        "name": "有島生馬記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.020888888 36.571944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Arishima%20Ikuma%20Memorial%20Museum.jpg"
+    },
+    {
+        "id": "Q11666440",
+        "name": "飯沼飛行士記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(137.896142027 36.316741455)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11450781",
+        "name": "安曇野市穂高郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(137.828625 36.37231667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hodaka%20Kyodo%20Shiryo1.jpg"
+    },
+    {
+        "id": "Q11637569",
+        "name": "軽井沢絵本の森美術館",
+        "type": "繪本博物館",
+        "coordinates": "Point(138.597417 36.32675)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/220929%20Karuizawa%20Picturebook%20Museum%20Karuizawa%20Nagano%20pref%20Japan02s3.jpg"
+    },
+    {
+        "id": "Q11531029",
+        "name": "松本市旧司祭館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(137.967639 36.243222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/130608%20Former%20Matsumoto%20Catholic%20church%20priest%20house%20Matumoto%20Japan01n.jpg"
+    },
+    {
+        "id": "Q11678081",
+        "name": "黒姫童話館",
+        "type": "fairy tale museum",
+        "coordinates": "Point(138.16783333 36.8215)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/230807%20Kurohime%20Fairy%20Tale%20Museum%20Shinano%20Nagano%20pref%20Japan05s3.jpg"
+    },
+    {
+        "id": "Q11634350",
+        "name": "象山紀念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.19775 36.559028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Zozan%20Memorial%20Hall.jpg"
+    },
+    {
+        "id": "Q68593755",
+        "name": "安曇野瑞士村",
+        "type": "主題公園",
+        "coordinates": "Point(137.916666666 36.322305555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11463705",
+        "name": "小諸市立小諸義塾記念館",
+        "type": "教育博物館",
+        "coordinates": "Point(138.4202686 36.3267879)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Komoro%20Gijuku%20Memorial%20Hall.jpg"
+    },
+    {
+        "id": "Q716411",
+        "name": "舊開智學校",
+        "type": "教育博物館",
+        "coordinates": "Point(137.96833333 36.24333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/250424%20Former%20Kaichi%20School%20Matsumoto%20Nagano%20pref%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q716411",
+        "name": "舊開智學校",
+        "type": "教育博物館",
+        "coordinates": "Point(137.96833333 36.24333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Former%20Kaichi%20School%201.jpg"
+    },
+    {
+        "id": "Q21653908",
+        "name": "長野縣立歷史館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(138.13513889 36.53391667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagano%20Prefectural%20Museum%20of%20History.JPG"
+    },
+    {
+        "id": "Q55521349",
+        "name": "山村代官屋敷",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(137.69819444 35.85186111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%9C%A8%E6%9B%BD%E7%94%BA%E5%B1%B1%E6%9D%91%E4%BB%A3%E5%AE%98%E5%B1%8B%E6%95%B7%20ac%20%282%29.jpg"
+    },
+    {
+        "id": "Q104710268",
+        "name": "軽井沢町追分宿郷土館",
+        "type": "地方文化館",
+        "coordinates": "Point(138.547528 36.341472)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E8%BF%BD%E5%88%86%E9%83%B7%E5%9C%9F%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q84163072",
+        "name": "堀辰雄文学記念館",
+        "type": "文學館",
+        "coordinates": "Point(138.544138888 36.338777777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/160730%20Tatsuo%20Hori%20literature%20Memorial%20Karuizawa%20Nagano%20pref%20Japan01n.jpg"
+    },
+    {
+        "id": "Q11584735",
+        "name": "石之教會 內村鑑三紀念堂",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.587111 36.356306)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ishinokyoukai01.jpg"
+    },
+    {
+        "id": "Q17210960",
+        "name": "満蒙開拓平和記念館",
+        "type": "和平博物館",
+        "coordinates": "Point(137.748917 35.44175)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Manchuria%20pioneer%20Peace%20Memorial%20Hall%201.JPG"
+    },
+    {
+        "id": "Q11438001",
+        "name": "大町溫泉鄉",
+        "type": "単純温泉",
+        "coordinates": "Point(137.80925 36.530222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Omachi%20onsen-kyo02s3.jpg"
+    },
+    {
+        "id": "Q85878445",
+        "name": "塩の道ちょうじや",
+        "type": "博物館",
+        "coordinates": "Point(137.860333333 36.504166666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11287214",
+        "name": "イルフ童画館",
+        "type": "繪本博物館",
+        "coordinates": "Point(138.048778 36.059806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/ILF%20Doga%20Museum.jpg"
+    },
+    {
+        "id": "Q11510990",
+        "name": "旧制高等学校記念館",
+        "type": "旧学校施設",
+        "coordinates": "Point(137.98249 36.23117)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyuseikotogakko%20kinenkan2048.jpg"
+    },
+    {
+        "id": "Q132830167",
+        "name": "井戸尻考古館",
+        "type": "考古博物館",
+        "coordinates": "Point(138.276956 35.877974)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11531033",
+        "name": "松本市歷史之里",
+        "type": "戶外博物館",
+        "coordinates": "Point(137.933788 36.23149)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Former%20Matsumoto%20Branch%20Courthouse.JPG"
+    },
+    {
+        "id": "Q11353169",
+        "name": "一茶ゆかりの里 一茶館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.359611 36.680056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Issakanzenkei.jpg"
+    },
+    {
+        "id": "Q85883183",
+        "name": "絵本美術館 森のおうち",
+        "type": "繪本博物館",
+        "coordinates": "Point(137.837805555 36.363833333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11287214",
+        "name": "イルフ童画館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.048778 36.059806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/ILF%20Doga%20Museum.jpg"
+    },
+    {
+        "id": "Q11438001",
+        "name": "大町溫泉鄉",
+        "type": "温泉郷",
+        "coordinates": "Point(137.80925 36.530222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Omachi%20onsen-kyo02s3.jpg"
+    },
+    {
+        "id": "Q28154556",
+        "name": "茅野市尖石縄文考古館",
+        "type": "考古博物館",
+        "coordinates": "Point(138.233963888 36.013566666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Togariishi%20Museum%20of%20Jomon%20Archaeology.jpg"
+    },
+    {
+        "id": "Q84221487",
+        "name": "中山晋平紀念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.370531 36.721005)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nakayama%20Shinpei%20Memorial%20Hall.jpg"
+    },
+    {
+        "id": "Q104709726",
+        "name": "飯田市考古博物館",
+        "type": "考古博物館",
+        "coordinates": "Point(137.83711 35.516448)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11510909",
+        "name": "舊中込學校",
+        "type": "建成遗产",
+        "coordinates": "Point(138.472194 36.2375)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Old-Nakagomi-School-01.jpg"
+    },
+    {
+        "id": "Q85883757",
+        "name": "諏訪市博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(138.121444444 36.000222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Suwa%20city%20musium%20%2C%20%E8%AB%8F%E8%A8%AA%E5%B8%82%E5%8D%9A%E7%89%A9%E9%A4%A8%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q11575632",
+        "name": "田中本家博物館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(138.317639 36.648431)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tanaka%20Honke%20Museum%20%285019443553%29.jpg"
+    },
+    {
+        "id": "Q21653908",
+        "name": "長野縣立歷史館",
+        "type": "歷史博物館",
+        "coordinates": "Point(138.13513889 36.53391667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagano%20Prefectural%20Museum%20of%20History.JPG"
+    },
+    {
+        "id": "Q55524329",
+        "name": "木曽福島郷土館",
+        "type": "地方文化館",
+        "coordinates": "Point(137.70222222 35.85416667)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11510990",
+        "name": "旧制高等学校記念館",
+        "type": "教育博物館",
+        "coordinates": "Point(137.98249 36.23117)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyuseikotogakko%20kinenkan2048.jpg"
+    },
+    {
+        "id": "Q79734934",
+        "name": "塩尻市立平出博物館",
+        "type": "考古博物館",
+        "coordinates": "Point(137.939333333 36.099166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hira-ide%20Historic%20Site%20Park%20museum.jpg"
+    },
+    {
+        "id": "Q132348788",
+        "name": "国分寺史跡公園",
+        "type": "考古学公園",
+        "coordinates": "Point(138.270021 36.380671)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shinano%20Kokubunji-ato%20zenkei.JPG"
+    },
+    {
+        "id": "Q11353169",
+        "name": "一茶ゆかりの里 一茶館",
+        "type": "文學館",
+        "coordinates": "Point(138.359611 36.680056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Issakanzenkei.jpg"
+    },
+    {
+        "id": "Q11359772",
+        "name": "上田市立博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(138.2465 36.403736)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ueda%20City%20Museum.JPG"
+    },
+    {
+        "id": "Q85880990",
+        "name": "有島生馬記念館",
+        "type": "博物館",
+        "coordinates": "Point(138.020888888 36.571944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Arishima%20Ikuma%20Memorial%20Museum.jpg"
+    },
+    {
+        "id": "Q11353169",
+        "name": "一茶ゆかりの里 一茶館",
+        "type": "歷史公園",
+        "coordinates": "Point(138.359611 36.680056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Issakanzenkei.jpg"
+    },
+    {
+        "id": "Q739612",
+        "name": "松本城",
+        "type": "軍事博物館",
+        "coordinates": "Point(137.969166666 36.238888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Matsumoto%20Castle05s5s4592.jpg"
+    },
+    {
+        "id": "Q11678081",
+        "name": "黒姫童話館",
+        "type": "繪本博物館",
+        "coordinates": "Point(138.16783333 36.8215)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/230807%20Kurohime%20Fairy%20Tale%20Museum%20Shinano%20Nagano%20pref%20Japan05s3.jpg"
+    },
+    {
+        "id": "Q739612",
+        "name": "松本城",
+        "type": "平城 (日本)",
+        "coordinates": "Point(137.969166666 36.238888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Matsumoto%20Castle05s5s4592.jpg"
+    },
+    {
+        "id": "Q28154556",
+        "name": "茅野市尖石縄文考古館",
+        "type": "考古博物館",
+        "coordinates": "Point(138.233732 36.01348)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Togariishi%20Museum%20of%20Jomon%20Archaeology.jpg"
+    },
+    {
+        "id": "Q11308244",
+        "name": "ショーハウス記念館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(138.63875 36.362333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shaw%20house01s2040.jpg"
+    },
+    {
+        "id": "Q11654184",
+        "name": "長野市立博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(138.188522 36.591706)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagano%20City%20Museum.jpg"
+    },
+    {
+        "id": "Q132348820",
+        "name": "信濃国分寺資料館",
+        "type": "考古博物館",
+        "coordinates": "Point(138.269817 36.381205)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shinano%20Kokubunji%20museum.jpg"
+    },
+    {
+        "id": "Q55521349",
+        "name": "山村代官屋敷",
+        "type": "代官所",
+        "coordinates": "Point(137.69819444 35.85186111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%9C%A8%E6%9B%BD%E7%94%BA%E5%B1%B1%E6%9D%91%E4%BB%A3%E5%AE%98%E5%B1%8B%E6%95%B7%20ac%20%282%29.jpg"
+    },
+    {
+        "id": "Q11584735",
+        "name": "石之教會 內村鑑三紀念堂",
+        "type": "教堂",
+        "coordinates": "Point(138.587111 36.356306)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ishinokyoukai01.jpg"
+    },
+    {
+        "id": "Q11531046",
+        "name": "松本市立考古博物館",
+        "type": "考古博物館",
+        "coordinates": "Point(138.001317 36.193206)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%9D%BE%E6%9C%AC%E5%B8%82%E7%AB%8B%E8%80%83%E5%8F%A4%E5%8D%9A%E7%89%A9%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11463706",
+        "name": "小諸市立藤村記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.417667 36.327333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toson%20Memorial%20Museum02s3200.jpg"
+    },
+    {
+        "id": "Q716411",
+        "name": "舊開智學校",
+        "type": "舊制小學校",
+        "coordinates": "Point(137.96833333 36.24333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/250424%20Former%20Kaichi%20School%20Matsumoto%20Nagano%20pref%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q716411",
+        "name": "舊開智學校",
+        "type": "舊制小學校",
+        "coordinates": "Point(137.96833333 36.24333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Former%20Kaichi%20School%201.jpg"
+    },
+    {
+        "id": "Q11450792",
+        "name": "安曇野市豐科鄉土博物館",
+        "type": "地方文化館",
+        "coordinates": "Point(137.908194444 36.299722222)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104575353",
+        "name": "松本民芸館",
+        "type": "工藝博物館",
+        "coordinates": "Point(137.994777777 36.242666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Matsumoto%20Folkcraft%20Museum.jpg"
+    },
+    {
+        "id": "Q84163072",
+        "name": "堀辰雄文学記念館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(138.544138888 36.338777777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/160730%20Tatsuo%20Hori%20literature%20Memorial%20Karuizawa%20Nagano%20pref%20Japan01n.jpg"
+    },
+    {
+        "id": "Q11531024",
+        "name": "松本市四賀化石館",
+        "type": "古生物博物馆",
+        "coordinates": "Point(137.998333 36.3175)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shiga%20Fossil%20Museum.jpg"
+    },
+    {
+        "id": "Q18338769",
+        "name": "野尻湖ナウマンゾウ博物館",
+        "type": "古生物博物馆",
+        "coordinates": "Point(138.206209 36.832279)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/230807%20Nojiriko%20Naumann%20Elephant%20Museum%20Shinano%20Nagano%20pref%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q18338769",
+        "name": "野尻湖ナウマンゾウ博物館",
+        "type": "古生物博物馆",
+        "coordinates": "Point(138.206209 36.832279)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/230807%20Nojiriko%20Naumann%20Elephant%20Museum%20Shinano%20Nagano%20pref%20Japan03s3.jpg"
+    },
+    {
+        "id": "Q11583381",
+        "name": "真田寶物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(138.197472 36.564)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sanada%20Tresures%20Museum.jpg"
+    },
+    {
+        "id": "Q11654199",
+        "name": "長野市茶臼山恐竜公園",
+        "type": "恐竜公園",
+        "coordinates": "Point(138.122806 36.589028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%81%90%E7%AB%9C%E5%85%AC%E5%9C%92.jpg"
+    },
+    {
+        "id": "Q18338769",
+        "name": "野尻湖ナウマンゾウ博物館",
+        "type": "古生物博物馆",
+        "coordinates": "Point(138.206222 36.832278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/230807%20Nojiriko%20Naumann%20Elephant%20Museum%20Shinano%20Nagano%20pref%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q18338769",
+        "name": "野尻湖ナウマンゾウ博物館",
+        "type": "古生物博物馆",
+        "coordinates": "Point(138.206222 36.832278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/230807%20Nojiriko%20Naumann%20Elephant%20Museum%20Shinano%20Nagano%20pref%20Japan03s3.jpg"
+    },
+    {
+        "id": "Q104710191",
+        "name": "千曲市さらしなの里歴史資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(138.113697222 36.50035)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q28692222",
+        "name": "伊那市立高遠町歴史博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(138.064167 35.830194)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Municipal%20Takatomachi%20Historical%20Museum.jpg"
+    },
+    {
+        "id": "Q11511039",
+        "name": "旧山辺学校校舎",
+        "type": "民俗博物館",
+        "coordinates": "Point(138.003361 36.23575)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Former%20Yamabe%20School%202.jpg"
+    },
+    {
+        "id": "Q11591010",
+        "name": "神長官守矢史料館",
+        "type": "house archive",
+        "coordinates": "Point(138.128 35.995528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%A5%9E%E9%95%B7%E5%AE%98%E5%AE%88%E7%9F%A2%E5%8F%B2%E6%96%99%E9%A4%A8%20%2851790275588%29.jpg"
+    },
+    {
+        "id": "Q125661722",
+        "name": "長野県立御嶽山ビジターセンター",
+        "type": "遊客中心",
+        "coordinates": "Point(137.5030509 35.873181)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11591010",
+        "name": "神長官守矢史料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(138.128 35.995528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%A5%9E%E9%95%B7%E5%AE%98%E5%AE%88%E7%9F%A2%E5%8F%B2%E6%96%99%E9%A4%A8%20%2851790275588%29.jpg"
+    },
+    {
+        "id": "Q137970363",
+        "name": "信州新町化石博物館",
+        "type": "古生物博物馆",
+        "coordinates": "Point(138.021195 36.571991)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q30926293",
+        "name": "栄村歴史文化館",
+        "type": "歷史博物館",
+        "coordinates": "Point(138.58438889 36.97516667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sakae%20kominkan.jpg"
+    },
+    {
+        "id": "Q11363715",
+        "name": "中央構造線博物館",
+        "type": "地質学博物館",
+        "coordinates": "Point(138.038472 35.55625)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Median%20Tectonic%20Line%20Museum.jpg"
+    },
+    {
+        "id": "Q60989582",
+        "name": "本洗馬歴史の里資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(137.911333333 36.107194444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Motoseba%20Historical%20Village%20Archive.jpg"
+    },
+    {
+        "id": "Q11511039",
+        "name": "旧山辺学校校舎",
+        "type": "旧学校施設",
+        "coordinates": "Point(138.003361 36.23575)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Former%20Yamabe%20School%202.jpg"
+    },
+    {
+        "id": "Q125661754",
+        "name": "木曽町御嶽山ビジターセンター",
+        "type": "遊客中心",
+        "coordinates": "Point(137.6479218 35.8229866)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11450790",
+        "name": "安曇野市美術館",
+        "type": "现代美术馆",
+        "coordinates": "Point(137.90636111 36.30547222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Azumino%20Muncipal%20Museum%20of%20Modern%20Art%2C%20Toyoshina%20and%20Toyoshina%20Exchange%20and%20Learning%20Center%20Kibo.jpg"
+    },
+    {
+        "id": "Q138312306",
+        "name": "鬼無里ふるさと資料館",
+        "type": "民俗博物館",
+        "coordinates": "Point(137.998879 36.679962)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kinasa%20Furusato%20Museum.jpg"
+    },
+    {
+        "id": "Q11531031",
+        "name": "松本市鐘錶博物館",
+        "type": "時計博物館",
+        "coordinates": "Point(137.968669 36.233825)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Matsumoto%20timepiece%20museum02n4592.jpg"
+    },
+    {
+        "id": "Q113950785",
+        "name": "坂城町鉄の展示館",
+        "type": "博物館",
+        "coordinates": "Point(138.182972222 36.463361111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11364288",
+        "name": "中山道69次資料館",
+        "type": "博物館",
+        "coordinates": "Point(138.536875 36.33612778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Wooden%20sign%20-%202324.jpg"
+    },
+    {
+        "id": "Q85876422",
+        "name": "佐久市立天来記念館",
+        "type": "書法美術館",
+        "coordinates": "Point(138.36226 36.26488)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tenrai%20Museum.jpg"
+    },
+    {
+        "id": "Q123418594",
+        "name": "小笠原資料館",
+        "type": "博物館",
+        "coordinates": "Point(137.7949 35.4464)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ogasawara%20klan%20museum.jpg"
+    },
+    {
+        "id": "Q21653078",
+        "name": "小諸市立郷土博物館",
+        "type": "博物館",
+        "coordinates": "Point(138.415166666 36.328694444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11610945",
+        "name": "聖博物館",
+        "type": "博物館",
+        "coordinates": "Point(138.070167 36.487783)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hijiri%20Museum%2C%20entrance%20and%20main%20building%20exterior%2C%20in%202010-10-16.jpg"
+    },
+    {
+        "id": "Q11437989",
+        "name": "大町山岳博物館",
+        "type": "動物園",
+        "coordinates": "Point(137.87055556 36.50525)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/20090502oomachisangakuhakubutsukan01.JPG"
+    },
+    {
+        "id": "Q66363172",
+        "name": "尾澤木彫美術館",
+        "type": "博物館",
+        "coordinates": "Point(138.276486111 36.379116666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ozawa%20Wooden%20Sculpture%20Art%20Museum%201.jpg"
+    },
+    {
+        "id": "Q11326402",
+        "name": "ハチ博物館",
+        "type": "博物館",
+        "coordinates": "Point(137.948739 35.6358)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bee%20Museum%2C%20entrance.jpg"
+    },
+    {
+        "id": "Q11631898",
+        "name": "诹访湖博物馆",
+        "type": "博物館",
+        "coordinates": "Point(138.100833 36.067222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Municipal%20Suwako%20museum%20and%20Shimaki%20Akahiko%20memorial%20museum.jpg"
+    },
+    {
+        "id": "Q11531021",
+        "name": "松本市はかり資料館",
+        "type": "博物館",
+        "coordinates": "Point(137.972583 36.233944)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nakamachi%20street%20Matsumoto%20Nagano%20pref%20Japan04n.jpg"
+    },
+    {
+        "id": "Q84418600",
+        "name": "池波正太郎真田太平記館",
+        "type": "博物館",
+        "coordinates": "Point(138.253527777 36.403111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ikenami%20Shotaro%20Sanada%20Taiheiki%20Kan.JPG"
+    },
+    {
+        "id": "Q1048234",
+        "name": "上高地",
+        "type": "盆地",
+        "coordinates": "Point(137.633333333 36.246969444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/150920%20Gakusawa%20wetlands%20Kamikochi%20Japan03s3.jpg"
+    },
+    {
+        "id": "Q105085751",
+        "name": "上伊那郷土館",
+        "type": "博物館",
+        "coordinates": "Point(137.9563 35.8388)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q81979211",
+        "name": "大町エネルギー博物館",
+        "type": "エネルギー博物館",
+        "coordinates": "Point(137.793388888 36.51525)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Omachi%20Museum-1.jpg"
+    },
+    {
+        "id": "Q6322223",
+        "name": "貞享義民紀念館",
+        "type": "博物館",
+        "coordinates": "Point(137.89680611 36.27396694)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20the%20Joukyou%20Gimin%20Memorial%20Museum.JPG"
+    },
+    {
+        "id": "Q86744314",
+        "name": "信州中野銅石版画ミュージアム",
+        "type": "博物館",
+        "coordinates": "Point(138.376 36.75375)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%BF%A1%E5%B7%9E%E4%B8%AD%E9%87%8E%E9%8A%85%E7%9F%B3%E7%89%88%E7%94%BB%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%A2%E3%83%A0.jpg"
+    },
+    {
+        "id": "Q1048234",
+        "name": "上高地",
+        "type": "觀光景點",
+        "coordinates": "Point(137.633333333 36.246969444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/150920%20Gakusawa%20wetlands%20Kamikochi%20Japan03s3.jpg"
+    },
+    {
+        "id": "Q85875606",
+        "name": "中野陣屋·縣廳紀念館",
+        "type": "博物館",
+        "coordinates": "Point(138.372666666 36.744638888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nakano%20Jin%27ya.jpg"
+    },
+    {
+        "id": "Q87675478",
+        "name": "駒ケ根高原美術館",
+        "type": "博物館",
+        "coordinates": "Point(137.898146 35.735237)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Komagane%20Kogen%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q55524325",
+        "name": "駒ヶ根市立博物館",
+        "type": "博物館",
+        "coordinates": "Point(137.92980556 35.73644444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Komagane%20City%20Museum.jpg"
+    },
+    {
+        "id": "Q11437989",
+        "name": "大町山岳博物館",
+        "type": "博物館",
+        "coordinates": "Point(137.87055556 36.50525)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/20090502oomachisangakuhakubutsukan01.JPG"
+    },
+    {
+        "id": "Q1532916",
+        "name": "志賀高原",
+        "type": "高原",
+        "coordinates": "Point(138.491666666 36.7)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shiga%20Kogen%20%2830610822195%29.jpg"
+    },
+    {
+        "id": "Q1048234",
+        "name": "上高地",
+        "type": "谷地",
+        "coordinates": "Point(137.633333333 36.246969444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/150920%20Gakusawa%20wetlands%20Kamikochi%20Japan03s3.jpg"
+    },
+    {
+        "id": "Q18337231",
+        "name": "武石ともしび博物館",
+        "type": "博物館",
+        "coordinates": "Point(138.23 36.287044)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takeshi%20Tomoshibi%20Museum%203.jpg"
+    },
+    {
+        "id": "Q134926852",
+        "name": "安曇野市天蚕センター",
+        "type": "博物館",
+        "coordinates": "Point(137.8408 36.3528)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q105085751",
+        "name": "上伊那郷土館",
+        "type": "博物馆建筑",
+        "coordinates": "Point(137.9563 35.8388)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q66360898",
+        "name": "八ヶ岳総合博物館",
+        "type": "博物館",
+        "coordinates": "Point(138.1791295 36.0058974)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chino%20City%20Yatsugatake%20Museum%201.jpg"
+    },
+    {
+        "id": "Q105086419",
+        "name": "伊那市創造館",
+        "type": "博物館",
+        "coordinates": "Point(137.956583055 35.838721944)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q110730022",
+        "name": "浅間縄文ミュージアム",
+        "type": "博物館",
+        "coordinates": "Point(138.5064742 36.3215829)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ecole%20Miyota%20exterior%20ac%20%282%29.jpg"
+    },
+    {
+        "id": "Q1532916",
+        "name": "志賀高原",
+        "type": "觀光景點",
+        "coordinates": "Point(138.491666666 36.7)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shiga%20Kogen%20%2830610822195%29.jpg"
+    },
+    {
+        "id": "Q11480663",
+        "name": "市立岡谷蚕糸博物館",
+        "type": "博物館",
+        "coordinates": "Point(138.047389 36.065583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okaya%20Silk%20Museum%201.jpg"
+    }
+]
