@@ -2,4 +2,11 @@ node_modules/
 dist/
 .DS_Store
 *.log
-
+.env
+backend/rag_prototype/.env
+backend/rag_prototype/.venv/
+backend/rag_prototype/chroma_store/
+.env.example
+backend/rag_prototype/__pycache__/
+backend/rag_prototype/.venv/Lib/site-packages/_cffi_backend.cp310-win_amd64.pyd
+backend/rag_prototype/sample_article.txt
