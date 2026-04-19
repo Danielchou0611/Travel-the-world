@@ -1,70 +1,62 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import re
 from pathlib import Path
 from typing import Iterable
+from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
 
 import chromadb
-import google.generativeai as genai
 from chromadb.config import Settings
 from dotenv import load_dotenv
 
 
-DEFAULT_EMBED_MODEL = os.getenv("GEMINI_EMBED_MODEL", "models/gemini-embedding-001")
-DEFAULT_GEN_MODEL = os.getenv("GEMINI_GEN_MODEL", "models/gemini-2.5-flash")
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434").rstrip("/")
+DEFAULT_EMBED_MODEL = os.getenv("OLLAMA_EMBED_MODEL", "nomic-embed-text")
+DEFAULT_GEN_MODEL = os.getenv("OLLAMA_GEN_MODEL", "qwen2.5:7b-instruct")
 EMBED_MODEL_CANDIDATES = [
     DEFAULT_EMBED_MODEL,
-    "models/gemini-embedding-001",
-    "gemini-embedding-001",
-    "models/gemini-embedding-2-preview",
-    "gemini-embedding-2-preview",
-    "models/embedding-001",
-    "embedding-001",
-    "models/text-embedding-004",
-    "text-embedding-004",
+    "nomic-embed-text",
+    "bge-m3",
 ]
 GEN_MODEL_CANDIDATES = [
     DEFAULT_GEN_MODEL,
-    "models/gemini-2.5-flash",
-    "gemini-2.5-flash",
-    "models/gemini-flash-latest",
-    "gemini-flash-latest",
-    "models/gemini-2.0-flash",
-    "gemini-2.0-flash",
-    "models/gemini-1.5-flash",
-    "gemini-1.5-flash",
+    "qwen2.5:7b-instruct",
+    "llama3.1:8b-instruct",
+    "gemma3:4b",
 ]
 
 
 def split_text(text: str, chunk_size: int = 280, overlap: int = 60) -> list[str]:
-    normalized_text = re.sub(r"\s+", " ", text).strip()
-    if not normalized_text:
+    paragraph_candidates = [re.sub(r"\s+", " ", item).strip() for item in re.split(r"\n+", text)]
+    paragraphs = [item for item in paragraph_candidates if item]
+
+    if not paragraphs:
+        normalized_text = re.sub(r"\s+", " ", text).strip()
+        paragraphs = [normalized_text] if normalized_text else []
+    if not paragraphs:
         return []
 
     chunks: list[str] = []
-    start = 0
-    while start < len(normalized_text):
-        end = min(start + chunk_size, len(normalized_text))
-        chunk = normalized_text[start:end].strip()
-        if chunk:
-            chunks.append(chunk)
-        if end == len(normalized_text):
-            break
-        start = max(0, end - overlap)
+    for paragraph in paragraphs:
+        if len(paragraph) <= chunk_size:
+            chunks.append(paragraph)
+            continue
+
+        # Long paragraph fallback: split with overlap to avoid context cut.
+        start = 0
+        while start < len(paragraph):
+            end = min(start + chunk_size, len(paragraph))
+            chunk = paragraph[start:end].strip()
+            if chunk:
+                chunks.append(chunk)
+            if end == len(paragraph):
+                break
+            start = max(0, end - overlap)
     return chunks
-
-
-def _parse_embedding_result(result: object) -> list[float]:
-    if isinstance(result, dict) and isinstance(result.get("embedding"), list):
-        return result["embedding"]
-
-    embedding = getattr(result, "embedding", None)
-    if isinstance(embedding, list):
-        return embedding
-
-    raise RuntimeError("Gemini embedding response format is unexpected.")
 
 
 def _dedupe_keep_order(values: Iterable[str]) -> list[str]:
@@ -77,52 +69,92 @@ def _dedupe_keep_order(values: Iterable[str]) -> list[str]:
     return result
 
 
-def list_embed_capable_models() -> list[str]:
-    model_names: list[str] = []
-    try:
-        for model in genai.list_models():
-            methods = set(getattr(model, "supported_generation_methods", []) or [])
-            if "embedContent" in methods:
-                model_names.append(getattr(model, "name", ""))
-    except Exception:
-        return []
-    return _dedupe_keep_order(model_names)
+def _compact_error_text(error: object, limit: int = 320) -> str:
+    message = re.sub(r"\s+", " ", str(error)).strip()
+    if len(message) <= limit:
+        return message
+    return f"{message[: limit - 3]}..."
 
 
-def list_generate_capable_models() -> list[str]:
-    model_names: list[str] = []
+def _read_json_response(request: Request, timeout_sec: int = 90) -> dict:
     try:
-        for model in genai.list_models():
-            methods = set(getattr(model, "supported_generation_methods", []) or [])
-            if "generateContent" in methods:
-                model_names.append(getattr(model, "name", ""))
+        with urlopen(request, timeout=timeout_sec) as response:
+            body = response.read().decode("utf-8", errors="ignore")
+            return json.loads(body) if body else {}
+    except HTTPError as error:
+        detail = error.read().decode("utf-8", errors="ignore")
+        raise RuntimeError(f"Ollama HTTP {error.code}: {detail or error.reason}") from error
+    except URLError as error:
+        raise RuntimeError(f"Ollama request failed: {error.reason}") from error
+    except Exception as error:
+        raise RuntimeError(f"Ollama request failed: {error}") from error
+
+
+def _ollama_post(path: str, payload: dict, timeout_sec: int = 90) -> dict:
+    url = f"{OLLAMA_BASE_URL}{path}"
+    data = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    request = Request(
+        url,
+        data=data,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    return _read_json_response(request, timeout_sec=timeout_sec)
+
+
+def list_ollama_models() -> list[str]:
+    try:
+        request = Request(f"{OLLAMA_BASE_URL}/api/tags", method="GET")
+        payload = _read_json_response(request, timeout_sec=10)
+        models = payload.get("models", [])
+        names = [model.get("name", "") for model in models if isinstance(model, dict)]
+        return _dedupe_keep_order(names)
     except Exception:
         return []
-    return _dedupe_keep_order(model_names)
+
+
+def _parse_embed_vector(response_payload: dict) -> list[float]:
+    # /api/embed response: {"embeddings": [[...]]}
+    embeddings = response_payload.get("embeddings")
+    if isinstance(embeddings, list) and embeddings:
+        first_item = embeddings[0]
+        if isinstance(first_item, list):
+            return [float(value) for value in first_item]
+
+    # /api/embeddings response: {"embedding": [...]}
+    embedding = response_payload.get("embedding")
+    if isinstance(embedding, list) and embedding:
+        return [float(value) for value in embedding]
+
+    raise RuntimeError("Ollama embedding response format is unexpected.")
 
 
 def embed_text_with_fallback(text: str, task_type: str) -> tuple[list[float], str]:
+    # task_type kept for interface compatibility with previous version.
+    _ = task_type
     errors: list[str] = []
     candidates = _dedupe_keep_order(EMBED_MODEL_CANDIDATES)
 
     for model in candidates:
         try:
-            result = genai.embed_content(
-                model=model,
-                content=text,
-                task_type=task_type,
-            )
-            return _parse_embedding_result(result), model
-        except Exception as error:  # pragma: no cover
-            errors.append(f"{model}: {error}")
+            response_payload = _ollama_post("/api/embed", {"model": model, "input": [text]})
+            return _parse_embed_vector(response_payload), model
+        except Exception as error_embed_api:
+            try:
+                response_payload = _ollama_post("/api/embeddings", {"model": model, "prompt": text})
+                return _parse_embed_vector(response_payload), model
+            except Exception as error_embeddings_api:
+                errors.append(
+                    f"{model}: embed API error={_compact_error_text(error_embed_api)} | "
+                    f"embeddings API error={_compact_error_text(error_embeddings_api)}"
+                )
 
-    available_embed_models = list_embed_capable_models()
-    available_hint = ", ".join(available_embed_models) if available_embed_models else "(unable to list)"
-
+    available_models = list_ollama_models()
+    available_hint = ", ".join(available_models) if available_models else "(unable to list)"
     raise RuntimeError(
-        "Failed to embed content with all candidate models.\n"
+        "Failed to embed content with all Ollama candidate models.\n"
         f"Tried: {', '.join(candidates)}\n"
-        f"Available embed-capable models: {available_hint}\n"
+        f"Available Ollama models: {available_hint}\n"
         f"Last errors:\n- " + "\n- ".join(errors)
     )
 
@@ -133,19 +165,28 @@ def generate_with_fallback(prompt: str) -> tuple[str, str]:
 
     for model_name in candidates:
         try:
-            model = genai.GenerativeModel(model_name)
-            response = model.generate_content(prompt)
-            output = (getattr(response, "text", "") or "").strip()
-            return output, model_name
-        except Exception as error:  # pragma: no cover
-            errors.append(f"{model_name}: {error}")
+            response_payload = _ollama_post(
+                "/api/generate",
+                {
+                    "model": model_name,
+                    "prompt": prompt,
+                    "stream": False,
+                    "options": {"temperature": 0.2},
+                },
+            )
+            output = str(response_payload.get("response", "") or "").strip()
+            if output:
+                return output, model_name
+            errors.append(f"{model_name}: empty response")
+        except Exception as error:
+            errors.append(f"{model_name}: {_compact_error_text(error)}")
 
-    available_gen_models = list_generate_capable_models()
-    available_hint = ", ".join(available_gen_models) if available_gen_models else "(unable to list)"
+    available_models = list_ollama_models()
+    available_hint = ", ".join(available_models) if available_models else "(unable to list)"
     raise RuntimeError(
-        "Failed to generate content with all candidate models.\n"
+        "Failed to generate content with all Ollama candidate models.\n"
         f"Tried: {', '.join(candidates)}\n"
-        f"Available generate-capable models: {available_hint}\n"
+        f"Available Ollama models: {available_hint}\n"
         f"Last errors:\n- " + "\n- ".join(errors)
     )
 
@@ -157,7 +198,7 @@ def extract_names_with_fallback(text: str) -> list[str]:
         r"([\u4e00-\u9fff]{2,12}(寺|神宮|神社|公園|市場|塔|城|宮|町|車站|八幡宮))"
     )
     matches = re.finditer(pattern, text)
-    names = []
+    names: list[str] = []
     prefix_pattern = re.compile(
         r"^(第一天先到|第一天到|第一天|第二天早上到|第二天到|第二天|第三天搭車去|第三天|最後一天到|最後一天|晚上去|早上到|下午在|傍晚到|參觀|到|去|在|和)"
     )
@@ -170,6 +211,59 @@ def extract_names_with_fallback(text: str) -> list[str]:
     return names
 
 
+def extract_names_from_model_output(model_output: str) -> list[str]:
+    if not model_output:
+        return []
+
+    ignore_exact = {
+        "景點名稱",
+        "景點名稱清單",
+        "旅遊景點名稱",
+        "無",
+        "沒有",
+    }
+
+    def clean_candidate(value: str) -> str:
+        cleaned = value.strip()
+        cleaned = re.sub(r"^[\s\-\*\d\.\)\(、:：]+", "", cleaned)
+        cleaned = re.sub(r"^(景點名稱清單|景點名稱|旅遊景點名稱|推薦景點)\s*[:：]?", "", cleaned)
+        cleaned = re.sub(r"[（(][^)）]{0,24}[)）]\s*$", "", cleaned)
+        cleaned = re.sub(r"\s+", "", cleaned)
+        return cleaned
+
+    def is_valid_name(value: str) -> bool:
+        if not value:
+            return False
+        if value in ignore_exact:
+            return False
+        if len(value) < 2 or len(value) > 20:
+            return False
+        if re.search(r"[。！？.!?]", value):
+            return False
+        if re.search(r"(以下|文章|內容|抽取|景點|名稱|來源|第\d+段|請)", value):
+            return False
+        return bool(re.search(r"[\u4e00-\u9fff]", value))
+
+    names: list[str] = []
+    for line in model_output.splitlines():
+        if not line.strip():
+            continue
+
+        normalized_line = line.replace("：", ":")
+        if ":" in normalized_line and normalized_line.index(":") < 10:
+            normalized_line = normalized_line.split(":", maxsplit=1)[1]
+
+        candidates = re.split(r"[、，,;/；|]", normalized_line)
+        for candidate in candidates:
+            cleaned = clean_candidate(candidate)
+            if is_valid_name(cleaned) and cleaned not in names:
+                names.append(cleaned)
+
+    if names:
+        return names
+    return extract_names_with_fallback(model_output)
+
+
 def format_chunks_for_prompt(chunks: Iterable[str]) -> str:
     lines = []
     for index, chunk in enumerate(chunks, start=1):
@@ -177,7 +271,115 @@ def format_chunks_for_prompt(chunks: Iterable[str]) -> str:
     return "\n".join(lines)
 
 
-def run_rag_prototype(input_text: str, user_query: str, top_k: int, reset_db: bool) -> dict:
+def _build_extraction_prompt(user_query: str, chunks: list[str], chunk_indices: list[int]) -> str:
+    lines = []
+    for local_index, chunk in enumerate(chunks, start=1):
+        actual_index = chunk_indices[local_index - 1] if local_index - 1 < len(chunk_indices) else local_index
+        lines.append(f"[段落 {actual_index}] {chunk}")
+    context_text = "\n".join(lines)
+
+    return f"""
+你是旅遊資料整理助手。請根據以下內容抽取景點名稱：
+- 只回傳景點名稱清單
+- 不要加入未出現在內容中的地點
+- 每行一個
+
+使用者問題：{user_query}
+
+檢索內容：
+{context_text}
+""".strip()
+
+
+def _extract_names_from_chunks_with_model(
+    *,
+    chunks: list[str],
+    chunk_indices: list[int],
+    user_query: str,
+) -> tuple[str, list[str], str, str]:
+    if not chunks:
+        return "", [], "fallback-regex", "No chunks provided."
+
+    max_chunks_per_prompt = max(1, int(os.getenv("RAG_MAX_CHUNKS_PER_PROMPT", "10")))
+    warnings: list[str] = []
+    used_gen_model = ""
+    outputs: list[str] = []
+    all_names: list[str] = []
+
+    for start in range(0, len(chunks), max_chunks_per_prompt):
+        chunk_batch = chunks[start : start + max_chunks_per_prompt]
+        index_batch = chunk_indices[start : start + max_chunks_per_prompt]
+        prompt = _build_extraction_prompt(user_query, chunk_batch, index_batch)
+
+        try:
+            model_output, model_name = generate_with_fallback(prompt)
+            if not used_gen_model:
+                used_gen_model = model_name
+            if model_output:
+                outputs.append(model_output)
+                all_names.extend(extract_names_from_model_output(model_output))
+            else:
+                all_names.extend(extract_names_with_fallback(" ".join(chunk_batch)))
+        except Exception as error:
+            warnings.append(_compact_error_text(error))
+            all_names.extend(extract_names_with_fallback(" ".join(chunk_batch)))
+
+    deduped_names = _dedupe_keep_order(all_names)
+    if not deduped_names:
+        deduped_names = extract_names_with_fallback(" ".join(chunks))
+
+    combined_output = "\n".join(deduped_names) if deduped_names else "\n\n".join(outputs)
+    if not combined_output:
+        combined_output = "(empty)"
+    warning_text = " | ".join(warnings)
+    return combined_output, deduped_names, used_gen_model or "fallback-regex", warning_text
+
+
+def _fallback_without_embedding(
+    *,
+    chunks: list[str],
+    user_query: str,
+    top_k: int,
+    embed_error: Exception,
+    read_full_document: bool,
+) -> dict:
+    if read_full_document:
+        retrieved_chunks = chunks
+        retrieved_chunk_indices = list(range(1, len(chunks) + 1))
+    else:
+        retrieved_chunks = chunks[: min(top_k, len(chunks))]
+        retrieved_chunk_indices = list(range(1, len(retrieved_chunks) + 1))
+
+    warning_lines = [f"Embedding unavailable, switched to non-vector fallback: {_compact_error_text(embed_error)}"]
+    model_output, spot_names, used_gen_model, batch_warning = _extract_names_from_chunks_with_model(
+        chunks=retrieved_chunks,
+        chunk_indices=retrieved_chunk_indices,
+        user_query=user_query,
+    )
+    if batch_warning:
+        warning_lines.append(f"Generation fallback reason: {batch_warning}")
+    if not spot_names:
+        warning_lines.append("No names found by fallback extraction.")
+
+    return {
+        "chunks": chunks,
+        "retrieved_chunks": retrieved_chunks,
+        "retrieved_chunk_indices": retrieved_chunk_indices,
+        "model_output": model_output,
+        "spot_names": spot_names,
+        "embed_model": "fallback-no-embedding",
+        "gen_model": used_gen_model,
+        "generation_warning": " | ".join(warning_lines),
+    }
+
+
+def run_rag_prototype(
+    input_text: str,
+    user_query: str,
+    top_k: int,
+    reset_db: bool,
+    read_full_document: bool = False,
+) -> dict:
     chroma_dir = Path(os.getenv("RAG_CHROMA_DIR", "./chroma_store")).resolve()
     collection_name = os.getenv("RAG_COLLECTION_NAME", "japan_guides_week2")
 
@@ -201,58 +403,58 @@ def run_rag_prototype(input_text: str, user_query: str, top_k: int, reset_db: bo
     ids = [f"chunk-{index + 1}" for index in range(len(chunks))]
     embeddings: list[list[float]] = []
     used_embed_model = ""
-    for chunk in chunks:
-        chunk_embedding, embed_model = embed_text_with_fallback(chunk, "retrieval_document")
-        embeddings.append(chunk_embedding)
-        used_embed_model = embed_model
+    query_embed_model = ""
 
-    collection.upsert(
-        ids=ids,
-        embeddings=embeddings,
-        documents=chunks,
-        metadatas=[{"chunk_index": index + 1} for index in range(len(chunks))],
-    )
-
-    query_embedding, query_embed_model = embed_text_with_fallback(user_query, "retrieval_query")
-    query_result = collection.query(
-        query_embeddings=[query_embedding],
-        n_results=min(top_k, len(chunks)),
-        include=["documents", "distances"],
-    )
-
-    retrieved_chunks = query_result.get("documents", [[]])[0]
-    context_text = format_chunks_for_prompt(retrieved_chunks)
-
-    prompt = f"""
-你是旅遊資料整理助手。請根據以下內容抽取景點名稱：
-- 只回傳景點名稱清單
-- 不要加入未出現在內容中的地點
-- 每行一個
-
-使用者問題：{user_query}
-
-檢索內容：
-{context_text}
-""".strip()
-
-    generation_warning = ""
     try:
-        model_output, used_gen_model = generate_with_fallback(prompt)
-    except Exception as error:
-        used_gen_model = "fallback-regex"
-        generation_warning = str(error)
-        model_output = ""
+        for chunk in chunks:
+            chunk_embedding, embed_model = embed_text_with_fallback(chunk, "retrieval_document")
+            embeddings.append(chunk_embedding)
+            used_embed_model = embed_model
 
-    if not model_output:
-        fallback_names = extract_names_with_fallback(" ".join(retrieved_chunks))
-        model_output = "\n".join(fallback_names)
-        if not generation_warning and not fallback_names:
-            generation_warning = "No names found by regex fallback."
+        collection.upsert(
+            ids=ids,
+            embeddings=embeddings,
+            documents=chunks,
+            metadatas=[{"chunk_index": index + 1} for index in range(len(chunks))],
+        )
+
+        query_embedding, query_embed_model = embed_text_with_fallback(user_query, "retrieval_query")
+        query_result = collection.query(
+            query_embeddings=[query_embedding],
+            n_results=min(top_k, len(chunks)),
+            include=["documents", "distances", "metadatas"],
+        )
+
+        retrieved_chunks = query_result.get("documents", [[]])[0]
+        retrieved_metadatas = query_result.get("metadatas", [[]])[0]
+        retrieved_chunk_indices = [
+            int(metadata.get("chunk_index", 0)) if isinstance(metadata, dict) else 0 for metadata in retrieved_metadatas
+        ]
+    except Exception as embed_error:
+        return _fallback_without_embedding(
+            chunks=chunks,
+            user_query=user_query,
+            top_k=top_k,
+            embed_error=embed_error,
+            read_full_document=read_full_document,
+        )
+
+    if read_full_document:
+        retrieved_chunks = chunks
+        retrieved_chunk_indices = list(range(1, len(chunks) + 1))
+
+    model_output, spot_names, used_gen_model, generation_warning = _extract_names_from_chunks_with_model(
+        chunks=retrieved_chunks,
+        chunk_indices=retrieved_chunk_indices,
+        user_query=user_query,
+    )
 
     return {
         "chunks": chunks,
         "retrieved_chunks": retrieved_chunks,
+        "retrieved_chunk_indices": retrieved_chunk_indices,
         "model_output": model_output,
+        "spot_names": spot_names,
         "embed_model": used_embed_model or query_embed_model,
         "gen_model": used_gen_model,
         "generation_warning": generation_warning,
@@ -260,7 +462,7 @@ def run_rag_prototype(input_text: str, user_query: str, top_k: int, reset_db: bo
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Week 2 RAG prototype: Gemini embedding + ChromaDB")
+    parser = argparse.ArgumentParser(description="Week 3 RAG prototype: Ollama embedding + ChromaDB")
     parser.add_argument("--file", type=str, default="", help="Path to the travel article text file.")
     parser.add_argument("--text", type=str, default="", help="Direct travel article text.")
     parser.add_argument(
@@ -278,12 +480,6 @@ def main() -> None:
     args = parser.parse_args()
 
     load_dotenv()
-
-    api_key = os.getenv("GEMINI_API_KEY", "").strip()
-    if not api_key:
-        raise EnvironmentError("GEMINI_API_KEY is missing. Please set it in backend/rag_prototype/.env")
-    genai.configure(api_key=api_key)
-
     input_text = args.text.strip()
     if not input_text and args.file:
         input_text = Path(args.file).read_text(encoding="utf-8")
@@ -297,7 +493,9 @@ def main() -> None:
         reset_db=args.reset_db,
     )
 
-    print("=== Embed Model Used ===")
+    print("=== Ollama Base URL ===")
+    print(OLLAMA_BASE_URL)
+    print("\n=== Embed Model Used ===")
     print(result["embed_model"])
     print("\n=== Generation Model Used ===")
     print(result["gen_model"])
