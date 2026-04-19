@@ -11,11 +11,17 @@ function escapeHtml(value) {
 }
 
 function buildInfoWindowContent(spot) {
+  const warningText = spot.dataInsufficient
+    ? `<p>資料警示：評論數 ${escapeHtml(String(spot.reviewsCount ?? "-"))}，資料較少</p>`
+    : `<p>評論數：${escapeHtml(String(spot.reviewsCount ?? "-"))}</p>`;
+  const sourceText = spot.source ? `<p>來源：${escapeHtml(spot.source)}</p>` : "";
   return `
     <div class="gm-info">
       <h4>${escapeHtml(spot.name)}</h4>
       <p>評分：${escapeHtml(spot.rating)}</p>
       <p>推薦原因：${escapeHtml(spot.reason)}</p>
+      ${warningText}
+      ${sourceText}
     </div>
   `;
 }
@@ -33,16 +39,28 @@ function detachMarker(marker) {
   marker.map = null;
 }
 
-export default function GoogleMapPanel({ apiKey, mapId = "", spots, selectedSpotName, onMarkerSelect }) {
+export default function GoogleMapPanel({
+  apiKey,
+  mapId = "",
+  spots,
+  routeSpots = [],
+  selectedSpotName,
+  onMarkerSelect,
+}) {
   const mapElementRef = useRef(null);
   const mapRef = useRef(null);
   const mapsRef = useRef(null);
   const infoWindowRef = useRef(null);
   const markersRef = useRef([]);
+  const directionsServiceRef = useRef(null);
+  const directionsRendererRef = useRef(null);
   const constructorsRef = useRef({
     MapClass: null,
     InfoWindowClass: null,
     AdvancedMarkerClass: null,
+    DirectionsServiceClass: null,
+    DirectionsRendererClass: null,
+    TravelMode: null,
   });
 
   const [mapError, setMapError] = useState("");
@@ -70,14 +88,19 @@ export default function GoogleMapPanel({ apiKey, mapId = "", spots, selectedSpot
 
         let mapsLib = null;
         let markerLib = null;
+        let routesLib = null;
         if (typeof maps.importLibrary === "function") {
           mapsLib = await maps.importLibrary("maps");
           markerLib = await maps.importLibrary("marker").catch(() => null);
+          routesLib = await maps.importLibrary("routes").catch(() => null);
         }
 
         const MapClass = mapsLib?.Map || maps.Map;
         const InfoWindowClass = mapsLib?.InfoWindow || maps.InfoWindow;
         const AdvancedMarkerClass = markerLib?.AdvancedMarkerElement || null;
+        const DirectionsServiceClass = routesLib?.DirectionsService || maps.DirectionsService || null;
+        const DirectionsRendererClass = routesLib?.DirectionsRenderer || maps.DirectionsRenderer || null;
+        const TravelMode = routesLib?.TravelMode || maps.TravelMode || null;
 
         if (typeof MapClass !== "function") {
           throw new Error("Google Maps Map constructor 不可用，請檢查 API Key 或瀏覽器外掛。");
@@ -88,6 +111,9 @@ export default function GoogleMapPanel({ apiKey, mapId = "", spots, selectedSpot
           MapClass,
           InfoWindowClass,
           AdvancedMarkerClass,
+          DirectionsServiceClass,
+          DirectionsRendererClass,
+          TravelMode,
         };
 
         mapRef.current = new MapClass(mapElementRef.current, {
@@ -100,6 +126,22 @@ export default function GoogleMapPanel({ apiKey, mapId = "", spots, selectedSpot
         });
 
         infoWindowRef.current = new InfoWindowClass();
+        if (DirectionsRendererClass) {
+          directionsRendererRef.current = new DirectionsRendererClass({
+            suppressMarkers: true,
+            preserveViewport: true,
+            polylineOptions: {
+              strokeColor: "#0f766e",
+              strokeOpacity: 0.9,
+              strokeWeight: 5,
+            },
+          });
+          directionsRendererRef.current.setMap(mapRef.current);
+        }
+        if (DirectionsServiceClass) {
+          directionsServiceRef.current = new DirectionsServiceClass();
+        }
+
         setMapError("");
         setIsMapReady(true);
       } catch (error) {
@@ -113,6 +155,11 @@ export default function GoogleMapPanel({ apiKey, mapId = "", spots, selectedSpot
 
     return () => {
       isCancelled = true;
+      markersRef.current.forEach((marker) => detachMarker(marker));
+      markersRef.current = [];
+      if (directionsRendererRef.current) {
+        directionsRendererRef.current.setMap(null);
+      }
     };
   }, [apiKey, mapId]);
 
@@ -165,6 +212,50 @@ export default function GoogleMapPanel({ apiKey, mapId = "", spots, selectedSpot
       markersRef.current.push(marker);
     });
   }, [isMapReady, mapId, spots, onMarkerSelect]);
+
+  useEffect(() => {
+    if (!isMapReady || !mapRef.current) {
+      return;
+    }
+
+    const renderer = directionsRendererRef.current;
+    const service = directionsServiceRef.current;
+    const { TravelMode } = constructorsRef.current;
+
+    if (!renderer || !service || !TravelMode) {
+      return;
+    }
+
+    const points = routeSpots.filter((spot) => spot?.position);
+    if (points.length < 2) {
+      renderer.set("directions", null);
+      return;
+    }
+
+    const origin = points[0].position;
+    const destination = points[points.length - 1].position;
+    const waypoints = points.slice(1, -1).map((spot) => ({
+      location: spot.position,
+      stopover: true,
+    }));
+
+    service.route(
+      {
+        origin,
+        destination,
+        waypoints,
+        optimizeWaypoints: true,
+        travelMode: TravelMode.DRIVING,
+      },
+      (result, status) => {
+        if (status === "OK" && result) {
+          renderer.setDirections(result);
+        } else {
+          renderer.set("directions", null);
+        }
+      }
+    );
+  }, [isMapReady, routeSpots]);
 
   useEffect(() => {
     if (!isMapReady || !selectedSpot || !selectedSpot.position || !mapRef.current) {
