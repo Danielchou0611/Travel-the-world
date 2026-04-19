@@ -26,6 +26,7 @@ const spotCatalog = {
     area: "東京",
     rating: "4.6",
     reason: "東京經典文化景點，適合安排半日行程",
+    reviewsCount: 438,
     tags: ["文化", "寺廟"],
     position: { lat: 35.7148, lng: 139.7967 },
   },
@@ -33,6 +34,7 @@ const spotCatalog = {
     area: "東京",
     rating: "4.5",
     reason: "淺草地標入口，適合拍照打卡",
+    reviewsCount: 121,
     tags: ["地標", "文化"],
     position: { lat: 35.7119, lng: 139.7964 },
   },
@@ -40,6 +42,7 @@ const spotCatalog = {
     area: "東京",
     rating: "4.6",
     reason: "高空夜景視野佳",
+    reviewsCount: 906,
     tags: ["夜景", "地標"],
     position: { lat: 35.71, lng: 139.81 },
   },
@@ -47,6 +50,7 @@ const spotCatalog = {
     area: "東京",
     rating: "4.6",
     reason: "市中心大型神社，動線好安排",
+    reviewsCount: 377,
     tags: ["神社", "散步"],
     position: { lat: 35.6764, lng: 139.6993 },
   },
@@ -54,6 +58,7 @@ const spotCatalog = {
     area: "東京",
     rating: "4.4",
     reason: "購物與美食集中區域",
+    reviewsCount: 664,
     tags: ["逛街", "美食"],
     position: { lat: 35.6595, lng: 139.7005 },
   },
@@ -61,6 +66,7 @@ const spotCatalog = {
     area: "東京",
     rating: "4.4",
     reason: "免費觀景台，夜景熱門點",
+    reviewsCount: 243,
     tags: ["夜景", "觀景台"],
     position: { lat: 35.6896, lng: 139.6917 },
   },
@@ -68,6 +74,7 @@ const spotCatalog = {
     area: "鎌倉",
     rating: "4.5",
     reason: "鎌倉代表性神社",
+    reviewsCount: 194,
     tags: ["神社", "歷史"],
     position: { lat: 35.3258, lng: 139.5568 },
   },
@@ -75,6 +82,7 @@ const spotCatalog = {
     area: "神奈川",
     rating: "4.4",
     reason: "海景與步道兼具",
+    reviewsCount: 356,
     tags: ["海景", "散步"],
     position: { lat: 35.2997, lng: 139.4806 },
   },
@@ -82,6 +90,7 @@ const spotCatalog = {
     area: "東京",
     rating: "4.4",
     reason: "博物館與公園集中，雨天也好安排",
+    reviewsCount: 248,
     tags: ["公園", "博物館"],
     position: { lat: 35.7148, lng: 139.7745 },
   },
@@ -89,6 +98,7 @@ const spotCatalog = {
     area: "東京",
     rating: "4.2",
     reason: "購物與小吃密集商圈",
+    reviewsCount: 88,
     tags: ["購物", "美食"],
     position: { lat: 35.708, lng: 139.7744 },
   },
@@ -105,6 +115,14 @@ function scoreFromName(name) {
   }
   const rating = 4.0 + (hash % 9) * 0.1; // 4.0 - 4.8
   return rating.toFixed(1);
+}
+
+function reviewCountFromName(name) {
+  let hash = 0;
+  for (let i = 0; i < name.length; i += 1) {
+    hash = (hash * 131 + name.charCodeAt(i)) >>> 0;
+  }
+  return 15 + (hash % 220);
 }
 
 function extractContextSentence(name, sourceText) {
@@ -181,7 +199,7 @@ function fallbackPosition(name, index) {
   };
 }
 
-function toSpot(name, index, sourceText) {
+function toSpotFromBackend(name, index, sourceText, backendSpot) {
   const cleanedName = normalizeSpotName(name);
   const aliases = {
     東京晴空塔: "晴空塔",
@@ -197,17 +215,26 @@ function toSpot(name, index, sourceText) {
     null;
 
   if (catalogEntry) {
+    const reviewsCount = Number(backendSpot?.reviews_count ?? catalogEntry.reviewsCount ?? reviewCountFromName(normalizedName));
     return {
       name: normalizedName,
       ...catalogEntry,
-      source: `RAG 萃取 #${index + 1}`,
+      reason: backendSpot?.source_excerpt
+        ? `攻略提及：${backendSpot.source_excerpt}`
+        : catalogEntry.reason,
+      source: backendSpot?.xai || `RAG 萃取 #${index + 1}`,
+      sourceExcerpt: backendSpot?.source_excerpt || "",
+      sourceChunkIndex: backendSpot?.source_chunk_index || 0,
+      reviewsCount,
+      dataInsufficient: reviewsCount < 50 || Boolean(backendSpot?.is_data_insufficient),
     };
   }
 
-  const contextSentence = extractContextSentence(normalizedName, sourceText);
+  const contextSentence = backendSpot?.source_excerpt || extractContextSentence(normalizedName, sourceText);
   const reason = contextSentence
     ? `攻略提及：${contextSentence}`
     : "由 RAG 從攻略文字萃取，建議納入候選行程。";
+  const reviewsCount = Number(backendSpot?.reviews_count ?? reviewCountFromName(normalizedName));
 
   return {
     name: normalizedName,
@@ -216,32 +243,56 @@ function toSpot(name, index, sourceText) {
     reason,
     tags: inferTagsFromText(contextSentence || sourceText),
     position: fallbackPosition(normalizedName, index),
-    source: `RAG 萃取 #${index + 1}`,
+    source: backendSpot?.xai || `RAG 萃取 #${index + 1}`,
+    sourceExcerpt: backendSpot?.source_excerpt || "",
+    sourceChunkIndex: backendSpot?.source_chunk_index || 0,
+    reviewsCount,
+    dataInsufficient: reviewsCount < 50 || Boolean(backendSpot?.is_data_insufficient),
   };
 }
 
 export default function MapPlanningPage() {
   const [guideInput, setGuideInput] = useState(defaultGuideText);
+  const [guideUrl, setGuideUrl] = useState("");
   const [spots, setSpots] = useState([]);
+  const [itineraryGroups, setItineraryGroups] = useState([]);
+  const [selectedGroupId, setSelectedGroupId] = useState("all");
+  const [itinerarySpots, setItinerarySpots] = useState([]);
   const [isExtracting, setIsExtracting] = useState(false);
-  const [statusText, setStatusText] = useState("貼上攻略後，按「驗證萃取景點」呼叫後端 RAG API。");
+  const [statusText, setStatusText] = useState("貼上攻略文字或輸入 URL，按「驗證萃取景點」呼叫後端 RAG API。");
   const [lastRunAt, setLastRunAt] = useState("-");
   const [selectedSpotName, setSelectedSpotName] = useState("");
   const [apiMeta, setApiMeta] = useState({
+    provider: "ollama",
     embedModel: "-",
     genModel: "-",
+    inputSource: "-",
     warning: "",
   });
 
+  const selectedGroup = useMemo(
+    () => itineraryGroups.find((group) => group.group_id === selectedGroupId) || null,
+    [itineraryGroups, selectedGroupId]
+  );
+
+  const visibleSpots = useMemo(() => {
+    if (!selectedGroup || selectedGroupId === "all") {
+      return spots;
+    }
+    const allowedNames = new Set((selectedGroup.spot_names || []).map((name) => normalizeSpotName(name)));
+    return spots.filter((spot) => allowedNames.has(normalizeSpotName(spot.name)));
+  }, [spots, selectedGroup, selectedGroupId]);
+
   const selectedSpot = useMemo(
-    () => spots.find((spot) => spot.name === selectedSpotName) || spots[0],
-    [spots, selectedSpotName]
+    () => visibleSpots.find((spot) => spot.name === selectedSpotName) || visibleSpots[0],
+    [visibleSpots, selectedSpotName]
   );
 
   async function handleExtract() {
     const text = guideInput.trim();
-    if (!text) {
-      setStatusText("請先貼上攻略文字。");
+    const url = guideUrl.trim();
+    if (!text && !url) {
+      setStatusText("請先貼上攻略文字，或輸入攻略 URL。");
       setSpots([]);
       setSelectedSpotName("");
       return;
@@ -258,6 +309,7 @@ export default function MapPlanningPage() {
         },
         body: JSON.stringify({
           text,
+          url,
           query: "請列出文章中的旅遊景點名稱",
           top_k: 4,
           reset_db: false,
@@ -277,20 +329,43 @@ export default function MapPlanningPage() {
 
       const payload = await response.json();
       const names = dedupe((payload.spot_names || []).map((item) => normalizeSpotName(item)));
-      const nextSpots = names.map((name, index) => toSpot(name, index, text));
+      const backendSpotMap = new Map(
+        (payload.spots || []).map((item) => [normalizeSpotName(item.name), item])
+      );
+      const sourceTextForFallback = text || (payload.spots || []).map((item) => item.source_text || "").join("\n");
+      const nextSpots = names.map((name, index) =>
+        toSpotFromBackend(name, index, sourceTextForFallback, backendSpotMap.get(normalizeSpotName(name)))
+      );
+      const nextGroups = (payload.itinerary_groups || [])
+        .map((group, index) => ({
+          group_id: group.group_id || `group-${index + 1}`,
+          title: group.title || `行程 ${index + 1}`,
+          spot_names: dedupe((group.spot_names || []).map((name) => normalizeSpotName(name))),
+          spot_count: Number(group.spot_count || (group.spot_names || []).length || 0),
+        }))
+        .filter((group) => group.spot_names.length > 0);
 
       setSpots(nextSpots);
+      setItineraryGroups(nextGroups);
+      setSelectedGroupId(nextGroups[0]?.group_id || "all");
       setSelectedSpotName(nextSpots[0]?.name || "");
+      setItinerarySpots([]);
       setApiMeta({
+        provider: payload.provider || "ollama",
         embedModel: payload.embed_model || "-",
         genModel: payload.gen_model || "-",
+        inputSource: payload.input_source || "-",
         warning: payload.generation_warning || "",
       });
 
       if (nextSpots.length === 0) {
         setStatusText("RAG 已執行，但沒有萃取到景點名稱。");
       } else {
-        setStatusText(`驗證成功：已萃取 ${nextSpots.length} 個景點。`);
+        setStatusText(
+          nextGroups.length > 1
+            ? `驗證成功：已萃取 ${nextSpots.length} 個景點，並分成 ${nextGroups.length} 組行程。`
+            : `驗證成功：已萃取 ${nextSpots.length} 個景點，可逐一加入右側行程。`
+        );
       }
 
       setLastRunAt(
@@ -301,10 +376,14 @@ export default function MapPlanningPage() {
     } catch (error) {
       setStatusText(`RAG API 呼叫失敗：${error.message}`);
       setApiMeta({
+        provider: "ollama",
         embedModel: "-",
         genModel: "-",
+        inputSource: "-",
         warning: "",
       });
+      setItineraryGroups([]);
+      setSelectedGroupId("all");
     } finally {
       setIsExtracting(false);
     }
@@ -312,20 +391,52 @@ export default function MapPlanningPage() {
 
   function handleFillSample() {
     setGuideInput(defaultGuideText);
+    setGuideUrl("");
     setStatusText("已帶入範例攻略，按「驗證萃取景點」即可測試。");
   }
 
   function handleClear() {
     setGuideInput("");
+    setGuideUrl("");
     setSpots([]);
+    setItineraryGroups([]);
+    setSelectedGroupId("all");
+    setItinerarySpots([]);
     setSelectedSpotName("");
     setApiMeta({
+      provider: "ollama",
       embedModel: "-",
       genModel: "-",
+      inputSource: "-",
       warning: "",
     });
     setLastRunAt("-");
     setStatusText("已清空輸入與輸出。");
+  }
+
+  function handleAddToItinerary(spot) {
+    setItinerarySpots((prev) => {
+      if (prev.some((item) => item.name === spot.name)) {
+        return prev;
+      }
+      return [...prev, spot];
+    });
+    setSelectedSpotName(spot.name);
+  }
+
+  function handleRemoveFromItinerary(spotName) {
+    setItinerarySpots((prev) => prev.filter((spot) => spot.name !== spotName));
+  }
+
+  function handleAddAllToItinerary() {
+    setItinerarySpots(visibleSpots);
+    if (visibleSpots[0]) {
+      setSelectedSpotName(visibleSpots[0].name);
+    }
+  }
+
+  function handleClearItinerary() {
+    setItinerarySpots([]);
   }
 
   return (
@@ -344,7 +455,7 @@ export default function MapPlanningPage() {
             </CardHeader>
             <CardContent>
               <label className="field-label" htmlFor="guide-input">
-                貼上旅遊攻略文字
+                貼上旅遊攻略文字（或下方輸入 URL）
               </label>
               <textarea
                 id="guide-input"
@@ -353,6 +464,16 @@ export default function MapPlanningPage() {
                 rows={8}
                 value={guideInput}
                 onChange={(event) => setGuideInput(event.target.value)}
+              />
+              <label className="field-label" htmlFor="guide-url">
+                攻略 URL（可選）
+              </label>
+              <input
+                id="guide-url"
+                className="field-input"
+                placeholder="https://example.com/japan-guide"
+                value={guideUrl}
+                onChange={(event) => setGuideUrl(event.target.value)}
               />
               <div className="badge-row">
                 <Badge variant="info">RAG: API Mode</Badge>
@@ -384,6 +505,9 @@ export default function MapPlanningPage() {
               <div className="result-meta">
                 <Badge>最後執行：{lastRunAt}</Badge>
                 <Badge variant="info">景點數：{spots.length}</Badge>
+                <Badge variant="info">分組：{itineraryGroups.length || "-"}</Badge>
+                <Badge variant="success">目前 provider：{apiMeta.provider}</Badge>
+                <Badge variant="info">來源：{apiMeta.inputSource}</Badge>
                 <Badge variant="neutral">Embed: {apiMeta.embedModel}</Badge>
                 <Badge variant="neutral">Gen: {apiMeta.genModel}</Badge>
               </div>
@@ -391,28 +515,118 @@ export default function MapPlanningPage() {
               {spots.length === 0 ? (
                 <p className="empty-state">尚無景點結果，請先執行驗證。</p>
               ) : (
-                <ul className="spot-list">
-                  {spots.map((spot) => (
-                    <li
-                      className={`spot-item ${selectedSpot?.name === spot.name ? "spot-item--active" : ""}`}
-                      key={`${spot.name}-${spot.source}`}
-                      onClick={() => setSelectedSpotName(spot.name)}
-                    >
-                      <div className="spot-item__head">
-                        <strong>{spot.name}</strong>
-                        <Badge variant="success">★ {spot.rating}</Badge>
-                      </div>
-                      <p>{spot.reason}</p>
-                      <p className="spot-item__source">來源：{spot.source}</p>
-                      <div className="tag-row">
-                        <Badge>{spot.area}</Badge>
-                        {spot.tags.map((tag) => (
-                          <Tag key={`${spot.name}-${tag}`}>{tag}</Tag>
+                <>
+                  {itineraryGroups.length > 0 ? (
+                    <div className="group-filter">
+                      <label className="field-label" htmlFor="group-select">
+                        行程分組檢視
+                      </label>
+                      <select
+                        id="group-select"
+                        className="field-select"
+                        value={selectedGroupId}
+                        onChange={(event) => setSelectedGroupId(event.target.value)}
+                      >
+                        <option value="all">全部景點（不分組）</option>
+                        {itineraryGroups.map((group) => (
+                          <option key={group.group_id} value={group.group_id}>
+                            {group.title}（{group.spot_count}）
+                          </option>
                         ))}
+                      </select>
+                    </div>
+                  ) : null}
+
+                  <ul className="spot-list">
+                    {visibleSpots.map((spot) => (
+                      <li
+                        className={`spot-item ${selectedSpot?.name === spot.name ? "spot-item--active" : ""}`}
+                        key={`${spot.name}-${spot.source}`}
+                        onClick={() => setSelectedSpotName(spot.name)}
+                      >
+                        <div className="spot-item__head">
+                          <strong>{spot.name}</strong>
+                          <div className="spot-item__head-badges">
+                            <Badge variant="success">★ {spot.rating}</Badge>
+                            {spot.dataInsufficient ? (
+                              <Badge variant="warning">資料較少（{spot.reviewsCount}）</Badge>
+                            ) : (
+                              <Badge variant="info">評論 {spot.reviewsCount}</Badge>
+                            )}
+                          </div>
+                        </div>
+                        <p>{spot.reason}</p>
+                        <p className="spot-item__source">來源：{spot.source}</p>
+                        {spot.sourceExcerpt ? <p className="spot-item__excerpt">片段：{spot.sourceExcerpt}</p> : null}
+                        <div className="tag-row">
+                          <Badge>{spot.area}</Badge>
+                          {spot.tags.map((tag) => (
+                            <Tag key={`${spot.name}-${tag}`}>{tag}</Tag>
+                          ))}
+                        </div>
+                        <div className="spot-item__actions">
+                          <Button
+                            size="sm"
+                            variant="secondary"
+                            onClick={(event) => {
+                              event.stopPropagation();
+                              handleAddToItinerary(spot);
+                            }}
+                          >
+                            加入行程
+                          </Button>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                  {visibleSpots.length === 0 ? (
+                    <p className="empty-state">此分組目前沒有可顯示的景點。</p>
+                  ) : null}
+                </>
+              )}
+            </CardContent>
+            <CardFooter>
+              <Button
+                variant="secondary"
+                onClick={handleAddAllToItinerary}
+                disabled={visibleSpots.length === 0 || isExtracting}
+              >
+                全部加入行程
+              </Button>
+              <Button variant="ghost" onClick={handleClearItinerary} disabled={itinerarySpots.length === 0}>
+                清空行程
+              </Button>
+            </CardFooter>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>我的行程（Week 3）</CardTitle>
+              <CardDescription>加入至少 2 個景點即可在地圖顯示建議路線</CardDescription>
+            </CardHeader>
+            <CardContent>
+              {itinerarySpots.length === 0 ? (
+                <p className="empty-state">尚未加入景點。</p>
+              ) : (
+                <ol className="itinerary-list">
+                  {itinerarySpots.map((spot, index) => (
+                    <li key={`itinerary-${spot.name}`} className="itinerary-item">
+                      <div className="itinerary-item__head">
+                        <strong>
+                          {index + 1}. {spot.name}
+                        </strong>
+                        <Button
+                          size="sm"
+                          variant="ghost"
+                          onClick={() => handleRemoveFromItinerary(spot.name)}
+                        >
+                          移除
+                        </Button>
                       </div>
+                      <p className="spot-item__source">{spot.source}</p>
                     </li>
                   ))}
-                </ul>
+                </ol>
               )}
             </CardContent>
           </Card>
@@ -428,12 +642,16 @@ export default function MapPlanningPage() {
               <GoogleMapPanel
                 apiKey={googleMapsApiKey}
                 mapId={googleMapId}
-                spots={spots}
+                spots={visibleSpots}
+                routeSpots={itinerarySpots}
                 selectedSpotName={selectedSpotName}
                 onMarkerSelect={setSelectedSpotName}
               />
               <div className="map-status">
-                <Badge variant="info">地圖標記：{spots.length} 個</Badge>
+                <Badge variant="info">地圖標記：{visibleSpots.length} 個</Badge>
+                <Badge variant={itinerarySpots.length >= 2 ? "success" : "warning"}>
+                  路線點位：{itinerarySpots.length} 個
+                </Badge>
                 {selectedSpot ? (
                   <Badge variant="success">焦點景點：{selectedSpot.name}</Badge>
                 ) : (
