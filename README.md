@@ -53,6 +53,18 @@ After rerunning the scoring pipeline, sync the catalog:
 cp data/processed/attractions_scored.csv frontend/public/data/attractions_scored.csv
 ```
 
+Convert the `Travel-the-world-Daniel` dataset into reusable catalogs:
+
+```bash
+python3 scripts/convert_daniel_attractions.py
+```
+
+Use the converted Daniel catalog in the frontend:
+
+```bash
+python3 scripts/convert_daniel_attractions.py --sync-frontend
+```
+
 Build check:
 
 ```bash

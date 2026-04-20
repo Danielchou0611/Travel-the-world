@@ -44,6 +44,49 @@ python3 scripts/score_attractions.py
 cp data/processed/attractions_scored.csv frontend/public/data/attractions_scored.csv
 ```
 
+若要使用 `Travel-the-world-Daniel` 的完整資料，使用可重複執行的轉檔程式：
+
+```bash
+python3 scripts/convert_daniel_attractions.py
+```
+
+輸出：
+
+- `data/processed/daniel_attractions_normalized.csv`
+- `data/processed/daniel_attractions_scored.csv`
+- `reports/daniel_conversion_report.json`
+
+若要直接改成前端搜尋 catalog：
+
+```bash
+python3 scripts/convert_daniel_attractions.py --sync-frontend
+```
+
+這會把 `data/processed/daniel_attractions_scored.csv` 複製到：
+
+```text
+frontend/public/data/attractions_scored.csv
+```
+
+normalized 欄位保留 Google 欄位：
+
+```text
+source_id
+name
+prefecture
+category
+lat
+lng
+google_rating
+google_star
+google_review_count
+image_url
+has_image
+source
+```
+
+目前 Daniel 原始資料沒有 Google rating/star/review count，因此欄位會留空；scored catalog 會用暫定預設值計算 demo 分數。
+
 ## 之後可調整
 
 - 若後端提供 `/api/places/search/`，可把 `loadAttractionCatalog()` 改成呼叫 API

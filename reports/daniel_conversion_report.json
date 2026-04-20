@@ -1,0 +1,16 @@
+{
+  "input_files": 47,
+  "raw_rows": 5895,
+  "rows_without_coordinates": 0,
+  "rows_without_station_mapping": 0,
+  "normalized_rows": 4003,
+  "scored_rows": 4003,
+  "duplicate_rows_removed": 1892,
+  "rows_without_image": 856,
+  "default_google_rating": 4.0,
+  "default_review_count": 100,
+  "default_interest_match": 0.7,
+  "normalized_output": "data/processed/daniel_attractions_normalized.csv",
+  "scored_output": "data/processed/daniel_attractions_scored.csv",
+  "frontend_output": "frontend/public/data/attractions_scored.csv"
+}

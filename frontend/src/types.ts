@@ -24,4 +24,5 @@ export type AttractionCatalogItem = {
   distanceToStationKm: number;
   interestMatch: number;
   baseScore: number;
+  imageUrl: string;
 };

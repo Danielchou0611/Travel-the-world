@@ -46,6 +46,7 @@ export async function loadAttractionCatalog() {
         distanceToStationKm: toNumber(row.distance_to_station_km),
         interestMatch: toNumber(row.interest_match),
         baseScore: toNumber(row.xai_score),
+        imageUrl: row.image_url ?? "",
       };
     })
     .filter((item): item is AttractionCatalogItem => item !== null);
@@ -64,7 +65,8 @@ export function catalogItemToItineraryItem(
       `${catalogItem.category} · ${catalogItem.stationAnchor} ` +
       `${catalogItem.distanceToStationKm.toFixed(1)} km · ` +
       `interest ${catalogItem.interestMatch.toFixed(2)}`,
-    imageUrl: imageUrlForAttraction(catalogItem.name, catalogItem.region),
+    imageUrl:
+      catalogItem.imageUrl || imageUrlForAttraction(catalogItem.name, catalogItem.region),
     visitDurationMin: 75,
     order,
     travelTimeFromPreviousMin: 0,

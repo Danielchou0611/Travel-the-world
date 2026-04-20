@@ -14,6 +14,7 @@
 
 ## Week 3（4/14–4/20）— XAI 與整合
 - [x] 新增自訂景點（先使用本地 scored CSV 搜尋）
+- [x] 建立 `Travel-the-world-Daniel` 可重複轉檔程式
 - [ ] 資料視覺化（熱門度圖）
 - [ ] 驗證 XAI vs AI 推薦一致性
 - [ ] 設計 scheduleScore 如何納入前後站距離 / 通勤時間
@@ -33,6 +34,6 @@
 ---
 
 ## 📊 Progress
-- Completed: 8
+- Completed: 9
 - In Progress: 0
 - Blocked: 1
