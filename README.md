@@ -43,6 +43,16 @@ VITE_API_BASE_URL=http://127.0.0.1:8000 npm run dev
 
 When `VITE_API_BASE_URL` is not set, the frontend uses a mock API so drag-and-drop and delete can be tested before the Django backend exists.
 
+The custom attraction search reads this frontend catalog:
+
+- `frontend/public/data/attractions_scored.csv`
+
+After rerunning the scoring pipeline, sync the catalog:
+
+```bash
+cp data/processed/attractions_scored.csv frontend/public/data/attractions_scored.csv
+```
+
 Build check:
 
 ```bash

@@ -2,29 +2,44 @@
 
 ## 目標
 
-建立一個可解釋的景點推薦分數，讓行程推薦能同時考量熱門程度、使用者偏好與景點周邊可組合性。
+建立一個可解釋的景點推薦分數，讓初始推薦能同時考量熱門程度、使用者偏好與交通中心可達性。
 
-## 原始公式
+## 目前公式
 
 ```text
-baseScore = 0.4 * Google評分 + 0.3 * log(評論數) + 0.2 * 興趣符合度 + 0.1 * 附近景點密度
+baseScore = 0.4 * rating_norm
+          + 0.3 * review_norm
+          + 0.2 * interest_match
+          + 0.1 * station_distance_efficiency
 ```
 
-## 實作方式
+`baseScore` 在資料輸出中命名為 `xai_score`。目前前端的 `finalScore` 暫時等於 `baseScore`，等 `scheduleScore` 設計完成後再調整。
+
+## 正規化方式
 
 不同欄位的量綱不同，因此 pipeline 會先把各欄位轉成 0-1 區間，再套用權重。
 
 ```text
 rating_norm = google_rating / 5
 review_norm = log(1 + review_count) / max(log(1 + review_count))
-nearby_density_score = log(1 + nearby_attraction_count) / max(log(1 + nearby_attraction_count))
-xai_score = 0.4 * rating_norm
-          + 0.3 * review_norm
-          + 0.2 * interest_match
-          + 0.1 * nearby_density_score
+station_distance_efficiency = 1 / (1 + distance_to_station_km / 5)
 ```
 
-`xai_score` 在前端對應 `baseScore`。它代表景點本身是否值得推薦，不會因為使用者拖拉行程順序而改變。
+## 車站中心點
+
+距離分數以各地區主要交通中心為參考點。這讓「距離」有固定基準，不再混用飯店、上一站或景點密度等不同語意。
+
+目前 sample data 使用：
+
+| Region | station_anchor |
+| --- | --- |
+| Tokyo | Tokyo Station |
+| Kyoto | Kyoto Station |
+| Osaka | Osaka Station |
+| Okinawa | Naha Bus Terminal |
+| Hokkaido | Sapporo Station |
+| Kansai | Osaka Station |
+| Chugoku | Hiroshima Station |
 
 ## 欄位說明
 
@@ -33,22 +48,21 @@ xai_score = 0.4 * rating_norm
 | google_rating | Google 評分，範圍 0-5 |
 | review_count | 評論數，使用 `log(1 + review_count)` 降低極端熱門景點的影響 |
 | interest_match | 興趣符合度，範圍 0-1 |
-| nearby_attraction_count | 此景點附近可一起安排的景點數 |
-| nearby_density_score | 附近景點密度分數，範圍 0-1 |
-| xai_score | 景點本身推薦分數，越高越推薦 |
+| station_anchor | 該地區主要交通中心 |
+| distance_to_station_km | 景點到 `station_anchor` 的距離 |
+| station_distance_efficiency | 車站距離效率，範圍 0-1，距離越近越高 |
+| xai_score | 景點初始推薦分數，越高越推薦 |
 
-## 與行程排序分數的分工
+## 與 scheduleScore 的分工
 
-原本的「距離效率」語意不夠清楚，因為距離一定需要參考點，例如從飯店出發、從上一個景點出發，或是衡量周邊景點密度。
+目前 `baseScore` 只負責初始推薦，距離基準固定為地區主要車站。它不處理「上一站到本站」的行程順序問題。
 
-目前拆成兩層：
+`scheduleScore` 待辦：
 
-| 分數 | 目的 | 是否會因拖拉排序改變 |
-| --- | --- | --- |
-| `baseScore` / `xai_score` | 評估景點本身推薦程度，包含附近景點密度 | 否 |
-| `scheduleScore` | 評估目前行程順序下，從上一站到本站是否順路 | 是 |
-
-後續若接 Google Directions API，應放在 `scheduleScore`，而不是放進 `baseScore`。
+- 定義前後站距離或通勤時間如何影響行程分數
+- 決定第一站要以飯店、車站或使用者指定地點作為起點
+- 決定 `finalScore` 是否改成 `baseScore` 與 `scheduleScore` 的加權結果
+- 未來可用 Google Directions API 取代目前前端的簡化估算
 
 ## Week 1 交付狀態
 

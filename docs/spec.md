@@ -76,7 +76,7 @@
 ### 3.3 景點評分公式（XAI）
 
 [
-baseScore = 0.4 \cdot Google評分 + 0.3 \cdot \log(評論數) + 0.2 \cdot 興趣符合度 + 0.1 \cdot 附近景點密度
+baseScore = 0.4 \cdot Google評分 + 0.3 \cdot \log(評論數) + 0.2 \cdot 興趣符合度 + 0.1 \cdot 車站距離效率
 ]
 
 #### 設計理念：
@@ -86,8 +86,9 @@ baseScore = 0.4 \cdot Google評分 + 0.3 \cdot \log(評論數) + 0.2 \cdot 興�
 
   * 景點熱門程度
   * 使用者個人偏好
-  * 景點周邊可組合性
-* 行程移動效率改由 `scheduleScore` 處理，依照目前排序的前後站移動時間重新計算
+  * 以地區主要車站為中心的可達性
+* 目前 `finalScore = baseScore`
+* `scheduleScore` 之後再設計，預計處理目前排序下的前後站移動時間
 
 ---
 

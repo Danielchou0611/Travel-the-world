@@ -5,12 +5,15 @@
 - 行程拖拉後會呼叫 `PATCH /api/itinerary/{item_id}/` 更新每個項目的 `order`
 - 刪除景點會呼叫 `DELETE /api/itinerary/{item_id}/`
 - 前端採 optimistic update；刪除失敗時會把景點放回原本位置
-- 拖拉與刪除後會重新計算時間、移動時間、排序後分數與最終分數
-- `baseScore` 使用附近景點密度 `nearbyDensityScore`，前後站移動成本由 `scheduleScore` 處理
+- 拖拉與刪除後會重新計算時間與暫時移動時間
+- `baseScore` 使用地區主要車站距離效率 `station_distance_efficiency`
+- 目前 `finalScore = baseScore`
+- `scheduleScore` 保留為待辦，之後再決定如何加入前後站距離或通勤時間
 - 使用者偏好分析腳本可輸出 JSON 與 Markdown 報告
 
 排序與分數邏輯詳見：
 
+- `docs/scoring_formula.md`
 - `docs/schedule_logic.md`
 
 ## 資料狀態
@@ -44,3 +47,9 @@ python3 scripts/analyze_preferences.py
 
 - `reports/preference_analysis.json`
 - `reports/preference_analysis.md`
+
+## Week 3 銜接
+
+自訂景點搜尋加入行程的本地 CSV 版本詳見：
+
+- `docs/week3_notes.md`

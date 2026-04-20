@@ -13,3 +13,15 @@ export type ItineraryItem = {
   scheduleScore: number;
   finalScore: number;
 };
+
+export type AttractionCatalogItem = {
+  id: string;
+  name: string;
+  region: string;
+  category: string;
+  interestTags: string[];
+  stationAnchor: string;
+  distanceToStationKm: number;
+  interestMatch: number;
+  baseScore: number;
+};

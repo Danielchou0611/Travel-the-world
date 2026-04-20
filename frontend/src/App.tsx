@@ -15,18 +15,23 @@ import {
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { deleteItineraryItem, updateItineraryOrder } from "./api/itineraryApi";
+import {
+  catalogItemToItineraryItem,
+  FALLBACK_ATTRACTION_IMAGE,
+  loadAttractionCatalog,
+} from "./lib/attractionCatalog";
 import { recalculateSchedule } from "./lib/schedule";
-import type { ItineraryItem } from "./types";
+import type { AttractionCatalogItem, ItineraryItem } from "./types";
 
 const initialItems: ItineraryItem[] = [
   {
     id: "sensoji",
     placeName: "Senso-ji",
     region: "Tokyo",
-    baseScore: 0.9316,
-    xaiReason: "歷史文化符合度高，評論量穩定，距離適中。",
+    baseScore: 0.8846,
+    xaiReason: "歷史文化符合度高，從 Tokyo Station 作為中心點距離可接受。",
     imageUrl:
       "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&w=900&q=80",
     visitDurationMin: 90,
@@ -41,8 +46,8 @@ const initialItems: ItineraryItem[] = [
     id: "tsukiji",
     placeName: "Tsukiji Outer Market",
     region: "Tokyo",
-    baseScore: 0.8704,
-    xaiReason: "美食偏好符合度高，適合安排午餐與市場散步。",
+    baseScore: 0.8495,
+    xaiReason: "美食偏好符合度高，距離 Tokyo Station 較近，適合安排午餐。",
     imageUrl:
       "https://images.unsplash.com/photo-1554797589-7241bb691973?auto=format&fit=crop&w=900&q=80",
     visitDurationMin: 75,
@@ -57,8 +62,8 @@ const initialItems: ItineraryItem[] = [
     id: "meiji",
     placeName: "Meiji Jingu",
     region: "Tokyo",
-    baseScore: 0.9099,
-    xaiReason: "自然與神社主題兼具，午後節奏較輕鬆。",
+    baseScore: 0.8622,
+    xaiReason: "自然與神社主題兼具，評分穩定，適合午後安排。",
     imageUrl:
       "https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=900&q=80",
     visitDurationMin: 90,
@@ -73,8 +78,8 @@ const initialItems: ItineraryItem[] = [
     id: "shibuya",
     placeName: "Shibuya Crossing",
     region: "Tokyo",
-    baseScore: 0.8882,
-    xaiReason: "城市步行與拍照體驗強，周邊景點密度高。",
+    baseScore: 0.8295,
+    xaiReason: "城市步行與拍照體驗強，但距離 Tokyo Station 較遠。",
     imageUrl:
       "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=900&q=80",
     visitDurationMin: 75,
@@ -118,7 +123,13 @@ function SortableItineraryItem({
         <span aria-hidden="true">↕</span>
         <span className="sr-only">拖拉調整 {item.placeName} 順序</span>
       </button>
-      <img src={item.imageUrl} alt={item.placeName} />
+      <img
+        src={item.imageUrl}
+        alt={item.placeName}
+        onError={(event) => {
+          event.currentTarget.src = FALLBACK_ATTRACTION_IMAGE;
+        }}
+      />
       <div className="item-copy">
         <div className="item-meta">
           <span>Day 1 · #{item.order}</span>
@@ -130,7 +141,7 @@ function SortableItineraryItem({
         <p>{item.xaiReason}</p>
         <div className="score-row">
           <strong>Base {item.baseScore.toFixed(4)}</strong>
-          <strong>Schedule {item.scheduleScore.toFixed(4)}</strong>
+          <strong>Schedule draft {item.scheduleScore.toFixed(4)}</strong>
           <strong>Final {item.finalScore.toFixed(4)}</strong>
         </div>
       </div>
@@ -148,6 +159,9 @@ function SortableItineraryItem({
 
 export function App() {
   const [items, setItems] = useState(scheduledInitialItems);
+  const [catalog, setCatalog] = useState<AttractionCatalogItem[]>([]);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [catalogStatus, setCatalogStatus] = useState("景點資料載入中...");
   const [savingItemId, setSavingItemId] = useState<string | null>(null);
   const [syncStatus, setSyncStatus] = useState("尚未同步");
   const sensors = useSensors(
@@ -157,6 +171,51 @@ export function App() {
     }),
   );
   const ids = useMemo(() => items.map((item) => item.id), [items]);
+  const addedCatalogIds = useMemo(() => new Set(items.map((item) => item.id)), [items]);
+  const searchResults = useMemo(() => {
+    const query = searchQuery.trim().toLowerCase();
+    if (!query) {
+      return [];
+    }
+
+    return catalog
+      .filter((item) => {
+        const haystack = [
+          item.name,
+          item.region,
+          item.category,
+          item.stationAnchor,
+          ...item.interestTags,
+        ]
+          .join(" ")
+          .toLowerCase();
+        return haystack.includes(query);
+      })
+      .slice(0, 6);
+  }, [catalog, searchQuery]);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    loadAttractionCatalog()
+      .then((itemsFromCatalog) => {
+        if (!isMounted) {
+          return;
+        }
+        setCatalog(itemsFromCatalog);
+        setCatalogStatus(`已載入 ${itemsFromCatalog.length} 筆景點資料`);
+      })
+      .catch((error: unknown) => {
+        if (!isMounted) {
+          return;
+        }
+        setCatalogStatus(error instanceof Error ? error.message : "景點資料載入失敗");
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   async function handleDragEnd(event: DragEndEvent) {
     const { active, over } = event;
@@ -203,6 +262,25 @@ export function App() {
     setSavingItemId(null);
   }
 
+  async function handleAddAttraction(catalogItem: AttractionCatalogItem) {
+    const itemId = `catalog-${catalogItem.id}`;
+    if (items.some((item) => item.id === itemId)) {
+      setSyncStatus(`${catalogItem.name} 已在行程中`);
+      return;
+    }
+
+    const nextItems = recalculateSchedule([
+      ...items,
+      catalogItemToItineraryItem(catalogItem, items.length + 1),
+    ]);
+    setItems(nextItems);
+    setSearchQuery("");
+    setSyncStatus("新增景點中...");
+
+    const result = await updateItineraryOrder(nextItems);
+    setSyncStatus(result.ok ? "新增景點已送出" : `新增景點尚未送出：${result.message}`);
+  }
+
   return (
     <main className="app-shell">
       <section className="toolbar" aria-labelledby="page-title">
@@ -215,6 +293,52 @@ export function App() {
           <span>Drag to reorder</span>
           <span>{syncStatus}</span>
         </div>
+      </section>
+
+      <section className="search-panel" aria-labelledby="search-title">
+        <div>
+          <p>{catalogStatus}</p>
+          <h2 id="search-title">新增自訂景點</h2>
+        </div>
+        <label className="search-field">
+          <span>搜尋景點、地區或標籤</span>
+          <input
+            type="search"
+            value={searchQuery}
+            placeholder="例如 Kyoto、temple、Dotonbori"
+            onChange={(event) => setSearchQuery(event.target.value)}
+          />
+        </label>
+        {searchQuery.trim() && (
+          <div className="search-results" role="list">
+            {searchResults.length > 0 ? (
+              searchResults.map((result) => {
+                const isAdded = addedCatalogIds.has(`catalog-${result.id}`);
+                return (
+                  <article className="search-result" key={result.id} role="listitem">
+                    <div>
+                      <strong>{result.name}</strong>
+                      <p>
+                        {result.region} · {result.category} · {result.stationAnchor}{" "}
+                        {result.distanceToStationKm.toFixed(1)} km
+                      </p>
+                      <span>Base {result.baseScore.toFixed(4)}</span>
+                    </div>
+                    <button
+                      type="button"
+                      disabled={isAdded}
+                      onClick={() => handleAddAttraction(result)}
+                    >
+                      {isAdded ? "已加入" : "加入"}
+                    </button>
+                  </article>
+                );
+              })
+            ) : (
+              <p className="empty-result">沒有找到符合的景點</p>
+            )}
+          </div>
+        )}
       </section>
 
       <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>

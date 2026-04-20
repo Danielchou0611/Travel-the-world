@@ -40,7 +40,8 @@ export function calculateScheduleScore(
 }
 
 export function calculateFinalScore(baseScore: number, scheduleScore: number) {
-  return 0.7 * baseScore + 0.3 * scheduleScore;
+  void scheduleScore;
+  return baseScore;
 }
 
 export function recalculateSchedule(items: ItineraryItem[]) {

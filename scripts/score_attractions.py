@@ -17,7 +17,8 @@ REQUIRED_FIELDS = {
     "google_rating",
     "review_count",
     "interest_tags",
-    "nearby_attraction_count",
+    "station_anchor",
+    "distance_to_station_km",
     "interest_match",
 }
 
@@ -65,23 +66,25 @@ def load_rows(path: Path) -> list[dict[str, str]]:
 
             rating = as_float(row, "google_rating")
             reviews = int(as_float(row, "review_count"))
-            nearby_attraction_count = int(as_float(row, "nearby_attraction_count"))
+            distance_to_station = as_float(row, "distance_to_station_km")
             interest = as_float(row, "interest_match")
             if not 0 <= rating <= 5:
                 raise ValueError(f"Rating out of range for {row['name']}: {rating}")
             if reviews < 0:
                 raise ValueError(f"Review count out of range for {row['name']}: {reviews}")
-            if nearby_attraction_count < 0:
+            if not row["station_anchor"]:
+                raise ValueError(f"Missing station anchor for {row['name']}")
+            if distance_to_station < 0:
                 raise ValueError(
-                    f"Nearby attraction count out of range for {row['name']}: "
-                    f"{nearby_attraction_count}",
+                    f"Distance to station out of range for {row['name']}: "
+                    f"{distance_to_station}",
                 )
             if not 0 <= interest <= 1:
                 raise ValueError(f"Interest match out of range for {row['name']}: {interest}")
 
             row["google_rating"] = f"{rating:.1f}"
             row["review_count"] = str(reviews)
-            row["nearby_attraction_count"] = str(nearby_attraction_count)
+            row["distance_to_station_km"] = f"{distance_to_station:.1f}"
             row["interest_match"] = f"{interest:.2f}"
             cleaned.append(row)
 
@@ -93,30 +96,25 @@ def score_rows(rows: list[dict[str, str]]) -> list[dict[str, str]]:
         return []
 
     max_log_reviews = max(math.log1p(as_float(row, "review_count")) for row in rows) or 1
-    max_log_nearby = (
-        max(math.log1p(as_float(row, "nearby_attraction_count")) for row in rows) or 1
-    )
 
     scored: list[dict[str, str]] = []
     for row in rows:
         rating_norm = as_float(row, "google_rating") / 5
         review_norm = math.log1p(as_float(row, "review_count")) / max_log_reviews
         interest_norm = as_float(row, "interest_match")
-        nearby_density_score = (
-            math.log1p(as_float(row, "nearby_attraction_count")) / max_log_nearby
-        )
+        station_distance_efficiency = 1 / (1 + (as_float(row, "distance_to_station_km") / 5))
         score = (
             0.4 * rating_norm
             + 0.3 * review_norm
             + 0.2 * interest_norm
-            + 0.1 * nearby_density_score
+            + 0.1 * station_distance_efficiency
         )
         scored.append(
             {
                 **row,
                 "rating_norm": f"{rating_norm:.4f}",
                 "review_norm": f"{review_norm:.4f}",
-                "nearby_density_score": f"{nearby_density_score:.4f}",
+                "station_distance_efficiency": f"{station_distance_efficiency:.4f}",
                 "xai_score": f"{score:.4f}",
             }
         )
@@ -134,11 +132,12 @@ def write_rows(path: Path, rows: list[dict[str, str]]) -> None:
         "google_rating",
         "review_count",
         "interest_tags",
-        "nearby_attraction_count",
+        "station_anchor",
+        "distance_to_station_km",
         "interest_match",
         "rating_norm",
         "review_norm",
-        "nearby_density_score",
+        "station_distance_efficiency",
         "xai_score",
     ]
     with path.open("w", newline="", encoding="utf-8") as file:
