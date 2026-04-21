@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/mcp.json",
+  "_comment": "MCP (Model Context Protocol) 設定。組員若要使用 GitHub MCP 須自行建立 Personal Access Token 並填入 GITHUB_PERSONAL_ACCESS_TOKEN 環境變數。詳見 README。",
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      }
+    }
+  }
+}

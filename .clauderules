@@ -1,0 +1,117 @@
+# .clauderules
+# Japan Travel App — 專案編碼規範與 AI 協作規則
+# Claude Code 會自動讀取此檔案並遵守規則
+
+## Language & Communication
+
+- 所有與使用者的對話請使用繁體中文（zh-TW）
+- 程式碼註解使用中文或英文皆可，但同一個專案內請保持一致
+- Commit message 使用英文，遵循 Conventional Commits 格式：
+  - `feat:` 新功能
+  - `fix:` Bug 修復
+  - `docs:` 文件更新
+  - `refactor:` 重構（不影響功能）
+  - `test:` 測試相關
+  - `chore:` 其他雜項
+
+## Code Style
+
+### Backend (Python / Django)
+
+- Python 3.11+
+- 遵循 PEP 8，使用 `black` 格式化
+- Import 順序用 `isort`：標準庫 → 第三方 → 本地模組
+- Django view 使用 class-based views + DRF ViewSet
+- Serializer 欄位與 API Contract 對齊
+- 環境變數用 `django-environ`，嚴禁 hardcode API Key
+- DB 操作優先用 `select_related` / `prefetch_related` 避免 N+1 query
+
+範例 ViewSet：
+```python
+from rest_framework import viewsets
+from .models import Trip
+from .serializers import TripSerializer
+
+class TripViewSet(viewsets.ModelViewSet):
+    serializer_class = TripSerializer
+
+    def get_queryset(self):
+        return Trip.objects.filter(user=self.request.user)\
+            .prefetch_related('itinerary_items')
+```
+
+### Frontend (React / TypeScript)
+
+- TypeScript strict mode 開啟
+- Component 使用 functional component + hooks
+- State 管理：簡單用 useState，複雜用 Zustand
+- API 呼叫封裝在 `src/services/api.ts`，不要在 component 內直接寫 fetch/axios
+- 樣式用 Tailwind CSS utility classes，避免寫原生 CSS
+- 檔名用 PascalCase.tsx（如 `AttractionCard.tsx`）
+- 共用 interface 放在 `src/types/` 資料夾
+
+範例 component：
+```typescript
+import { useState } from 'react';
+import { getTrip } from '@/services/api';
+import type { Trip } from '@/types';
+
+export function ItineraryPage({ tripId }: { tripId: number }) {
+  const [trip, setTrip] = useState<Trip | null>(null);
+  // ...
+}
+```
+
+## Architecture Principles
+
+1. **分層清楚**: Frontend 不直接呼叫 Google Maps API / Gemini API，全部透過後端代理（避免 API Key 洩漏）
+2. **API Contract 為單一真實來源**: 前後端對接時以 `docs/API_Contract_v1.md` 為準
+3. **XAI 是核心**: 任何推薦邏輯必須回傳 `xai_reason` 或 `xai_factors`，不寫 black-box 推薦
+4. **Mock data 對齊真實 Schema**: 前端使用 mock data 時，欄位格式必須與真實 API 一致
+
+## Security
+
+- 嚴禁 commit 任何 API Key、密碼、token 到 repo
+- `.env` 必須在 `.gitignore`，並提供 `.env.example` 範本
+- 前端顯示的 API Key 必須是「受限網域」的 key（Google Maps 可在 Cloud Console 設定）
+- 使用者密碼必須用 Django 內建的 hashing（不要自己 hash）
+
+## Git Workflow
+
+- Branch 命名：`feature/短描述`（如 `feature/xai-factor-chart`）
+- 不要直接 push 到 `main`，必須經過 Pull Request
+- PR 描述需包含：做了什麼 / 如何測試 / 有無 breaking change
+- Merge 前需至少一位組員 review
+- Commit 頻率：每完成一個小功能就 commit，避免一次推太多改動
+
+## Testing (可選，時間允許時加)
+
+- Backend：Django 內建 `TestCase`，每個 ViewSet 至少一個測試
+- Frontend：Vitest + React Testing Library
+- API 手動測試用 `test_api.http`（REST Client 插件）
+
+## Domain-Specific Rules
+
+### Gemini API 使用規則
+- 必須使用 `response_mime_type="application/json"` + `response_schema=PydanticModel`
+- Temperature 預設 0.3（降低隨機性）
+- 呼叫失敗時自動重試最多 3 次
+- Prompt Template 集中管理在 `trips/services/prompts.py`
+
+### Google Maps API 使用規則
+- 地圖載入只在結果頁，不在首頁（節省費用）
+- Places 搜尋結果快取至少 24 小時
+- Distance Matrix 查詢用批次模式，減少 API 呼叫次數
+
+### RAG 系統規則
+- Chunk size: 300-500 字元
+- Embedding model: `text-embedding-004`
+- Top_k: 5
+- Metadata 必須包含 source_url、chunk_index、原文前 50 字（用於 XAI 來源標注）
+
+## When in doubt
+
+- 問 PM 周宜學
+- 查 `CLAUDE.md` 的 Owner 欄位
+- 查 `docs/API_Contract_v1.md`
+- 查對應的 specs 文件（`specs/mvp.md`、`specs/xai_design.md`、`specs/db_schema.md`）
