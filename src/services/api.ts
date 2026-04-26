@@ -312,7 +312,7 @@ export const MOCK_TRIP: Trip = {
           foodScore: 20,
           explorationScore: 65,
           xai: {
-            summary: '您的行程未選擇「動漫」或「購物」偏好，AI 給予較低優先度78/100，但仍推薦作為第3天的補充選項。',
+            summary: '您的行程未選擇「購物」偏好，AI 給予較低優先度78/100，但仍推薦作為第3天的補充選項。',
             scores: [
               { label: '購物體驗', value: 85, color: '#6366F1' },
               { label: '偏好匹配', value: 60, color: '#10B981' },
@@ -355,7 +355,7 @@ export const MOCK_TRIP: Trip = {
           id: 'a13',
           name: '箱根溫泉旅館',
           nameEn: 'Hakone Onsen Ryokan',
-          category: '溫泉',
+          category: '自然',
           description: '在傳統日式旅館中體驗露天溫泉風呂，泡著碳酸氫鈉泉仰望星空。晚餐享用懷石料理，是日本旅遊最奢華的放鬆體驗。',
           image: IMAGES.onsen,
           duration: '整晚住宿',

@@ -7,17 +7,13 @@ import { generateTrip } from '../services/api';
 const IconFood = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" /><path d="M7 2v20" /><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" /></svg>;
 const IconCulture = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 10h16" /><path d="M10 21V10" /><path d="M14 21V10" /><path d="M3 21h18" /><path d="m12 3 8 7H4Z" /></svg>;
 const IconShopping = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path d="M3 6h18" /><path d="M16 10a4 4 0 0 1-8 0" /></svg>;
-const IconNature = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22c4-4 8-9 8-14a8 8 0 1 0-16 0c0 5 4 10 8 14z" /></svg>;
-const IconOnsen = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 22h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2Z" /><path d="M7 2v4" /><path d="M12 2v6" /><path d="M17 2v4" /></svg>;
-const IconAnime = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="M10 8v8l6-4-6-4Z" /></svg>;
+const IconNature = () => <svg width="20" height="20" viewBox="-1 -1 26 26" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22c4-4 8-9 8-14a8 8 0 1 0-16 0c0 5 4 10 8 14z" /></svg>;
 
 const INTERESTS: { key: Interest; label: string; icon: React.ReactNode }[] = [
   { key: '美食', label: '美食', icon: <IconFood /> },
-  { key: '文化', label: '文化・寺廟', icon: <IconCulture /> },
+  { key: '文化', label: '文化', icon: <IconCulture /> },
   { key: '購物', label: '購物', icon: <IconShopping /> },
-  { key: '自然', label: '自然・山岳', icon: <IconNature /> },
-  { key: '溫泉', label: '溫泉', icon: <IconOnsen /> },
-  { key: '動漫', label: '動漫・潮流', icon: <IconAnime /> },
+  { key: '自然', label: '自然', icon: <IconNature /> },
 ];
 
 
@@ -214,7 +210,7 @@ export default function HomePage() {
             {/* Interests */}
             <div>
               <label className="form-label mb-3">興趣偏好</label>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10 }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 10 }}>
                 {INTERESTS.map(item => (
                   <div
                     key={item.key}

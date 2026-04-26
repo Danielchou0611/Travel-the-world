@@ -1,6 +1,6 @@
 // ─── Core domain types ───────────────────────────────────────────
 
-export type Interest = '美食' | '文化' | '購物' | '自然' | '溫泉' | '動漫';
+export type Interest = '美食' | '文化' | '購物' | '自然';
 
 export interface TripPreferences {
   days: number;
@@ -28,7 +28,7 @@ export interface Attraction {
   id: string;
   name: string;
   nameEn: string;
-  category: '景點' | '美食' | '活動' | '購物' | '自然' | '溫泉';
+  category: '景點' | '美食' | '活動' | '購物' | '自然';
   description: string;
   image: string; // URL or gradient placeholder
   duration: string; // e.g. "2–3 小時"
