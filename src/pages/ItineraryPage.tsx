@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef } from 'react';
+import { useState, useEffect, useMemo, useRef, useLayoutEffect } from 'react';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import type { Trip, Attraction } from '../types';
 import { MOCK_TRIP, rerankAttractions } from '../services/api';
@@ -34,6 +34,70 @@ export default function ItineraryPage() {
   const [dragOverDayTab, setDragOverDayTab] = useState<number | null>(null);
   // Track days that have been manually reordered (skip auto-ranking for these)
   const [manualOrderDays, setManualOrderDays] = useState<Set<number>>(new Set());
+  // Selected card index for external up/down buttons
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+  // ── FLIP animation refs ──────────────────────────────────────────
+  // Maps attraction.id → wrapper DOM element
+  const cardWrapperRefs = useRef<Map<string, HTMLDivElement>>(new Map());
+  // Positions captured just before a move (attraction.id → top px)
+  const snapshotRef = useRef<Map<string, number>>(new Map());
+  // ID of the card the user actually moved (gets higher z-index)
+  const flipPrimaryRef = useRef<string | null>(null);
+  // ID of the card to scroll into view
+  const scrollTargetRef = useRef<string | null>(null);
+
+  function captureSnapshot(primaryId: string, scrollId: string) {
+    const snap = new Map<string, number>();
+    cardWrapperRefs.current.forEach((el, id) => {
+      snap.set(id, el.getBoundingClientRect().top);
+    });
+    snapshotRef.current = snap;
+    flipPrimaryRef.current = primaryId;
+    scrollTargetRef.current = scrollId;
+  }
+
+  // After every re-render caused by a move, run FLIP
+  useLayoutEffect(() => {
+    const snap = snapshotRef.current;
+    if (snap.size === 0) return;
+
+    // ── 1. Scroll FIRST — DOM is at final layout, no transforms applied yet ──
+    const scrollId = scrollTargetRef.current;
+    if (scrollId) {
+      scrollTargetRef.current = null;
+      cardWrapperRefs.current.get(scrollId)?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // ── 2. Apply FLIP animation ──────────────────────────────────────────────
+    const primaryId = flipPrimaryRef.current;
+    flipPrimaryRef.current = null;
+
+    cardWrapperRefs.current.forEach((el, id) => {
+      const prevTop = snap.get(id);
+      if (prevTop === undefined) return;
+      const dy = prevTop - el.getBoundingClientRect().top;
+      if (Math.abs(dy) < 1) return;
+      // Primary moved card gets z-index 20; displaced cards get 10
+      el.style.zIndex = id === primaryId ? '20' : '10';
+      // Apply inverse offset instantly, then animate to natural position
+      el.style.transition = 'none';
+      el.style.transform = `translateY(${dy}px)`;
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          el.style.transition = 'transform 0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+          el.style.transform = '';
+          const onEnd = () => {
+            el.style.zIndex = '';
+            el.removeEventListener('transitionend', onEnd);
+          };
+          el.addEventListener('transitionend', onEnd);
+        });
+      });
+    });
+
+    snapshotRef.current = new Map(); // clear after use
+  }); // runs after every render; snapshotRef guards against no-op runs
 
 
   // ── Ranking (used when NOT editing) ─────────────────────────────
@@ -133,16 +197,64 @@ export default function ItineraryPage() {
     });
     setManualOrderDays(prev => new Set(prev).add(activeDay));
     setIsEditing(false);
+    setSelectedIndex(null);
   }
 
   function cancelEdits() {
     setEditAttractions(trip.days[activeDay]?.attractions ?? []);
     setIsEditing(false);
+    setSelectedIndex(null);
+  }
+
+  // ── Up/Down reorder via buttons ───────────────────────────────────
+  function handleMoveUp(i: number) {
+    if (i <= 0) return;
+    const source = isEditing
+      ? editAttractions
+      : manualOrderDays.has(activeDay)
+        ? (trip.days[activeDay]?.attractions ?? [])
+        : rankedAttractions;
+    const next = [...source];
+    [next[i - 1], next[i]] = [next[i], next[i - 1]];
+    captureSnapshot(source[i].id, source[i].id); // primaryId = moved card
+    setSelectedIndex(i - 1);
+    if (isEditing) {
+      setEditAttractions(next);
+    } else {
+      setTrip(prev => ({
+        ...prev,
+        days: prev.days.map((d, di) => di === activeDay ? { ...d, attractions: next } : d),
+      }));
+      setManualOrderDays(prev => new Set(prev).add(activeDay));
+    }
+  }
+
+  function handleMoveDown(i: number, total: number) {
+    if (i >= total - 1) return;
+    const source = isEditing
+      ? editAttractions
+      : manualOrderDays.has(activeDay)
+        ? (trip.days[activeDay]?.attractions ?? [])
+        : rankedAttractions;
+    const next = [...source];
+    [next[i], next[i + 1]] = [next[i + 1], next[i]];
+    captureSnapshot(source[i].id, source[i].id); // primaryId = moved card
+    setSelectedIndex(i + 1);
+    if (isEditing) {
+      setEditAttractions(next);
+    } else {
+      setTrip(prev => ({
+        ...prev,
+        days: prev.days.map((d, di) => di === activeDay ? { ...d, attractions: next } : d),
+      }));
+      setManualOrderDays(prev => new Set(prev).add(activeDay));
+    }
   }
 
   // Switch day: auto-save current day edits first, then load new day atomically
   function switchDay(newDayIndex: number) {
     if (newDayIndex === activeDay) return;
+    setSelectedIndex(null);
     if (isEditing) {
       // Save current day's edits and load new day in one batch → single render
       setTrip(prev => {
@@ -170,7 +282,7 @@ export default function ItineraryPage() {
       : rankedAttractions;
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }} onClick={() => setSelectedIndex(null)}>
 
       <Navbar
         showBack
@@ -351,19 +463,107 @@ export default function ItineraryPage() {
               </span>
             </div>
 
-            {displayAttractions.map((attraction, i) => (
-              <AttractionCard
-                key={attraction.id}
-                attraction={attraction}
-                index={i}
-                isEditing={isEditing}
-                onDelete={() => handleDelete(i)}
-                onDragStart={() => handleDragStart(i)}
-                onDragOver={() => handleDragOver(i)}
-                onDrop={() => handleDrop(i)}
-                isDragOver={dragOverIndex === i}
-              />
-            ))}
+            {displayAttractions.map((attraction, i) => {
+              const isSelected = selectedIndex === i;
+              const isFirst = i === 0;
+              const isLast = i === displayAttractions.length - 1;
+              return (
+                <div
+                  key={attraction.id}
+                  ref={el => {
+                    if (el) cardWrapperRefs.current.set(attraction.id, el);
+                    else cardWrapperRefs.current.delete(attraction.id);
+                  }}
+                  style={{ position: 'relative', zIndex: 0 }}
+                >
+                  <AttractionCard
+                    attraction={attraction}
+                    index={i}
+                    isEditing={isEditing}
+                    onDelete={() => handleDelete(i)}
+                    onDragStart={() => handleDragStart(i)}
+                    onDragOver={() => handleDragOver(i)}
+                    onDrop={() => handleDrop(i)}
+                    isDragOver={dragOverIndex === i}
+                    isSelected={isSelected}
+                    onSelect={e => { e.stopPropagation(); setSelectedIndex(isSelected ? null : i); }}
+                  />
+
+                  {/* ── External up/down triangle buttons ── */}
+                  <div
+                    style={{
+                      position: 'absolute',
+                      top: '50%',
+                      left: 'calc(100% + 12px)',
+                      transform: 'translateY(-50%)',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      gap: 6,
+                      opacity: isSelected ? 1 : 0,
+                      pointerEvents: isSelected ? 'auto' : 'none',
+                      transition: 'opacity 0.2s ease',
+                    }}
+                  >
+                    {/* Up triangle */}
+                    <button
+                      onClick={e => { e.stopPropagation(); handleMoveUp(i); }}
+                      title="上移"
+                      disabled={isFirst}
+                      style={{
+                        width: 32,
+                        height: 32,
+                        background: isFirst ? 'transparent' : 'rgba(255,255,255,0.9)',
+                        border: '1px solid var(--color-border)',
+                        borderRadius: 8,
+                        cursor: isFirst ? 'default' : 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        opacity: isFirst ? 0.25 : 1,
+                        boxShadow: isFirst ? 'none' : '0 2px 8px rgba(0,0,0,0.10)',
+                        transition: 'opacity 0.15s, box-shadow 0.15s',
+                        padding: 0,
+                        backdropFilter: 'blur(4px)',
+                      }}
+                    >
+                      {/* Solid upward triangle */}
+                      <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                        <polygon points="6,0 12,10 0,10" fill={isFirst ? 'var(--color-border)' : 'var(--color-text)'} />
+                      </svg>
+                    </button>
+
+                    {/* Down triangle */}
+                    <button
+                      onClick={e => { e.stopPropagation(); handleMoveDown(i, displayAttractions.length); }}
+                      title="下移"
+                      disabled={isLast}
+                      style={{
+                        width: 32,
+                        height: 32,
+                        background: isLast ? 'transparent' : 'rgba(255,255,255,0.9)',
+                        border: '1px solid var(--color-border)',
+                        borderRadius: 8,
+                        cursor: isLast ? 'default' : 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        opacity: isLast ? 0.25 : 1,
+                        boxShadow: isLast ? 'none' : '0 2px 8px rgba(0,0,0,0.10)',
+                        transition: 'opacity 0.15s, box-shadow 0.15s',
+                        padding: 0,
+                        backdropFilter: 'blur(4px)',
+                      }}
+                    >
+                      {/* Solid downward triangle */}
+                      <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                        <polygon points="6,10 0,0 12,0" fill={isLast ? 'var(--color-border)' : 'var(--color-text)'} />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
 
             {isEditing && displayAttractions.length === 0 && (
               <div style={{

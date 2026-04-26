@@ -64,6 +64,8 @@ interface AttractionCardProps {
   onDragOver?: (e: React.DragEvent) => void;
   onDrop?: (e: React.DragEvent) => void;
   isDragOver?: boolean;
+  isSelected?: boolean;
+  onSelect?: (e: React.MouseEvent) => void;
 }
 
 export default function AttractionCard({
@@ -75,6 +77,8 @@ export default function AttractionCard({
   onDragOver,
   onDrop,
   isDragOver,
+  isSelected,
+  onSelect,
 }: AttractionCardProps) {
   const [confirmDelete, setConfirmDelete] = useState(false);
 
@@ -96,19 +100,23 @@ export default function AttractionCard({
 
   return (
     <div
-      className="attraction-card animate-fade-up"
+      className="attraction-card"
       draggable={isEditing}
       onDragStart={onDragStart}
       onDragOver={e => { e.preventDefault(); onDragOver?.(e); }}
       onDrop={onDrop}
+      onClick={onSelect}
       style={{
-        animationDelay: `${index * 0.05}s`,
         position: 'relative',
         opacity: isDragOver ? 0.5 : 1,
-        transition: 'opacity 0.15s, transform 0.15s',
+        transition: 'opacity 0.15s, transform 0.15s, outline 0.15s',
         transform: isDragOver ? 'scale(0.98)' : 'scale(1)',
-        outline: isDragOver ? '2px dashed var(--color-accent)' : 'none',
-        cursor: isEditing ? 'grab' : 'default',
+        outline: isSelected
+          ? '2px solid var(--color-accent)'
+          : isDragOver
+            ? '2px dashed var(--color-accent)'
+            : 'none',
+        cursor: isEditing ? 'grab' : 'pointer',
       }}
     >
       {/* ── Confirmation overlay ─────────────────────────────── */}
