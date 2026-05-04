@@ -39,6 +39,37 @@ function detachMarker(marker) {
   marker.map = null;
 }
 
+function toRouteLocationLabel(spot) {
+  const name = String(spot?.name || "").trim();
+  const area = String(spot?.area || "").trim();
+  if (name) {
+    return area ? `${name} ${area} 日本` : `${name} 日本`;
+  }
+  if (spot?.position?.lat != null && spot?.position?.lng != null) {
+    return `${spot.position.lat},${spot.position.lng}`;
+  }
+  return "";
+}
+
+function buildGoogleMapsDirectionsUrl(points) {
+  if (!Array.isArray(points) || points.length < 2) {
+    return "";
+  }
+
+  const normalized = points.map((spot) => toRouteLocationLabel(spot)).filter(Boolean);
+  if (normalized.length < 2) {
+    return "";
+  }
+
+  const origin = encodeURIComponent(normalized[0]);
+  const destination = encodeURIComponent(normalized[normalized.length - 1]);
+  const waypointValues = normalized.slice(1, -1).slice(0, 8);
+  const waypoints =
+    waypointValues.length > 0 ? `&waypoints=${encodeURIComponent(waypointValues.join("|"))}` : "";
+
+  return `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}${waypoints}&travelmode=driving`;
+}
+
 export default function GoogleMapPanel({
   apiKey,
   mapId = "",
@@ -54,6 +85,7 @@ export default function GoogleMapPanel({
   const markersRef = useRef([]);
   const directionsServiceRef = useRef(null);
   const directionsRendererRef = useRef(null);
+  const directionsDeniedRef = useRef(false);
   const constructorsRef = useRef({
     MapClass: null,
     InfoWindowClass: null,
@@ -65,10 +97,19 @@ export default function GoogleMapPanel({
 
   const [mapError, setMapError] = useState("");
   const [isMapReady, setIsMapReady] = useState(false);
+  const [routeError, setRouteError] = useState("");
 
   const selectedSpot = useMemo(
     () => spots.find((spot) => spot.name === selectedSpotName) || spots[0],
     [spots, selectedSpotName]
+  );
+  const routePoints = useMemo(
+    () => routeSpots.filter((spot) => spot?.position),
+    [routeSpots]
+  );
+  const googleMapsDirectionsUrl = useMemo(
+    () => buildGoogleMapsDirectionsUrl(routePoints),
+    [routePoints]
   );
 
   useEffect(() => {
@@ -222,22 +263,31 @@ export default function GoogleMapPanel({
     const service = directionsServiceRef.current;
     const { TravelMode } = constructorsRef.current;
 
+    if (routePoints.length < 2) {
+      if (renderer) {
+        renderer.set("directions", null);
+      }
+      setRouteError("");
+      directionsDeniedRef.current = false;
+      return;
+    }
+
     if (!renderer || !service || !TravelMode) {
+      setRouteError("目前專案未啟用地圖內建路線 API，請改用下方 Google Maps 導航連結。");
+      return;
+    }
+    if (directionsDeniedRef.current) {
+      setRouteError("Directions API 被拒絕，請直接使用下方 Google Maps 導航連結。");
       return;
     }
 
-    const points = routeSpots.filter((spot) => spot?.position);
-    if (points.length < 2) {
-      renderer.set("directions", null);
-      return;
-    }
-
-    const origin = points[0].position;
-    const destination = points[points.length - 1].position;
-    const waypoints = points.slice(1, -1).map((spot) => ({
+    const origin = routePoints[0].position;
+    const destination = routePoints[routePoints.length - 1].position;
+    const waypoints = routePoints.slice(1, -1).map((spot) => ({
       location: spot.position,
       stopover: true,
     }));
+    setRouteError("");
 
     service.route(
       {
@@ -250,12 +300,20 @@ export default function GoogleMapPanel({
       (result, status) => {
         if (status === "OK" && result) {
           renderer.setDirections(result);
+          setRouteError("");
+          directionsDeniedRef.current = false;
         } else {
           renderer.set("directions", null);
+          directionsDeniedRef.current = status === "REQUEST_DENIED";
+          setRouteError(
+            status === "REQUEST_DENIED"
+              ? "Directions API 被拒絕（通常是未啟用 Legacy Directions API）。請改用下方 Google Maps 導航連結。"
+              : `地圖內路線規劃失敗（${status}），可改用下方 Google Maps 導航連結。`
+          );
         }
       }
     );
-  }, [isMapReady, routeSpots]);
+  }, [googleMapsDirectionsUrl, isMapReady, routePoints]);
 
   useEffect(() => {
     if (!isMapReady || !selectedSpot || !selectedSpot.position || !mapRef.current) {
@@ -279,5 +337,22 @@ export default function GoogleMapPanel({
     return <div className="map-placeholder map-placeholder--error">{mapError}</div>;
   }
 
-  return <div className="map-canvas" ref={mapElementRef} />;
+  return (
+    <>
+      <div className="map-canvas" ref={mapElementRef} />
+      {routeError && googleMapsDirectionsUrl ? (
+        <div className="map-route-fallback">
+          <p>{routeError}</p>
+          <a
+            className="map-route-fallback__link"
+            href={googleMapsDirectionsUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            在 Google Maps 開啟路線
+          </a>
+        </div>
+      ) : null}
+    </>
+  );
 }

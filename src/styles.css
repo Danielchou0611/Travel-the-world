@@ -454,6 +454,37 @@ body {
   flex-wrap: wrap;
 }
 
+.map-route-fallback {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border: 1px dashed #d4b98e;
+  border-radius: 12px;
+  background: #fff8ea;
+}
+
+.map-route-fallback p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #6d4e10;
+}
+
+.map-route-fallback__link {
+  margin-top: 8px;
+  display: inline-block;
+  border: 1px solid #c19a63;
+  color: #6a4a14;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: #fff;
+}
+
+.map-route-fallback__link:hover {
+  background: #f9ecd5;
+}
+
 @media (max-width: 980px) {
   .layout__content {
     grid-template-columns: 1fr;
