@@ -29,7 +29,7 @@ station_distance_efficiency = 1 / (1 + distance_to_station_km / 5)
 
 距離分數以各地區主要交通中心為參考點。這讓「距離」有固定基準，不再混用飯店、上一站或景點密度等不同語意。
 
-目前 sample data 使用：
+目前主 pipeline 使用各都道府縣對應的主要交通中心：
 
 | Region | station_anchor |
 | --- | --- |
@@ -64,9 +64,13 @@ station_distance_efficiency = 1 / (1 + distance_to_station_km / 5)
 - 決定 `finalScore` 是否改成 `baseScore` 與 `scheduleScore` 的加權結果
 - 未來可用 Google Directions API 取代目前前端的簡化估算
 
-## Week 1 交付狀態
+## 目前主輸出
 
-- 原始資料：`data/raw/attractions_japan_sample.csv`
-- 輸出資料：`data/processed/attractions_scored.csv`
-- Pipeline：`scripts/score_attractions.py`
-- 目前資料筆數：55 筆景點
+- 原始資料：`data/raw/japan_with_rating.json`
+- normalized：`data/processed/japan_attractions_normalized.csv`
+- scored：`data/processed/japan_attractions_scored.csv`
+- Pipeline：`scripts/build_japan_attractions.py`
+
+## Legacy
+
+- `scripts/score_attractions.py` 保留作為 Week 1 的 55 筆 sample CSV pipeline

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Legacy multi-file Daniel JSON conversion pipeline kept for compatibility."""
+"""Build normalized and scored attraction catalogs from a single Japan JSON dataset."""
 
 from __future__ import annotations
 
@@ -13,7 +13,7 @@ from pathlib import Path
 from typing import Any
 
 
-SOURCE_NAME = "Travel-the-world-Daniel"
+SOURCE_NAME = "japan_with_rating"
 DEFAULT_GOOGLE_RATING = 4.0
 DEFAULT_REVIEW_COUNT = 100
 DEFAULT_INTEREST_MATCH = 0.70
@@ -80,6 +80,7 @@ NORMALIZED_FIELDS = [
     "google_rating",
     "google_star",
     "google_review_count",
+    "google_name_matched",
     "image_url",
     "has_image",
     "source",
@@ -104,30 +105,36 @@ SCORED_FIELDS = [
     "lat",
     "lng",
     "source_id",
+    "google_name_matched",
 ]
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Convert Daniel Japan attraction JSON files.")
+    parser = argparse.ArgumentParser(description="Build Japan attraction catalogs from JSON.")
     parser.add_argument(
-        "--input-dir",
-        default="Travel-the-world-Daniel/japan_data",
-        help="Directory containing per-prefecture JSON files.",
+        "--input-json",
+        default="data/raw/japan_with_rating.json",
+        help="Path to the source JSON file.",
+    )
+    parser.add_argument(
+        "--prefecture-lookup",
+        default="data/reference/source_id_metadata_lookup.csv",
+        help="Optional CSV used to backfill prefecture/category/coordinates by source_id.",
     )
     parser.add_argument(
         "--normalized-output",
-        default="data/processed/daniel_attractions_normalized.csv",
-        help="Output path for cleaned source catalog.",
+        default="data/processed/japan_attractions_normalized.csv",
+        help="Output path for the normalized CSV.",
     )
     parser.add_argument(
         "--scored-output",
-        default="data/processed/daniel_attractions_scored.csv",
-        help="Output path for app-ready scored catalog.",
+        default="data/processed/japan_attractions_scored.csv",
+        help="Output path for the scored CSV.",
     )
     parser.add_argument(
         "--report-output",
-        default="reports/daniel_conversion_report.json",
-        help="Output path for conversion statistics.",
+        default="reports/japan_attractions_pipeline_report.json",
+        help="Output path for the pipeline report JSON.",
     )
     parser.add_argument(
         "--frontend-output",
@@ -137,21 +144,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--sync-frontend",
         action="store_true",
-        help="Copy scored output to the frontend catalog after conversion.",
+        help="Copy the scored CSV to the frontend catalog path.",
     )
     return parser.parse_args()
 
 
-def parse_coordinates(value: str) -> tuple[float | None, float | None]:
-    match = COORDINATE_PATTERN.fullmatch(value.strip())
-    if not match:
-        return None, None
-    return float(match.group("lat")), float(match.group("lng"))
-
-
-def coalesce(row: dict[str, Any], keys: list[str]) -> str:
+def coalesce(record: dict[str, Any], keys: list[str]) -> str:
     for key in keys:
-        value = row.get(key)
+        value = record.get(key)
         if value not in (None, ""):
             return str(value).strip()
     return ""
@@ -159,7 +159,145 @@ def coalesce(row: dict[str, Any], keys: list[str]) -> str:
 
 def clean_image_url(value: str) -> str:
     value = value.strip()
-    return "" if value == "No Image" else value
+    return "" if not value or value == "No Image" else value
+
+
+def parse_coordinates(record: dict[str, Any]) -> tuple[str, str]:
+    coordinate_text = coalesce(record, ["coordinates", "coordinate", "geo"])
+    if coordinate_text:
+        match = COORDINATE_PATTERN.fullmatch(coordinate_text)
+        if match:
+            return f"{float(match.group('lat')):.7f}", f"{float(match.group('lng')):.7f}"
+
+    lat = coalesce(record, ["lat", "latitude"])
+    lng = coalesce(record, ["lng", "lon", "long", "longitude"])
+    return lat, lng
+
+
+def as_float(value: str, fallback: float) -> float:
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return fallback
+
+
+def normalize_prefecture(value: str) -> str:
+    return value.strip()
+
+
+def load_prefecture_lookup(path: Path) -> dict[str, dict[str, str]]:
+    if not path.exists():
+        return {}
+
+    with path.open(newline="", encoding="utf-8") as file:
+        reader = csv.DictReader(file)
+        lookup: dict[str, dict[str, str]] = {}
+        for row in reader:
+            source_id = (row.get("source_id") or "").strip()
+            if source_id:
+                lookup[source_id] = {key: (value or "").strip() for key, value in row.items()}
+        return lookup
+
+
+def metadata_score(row: dict[str, str]) -> tuple[int, int, int, int]:
+    return (
+        1 if row["prefecture"] else 0,
+        1 if row["lat"] and row["lng"] else 0,
+        1 if row["has_image"] == "1" else 0,
+        1 if row["google_review_count"] else 0,
+    )
+
+
+def load_normalized_rows(
+    input_json: Path,
+    prefecture_lookup: dict[str, dict[str, str]],
+) -> tuple[list[dict[str, str]], dict[str, int]]:
+    raw_data = json.loads(input_json.read_text(encoding="utf-8"))
+    if not isinstance(raw_data, list):
+        raise ValueError("Input JSON must be a list of attraction objects.")
+
+    stats = {
+        "raw_rows": len(raw_data),
+        "duplicate_rows_removed": 0,
+        "lookup_prefecture_hits": 0,
+        "rows_missing_prefecture": 0,
+        "rows_missing_coordinates": 0,
+        "rows_missing_station_mapping": 0,
+        "rows_missing_google_rating": 0,
+        "rows_missing_review_count": 0,
+    }
+
+    deduped: dict[str, dict[str, str]] = {}
+    for record in raw_data:
+        if not isinstance(record, dict):
+            continue
+
+        source_id = coalesce(record, ["id", "source_id"])
+        if not source_id:
+            continue
+
+        lookup_row = prefecture_lookup.get(source_id, {})
+        lat, lng = parse_coordinates(record)
+        if (not lat or not lng) and lookup_row:
+            lat = lat or lookup_row.get("lat", "")
+            lng = lng or lookup_row.get("lng", "")
+
+        prefecture = normalize_prefecture(
+            coalesce(record, ["prefecture", "region", "address_prefecture", "address_region"])
+        )
+        if not prefecture and lookup_row:
+            prefecture = lookup_row.get("prefecture", "")
+            if prefecture:
+                stats["lookup_prefecture_hits"] += 1
+
+        category = coalesce(record, ["category", "type"]) or lookup_row.get("category", "")
+        image_url = clean_image_url(coalesce(record, ["image_url", "image"])) or lookup_row.get(
+            "image_url",
+            "",
+        )
+
+        row = {
+            "source_id": source_id,
+            "name": coalesce(record, ["name"]) or lookup_row.get("name", ""),
+            "prefecture": prefecture,
+            "category": category,
+            "lat": lat,
+            "lng": lng,
+            "google_rating": coalesce(record, ["google_rating", "google_star", "rating"]),
+            "google_star": coalesce(record, ["google_star", "google_rating", "rating"]),
+            "google_review_count": coalesce(
+                record,
+                ["google_review_count", "review_count", "reviews", "rating_count"],
+            ),
+            "google_name_matched": coalesce(record, ["google_name_matched", "matched_name"]),
+            "image_url": image_url,
+            "has_image": "1" if image_url else "0",
+            "source": SOURCE_NAME,
+        }
+
+        current = deduped.get(source_id)
+        if current is None:
+            deduped[source_id] = row
+        else:
+            stats["duplicate_rows_removed"] += 1
+            if metadata_score(row) > metadata_score(current):
+                deduped[source_id] = row
+
+    normalized_rows = list(deduped.values())
+    for row in normalized_rows:
+        if not row["prefecture"]:
+            stats["rows_missing_prefecture"] += 1
+        elif row["prefecture"] not in STATION_ANCHORS:
+            stats["rows_missing_station_mapping"] += 1
+        if not row["lat"] or not row["lng"]:
+            stats["rows_missing_coordinates"] += 1
+        if not row["google_rating"]:
+            stats["rows_missing_google_rating"] += 1
+        if not row["google_review_count"]:
+            stats["rows_missing_review_count"] += 1
+
+    normalized_rows.sort(key=lambda row: (row["prefecture"], row["name"], row["source_id"]))
+    return normalized_rows, stats
 
 
 def haversine_km(lat1: float, lng1: float, lat2: float, lng2: float) -> float:
@@ -175,98 +313,26 @@ def haversine_km(lat1: float, lng1: float, lat2: float, lng2: float) -> float:
     return earth_radius_km * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
 
 
-def load_raw_rows(input_dir: Path) -> tuple[list[dict[str, str]], dict[str, int]]:
-    rows: list[dict[str, str]] = []
-    stats = {
-        "input_files": 0,
-        "raw_rows": 0,
-        "rows_without_coordinates": 0,
-        "rows_without_station_mapping": 0,
-    }
+def build_scored_rows(rows: list[dict[str, str]]) -> tuple[list[dict[str, str]], dict[str, int]]:
+    eligible_rows = [
+        row for row in rows if row["prefecture"] in STATION_ANCHORS and row["lat"] and row["lng"]
+    ]
+    if not eligible_rows:
+        return [], {"scored_rows": 0, "skipped_rows": len(rows)}
 
-    for path in sorted(input_dir.glob("*.json")):
-        stats["input_files"] += 1
-        prefecture = path.stem
-        anchor = STATION_ANCHORS.get(prefecture)
-        if anchor is None:
-            stats["rows_without_station_mapping"] += 1
+    review_values = [
+        max(0, int(as_float(row["google_review_count"], DEFAULT_REVIEW_COUNT))) for row in eligible_rows
+    ]
+    max_log_reviews = max((math.log1p(value) for value in review_values), default=1.0) or 1.0
 
-        data = json.loads(path.read_text(encoding="utf-8"))
-        for raw in data:
-            stats["raw_rows"] += 1
-            lat, lng = parse_coordinates(str(raw.get("coordinates", "")))
-            if lat is None or lng is None:
-                stats["rows_without_coordinates"] += 1
-
-            image_url = clean_image_url(str(raw.get("image", "")))
-            google_rating = coalesce(raw, ["google_rating", "google_rate", "rating"])
-            google_star = coalesce(raw, ["google_star", "star", "stars"])
-            if not google_rating:
-                google_rating = google_star
-            if not google_star:
-                google_star = google_rating
-
-            rows.append(
-                {
-                    "source_id": str(raw.get("id", "")).strip(),
-                    "name": str(raw.get("name", "")).strip(),
-                    "prefecture": prefecture,
-                    "category": str(raw.get("type", "")).strip(),
-                    "lat": "" if lat is None else f"{lat:.7f}",
-                    "lng": "" if lng is None else f"{lng:.7f}",
-                    "google_rating": google_rating,
-                    "google_star": google_star,
-                    "google_review_count": coalesce(
-                        raw,
-                        ["google_review_count", "review_count", "reviews", "rating_count"],
-                    ),
-                    "image_url": image_url,
-                    "has_image": "1" if image_url else "0",
-                    "source": SOURCE_NAME,
-                }
-            )
-
-    return rows, stats
-
-
-def dedupe_rows(rows: list[dict[str, str]]) -> tuple[list[dict[str, str]], int]:
-    by_id: dict[str, dict[str, str]] = {}
-    duplicate_count = 0
-
-    for row in rows:
-        key = row["source_id"] or f"{row['prefecture']}::{row['name']}::{row['lat']}::{row['lng']}"
-        current = by_id.get(key)
-        if current is None:
-            by_id[key] = row
-            continue
-
-        duplicate_count += 1
-        current_has_image = current["has_image"] == "1"
-        row_has_image = row["has_image"] == "1"
-        if row_has_image and not current_has_image:
-            by_id[key] = row
-
-    return list(by_id.values()), duplicate_count
-
-
-def as_float(value: str, fallback: float) -> float:
-    try:
-        return float(value)
-    except (TypeError, ValueError):
-        return fallback
-
-
-def build_scored_rows(rows: list[dict[str, str]]) -> list[dict[str, str]]:
-    max_log_reviews = math.log1p(DEFAULT_REVIEW_COUNT)
     scored_rows: list[dict[str, str]] = []
-
-    for index, row in enumerate(rows, start=1):
+    for index, row in enumerate(eligible_rows, start=1):
         anchor_name, anchor_lat, anchor_lng = STATION_ANCHORS[row["prefecture"]]
         lat = as_float(row["lat"], anchor_lat)
         lng = as_float(row["lng"], anchor_lng)
-        distance_to_station = haversine_km(lat, lng, anchor_lat, anchor_lng)
         google_rating = as_float(row["google_rating"], DEFAULT_GOOGLE_RATING)
-        review_count = int(as_float(row["google_review_count"], DEFAULT_REVIEW_COUNT))
+        review_count = max(0, int(as_float(row["google_review_count"], DEFAULT_REVIEW_COUNT)))
+        distance_to_station = haversine_km(lat, lng, anchor_lat, anchor_lng)
         rating_norm = google_rating / 5
         review_norm = math.log1p(review_count) / max_log_reviews
         station_distance_efficiency = 1 / (1 + distance_to_station / 5)
@@ -294,13 +360,15 @@ def build_scored_rows(rows: list[dict[str, str]]) -> list[dict[str, str]]:
                 "station_distance_efficiency": f"{station_distance_efficiency:.4f}",
                 "xai_score": f"{xai_score:.4f}",
                 "image_url": row["image_url"],
-                "lat": row["lat"],
-                "lng": row["lng"],
+                "lat": f"{lat:.7f}",
+                "lng": f"{lng:.7f}",
                 "source_id": row["source_id"],
+                "google_name_matched": row["google_name_matched"],
             }
         )
 
-    return sorted(scored_rows, key=lambda item: float(item["xai_score"]), reverse=True)
+    scored_rows.sort(key=lambda item: float(item["xai_score"]), reverse=True)
+    return scored_rows, {"scored_rows": len(scored_rows), "skipped_rows": len(rows) - len(scored_rows)}
 
 
 def write_csv(path: Path, rows: list[dict[str, str]], fieldnames: list[str]) -> None:
@@ -318,24 +386,24 @@ def write_report(path: Path, report: dict[str, Any]) -> None:
 
 def main() -> None:
     args = parse_args()
-    raw_rows, stats = load_raw_rows(Path(args.input_dir))
-    normalized_rows, duplicate_count = dedupe_rows(raw_rows)
-    scored_rows = build_scored_rows(normalized_rows)
+    input_json = Path(args.input_json)
+    prefecture_lookup = load_prefecture_lookup(Path(args.prefecture_lookup))
+    normalized_rows, normalize_stats = load_normalized_rows(input_json, prefecture_lookup)
+    scored_rows, score_stats = build_scored_rows(normalized_rows)
 
     normalized_output = Path(args.normalized_output)
     scored_output = Path(args.scored_output)
-    report_output = Path(args.report_output)
     frontend_output = Path(args.frontend_output)
+    report_output = Path(args.report_output)
 
     write_csv(normalized_output, normalized_rows, NORMALIZED_FIELDS)
     write_csv(scored_output, scored_rows, SCORED_FIELDS)
 
-    report = {
-        **stats,
+    report: dict[str, Any] = {
+        **normalize_stats,
+        **score_stats,
+        "prefecture_lookup_rows": len(prefecture_lookup),
         "normalized_rows": len(normalized_rows),
-        "scored_rows": len(scored_rows),
-        "duplicate_rows_removed": duplicate_count,
-        "rows_without_image": sum(1 for row in normalized_rows if row["has_image"] == "0"),
         "default_google_rating": DEFAULT_GOOGLE_RATING,
         "default_review_count": DEFAULT_REVIEW_COUNT,
         "default_interest_match": DEFAULT_INTEREST_MATCH,
@@ -349,9 +417,10 @@ def main() -> None:
         report["frontend_output"] = str(frontend_output)
 
     write_report(report_output, report)
+
     print(f"Wrote {len(normalized_rows)} normalized attractions to {normalized_output}")
     print(f"Wrote {len(scored_rows)} scored attractions to {scored_output}")
-    print(f"Wrote conversion report to {report_output}")
+    print(f"Wrote pipeline report to {report_output}")
     if args.sync_frontend:
         print(f"Synced frontend catalog to {frontend_output}")
 

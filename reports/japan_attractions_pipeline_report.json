@@ -1,0 +1,20 @@
+{
+  "raw_rows": 5881,
+  "duplicate_rows_removed": 1878,
+  "lookup_prefecture_hits": 5881,
+  "rows_missing_prefecture": 0,
+  "rows_missing_coordinates": 0,
+  "rows_missing_station_mapping": 0,
+  "rows_missing_google_rating": 244,
+  "rows_missing_review_count": 0,
+  "scored_rows": 4003,
+  "skipped_rows": 0,
+  "prefecture_lookup_rows": 4003,
+  "normalized_rows": 4003,
+  "default_google_rating": 4.0,
+  "default_review_count": 100,
+  "default_interest_match": 0.7,
+  "normalized_output": "data/processed/japan_attractions_normalized.csv",
+  "scored_output": "data/processed/japan_attractions_scored.csv",
+  "frontend_output": "frontend/public/data/attractions_scored.csv"
+}

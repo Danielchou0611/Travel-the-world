@@ -1,31 +1,36 @@
 # Japan Travel Itinerary App
 
-Week 1 delivers the first data pipeline, scoring formula documentation, a 55-attraction sample dataset, and a React itinerary editor prototype using `dnd-kit`.
-
-Week 2 adds API-ready itinerary update/delete logic and a Python user preference analysis flow. The 200+ real attraction dataset is intentionally left pending until the formal data source is available.
+This repo now uses a single JSON-based attraction pipeline for the main catalog, alongside the React itinerary editor prototype and the Python user preference analysis flow.
 
 Scoring and schedule recalculation notes:
 
 - `docs/scoring_formula.md`
 - `docs/schedule_logic.md`
 
-## Data Pipeline
+## Main Data Pipeline
 
 ```bash
-python3 scripts/score_attractions.py
+python3 scripts/build_japan_attractions.py --sync-frontend
 ```
 
 Input:
 
-- `data/raw/attractions_japan_sample.csv`
+- `data/raw/japan_with_rating.json`
 
-Output:
+Outputs:
 
-- `data/processed/attractions_scored.csv`
+- `data/processed/japan_attractions_normalized.csv`
+- `data/processed/japan_attractions_scored.csv`
+- `reports/japan_attractions_pipeline_report.json`
+- `frontend/public/data/attractions_scored.csv`
 
 Formula details:
 
 - `docs/scoring_formula.md`
+
+Pipeline notes:
+
+- `docs/pipeline_japan_json.md`
 
 ## Frontend Prototype
 
@@ -47,22 +52,10 @@ The custom attraction search reads this frontend catalog:
 
 - `frontend/public/data/attractions_scored.csv`
 
-After rerunning the scoring pipeline, sync the catalog:
+After rerunning the main pipeline, sync the catalog:
 
 ```bash
-cp data/processed/attractions_scored.csv frontend/public/data/attractions_scored.csv
-```
-
-Convert the `Travel-the-world-Daniel` dataset into reusable catalogs:
-
-```bash
-python3 scripts/convert_daniel_attractions.py
-```
-
-Use the converted Daniel catalog in the frontend:
-
-```bash
-python3 scripts/convert_daniel_attractions.py --sync-frontend
+python3 scripts/build_japan_attractions.py --sync-frontend
 ```
 
 Build check:
@@ -86,3 +79,10 @@ Output:
 
 - `reports/preference_analysis.json`
 - `reports/preference_analysis.md`
+
+## Legacy Scripts
+
+These remain in the repo for earlier milestones and compatibility checks:
+
+- `scripts/score_attractions.py` for the original 55-row sample CSV pipeline
+- `scripts/convert_daniel_attractions.py` for the earlier multi-file Daniel JSON conversion flow

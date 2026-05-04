@@ -10,10 +10,10 @@
 frontend/public/data/attractions_scored.csv
 ```
 
-來源資料由 pipeline 產生：
+來源資料由主 pipeline 產生：
 
 ```text
-data/processed/attractions_scored.csv
+data/processed/japan_attractions_scored.csv
 ```
 
 ## 使用方式
@@ -31,41 +31,16 @@ data/processed/attractions_scored.csv
 
 ## 圖片處理
 
-目前 scored CSV 沒有圖片欄位，因此從 catalog 加入的景點會先用景點名稱與地區組成 Unsplash 圖片查詢 URL。
+目前若 scored CSV 沒有 `image_url`，從 catalog 加入的景點會先用景點名稱與地區組成 Unsplash 圖片查詢 URL。
 
 若圖片載入失敗，前端會自動改用固定 fallback 圖，避免 demo 時破圖。
 
 ## CSV 同步
 
-若重新跑 scoring pipeline，需要同步前端 catalog：
+若重新跑主 pipeline，需要同步前端 catalog：
 
 ```bash
-python3 scripts/score_attractions.py
-cp data/processed/attractions_scored.csv frontend/public/data/attractions_scored.csv
-```
-
-若要使用 `Travel-the-world-Daniel` 的完整資料，使用可重複執行的轉檔程式：
-
-```bash
-python3 scripts/convert_daniel_attractions.py
-```
-
-輸出：
-
-- `data/processed/daniel_attractions_normalized.csv`
-- `data/processed/daniel_attractions_scored.csv`
-- `reports/daniel_conversion_report.json`
-
-若要直接改成前端搜尋 catalog：
-
-```bash
-python3 scripts/convert_daniel_attractions.py --sync-frontend
-```
-
-這會把 `data/processed/daniel_attractions_scored.csv` 複製到：
-
-```text
-frontend/public/data/attractions_scored.csv
+python3 scripts/build_japan_attractions.py --sync-frontend
 ```
 
 normalized 欄位保留 Google 欄位：
@@ -80,12 +55,13 @@ lng
 google_rating
 google_star
 google_review_count
+google_name_matched
 image_url
 has_image
 source
 ```
 
-目前 Daniel 原始資料沒有 Google rating/star/review count，因此欄位會留空；scored catalog 會用暫定預設值計算 demo 分數。
+目前 `japan_with_rating.json` 若缺 `google_rating`，scored catalog 會用暫定預設值計算 demo 分數。
 
 ## 之後可調整
 

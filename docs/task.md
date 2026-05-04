@@ -1,7 +1,7 @@
 # 📋 個人進度追蹤（李冠霖）
 
 ## Week 1（3/30–4/6）— 技術基礎建立
-- [x] 建立資料分析 pipeline（CSV 清洗）
+- [x] 建立資料分析 pipeline（目前主線為 JSON -> normalized CSV -> scored CSV）
 - [x] 設計景點評分公式（Score = 0.4×評分 + 0.3×log評論 + 0.2×興趣 + 0.1×車站距離效率）
 - [x] 輸出第一版景點評分資料（50+ 景點）
 - [x] 實作行程編輯器 UI（dnd-kit）

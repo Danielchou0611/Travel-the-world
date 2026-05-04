@@ -1,0 +1,21 @@
+{
+  "raw_rows": 5881,
+  "duplicate_rows_removed": 1878,
+  "lookup_prefecture_hits": 5881,
+  "rows_missing_prefecture": 0,
+  "rows_missing_coordinates": 0,
+  "rows_missing_station_mapping": 0,
+  "rows_missing_google_rating": 244,
+  "rows_missing_review_count": 0,
+  "scored_rows": 4003,
+  "skipped_rows": 0,
+  "input_json": "../data/raw/japan_with_rating.json",
+  "prefecture_lookup": "/Users/liguanlin/Desktop/github/1142-webapp/final_project/pipline/reference/source_id_metadata_lookup.csv",
+  "prefecture_lookup_rows": 4003,
+  "normalized_rows": 4003,
+  "default_google_rating": 4.0,
+  "default_review_count": 100,
+  "default_interest_match": 0.7,
+  "normalized_output": "output/japan_with_rating_normalized.csv",
+  "scored_output": "output/japan_with_rating_scored.csv"
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Clean attraction CSV data and calculate XAI-friendly recommendation scores."""
+"""Legacy sample-data pipeline for cleaning attraction CSV and calculating scores."""
 
 from __future__ import annotations
 

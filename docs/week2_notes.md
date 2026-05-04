@@ -18,7 +18,7 @@
 
 ## 資料狀態
 
-正式景點資料之後再匯入，因此 Week 2 的「200+ 景點」目前不使用假資料硬補。現有 55 筆 sample data 只作為 pipeline 與 UI 開發用 placeholder。
+目前主 catalog 已改為 `data/raw/japan_with_rating.json` 產生。Week 2 的 55 筆 sample data 保留為早期 pipeline placeholder，不再是主要資料來源。
 
 ## API 設定
 
