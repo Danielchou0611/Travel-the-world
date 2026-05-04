@@ -459,6 +459,15 @@ def run_rag_prototype(
             pass
 
     collection = client.get_or_create_collection(name=collection_name)
+    existing_ids: list[str] = []
+    try:
+        existing = collection.get(include=[])
+        existing_ids = [item for item in (existing.get("ids") or []) if isinstance(item, str) and item]
+    except Exception:
+        existing_ids = []
+
+    if existing_ids:
+        collection.delete(ids=existing_ids)
 
     chunks = split_text(input_text)
     if not chunks:
