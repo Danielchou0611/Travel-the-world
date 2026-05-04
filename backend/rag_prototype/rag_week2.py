@@ -30,7 +30,15 @@ GEN_MODEL_CANDIDATES = [
 ]
 
 
-def split_text(text: str, chunk_size: int = 280, overlap: int = 60) -> list[str]:
+def split_text(
+    text: str,
+    chunk_size: int = 360,
+    overlap: int = 80,
+    min_chunk_size: int = 140,
+) -> list[str]:
+    if chunk_size <= 0:
+        return []
+
     paragraph_candidates = [re.sub(r"\s+", " ", item).strip() for item in re.split(r"\n+", text)]
     paragraphs = [item for item in paragraph_candidates if item]
 
@@ -40,8 +48,58 @@ def split_text(text: str, chunk_size: int = 280, overlap: int = 60) -> list[str]
     if not paragraphs:
         return []
 
-    chunks: list[str] = []
+    max_overlap = max(0, chunk_size - 1)
+    overlap = max(0, min(overlap, max_overlap))
+
+    heading_pattern = re.compile(
+        r"^(DAY\s*\d+|第[一二三四五六七八九十0-9]+\s*天|行程重點|【[^】]{1,28}(一日遊|半日遊|二日遊|三日遊|四日遊|行程|自由行)[^】]{0,18}】)",
+        flags=re.IGNORECASE,
+    )
+
+    merged_paragraphs: list[str] = []
+    current_parts: list[str] = []
+    current_length = 0
+
+    def flush_current() -> None:
+        nonlocal current_parts, current_length
+        if current_parts:
+            merged_paragraphs.append(" ".join(current_parts))
+        current_parts = []
+        current_length = 0
+
     for paragraph in paragraphs:
+        line = paragraph.strip()
+        if line and heading_pattern.search(line):
+            flush_current()
+            merged_paragraphs.append(line)
+            continue
+
+        paragraph_length = len(paragraph)
+        if not current_parts:
+            current_parts = [paragraph]
+            current_length = paragraph_length
+            continue
+
+        projected_length = current_length + 1 + paragraph_length
+        if projected_length <= chunk_size:
+            current_parts.append(paragraph)
+            current_length = projected_length
+            continue
+
+        overflow_limit = int(chunk_size * 1.45)
+        if current_length < min_chunk_size and projected_length <= overflow_limit:
+            current_parts.append(paragraph)
+            current_length = projected_length
+            continue
+
+        flush_current()
+        current_parts = [paragraph]
+        current_length = paragraph_length
+
+    flush_current()
+
+    chunks: list[str] = []
+    for paragraph in merged_paragraphs:
         if len(paragraph) <= chunk_size:
             chunks.append(paragraph)
             continue
@@ -56,6 +114,7 @@ def split_text(text: str, chunk_size: int = 280, overlap: int = 60) -> list[str]
             if end == len(paragraph):
                 break
             start = max(0, end - overlap)
+
     return chunks
 
 
@@ -74,6 +133,11 @@ def _compact_error_text(error: object, limit: int = 320) -> str:
     if len(message) <= limit:
         return message
     return f"{message[: limit - 3]}..."
+
+
+def _is_dimension_mismatch_error(error: object) -> bool:
+    message = str(error).lower()
+    return "expecting embedding with dimension" in message and "got" in message
 
 
 def _read_json_response(request: Request, timeout_sec: int = 90) -> dict:
@@ -411,12 +475,25 @@ def run_rag_prototype(
             embeddings.append(chunk_embedding)
             used_embed_model = embed_model
 
-        collection.upsert(
-            ids=ids,
-            embeddings=embeddings,
-            documents=chunks,
-            metadatas=[{"chunk_index": index + 1} for index in range(len(chunks))],
-        )
+        try:
+            collection.upsert(
+                ids=ids,
+                embeddings=embeddings,
+                documents=chunks,
+                metadatas=[{"chunk_index": index + 1} for index in range(len(chunks))],
+            )
+        except Exception as upsert_error:
+            if not _is_dimension_mismatch_error(upsert_error):
+                raise
+            # Collection dimension mismatch: recreate so Ollama vectors can be written.
+            client.delete_collection(name=collection_name)
+            collection = client.get_or_create_collection(name=collection_name)
+            collection.upsert(
+                ids=ids,
+                embeddings=embeddings,
+                documents=chunks,
+                metadatas=[{"chunk_index": index + 1} for index in range(len(chunks))],
+            )
 
         query_embedding, query_embed_model = embed_text_with_fallback(user_query, "retrieval_query")
         query_result = collection.query(
