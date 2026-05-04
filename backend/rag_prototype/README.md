@@ -56,6 +56,11 @@ POST 範例 body：
   "url": "",
   "query": "請列出文章中的旅遊景點名稱",
   "top_k": 4,
-  "reset_db": false
+  "reset_db": false,
+  "debug": true
 }
 ```
+
+回傳中會包含：
+- `debug_metrics`：整體統計（chunk數、spot過濾前後、group合併前後）
+- `debug_samples`：被過濾掉的景點樣本與原因、被丟棄的分組段落樣本

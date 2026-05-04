@@ -55,3 +55,7 @@
   - `backend/rag_prototype/api_server.py`
   - `backend/rag_prototype/.env.example`
   - `backend/rag_prototype/README.md`
+
+## 補充：Demo網站
+- https://osaka.letsgojp.com/archives/344905/
+- https://kyushu.letsgojp.com/archives/350621/

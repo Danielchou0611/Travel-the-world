@@ -10,3 +10,8 @@ backend/rag_prototype/chroma_store/
 backend/rag_prototype/__pycache__/
 backend/rag_prototype/.venv/Lib/site-packages/_cffi_backend.cp310-win_amd64.pyd
 backend/rag_prototype/sample_article.txt
+範例網站內容.txt
+extract_optimized.json
+extract.json
+extract2_optimized.json
+extract2.json
