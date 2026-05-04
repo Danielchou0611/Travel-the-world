@@ -515,7 +515,7 @@ export default function MapPlanningPage() {
               {spots.length === 0 ? (
                 <p className="empty-state">尚無景點結果，請先執行驗證。</p>
               ) : (
-                <>
+                <div className="results-scroll-area">
                   {itineraryGroups.length > 0 ? (
                     <div className="group-filter">
                       <label className="field-label" htmlFor="group-select">
@@ -582,7 +582,7 @@ export default function MapPlanningPage() {
                   {visibleSpots.length === 0 ? (
                     <p className="empty-state">此分組目前沒有可顯示的景點。</p>
                   ) : null}
-                </>
+                </div>
               )}
             </CardContent>
             <CardFooter>

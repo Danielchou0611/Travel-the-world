@@ -258,6 +258,30 @@ body {
   color: #4c5a65;
 }
 
+.results-scroll-area {
+  margin-top: 10px;
+  max-height: min(56vh, 560px);
+  overflow-y: auto;
+  padding-right: 4px;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+
+.results-scroll-area::-webkit-scrollbar {
+  width: 8px;
+}
+
+.results-scroll-area::-webkit-scrollbar-thumb {
+  background: #ccbca8;
+  border-radius: 999px;
+}
+
+.results-scroll-area::-webkit-scrollbar-track {
+  background: #f4ede2;
+  border-radius: 999px;
+}
+
 .empty-state {
   margin: 0;
   font-size: 0.9rem;
@@ -337,7 +361,15 @@ body {
 }
 
 .group-filter {
-  margin-bottom: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  margin-bottom: 0;
+  padding: 8px;
+  background: rgba(252, 249, 241, 0.95);
+  border: 1px solid #dfcfba;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
 }
 
 .itinerary-list {
@@ -433,5 +465,9 @@ body {
 
   .map-placeholder {
     min-height: 360px;
+  }
+
+  .results-scroll-area {
+    max-height: 48vh;
   }
 }
