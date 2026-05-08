@@ -14,7 +14,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 # 1. 匯入你寫好的 AI 核心邏輯
 # 假設你的檔案名稱是 gen_gm_ver6.py
-from gen_gm_ver6 import generate_itinerary, modify_itinerary
+from gen_gm_ver7 import generate_itinerary, modify_itinerary
 
 # 2. 建立 FastAPI 應用程式
 app = FastAPI(title="JapanAI Travel Backend")

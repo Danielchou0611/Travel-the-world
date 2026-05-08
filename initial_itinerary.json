@@ -1,0 +1,268 @@
+{
+  "id": "trip-2a4e9b7e",
+  "preferences": {
+    "destination": "京都",
+    "days": 3,
+    "budget": 30000,
+    "interests": [
+      "美食",
+      "文化"
+    ],
+    "explorationStyle": 50,
+    "foodVsAttractions": 50,
+    "mustVisit": "",
+    "ragContent": ""
+  },
+  "summary": {
+    "totalDays": 3,
+    "totalBudget": "NT$ 30,000",
+    "totalAttractions": 9,
+    "avgPerDay": 3.0
+  },
+  "days": [
+    {
+      "day": 1,
+      "date": "第1天",
+      "attractions": [
+        {
+          "id": "a01",
+          "name": "京都絞り工芸館",
+          "category": "景點",
+          "description": "展示京都傳統的絞染工藝，讓遊客深入了解日本傳統紡織藝術。",
+          "duration": "2 小時",
+          "estimatedCost": "¥1,000",
+          "location": "京都・中京区",
+          "lat": 35.011,
+          "lng": 135.758,
+          "xai": {
+            "summary": "符合使用者對文化的興趣，展示傳統工藝之美。",
+            "scores": [
+              {
+                "label": "文化符合度",
+                "value": 95
+              },
+              {
+                "label": "交通便利度",
+                "value": 80
+              }
+            ]
+          },
+          "image": ""
+        },
+        {
+          "id": "a02",
+          "name": "鴨川デルタ",
+          "category": "景點",
+          "description": "鴨川與高野川的匯流處，是京都當地人放鬆與散步的熱門地點。",
+          "duration": "1.5 小時",
+          "estimatedCost": "免費",
+          "location": "京都・上京区",
+          "lat": 35.03,
+          "lng": 135.771,
+          "xai": {
+            "summary": "提供放鬆的文化氛圍，適合步調適中的行程。",
+            "scores": [
+              {
+                "label": "人氣熱度",
+                "value": 85
+              },
+              {
+                "label": "交通便利度",
+                "value": 90
+              }
+            ]
+          },
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%B4%A8%E5%B7%9D%E3%83%87%E3%83%AB%E3%82%BF3.jpg"
+        },
+        {
+          "id": "a03",
+          "name": "錦市場",
+          "category": "美食",
+          "description": "被稱為「京都的廚房」，聚集了大量當地食材與美食小吃。",
+          "duration": "2 小時",
+          "estimatedCost": "¥3,000",
+          "location": "京都・中京区",
+          "lat": 35.005,
+          "lng": 135.765,
+          "xai": {
+            "summary": "完美符合使用者對美食的興趣，體驗在地飲食文化。",
+            "scores": [
+              {
+                "label": "美食符合度",
+                "value": 100
+              },
+              {
+                "label": "人氣熱度",
+                "value": 95
+              }
+            ]
+          },
+          "image": ""
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "date": "第2天",
+      "attractions": [
+        {
+          "id": "b01",
+          "name": "京都鐵道博物館",
+          "category": "景點",
+          "description": "日本頂級的鐵道博物館，展示從蒸汽機車到新幹線的演進。",
+          "duration": "3 小時",
+          "estimatedCost": "¥1,500",
+          "location": "京都・下京区",
+          "lat": 34.987,
+          "lng": 135.743,
+          "xai": {
+            "summary": "結合科學與文化，提供豐富的視覺體驗。",
+            "scores": [
+              {
+                "label": "興趣符合度",
+                "value": 80
+              },
+              {
+                "label": "交通便利度",
+                "value": 85
+              }
+            ]
+          },
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Railway%20Museum%2C%20enkei.jpg"
+        },
+        {
+          "id": "b02",
+          "name": "京都清宗根付館",
+          "category": "景點",
+          "description": "專門展出「根付」微雕藝術的博物館，展現極致的日本工藝。",
+          "duration": "1.5 小時",
+          "estimatedCost": "¥1,000",
+          "location": "京都・中京区",
+          "lat": 35.012,
+          "lng": 135.762,
+          "xai": {
+            "summary": "深度文化體驗，符合使用者對傳統藝術的偏好。",
+            "scores": [
+              {
+                "label": "文化符合度",
+                "value": 90
+              },
+              {
+                "label": "人氣熱度",
+                "value": 70
+              }
+            ]
+          },
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Netsuke%20art%20museum%20%28Kyoto%29%20Minka%20outdoor%20hdsr%20S5%20a2.jpg"
+        },
+        {
+          "id": "b03",
+          "name": "祇園 懷石料理",
+          "category": "美食",
+          "description": "在京都最具代表性的祇園地區享用精緻的傳統懷石料理。",
+          "duration": "2.5 小時",
+          "estimatedCost": "¥15,000",
+          "location": "京都・東山区",
+          "lat": 35.002,
+          "lng": 135.775,
+          "xai": {
+            "summary": "頂級美食體驗，將文化與飲食完美結合。",
+            "scores": [
+              {
+                "label": "美食符合度",
+                "value": 100
+              },
+              {
+                "label": "文化符合度",
+                "value": 95
+              }
+            ]
+          },
+          "image": ""
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "date": "第3天",
+      "attractions": [
+        {
+          "id": "c01",
+          "name": "チームラボ バイオヴォルテックス 京都",
+          "category": "景點",
+          "description": "將數位藝術與生物學概念結合的沉浸式藝術體驗。",
+          "duration": "2 小時",
+          "estimatedCost": "¥2,500",
+          "location": "京都",
+          "lat": 35.015,
+          "lng": 135.76,
+          "xai": {
+            "summary": "現代文化藝術體驗，為行程增加多樣性。",
+            "scores": [
+              {
+                "label": "興趣符合度",
+                "value": 85
+              },
+              {
+                "label": "人氣熱度",
+                "value": 90
+              }
+            ]
+          },
+          "image": ""
+        },
+        {
+          "id": "c02",
+          "name": "清水寺",
+          "category": "景點",
+          "description": "京都最著名的世界文化遺產，以懸空的木造舞台聞名。",
+          "duration": "2.5 小時",
+          "estimatedCost": "¥500",
+          "location": "京都・東山区",
+          "lat": 34.994,
+          "lng": 135.785,
+          "xai": {
+            "summary": "必訪的文化地標，符合使用者對文化探索的需求。",
+            "scores": [
+              {
+                "label": "文化符合度",
+                "value": 100
+              },
+              {
+                "label": "人氣熱度",
+                "value": 100
+              }
+            ]
+          },
+          "image": ""
+        },
+        {
+          "id": "c03",
+          "name": "宇治抹茶甜點",
+          "category": "美食",
+          "description": "前往宇治品嚐最正宗的抹茶甜點與濃郁的抹茶茶飲。",
+          "duration": "2 小時",
+          "estimatedCost": "¥2,000",
+          "location": "京都・宇治市",
+          "lat": 34.89,
+          "lng": 135.84,
+          "xai": {
+            "summary": "美食與文化結合，體驗京都特有的茶道文化。",
+            "scores": [
+              {
+                "label": "美食符合度",
+                "value": 95
+              },
+              {
+                "label": "文化符合度",
+                "value": 90
+              }
+            ]
+          },
+          "image": ""
+        }
+      ]
+    }
+  ],
+  "generatedAt": "2026-05-08T08:43:25Z"
+}
