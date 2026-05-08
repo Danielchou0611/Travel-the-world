@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Japan Spot Explorer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Japan Travel Dataset</p>
+          <h1>依地區瀏覽景點資料</h1>
+          <p class="hero-copy">
+            直接讀取目前的 JSON，快速檢視不同地區的景點、評分、推薦分數與交通資訊。
+          </p>
+        </div>
+        <div class="hero-stats">
+          <article>
+            <span id="totalRegions">-</span>
+            <p>地區數</p>
+          </article>
+          <article>
+            <span id="totalSpots">-</span>
+            <p>景點筆數</p>
+          </article>
+          <article>
+            <span id="visibleSpots">-</span>
+            <p>目前顯示</p>
+          </article>
+        </div>
+      </header>
+
+      <main class="dashboard">
+        <aside class="sidebar">
+          <div class="panel">
+            <div class="panel-heading">
+              <h2>地區</h2>
+              <span id="currentRegionCount">-</span>
+            </div>
+            <div id="regionList" class="region-list"></div>
+          </div>
+        </aside>
+
+        <section class="content">
+          <div class="panel route-panel">
+            <div class="controls-header">
+              <div>
+                <p class="eyebrow">Transit</p>
+                <h2>大眾運輸路線查詢</h2>
+              </div>
+              <p class="content-subtitle">建立 Google Maps 路線並保留查詢紀錄</p>
+            </div>
+
+            <div class="controls-grid route-grid">
+              <label class="field autocomplete-field">
+                <span>起點</span>
+                <div class="autocomplete-shell">
+                  <input id="originInput" type="text" placeholder="例如：Tokyo Station" autocomplete="off" />
+                  <div id="originSuggestions" class="autocomplete-menu" hidden></div>
+                </div>
+              </label>
+
+              <label class="field autocomplete-field">
+                <span>終點</span>
+                <div class="autocomplete-shell">
+                  <input id="destinationInput" type="text" placeholder="例如：東京鐵塔" autocomplete="off" />
+                  <div id="destinationSuggestions" class="autocomplete-menu" hidden></div>
+                </div>
+              </label>
+
+              <div class="route-actions">
+                <button id="openTransitButton" class="primary-button" type="button">
+                  開啟 Google Maps 大眾運輸
+                </button>
+                <p id="routeHint" class="route-hint">
+                  可直接輸入地名，或先點卡片後把景點名稱帶入終點。
+                </p>
+              </div>
+            </div>
+
+            <div class="route-history-header">
+              <h3>查詢紀錄</h3>
+              <button id="clearHistoryButton" class="secondary-button" type="button">
+                清空紀錄
+              </button>
+            </div>
+            <div id="routeHistory" class="route-history"></div>
+          </div>
+
+          <div class="panel map-panel">
+            <div class="controls-header">
+              <div>
+                <p class="eyebrow">Map</p>
+                <h2>景點地圖</h2>
+              </div>
+              <p id="mapMeta" class="content-subtitle">地圖載入中</p>
+            </div>
+            <div id="mapStatus" class="map-status">正在初始化地圖...</div>
+            <div id="spotMap" class="spot-map" aria-label="景點地圖"></div>
+          </div>
+
+          <div class="panel controls-panel">
+            <div class="controls-header">
+              <div>
+                <p class="eyebrow">Filters</p>
+                <h2 id="contentTitle">全部地區</h2>
+              </div>
+              <p id="contentSubtitle" class="content-subtitle">
+                依 `xai_score` 排序
+              </p>
+            </div>
+
+            <div class="controls-grid">
+              <label class="field">
+                <span>搜尋景點名稱</span>
+                <input
+                  id="searchInput"
+                  type="search"
+                  placeholder="例如：東京鐵塔、神宮、博物館"
+                />
+              </label>
+
+              <label class="field">
+                <span>類別篩選</span>
+                <select id="categorySelect">
+                  <option value="">全部類別</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>排序方式</span>
+                <select id="sortSelect">
+                  <option value="xai_score">推薦分數</option>
+                  <option value="google_rating">Google 評分</option>
+                  <option value="review_count">評論數</option>
+                  <option value="distance_to_station_km">距離車站</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div id="resultsMeta" class="results-meta"></div>
+          <div id="cardGrid" class="card-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <template id="cardTemplate">
+      <article class="spot-card" tabindex="0">
+        <div class="spot-image-wrap">
+          <img class="spot-image" alt="" loading="lazy" referrerpolicy="no-referrer" />
+        </div>
+        <div class="spot-body">
+          <div class="spot-head">
+            <p class="spot-region"></p>
+            <h3 class="spot-name"></h3>
+          </div>
+          <p class="spot-category"></p>
+          <dl class="metrics">
+            <div>
+              <dt>推薦分數</dt>
+              <dd class="metric-xai"></dd>
+            </div>
+            <div>
+              <dt>Google 評分</dt>
+              <dd class="metric-rating"></dd>
+            </div>
+            <div>
+              <dt>評論數</dt>
+              <dd class="metric-reviews"></dd>
+            </div>
+            <div>
+              <dt>車站</dt>
+              <dd class="metric-station"></dd>
+            </div>
+            <div>
+              <dt>距離</dt>
+              <dd class="metric-distance"></dd>
+            </div>
+          </dl>
+          <button class="detail-toggle" type="button">展開更多資訊</button>
+          <div class="spot-details" hidden>
+            <dl class="detail-grid">
+              <div>
+                <dt>興趣標籤</dt>
+                <dd class="detail-interest-tags"></dd>
+              </div>
+              <div>
+                <dt>興趣匹配</dt>
+                <dd class="detail-interest-match"></dd>
+              </div>
+              <div>
+                <dt>評分標準化</dt>
+                <dd class="detail-rating-norm"></dd>
+              </div>
+              <div>
+                <dt>評論標準化</dt>
+                <dd class="detail-review-norm"></dd>
+              </div>
+              <div>
+                <dt>車站效率</dt>
+                <dd class="detail-station-efficiency"></dd>
+              </div>
+              <div>
+                <dt>座標</dt>
+                <dd class="detail-coordinates"></dd>
+              </div>
+              <div>
+                <dt>來源 ID</dt>
+                <dd class="detail-source-id"></dd>
+              </div>
+              <div>
+                <dt>Google 對應名稱</dt>
+                <dd class="detail-google-name"></dd>
+              </div>
+            </dl>
+            <dl class="detail-grid detail-all-fields"></dl>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
