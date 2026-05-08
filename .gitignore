@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary files
+*.tmp
+temp_batch_results.json
+temp_queries_active.txt
+test_results.json
+
+# Redundant data backups
+日本全_with_ratings_renewmatch.json
+
+# Analysis scripts (optional, uncomment if you want to ignore them)
+# analyze_mismatches.py
+# categorize_summary.py
+
+# OS-specific
+.DS_Store
+Thumbs.db
