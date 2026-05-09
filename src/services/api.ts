@@ -32,6 +32,7 @@ export const MOCK_TRIP: Trip = {
     foodVsAttractions: 40,
     mustVisit: '清水寺',
     ragContent: '',
+    specialRequirements: '',
   },
   summary: {
     totalDays: 7,

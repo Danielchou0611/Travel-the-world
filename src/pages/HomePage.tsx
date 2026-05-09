@@ -35,6 +35,7 @@ export default function HomePage() {
   const [explorationStyle, setExplorationStyle] = useState(50);
   const [foodVsAttractions, setFoodVsAttractions] = useState(50);
   const [mustVisit, setMustVisit] = useState('');
+  const [specialRequirements, setSpecialRequirements] = useState('');
   const [ragContent, setRagContent] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -75,6 +76,7 @@ export default function HomePage() {
       foodVsAttractions,
       mustVisit,
       ragContent,
+      specialRequirements,
     };
 
     try {
@@ -298,6 +300,21 @@ export default function HomePage() {
                 className="glass-input"
                 style={{ height: 60, resize: 'none' }}
               />
+            </div>
+
+            <div>
+              <label className="form-label">行程期望（選填）</label>
+              <textarea
+                id="special-requirements"
+                placeholder="例如：希望這趣旅行能放鬆心情、希望深入體驗地方文化、希望行程緊湊充實、希望有浪漫氛圍..."
+                value={specialRequirements}
+                onChange={e => setSpecialRequirements(e.target.value)}
+                className="glass-input"
+                style={{ height: 72, resize: 'none' }}
+              />
+              <div style={{ fontSize: 11, color: 'var(--color-text-muted)', marginTop: 6, lineHeight: 1.5 }}>
+                描述您對這趣行程的期望與感受，AI 將根據此將內容更貼近您的理想
+              </div>
             </div>
 
             <button

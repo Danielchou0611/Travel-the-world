@@ -10,6 +10,7 @@ export interface TripPreferences {
   foodVsAttractions: number; // 0=美食優先 100=景點優先
   mustVisit: string;
   ragContent: string;
+  specialRequirements?: string;
 }
 
 export interface XAIScore {

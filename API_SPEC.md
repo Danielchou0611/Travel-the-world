@@ -13,15 +13,16 @@
 
 ```json
 {
-  "days": 7,                  // 旅遊總天數 (Integer)
-  "budget": 50000,            // 預算金額 (Integer, 單位: TWD)
-  "interests": [              // 興趣標籤 (Array of Strings)
+  "days": 7,                          // 旅遊總天數 (Integer)
+  "budget": 50000,                    // 預算金額 (Integer, 單位: TWD)
+  "interests": [                      // 興趣標籤 (Array of Strings)
     "美食", "文化", "自然"
   ],
-  "explorationStyle": 60,     // 旅遊風格：0=輕鬆, 100=緊湊 (Integer, 0-100)
-  "foodVsAttractions": 40,    // 偏好比重：0=偏好美食, 100=偏好景點 (Integer, 0-100)
-  "mustVisit": "清水寺、藍瓶咖啡", // 必去地點 (String，允許多個景點混合之自然語言)
-  "ragContent": ""            // 外部旅遊筆記或參考內容 (String)
+  "explorationStyle": 60,             // 旅遊風格：0=輕鬆, 100=緊湊 (Integer, 0-100)
+  "foodVsAttractions": 40,            // 偏好比重：0=偏好美食, 100=偏好景點 (Integer, 0-100)
+  "mustVisit": "清水寺、藍瓶咖啡",     // 必去地點 (String，允許多個景點混合之自然語言)
+  "ragContent": "",                   // 外部旅遊筆記或參考內容 (String)
+  "specialRequirements": "希望這趣旅行能放鬆心情，並深入體驗地方文化" // 行程期望（選填）(String | null)
 }
 ```
 
@@ -37,7 +38,8 @@
     "explorationStyle": 60,
     "foodVsAttractions": 40,
     "mustVisit": "清水寺、藍瓶咖啡",
-    "ragContent": ""
+    "ragContent": "",
+    "specialRequirements": "希望這趣旅行能放鬆心情，並深入體驗地方文化" // 原始傳入值原樣回傳 (String | null)
   },
   "summary": {                          // 行程總覽 (Object)
     "totalDays": 7,                     // 總天數 (Integer)
@@ -94,6 +96,8 @@
    `image` 欄位必須提供有效的、可公開存取的絕對路徑網址 (Absolute URL)。圖片的上傳與裁切應透過外部服務或圖片 CDN 處理。
 3. **必去景點 (Must Visit Field):**
    `mustVisit` 欄位會直接傳送原始的自然語言字串（例如：`"清水寺、藍瓶咖啡"`）。後端應自行處理分析，或直接將此字串應用於 LLM 的 Prompt 中。
+4. **行程期望 (Special Requirements / Trip Expectations Field):**
+   `specialRequirements` 為選填欄位（`String | null`），供使用者以自然語言描述對此趣行程的期望與感受，例如：「希望放鬆心情」、「希望深入體驗地方文化」、「希望行程緊湊充實」、「希望有浪漫氛圍」等。後端應將此内容納入 LLM Prompt，作為行程氣底調性與內容選取的參考方向。若欄位為空字串或 `null`，可忽略。
 4. **錯誤處理 (Error Handling):** 
    若在產生行程時發生錯誤（例如：預算過低、無法解析必去景點），請回傳標準的 HTTP `400` 或 `500` 狀態碼，並附帶以下 JSON 錯誤格式：
    ```json
