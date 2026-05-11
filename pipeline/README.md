@@ -2,7 +2,7 @@
 
 獨立版的日本景點資料轉換工具。
 
-目前有 3 個主要腳本：
+目前有 4 個主要腳本：
 
 - `build_japan_attractions.py`
   把原始景點 JSON 整理成標準化 CSV 與評分後 CSV，並保留原始景點 ID
@@ -10,6 +10,8 @@
   把 CSV 直接轉成 JSON
 - `simplify_interest_json.py`
   把 scored CSV 轉成較適合推薦或 interest 使用的 JSON
+- `run_pipeline.py`
+  一次跑完整的推薦資料流程，預設輸出 `interest.json`
 
 ## 1. build_japan_attractions.py
 
@@ -142,6 +144,46 @@ python3 simplify_interest_json.py input.csv output.json
 - `--indent 2`: pretty print JSON，預設是 2
 - `--indent 0`: 輸出壓縮版 JSON
 
+## 4. run_pipeline.py
+
+用途：
+
+- 一次執行 `build_japan_attractions.py`
+- 接著執行 `simplify_interest_json.py`
+- 直接產出推薦用的 `interest.json`
+
+預設用法：
+
+```bash
+cd pipline
+python3 run_pipeline.py ../raw-data/japan_with_rating.json
+```
+
+預設會輸出：
+
+- `output/japan_with_rating_normalized.csv`
+- `output/japan_with_rating_scored.csv`
+- `output/japan_with_rating_pipeline_report.json`
+- `output/japan_with_rating_interest.json`
+
+自訂輸入輸出：
+
+```bash
+cd pipline
+python3 run_pipeline.py input.json ./output --output-prefix my_data
+```
+
+可選參數：
+
+- `--prefecture-lookup /path/to/lookup.csv`
+- `--output-prefix my_data`
+- `--indent 2`
+
+說明：
+
+- 如果你的最終目標是 `japan_with_rating_interest.json`，通常不需要跑 `csv_to_json.py`
+- `csv_to_json.py` 只在你另外需要 `scored.json` 給其他 consumer 時才需要
+
 ### simplify_interest_json.py 輸出欄位
 
 - `id`: 原始景點 ID（直接沿用輸入 JSON 的 `id` / `source_id`）
@@ -189,21 +231,25 @@ python3 simplify_interest_json.py input.csv output.json
 
 ## 建議流程
 
-如果你要從原始 JSON 一路做到推薦用 JSON，可以照這個順序：
+如果你要從原始 JSON 一路做到推薦用 JSON，建議直接跑：
 
 ```bash
 cd pipline
-python3 build_japan_attractions.py ../raw-data/japan_with_rating.json ./output
-python3 csv_to_json.py
-python3 simplify_interest_json.py
+python3 run_pipeline.py ../raw-data/japan_with_rating.json
 ```
 
 通常會得到這幾份結果：
 
 - `output/japan_with_rating_normalized.csv`
 - `output/japan_with_rating_scored.csv`
-- `output/japan_with_rating_scored.json`
 - `output/japan_with_rating_interest.json`
+
+如果你另外需要 `scored.json`，再補跑：
+
+```bash
+cd pipline
+python3 csv_to_json.py
+```
 
 ```bash
 cd ../demo-web

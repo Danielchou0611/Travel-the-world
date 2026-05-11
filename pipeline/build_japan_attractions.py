@@ -17,6 +17,7 @@ DEFAULT_GOOGLE_RATING = 4.0
 DEFAULT_REVIEW_COUNT = 100
 DEFAULT_INTEREST_MATCH = 0.70
 DEFAULT_LOOKUP_PATH = Path(__file__).resolve().parent / "reference" / "source_id_metadata_lookup.csv"
+DEFAULT_LOOKUP_REPORT_PATH = Path("reference/source_id_metadata_lookup.csv")
 
 COORDINATE_PATTERN = re.compile(r"Point\((?P<lng>-?\d+(?:\.\d+)?) (?P<lat>-?\d+(?:\.\d+)?)\)")
 
@@ -361,6 +362,13 @@ def output_prefix(args: argparse.Namespace) -> str:
     return args.output_prefix or Path(args.input_json).stem
 
 
+def report_lookup_path(args: argparse.Namespace) -> str:
+    lookup_path = Path(args.prefecture_lookup)
+    if lookup_path.resolve() == DEFAULT_LOOKUP_PATH.resolve():
+        return str(DEFAULT_LOOKUP_REPORT_PATH)
+    return str(lookup_path)
+
+
 def main() -> None:
     args = parse_args()
     input_json = Path(args.input_json)
@@ -382,7 +390,7 @@ def main() -> None:
         **normalize_stats,
         **score_stats,
         "input_json": str(input_json),
-        "prefecture_lookup": str(Path(args.prefecture_lookup)),
+        "prefecture_lookup": report_lookup_path(args),
         "prefecture_lookup_rows": len(prefecture_lookup),
         "normalized_rows": len(normalized_rows),
         "default_google_rating": DEFAULT_GOOGLE_RATING,

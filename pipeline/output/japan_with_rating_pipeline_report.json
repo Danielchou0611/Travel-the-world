@@ -10,7 +10,7 @@
   "scored_rows": 4003,
   "skipped_rows": 0,
   "input_json": "../raw-data/japan_with_rating.json",
-  "prefecture_lookup": "/Users/liguanlin/Desktop/github/1142-webapp/final-project/pipline/reference/source_id_metadata_lookup.csv",
+  "prefecture_lookup": "reference/source_id_metadata_lookup.csv",
   "prefecture_lookup_rows": 4003,
   "normalized_rows": 4003,
   "default_google_rating": 4.0,
