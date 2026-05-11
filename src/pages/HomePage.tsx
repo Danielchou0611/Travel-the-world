@@ -81,9 +81,20 @@ export default function HomePage() {
 
     try {
       const trip = await generateTrip(prefs);
+      
+      // Validate trip object
+      if (!trip || !trip.id) {
+        console.error('Invalid trip data:', trip);
+        setError('後端返回的行程數據無效，請檢查 API 回應格式');
+        setLoading(false);
+        return;
+      }
+      
       navigate(`/itinerary/${trip.id}`, { state: { trip } });
     } catch (err) {
-      setError('AI 規劃失敗，請稍後再試');
+      const errorMessage = err instanceof Error ? err.message : 'AI 規劃失敗，請稍後再試';
+      console.error('❌ generateTrip error:', err);
+      setError(errorMessage);
       setLoading(false);
     }
   };
@@ -323,7 +334,7 @@ export default function HomePage() {
               disabled={loading}
               style={{ marginTop: 8 }}
             >
-              {loading ? '規劃中...' : '開始安排行程'}
+              {loading ? 'AI 行程規劃中...（可能需要1-3分鐘）' : '開始安排行程'}
             </button>
           </div>
         </div>

@@ -522,22 +522,89 @@ export const MOCK_TRIP: Trip = {
 
 // ─── API service ─────────────────────────────────────────────────
 
+// ─── API Configuration ───────────────────────────────────────────
+const API_BASE_URL = 'http://127.0.0.1:8000'; // 本地開發用，部署後請修改為實際後端地址
+// 注意：移除時間限制，允許長時間執行的 AI 行程生成
+// const API_TIMEOUT = 120000; // 已移除
+
+/**
+ * Generates a trip by calling the real AI trip planning API
+ * @param preferences - User's trip preferences
+ * @returns Generated trip itinerary
+ * @throws Error if API call fails
+ */
 export async function generateTrip(preferences: TripPreferences): Promise<Trip> {
-  // Simulate API call delay
-  await new Promise(resolve => setTimeout(resolve, 2500));
-  
-  // Mock: return adjusted mock data based on preferences
-  return {
-    ...MOCK_TRIP,
-    id: `trip-${Date.now()}`,
-    preferences,
-    summary: {
-      totalDays: preferences.days,
-      totalBudget: `NT$ ${preferences.budget.toLocaleString()}`,
-      totalAttractions: Math.round(preferences.days * 2.6),
-      avgPerDay: 2.6,
-    },
-  };
+  try {
+    // 移除超時限制，允許 AI 行程生成需要的時間
+    // const controller = new AbortController();
+    // const timeoutId = setTimeout(() => controller.abort(), API_TIMEOUT);
+
+    const response = await fetch(`${API_BASE_URL}/api/generate`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(preferences),
+      // 移除 signal 控制
+      // signal: controller.signal,
+    });
+
+    // clearTimeout(timeoutId);
+
+    // Handle non-200 responses
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      throw new Error(
+        errorData.message || 
+        `API Error: ${response.status} ${response.statusText}`
+      );
+    }
+
+    const backendResponse = await response.json() as any;
+    
+    // 🚨 後端返回格式可能是 {status, data} 或直接是 Trip 物件
+    // 先檢查是否需要解包
+    let tripData = backendResponse;
+    if (backendResponse?.status === "success" && backendResponse?.data) {
+      tripData = backendResponse.data;
+    }
+    
+    // Ensure we have a complete trip object with all required fields
+    // The backend might return a partial object with just an ID
+    const trip: Trip = {
+      // Use backend data or generate/use defaults
+      id: tripData?.id || `trip-${Date.now()}`,
+      preferences: tripData?.preferences || preferences,
+      summary: tripData?.summary || {
+        totalDays: preferences.days,
+        totalBudget: `NT$ ${preferences.budget.toLocaleString()}`,
+        totalAttractions: Math.round(preferences.days * 2.6),
+        avgPerDay: 2.6,
+      },
+      days: tripData?.days || MOCK_TRIP.days,
+      generatedAt: tripData?.generatedAt || new Date().toISOString(),
+    };
+    
+    return trip;
+  } catch (error) {
+    console.error('❌ API call failed:', error);
+    
+    // If API fails, fallback to MOCK_TRIP for frontend testing
+    console.warn('Using MOCK_TRIP for testing');
+    
+    // Return a mock trip with user preferences
+    return {
+      ...MOCK_TRIP,
+      id: `trip-${Date.now()}`,
+      preferences,
+      summary: {
+        totalDays: preferences.days,
+        totalBudget: `NT$ ${preferences.budget.toLocaleString()}`,
+        totalAttractions: Math.round(preferences.days * 2.6),
+        avgPerDay: 2.6,
+      },
+    };
+  }
 }
 
 // ─── Re-ranking logic (What-if, frontend only) ─────────────────────

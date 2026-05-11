@@ -17,13 +17,38 @@ export default function ItineraryPage() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const [trip, setTrip] = useState<Trip>(() => {
-    return (location.state as { trip?: Trip })?.trip ?? MOCK_TRIP;
-  });
+  // Calculate initial trip outside of useState to use in multiple hooks
+  // Safely extract trip from location state, fallback to MOCK_TRIP
+  const initialTrip = (() => {
+    try {
+      const state = location.state as Record<string, any>;
+      if (state && state.trip) {
+        return state.trip;
+      }
+      return MOCK_TRIP;
+    } catch (e) {
+      console.error('❌ Error parsing location.state:', e);
+      return MOCK_TRIP;
+    }
+  })();
 
+  const [trip, setTrip] = useState<Trip>(initialTrip);
   const [activeDay, setActiveDay] = useState(0);
-  const [explorationStyle, setExplorationStyle] = useState(trip.preferences.explorationStyle ?? 50);
-  const [foodVsAttractions, setFoodVsAttractions] = useState(trip.preferences.foodVsAttractions ?? 50);
+  const [explorationStyle, setExplorationStyle] = useState(
+    initialTrip?.preferences?.explorationStyle ?? 50
+  );
+  const [foodVsAttractions, setFoodVsAttractions] = useState(
+    initialTrip?.preferences?.foodVsAttractions ?? 50
+  );
+
+  // Sync trip data when tripId changes (e.g., URL navigation)
+  useEffect(() => {
+    if (location.state && location.state.trip && location.state.trip.id === tripId) {
+      setTrip(location.state.trip);
+    }
+  }, [tripId, location]);
+
+  // 已移除监视 useEffect
 
   // ── Edit mode state ──────────────────────────────────────────────
   const [isEditing, setIsEditing] = useState(false);
@@ -102,11 +127,11 @@ export default function ItineraryPage() {
 
   // ── Ranking (used when NOT editing) ─────────────────────────────
   const rankedAttractions = useMemo(() => {
-    const dayAttractions = trip.days[activeDay]?.attractions ?? [];
+    const dayAttractions = trip?.days?.[activeDay]?.attractions ?? [];
     return rerankAttractions(dayAttractions, explorationStyle, foodVsAttractions);
   }, [trip, activeDay, explorationStyle, foodVsAttractions]);
 
-  const currentDay = trip.days[activeDay];
+  const currentDay = trip?.days?.[activeDay];
 
   const [reranked, setReranked] = useState(false);
 
@@ -201,7 +226,7 @@ export default function ItineraryPage() {
   }
 
   function cancelEdits() {
-    setEditAttractions(trip.days[activeDay]?.attractions ?? []);
+    setEditAttractions(trip?.days?.[activeDay]?.attractions ?? []);
     setIsEditing(false);
     setSelectedIndex(null);
   }
@@ -212,7 +237,7 @@ export default function ItineraryPage() {
     const source = isEditing
       ? editAttractions
       : manualOrderDays.has(activeDay)
-        ? (trip.days[activeDay]?.attractions ?? [])
+        ? (trip?.days?.[activeDay]?.attractions ?? [])
         : rankedAttractions;
     const next = [...source];
     [next[i - 1], next[i]] = [next[i], next[i - 1]];
@@ -234,7 +259,7 @@ export default function ItineraryPage() {
     const source = isEditing
       ? editAttractions
       : manualOrderDays.has(activeDay)
-        ? (trip.days[activeDay]?.attractions ?? [])
+        ? (trip?.days?.[activeDay]?.attractions ?? [])
         : rankedAttractions;
     const next = [...source];
     [next[i], next[i + 1]] = [next[i + 1], next[i]];
@@ -265,7 +290,7 @@ export default function ItineraryPage() {
       });
       setManualOrderDays(prev => new Set(prev).add(activeDay));
       // Load the new day's attractions directly (no useEffect needed)
-      setEditAttractions(trip.days[newDayIndex]?.attractions ?? []);
+      setEditAttractions(trip?.days?.[newDayIndex]?.attractions ?? []);
     }
     setDragOverIndex(null);
     setActiveDay(newDayIndex);
@@ -278,7 +303,7 @@ export default function ItineraryPage() {
   const displayAttractions = isEditing
     ? editAttractions
     : manualOrderDays.has(activeDay)
-      ? (trip.days[activeDay]?.attractions ?? [])
+      ? (trip?.days?.[activeDay]?.attractions ?? [])
       : rankedAttractions;
 
   return (
@@ -345,22 +370,32 @@ export default function ItineraryPage() {
 
       <div style={{ flex: 1, padding: '32px 48px 160px', maxWidth: 1200, margin: '0 auto', width: '100%' }}>
 
-        <div style={{ marginBottom: 32, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <div>
-            <h1 style={{ fontSize: 24, fontWeight: 700, color: 'var(--color-text)', margin: 0 }}>
-              {trip.preferences.days} 天旅遊行程
-            </h1>
-            <div style={{ fontSize: 13, color: 'var(--color-text-muted)', marginTop: 6, display: 'flex', alignItems: 'center', gap: 8 }}>
-              <span>{trip.preferences.interests.join(' ・ ')}</span>
+        {/* Show loading or error if trip data is not ready */}
+        {!trip?.preferences?.days || trip.days?.length === 0 ? (
+          <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--color-text-muted)' }}>
+            <p>加載行程中...</p>
+            <p style={{ fontSize: 12, marginTop: 10 }}>
+              {trip ? `trip 存在，days: ${trip.days?.length ?? 0}` : 'trip 未定義'}
+            </p>
+          </div>
+        ) : (
+          <>
+            <div style={{ marginBottom: 32, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <div>
+                <h1 style={{ fontSize: 24, fontWeight: 700, color: 'var(--color-text)', margin: 0 }}>
+                  {trip?.preferences?.days ?? 0} 天旅遊行程
+                </h1>
+                <div style={{ fontSize: 13, color: 'var(--color-text-muted)', marginTop: 6, display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <span>{trip?.preferences?.interests?.join(' ・ ') ?? '未知'}</span>
               <span style={{ color: 'var(--color-border)' }}>|</span>
-              <span>NT$ {trip.preferences.budget.toLocaleString()}</span>
+              <span>NT$ {trip?.preferences?.budget?.toLocaleString() ?? 0}</span>
               <span style={{ color: 'var(--color-border)' }}>|</span>
-              <span style={{ color: 'var(--color-accent)' }}>生成於 {new Date(trip.generatedAt).toLocaleString('zh-TW', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })}</span>
+              <span style={{ color: 'var(--color-accent)' }}>生成於 {trip?.generatedAt ? new Date(trip.generatedAt).toLocaleString('zh-TW', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' }) : '未知'}</span>
             </div>
           </div>
           {!isEditing && (
             <button
-              onClick={() => { setEditAttractions(trip.days[activeDay]?.attractions ?? []); setIsEditing(true); }}
+              onClick={() => { setEditAttractions(trip?.days?.[activeDay]?.attractions ?? []); setIsEditing(true); }}
               className="btn-primary"
               style={{ background: '#FFFFFF', color: 'var(--color-text)', border: '1px solid var(--color-border)', padding: '6px 16px', width: 'auto', flexShrink: 0, fontSize: 13 }}
             >
@@ -431,7 +466,7 @@ export default function ItineraryPage() {
           <div style={{ width: 120, flexShrink: 0, display: 'flex', flexDirection: 'column', gap: 8, position: 'sticky', top: 90 }}>
             {trip.days.map((day, i) => (
               <div
-                key={day.day}
+                key={i}
                 className={`day-tab ${i === activeDay ? 'active' : ''} ${day.warning ? 'warn' : ''}`}
                 onClick={() => switchDay(i)}
                 onDragOver={isEditing && i !== activeDay ? e => { e.preventDefault(); setDragOverDayTab(i); } : undefined}
@@ -577,9 +612,11 @@ export default function ItineraryPage() {
                 今天的行程已全部刪除
               </div>
             )}
-          </div>
+            </div>
 
-        </div>
+          </div>
+          </>
+        )}
       </div>
       <WhatIfSliders
         explorationStyle={explorationStyle}
