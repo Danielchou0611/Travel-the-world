@@ -1,0 +1,26 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# Local database
+backend/db.sqlite3
+*.sqlite3
+
+# OS / editor noise
+.DS_Store
+
+# Test / runtime artifacts
+*.log
+*.pid
+*.out
+*.err
+
+# Coverage / tooling
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
