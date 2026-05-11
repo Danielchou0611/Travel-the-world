@@ -627,3 +627,53 @@ export function rerankAttractions(
     return scoreB - scoreA;
   });
 }
+
+/**
+ * Modifies an existing trip by calling the backend API
+ */
+export async function modifyTrip(destination: string, current_itinerary: Trip, user_request: string): Promise<Trip> {
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/modify`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ destination, current_itinerary, user_request }),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      throw new Error(
+        errorData.message || 
+        `API Error: ${response.status} ${response.statusText}`
+      );
+    }
+
+    const backendResponse = await response.json() as any;
+    
+    // 印出後端回傳的原始資料，讓開發者確認
+    console.log("=== Backend Modify Response ===");
+    console.log(JSON.stringify(backendResponse, null, 2));
+    
+    let modifiedData = backendResponse;
+    if (backendResponse?.status === "success" && backendResponse?.data) {
+      modifiedData = backendResponse.data;
+    }
+
+    // Merge modified data with original trip to preserve ID, preferences, summary
+    // modify endpoint typically returns {"days": [...]} based on schema
+    const updatedTrip: Trip = {
+      ...current_itinerary,
+      days: modifiedData.days || modifiedData.itinerary || modifiedData, // Handle different possible structures
+      generatedAt: new Date().toISOString(),
+    };
+    
+    console.log("=== Frontend Updated Trip ===");
+    console.log(updatedTrip);
+    
+    return updatedTrip;
+  } catch (error) {
+    console.error('❌ Modify API call failed:', error);
+    throw error;
+  }
+}
