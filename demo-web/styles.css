@@ -176,10 +176,103 @@ img {
 .region-list {
   margin-top: 16px;
   display: grid;
-  gap: 10px;
+  gap: 14px;
   max-height: 52vh;
   overflow-y: auto;
   padding-right: 4px;
+}
+
+.region-group {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid rgba(94, 72, 49, 0.1);
+  border-radius: 22px;
+  background: rgba(255, 249, 241, 0.82);
+}
+
+.featured-region-section {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid rgba(180, 79, 45, 0.14);
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255, 248, 237, 0.96), rgba(246, 231, 211, 0.9));
+}
+
+.featured-region-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.featured-region-button {
+  min-height: 88px;
+}
+
+.region-group-summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.region-group-summary::-webkit-details-marker {
+  display: none;
+}
+
+.region-group-summary .region-group-header {
+  position: relative;
+  padding-right: 28px;
+}
+
+.region-group-summary .region-group-header::after {
+  content: "▾";
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--brand);
+  font-size: 1rem;
+  transition: transform 140ms ease;
+}
+
+.region-group:not([open]) .region-group-header::after {
+  transform: rotate(-90deg);
+}
+
+.region-group-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.region-group-label {
+  margin: 0 0 4px;
+  color: var(--brand);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.region-group-header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-family: "Noto Serif TC", serif;
+}
+
+.region-group-header span {
+  color: var(--muted);
+  font-size: 0.84rem;
+  white-space: nowrap;
+}
+
+.region-group-buttons {
+  display: grid;
+  gap: 10px;
+}
+
+.region-group:not([open]) .region-group-buttons {
+  display: none;
 }
 
 .region-button {
@@ -711,7 +804,8 @@ img {
   .api-toolbar,
   .preference-grid,
   .controls-grid,
-  .route-grid {
+  .route-grid,
+  .featured-region-grid {
     grid-template-columns: 1fr;
   }
 
@@ -734,7 +828,8 @@ img {
 
   .hero-stats,
   .card-grid,
-  .detail-grid {
+  .detail-grid,
+  .featured-region-grid {
     grid-template-columns: 1fr;
   }
 }

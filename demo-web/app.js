@@ -16,6 +16,101 @@ const INTEREST_PRESETS = [
   ["溫泉", "溫泉放鬆"],
   ["宗教", "宗教文化"],
 ];
+const JAPAN_TRAVEL_AREAS = [
+  {
+    name: "北海道",
+    regions: ["北海道"],
+  },
+  {
+    name: "東北",
+    regions: ["青森縣", "岩手縣", "宮城縣", "秋田縣", "山形縣", "福島縣"],
+  },
+  {
+    name: "關東",
+    regions: ["茨城縣", "栃木縣", "群馬縣", "埼玉縣", "千葉縣", "東京都", "神奈川縣"],
+  },
+  {
+    name: "中部",
+    regions: ["新潟縣", "富山縣", "石川縣", "福井縣", "山梨縣", "長野縣", "岐阜縣", "靜岡縣", "愛知縣"],
+  },
+  {
+    name: "近畿",
+    regions: ["三重縣", "滋賀縣", "京都府", "大阪府", "兵庫縣", "奈良縣", "和歌山縣"],
+  },
+  {
+    name: "中國",
+    regions: ["鳥取縣", "島根縣", "岡山縣", "廣島縣", "山口縣"],
+  },
+  {
+    name: "四國",
+    regions: ["德島縣", "香川縣", "愛媛縣", "高知縣"],
+  },
+  {
+    name: "九州・沖繩",
+    regions: ["福岡縣", "佐賀縣", "長崎縣", "熊本縣", "大分縣", "宮崎縣", "鹿兒島縣", "沖繩縣"],
+  },
+];
+const POPULAR_TRAVEL_AREA_ORDER = [
+  "關東",
+  "近畿",
+  "北海道",
+  "九州・沖繩",
+  "中部",
+  "東北",
+  "中國",
+  "四國",
+  "其他",
+];
+const POPULAR_REGION_ORDER = [
+  "東京都",
+  "大阪府",
+  "京都府",
+  "北海道",
+  "沖繩縣",
+  "神奈川縣",
+  "千葉縣",
+  "兵庫縣",
+  "福岡縣",
+  "奈良縣",
+  "靜岡縣",
+  "愛知縣",
+  "廣島縣",
+  "長野縣",
+  "宮城縣",
+  "石川縣",
+  "熊本縣",
+  "鹿兒島縣",
+  "新潟縣",
+  "岐阜縣",
+  "和歌山縣",
+  "岡山縣",
+  "香川縣",
+  "愛媛縣",
+  "高知縣",
+  "德島縣",
+  "滋賀縣",
+  "三重縣",
+  "山梨縣",
+  "富山縣",
+  "福島縣",
+  "青森縣",
+  "岩手縣",
+  "秋田縣",
+  "山形縣",
+  "山口縣",
+  "鳥取縣",
+  "島根縣",
+  "長崎縣",
+  "大分縣",
+  "宮崎縣",
+  "佐賀縣",
+  "埼玉縣",
+  "茨城縣",
+  "栃木縣",
+  "群馬縣",
+  "福井縣",
+];
+const FEATURED_REGION_LIMIT = 6;
 
 const state = {
   apiBase: readApiBase(),
@@ -27,6 +122,8 @@ const state = {
   poiDetailById: new Map(),
   metadata: { regions: [], categories: [], poi_count: 0 },
   regions: [],
+  regionGroups: [],
+  expandedAreas: new Set(["關東", "近畿", "北海道"]),
   categories: [],
   interestOptions: [],
   selectedRegion: "ALL",
@@ -252,6 +349,7 @@ async function reloadAllData() {
   state.metadata = metadata;
   state.categories = Array.isArray(metadata.categories) ? metadata.categories : [];
   state.regions = buildRegionSummaryFromMetadata(metadata.regions || []);
+  state.regionGroups = buildTravelRegionGroups(state.regions);
 
   syncPreferenceFormWithMetadata();
   renderCategoryOptions();
@@ -354,7 +452,8 @@ function renderCategoryOptions() {
 }
 
 function renderPreferenceSelectOptions() {
-  const regionOptions = state.metadata.regions
+  const regionOptions = state.regions
+    .map((item) => item.region)
     .map((region) => `<option value="${escapeAttribute(region)}">${escapeHtml(region)}</option>`)
     .join("");
   const categoryOptions = state.categories
@@ -411,25 +510,75 @@ function renderInterestControls() {
 
 function renderRegionList() {
   const totalCount = state.metadata.poi_count || state.allRows.length || 0;
+  const selectedArea = findTravelAreaForRegion(state.selectedRegion);
+  if (selectedArea) {
+    state.expandedAreas.add(selectedArea);
+  }
+
   const allButton = `
     <button class="region-button ${state.selectedRegion === "ALL" ? "active" : ""}" data-region="ALL">
       <strong>全部地區</strong>
       <span>${numberFormatter.format(totalCount)} 筆景點</span>
     </button>
   `;
+  const featuredRegions = state.regions.slice(0, FEATURED_REGION_LIMIT);
+  const featuredMarkup = featuredRegions.length
+    ? `
+        <section class="featured-region-section">
+          <div class="region-group-header">
+            <div>
+              <p class="region-group-label">熱門地區</p>
+              <h3>先看這些</h3>
+            </div>
+            <span>${numberFormatter.format(featuredRegions.length)} 個精選</span>
+          </div>
+          <div class="featured-region-grid">
+            ${featuredRegions
+              .map(
+                ({ region, count }) => `
+                  <button class="region-button featured-region-button ${state.selectedRegion === region ? "active" : ""}" data-region="${escapeAttribute(region)}">
+                    <strong>${escapeHtml(region)}</strong>
+                    <span>${count === null ? "熱門旅遊地區" : `${numberFormatter.format(count)} 筆景點`}</span>
+                  </button>
+                `
+              )
+              .join("")}
+          </div>
+        </section>
+      `
+    : "";
 
-  const regionButtons = state.regions
+  const groupMarkup = state.regionGroups
     .map(
-      ({ region, count }) => `
-        <button class="region-button ${state.selectedRegion === region ? "active" : ""}" data-region="${escapeAttribute(region)}">
-          <strong>${escapeHtml(region)}</strong>
-          <span>${count === null ? "用 API 篩選" : `${numberFormatter.format(count)} 筆景點`}</span>
-        </button>
+      ({ area, regions }) => `
+        <details class="region-group" data-area="${escapeAttribute(area)}" ${state.expandedAreas.has(area) ? "open" : ""}>
+          <summary class="region-group-summary">
+            <div class="region-group-header">
+              <div>
+                <p class="region-group-label">旅遊區域</p>
+                <h3>${escapeHtml(area)}</h3>
+              </div>
+              <span>${numberFormatter.format(regions.length)} 個地區</span>
+            </div>
+          </summary>
+          <div class="region-group-buttons">
+            ${regions
+              .map(
+                ({ region, count }) => `
+                  <button class="region-button ${state.selectedRegion === region ? "active" : ""}" data-region="${escapeAttribute(region)}">
+                    <strong>${escapeHtml(region)}</strong>
+                    <span>${count === null ? "用 API 篩選" : `${numberFormatter.format(count)} 筆景點`}</span>
+                  </button>
+                `
+              )
+              .join("")}
+          </div>
+        </details>
       `
     )
     .join("");
 
-  elements.regionList.innerHTML = allButton + regionButtons;
+  elements.regionList.innerHTML = allButton + featuredMarkup + groupMarkup;
 
   for (const button of elements.regionList.querySelectorAll(".region-button")) {
     button.addEventListener("click", wrapAsync(async () => {
@@ -437,6 +586,21 @@ function renderRegionList() {
       renderRegionList();
       await refreshBrowseRows();
     }));
+  }
+
+  for (const group of elements.regionList.querySelectorAll(".region-group")) {
+    group.addEventListener("toggle", () => {
+      const area = group.dataset.area;
+      if (!area) {
+        return;
+      }
+
+      if (group.open) {
+        state.expandedAreas.add(area);
+      } else {
+        state.expandedAreas.delete(area);
+      }
+    });
   }
 }
 
@@ -997,7 +1161,81 @@ function countRegionRows(region) {
 function buildRegionSummaryFromMetadata(metadataRegions) {
   return metadataRegions
     .map((region) => ({ region, count: null }))
-    .sort((left, right) => left.region.localeCompare(right.region, "zh-Hant"));
+    .sort((left, right) => compareRegionsByPopularity(left.region, right.region));
+}
+
+function buildTravelRegionGroups(regionSummaries) {
+  const summaryMap = new Map(regionSummaries.map((item) => [item.region, item]));
+  const grouped = JAPAN_TRAVEL_AREAS.map(({ name, regions }) => ({
+    area: name,
+    regions: regions
+      .map((region) => summaryMap.get(region))
+      .filter(Boolean)
+      .sort((left, right) => compareRegionsByPopularity(left.region, right.region)),
+  }))
+    .filter((group) => group.regions.length > 0)
+    .sort((left, right) => compareTravelAreasByPopularity(left.area, right.area));
+
+  const assignedRegions = new Set(grouped.flatMap((group) => group.regions.map((item) => item.region)));
+  const ungrouped = regionSummaries
+    .filter((item) => !assignedRegions.has(item.region))
+    .sort((left, right) => compareRegionsByPopularity(left.region, right.region));
+
+  if (ungrouped.length) {
+    grouped.push({
+      area: "其他",
+      regions: ungrouped,
+    });
+  }
+
+  return grouped;
+}
+
+function findTravelAreaForRegion(region) {
+  if (!region || region === "ALL") {
+    return null;
+  }
+
+  const matchedArea = JAPAN_TRAVEL_AREAS.find(({ regions }) => regions.includes(region));
+  return matchedArea?.name || "其他";
+}
+
+function compareRegionsByPopularity(left, right) {
+  const leftIndex = POPULAR_REGION_ORDER.indexOf(left);
+  const rightIndex = POPULAR_REGION_ORDER.indexOf(right);
+
+  if (leftIndex !== -1 || rightIndex !== -1) {
+    if (leftIndex === -1) {
+      return 1;
+    }
+    if (rightIndex === -1) {
+      return -1;
+    }
+    if (leftIndex !== rightIndex) {
+      return leftIndex - rightIndex;
+    }
+  }
+
+  return left.localeCompare(right, "zh-Hant");
+}
+
+function compareTravelAreasByPopularity(left, right) {
+  const leftIndex = POPULAR_TRAVEL_AREA_ORDER.indexOf(left);
+  const rightIndex = POPULAR_TRAVEL_AREA_ORDER.indexOf(right);
+
+  if (leftIndex !== -1 || rightIndex !== -1) {
+    if (leftIndex === -1) {
+      return 1;
+    }
+    if (rightIndex === -1) {
+      return -1;
+    }
+    if (leftIndex !== rightIndex) {
+      return leftIndex - rightIndex;
+    }
+  }
+
+  return left.localeCompare(right, "zh-Hant");
 }
 
 function buildLocationSuggestions(rows) {
