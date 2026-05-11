@@ -1,0 +1,2242 @@
+[
+    {
+        "id": "Q48747109",
+        "name": "大垣市守屋多々志美術館",
+        "type": "美術館",
+        "coordinates": "Point(136.61736389 35.36026667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Moriya%20tadashi%20museum.jpg"
+    },
+    {
+        "id": "Q11568737",
+        "name": "熊谷榧つけちギャラリー",
+        "type": "人物紀念館",
+        "coordinates": "Point(137.428517 35.6609)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11609219",
+        "name": "美濃和紙あかりアート館",
+        "type": "美術館",
+        "coordinates": "Point(136.9125 35.54716667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mino%20Washi%20Akari%20Art%20Hall%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q111836641",
+        "name": "心の森ミュージアム 遊童館",
+        "type": "美術館",
+        "coordinates": "Point(136.957305555 35.748416666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11665924",
+        "name": "飛騨高山まちの博物館",
+        "type": "地方文化館",
+        "coordinates": "Point(137.261375 36.142208)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/260124%20Takayama%20Museum%20of%20History%20and%20Art%20Takayama%20Gifu%20pref%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q5350087",
+        "name": "加藤栄三・東一記念美術館",
+        "type": "美術館",
+        "coordinates": "Point(136.775092 35.435001)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Katoeizotoichi.JPG"
+    },
+    {
+        "id": "Q11356786",
+        "name": "三甲美術館",
+        "type": "美術館",
+        "coordinates": "Point(136.790328 35.444803)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sanko%20Museum%201.JPG"
+    },
+    {
+        "id": "Q48747310",
+        "name": "中津川市子ども科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(137.497666666 35.499861111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nakatsugawa%20science%20museum.jpg"
+    },
+    {
+        "id": "Q1754806",
+        "name": "御嶽山",
+        "type": "聖山 (宗教)",
+        "coordinates": "Point(137.480277777 35.892777777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kiso%20Ontake.jpg"
+    },
+    {
+        "id": "Q48746685",
+        "name": "大垣市郷土館",
+        "type": "地方文化館",
+        "coordinates": "Point(136.61442222 35.36158889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%A4%A7%E5%9E%A3%E5%B8%82%E9%83%B7%E5%9C%9F%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11327239",
+        "name": "ハートピア安八",
+        "type": "科學博物館",
+        "coordinates": "Point(136.663889 35.335611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%83%8F%E3%83%BC%E3%83%88%E3%83%94%E3%82%A2%E5%AE%89%E5%85%AB.jpg"
+    },
+    {
+        "id": "Q57312937",
+        "name": "茶の湯美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.249694444 36.120888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takayama%20chanoyu%20museum.jpg"
+    },
+    {
+        "id": "Q5359350",
+        "name": "織田信長公居館跡",
+        "type": "城市公園",
+        "coordinates": "Point(136.77522222 35.43336111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gifuparktea.JPG"
+    },
+    {
+        "id": "Q11655529",
+        "name": "関ヶ原ウォーランド",
+        "type": "軍事博物館",
+        "coordinates": "Point(136.4526 35.368908)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sekigahara%20war%20land1.jpg"
+    },
+    {
+        "id": "Q24863867",
+        "name": "熊谷守一つけち記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(137.43991667 35.64008056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kumagai%20Morikazu%20Tsukechi%20Museum%20of%20Art%20%28exterior%29.jpg"
+    },
+    {
+        "id": "Q11410886",
+        "name": "古今傳授之里博物館",
+        "type": "文學館",
+        "coordinates": "Point(136.924111 35.8118)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kokin%20Denju%20no%20Sato%20Field%20Museum%20main001.JPG"
+    },
+    {
+        "id": "Q107158498",
+        "name": "馬籠脇本陣史料館",
+        "type": "地方文化館",
+        "coordinates": "Point(137.567692 35.527002)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%A6%AC%E7%B1%A0%E8%84%87%E6%9C%AC%E9%99%A3%E5%8F%B2%E6%96%99%E9%A4%A8%20%28%E5%B2%90%E9%98%9C%E7%9C%8C%E4%B8%AD%E6%B4%A5%E5%B7%9D%E5%B8%82%E9%A6%AC%E7%B1%A0%29%20-%20Panoramio%2051956333.jpg"
+    },
+    {
+        "id": "Q11342621",
+        "name": "ミュージアム中仙道",
+        "type": "美術館",
+        "coordinates": "Point(137.234306 35.366667)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q5560118",
+        "name": "岐阜メモリアルセンター",
+        "type": "城市公園",
+        "coordinates": "Point(136.763992 35.441407)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gifu%20Memorial%20Center%20Sunsun%20Deck%201.JPG"
+    },
+    {
+        "id": "Q17209461",
+        "name": "横井照子ひなげし美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.41336111 35.47063889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Teruko%20Yokoi%20Hinageshi%20art%20Museum.jpg"
+    },
+    {
+        "id": "Q11364291",
+        "name": "中山道広重美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.410047 35.452942)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hiroshige%20Museum%20of%20Art%2CEna.jpg"
+    },
+    {
+        "id": "Q11308090",
+        "name": "シューニャ美術館",
+        "type": "美術館",
+        "coordinates": "Point(136.624931 35.351533)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shunya%20Museum2008-1.jpg"
+    },
+    {
+        "id": "Q11263583",
+        "name": "岐阜各務原航空宇宙博物館",
+        "type": "宇宙工学博物館",
+        "coordinates": "Point(136.861472 35.387806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/180501%20Kakamigahara%20Aerospace%20Science%20Museum.jpg"
+    },
+    {
+        "id": "Q11436188",
+        "name": "大松美術館",
+        "type": "美術館",
+        "coordinates": "Point(136.772861111 35.391138888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ohmatsu%20Art%20Museum01.JPG"
+    },
+    {
+        "id": "Q570166",
+        "name": "ソーラーアーク",
+        "type": "科學博物館",
+        "coordinates": "Point(136.671186 35.330941)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Solar%20Ark.jpg"
+    },
+    {
+        "id": "Q11507877",
+        "name": "日本大正村",
+        "type": "戶外博物館",
+        "coordinates": "Point(137.39036111 35.30488889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Old%20Akechi%20Town%20Hall%202021-01%20ac.jpg"
+    },
+    {
+        "id": "Q11518550",
+        "name": "木曾川本川橋",
+        "type": "樑式橋",
+        "coordinates": "Point(136.80655556 35.36794444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kisogawahongawa%20Bridge.jpg"
+    },
+    {
+        "id": "Q114905513",
+        "name": "瑞浪市市之瀬廣太記念美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(137.237111111 35.374944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mizunami%20city%20ichinose%20hirota%20museum.jpg"
+    },
+    {
+        "id": "Q11573911",
+        "name": "瑞浪市民公園",
+        "type": "城市公園",
+        "coordinates": "Point(137.236769 35.373008)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mizunami%20citizen%20park2.jpg"
+    },
+    {
+        "id": "Q11526757",
+        "name": "東山魁夷 心の旅路館",
+        "type": "美術館",
+        "coordinates": "Point(137.55115 35.58588611)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q111431053",
+        "name": "恵那市山岡郷土史料館",
+        "type": "地方文化館",
+        "coordinates": "Point(137.383222222 35.348555555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q2639098",
+        "name": "白山",
+        "type": "火山",
+        "coordinates": "Point(136.5 36.1)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Haku%20from%20Onanjimine%202011-07-17.jpg"
+    },
+    {
+        "id": "Q5359197",
+        "name": "岐阜県美術館",
+        "type": "美術館",
+        "coordinates": "Point(136.730221 35.401309)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/THE%20MUSEUM%20OF%20FINE%20ARTS%2CGIFU%201.JPG"
+    },
+    {
+        "id": "Q117231494",
+        "name": "飛驒市美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.190138888 36.238055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hida%20City%20Art%20Museum%20ac%20%282%29.jpg"
+    },
+    {
+        "id": "Q11492439",
+        "name": "恵那峡ワンダーランド",
+        "type": "主題樂園",
+        "coordinates": "Point(137.405972 35.488119)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Enakyo%20wonderland.JPG"
+    },
+    {
+        "id": "Q11662781",
+        "name": "青邨記念館",
+        "type": "美術館",
+        "coordinates": "Point(137.479744 35.512572)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q111162944",
+        "name": "であい橋",
+        "type": "懸索橋",
+        "coordinates": "Point(136.903810712 36.256540718)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/20171030%20Shiragawa%202365%20%2839099447042%29.jpg"
+    },
+    {
+        "id": "Q104710269",
+        "name": "下呂市下呂ふるさと歴史記念館",
+        "type": "地方文化館",
+        "coordinates": "Point(137.253444444 35.802416666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11622863",
+        "name": "藤井美術民芸館",
+        "type": "美術館",
+        "coordinates": "Point(137.259206 36.142819)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fujii%20Bijutsu%20Mingei-kan02ds3200.jpg"
+    },
+    {
+        "id": "Q11282733",
+        "name": "赤棚山",
+        "type": "火山",
+        "coordinates": "Point(137.572222222 36.2)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Akandana.jpg"
+    },
+    {
+        "id": "Q110832899",
+        "name": "白川橋",
+        "type": "公路橋",
+        "coordinates": "Point(136.897333333 36.253777777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shirakawa%20Bridge.jpg"
+    },
+    {
+        "id": "Q11624320",
+        "name": "藤村紀念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(137.56734444 35.52679444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Magome-Juku%20Touson%20Memorial%20Hall.jpg"
+    },
+    {
+        "id": "Q11411823",
+        "name": "可児郷土歴史館",
+        "type": "地方文化館",
+        "coordinates": "Point(137.111397 35.403631)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kani%20Local%20Museum.jpg"
+    },
+    {
+        "id": "Q111430910",
+        "name": "串原郷土館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(137.448555555 35.236944444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q3276924",
+        "name": "燒岳",
+        "type": "火山",
+        "coordinates": "Point(137.58824 36.22887)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yakedake%20from%20Kamikochi%201999-5-22.jpg"
+    },
+    {
+        "id": "Q11573909",
+        "name": "瑞浪市地球回廊",
+        "type": "自然歷史博物館",
+        "coordinates": "Point(137.237256 35.374106)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mizunami%20city%20chikyu%20kairo.jpg"
+    },
+    {
+        "id": "Q11471444",
+        "name": "岐阜県博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(136.868664 35.478206)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gifu%20Prefectural%20Museum%201.JPG"
+    },
+    {
+        "id": "Q11433766",
+        "name": "大垣公園",
+        "type": "城市公園",
+        "coordinates": "Point(136.615447 35.361208)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ogaki-koen%20Park%2020160618.jpg"
+    },
+    {
+        "id": "Q111803091",
+        "name": "日本国際ポスター美術館",
+        "type": "美術館",
+        "coordinates": "Point(136.619667 35.394389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%B2%90%E9%98%9C%E5%8D%94%E7%AB%8B%E5%A4%A7%E5%AD%A6%E6%A0%A1%E5%90%8D.jpg"
+    },
+    {
+        "id": "Q3133588",
+        "name": "乘鞍岳",
+        "type": "火山",
+        "coordinates": "Point(137.55361111 36.10638889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Norikuradake%20from%20Kisokomagatake%207th%202007-4-29.JPG"
+    },
+    {
+        "id": "Q11665929",
+        "name": "飛騨高山美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.240753 36.136961)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hida%20Takayama%20Museum%20of%20Art.JPG"
+    },
+    {
+        "id": "Q5359267",
+        "name": "岐阜市科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(136.730861 35.403905)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gifu%20City%20Science%20Museum%201.JPG"
+    },
+    {
+        "id": "Q11655772",
+        "name": "関市立篠田桃紅美術空間",
+        "type": "美術館",
+        "coordinates": "Point(136.917894 35.495803)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q113080943",
+        "name": "大垣市上石津郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(136.466305555 35.287222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%A4%A7%E5%9E%A3%E5%B8%82%E4%B8%8A%E7%9F%B3%E6%B4%A5%E9%83%B7%E5%9C%9F%E8%B3%87%E6%96%99%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q48749054",
+        "name": "美濃加茂市民ミュージアム",
+        "type": "博物館",
+        "coordinates": "Point(137.02177778 35.45705556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Minokamo%20culture%20forest.jpg"
+    },
+    {
+        "id": "Q11655767",
+        "name": "関市洞戸円空記念館",
+        "type": "彫刻美術館",
+        "coordinates": "Point(136.854036 35.649967)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Enku%20Kinenkan.JPG"
+    },
+    {
+        "id": "Q113482103",
+        "name": "坂内民俗資料館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(136.358722222 35.614833333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q111218301",
+        "name": "日下部民藝館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(137.258459 36.146435)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Maison%20Kusakabe-02.jpg"
+    },
+    {
+        "id": "Q11471417",
+        "name": "岐阜現代美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(136.901292 35.453164)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gifu%20Collection%20of%20Modern%20Arts%2020220507%2001.jpg"
+    },
+    {
+        "id": "Q109602248",
+        "name": "關原鍾乳洞",
+        "type": "溶洞",
+        "coordinates": "Point(136.426861111 35.371222222)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q48746198",
+        "name": "笠松町歴史未来館",
+        "type": "歷史博物館",
+        "coordinates": "Point(136.76177778 35.36605556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%AC%A0%E6%9D%BE%E7%94%BA%E6%AD%B4%E5%8F%B2%E6%9C%AA%E6%9D%A5%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11586523",
+        "name": "石徹白大杉",
+        "type": "巨樹",
+        "coordinates": "Point(136.760972 36.03375)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Itoshiro%20oosugi%20from%20south%202008%206%2010.jpg"
+    },
+    {
+        "id": "Q48746221",
+        "name": "大垣市歴史民俗資料館",
+        "type": "民俗博物館",
+        "coordinates": "Point(136.55201389 35.38597222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%A4%A7%E5%9E%A3%E5%B8%82%E6%AD%B4%E5%8F%B2%E6%B0%91%E4%BF%97%E8%B3%87%E6%96%99%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11571212",
+        "name": "犬山橋",
+        "type": "双子",
+        "coordinates": "Point(136.9457611 35.39315)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Inuyama%20Bridge%202.JPG"
+    },
+    {
+        "id": "Q11508260",
+        "name": "ぎふ清流里山公園",
+        "type": "主題公園",
+        "coordinates": "Point(137.033472222 35.476444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Seiryu%20satoyama%20park%20ginza.jpg"
+    },
+    {
+        "id": "Q5017823",
+        "name": "関市円空館",
+        "type": "彫刻美術館",
+        "coordinates": "Point(136.89027778 35.50583333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Enku%20Museum%204.JPG"
+    },
+    {
+        "id": "Q1067359",
+        "name": "大垣城",
+        "type": "軍事博物館",
+        "coordinates": "Point(136.616111111 35.361944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ogaki%20Tenshu.JPG"
+    },
+    {
+        "id": "Q115266620",
+        "name": "藤橋歴史民俗資料館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(136.486138888 35.638277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fujihashi%20Historical%20Museum%20s2.jpg"
+    },
+    {
+        "id": "Q5926945",
+        "name": "内藤記念くすり博物館",
+        "type": "製薬博物館",
+        "coordinates": "Point(136.8291944 35.363)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Naito%20Museum%20of%20Pharmaceutical%20Science%20and%20Industry01.jpg"
+    },
+    {
+        "id": "Q105266062",
+        "name": "岐阜關原古戰場紀念館",
+        "type": "歷史博物館",
+        "coordinates": "Point(136.466253 35.365676)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sekigahara%20Battlefield%20Memorial%20Hall.jpg"
+    },
+    {
+        "id": "Q104710272",
+        "name": "戦国山城ミュージアム",
+        "type": "軍事博物館",
+        "coordinates": "Point(137.093058 35.457488)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sengoku%20yamajiro%20museum.jpg"
+    },
+    {
+        "id": "Q11423385",
+        "name": "土岐市美濃陶磁歴史館",
+        "type": "歷史博物館",
+        "coordinates": "Point(137.179175 35.365097)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toki%20city%20mino%20touji%20museum.jpg"
+    },
+    {
+        "id": "Q5371109",
+        "name": "奧飛驒溫泉鄉",
+        "type": "温泉郷",
+        "coordinates": "Point(137.526 36.238)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11571221",
+        "name": "犬山頭首工ライン大橋",
+        "type": "公路橋",
+        "coordinates": "Point(136.934916666 35.388111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kiso%20River%20from%20Mount%20Igi%202010-02-28.JPG"
+    },
+    {
+        "id": "Q48747247",
+        "name": "中山道ひし屋資料館",
+        "type": "町屋",
+        "coordinates": "Point(137.41452778 35.45519444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nakasendo%20hishiya%20museum.jpg"
+    },
+    {
+        "id": "Q48747322",
+        "name": "岩村歴史資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(137.44652778 35.36380556)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11540999",
+        "name": "椿原橋",
+        "type": "公路橋",
+        "coordinates": "Point(136.898472222 36.313138888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/TOKAI-HOKURIKU%20EXPWY.Tsubakihara%20Bridge%20Syougawa.jpg"
+    },
+    {
+        "id": "Q97310632",
+        "name": "山崎馬扎克工作機械博物館",
+        "type": "公司博物館",
+        "coordinates": "Point(137.001194444 35.456027777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Yamazaki%20Mazak%20Museum%20of%20Machine%20Tools%2020210325%2002.jpg"
+    },
+    {
+        "id": "Q11471462",
+        "name": "岐阜県歴史資料館",
+        "type": "檔案館",
+        "coordinates": "Point(136.774103 35.430689)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gifu%20Prefectural%20Archives%201.JPG"
+    },
+    {
+        "id": "Q11412319",
+        "name": "各務原市歴史民俗資料館",
+        "type": "民俗博物館",
+        "coordinates": "Point(136.842681111 35.40005)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kakamigahara-City-Chuou-Library-1.jpg"
+    },
+    {
+        "id": "Q5926921",
+        "name": "岐阜薬科大学薬草園",
+        "type": "药材园",
+        "coordinates": "Point(136.75 35.48333333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q110866962",
+        "name": "各務原市木曽川文化史料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(136.8255 35.368027777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kiso%20River%20Cultural%20History%20Museum%2020210321%2001.jpg"
+    },
+    {
+        "id": "Q17224631",
+        "name": "飛驒國分寺大銀杏樹",
+        "type": "巨樹",
+        "coordinates": "Point(137.253833 36.143306)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%A3%9B%E9%A8%A8%E5%9B%BD%E5%88%86%E5%AF%BA%20%E5%A4%A7%E9%8A%80%E6%9D%8F.01.JPG"
+    },
+    {
+        "id": "Q104710298",
+        "name": "飛騨の匠文化館",
+        "type": "工藝博物館",
+        "coordinates": "Point(137.18565 36.23608)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q47417030",
+        "name": "杉原千畝記念館",
+        "type": "博物館",
+        "coordinates": "Point(137.166666666 35.466666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Chiune%20Sugihara%20Memorial%20Hall%2020210723%2002.jpg"
+    },
+    {
+        "id": "Q15068096",
+        "name": "ひるがの湿原植物園",
+        "type": "植物園",
+        "coordinates": "Point(136.8995 35.99875)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hirugano-shitsugen%20Botanical%20Garden.JPG"
+    },
+    {
+        "id": "Q108403882",
+        "name": "飛騨みやがわ考古民俗館",
+        "type": "民俗博物館",
+        "coordinates": "Point(137.18425 36.390777777)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q109357679",
+        "name": "大牧橋",
+        "type": "公路橋",
+        "coordinates": "Point(136.891944444 36.254527777)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11420637",
+        "name": "國營木曾三川公園",
+        "type": "國營公園",
+        "coordinates": "Point(136.822056 35.374119)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kiso%20Three%20Rivers%20and%20Kisosansen%20Park.jpg"
+    },
+    {
+        "id": "Q11527855",
+        "name": "東海大橋",
+        "type": "公路橋",
+        "coordinates": "Point(136.677542026 35.225676356)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokai%20Bridge%20%28Aichi%20Prefectural%20Road%20and%20Gifu%20Prefectural%20Road%20Route%208%29.jpg"
+    },
+    {
+        "id": "Q11478114",
+        "name": "川合考古資料館",
+        "type": "考古博物館",
+        "coordinates": "Point(137.053775 35.441561)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kawai%20Archaeology%20Museum-2.JPG"
+    },
+    {
+        "id": "Q5359247",
+        "name": "岐阜市歴史博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(136.772803 35.43332)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gifushirekishi.JPG"
+    },
+    {
+        "id": "Q11376916",
+        "name": "今川橋",
+        "type": "公路橋",
+        "coordinates": "Point(136.8508988 35.4782194)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Imagawa-Bashi-Seki01.JPG"
+    },
+    {
+        "id": "Q11471438",
+        "name": "岐阜県先端科学技術体験センター",
+        "type": "科技博物館",
+        "coordinates": "Point(137.236944 35.376111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gifu%20Research%20Information%20Center%20Science%20World2008-1.jpg"
+    },
+    {
+        "id": "Q11634232",
+        "name": "荒川豊蔵資料館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(137.136789 35.399711)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Arakawa%20Toyoz%C5%8D%20Museum.jpg"
+    },
+    {
+        "id": "Q11446176",
+        "name": "奥飛騨クマ牧場",
+        "type": "クマ牧場",
+        "coordinates": "Point(137.54313889 36.21927778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/OkuHida%20Bears%20Park.JPG"
+    },
+    {
+        "id": "Q11665894",
+        "name": "飛騨大鍾乳洞",
+        "type": "溶洞",
+        "coordinates": "Point(137.424481 36.184633)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%A3%9B%E9%A8%A8%E5%A4%A7%E9%8D%BE%E4%B9%B3%E6%B4%9E%20%2848346806541%29.jpg"
+    },
+    {
+        "id": "Q11548165",
+        "name": "水の体験学習館",
+        "type": "水廠博物館",
+        "coordinates": "Point(136.77925 35.43769444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Water%20Experience%20learning%20Museum%201.JPG"
+    },
+    {
+        "id": "Q48747312",
+        "name": "中津川市苗木遠山史料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(137.48155278 35.51484167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Naegi%20Toyama%20Historical%20Museum.jpg"
+    },
+    {
+        "id": "Q11483232",
+        "name": "平湯民俗館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(137.55431389 36.19190278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hirayu-minzokukan02ds3872.jpg"
+    },
+    {
+        "id": "Q11282869",
+        "name": "アクア・トトぎふ",
+        "type": "水族館",
+        "coordinates": "Point(136.810472 35.371722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%82%A2%E3%82%AF%E3%82%A2%E3%83%BB%E3%83%88%E3%83%88%E3%81%8E%E3%81%B5%20%E5%A4%96%E8%A6%B3.jpg"
+    },
+    {
+        "id": "Q11665868",
+        "name": "飛越大橋",
+        "type": "公路橋",
+        "coordinates": "Point(136.88252778 36.34183333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hietsu-Ohashi%2C2013-10-26.jpg"
+    },
+    {
+        "id": "Q115112030",
+        "name": "大垣市墨俣歴史資料館",
+        "type": "天守",
+        "coordinates": "Point(136.68775 35.367083333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sunomata%20Castle%20%E5%A2%A8%E4%BF%A3%E4%B8%80%E5%A4%9C%E5%9F%8E4%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q11294725",
+        "name": "フェザーミュージアム",
+        "type": "公司博物館",
+        "coordinates": "Point(136.915136 35.483536)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Feather%20Museum%201.JPG"
+    },
+    {
+        "id": "Q10974975",
+        "name": "円空美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(136.772161 35.433208)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Enku%20bijutukan001.JPG"
+    },
+    {
+        "id": "Q11492442",
+        "name": "恵那峡大橋",
+        "type": "拱橋",
+        "coordinates": "Point(137.41166667 35.48663889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Enakyo%20Bridge.JPG"
+    },
+    {
+        "id": "Q108561972",
+        "name": "大滝鍾乳洞",
+        "type": "溶洞",
+        "coordinates": "Point(136.980111111 35.733722222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%C5%8Ctaki%20Cave%2020210914%2001.jpg"
+    },
+    {
+        "id": "Q11428424",
+        "name": "塚原遺跡公園展示館",
+        "type": "考古博物館",
+        "coordinates": "Point(136.865025 35.496425)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tsukahara%20Ruins%20Museum%2001.JPG"
+    },
+    {
+        "id": "Q11548181",
+        "name": "水の資料館",
+        "type": "水廠博物館",
+        "coordinates": "Point(136.77905556 35.43755556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Water%20Museum%201.JPG"
+    },
+    {
+        "id": "Q11566813",
+        "name": "灘見島",
+        "type": "河岛",
+        "coordinates": "Point(137.3382 36.2969)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q6922468",
+        "name": "能鄉白山",
+        "type": "山",
+        "coordinates": "Point(136.51416667 35.76222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt%20Nougouhakusan.JPG"
+    },
+    {
+        "id": "Q31690188",
+        "name": "Shichisō-zan",
+        "type": "山",
+        "coordinates": "Point(137.1467 35.5692)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31500714",
+        "name": "Takatō Yama",
+        "type": "山",
+        "coordinates": "Point(137.063055555 36.271388888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31500240",
+        "name": "Matsugahora Yama",
+        "type": "山",
+        "coordinates": "Point(137.378333333 36.129444444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31703646",
+        "name": "Nisshō Dake",
+        "type": "山",
+        "coordinates": "Point(136.8935 36.107)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q6921583",
+        "name": "冠山",
+        "type": "山",
+        "coordinates": "Point(136.40908 35.77966)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kanmuriyama%20fron%20road%202008-11-13.jpg"
+    },
+    {
+        "id": "Q31500526",
+        "name": "Takigahora Yama",
+        "type": "山",
+        "coordinates": "Point(137.108055555 36.1225)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31500134",
+        "name": "Anbō San",
+        "type": "山",
+        "coordinates": "Point(137.213055555 36.250555555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31500219",
+        "name": "牛首山",
+        "type": "山",
+        "coordinates": "Point(137.4175 36.130555555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31500423",
+        "name": "Takahora Yama",
+        "type": "山",
+        "coordinates": "Point(137.150277777 36.106666666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q27972356",
+        "name": "南宮山",
+        "type": "山",
+        "coordinates": "Point(136.50979539 35.34682819)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Nangu.jpg"
+    },
+    {
+        "id": "Q31500545",
+        "name": "丸山",
+        "type": "山",
+        "coordinates": "Point(136.7975 36.049166666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31804182",
+        "name": "Nagareha Yama",
+        "type": "山",
+        "coordinates": "Point(137.2354 36.3235)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q6921736",
+        "name": "黑部五郎岳",
+        "type": "山",
+        "coordinates": "Point(137.54 36.3925)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kurobegoro1.JPG"
+    },
+    {
+        "id": "Q31500672",
+        "name": "Zōzō Yama",
+        "type": "山",
+        "coordinates": "Point(136.8894 36.2846)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q1339920",
+        "name": "惠那山",
+        "type": "山",
+        "coordinates": "Point(137.596944444 35.443055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Ena%20from%20Mount%20Surikogi%202007-5-3.JPG"
+    },
+    {
+        "id": "Q11645055",
+        "name": "野伏岳",
+        "type": "山",
+        "coordinates": "Point(136.7325 36.012777777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nobusegatake%20from%20Kamagamine%202002-5-25.jpg"
+    },
+    {
+        "id": "Q11477519",
+        "name": "川上岳",
+        "type": "山",
+        "coordinates": "Point(137.149444444 36.007777777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kaoredake%20from%20kuraiyama%202005%203%2021.JPG"
+    },
+    {
+        "id": "Q31500736",
+        "name": "Sobakado Yama",
+        "type": "山",
+        "coordinates": "Point(137.1367 36.3537)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31500589",
+        "name": "天狗山",
+        "type": "山",
+        "coordinates": "Point(136.829166666 36.011666666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31705059",
+        "name": "Genji Dake",
+        "type": "山",
+        "coordinates": "Point(137.2037 36.1034)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31500260",
+        "name": "Roppō San",
+        "type": "山",
+        "coordinates": "Point(137.4007 36.1128)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31689085",
+        "name": "Sobatsubu-yama",
+        "type": "山",
+        "coordinates": "Point(136.40265 35.64823)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31500281",
+        "name": "Hinomiga Take",
+        "type": "山",
+        "coordinates": "Point(137.3125 36.082222222)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q115706825",
+        "name": "猪臥山",
+        "type": "山",
+        "coordinates": "Point(137.1125 36.19)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Ibushi%20from%20Meiho%20Snow%20Resort%20s2%20-%20cropped.jpg"
+    },
+    {
+        "id": "Q1157629",
+        "name": "大日岳",
+        "type": "山",
+        "coordinates": "Point(136.837777777 36.001388888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dainichigatake%20from%20Nobusegatake%202009-4-9.jpg"
+    },
+    {
+        "id": "Q31500775",
+        "name": "Urushiyama Dake",
+        "type": "山",
+        "coordinates": "Point(137.2581 36.4024)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31500464",
+        "name": "Ibuse Yama",
+        "type": "山",
+        "coordinates": "Point(137.113333333 36.189722222)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31500609",
+        "name": "御前岳",
+        "type": "山",
+        "coordinates": "Point(136.96031 36.19822)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31500071",
+        "name": "Takatoya Yama",
+        "type": "山",
+        "coordinates": "Point(137.4183 36.2809)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q110992401",
+        "name": "道樹山",
+        "type": "山",
+        "coordinates": "Point(137.071958 35.306473)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31688937",
+        "name": "Suishō-zan",
+        "type": "山",
+        "coordinates": "Point(137.139722222 35.621666666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31500301",
+        "name": "Kurote Yama",
+        "type": "山",
+        "coordinates": "Point(137.336944444 36.063611111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31500567",
+        "name": "芦倉山",
+        "type": "山",
+        "coordinates": "Point(136.797222222 36.031388888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31500630",
+        "name": "栗ヶ岳",
+        "type": "山",
+        "coordinates": "Point(136.98048 36.19133)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31500091",
+        "name": "Kunimi Yama",
+        "type": "山",
+        "coordinates": "Point(137.362777777 36.251944444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31500180",
+        "name": "Hikagedaira Yama",
+        "type": "山",
+        "coordinates": "Point(137.4506 36.1425)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31500443",
+        "name": "Mihaka Yama",
+        "type": "山",
+        "coordinates": "Point(137.2033 36.1669)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11659656",
+        "name": "雨乞山 (岐阜県)",
+        "type": "山",
+        "coordinates": "Point(137.20442 35.45813)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31500755",
+        "name": "Sonbo Yama",
+        "type": "山",
+        "coordinates": "Point(137.228888888 36.42)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q97138930",
+        "name": "日照岳",
+        "type": "山",
+        "coordinates": "Point(136.894237678 36.105939128)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Hideri%20and%20Bessan%202009-04-07.jpg"
+    },
+    {
+        "id": "Q31500505",
+        "name": "Urushibora Yama",
+        "type": "山",
+        "coordinates": "Point(137.117777777 36.155)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q6920466",
+        "name": "百々ヶ峰",
+        "type": "山",
+        "coordinates": "Point(136.800097222 35.463133333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Dodo%20from%20Mount%20Kinka%202011-10-29.jpg"
+    },
+    {
+        "id": "Q31500199",
+        "name": "Marukuro Yama",
+        "type": "山",
+        "coordinates": "Point(137.4781 36.1322)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31500009",
+        "name": "Nakasaki Yama",
+        "type": "山",
+        "coordinates": "Point(137.5878 36.2992)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31698051",
+        "name": "Kō Yama",
+        "type": "山",
+        "coordinates": "Point(137.1716 36.3173)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31703064",
+        "name": "Hi Yama",
+        "type": "山",
+        "coordinates": "Point(137.048333333 36.043888888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q44586691",
+        "name": "舟伏山 (本巣市・山県市)",
+        "type": "山",
+        "coordinates": "Point(136.681388888 35.658333333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31500485",
+        "name": "Ozaki Yama",
+        "type": "山",
+        "coordinates": "Point(137.100555555 36.219444444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31500321",
+        "name": "Rokurōbora Yama",
+        "type": "山",
+        "coordinates": "Point(137.3439 36.0219)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31500382",
+        "name": "Midagahora Yama",
+        "type": "山",
+        "coordinates": "Point(137.279722222 36.070833333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q981510",
+        "name": "池田山",
+        "type": "山",
+        "coordinates": "Point(136.516944444 35.441111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Ikeda%20from%20east%202010-5-1.JPG"
+    },
+    {
+        "id": "Q31691470",
+        "name": "Ozōzo Yama",
+        "type": "山",
+        "coordinates": "Point(136.864444444 36.341111111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31804181",
+        "name": "十二ヶ岳",
+        "type": "山",
+        "coordinates": "Point(137.3868 36.1975)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11650213",
+        "name": "銚子ヶ峰",
+        "type": "山",
+        "coordinates": "Point(136.76545 36.06173)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Choshi%202008-10-16.jpg"
+    },
+    {
+        "id": "Q11433651",
+        "name": "大喰岳",
+        "type": "山",
+        "coordinates": "Point(137.646111111 36.335833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/10%20Oobamidake%20from%20Yarigatake%202003-10-5.jpg"
+    },
+    {
+        "id": "Q11376006",
+        "name": "人形山",
+        "type": "山",
+        "coordinates": "Point(136.939722 36.348889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Ningyo%20and%20Mount%20Mitsugatuji%20from%20Mount%20Mominuka.jpg"
+    },
+    {
+        "id": "Q11430684",
+        "name": "多度山",
+        "type": "山",
+        "coordinates": "Point(136.625639 35.144556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Tado.jpg"
+    },
+    {
+        "id": "Q11463299",
+        "name": "小秀山",
+        "type": "山",
+        "coordinates": "Point(137.39708 35.78565)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Kohide%20from%20Mount%20Doppyo%202011-10-27.jpg"
+    },
+    {
+        "id": "Q11599953",
+        "name": "笠置山",
+        "type": "山",
+        "coordinates": "Point(137.347777777 35.510555555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Kasagi%20from%20Mount%20Ena.jpg"
+    },
+    {
+        "id": "Q31687940",
+        "name": "高社山",
+        "type": "山",
+        "coordinates": "Point(137.0708 35.3475)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q29512055",
+        "name": "白木峰",
+        "type": "山",
+        "coordinates": "Point(137.11761 36.41873)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shirakigamine%202014-10-11.jpg"
+    },
+    {
+        "id": "Q11647649",
+        "name": "金生山",
+        "type": "山",
+        "coordinates": "Point(136.5775 35.40194444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Kinsh%C5%8D%20and%20Mount%20Haku%20from%20Y%C5%8Dr%C5%8D%20Mountains.JPG"
+    },
+    {
+        "id": "Q11445592",
+        "name": "奧丸山",
+        "type": "山",
+        "coordinates": "Point(137.620555555 36.325277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Okumaru%20from%20Senjozawa%20col.JPG"
+    },
+    {
+        "id": "Q11410419",
+        "name": "雙六岳",
+        "type": "山",
+        "coordinates": "Point(137.587222222 36.371944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sugorokudake%20from%20yumioridake%202004-8-12.jpg"
+    },
+    {
+        "id": "Q31497711",
+        "name": "キラズ山",
+        "type": "山",
+        "coordinates": "Point(137.279166666 36.465)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11529615",
+        "name": "松尾山",
+        "type": "山",
+        "coordinates": "Point(136.453611111 35.346666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%AC%B9%E5%B0%BE%E5%B1%B1.JPG"
+    },
+    {
+        "id": "Q11445587",
+        "name": "奥三界岳",
+        "type": "山",
+        "coordinates": "Point(137.507222 35.681667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Okusangai%20from%20Mount%20Nagiso%202011-02-13.jpg"
+    },
+    {
+        "id": "Q3695461",
+        "name": "笠岳",
+        "type": "山",
+        "coordinates": "Point(137.55063 36.31568)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Kasa%20from%20Mount%20Nishihotaka%201995-10-7.jpg"
+    },
+    {
+        "id": "Q11400825",
+        "name": "北俣岳",
+        "type": "山",
+        "coordinates": "Point(137.512222222 36.421111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kitanomatadake.jpg"
+    },
+    {
+        "id": "Q31490723",
+        "name": "北穂高岳",
+        "type": "山",
+        "coordinates": "Point(137.65191 36.30219)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hotakadake%20from%20Minamidake%201994-8-15.jpg"
+    },
+    {
+        "id": "Q2624360",
+        "name": "伊吹山",
+        "type": "山",
+        "coordinates": "Point(136.406111111 35.417777777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ibuki-yama.jpg"
+    },
+    {
+        "id": "Q11650842",
+        "name": "鎌峰",
+        "type": "山",
+        "coordinates": "Point(137.599166666 36.026111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Kama%20from%20Nomugitoge%20ski%20resort%202009-04-19.jpg"
+    },
+    {
+        "id": "Q11481282",
+        "name": "歸雲山",
+        "type": "山",
+        "coordinates": "Point(136.9144 36.2252)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sarugabanbayama%20from%20Nodanisyojiyama%202010-4-18.JPG"
+    },
+    {
+        "id": "Q6922490",
+        "name": "笈岳",
+        "type": "山",
+        "coordinates": "Point(136.79229 36.29927)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oizurugatake%20from%20Maeoizurugatake%202010-10-17.JPG"
+    },
+    {
+        "id": "Q6921671",
+        "name": "金华山 (岐阜县)",
+        "type": "山",
+        "coordinates": "Point(136.781388888 35.433333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kinkazan%20from%20Hino.jpg"
+    },
+    {
+        "id": "Q56533835",
+        "name": "烏帽子岳",
+        "type": "山",
+        "coordinates": "Point(136.997969444 35.934002777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Eboshi%20from%20Mount%20Washi.jpg"
+    },
+    {
+        "id": "Q2592686",
+        "name": "槍岳",
+        "type": "山",
+        "coordinates": "Point(137.6475 36.341944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/05%20Yarigatake%20from%20Higashikamaone%202000-8-16.jpg"
+    },
+    {
+        "id": "Q11462589",
+        "name": "小津權現山",
+        "type": "山",
+        "coordinates": "Point(136.49444444 35.5975)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Front%20peak%20Mount%20Odugongen.jpg"
+    },
+    {
+        "id": "Q115113426",
+        "name": "弥勒山",
+        "type": "最高点",
+        "coordinates": "Point(137.065193634 35.314529873)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%BC%A5%E5%8B%92%E5%B1%B1%20from%20%E6%98%A5%E6%97%A5%E4%BA%95%E5%B8%82%E5%BB%BB%E9%96%93%E7%94%BA.jpg"
+    },
+    {
+        "id": "Q11604437",
+        "name": "籾糠山",
+        "type": "山",
+        "coordinates": "Point(136.953333 36.234444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mominukayama%20from%20Sarugabanbayama%202009-5-14.jpg"
+    },
+    {
+        "id": "Q11629360",
+        "name": "西穗高岳",
+        "type": "頂峰",
+        "coordinates": "Point(137.629167 36.278889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Nishihotaka%20%2853622207844%29.jpg"
+    },
+    {
+        "id": "Q11385695",
+        "name": "保古山",
+        "type": "山",
+        "coordinates": "Point(137.484167 35.441944)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Hoko%20and%20Lake%20Nenoue%20from%20Mount%20Ena%202010-12-12.jpg"
+    },
+    {
+        "id": "Q11364337",
+        "name": "中岳",
+        "type": "山",
+        "coordinates": "Point(137.64666667 36.32972222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/12%20Nakadake%20and%20Yarigatake%20from%20Minamidake%202003-10-5.jpg"
+    },
+    {
+        "id": "Q6924716",
+        "name": "弓折岳",
+        "type": "山",
+        "coordinates": "Point(137.596666666 36.349444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Sugoroku%20and%20Mount%20Yumiori%20from%20Mount%20Karasawa%202002-08-31.jpg"
+    },
+    {
+        "id": "Q31500114",
+        "name": "大雨見山",
+        "type": "山",
+        "coordinates": "Point(137.2978 36.2531)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q114567313",
+        "name": "丸山",
+        "type": "山",
+        "coordinates": "Point(137.586389 36.383889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%B8%E5%B1%B1.jpg"
+    },
+    {
+        "id": "Q11366225",
+        "name": "中根山",
+        "type": "山",
+        "coordinates": "Point(137.246694 35.815889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gero-onsen01s3200.jpg"
+    },
+    {
+        "id": "Q11465718",
+        "name": "屏風山",
+        "type": "山",
+        "coordinates": "Point(137.32552539 35.36736178)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Byobu%20%28Gifu%29.jpg"
+    },
+    {
+        "id": "Q136528943",
+        "name": "日永岳",
+        "type": "山",
+        "coordinates": "Point(136.702777777 35.720277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Hinaga%20from%20Mount%20Nogohaku%202020-11-24.jpg"
+    },
+    {
+        "id": "Q656026",
+        "name": "穗高岳",
+        "type": "山",
+        "coordinates": "Point(137.64805556 36.28916667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.Hotaka%20from%20Mt.Otenshodake%2001.jpg"
+    },
+    {
+        "id": "Q96657434",
+        "name": "大谷山",
+        "type": "山",
+        "coordinates": "Point(137.066363077 35.309040531)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20%C5%8Ctani%20from%20Miyataki%C5%8Dike.jpg"
+    },
+    {
+        "id": "Q31497288",
+        "name": "瓢簟山",
+        "type": "山",
+        "coordinates": "Point(136.827777777 36.265555555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q6921728",
+        "name": "位山",
+        "type": "山",
+        "coordinates": "Point(137.19666667 36.03833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Kurai%20from%20south%202011-02-20.jpg"
+    },
+    {
+        "id": "Q30924459",
+        "name": "富士見岳",
+        "type": "山",
+        "coordinates": "Point(137.557 36.12194444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Fujimi%20and%20Tsuru%20Pond.jpg"
+    },
+    {
+        "id": "Q28688588",
+        "name": "八木山",
+        "type": "山",
+        "coordinates": "Point(136.929166666 35.415277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Futago%20and%20Mount%20Yagi.jpg"
+    },
+    {
+        "id": "Q31497733",
+        "name": "六谷山",
+        "type": "山",
+        "coordinates": "Point(137.308055555 36.463611111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11482417",
+        "name": "平家岳",
+        "type": "山",
+        "coordinates": "Point(136.718889 35.809722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Heike%20from%20Mount%20Igishi%202008-11-14.jpg"
+    },
+    {
+        "id": "Q17173477",
+        "name": "三俣蓮華岳",
+        "type": "山",
+        "coordinates": "Point(137.587222222 36.389444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Mitsumatarenge%20from%20Mount%20Washiba%201999-08-09.jpg"
+    },
+    {
+        "id": "Q8535253",
+        "name": "三之峰",
+        "type": "山",
+        "coordinates": "Point(136.75416667 36.08916667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sannomine%20from%20Cyoushigamine%202010-5-3.JPG"
+    },
+    {
+        "id": "Q31699379",
+        "name": "見当山",
+        "type": "山",
+        "coordinates": "Point(136.95986 35.9812)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11497567",
+        "name": "拔戶岳",
+        "type": "山",
+        "coordinates": "Point(137.575 36.327222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Nukedo%20from%20Koike%20Shindo.jpg"
+    },
+    {
+        "id": "Q11650577",
+        "name": "錫杖岳",
+        "type": "山",
+        "coordinates": "Point(137.5473 36.2913)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Shakujo%20from%20Kuriyatani%202002-8-29.jpg"
+    },
+    {
+        "id": "Q31686131",
+        "name": "焼山",
+        "type": "山",
+        "coordinates": "Point(137.56393 35.40374)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Yake%20from%20Mount%20Ena%202010-12-12.jpg"
+    },
+    {
+        "id": "Q31707699",
+        "name": "雨乞棚山",
+        "type": "山",
+        "coordinates": "Point(137.466111111 35.674166666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104601308",
+        "name": "小白木峰",
+        "type": "山",
+        "coordinates": "Point(137.092778 36.396944)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11655364",
+        "name": "間之岳",
+        "type": "山",
+        "coordinates": "Point(137.633611 36.281389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nishihotakadake%20and%20Ainodake%20from%20Maeho%202000-9-3.jpg"
+    },
+    {
+        "id": "Q31694984",
+        "name": "水無山",
+        "type": "山",
+        "coordinates": "Point(137.010555555 36.298055555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11582574",
+        "name": "眉山",
+        "type": "山",
+        "coordinates": "Point(136.769166666 35.4775)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31498138",
+        "name": "寺地山",
+        "type": "山",
+        "coordinates": "Point(137.474444444 36.425277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Teraji%20from%20Mount%20Kitanomata.jpg"
+    },
+    {
+        "id": "Q21872852",
+        "name": "南岳",
+        "type": "山",
+        "coordinates": "Point(137.65083333 36.31888889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Daikiretto%20minami.jpg"
+    },
+    {
+        "id": "Q47493640",
+        "name": "二ッ森山",
+        "type": "山",
+        "coordinates": "Point(137.400277777 35.571944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Futatsumori%20from%20Naegi%20Castle.jpg"
+    },
+    {
+        "id": "Q31497267",
+        "name": "野谷荘司山",
+        "type": "山",
+        "coordinates": "Point(136.847777777 36.246388888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11572075",
+        "name": "猿馬場山",
+        "type": "山",
+        "coordinates": "Point(136.94277954 36.22583008)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Sarugabanba%20from%20Mount%20Mominuka.jpg"
+    },
+    {
+        "id": "Q31490702",
+        "name": "涸沢岳",
+        "type": "山",
+        "coordinates": "Point(137.64666 36.29661)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Karasawa%20and%20Gamatafuji.jpg"
+    },
+    {
+        "id": "Q56611814",
+        "name": "毘沙門岳",
+        "type": "山",
+        "coordinates": "Point(136.792777777 35.940277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Bishamon%20from%20Mount%20Suigo.jpg"
+    },
+    {
+        "id": "Q31499967",
+        "name": "恵比須岳",
+        "type": "山",
+        "coordinates": "Point(137.550555555 36.129166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Natural%20flower%20garden%20in%20Tatamidaira%20of%20Mount%20Norikura.jpg"
+    },
+    {
+        "id": "Q31702740",
+        "name": "奥穂高岳",
+        "type": "山",
+        "coordinates": "Point(137.64788 36.28912)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Okuhotaka%20from%20Mount%20Cho%20%282016-10-04%29.jpg"
+    },
+    {
+        "id": "Q11542035",
+        "name": "樅澤岳",
+        "type": "山",
+        "coordinates": "Point(137.607777777 36.366666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Momisawadake%20from%20yumioridake%202004%2008%2012.jpg"
+    },
+    {
+        "id": "Q11355488",
+        "name": "三方岩岳",
+        "type": "山",
+        "coordinates": "Point(136.844444 36.258333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sanpouiwadake%202010%204%2018.jpg"
+    },
+    {
+        "id": "Q85875025",
+        "name": "三ヶ辻山",
+        "type": "山",
+        "coordinates": "Point(136.95 36.338333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Ningyo%20and%20Mount%20Mitsugatuji%20from%20Mount%20Sanpoiwa.jpg"
+    },
+    {
+        "id": "Q11379404",
+        "name": "伊木山",
+        "type": "山",
+        "coordinates": "Point(136.9225 35.384444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Igi%20from%20Mount%20yagi%202008-06-13.jpg"
+    },
+    {
+        "id": "Q6924720",
+        "name": "養老山",
+        "type": "山",
+        "coordinates": "Point(136.523333333 35.263055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yorosan%20from%20the%20foot%20in%20mountain%202008%2004%2020.jpg"
+    },
+    {
+        "id": "Q11432126",
+        "name": "大井发电站",
+        "type": "重力坝",
+        "coordinates": "Point(137.396388888 35.481388888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oi%20Dam.jpg"
+    },
+    {
+        "id": "Q113872242",
+        "name": "大野町埋蔵文化財センター",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(136.643111111 35.484055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ono%20akebono%20museum.jpg"
+    },
+    {
+        "id": "Q11609221",
+        "name": "美濃和紙の里会館",
+        "type": "紙博物館",
+        "coordinates": "Point(136.876428 35.583439)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MINO-WASHI%20Museum.jpg"
+    },
+    {
+        "id": "Q11489616",
+        "name": "徳山民俗資料収蔵庫",
+        "type": "民俗博物館",
+        "coordinates": "Point(136.46335833 35.57727778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokuyamaminzokusiryouko.JPG"
+    },
+    {
+        "id": "Q113872045",
+        "name": "各務原市埋蔵文化財調査センター",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(136.842583333 35.400138888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11504293",
+        "name": "青柳橋",
+        "type": "橋",
+        "coordinates": "Point(137.053527777 35.456555555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shin-aoyagibashi2007-1.jpg"
+    },
+    {
+        "id": "Q137659993",
+        "name": "安峰山",
+        "type": "山",
+        "coordinates": "Point(137.212694444 36.249861111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Anbo.jpg"
+    },
+    {
+        "id": "Q1196356",
+        "name": "岩村城",
+        "type": "日式城堡",
+        "coordinates": "Point(137.451305555 35.360333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iwamura%20Castle%20air.jpg"
+    },
+    {
+        "id": "Q6778051",
+        "name": "丸山水壩",
+        "type": "水壩",
+        "coordinates": "Point(137.172222222 35.468888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Maruyama%20Dam.jpg"
+    },
+    {
+        "id": "Q120636023",
+        "name": "高山市風土記の丘学習センター",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(137.222666666 36.160611111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11366295",
+        "name": "中橋",
+        "type": "橋",
+        "coordinates": "Point(137.259222222 36.14)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nakabashi%20at%20hida%20takayama.jpg"
+    },
+    {
+        "id": "Q11266599",
+        "name": "こども陶器博物館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(137.111444 35.361028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/KodomoTokiMuseum-KidsLand.JPG"
+    },
+    {
+        "id": "Q1367052",
+        "name": "岐阜城",
+        "type": "山城池",
+        "coordinates": "Point(136.78222222 35.43388889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gifu%20Castle.jpg"
+    },
+    {
+        "id": "Q11267851",
+        "name": "さくら資料館",
+        "type": "植物博物館",
+        "coordinates": "Point(136.608942 35.633008)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Usuzumizakura%20sakura%20museum.JPG"
+    },
+    {
+        "id": "Q11424732",
+        "name": "地震斷層觀察館·體驗館",
+        "type": "地質学博物館",
+        "coordinates": "Point(136.620861 35.615917)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Seismic%20Faults%20Observation%20and%20Experience%20House.jpg"
+    },
+    {
+        "id": "Q78909892",
+        "name": "多治見市モザイクタイルミュージアム",
+        "type": "モザイク美術館",
+        "coordinates": "Point(137.159527777 35.299111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mosaic%20Tile%20Museum%20Tajimi%20exterior%20ac.jpg"
+    },
+    {
+        "id": "Q120735757",
+        "name": "とうしん美濃陶芸美術館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(137.130176 35.351299)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%A8%E3%81%86%E3%81%97%E3%82%93%E7%BE%8E%E6%BF%83%E9%99%B6%E8%8A%B8%E7%BE%8E%E8%A1%93%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q5751493",
+        "name": "飛驒民俗村",
+        "type": "民俗博物館",
+        "coordinates": "Point(137.234438888 36.132247222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/JP-Takayama-hida-no-sato-2.jpg"
+    },
+    {
+        "id": "Q11471861",
+        "name": "多治見市美濃焼ミュージアム",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(137.148928 35.340803)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11478238",
+        "name": "川島大橋",
+        "type": "橋",
+        "coordinates": "Point(136.82386111 35.36933333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/KawashimaOhashi.JPG"
+    },
+    {
+        "id": "Q11409010",
+        "name": "博石館",
+        "type": "鉱物博物館",
+        "coordinates": "Point(137.399375 35.496742)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hakusekikan%20mineral%20museum.JPG"
+    },
+    {
+        "id": "Q11653628",
+        "name": "長良川大橋",
+        "type": "橋",
+        "coordinates": "Point(136.671833333 35.146388888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagaragawa%20Bridge%20%28Aichi%20Prefectural%20Road%20and%20Gifu%20Prefectural%20Road%20125%29%20from%20Observation%20tower%20of%20Kiso%20Sansen%20Park%20Center.jpg"
+    },
+    {
+        "id": "Q11479985",
+        "name": "市之倉さかづき美術館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(137.127136 35.300139)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ichinokura%20sakazuki%20art%20museum.jpg"
+    },
+    {
+        "id": "Q11647835",
+        "name": "金華山リス村",
+        "type": "動物園",
+        "coordinates": "Point(136.780008 35.4321)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.Kinka%20Squirrel%20Village.jpg"
+    },
+    {
+        "id": "Q11486922",
+        "name": "弁天橋 (木曽川)",
+        "type": "橋",
+        "coordinates": "Point(137.52983333 35.52725)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11653641",
+        "name": "长良桥",
+        "type": "橋",
+        "coordinates": "Point(136.773444 35.4395)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagara%20Bridge.jpg"
+    },
+    {
+        "id": "Q11512250",
+        "name": "明智城跡",
+        "type": "山城池",
+        "coordinates": "Point(137.0845 35.421222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Trace%20of%20Akechi%20Castle-B.JPG"
+    },
+    {
+        "id": "Q48748510",
+        "name": "白山文化博物館",
+        "type": "文化博物館",
+        "coordinates": "Point(136.83177778 35.92380556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%81%93%E3%81%AE%E9%A7%85%E7%99%BD%E9%B3%A5%20-%20%E7%99%BD%E5%B1%B1%E6%96%87%E5%8C%96%E5%8D%9A%E7%89%A9%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q2969384",
+        "name": "郡上八幡城",
+        "type": "山城池",
+        "coordinates": "Point(136.96138889 35.75333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gujo%20hachiman%20castle%20P8117454.jpg"
+    },
+    {
+        "id": "Q11471392",
+        "name": "岐阜市長良川鵜飼伝承館",
+        "type": "漁業博物館",
+        "coordinates": "Point(136.778722 35.441)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagaragawa%20Ukai%20Museum%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q11566114",
+        "name": "濃尾大橋",
+        "type": "橋",
+        "coordinates": "Point(136.73399 35.31196)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nobi%20Bridge.JPG"
+    },
+    {
+        "id": "Q111362772",
+        "name": "春日森の文化博物館",
+        "type": "文化博物館",
+        "coordinates": "Point(136.452944444 35.517194444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Morinobunkahakubutukan.JPG"
+    },
+    {
+        "id": "Q11471469",
+        "name": "岐阜県現代陶芸美術館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(137.154886 35.330953)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Museum%20of%20modern%20ceramic%20art%20gifu.jpg"
+    },
+    {
+        "id": "Q104710294",
+        "name": "瑞浪市陶磁資料館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(137.235694444 35.374166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mizunami%20city%20ceramics%20museum.jpg"
+    },
+    {
+        "id": "Q111685640",
+        "name": "新国境橋",
+        "type": "橋",
+        "coordinates": "Point(137.247222222 36.461777777)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q137842986",
+        "name": "見行山",
+        "type": "山",
+        "coordinates": "Point(137.269 35.527083333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Kengyo%20from%20Mount%20Kasagi%202020-09-14.jpg"
+    },
+    {
+        "id": "Q11508277",
+        "name": "日本最古之石博物館",
+        "type": "鉱物博物館",
+        "coordinates": "Point(137.114747 35.533111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hichiso%20Precambrian%20Museum01.jpg"
+    },
+    {
+        "id": "Q110858996",
+        "name": "白山瀧宝殿",
+        "type": "博物館",
+        "coordinates": "Point(136.831222222 35.920666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagatakihakusan-jinja%20ryuhoden.jpg"
+    },
+    {
+        "id": "Q104783877",
+        "name": "小坂郷土館",
+        "type": "博物館",
+        "coordinates": "Point(137.310361111 35.916388888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11559022",
+        "name": "海津市歷史民俗資料館",
+        "type": "博物館",
+        "coordinates": "Point(136.640722 35.216339)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kaizu%20City%20Museum%20of%20History%20and%20Folklore%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q111430946",
+        "name": "大正ロマン館",
+        "type": "博物館",
+        "coordinates": "Point(137.391833333 35.304)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Akechi%20Taisyo%20Romankan%202021-01%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q5760427",
+        "name": "光ミュージアム",
+        "type": "博物館",
+        "coordinates": "Point(137.23427778 36.15597222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hikari%20museum.jpg"
+    },
+    {
+        "id": "Q11471429",
+        "name": "ミュージアム飛騨",
+        "type": "博物館",
+        "coordinates": "Point(137.254136 36.120572)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%A2%E3%83%A0%E9%A3%9B%E9%A8%A8.jpg"
+    },
+    {
+        "id": "Q109357902",
+        "name": "岐阜県文化財保護センター",
+        "type": "博物館",
+        "coordinates": "Point(136.8 35.478083333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11436531",
+        "name": "大橋コレクション館",
+        "type": "博物館",
+        "coordinates": "Point(137.424864 36.1839)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ohashi%20Collection%20Kan%20Museum.jpg"
+    },
+    {
+        "id": "Q133264896",
+        "name": "飛騨位山文化交流館",
+        "type": "圖書館",
+        "coordinates": "Point(137.23861 36.082961)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takayama%20City%20Library%20Ichinomiya%20Branch%20calil.jpg"
+    },
+    {
+        "id": "Q131911113",
+        "name": "福来記念・山本資料館",
+        "type": "博物館",
+        "coordinates": "Point(137.240539 36.225046)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%A3%9B%E9%A8%A8%E7%A6%8F%E6%9D%A5%E5%BF%83%E7%90%86%E5%AD%A6%E7%A0%94%E7%A9%B6%E6%89%80%E3%83%BB%E7%A6%8F%E6%9D%A5%E8%A8%98%E5%BF%B5%E5%B1%B1%E6%9C%AC%E8%B3%87%E6%96%99%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11415800",
+        "name": "名鐵資料館",
+        "type": "博物館",
+        "coordinates": "Point(137.050481 35.441967)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Meitetsu%20Shiryokan2008-1.jpg"
+    },
+    {
+        "id": "Q124775808",
+        "name": "中山道ミニ博物館",
+        "type": "博物館",
+        "coordinates": "Point(136.5322474 35.3729602)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q17224675",
+        "name": "奥の細道むすびの地記念館",
+        "type": "博物館",
+        "coordinates": "Point(136.61183333 35.35622222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%C5%8Cgaki%20City%20Basho%27s%20Oku%20no%20Hosomichi%20Haiku%20Journey%20Museum.jpg"
+    },
+    {
+        "id": "Q116505582",
+        "name": "美濃和紙用具ミュージアム ふくべ",
+        "type": "博物館",
+        "coordinates": "Point(136.909583333 35.588944444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11669357",
+        "name": "高山市政記念館",
+        "type": "博物館",
+        "coordinates": "Point(137.259961 36.139839)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takayama%20City%20Memorial%20Hall01st3200.jpg"
+    },
+    {
+        "id": "Q114557030",
+        "name": "山県市文化の里古田紹欽記念館",
+        "type": "博物館",
+        "coordinates": "Point(136.723332 35.535658)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q113561135",
+        "name": "大垣市赤坂港会館",
+        "type": "博物館",
+        "coordinates": "Point(136.585027777 35.390583333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11471441",
+        "name": "岐阜縣刃物會館",
+        "type": "博物館",
+        "coordinates": "Point(136.9146 35.482703)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gifu%20Knife%20Hall%201.JPG"
+    },
+    {
+        "id": "Q11507880",
+        "name": "日本大正村資料館",
+        "type": "博物館",
+        "coordinates": "Point(137.389472 35.304056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nihon%20taisyoumura%20siryoukan.jpg"
+    },
+    {
+        "id": "Q118353209",
+        "name": "美並ふるさと館",
+        "type": "博物館",
+        "coordinates": "Point(136.912555555 35.669027777)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q5170998",
+        "name": "鵜飼資料園",
+        "type": "博物館",
+        "coordinates": "Point(136.776322222 35.44115)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%B5%9C%E9%A3%BC%E8%B3%87%E6%96%99%E5%9C%92.jpg"
+    },
+    {
+        "id": "Q11624444",
+        "name": "藤橋城",
+        "type": "博物館",
+        "coordinates": "Point(136.48721389 35.63823056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fujihashi-joh.jpg"
+    },
+    {
+        "id": "Q11656463",
+        "name": "關鍛冶傳承館",
+        "type": "博物館",
+        "coordinates": "Point(136.916392 35.481814)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Seki%20Sword%20Tradition%20Museum%201.JPG"
+    },
+    {
+        "id": "Q111013371",
+        "name": "たかす開拓記念館",
+        "type": "博物館",
+        "coordinates": "Point(136.875666666 35.952166666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11582276",
+        "name": "相生座",
+        "type": "博物館",
+        "coordinates": "Point(137.218278 35.455944)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11455806",
+        "name": "富加町郷土資料館",
+        "type": "博物館",
+        "coordinates": "Point(136.986778 35.485458)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tomika%20Town%20Local%20Museum%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q11611810",
+        "name": "胡麻の郷",
+        "type": "博物館",
+        "coordinates": "Point(136.437714 35.368292)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sekigahara%20goma1.jpg"
+    },
+    {
+        "id": "Q104710275",
+        "name": "関ケ原ウォーランド",
+        "type": "博物館",
+        "coordinates": "Point(136.45288 35.368675)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q48748520",
+        "name": "郡上八幡博覧館",
+        "type": "博物館",
+        "coordinates": "Point(136.95713889 35.75344444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gujo-Hachiman%20Hakurankan%202019-08%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q104840485",
+        "name": "輪中館・輪中生活館",
+        "type": "博物館",
+        "coordinates": "Point(136.599722222 35.329388888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11610104",
+        "name": "羽島市歷史民俗資料館·羽島市電影資料館",
+        "type": "博物館",
+        "coordinates": "Point(136.702075 35.324167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hashima%20Folk%20History%20Museum%202019-11%20ac%20%282%29.jpg"
+    },
+    {
+        "id": "Q11364293",
+        "name": "中山道鵜沼宿町屋館",
+        "type": "博物館",
+        "coordinates": "Point(136.937305555 35.404666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Unumajuku%20machiyakan.JPG"
+    },
+    {
+        "id": "Q111530222",
+        "name": "みつばちの家",
+        "type": "博物館",
+        "coordinates": "Point(136.763611111 35.482583333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q8081723",
+        "name": "太田宿中山道会館",
+        "type": "博物館",
+        "coordinates": "Point(137.013 35.4375)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ota-juku%20Nakasendo%20Museum%20ac%20%282%29.jpg"
+    },
+    {
+        "id": "Q48748602",
+        "name": "明宝歴史民俗資料館",
+        "type": "博物館",
+        "coordinates": "Point(137.03005556 35.85702778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%98%8E%E5%AE%9D%E6%AD%B4%E5%8F%B2%E6%B0%91%E4%BF%97%E8%B3%87%E6%96%99%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11507739",
+        "name": "日本土鈴館",
+        "type": "博物館",
+        "coordinates": "Point(136.864017 35.860942)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nihon%20doreikan.JPG"
+    },
+    {
+        "id": "Q11471273",
+        "name": "岐南町歴史民俗資料館",
+        "type": "博物館",
+        "coordinates": "Point(136.780925 35.38225)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ginantyou%20rekisiminzoku%20siryoukan.JPG"
+    },
+    {
+        "id": "Q134405381",
+        "name": "OKBギャラリー",
+        "type": "博物館",
+        "coordinates": "Point(136.617099745 35.36513017)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q117195470",
+        "name": "関ケ原町歴史民俗学習館",
+        "type": "博物館",
+        "coordinates": "Point(136.466277777 35.366277777)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11360703",
+        "name": "下呂温泉合掌村",
+        "type": "民家園",
+        "coordinates": "Point(137.25025 35.808703)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gero%20Onsen%20Gassho-mura%201.jpg"
+    },
+    {
+        "id": "Q24873809",
+        "name": "モネの池",
+        "type": "水庫",
+        "coordinates": "Point(136.82138889 35.65166667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Monet%20water%20lily02.JPG"
+    },
+    {
+        "id": "Q11573910",
+        "name": "瑞浪市化石博物館",
+        "type": "古生物博物馆",
+        "coordinates": "Point(137.235061 35.37303)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%91%9E%E6%B5%AA%E5%B8%82%E5%8C%96%E7%9F%B3%E5%8D%9A%E7%89%A9%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11665918",
+        "name": "飛騨荘川の里",
+        "type": "民家園",
+        "coordinates": "Point(136.952222222 36.035694444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Japan%2C%20Gebouwen%20foto%201354.jpg"
+    },
+    {
+        "id": "Q118192476",
+        "name": "玉城",
+        "type": "城堡",
+        "coordinates": "Point(136.436 35.362722)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q112622790",
+        "name": "MIBOROダムサイドパーク 御母衣電力館・荘川桜記念館",
+        "type": "エネルギー博物館",
+        "coordinates": "Point(136.9085 36.145166666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q109595978",
+        "name": "羽島市竹鼻まつり山車会館",
+        "type": "山車会館",
+        "coordinates": "Point(136.701805555 35.321111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%BE%BD%E5%B3%B6%E5%B8%82%E7%AB%B9%E9%BC%BB%E3%81%BE%E3%81%A4%E3%82%8A%E5%B1%B1%E8%BB%8A%E4%BC%9A%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q123476040",
+        "name": "高山祭屋台会館",
+        "type": "山車会館",
+        "coordinates": "Point(137.260108067 36.148384989)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takayama%20Festival%20Float%20Exhibition%20Hall%20%2C%20%E9%AB%98%E5%B1%B1%E7%A5%AD%E5%B1%8B%E5%8F%B0%E4%BC%9A%E9%A4%A8%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q116973203",
+        "name": "高山城",
+        "type": "城堡",
+        "coordinates": "Point(137.1928568 35.3569099)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q5359335",
+        "name": "名和昆虫博物館",
+        "type": "昆虫博物館",
+        "coordinates": "Point(136.77313889 35.43313889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nawa%20Insect%20Museum%201.JPG"
+    },
+    {
+        "id": "Q117442298",
+        "name": "筋骨めぐり",
+        "type": "觀光景點",
+        "coordinates": "Point(137.1578864 35.6610558)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%AD%8B%E9%AA%A8%E3%82%81%E3%81%90%E3%82%8A%28%E9%A3%9B%E9%A8%A8%E9%87%91%E5%B1%B1%29.jpg"
+    }
+]

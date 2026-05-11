@@ -1,0 +1,2952 @@
+[
+    {
+        "id": "Q131431514",
+        "name": "福知山市児童科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(135.136334 35.312214)",
+        "image": "No Image",
+        "google_rating": 4.3,
+        "google_review_count": 74,
+        "google_name_matched": "福知山市児童科学館"
+    },
+    {
+        "id": "Q6452177",
+        "name": "立命館大学国際平和ミュージアム",
+        "type": "大學博物館",
+        "coordinates": "Point(135.72730556 35.03369444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ritsumeikan-Univ-Kinugasa-04.jpg",
+        "google_rating": 4.2,
+        "google_review_count": 237,
+        "google_name_matched": "立命館大学国際平和ミュージアム"
+    },
+    {
+        "id": "Q21190901",
+        "name": "大谷大学博物館",
+        "type": "大學博物館",
+        "coordinates": "Point(135.758854 35.041811)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Otani-Univ-03.jpg",
+        "google_rating": 4,
+        "google_review_count": 45,
+        "google_name_matched": "大谷大学博物館"
+    },
+    {
+        "id": "Q11532219",
+        "name": "松花堂",
+        "type": "日本庭園",
+        "coordinates": "Point(135.701778 34.879583)",
+        "image": "No Image",
+        "google_rating": 3.9,
+        "google_review_count": 562,
+        "google_name_matched": "八幡市立松花堂庭園・美術館"
+    },
+    {
+        "id": "Q11579925",
+        "name": "白沙村荘",
+        "type": "纪念博物馆",
+        "coordinates": "Point(135.793669 35.026881)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/090711%20Hakusasonsou%20Kyoto%20Japan30s3.jpg",
+        "google_rating": 4.4,
+        "google_review_count": 392,
+        "google_name_matched": "白沙村荘 橋本関雪記念館"
+    },
+    {
+        "id": "Q127598408",
+        "name": "京都精華大学ギャラリーTerra-S",
+        "type": "美術館",
+        "coordinates": "Point(135.770346 35.072821)",
+        "image": "No Image",
+        "google_rating": 4.4,
+        "google_review_count": 17,
+        "google_name_matched": "京都精華大学ギャラリーTerra-S"
+    },
+    {
+        "id": "Q30933052",
+        "name": "龙谷博物馆",
+        "type": "宗教博物馆",
+        "coordinates": "Point(135.75336111 34.99111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/170128%20Ryukoku%20Museum%20Kyoto%20Japan02n.jpg",
+        "google_rating": 4.1,
+        "google_review_count": 833,
+        "google_name_matched": "龍谷ミュージアム"
+    },
+    {
+        "id": "Q17211497",
+        "name": "きっづ光科学館ふぉとん",
+        "type": "兒童博物館",
+        "coordinates": "Point(135.835778 34.713778)",
+        "image": "No Image",
+        "google_rating": 4,
+        "google_review_count": 282,
+        "google_name_matched": "きっづ光科学館ふぉとん"
+    },
+    {
+        "id": "Q30266176",
+        "name": "京都市青少年科学センター",
+        "type": "科學博物館",
+        "coordinates": "Point(135.764512 34.954512)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Municipal%20Science%20Center.jpg",
+        "google_rating": 4.2,
+        "google_review_count": 1204,
+        "google_name_matched": "京都市青少年科学センター"
+    },
+    {
+        "id": "Q11374929",
+        "name": "京都大學綜合博物館",
+        "type": "大學博物館",
+        "coordinates": "Point(135.779287 35.027263)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20University%20Museum%2020120805-001.jpg",
+        "google_rating": 4.4,
+        "google_review_count": 407,
+        "google_name_matched": "京都大学総合博物館"
+    },
+    {
+        "id": "Q127503199",
+        "name": "京都工芸繊維大学. 美術工芸資料館",
+        "type": "大學博物館",
+        "coordinates": "Point(135.781189 35.049549)",
+        "image": "No Image",
+        "google_rating": 4.5,
+        "google_review_count": 33,
+        "google_name_matched": "京都工芸繊維大学 美術工芸資料館"
+    },
+    {
+        "id": "Q136472115",
+        "name": "何必館・京都現代美術館",
+        "type": "私人博物館",
+        "coordinates": "Point(135.775429671 35.004186514)",
+        "image": "No Image",
+        "google_rating": 4.1,
+        "google_review_count": 419,
+        "google_name_matched": "何必館 京都現代美術館"
+    },
+    {
+        "id": "Q11375242",
+        "name": "京都府立堂本印象美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(135.726056 35.035139)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Insho-Domoto%20Museum%20of%20Fine%20Arts01s5.jpg",
+        "google_rating": 4.1,
+        "google_review_count": 401,
+        "google_name_matched": "京都府立堂本印象美術館"
+    },
+    {
+        "id": "Q104721140",
+        "name": "京都府立丹後郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(135.178555555 35.579722222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Prefectural%20Tango%20Folk%20Museum%EF%BC%93.jpg",
+        "google_rating": 3.8,
+        "google_review_count": 117,
+        "google_name_matched": "京都府立丹後郷土資料館 (ふるさとミュージアム丹後)"
+    },
+    {
+        "id": "Q123516621",
+        "name": "宇治・上林記念館",
+        "type": "纪念博物馆",
+        "coordinates": "Point(135.80418 34.89103)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%AE%87%E6%B2%BB%20%E4%B8%8A%E6%9E%97%E8%A8%98%E5%BF%B5%E9%A4%A8%20%2814003018022%29.jpg",
+        "google_rating": 3.8,
+        "google_review_count": 32,
+        "google_name_matched": "宇治・上林記念館"
+    },
+    {
+        "id": "Q132529195",
+        "name": "京都祇園らんぷ美術館",
+        "type": "工藝博物館",
+        "coordinates": "Point(135.777329 35.003255)",
+        "image": "No Image",
+        "google_rating": 3.5,
+        "google_review_count": 10,
+        "google_name_matched": "京都祇園らんぷ美術館"
+    },
+    {
+        "id": "Q3478488",
+        "name": "泉屋博古馆",
+        "type": "美術館",
+        "coordinates": "Point(135.7929 35.0176)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/SenokuHakkoKan.jpg",
+        "google_rating": 4.4,
+        "google_review_count": 564,
+        "google_name_matched": "泉屋博古館"
+    },
+    {
+        "id": "Q11622794",
+        "name": "藤井有邻馆",
+        "type": "美術館",
+        "coordinates": "Point(135.781278 35.011694)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yurinkan%20Museum.jpg",
+        "google_rating": 4.5,
+        "google_review_count": 41,
+        "google_name_matched": "藤井斉成会 有鄰館"
+    },
+    {
+        "id": "Q132529351",
+        "name": "いけばな資料館",
+        "type": "美術館",
+        "coordinates": "Point(135.76008 35.008013)",
+        "image": "No Image",
+        "google_rating": 4.5,
+        "google_review_count": 18,
+        "google_name_matched": "いけばな資料館"
+    },
+    {
+        "id": "Q127602236",
+        "name": "大西清右衛門美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.755747 35.008477)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Onishi%20Seiwemon%20Museum.jpg",
+        "google_rating": 4.2,
+        "google_review_count": 53,
+        "google_name_matched": "大西清右衛門美術館"
+    },
+    {
+        "id": "Q11375286",
+        "name": "京都府立陶板名画の庭",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(135.76530556 35.05111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/LastSupper-GardenOfFineArtKyoto.jpg",
+        "google_rating": 4.3,
+        "google_review_count": 908,
+        "google_name_matched": "京都府立陶板名画の庭"
+    },
+    {
+        "id": "Q11402029",
+        "name": "北村美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.770361 35.028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Kitamura%20Art%20Museum%202013-08.JPG",
+        "google_rating": 4.2,
+        "google_review_count": 78,
+        "google_name_matched": "北村美術館"
+    },
+    {
+        "id": "Q1055628",
+        "name": "京都國立近代美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.781943 35.012389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/National%20Museum%20of%20Modern%20Art%20Kyoto%202010.jpg",
+        "google_rating": 4.1,
+        "google_review_count": 3753,
+        "google_name_matched": "京都国立近代美術館"
+    },
+    {
+        "id": "Q11594325",
+        "name": "福知山市佐藤太清記念美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.130333 35.2975)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Taisei%20Sato%20Memorial%20Art%20Museum01st3200.jpg",
+        "google_rating": 3.8,
+        "google_review_count": 84,
+        "google_name_matched": "福知山市佐藤太清記念美術館"
+    },
+    {
+        "id": "Q21019672",
+        "name": "高麗美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.750807 35.054292)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Koryo%20Museum.jpg",
+        "google_rating": 4.5,
+        "google_review_count": 142,
+        "google_name_matched": "高麗美術館"
+    },
+    {
+        "id": "Q11645680",
+        "name": "野村美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.793333 35.012917)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%BE%8E%E8%A1%93%E9%A4%A8%E5%A4%96%E8%A6%B3.jpg",
+        "google_rating": 4.1,
+        "google_review_count": 187,
+        "google_name_matched": "野村美術館"
+    },
+    {
+        "id": "Q18337620",
+        "name": "並河靖之七宝記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(135.781306 35.009889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Namikawa%20cloisonne%20museum%20of%20kyoto.jpg",
+        "google_rating": 4.4,
+        "google_review_count": 158,
+        "google_name_matched": "並河靖之七宝記念館"
+    },
+    {
+        "id": "Q11381116",
+        "name": "伏見桃山城キャッスルランド",
+        "type": "主題樂園",
+        "coordinates": "Point(135.776805555 34.939472222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%BC%8F%E8%A6%8B%E6%A1%83%E5%B1%B1%E5%9F%8E06.jpg",
+        "google_rating": 3.7,
+        "google_review_count": 1723,
+        "google_name_matched": "伏見桃山城"
+    },
+    {
+        "id": "Q11375001",
+        "name": "京都市学校歴史博物館",
+        "type": "教育博物館",
+        "coordinates": "Point(135.765694 35.00075)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Museum%20of%20School%20History%20gate.JPG",
+        "google_rating": 4.1,
+        "google_review_count": 208,
+        "google_name_matched": "京都市学校歴史博物館"
+    },
+    {
+        "id": "Q132529589",
+        "name": "安達くみひも館",
+        "type": "工藝博物館",
+        "coordinates": "Point(135.758579 35.021146)",
+        "image": "No Image",
+        "google_rating": 4.2,
+        "google_review_count": 75,
+        "google_name_matched": "安達くみひも館"
+    },
+    {
+        "id": "Q11533890",
+        "name": "染・清流館",
+        "type": "美術館",
+        "coordinates": "Point(135.758389 35.005583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dye%20museum%20Seiryu%2002.jpg",
+        "google_rating": 4.1,
+        "google_review_count": 18,
+        "google_name_matched": "染・清流館"
+    },
+    {
+        "id": "Q11374217",
+        "name": "京丹後市立郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(134.977806 35.652472)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyodoshiryokan%20kyotango.jpg",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q17230147",
+        "name": "古田織部美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.73275 35.057694)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%8F%A4%E7%94%B0%E7%B9%94%E9%83%A8%E7%BE%8E%E8%A1%93%E9%A4%A8%E5%A4%96%E8%A6%B3.jpg",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q118145425",
+        "name": "京都清宗根付館",
+        "type": "美術館",
+        "coordinates": "Point(135.744638888 35.001444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Netsuke%20art%20museum%20%28Kyoto%29%20Minka%20outdoor%20hdsr%20S5%20a2.jpg",
+        "google_rating": 4.6,
+        "google_review_count": 190,
+        "google_name_matched": "京都清宗根付館"
+    },
+    {
+        "id": "Q7496444",
+        "name": "小倉百人一首殿堂時雨殿",
+        "type": "文學館",
+        "coordinates": "Point(135.673766 35.013696)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%B0%8F%E5%80%89%E7%99%BE%E4%BA%BA%E4%B8%80%E9%A6%96%E3%81%AE%E6%AE%BF%E5%A0%82%E3%83%BB%E6%99%82%E9%9B%A8%E6%AE%BF%20-%20panoramio.jpg",
+        "google_rating": 4.1,
+        "google_review_count": 490,
+        "google_name_matched": "嵯峨嵐山文華館"
+    },
+    {
+        "id": "Q132529053",
+        "name": "中信美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.753674 35.020048)",
+        "image": "No Image",
+        "google_rating": 4,
+        "google_review_count": 90,
+        "google_name_matched": "中信美術館"
+    },
+    {
+        "id": "Q3330657",
+        "name": "京都市美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.78356944 35.01283611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Municipal%20Museum%20of%20Art%201933%20%E2%85%B1.jpg",
+        "google_rating": 4.4,
+        "google_review_count": 6962,
+        "google_name_matched": "京都市京セラ美術館（京都市美術館）"
+    },
+    {
+        "id": "Q60987195",
+        "name": "嵯峨嵐山文華館",
+        "type": "文學館",
+        "coordinates": "Point(135.673888888 35.013611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saga%20Arashiyama%20Museum%20of%20Arts%20and%20Culture.jpg",
+        "google_rating": 4.1,
+        "google_review_count": 487,
+        "google_name_matched": "嵯峨嵐山文華館"
+    },
+    {
+        "id": "Q99551687",
+        "name": "京都市立芸術大学ギャラリー",
+        "type": "美術館",
+        "coordinates": "Point(135.752516655 35.011700488)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q138315086",
+        "name": "千總ギャラリー",
+        "type": "美術館",
+        "coordinates": "Point(135.758937 35.008303)",
+        "image": "No Image",
+        "google_rating": 4.5,
+        "google_review_count": 75,
+        "google_name_matched": "千總ギャラリー"
+    },
+    {
+        "id": "Q61818339",
+        "name": "ヒカリ美術館",
+        "type": "美術館",
+        "coordinates": "Point(134.965 35.6442)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hikaribijyutukan.jpg",
+        "google_rating": 4.4,
+        "google_review_count": 5,
+        "google_name_matched": "ヒカリ美術館"
+    },
+    {
+        "id": "Q11673927",
+        "name": "魚知識館",
+        "type": "水族館",
+        "coordinates": "Point(135.255228055 35.556153888)",
+        "image": "No Image",
+        "google_rating": 4.2,
+        "google_review_count": 881,
+        "google_name_matched": "丹後魚っ知館"
+    },
+    {
+        "id": "Q132529516",
+        "name": "遠藤剛熈美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.750666 34.999798)",
+        "image": "No Image",
+        "google_rating": 4.1,
+        "google_review_count": 34,
+        "google_name_matched": "遠藤剛熈美術館"
+    },
+    {
+        "id": "Q1201304",
+        "name": "京都塔",
+        "type": "觀光塔",
+        "coordinates": "Point(135.759166666 34.9875)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Tower%202023-12%20ac%20%281%29.jpg",
+        "google_rating": 4.2,
+        "google_review_count": 17745,
+        "google_name_matched": "ニデック京都タワー"
+    },
+    {
+        "id": "Q3959661",
+        "name": "掌美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.7799118 35.0005586)",
+        "image": "No Image",
+        "google_rating": 3.4,
+        "google_review_count": 101,
+        "google_name_matched": "高台寺掌美術館"
+    },
+    {
+        "id": "Q22118562",
+        "name": "京都佛立ミュージアム",
+        "type": "宗教博物馆",
+        "coordinates": "Point(135.7354143 35.027136)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/2012exhibition1.jpg",
+        "google_rating": 4.1,
+        "google_review_count": 152,
+        "google_name_matched": "京都佛立ミュージアム"
+    },
+    {
+        "id": "Q11375621",
+        "name": "京都水族館",
+        "type": "水族館",
+        "coordinates": "Point(135.747611 34.987556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Aquarium%20in%202013-5-2%20No%2C27.JPG",
+        "google_rating": 4.2,
+        "google_review_count": 14230,
+        "google_name_matched": "京都水族館"
+    },
+    {
+        "id": "Q56062380",
+        "name": "京都府立山城郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(135.833888888 34.752222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Prefectural%20Yamashiro%20Regional%20Museum%20exterior%20view.jpg",
+        "google_rating": 3.8,
+        "google_review_count": 126,
+        "google_name_matched": "京都府立山城郷土資料館"
+    },
+    {
+        "id": "Q11283175",
+        "name": "朝日啤酒大山崎山莊美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.679639 34.895556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/250504%20Asahi%20beer%20Oyamazaki%20Villa%20Museum%20%C5%8Cyamazaki%20Kyoto%20pref%20Japan01s3.jpg",
+        "google_rating": 4.4,
+        "google_review_count": 1663,
+        "google_name_matched": "アサヒグループ大山崎山荘美術館"
+    },
+    {
+        "id": "Q11374199",
+        "name": "京セラギャラリー",
+        "type": "美術館",
+        "coordinates": "Point(135.75072222 34.94683333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Kyocera%20Museum%20of%20Art1.JPG",
+        "google_rating": 4.1,
+        "google_review_count": 152,
+        "google_name_matched": "京セラギャラリー"
+    },
+    {
+        "id": "Q18336820",
+        "name": "京都希臘羅馬美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.771583 35.04875)",
+        "image": "No Image",
+        "google_rating": 3.4,
+        "google_review_count": 16,
+        "google_name_matched": "京都ギリシャローマ美術館"
+    },
+    {
+        "id": "Q17213428",
+        "name": "清水三年坂美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.781278 34.997417)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kiyomizu%20Sannenzaka%20Museum.jpg",
+        "google_rating": 4.3,
+        "google_review_count": 352,
+        "google_name_matched": "清水三年坂美術館"
+    },
+    {
+        "id": "Q11606115",
+        "name": "細見美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.779639 35.013833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hosomi%20Museum%20ac.JPG",
+        "google_rating": 4,
+        "google_review_count": 1019,
+        "google_name_matched": "細見美術館"
+    },
+    {
+        "id": "Q102045484",
+        "name": "福田美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.676444 35.013917)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukuda%20art%20museum.jpg",
+        "google_rating": 4.3,
+        "google_review_count": 1211,
+        "google_name_matched": "福田美術館"
+    },
+    {
+        "id": "Q53737773",
+        "name": "漢検 漢字博物館・図書館",
+        "type": "语言博物馆",
+        "coordinates": "Point(135.776666666 35.003333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%BC%A2%E5%AD%97%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%A2%E3%83%A0%20-%20%E5%85%A5%E5%8F%A3.jpg",
+        "google_rating": 4.1,
+        "google_review_count": 1704,
+        "google_name_matched": "漢検漢字博物館・図書館（漢字ミュージアム）"
+    },
+    {
+        "id": "Q11497319",
+        "name": "承天閣美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.762611 35.033583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/150815%20Jotenkaku%20Museum%20Kyoto%20Japan01s3.jpg",
+        "google_rating": 4.3,
+        "google_review_count": 654,
+        "google_name_matched": "相国寺承天閣美術館"
+    },
+    {
+        "id": "Q11375124",
+        "name": "京都市考古資料館",
+        "type": "考古博物館",
+        "coordinates": "Point(135.749382 35.031957)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/KyotoArchaeologicalMuseum.jpg",
+        "google_rating": 4.1,
+        "google_review_count": 390,
+        "google_name_matched": "京都市考古資料館"
+    },
+    {
+        "id": "Q11375592",
+        "name": "京都文化博物馆",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.762222222 35.009166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Museum%20of%20Kyoto%2020101204-002.jpg",
+        "google_rating": 4.1,
+        "google_review_count": 5308,
+        "google_name_matched": "京都文化博物館"
+    },
+    {
+        "id": "Q11559290",
+        "name": "海軍紀念館",
+        "type": "海軍博物館",
+        "coordinates": "Point(135.372111 35.475167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Naval%20museum%20Japan01s3200.jpg",
+        "google_rating": 4.1,
+        "google_review_count": 279,
+        "google_name_matched": "海軍記念館"
+    },
+    {
+        "id": "Q132529130",
+        "name": "京指物資料館",
+        "type": "家具博物館",
+        "coordinates": "Point(135.762952 35.0149865)",
+        "image": "No Image",
+        "google_rating": 2.5,
+        "google_review_count": 8,
+        "google_name_matched": "京指物資料館"
+    },
+    {
+        "id": "Q11103541",
+        "name": "東映太秦映畫村",
+        "type": "电影布景",
+        "coordinates": "Point(135.708333 35.016389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toei%20Kyoto%20Studio%20Park%20from%20above.jpg",
+        "google_rating": 4,
+        "google_review_count": 10466,
+        "google_name_matched": "太秦映画村"
+    },
+    {
+        "id": "Q24014029",
+        "name": "京都鐵道博物館",
+        "type": "建築物",
+        "coordinates": "Point(135.7425 34.987222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Railway%20Museum%2C%20enkei.jpg",
+        "google_rating": 4.5,
+        "google_review_count": 19337,
+        "google_name_matched": "京都鉄道博物館"
+    },
+    {
+        "id": "Q11300942",
+        "name": "グンゼ博物苑",
+        "type": "織物博物館",
+        "coordinates": "Point(135.25791667 35.30527778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gunze%20museum01s3200.jpg",
+        "google_rating": 4.1,
+        "google_review_count": 48,
+        "google_name_matched": "グンゼ博物苑"
+    },
+    {
+        "id": "Q3329667",
+        "name": "霊山歴史館",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.78263889 34.99894444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ryozen%20Museum%20of%20History.JPG",
+        "google_rating": 4.2,
+        "google_review_count": 922,
+        "google_name_matched": "霊山歴史館"
+    },
+    {
+        "id": "Q125002905",
+        "name": "楽美術館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(135.753475 35.0255218)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Raku%20Museum%202013-08A.JPG",
+        "google_rating": 4.3,
+        "google_review_count": 489,
+        "google_name_matched": "樂美術館"
+    },
+    {
+        "id": "Q127601370",
+        "name": "松本明慶佛像彫刻美術館",
+        "type": "彫刻美術館",
+        "coordinates": "Point(135.757554 35.022668)",
+        "image": "No Image",
+        "google_rating": 4.3,
+        "google_review_count": 21,
+        "google_name_matched": "松本明慶佛像彫刻美術館"
+    },
+    {
+        "id": "Q1049901",
+        "name": "梅小路蒸汽機關車館",
+        "type": "建築物",
+        "coordinates": "Point(135.743 34.9872)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Umekoji%20SL%20museum%20002%20JPN.jpg",
+        "google_rating": 4.5,
+        "google_review_count": 19337,
+        "google_name_matched": "京都鉄道博物館"
+    },
+    {
+        "id": "Q11375271",
+        "name": "京都府立綜合資料館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(135.766417 35.050556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Verbundarchiv%20Kyoto.jpg",
+        "google_rating": 4.5,
+        "google_review_count": 2,
+        "google_name_matched": "京都府立総合資料館"
+    },
+    {
+        "id": "Q11300944",
+        "name": "グンゼ記念館",
+        "type": "公司博物館",
+        "coordinates": "Point(135.25727778 35.30555556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gunze%20memorial%20hall01s3200.jpg",
+        "google_rating": 4.1,
+        "google_review_count": 48,
+        "google_name_matched": "グンゼ博物苑"
+    },
+    {
+        "id": "Q11476799",
+        "name": "島津創業紀念資料館",
+        "type": "公司博物館",
+        "coordinates": "Point(135.770242 35.012886)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shimadzu-Foundation-Memorial-Hall-01.jpg",
+        "google_rating": 4.3,
+        "google_review_count": 280,
+        "google_name_matched": "島津製作所 創業記念資料館"
+    },
+    {
+        "id": "Q76445246",
+        "name": "加悦鉄道資料館",
+        "type": "鐵路博物館",
+        "coordinates": "Point(135.09475 35.504083333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kaya%20Railway%20Museum%20ac.jpg",
+        "google_rating": 4.3,
+        "google_review_count": 135,
+        "google_name_matched": "加悦鉄道資料館"
+    },
+    {
+        "id": "Q11375006",
+        "name": "京都市平安京创世馆",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.738444 35.019)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Asny%20and%20City%20Central%20Library%2020090502-001.jpg",
+        "google_rating": 4.3,
+        "google_review_count": 283,
+        "google_name_matched": "京都市平安京創生館"
+    },
+    {
+        "id": "Q11516157",
+        "name": "月桂冠大倉記念館",
+        "type": "公司博物館",
+        "coordinates": "Point(135.762167 34.929694)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gekkeikan%20Okura%20Sake%20Museum01nt3200.jpg",
+        "google_rating": 4.2,
+        "google_review_count": 4633,
+        "google_name_matched": "月桂冠大倉記念館"
+    },
+    {
+        "id": "Q11635286",
+        "name": "赤れんが博物館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(135.387444 35.476083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Red%20brick%20museum01s3200.jpg",
+        "google_rating": 3.8,
+        "google_review_count": 1535,
+        "google_name_matched": "舞鶴市立赤れんが博物館"
+    },
+    {
+        "id": "Q123091932",
+        "name": "ウトロ平和祈念館",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.774166486 34.880611514)",
+        "image": "No Image",
+        "google_rating": 4.4,
+        "google_review_count": 189,
+        "google_name_matched": "ウトロ平和祈念館"
+    },
+    {
+        "id": "Q11398627",
+        "name": "加悅SL廣場",
+        "type": "鉄道公園",
+        "coordinates": "Point(135.092806 35.481417)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%8A%A0%E6%82%A6SL%E5%BA%83%E5%A0%B4%20%E9%A7%85%E8%88%8E%20%E5%B1%95%E7%A4%BA%E5%AE%A42.jpg",
+        "google_rating": 3.9,
+        "google_review_count": 342,
+        "google_name_matched": "加悦SL広場"
+    },
+    {
+        "id": "Q131911087",
+        "name": "芦田均記念館",
+        "type": "纪念博物馆",
+        "coordinates": "Point(135.178667 35.260139)",
+        "image": "No Image",
+        "google_rating": 4,
+        "google_review_count": 35,
+        "google_name_matched": "芦田均記念館"
+    },
+    {
+        "id": "Q11665410",
+        "name": "風俗博物館",
+        "type": "時裝博物館",
+        "coordinates": "Point(135.753333 34.993389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Izutsu-Samegai%20building.jpg",
+        "google_rating": 3.8,
+        "google_review_count": 185,
+        "google_name_matched": "風俗博物館"
+    },
+    {
+        "id": "Q85875943",
+        "name": "京都府立京都学・歴彩館",
+        "type": "都道府県立図書館",
+        "coordinates": "Point(135.766666666 35.048611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Institute%2C%20Library%20and%20Archives%20ac%20%281%29.jpg",
+        "google_rating": 4.1,
+        "google_review_count": 519,
+        "google_name_matched": "京都府立京都学・歴彩館"
+    },
+    {
+        "id": "Q11613699",
+        "name": "舞鶴市政記念館",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.385444 35.474667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Maizuru%20Commemoration%20hall.jpg",
+        "google_rating": 3.6,
+        "google_review_count": 819,
+        "google_name_matched": "赤れんが2号棟 舞鶴市政記念館 (旧舞鶴海軍兵器廠予備艦兵器庫)"
+    },
+    {
+        "id": "Q11309480",
+        "name": "立体模型·京都·日本",
+        "type": "立體透視模型",
+        "coordinates": "Point(135.680139 35.018639)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Diorama%20Kyoto%2001.jpg",
+        "google_rating": 3.8,
+        "google_review_count": 217,
+        "google_name_matched": "ジオラマ 京都JAPAN"
+    },
+    {
+        "id": "Q147286",
+        "name": "京都國立博物館",
+        "type": "國立博物館",
+        "coordinates": "Point(135.773121 34.989993)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20National%20Museum%202009.jpg",
+        "google_rating": 4.3,
+        "google_review_count": 8109,
+        "google_name_matched": "京都国立博物館"
+    },
+    {
+        "id": "Q137773108",
+        "name": "チームラボ バイオヴォルテックス 京都",
+        "type": "現代美術館",
+        "coordinates": "Point(135.764948 34.983707)",
+        "image": "No Image",
+        "google_rating": 4.6,
+        "google_review_count": 3085,
+        "google_name_matched": "チームラボ バイオヴォルテックス 京都 - 大成建設"
+    },
+    {
+        "id": "Q132529270",
+        "name": "京都絞り工芸館",
+        "type": "織物博物館",
+        "coordinates": "Point(135.753707 35.010076)",
+        "image": "No Image",
+        "google_rating": 4.7,
+        "google_review_count": 285,
+        "google_name_matched": "京都絞り工芸館"
+    },
+    {
+        "id": "Q11442700",
+        "name": "天橋立View Land",
+        "type": "主題公園",
+        "coordinates": "Point(135.18175 35.5525)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%83%AA%E3%83%95%E3%83%88%E5%B1%B1%E9%A0%82%E9%A7%85.jpg",
+        "google_rating": 4.4,
+        "google_review_count": 10488,
+        "google_name_matched": "天橋立ビューランド"
+    },
+    {
+        "id": "Q137917525",
+        "name": "丹波生活衣館",
+        "type": "民俗博物館",
+        "coordinates": "Point(135.129139 35.297442)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%B9%E6%B3%A2%E7%94%9F%E6%B4%BB%E8%A1%A3%E9%A4%A8.png",
+        "google_rating": 4.5,
+        "google_review_count": 33,
+        "google_name_matched": "福知山市丹波生活衣館"
+    },
+    {
+        "id": "Q11482389",
+        "name": "平安博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.762222222 35.00875)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Former%20Bank%20of%20Japan%20building%2C%20Kyoto%20Branch.jpg",
+        "google_rating": 4.1,
+        "google_review_count": 5334,
+        "google_name_matched": "京都文化博物館"
+    },
+    {
+        "id": "Q11581197",
+        "name": "益富地学会館",
+        "type": "地質学博物館",
+        "coordinates": "Point(135.758689 35.021352)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%9B%8A%E5%AF%8C%E5%9C%B0%E5%AD%A6%E4%BC%9A%E9%A4%A8.jpg",
+        "google_rating": 4.3,
+        "google_review_count": 76,
+        "google_name_matched": "益富地学会館·石ふしぎ博物館"
+    },
+    {
+        "id": "Q11594351",
+        "name": "福知山鉄道館ポッポランド",
+        "type": "鐵路博物館",
+        "coordinates": "Point(135.125611 35.301667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukuchiyama%20Poppoland%20frontview.jpg",
+        "google_rating": 4.1,
+        "google_review_count": 9,
+        "google_name_matched": "福知山鉄道館フクレル別館"
+    },
+    {
+        "id": "Q783923",
+        "name": "京都國際漫畫博物館",
+        "type": "動漫博物館",
+        "coordinates": "Point(135.7591715 35.0116867)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%AC%E9%83%BD%E5%9B%BD%E9%9A%9B%E3%83%9E%E3%83%B3%E3%82%AC%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%A2%E3%83%A0.jpg",
+        "google_rating": 4.2,
+        "google_review_count": 6365,
+        "google_name_matched": "京都国際マンガミュージアム"
+    },
+    {
+        "id": "Q123124346",
+        "name": "任天堂博物館",
+        "type": "公司博物館",
+        "coordinates": "Point(135.784167 34.892778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nintendo%20Museum%20Entrance.jpg",
+        "google_rating": 4.5,
+        "google_review_count": 4108,
+        "google_name_matched": "ニンテンドーミュージアム"
+    },
+    {
+        "id": "Q11506183",
+        "name": "日本的鬼之交流博物館",
+        "type": "博物館",
+        "coordinates": "Point(135.144444 35.459028)",
+        "image": "No Image",
+        "google_rating": 3.7,
+        "google_review_count": 400,
+        "google_name_matched": "日本の鬼の交流博物館"
+    },
+    {
+        "id": "Q104721135",
+        "name": "亀岡市文化資料館",
+        "type": "博物館",
+        "coordinates": "Point(135.585487 35.013524)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kameoka%20City%20Cultural%20Museum.jpg",
+        "google_rating": 3.5,
+        "google_review_count": 141,
+        "google_name_matched": "亀岡市文化資料館"
+    },
+    {
+        "id": "Q11483478",
+        "name": "平等院鳳翔館",
+        "type": "博物館",
+        "coordinates": "Point(135.8073916 34.8887044)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Byodoin%20Uji%20Kyoto19s3s4410.jpg",
+        "google_rating": 4.5,
+        "google_review_count": 200,
+        "google_name_matched": "平等院ミュージアム鳳翔館"
+    },
+    {
+        "id": "Q64143380",
+        "name": "向日市文化資料館",
+        "type": "文化機構",
+        "coordinates": "Point(135.69956 34.94954)",
+        "image": "No Image",
+        "google_rating": 4,
+        "google_review_count": 117,
+        "google_name_matched": "向日市文化資料館"
+    },
+    {
+        "id": "Q131352233",
+        "name": "夜久野町化石・郷土資料館",
+        "type": "博物館",
+        "coordinates": "Point(134.92975 35.338333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%A4%9C%E4%B9%85%E9%87%8E%E7%94%BA%E5%8C%96%E7%9F%B3%E3%83%BB%E9%83%B7%E5%9C%9F%E8%B3%87%E6%96%99%E9%A4%A8.jpg",
+        "google_rating": 3.1,
+        "google_review_count": 10,
+        "google_name_matched": "夜久野町化石・郷土資料館"
+    },
+    {
+        "id": "Q127588655",
+        "name": "北野天満宮宝物殿",
+        "type": "宝物館",
+        "coordinates": "Point(135.7356157 35.0305859)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kitano-tenmangu%20Kyoto%20Japan23s3s4500.jpg",
+        "google_rating": 4.2,
+        "google_review_count": 105,
+        "google_name_matched": "宝物殿"
+    },
+    {
+        "id": "Q11594329",
+        "name": "福知山市治水記念館",
+        "type": "博物館",
+        "coordinates": "Point(135.125417 35.303556)",
+        "image": "No Image",
+        "google_rating": 4.1,
+        "google_review_count": 54,
+        "google_name_matched": "福知山市治水記念館"
+    },
+    {
+        "id": "Q11630696",
+        "name": "角屋",
+        "type": "揚屋",
+        "coordinates": "Point(135.743139 34.992111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sumiya%20Kyoto%2001.JPG",
+        "google_rating": 4.3,
+        "google_review_count": 225,
+        "google_name_matched": "角屋もてなしの文化美術館"
+    },
+    {
+        "id": "Q7380607",
+        "name": "るり渓",
+        "type": "觀光景點",
+        "coordinates": "Point(135.404608 35.035817)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Meibaku%2C%20Rurikei02.JPG",
+        "google_rating": 4.1,
+        "google_review_count": 37,
+        "google_name_matched": "るり渓温泉 CAMP AREA"
+    },
+    {
+        "id": "Q3196329",
+        "name": "貴船",
+        "type": "門前町",
+        "coordinates": "Point(135.76277778 35.12166667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kibune%20Kawadoko01s5s4272.jpg",
+        "google_rating": 4.4,
+        "google_review_count": 357,
+        "google_name_matched": "貴船茶屋"
+    },
+    {
+        "id": "Q48757439",
+        "name": "丹後震災記念館",
+        "type": "博物館",
+        "coordinates": "Point(135.05611111 35.62580556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%B9%E5%BE%8C%E9%9C%87%E7%81%BD%E8%A8%98%E5%BF%B5%E9%A4%A8%20ac.jpg",
+        "google_rating": 4.3,
+        "google_review_count": 10,
+        "google_name_matched": "丹後震災記念館"
+    },
+    {
+        "id": "Q11613714",
+        "name": "舞鶴歸國紀念館",
+        "type": "博物館",
+        "coordinates": "Point(135.396583 35.5095)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hikiage051012.jpg",
+        "google_rating": 4.2,
+        "google_review_count": 1598,
+        "google_name_matched": "舞鶴引揚記念館"
+    },
+    {
+        "id": "Q64026339",
+        "name": "琴引濱鳴砂文化館",
+        "type": "博物館",
+        "coordinates": "Point(135.057194 35.697583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kotohikihama%20Nakisuna%20Bunkakan%20exterior%20ac.jpg",
+        "google_rating": 4,
+        "google_review_count": 286,
+        "google_name_matched": "琴引浜鳴き砂文化館"
+    },
+    {
+        "id": "Q11278126",
+        "name": "まいづる智恵蔵",
+        "type": "红砖仓库",
+        "coordinates": "Point(135.385167 35.474722)",
+        "image": "No Image",
+        "google_rating": 3.8,
+        "google_review_count": 84,
+        "google_name_matched": "赤れんが3号棟 まいづる智恵蔵（旧舞鶴海軍兵器廠 弾丸庫並小銃庫）"
+    },
+    {
+        "id": "Q133289013",
+        "name": "醍醐寺霊宝館",
+        "type": "宝物館",
+        "coordinates": "Point(135.819285 34.951018)",
+        "image": "No Image",
+        "google_rating": 4.6,
+        "google_review_count": 60,
+        "google_name_matched": "霊宝館"
+    },
+    {
+        "id": "Q18339063",
+        "name": "琵琶湖疏水紀念館",
+        "type": "博物館",
+        "coordinates": "Point(135.788156 35.012017)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lake%20biwa%20Canal%20Museum.jpg",
+        "google_rating": 4.1,
+        "google_review_count": 746,
+        "google_name_matched": "琵琶湖疏水記念館"
+    },
+    {
+        "id": "Q123688246",
+        "name": "鴨川デルタ",
+        "type": "河岸",
+        "coordinates": "Point(135.7717 35.0299)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%B4%A8%E5%B7%9D%E3%83%87%E3%83%AB%E3%82%BF3.jpg",
+        "google_rating": 4.6,
+        "google_review_count": 875,
+        "google_name_matched": "鴨川デルタ"
+    },
+    {
+        "id": "Q104721110",
+        "name": "与謝野町立古墳公園はにわ資料館",
+        "type": "博物館",
+        "coordinates": "Point(135.104658 35.506447)",
+        "image": "No Image",
+        "google_rating": 3.9,
+        "google_review_count": 69,
+        "google_name_matched": "古墳公園はにわ資料館"
+    },
+    {
+        "id": "Q101244809",
+        "name": "京都市市民防災センター",
+        "type": "博物館",
+        "coordinates": "Point(135.746388888 34.973888888)",
+        "image": "No Image",
+        "google_rating": 4.3,
+        "google_review_count": 133,
+        "google_name_matched": "京都市市民防災センター"
+    },
+    {
+        "id": "Q17210134",
+        "name": "ききょうの里",
+        "type": "觀光景點",
+        "coordinates": "Point(135.491388888 35.032083333)",
+        "image": "No Image",
+        "google_rating": 3.8,
+        "google_review_count": 222,
+        "google_name_matched": "丹波かめおか光秀物語ききょうの里 / 京都丹波 夢ナリエ"
+    },
+    {
+        "id": "Q133269160",
+        "name": "広隆寺霊宝殿",
+        "type": "宝物館",
+        "coordinates": "Point(135.707472 35.0155)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/K%C3%B4ry%C3%BB-ji%20Temple%20-%20Reih%C3%B4-den.jpg",
+        "google_rating": 4.7,
+        "google_review_count": 14,
+        "google_name_matched": "広隆寺 霊宝殿"
+    },
+    {
+        "id": "Q133288972",
+        "name": "仁和寺霊宝館",
+        "type": "宝物館",
+        "coordinates": "Point(135.71437 35.029287)",
+        "image": "No Image",
+        "google_rating": 4.2,
+        "google_review_count": 31,
+        "google_name_matched": "仁和寺 霊宝館"
+    },
+    {
+        "id": "Q48761574",
+        "name": "宮津市立前尾記念文庫",
+        "type": "博物館",
+        "coordinates": "Point(135.197278 35.538083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Miyazu%20City%20Maeo%20Memorial%20Library%20exterior%20ac.jpg",
+        "google_rating": 4.2,
+        "google_review_count": 19,
+        "google_name_matched": "前尾記念クロスワークセンターMIYAZU"
+    },
+    {
+        "id": "Q1108695",
+        "name": "圓山公園",
+        "type": "城市公園",
+        "coordinates": "Point(135.78138889 35.00333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/251213%20Maruyama%20Park%20Kyoto%20Japan08s3.jpg",
+        "google_rating": 4.3,
+        "google_review_count": 6812,
+        "google_name_matched": "円山公園"
+    },
+    {
+        "id": "Q127595222",
+        "name": "京都教育大学教育資料館",
+        "type": "教育博物館",
+        "coordinates": "Point(135.774369 34.948746)",
+        "image": "No Image",
+        "google_rating": 3.8,
+        "google_review_count": 4,
+        "google_name_matched": "京都教育大学 教育資料館 まなびの森ミュージアム"
+    },
+    {
+        "id": "Q9096880",
+        "name": "山科植物資料館",
+        "type": "植物園",
+        "coordinates": "Point(135.819 34.9719)",
+        "image": "No Image",
+        "google_rating": 4.2,
+        "google_review_count": 27,
+        "google_name_matched": "日本新薬（株）山科植物資料館"
+    },
+    {
+        "id": "Q5926928",
+        "name": "京都薬科大学薬用植物園",
+        "type": "植物園",
+        "coordinates": "Point(135.8175 34.937222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Canavalia%20gladiata2.jpg",
+        "google_rating": 4.4,
+        "google_review_count": 5,
+        "google_name_matched": "京都薬科大学薬用植物園"
+    },
+    {
+        "id": "Q127597163",
+        "name": "京都芸術大学芸術館",
+        "type": "大學博物館",
+        "coordinates": "Point(135.792199 35.037016)",
+        "image": "No Image",
+        "google_rating": 4.3,
+        "google_review_count": 3,
+        "google_name_matched": "京都芸術大学芸術館"
+    },
+    {
+        "id": "Q11561923",
+        "name": "渡月橋",
+        "type": "公路橋",
+        "coordinates": "Point(135.677722 35.012806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Togetsukyo%20in%20Kyoto%20Arashiyama.jpg",
+        "google_rating": 4.4,
+        "google_review_count": 5194,
+        "google_name_matched": "渡月橋"
+    },
+    {
+        "id": "Q125465419",
+        "name": "舞鶴由良川大橋",
+        "type": "公路橋",
+        "coordinates": "Point(135.211944 35.422778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Maizuru%20Yuragawa%20bridge%20southside%2020200309.jpg",
+        "google_rating": 4.2,
+        "google_review_count": 6,
+        "google_name_matched": "舞鶴由良川大橋"
+    },
+    {
+        "id": "Q127598282",
+        "name": "京都産業大学ギャラリー",
+        "type": "大學博物館",
+        "coordinates": "Point(135.745663 34.997933)",
+        "image": "No Image",
+        "google_rating": 3.9,
+        "google_review_count": 7,
+        "google_name_matched": "京都産業大学ギャラリー"
+    },
+    {
+        "id": "Q1759226",
+        "name": "天龍寺",
+        "type": "佛寺",
+        "coordinates": "Point(135.67379 35.01599)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tenryuji%20Kyoto.jpg",
+        "google_rating": 4.4,
+        "google_review_count": 16366,
+        "google_name_matched": "天龍寺"
+    },
+    {
+        "id": "Q11629548",
+        "name": "西賀茂橋",
+        "type": "公路橋",
+        "coordinates": "Point(135.746833333 35.064722222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nishigamobashi01.JPG",
+        "google_rating": 4.5,
+        "google_review_count": 2,
+        "google_name_matched": "西賀茂橋"
+    },
+    {
+        "id": "Q30937665",
+        "name": "田倉山",
+        "type": "山",
+        "coordinates": "Point(134.918055555 35.345833333)",
+        "image": "No Image",
+        "google_rating": 3.9,
+        "google_review_count": 9,
+        "google_name_matched": "宝山（田倉山）"
+    },
+    {
+        "id": "Q11385851",
+        "name": "保津川橋梁",
+        "type": "鐵路橋",
+        "coordinates": "Point(135.653222222 35.027111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hozugawa%20river%20bridge%2020170803.jpg",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q11488986",
+        "name": "御幸橋",
+        "type": "公路橋",
+        "coordinates": "Point(135.700916666 34.890583333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%22GOKOU-BASHI%22%20Bridge%20%28KIZU%20river%29%20Kyoto%2C%20JAPAN.jpg",
+        "google_rating": 4.3,
+        "google_review_count": 14,
+        "google_name_matched": "宇治川御幸橋"
+    },
+    {
+        "id": "Q11449473",
+        "name": "宇治市植物公園",
+        "type": "植物園",
+        "coordinates": "Point(135.795666666 34.870944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Uji%20city%20botanical%20park-1.jpg",
+        "google_rating": 4,
+        "google_review_count": 509,
+        "google_name_matched": "宇治市植物公園"
+    },
+    {
+        "id": "Q11673518",
+        "name": "大江山鬼瓦公園",
+        "type": "城市公園",
+        "coordinates": "Point(135.146972 35.389194)",
+        "image": "No Image",
+        "google_rating": 3.7,
+        "google_review_count": 25,
+        "google_name_matched": "大江山鬼瓦公園"
+    },
+    {
+        "id": "Q11529655",
+        "name": "松尾橋",
+        "type": "公路橋",
+        "coordinates": "Point(135.689694444 35.001583333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Katsura%20River%20Matsuo%20Bridge%202013-09-16.JPG",
+        "google_rating": 0,
+        "google_review_count": 0,
+        "google_name_matched": "松尾橋"
+    },
+    {
+        "id": "Q11594341",
+        "name": "福知山市都市緑化植物園",
+        "type": "植物園",
+        "coordinates": "Point(135.137 35.311917)",
+        "image": "No Image",
+        "google_rating": 3.9,
+        "google_review_count": 49,
+        "google_name_matched": "三段池ラビハウス 植物園(福知山市都市緑化植物園)"
+    },
+    {
+        "id": "Q11644462",
+        "name": "醍醐寺三宝院庭園",
+        "type": "日本庭園",
+        "coordinates": "Point(135.819694 34.951806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Daigozi%2009.jpg",
+        "google_rating": 4.6,
+        "google_review_count": 35,
+        "google_name_matched": "三宝院庭園"
+    },
+    {
+        "id": "Q11671937",
+        "name": "高瀨川二條苑",
+        "type": "住宅",
+        "coordinates": "Point(135.770806 35.01275)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takasegawa%20Nijoen%20Kyoto%20Japan04s3.jpg",
+        "google_rating": 4.2,
+        "google_review_count": 1817,
+        "google_name_matched": "和食・懐石 がんこ 高瀬川二条苑"
+    },
+    {
+        "id": "Q11590468",
+        "name": "神泉苑",
+        "type": "佛寺",
+        "coordinates": "Point(135.748372222 35.011380555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shinsenen%20Kyoto%20Japan07s3.jpg",
+        "google_rating": 4.3,
+        "google_review_count": 2040,
+        "google_name_matched": "神泉苑"
+    },
+    {
+        "id": "Q11472816",
+        "name": "岡崎公園",
+        "type": "城市公園",
+        "coordinates": "Point(135.78286111 35.01422222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okazaki-hiroba02.jpg",
+        "google_rating": 4.2,
+        "google_review_count": 2221,
+        "google_name_matched": "岡崎公園"
+    },
+    {
+        "id": "Q11459583",
+        "name": "小天橋",
+        "type": "沙洲",
+        "coordinates": "Point(134.910833333 35.645)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kumihama%20Bay1.JPG",
+        "google_rating": 4.2,
+        "google_review_count": 481,
+        "google_name_matched": "小天橋海水浴場"
+    },
+    {
+        "id": "Q11360137",
+        "name": "上賀茂橋",
+        "type": "公路橋",
+        "coordinates": "Point(135.7552779 35.0534735)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kamigamobashi1.JPG",
+        "google_rating": 0,
+        "google_review_count": 0,
+        "google_name_matched": "上賀茂橋"
+    },
+    {
+        "id": "Q127592570",
+        "name": "京都外国語大学国際文化資料館",
+        "type": "大學博物館",
+        "coordinates": "Point(135.716467 35.007099)",
+        "image": "No Image",
+        "google_rating": 4.1,
+        "google_review_count": 16,
+        "google_name_matched": "京都外国語大学 国際文化資料館"
+    },
+    {
+        "id": "Q11360377",
+        "name": "上野橋",
+        "type": "公路橋",
+        "coordinates": "Point(135.704472222 34.998861111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%8A%E9%87%8E%E6%A9%8B%20-%20panoramio.jpg",
+        "google_rating": 0,
+        "google_review_count": 0,
+        "google_name_matched": "上野橋"
+    },
+    {
+        "id": "Q270983",
+        "name": "鹿苑寺",
+        "type": "佛寺",
+        "coordinates": "Point(135.7285 35.0395)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Water%20reflection%20of%20Kinkaku-ji%20Temple%20a%20sunny%20day%2C%20Kyoto%2C%20Japan.jpg",
+        "google_rating": 4.7,
+        "google_review_count": 728,
+        "google_name_matched": "舎利殿 金閣"
+    },
+    {
+        "id": "Q124947044",
+        "name": "佛教大学宗教文化ミュージアム",
+        "type": "宗教博物馆",
+        "coordinates": "Point(135.687798 35.024586)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bukkyo%20University%20Museum%20of%20Religious%20Culture140513NI1.JPG",
+        "google_rating": 4.1,
+        "google_review_count": 34,
+        "google_name_matched": "佛教大学 宗教文化ミュージアム"
+    },
+    {
+        "id": "Q35719248",
+        "name": "Take-guri",
+        "type": "暗礁",
+        "coordinates": "Point(134.9 35.683333333)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q11449502",
+        "name": "宇治橋",
+        "type": "公路橋",
+        "coordinates": "Point(135.80622222 34.89294444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Uji%20bridge9.jpg",
+        "google_rating": 4.4,
+        "google_review_count": 694,
+        "google_name_matched": "宇治橋"
+    },
+    {
+        "id": "Q11591062",
+        "name": "祥久橋",
+        "type": "公路橋",
+        "coordinates": "Point(135.727888888 34.957638888)",
+        "image": "No Image",
+        "google_rating": 4.4,
+        "google_review_count": 10,
+        "google_name_matched": "祥久橋"
+    },
+    {
+        "id": "Q257473",
+        "name": "慈照寺",
+        "type": "佛寺",
+        "coordinates": "Point(135.798333333 35.026666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/GinkakujiTemple.jpg",
+        "google_rating": 4.5,
+        "google_review_count": 17147,
+        "google_name_matched": "銀閣寺"
+    },
+    {
+        "id": "Q11538444",
+        "name": "梅小路公園",
+        "type": "城市公園",
+        "coordinates": "Point(135.745556 34.986528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/250503%20Suzaku-no-niwa%20in%20Umekoji%20Park%20Kyoto%20Japan01s3.jpg",
+        "google_rating": 4.2,
+        "google_review_count": 10140,
+        "google_name_matched": "梅小路公園"
+    },
+    {
+        "id": "Q35706992",
+        "name": "Hatasaka-se",
+        "type": "暗礁",
+        "coordinates": "Point(135.383333333 35.55)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q11627572",
+        "name": "西大橋",
+        "type": "公路橋",
+        "coordinates": "Point(135.709416666 34.993888888)",
+        "image": "No Image",
+        "google_rating": 0,
+        "google_review_count": 0,
+        "google_name_matched": "西大橋"
+    },
+    {
+        "id": "Q17212014",
+        "name": "七條大橋",
+        "type": "混凝土拱橋",
+        "coordinates": "Point(135.7672 34.9893)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/ShichijoBridge%2020190103%20134341.jpg",
+        "google_rating": 4.1,
+        "google_review_count": 45,
+        "google_name_matched": "七条大橋"
+    },
+    {
+        "id": "Q1516753",
+        "name": "西芳寺",
+        "type": "佛寺",
+        "coordinates": "Point(135.684166666 34.9925)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saihouji-kokedera01.jpg",
+        "google_rating": 4.5,
+        "google_review_count": 1928,
+        "google_name_matched": "西芳寺 (苔寺)"
+    },
+    {
+        "id": "Q10956279",
+        "name": "寶池公園",
+        "type": "城市公園",
+        "coordinates": "Point(135.783 35.0583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/230603%20Takaragaike%20Park%20Kyoto%20Japan03s3.jpg",
+        "google_rating": 4.2,
+        "google_review_count": 1101,
+        "google_name_matched": "宝が池公園"
+    },
+    {
+        "id": "Q11536640",
+        "name": "桂大橋",
+        "type": "公路橋",
+        "coordinates": "Point(135.713055555 34.983527777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Katsura-Ohashi%20Bridge.jpg",
+        "google_rating": 3,
+        "google_review_count": 1,
+        "google_name_matched": "桂大橋"
+    },
+    {
+        "id": "Q3106834",
+        "name": "京都府立植物園",
+        "type": "植物園",
+        "coordinates": "Point(135.76111111 35.04833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/KyotoBotanicalGarden.jpg",
+        "google_rating": 4.4,
+        "google_review_count": 7347,
+        "google_name_matched": "京都府立植物園"
+    },
+    {
+        "id": "Q795048",
+        "name": "涉成園",
+        "type": "日本庭園",
+        "coordinates": "Point(135.763222 34.991389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shoseien6.jpg",
+        "google_rating": 4.2,
+        "google_review_count": 2841,
+        "google_name_matched": "渉成園 (枳殻邸)"
+    },
+    {
+        "id": "Q259727",
+        "name": "天橋立",
+        "type": "沙洲",
+        "coordinates": "Point(135.19200833 35.56956111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Amanohashidate%20view%20from%20Mt%20Moju02s3s4592.jpg",
+        "google_rating": 4.5,
+        "google_review_count": 7224,
+        "google_name_matched": "天橋立"
+    },
+    {
+        "id": "Q11489312",
+        "name": "御薗橋",
+        "type": "公路橋",
+        "coordinates": "Point(135.751 35.05725)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Misonobashi20210710-1.jpg",
+        "google_rating": 4.3,
+        "google_review_count": 28,
+        "google_name_matched": "御薗橋"
+    },
+    {
+        "id": "Q2975204",
+        "name": "愛宕山",
+        "type": "山",
+        "coordinates": "Point(135.634166666 35.06)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Atago01.JPG",
+        "google_rating": 4.5,
+        "google_review_count": 254,
+        "google_name_matched": "愛宕山"
+    },
+    {
+        "id": "Q109359840",
+        "name": "遍照寺山",
+        "type": "山",
+        "coordinates": "Point(135.690166666 35.031333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sagahirosawa%20Ikeshitacho%2C%20Ukyo%20Ward%2C%20Kyoto%2C%20Kyoto%20Prefecture%20616-8307%2C%20Japan%20-%20panoramio%20%284%29.jpg",
+        "google_rating": 4,
+        "google_review_count": 59,
+        "google_name_matched": "遍照寺"
+    },
+    {
+        "id": "Q11662735",
+        "name": "青叶山",
+        "type": "山",
+        "coordinates": "Point(135.48348 35.50519)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Aoba%20%28Kyoto%2C%20Fukui%29%20s2.jpg",
+        "google_rating": 4.4,
+        "google_review_count": 78,
+        "google_name_matched": "青葉山"
+    },
+    {
+        "id": "Q131930617",
+        "name": "高熊山",
+        "type": "聖山 (宗教)",
+        "coordinates": "Point(135.529722222 35.006111111)",
+        "image": "No Image",
+        "google_rating": 4.8,
+        "google_review_count": 6,
+        "google_name_matched": "丁塚山"
+    },
+    {
+        "id": "Q11675651",
+        "name": "鴻応山",
+        "type": "山",
+        "coordinates": "Point(135.506111111 34.945833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%B4%BB%E5%BF%9C%E5%B1%B1.png",
+        "google_rating": 2.4,
+        "google_review_count": 5,
+        "google_name_matched": "鴻応山"
+    },
+    {
+        "id": "Q18337635",
+        "name": "雙丘",
+        "type": "孤山",
+        "coordinates": "Point(135.713333 35.022778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Narabigaoka140721NI2.jpg",
+        "google_rating": 0,
+        "google_review_count": 0,
+        "google_name_matched": "御室双岡町"
+    },
+    {
+        "id": "Q748040",
+        "name": "比叡山",
+        "type": "聖山 (宗教)",
+        "coordinates": "Point(135.838333333 35.066666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sakura%20MtHiei.jpg",
+        "google_rating": 4.4,
+        "google_review_count": 729,
+        "google_name_matched": "比叡山"
+    },
+    {
+        "id": "Q123685300",
+        "name": "高竜寺ヶ岳",
+        "type": "鄉土富士",
+        "coordinates": "Point(134.971111 35.522944)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Koryujigadake%20Tanto-cho%20Ota%20ac%20%281%29.jpg",
+        "google_rating": 4.7,
+        "google_review_count": 3,
+        "google_name_matched": "高竜寺ヶ岳"
+    },
+    {
+        "id": "Q3328153",
+        "name": "無鄰菴",
+        "type": "南禅寺界隈別荘",
+        "coordinates": "Point(135.7872 35.0116)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Murinan01r.jpg",
+        "google_rating": 4.4,
+        "google_review_count": 1585,
+        "google_name_matched": "無鄰菴 murinanｰgarden"
+    },
+    {
+        "id": "Q11482406",
+        "name": "平安神宮神苑",
+        "type": "回游式庭园",
+        "coordinates": "Point(135.783333 35.016472)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Heian-jingu%20shinen10bs3216.jpg",
+        "google_rating": 4.5,
+        "google_review_count": 272,
+        "google_name_matched": "平安神宮神苑"
+    },
+    {
+        "id": "Q132337438",
+        "name": "弥仙山",
+        "type": "聖山 (宗教)",
+        "coordinates": "Point(135.378055555 35.391111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.Misensan.jpg",
+        "google_rating": 3.8,
+        "google_review_count": 12,
+        "google_name_matched": "弥仙山"
+    },
+    {
+        "id": "Q843854",
+        "name": "京都御苑",
+        "type": "御苑",
+        "coordinates": "Point(135.763306 35.023289)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/KYOTO%20PARES%20HAMAGURIGOMON%201.jpg",
+        "google_rating": 0,
+        "google_review_count": 0,
+        "google_name_matched": "京都御苑"
+    },
+    {
+        "id": "Q49640632",
+        "name": "蛇島",
+        "type": "荒島",
+        "coordinates": "Point(135.368055555 35.497222222)",
+        "image": "No Image",
+        "google_rating": 4.5,
+        "google_review_count": 4,
+        "google_name_matched": "蛇島"
+    },
+    {
+        "id": "Q410132",
+        "name": "鞍馬山",
+        "type": "聖山 (宗教)",
+        "coordinates": "Point(135.765 35.1167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kurama%20%286911112520%29.jpg",
+        "google_rating": 4.7,
+        "google_review_count": 309,
+        "google_name_matched": "鞍馬山"
+    },
+    {
+        "id": "Q11634936",
+        "name": "賀茂川通学橋",
+        "type": "步道天桥",
+        "coordinates": "Point(135.744611 35.067333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kamigamotsugakukyo02.JPG",
+        "google_rating": 3,
+        "google_review_count": 2,
+        "google_name_matched": "通学橋"
+    },
+    {
+        "id": "Q55524668",
+        "name": "朝霧橋",
+        "type": "步道天桥",
+        "coordinates": "Point(135.809388888 34.890194444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Uji%20bridge5.jpg",
+        "google_rating": 4.5,
+        "google_review_count": 300,
+        "google_name_matched": "朝霧橋"
+    },
+    {
+        "id": "Q18457625",
+        "name": "吉田山",
+        "type": "山",
+        "coordinates": "Point(135.78666667 35.02666667)",
+        "image": "No Image",
+        "google_rating": 4.3,
+        "google_review_count": 22,
+        "google_name_matched": "吉田山"
+    },
+    {
+        "id": "Q123124492",
+        "name": "京都伝統工芸館",
+        "type": "工藝博物館",
+        "coordinates": "Point(135.759449 35.009006)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%AC%E9%83%BD%E4%BC%9D%E7%B5%B1%E5%B7%A5%E8%8A%B83823.JPG",
+        "google_rating": 4.1,
+        "google_review_count": 134,
+        "google_name_matched": "京都伝統工芸館"
+    },
+    {
+        "id": "Q11411174",
+        "name": "古川町橋",
+        "type": "步道天桥",
+        "coordinates": "Point(135.778139 35.007278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gyouzyabashi.JPG",
+        "google_rating": 4.4,
+        "google_review_count": 518,
+        "google_name_matched": "一本橋"
+    },
+    {
+        "id": "Q8081591",
+        "name": "大河内山荘",
+        "type": "回游式庭园",
+        "coordinates": "Point(135.669347222 35.017269444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okochi%20Sanso13n4410.jpg",
+        "google_rating": 4.7,
+        "google_review_count": 1846,
+        "google_name_matched": "大河内山荘庭園"
+    },
+    {
+        "id": "Q11496323",
+        "name": "戸島 (京都府)",
+        "type": "島嶼",
+        "coordinates": "Point(135.343055555 35.495833333)",
+        "image": "No Image",
+        "google_rating": 4.4,
+        "google_review_count": 7,
+        "google_name_matched": "戸島"
+    },
+    {
+        "id": "Q49666855",
+        "name": "Q49666855",
+        "type": "島嶼",
+        "coordinates": "Point(135.344722222 35.488888888)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q61094",
+        "name": "平等院",
+        "type": "佛寺",
+        "coordinates": "Point(135.807777777 34.889444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Phoenix%20Hall%2C%20Byodo-in%2C%20November%202016%20-01.jpg",
+        "google_rating": 4.5,
+        "google_review_count": 21881,
+        "google_name_matched": "平等院"
+    },
+    {
+        "id": "Q11547731",
+        "name": "毛島",
+        "type": "島嶼",
+        "coordinates": "Point(135.47971 35.598)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ke%20Island.jpg",
+        "google_rating": 4.7,
+        "google_review_count": 3,
+        "google_name_matched": "毛島"
+    },
+    {
+        "id": "Q11455035",
+        "name": "宮津城",
+        "type": "已棄用建築物",
+        "coordinates": "Point(135.198306 35.536556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Miyazujyo02.jpg",
+        "google_rating": 3.1,
+        "google_review_count": 19,
+        "google_name_matched": "宮津城跡"
+    },
+    {
+        "id": "Q11661369",
+        "name": "青島",
+        "type": "島嶼",
+        "coordinates": "Point(135.28362 35.66646)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ineura%20Aoshima%20island%202017-04%20ac%20%281%29.jpg",
+        "google_rating": 2.7,
+        "google_review_count": 3,
+        "google_name_matched": "青島"
+    },
+    {
+        "id": "Q118646318",
+        "name": "草路城",
+        "type": "城堡",
+        "coordinates": "Point(135.786306 34.811139)",
+        "image": "No Image",
+        "google_rating": 3.8,
+        "google_review_count": 5,
+        "google_name_matched": "京都の自然200選 草路城跡（咋岡神社）"
+    },
+    {
+        "id": "Q134567335",
+        "name": "笑路城",
+        "type": "城堡",
+        "coordinates": "Point(135.520472222 34.969861111)",
+        "image": "No Image",
+        "google_rating": 2,
+        "google_review_count": 2,
+        "google_name_matched": "笑路城"
+    },
+    {
+        "id": "Q11552439",
+        "name": "沓島",
+        "type": "島嶼",
+        "coordinates": "Point(135.43777778 35.71111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kutsujima.jpg",
+        "google_rating": 4.4,
+        "google_review_count": 17,
+        "google_name_matched": "沓島"
+    },
+    {
+        "id": "Q133248549",
+        "name": "本宮山",
+        "type": "山",
+        "coordinates": "Point(135.261944444 35.294166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Hongu%2C%20Ayabe%20-%20wider%20view%20of%20summit.jpg",
+        "google_rating": 5,
+        "google_review_count": 1,
+        "google_name_matched": "本宮山"
+    },
+    {
+        "id": "Q129949871",
+        "name": "二条御所",
+        "type": "城堡",
+        "coordinates": "Point(135.758 35.019916666)",
+        "image": "No Image",
+        "google_rating": 3.7,
+        "google_review_count": 47,
+        "google_name_matched": "旧二条城跡"
+    },
+    {
+        "id": "Q134486165",
+        "name": "日ノ岡第11号橋",
+        "type": "混凝土橋",
+        "coordinates": "Point(135.798611111 35.000138888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Biwako%20Canal%2005.jpg",
+        "google_rating": 3.8,
+        "google_review_count": 17,
+        "google_name_matched": "日ノ岡第11号橋"
+    },
+    {
+        "id": "Q49645531",
+        "name": "Q49645531",
+        "type": "島嶼",
+        "coordinates": "Point(135.233333333 35.583333333)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q17220482",
+        "name": "円通橋",
+        "type": "眼鏡橋",
+        "coordinates": "Point(135.776389 34.994083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%86%86%E9%80%9A%E6%A9%8B%EF%BC%93.jpg",
+        "google_rating": 4.4,
+        "google_review_count": 21,
+        "google_name_matched": "円通橋(めがね橋)"
+    },
+    {
+        "id": "Q49665714",
+        "name": "Q49665714",
+        "type": "島嶼",
+        "coordinates": "Point(135.450833333 35.6)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q11588028",
+        "name": "磯葛島",
+        "type": "島嶼",
+        "coordinates": "Point(135.394166666 35.576111111)",
+        "image": "No Image",
+        "google_rating": 0,
+        "google_review_count": 0,
+        "google_name_matched": "磯葛島"
+    },
+    {
+        "id": "Q65548967",
+        "name": "京都薬用植物園",
+        "type": "药材园",
+        "coordinates": "Point(135.801361 35.048639)",
+        "image": "No Image",
+        "google_rating": 4.5,
+        "google_review_count": 104,
+        "google_name_matched": "武田薬品工業株式会社 京都薬用植物園"
+    },
+    {
+        "id": "Q6363834",
+        "name": "冠島",
+        "type": "島嶼",
+        "coordinates": "Point(135.433333333 35.683333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Amanohashidate%20%284573550742%29.jpg",
+        "google_rating": 4.6,
+        "google_review_count": 31,
+        "google_name_matched": "冠島"
+    },
+    {
+        "id": "Q101034230",
+        "name": "通天橋",
+        "type": "屋根付人道橋",
+        "coordinates": "Point(135.77367 34.97728)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tofukuji%20Kyoto01bs3200.jpg",
+        "google_rating": 4.6,
+        "google_review_count": 187,
+        "google_name_matched": "通天橋"
+    },
+    {
+        "id": "Q134484362",
+        "name": "南禅寺水路閣",
+        "type": "引水道橋",
+        "coordinates": "Point(135.793888888 35.010555555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/251213%20Nanzen-ji%20Suirokaku%20Kyoto%20Japan01s3.jpg",
+        "google_rating": 4.6,
+        "google_review_count": 769,
+        "google_name_matched": "水路閣"
+    },
+    {
+        "id": "Q110584231",
+        "name": "甘南備山",
+        "type": "山",
+        "coordinates": "Point(135.744166666 34.808888888)",
+        "image": "No Image",
+        "google_rating": 4.7,
+        "google_review_count": 14,
+        "google_name_matched": "甘南備山"
+    },
+    {
+        "id": "Q2859566",
+        "name": "嵐山",
+        "type": "近鄰社區",
+        "coordinates": "Point(135.666388888 35.009583333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Arashiyama%20%288741759830%29.jpg",
+        "google_rating": 4.5,
+        "google_review_count": 7204,
+        "google_name_matched": "嵐山"
+    },
+    {
+        "id": "Q143683",
+        "name": "船岡山",
+        "type": "山",
+        "coordinates": "Point(135.74166667 35.03888889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.Funaoka%20%28Kyoto%2C%20Japan%29.jpg",
+        "google_rating": 4.8,
+        "google_review_count": 16,
+        "google_name_matched": "船岡山"
+    },
+    {
+        "id": "Q134487610",
+        "name": "大日山",
+        "type": "山",
+        "coordinates": "Point(135.803555555 35.010472222)",
+        "image": "No Image",
+        "google_rating": 4,
+        "google_review_count": 1,
+        "google_name_matched": "大日山"
+    },
+    {
+        "id": "Q31508629",
+        "name": "釈迦岳",
+        "type": "山",
+        "coordinates": "Point(135.634444444 34.932222222)",
+        "image": "No Image",
+        "google_rating": 3.2,
+        "google_review_count": 24,
+        "google_name_matched": "釈迦岳"
+    },
+    {
+        "id": "Q11653562",
+        "name": "長老岳",
+        "type": "山",
+        "coordinates": "Point(135.47379 35.30336)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.Chorogadake.jpg",
+        "google_rating": 4.1,
+        "google_review_count": 30,
+        "google_name_matched": "長老ヶ岳"
+    },
+    {
+        "id": "Q31694183",
+        "name": "鼓ヶ岳",
+        "type": "山",
+        "coordinates": "Point(135.183333333 35.583333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%A4%A9%E6%A9%8B%E7%AB%8B%E3%83%93%E3%83%A5%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89%20-%20panoramio%20%284%29.jpg",
+        "google_rating": 4,
+        "google_review_count": 1,
+        "google_name_matched": "鼓ヶ岳"
+    },
+    {
+        "id": "Q86742243",
+        "name": "高山",
+        "type": "山",
+        "coordinates": "Point(135.169388888 35.62625)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q11580925",
+        "name": "皆子山",
+        "type": "山",
+        "coordinates": "Point(135.835278 35.202222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.Minakoyama.jpg",
+        "google_rating": 4.1,
+        "google_review_count": 35,
+        "google_name_matched": "皆子山"
+    },
+    {
+        "id": "Q11459560",
+        "name": "小塩山",
+        "type": "山",
+        "coordinates": "Point(135.634167 34.961667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%B0%8F%E5%A1%A9%E5%B1%B1%20Mt.%20Oshio-Yama.jpg",
+        "google_rating": 4.1,
+        "google_review_count": 19,
+        "google_name_matched": "小塩山"
+    },
+    {
+        "id": "Q31692460",
+        "name": "Ō Mine",
+        "type": "山",
+        "coordinates": "Point(135.822222222 34.812222222)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q27921552",
+        "name": "小倉山 (京都市)",
+        "type": "山",
+        "coordinates": "Point(135.65888889 35.02361111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%AC%E9%83%BD%20%E5%B5%90%E5%B1%B1%20%E5%A4%A7%E5%A0%B0%E5%B7%9D%E3%82%88%E3%82%8A%E5%B0%8F%E5%80%89%E5%B1%B1%EF%BC%88%EF%BC%92%EF%BC%98%EF%BC%96%EF%BD%8D%EF%BC%89%20Kyouto%20Arashiyama%20-%20panoramio.jpg",
+        "google_rating": 4.3,
+        "google_review_count": 58,
+        "google_name_matched": "小倉山"
+    },
+    {
+        "id": "Q11390436",
+        "name": "八峰",
+        "type": "山",
+        "coordinates": "Point(135.668056 35.357222)",
+        "image": "No Image",
+        "google_rating": 4,
+        "google_review_count": 10,
+        "google_name_matched": "八ヶ峰"
+    },
+    {
+        "id": "Q17191041",
+        "name": "上山",
+        "type": "山",
+        "coordinates": "Point(134.966278 35.656722)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q31511161",
+        "name": "Gorin Zan",
+        "type": "山",
+        "coordinates": "Point(135.878611111 34.833333333)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q31804165",
+        "name": "Funatsu-yama",
+        "type": "山",
+        "coordinates": "Point(135.233055555 35.741388888)",
+        "image": "No Image",
+        "google_rating": 0,
+        "google_review_count": 0,
+        "google_name_matched": "船津山"
+    },
+    {
+        "id": "Q31511094",
+        "name": "Senzu Dake",
+        "type": "山",
+        "coordinates": "Point(135.859722222 34.959166666)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q11355196",
+        "name": "三岳山",
+        "type": "山",
+        "coordinates": "Point(135.057777777 35.394166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.Mitakesan.jpg",
+        "google_rating": 4,
+        "google_review_count": 1,
+        "google_name_matched": "三岳山"
+    },
+    {
+        "id": "Q31511109",
+        "name": "Goun Mine",
+        "type": "山",
+        "coordinates": "Point(135.825555555 34.911666666)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q31707883",
+        "name": "Akiba-yama",
+        "type": "山",
+        "coordinates": "Point(135.2133 35.5)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q31703157",
+        "name": "櫃ヶ嶽",
+        "type": "山",
+        "coordinates": "Point(135.369166666 35.132222222)",
+        "image": "No Image",
+        "google_rating": 0,
+        "google_review_count": 0,
+        "google_name_matched": "櫃ヶ嶽"
+    },
+    {
+        "id": "Q31686676",
+        "name": "Tsuzmiga Dake",
+        "type": "山",
+        "coordinates": "Point(135.181388888 35.606111111)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q31804166",
+        "name": "Kōmori-take",
+        "type": "山",
+        "coordinates": "Point(135.293888888 35.690555555)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q10940452",
+        "name": "天王山",
+        "type": "山",
+        "coordinates": "Point(135.67622 34.90181)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tennozan%20Shimamoto.jpg",
+        "google_rating": 4.3,
+        "google_review_count": 113,
+        "google_name_matched": "天王山"
+    },
+    {
+        "id": "Q31511143",
+        "name": "Jūbu San",
+        "type": "山",
+        "coordinates": "Point(135.9075 34.830277777)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q31511126",
+        "name": "Ōmine San",
+        "type": "山",
+        "coordinates": "Point(135.855833333 34.871666666)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q135756942",
+        "name": "一条山",
+        "type": "地理位置",
+        "coordinates": "Point(135.7754 35.0692)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.Ichijo%201985.jpg",
+        "google_rating": 0,
+        "google_review_count": 0,
+        "google_name_matched": "一条山緑地"
+    },
+    {
+        "id": "Q134487407",
+        "name": "九条山",
+        "type": "山",
+        "coordinates": "Point(135.794722222 35.004444444)",
+        "image": "No Image",
+        "google_rating": 0,
+        "google_review_count": 0,
+        "google_name_matched": "九条山"
+    },
+    {
+        "id": "Q11626402",
+        "name": "衣笠山",
+        "type": "山",
+        "coordinates": "Point(135.72202778 35.03577778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.%20Kinugasa%20and%20Ritsumeikan%20University%20%28Kyoto%2C%20Japan%29.JPG",
+        "google_rating": 3.9,
+        "google_review_count": 13,
+        "google_name_matched": "衣笠山"
+    },
+    {
+        "id": "Q31690974",
+        "name": "三ヶ岳",
+        "type": "山",
+        "coordinates": "Point(135.95404 34.80447)",
+        "image": "No Image",
+        "google_rating": 4,
+        "google_review_count": 1,
+        "google_name_matched": "三ヶ岳"
+    },
+    {
+        "id": "Q11354736",
+        "name": "三國岳",
+        "type": "山",
+        "coordinates": "Point(135.79388889 35.32055556)",
+        "image": "No Image",
+        "google_rating": 3.5,
+        "google_review_count": 4,
+        "google_name_matched": "三国岳"
+    },
+    {
+        "id": "Q11664935",
+        "name": "頭巾山",
+        "type": "山",
+        "coordinates": "Point(135.534444 35.377222)",
+        "image": "No Image",
+        "google_rating": 4,
+        "google_review_count": 12,
+        "google_name_matched": "頭巾山"
+    },
+    {
+        "id": "Q55521732",
+        "name": "金剛童子山",
+        "type": "山",
+        "coordinates": "Point(135.142111111 35.659583333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.%20Kondodoji%20in%20Kyotango%20city%20%E9%87%91%E5%89%9B%E7%AB%A5%E5%AD%90%E5%B1%B1.jpg",
+        "google_rating": 4.2,
+        "google_review_count": 6,
+        "google_name_matched": "金剛童子山"
+    },
+    {
+        "id": "Q31688734",
+        "name": "Taiko-yama",
+        "type": "山",
+        "coordinates": "Point(135.204444444 35.694722222)",
+        "image": "No Image",
+        "google_rating": 3.2,
+        "google_review_count": 9,
+        "google_name_matched": "太鼓山"
+    },
+    {
+        "id": "Q31687516",
+        "name": "Tendai-san",
+        "type": "山",
+        "coordinates": "Point(135.3683 35.4308)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q11339416",
+        "name": "砰砰山 (近畿)",
+        "type": "山",
+        "coordinates": "Point(135.62388889 34.93527778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.PonPon.jpg",
+        "google_rating": 4,
+        "google_review_count": 254,
+        "google_name_matched": "ポンポン山"
+    },
+    {
+        "id": "Q31706143",
+        "name": "大文字山",
+        "type": "山",
+        "coordinates": "Point(135.7299 35.04482)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20daimonji%20afternoon23.JPG",
+        "google_rating": 3.4,
+        "google_review_count": 14,
+        "google_name_matched": "大文字山 (左大文字山)"
+    },
+    {
+        "id": "Q135038313",
+        "name": "大吉山",
+        "type": "山",
+        "coordinates": "Point(135.814208 34.892009)",
+        "image": "No Image",
+        "google_rating": 4.2,
+        "google_review_count": 17,
+        "google_name_matched": "大吉山 (仏徳山)"
+    },
+    {
+        "id": "Q31696454",
+        "name": "Maki-yama",
+        "type": "山",
+        "coordinates": "Point(135.316666666 35.505833333)",
+        "image": "No Image",
+        "google_rating": 4.4,
+        "google_review_count": 20,
+        "google_name_matched": "槙山砲台跡"
+    },
+    {
+        "id": "Q10942951",
+        "name": "如意嶽",
+        "type": "山",
+        "coordinates": "Point(135.825939 35.016797)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Daimonji%20trail%20001.jpg",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q31695807",
+        "name": "三国岳",
+        "type": "山",
+        "coordinates": "Point(135.47018 35.45466)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q76966903",
+        "name": "沓掛山",
+        "type": "山",
+        "coordinates": "Point(135.655 34.997777777)",
+        "image": "No Image",
+        "google_rating": 4.3,
+        "google_review_count": 3,
+        "google_name_matched": "沓掛城跡"
+    },
+    {
+        "id": "Q31690506",
+        "name": "Sengoku-yama",
+        "type": "山",
+        "coordinates": "Point(135.3131 35.4363)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q11434768",
+        "name": "大岩山",
+        "type": "山",
+        "coordinates": "Point(135.793889 34.951667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt%20Ooiwa%20Kyoto%2CJAPAN.JPG",
+        "google_rating": 4,
+        "google_review_count": 3,
+        "google_name_matched": "大岩山"
+    },
+    {
+        "id": "Q97180315",
+        "name": "清水山",
+        "type": "山",
+        "coordinates": "Point(135.788581 34.993119)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kiyomizu-dera%20National%20Treasure%20World%20heritage%20Kyoto%20%E5%9B%BD%E5%AE%9D%E3%83%BB%E4%B8%96%E7%95%8C%E9%81%BA%E7%94%A3%20%E6%B8%85%E6%B0%B4%E5%AF%BA%20%E4%BA%AC%E9%83%BD185.jpg",
+        "google_rating": 3.3,
+        "google_review_count": 7,
+        "google_name_matched": "清水山"
+    },
+    {
+        "id": "Q96074702",
+        "name": "阿弥陀ヶ峰",
+        "type": "山",
+        "coordinates": "Point(135.785277777 34.988027777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Kiyumizu-dera%20Blick%20von%20der%20Haupthalle%205.jpg",
+        "google_rating": 4.3,
+        "google_review_count": 70,
+        "google_name_matched": "阿弥陀ヶ峯"
+    },
+    {
+        "id": "Q31707112",
+        "name": "磯砂山",
+        "type": "山",
+        "coordinates": "Point(135.037777777 35.548333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.isanago.jpg",
+        "google_rating": 3.9,
+        "google_review_count": 12,
+        "google_name_matched": "磯砂山"
+    },
+    {
+        "id": "Q11493835",
+        "name": "愛宕山 (舞鶴市西舞鶴)",
+        "type": "山",
+        "coordinates": "Point(135.315 35.44388889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.Atagosan%20Maizuru.jpg",
+        "google_rating": 4.3,
+        "google_review_count": 10,
+        "google_name_matched": "愛宕山"
+    },
+    {
+        "id": "Q31702703",
+        "name": "Hotaku-san",
+        "type": "山",
+        "coordinates": "Point(134.9267 35.5125)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q30936650",
+        "name": "朝日山",
+        "type": "山",
+        "coordinates": "Point(135.816166666 34.891111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Asahiyama%20uji01.jpg",
+        "google_rating": 4.3,
+        "google_review_count": 4,
+        "google_name_matched": "朝日山"
+    },
+    {
+        "id": "Q11512572",
+        "name": "明神ヶ岳",
+        "type": "山",
+        "coordinates": "Point(135.595 34.97)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%98%8E%E7%A5%9E%E3%83%B6%E5%B2%B3%E3%81%A8%E9%BB%92%E6%9F%84%E5%B1%B1%EF%BC%88%E5%B5%AF%E5%B3%A8%E9%87%8E%E7%B7%9A%E3%81%AE%E9%9B%BB%E8%BB%8A%E3%82%88%E3%82%8A%E9%81%A0%E6%9C%9B%EF%BC%89.png",
+        "google_rating": 3,
+        "google_review_count": 3,
+        "google_name_matched": "明神ヶ岳"
+    },
+    {
+        "id": "Q31706159",
+        "name": "大文字山",
+        "type": "山",
+        "coordinates": "Point(135.81161 35.01973)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nyoigatake%20long%20001.jpg",
+        "google_rating": 4.6,
+        "google_review_count": 298,
+        "google_name_matched": "大文字山"
+    },
+    {
+        "id": "Q17173517",
+        "name": "棧敷岳",
+        "type": "山",
+        "coordinates": "Point(135.717222 35.158778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.Sajikigatake.jpg",
+        "google_rating": 4.6,
+        "google_review_count": 5,
+        "google_name_matched": "桟敷ヶ岳"
+    },
+    {
+        "id": "Q31706364",
+        "name": "Chikaraishi-yama",
+        "type": "山",
+        "coordinates": "Point(135.13 35.7025)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q31511177",
+        "name": "Ōyaki Yama",
+        "type": "山",
+        "coordinates": "Point(135.8413 34.8159)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q107198286",
+        "name": "徳楽山",
+        "type": "山",
+        "coordinates": "Point(135.078194444 35.714305555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MtTokura.jpg",
+        "google_rating": 4,
+        "google_review_count": 1,
+        "google_name_matched": "徳良山"
+    },
+    {
+        "id": "Q31695295",
+        "name": "Mitoke-yama",
+        "type": "山",
+        "coordinates": "Point(135.366666666 35.25)",
+        "image": "No Image",
+        "google_rating": 4.5,
+        "google_review_count": 2,
+        "google_name_matched": "三峠山"
+    },
+    {
+        "id": "Q122452310",
+        "name": "小和田山",
+        "type": "山",
+        "coordinates": "Point(135.45775 35.001512)",
+        "image": "No Image",
+        "google_rating": 3,
+        "google_review_count": 5,
+        "google_name_matched": "小和田山"
+    },
+    {
+        "id": "Q21653502",
+        "name": "嶽山",
+        "type": "山",
+        "coordinates": "Point(135.73972222 34.75361111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dakeyama%20at%20Seika%20town01.JPG",
+        "google_rating": 5,
+        "google_review_count": 2,
+        "google_name_matched": "嶽山"
+    },
+    {
+        "id": "Q31511042",
+        "name": "霊仙ヶ岳",
+        "type": "山",
+        "coordinates": "Point(135.52031 34.9888)",
+        "image": "No Image",
+        "google_rating": 3.5,
+        "google_review_count": 2,
+        "google_name_matched": "霊仙ヶ岳"
+    },
+    {
+        "id": "Q31511077",
+        "name": "醍醐山",
+        "type": "山",
+        "coordinates": "Point(135.83859 34.94689)",
+        "image": "No Image",
+        "google_rating": 4,
+        "google_review_count": 11,
+        "google_name_matched": "醍醐山"
+    },
+    {
+        "id": "Q31705471",
+        "name": "江笠山",
+        "type": "山",
+        "coordinates": "Point(135.04997 35.45105)",
+        "image": "No Image",
+        "google_rating": 0,
+        "google_review_count": 0,
+        "google_name_matched": "江笠山"
+    },
+    {
+        "id": "Q31699129",
+        "name": "Kisen Yama",
+        "type": "山",
+        "coordinates": "Point(135.847222222 34.896111111)",
+        "image": "No Image",
+        "google_rating": 2.9,
+        "google_review_count": 7,
+        "google_name_matched": "喜撰山"
+    },
+    {
+        "id": "Q31692229",
+        "name": "Onigajō",
+        "type": "山",
+        "coordinates": "Point(135.1392 35.3408)",
+        "image": "No Image",
+        "google_rating": 5,
+        "google_review_count": 3,
+        "google_name_matched": "鬼ヶ城"
+    },
+    {
+        "id": "Q97178890",
+        "name": "華頂山",
+        "type": "山",
+        "coordinates": "Point(135.787522222 35.001683333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ootani%20sobyo01n4272.jpg",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q11519237",
+        "name": "新木津川橋",
+        "type": "橋",
+        "coordinates": "Point(135.758111 34.841833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shin-Kizugawabashi%20Bridge%20aerial%20photo%2020210609.jpg",
+        "google_rating": 0,
+        "google_review_count": 0,
+        "google_name_matched": "新木津川橋"
+    },
+    {
+        "id": "Q31508594",
+        "name": "黒柄岳",
+        "type": "山",
+        "coordinates": "Point(135.573333333 34.961111111)",
+        "image": "No Image",
+        "google_rating": 2.5,
+        "google_review_count": 4,
+        "google_name_matched": "黒柄岳"
+    },
+    {
+        "id": "Q134484977",
+        "name": "第一〇号橋",
+        "type": "橋",
+        "coordinates": "Point(135.802666666 35.000277777)",
+        "image": "No Image",
+        "google_rating": 3.5,
+        "google_review_count": 2,
+        "google_name_matched": "山ノ谷橋 （琵琶湖疎水第一〇号橋）"
+    },
+    {
+        "id": "Q15229013",
+        "name": "嵐山モンキーパークいわたやま",
+        "type": "動物園",
+        "coordinates": "Point(135.674681 35.008938)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iwatayama%20Monkey%20Park.jpg",
+        "google_rating": 4.5,
+        "google_review_count": 14030,
+        "google_name_matched": "嵐山モンキーパークいわたやま"
+    },
+    {
+        "id": "Q11594327",
+        "name": "福知山市動物園",
+        "type": "動物園",
+        "coordinates": "Point(135.13777778 35.31111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukuchiyama-zoo%20%E7%A6%8F%E7%9F%A5%E5%B1%B1%E5%8B%95%E7%89%A9%E5%9C%92%20DSCF3092.JPG",
+        "google_rating": 4,
+        "google_review_count": 715,
+        "google_name_matched": "福知山市動物園 (三段池RAVIHOUSE動物園)"
+    },
+    {
+        "id": "Q126701889",
+        "name": "博奕岬灯台",
+        "type": "燈塔",
+        "coordinates": "Point(135.341667 35.548333)",
+        "image": "No Image",
+        "google_rating": 3.4,
+        "google_review_count": 8,
+        "google_name_matched": "博奕岬灯台"
+    },
+    {
+        "id": "Q11352817",
+        "name": "一條戻橋",
+        "type": "橋",
+        "coordinates": "Point(135.751944 35.026278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Itijo-modoribashi.jpg",
+        "google_rating": 4.3,
+        "google_review_count": 139,
+        "google_name_matched": "一条戻橋"
+    },
+    {
+        "id": "Q11435181",
+        "name": "大川橋 (舞鶴市)",
+        "type": "橋",
+        "coordinates": "Point(135.26848889 35.45131389)",
+        "image": "No Image",
+        "google_rating": 0,
+        "google_review_count": 0,
+        "google_name_matched": "大川橋"
+    },
+    {
+        "id": "Q31511025",
+        "name": "Yuyaga Take",
+        "type": "山",
+        "coordinates": "Point(135.530277777 34.9375)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q3087620",
+        "name": "三條大橋",
+        "type": "橋",
+        "coordinates": "Point(135.77173611 35.00907222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sanjo-Ohashi%20Bridge%20from%20east.JPG",
+        "google_rating": 4.4,
+        "google_review_count": 444,
+        "google_name_matched": "三条大橋"
+    },
+    {
+        "id": "Q28682677",
+        "name": "伊根港カンジャガハナ灯台",
+        "type": "燈塔",
+        "coordinates": "Point(135.2875 35.665556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%BC%8A%E6%A0%B9%E6%B8%AF%E3%82%AB%E3%83%B3%E3%82%B8%E3%83%A3%E3%82%AC%E3%83%8F%E3%83%8A%E7%81%AF%E5%8F%B0.jpg",
+        "google_rating": 4.2,
+        "google_review_count": 65,
+        "google_name_matched": "カンジャガハナ灯台"
+    },
+    {
+        "id": "Q89659752",
+        "name": "間人港灯台",
+        "type": "燈塔",
+        "coordinates": "Point(135.091666666 35.74)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Taiza%20ko%20Lighthouse.jpg",
+        "google_rating": 4.6,
+        "google_review_count": 5,
+        "google_name_matched": "間人港灯台"
+    },
+    {
+        "id": "Q17177201",
+        "name": "依遅ヶ尾山",
+        "type": "山",
+        "coordinates": "Point(135.137389 35.73425)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt%20ichigao.jpg",
+        "google_rating": 4.5,
+        "google_review_count": 6,
+        "google_name_matched": "依遅ヶ尾山"
+    },
+    {
+        "id": "Q97311555",
+        "name": "周山城",
+        "type": "山城",
+        "coordinates": "Point(135.6225 35.156666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Syuzan-jo%2003.jpg",
+        "google_rating": 4,
+        "google_review_count": 1,
+        "google_name_matched": "周山城 大規模石垣"
+    },
+    {
+        "id": "Q31511008",
+        "name": "Sanjō San",
+        "type": "山",
+        "coordinates": "Point(135.8605 34.7869)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q11372482",
+        "name": "五条大桥",
+        "type": "橋",
+        "coordinates": "Point(135.767886111 34.995730555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%94%E6%9D%A1%E5%A4%A7%E6%A9%8B.jpg",
+        "google_rating": 0,
+        "google_review_count": 0,
+        "google_name_matched": "五条大橋"
+    },
+    {
+        "id": "Q6452176",
+        "name": "京都市動物園",
+        "type": "動物園",
+        "coordinates": "Point(135.786006 35.012853)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20City%20zoo%2C%20East%20Entrace.%20%E4%BA%AC%E9%83%BD%E5%B8%82%E5%8B%95%E7%89%A9%E5%9C%92%EF%BC%9A%E6%9D%B1%E5%87%BA%E5%85%A5%E5%8F%A3.JPG",
+        "google_rating": 4.2,
+        "google_review_count": 7097,
+        "google_name_matched": "京都市動物園"
+    },
+    {
+        "id": "Q6922225",
+        "name": "深山",
+        "type": "山",
+        "coordinates": "Point(135.377777777 35.041666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokoosan04.JPG",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q11420007",
+        "name": "四条大桥",
+        "type": "橋",
+        "coordinates": "Point(135.771533333 35.003844444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shij%C3%B4-%C3%94hashi%20Bridge.jpg",
+        "google_rating": 0,
+        "google_review_count": 0,
+        "google_name_matched": "四条大橋"
+    },
+    {
+        "id": "Q131950658",
+        "name": "出口王仁三郎の洞窟",
+        "type": "洞穴",
+        "coordinates": "Point(135.529722222 35.003888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Onisaburo%20Deguchi%20Cave%20-%20overview.jpg",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    },
+    {
+        "id": "Q11436814",
+        "name": "大江山",
+        "type": "山",
+        "coordinates": "Point(135.106944444 35.453333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.Oe.jpg",
+        "google_rating": 3.9,
+        "google_review_count": 55,
+        "google_name_matched": "大江山"
+    },
+    {
+        "id": "Q11450587",
+        "name": "安居橋",
+        "type": "橋",
+        "coordinates": "Point(135.702555555 34.882305555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%AE%89%E5%B1%85%E6%A9%8B%20Ango%20bridge%20over%20the%20Hojo%20river%2C%20Yawata%2C%20Kyoto%20prefecture.jpg",
+        "google_rating": 4,
+        "google_review_count": 40,
+        "google_name_matched": "安居橋"
+    },
+    {
+        "id": "Q11359541",
+        "name": "上津屋橋",
+        "type": "橋",
+        "coordinates": "Point(135.74790278 34.86816111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagarebashi-02.jpg",
+        "google_rating": 4.2,
+        "google_review_count": 435,
+        "google_name_matched": "上津屋橋（流れ橋）"
+    },
+    {
+        "id": "Q124454099",
+        "name": "賀茂大橋",
+        "type": "橋",
+        "coordinates": "Point(135.7715984 35.0289983)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rainbow%2C%20a%20faint%20Mt.%20Hiei%2C%20Imadegawa-dori%20bridge%20over%20the%20Kamogawa%20%2827641336363%29.jpg",
+        "google_rating": 0,
+        "google_review_count": 0,
+        "google_name_matched": "賀茂大橋"
+    },
+    {
+        "id": "Q11599951",
+        "name": "笠置山",
+        "type": "山",
+        "coordinates": "Point(135.9425 34.755)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Kasagi.JPG",
+        "google_rating": 4.7,
+        "google_review_count": 15,
+        "google_name_matched": "笠置山"
+    },
+    {
+        "id": "Q17230264",
+        "name": "堀川第一橋",
+        "type": "橋",
+        "coordinates": "Point(135.751825 35.025064)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%A0%80%E5%B7%9D%E7%AC%AC%E4%B8%80%E6%A9%8B01.jpg",
+        "google_rating": 3.7,
+        "google_review_count": 7,
+        "google_name_matched": "堀川第一橋"
+    },
+    {
+        "id": "Q55521729",
+        "name": "太鼓山",
+        "type": "山",
+        "coordinates": "Point(135.20436111 35.69525)",
+        "image": "No Image",
+        "google_rating": 3.2,
+        "google_review_count": 9,
+        "google_name_matched": "太鼓山"
+    },
+    {
+        "id": "Q11449467",
+        "name": "宇治川大橋",
+        "type": "橋",
+        "coordinates": "Point(135.7446 34.9175)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ujigawa-Ohashi%20Bridge%20aerial%20photo%2020200908.jpg",
+        "google_rating": 3.7,
+        "google_review_count": 43,
+        "google_name_matched": "宇治川大橋"
+    },
+    {
+        "id": "Q11526754",
+        "name": "東山霊山城",
+        "type": "山城",
+        "coordinates": "Point(135.785388888 34.998861111)",
+        "image": "No Image",
+        "google_rating": 2.5,
+        "google_review_count": 4,
+        "google_name_matched": "霊山城跡"
+    },
+    {
+        "id": "Q3390824",
+        "name": "大枝山",
+        "type": "山",
+        "coordinates": "Point(135.640555555 34.980277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oinosaka%20Tunnel.jpg",
+        "google_rating": 4.5,
+        "google_review_count": 4,
+        "google_name_matched": "大枝山"
+    },
+    {
+        "id": "Q28374560",
+        "name": "経ヶ岬灯台",
+        "type": "燈塔",
+        "coordinates": "Point(135.223361111 35.777138888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyougamisaki%2004.jpg",
+        "google_rating": 4.1,
+        "google_review_count": 813,
+        "google_name_matched": "経ケ岬灯台"
+    },
+    {
+        "id": "Q11566024",
+        "name": "澱川鐵橋",
+        "type": "橋",
+        "coordinates": "Point(135.765638888 34.925444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yodogawa%20Railway%20bridge%20of%20Kintetsu%20002%20KYOTO%20JPN.jpg",
+        "google_rating": 4.2,
+        "google_review_count": 50,
+        "google_name_matched": "澱川橋梁"
+    },
+    {
+        "id": "Q11431542",
+        "name": "夢コスモス園",
+        "type": "庭園",
+        "coordinates": "Point(135.55472 35.015446)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yume-Cosmos-Park%20Kameoka.JPG",
+        "google_rating": 4,
+        "google_review_count": 1013,
+        "google_name_matched": "京都丹波／亀岡『夢コスモス園』"
+    },
+    {
+        "id": "Q130471553",
+        "name": "Heian-kyo",
+        "type": "庭園",
+        "coordinates": "Point(135.69270805 35.028142453)",
+        "image": "No Image",
+        "google_rating": null,
+        "google_review_count": 0,
+        "google_name_matched": "NOT_FOUND"
+    }
+]

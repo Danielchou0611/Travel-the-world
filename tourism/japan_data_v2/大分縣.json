@@ -1,0 +1,1192 @@
+[
+    {
+        "id": "Q11370332",
+        "name": "九州自然動物公園非洲野生",
+        "type": "野生动物园",
+        "coordinates": "Point(131.41152778 33.354)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%B9%9D%E5%B7%9E%E8%87%AA%E7%84%B6%E5%8B%95%E7%89%A9%E5%85%AC%E5%9C%92%E3%82%A2%E3%83%95%E3%83%AA%E3%82%AB%E3%83%B3%E3%82%B5%E3%83%95%E3%82%A1%E3%83%AA1.jpg"
+    },
+    {
+        "id": "Q6921721",
+        "name": "九重山",
+        "type": "火山",
+        "coordinates": "Point(131.24083333 33.08222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kuju-san.JPG"
+    },
+    {
+        "id": "Q11507150",
+        "name": "日本丸館",
+        "type": "製薬博物館",
+        "coordinates": "Point(130.937431 33.327458)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nihongan%20Museum%20in%20Mamedamachi%20Area.jpg"
+    },
+    {
+        "id": "Q11346676",
+        "name": "樂天地",
+        "type": "動物園",
+        "coordinates": "Point(131.481333 33.275167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Beppu%20rakutenchi.jpg"
+    },
+    {
+        "id": "Q11432755",
+        "name": "大分市美術館",
+        "type": "美術館",
+        "coordinates": "Point(131.60202778 33.22341667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oita%20Municipal%20Museum.jpg"
+    },
+    {
+        "id": "Q8010033",
+        "name": "岡城",
+        "type": "山城池",
+        "coordinates": "Point(131.40806944 32.96921667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okajoshi.jpg"
+    },
+    {
+        "id": "Q84580248",
+        "name": "野上弥生子文学記念館",
+        "type": "文學館",
+        "coordinates": "Point(131.797138888 33.120416666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nogami%20Yaeko%20Literary%20Memorial%20Museum%20ac.jpg"
+    },
+    {
+        "id": "Q11621842",
+        "name": "蔦島",
+        "type": "荒島",
+        "coordinates": "Point(131.893694 33.237444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oita%20tsutashima.jpg"
+    },
+    {
+        "id": "Q11571767",
+        "name": "狹霧台",
+        "type": "风景点",
+        "coordinates": "Point(131.3825 33.26)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%8B%AD%E9%9C%A7%E5%8F%B0%E9%A7%90%E8%BB%8A%E5%A0%B4.jpg"
+    },
+    {
+        "id": "Q48747201",
+        "name": "九州自動車歴史館",
+        "type": "汽車博物館",
+        "coordinates": "Point(131.36546667 33.26694444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11370334",
+        "name": "九州芸術の杜",
+        "type": "美術館",
+        "coordinates": "Point(131.24925 33.14630556)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11669749",
+        "name": "高崎山",
+        "type": "火山",
+        "coordinates": "Point(131.524167 33.251944)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.Takasaki%2001.jpg"
+    },
+    {
+        "id": "Q705288",
+        "name": "由布岳",
+        "type": "複式火山",
+        "coordinates": "Point(131.390277777 33.282777777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yuhudake.jpg"
+    },
+    {
+        "id": "Q112131429",
+        "name": "硫黄山",
+        "type": "火山",
+        "coordinates": "Point(131.238888888 33.094444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%82%84%E3%81%BE%E3%81%AA%E3%81%BF%E3%83%8F%E3%82%A4%E3%82%A6%E3%82%A7%E3%82%A4%20%E9%95%B7%E8%80%85%E5%8E%9F%E3%82%88%E3%82%8A%E7%A1%AB%E9%BB%84%E5%B1%B1%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q11610835",
+        "name": "耶馬溪橋",
+        "type": "石拱桥",
+        "coordinates": "Point(131.170137 33.503111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yabakei%20bridge.JPG"
+    },
+    {
+        "id": "Q11432695",
+        "name": "大分市歴史資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(131.552914 33.195268)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oita%20city%20historical%20museum.jpg"
+    },
+    {
+        "id": "Q49621132",
+        "name": "先ノ瀬",
+        "type": "礁",
+        "coordinates": "Point(132.100555555 32.970555555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%B6%B4%E8%A6%8B%E7%A2%95IMGP0691.JPG"
+    },
+    {
+        "id": "Q6924219",
+        "name": "鶴見岳",
+        "type": "複式火山",
+        "coordinates": "Point(131.429722222 33.286666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Beppu%20Tsurumidake.jpg"
+    },
+    {
+        "id": "Q17219176",
+        "name": "天領日田資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(130.93138889 33.3155)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hita%20Tenryo%20Museum%2020161231.jpg"
+    },
+    {
+        "id": "Q3190121",
+        "name": "ジュピター",
+        "type": "木质过山车",
+        "coordinates": "Point(131.428075 33.261697)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jupiter%20roller%20coaster%20at%20Kijima%20Kogen.jpg"
+    },
+    {
+        "id": "Q123366317",
+        "name": "二階堂美術館",
+        "type": "美術館",
+        "coordinates": "Point(131.54248 33.367767)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q3196520",
+        "name": "城岛高原公园",
+        "type": "主題樂園",
+        "coordinates": "Point(131.426694 33.264722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jupiter%20roller%20coaster%20at%20Kijima%20Kogen.jpg"
+    },
+    {
+        "id": "Q11608597",
+        "name": "羅漢寺橋",
+        "type": "公路橋",
+        "coordinates": "Point(131.1692224 33.4916515)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%BE%85%E6%BC%A2%E5%AF%BA%E6%A9%8B%28%E4%B8%AD%E5%A4%AE%29%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q3077886",
+        "name": "英彥山",
+        "type": "聖山 (宗教)",
+        "coordinates": "Point(130.932222222 33.48)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hikosan%20from%20Sarakura-yama%2033021952%20org.v1370742087.jpg"
+    },
+    {
+        "id": "Q11486411",
+        "name": "廣瀨資料館",
+        "type": "人物紀念館",
+        "coordinates": "Point(130.93657778 33.32673889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Japanese%20old%20street%20of%20Oita%20hita%20mameda%20uo%20street%28%E5%A4%A7%E5%88%86%E7%9C%8C%E6%97%A5%E7%94%B0%E5%B8%82%E8%B1%86%E7%94%B0%E9%AD%9A%E7%94%BA%29.png"
+    },
+    {
+        "id": "Q11385048",
+        "name": "佐野植物公園",
+        "type": "植物園",
+        "coordinates": "Point(131.726499 33.19225)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q28688543",
+        "name": "日田市立博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(130.941861111 33.326055555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11370450",
+        "name": "九重\"夢\"大吊橋",
+        "type": "懸索橋",
+        "coordinates": "Point(131.226666666 33.173888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kokonoe%20Dream%20Big%20Suspension%20Bridge%20Oita%2CJAPAN.jpg"
+    },
+    {
+        "id": "Q127691503",
+        "name": "湯布院フローラルビレッジ",
+        "type": "主題公園",
+        "coordinates": "Point(131.365513888 33.267425)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yufuin%20Floral%20Village.jpg"
+    },
+    {
+        "id": "Q11353823",
+        "name": "萬年山",
+        "type": "平頂山",
+        "coordinates": "Point(131.133055555 33.228055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.Haneyama.jpg"
+    },
+    {
+        "id": "Q11432896",
+        "name": "大分縣立藝術會館",
+        "type": "多功能大厅",
+        "coordinates": "Point(131.634444444 33.238333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oita%20geikan1.jpg"
+    },
+    {
+        "id": "Q11630769",
+        "name": "角牟礼城",
+        "type": "山城池",
+        "coordinates": "Point(131.1545 33.309361111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tunomure%20Castle%201.jpg"
+    },
+    {
+        "id": "Q28519675",
+        "name": "わたくし美術館",
+        "type": "美術館",
+        "coordinates": "Point(131.368805555 33.275666666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11396725",
+        "name": "別府明礬橋",
+        "type": "公路橋",
+        "coordinates": "Point(131.45538889 33.31586111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Beppu%20Myoban%20bridge.jpg"
+    },
+    {
+        "id": "Q30930299",
+        "name": "久留島武彦記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(131.15855556 33.30330556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E8%A8%98%E5%BF%B5%E9%A4%A8%EF%BC%91.jpg"
+    },
+    {
+        "id": "Q28684993",
+        "name": "彦島",
+        "type": "荒島",
+        "coordinates": "Point(131.90994444 33.01163889)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q818646",
+        "name": "別府塔",
+        "type": "觀光塔",
+        "coordinates": "Point(131.50581111 33.28210889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Beppu%20Tower%2020230212.jpg"
+    },
+    {
+        "id": "Q11381590",
+        "name": "伽藍岳",
+        "type": "火山",
+        "coordinates": "Point(131.427777777 33.3175)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tsukahara-spa-volcano.jpg"
+    },
+    {
+        "id": "Q11432816",
+        "name": "大分縣立埋藏文化財中心",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(131.63475 33.23841667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oita%20geikan1.jpg"
+    },
+    {
+        "id": "Q11633690",
+        "name": "豊後二見ヶ浦",
+        "type": "小島",
+        "coordinates": "Point(131.927444444 33.043944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bungo%20Futamigaura.jpg"
+    },
+    {
+        "id": "Q137995481",
+        "name": "臼杵市歴史資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(131.793304 33.119473)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Usuki%20City%20History%20Museum%20ac.jpg"
+    },
+    {
+        "id": "Q11416777",
+        "name": "呉橋",
+        "type": "廊桥",
+        "coordinates": "Point(131.37325 33.52527778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kurehashi%20Bridge%20of%20Usa%20Shrine%20on%20Yorimogawa%20River.JPG"
+    },
+    {
+        "id": "Q97119086",
+        "name": "第二野上川橋梁",
+        "type": "鐵路橋",
+        "coordinates": "Point(131.211326 33.226231)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104784115",
+        "name": "大分県立先哲史料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(131.590126 33.239385)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oita%20Prefectural%20Library%20and%20Archives%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q11432891",
+        "name": "大分縣立美術館",
+        "type": "美術館",
+        "coordinates": "Point(131.60138889 33.23947222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oita%20OPAM%201.jpg"
+    },
+    {
+        "id": "Q137772957",
+        "name": "宇佐市平和資料館",
+        "type": "和平博物館",
+        "coordinates": "Point(131.334461 33.528522)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104784114",
+        "name": "大分市海部古墳資料館",
+        "type": "考古博物館",
+        "coordinates": "Point(131.739769 33.233558)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Amabe%20kohun%20siryokan%2001.jpg"
+    },
+    {
+        "id": "Q11679436",
+        "name": "龍頭橋",
+        "type": "步道天桥",
+        "coordinates": "Point(131.5053533 33.4407174)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%BE%8D%E9%A0%AD%E6%A9%8B%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q55525428",
+        "name": "別府アートミュージアム",
+        "type": "美術館",
+        "coordinates": "Point(131.50177778 33.27625)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11327370",
+        "name": "三麗鷗和諧樂園",
+        "type": "主題公園",
+        "coordinates": "Point(131.546569 33.401619)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Harmony%20Land%2001.jpg"
+    },
+    {
+        "id": "Q21652468",
+        "name": "イナコスの橋",
+        "type": "步道天桥",
+        "coordinates": "Point(131.47447222 33.29261111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Inachus%20bridge%20in%20Beppu.jpg"
+    },
+    {
+        "id": "Q11432633",
+        "name": "大分海洋宮殿水族館",
+        "type": "水族館",
+        "coordinates": "Point(131.53555556 33.25877778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Umitamago1.JPG"
+    },
+    {
+        "id": "Q11396700",
+        "name": "別府公園",
+        "type": "城市公園",
+        "coordinates": "Point(131.49119444 33.28169444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Beppu%20park%2002.jpg"
+    },
+    {
+        "id": "Q11418483",
+        "name": "唄げんか大橋",
+        "type": "公路橋",
+        "coordinates": "Point(131.609556 32.8023112)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Utagenka%20Bridge.jpg"
+    },
+    {
+        "id": "Q24874639",
+        "name": "別府市美術館",
+        "type": "美術館",
+        "coordinates": "Point(131.50133333 33.31286111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Beppu%20City%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q11285663",
+        "name": "アートプラザ",
+        "type": "美術館",
+        "coordinates": "Point(131.6095 33.24055556)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q8540007",
+        "name": "久住山",
+        "type": "山",
+        "coordinates": "Point(131.240833333 33.082222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Kuju.jpg"
+    },
+    {
+        "id": "Q11644539",
+        "name": "釋迦岳",
+        "type": "山",
+        "coordinates": "Point(130.8875 33.1881)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31700239",
+        "name": "Karuto Yama",
+        "type": "山",
+        "coordinates": "Point(131.284722222 33.270833333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31506375",
+        "name": "Takatsuka Yama",
+        "type": "山",
+        "coordinates": "Point(130.916666666 33.4275)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31702920",
+        "name": "Honjō-san",
+        "type": "山",
+        "coordinates": "Point(131.56 32.951111111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31506498",
+        "name": "Kanmuri Yama",
+        "type": "山",
+        "coordinates": "Point(131.425555555 33.154444444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31692299",
+        "name": "Ōmure San",
+        "type": "山",
+        "coordinates": "Point(131.469722222 33.451666666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31685719",
+        "name": "Yoshibu Yama",
+        "type": "山",
+        "coordinates": "Point(131.096666666 33.189166666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q17225923",
+        "name": "高尾山",
+        "type": "山",
+        "coordinates": "Point(131.655611111 33.208888888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11354408",
+        "name": "三俁山",
+        "type": "山",
+        "coordinates": "Point(131.246666666 33.103888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.Mimata%2009.jpg"
+    },
+    {
+        "id": "Q31688201",
+        "name": "Takara Yama",
+        "type": "山",
+        "coordinates": "Point(131.1798 33.2786)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31707490",
+        "name": "Aoya San",
+        "type": "山",
+        "coordinates": "Point(131.2052 33.2448)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31699744",
+        "name": "Kashiwa-zan",
+        "type": "山",
+        "coordinates": "Point(131.5754 32.8678)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11571156",
+        "name": "犬ヶ岳 (福岡県・大分県)",
+        "type": "山",
+        "coordinates": "Point(131.00175 33.51219444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.Inugatake.jpg"
+    },
+    {
+        "id": "Q31506481",
+        "name": "Myōken Zan",
+        "type": "山",
+        "coordinates": "Point(131.322 33.4822)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31686382",
+        "name": "Waita San",
+        "type": "山",
+        "coordinates": "Point(131.164166666 33.14)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11512961",
+        "name": "星生山",
+        "type": "山",
+        "coordinates": "Point(131.232667 33.09075)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.Hossho%2001.jpg"
+    },
+    {
+        "id": "Q31506408",
+        "name": "Daishōjin Yama",
+        "type": "山",
+        "coordinates": "Point(130.980555555 33.411666666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11674272",
+        "name": "鯛生金山",
+        "type": "山",
+        "coordinates": "Point(130.894 33.139)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31694835",
+        "name": "Motogoe-yama",
+        "type": "山",
+        "coordinates": "Point(131.9627 32.9046)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11520121",
+        "name": "本宮山",
+        "type": "山",
+        "coordinates": "Point(131.589944444 33.145361111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hongusan.JPG"
+    },
+    {
+        "id": "Q31506463",
+        "name": "鹿嵐山",
+        "type": "山",
+        "coordinates": "Point(131.25255 33.43468)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.Kanaraseyama.jpg"
+    },
+    {
+        "id": "Q31705024",
+        "name": "Gobanga Dake",
+        "type": "山",
+        "coordinates": "Point(131.805 33.051388888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11438618",
+        "name": "大船山",
+        "type": "山",
+        "coordinates": "Point(131.280555555 33.095)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%B1%B1%E9%BA%93%E3%81%8B%E3%82%89%E8%A6%8B%E3%81%9F%E5%A4%A7%E8%88%B9%E5%B1%B1.jpg"
+    },
+    {
+        "id": "Q31691148",
+        "name": "Samaga-dake",
+        "type": "山",
+        "coordinates": "Point(131.816666666 32.95)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11435282",
+        "name": "大平山",
+        "type": "山",
+        "coordinates": "Point(131.43916667 33.30388889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Beppu%20Kannawa%20Onsen02n4272.jpg"
+    },
+    {
+        "id": "Q11571932",
+        "name": "猪群山",
+        "type": "山",
+        "coordinates": "Point(131.516666666 33.606388888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11391857",
+        "name": "八面山",
+        "type": "山",
+        "coordinates": "Point(131.222 33.5007)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11362630",
+        "name": "兩子山",
+        "type": "山",
+        "coordinates": "Point(131.601667 33.583056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kunisaki%20Peninsula%20STS068-253-7.jpg"
+    },
+    {
+        "id": "Q31709068",
+        "name": "Haku San",
+        "type": "山",
+        "coordinates": "Point(131.760833333 33.1825)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31697096",
+        "name": "Kuroiwa Yama",
+        "type": "山",
+        "coordinates": "Point(131.207222222 33.106388888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31709032",
+        "name": "Saiei Zan",
+        "type": "山",
+        "coordinates": "Point(131.49 33.515555555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31395016",
+        "name": "矢筈岳",
+        "type": "山",
+        "coordinates": "Point(131.66658 33.72198)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31701745",
+        "name": "Itado-yama",
+        "type": "山",
+        "coordinates": "Point(131.629166666 32.786111111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11660707",
+        "name": "霊山",
+        "type": "山",
+        "coordinates": "Point(131.572777777 33.158388888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%9C%8A%E5%B1%B1.jpg"
+    },
+    {
+        "id": "Q24874505",
+        "name": "小倉岳",
+        "type": "山",
+        "coordinates": "Point(131.182777777 33.213611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Oguradake%20from%20platform%20of%20former%20Machida%20Station%20%28Oita%20Prefecture%29.JPG"
+    },
+    {
+        "id": "Q11352625",
+        "name": "一尺八寸山",
+        "type": "山",
+        "coordinates": "Point(131.040556 33.359722)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31689239",
+        "name": "Shōji-iwa",
+        "type": "山",
+        "coordinates": "Point(131.397222222 32.861666666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31697942",
+        "name": "Kuenohira Yama",
+        "type": "山",
+        "coordinates": "Point(131.2579 33.1822)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31709057",
+        "name": "Nakamatonohata Yama",
+        "type": "山",
+        "coordinates": "Point(131.0203 33.4613)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31686746",
+        "name": "Tsurigane Yama",
+        "type": "山",
+        "coordinates": "Point(131.0258 33.4335)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31506426",
+        "name": "Sanda Yama",
+        "type": "山",
+        "coordinates": "Point(130.976944444 33.479722222)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11387433",
+        "name": "傾山",
+        "type": "山",
+        "coordinates": "Point(131.475833333 32.838888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.Katamuki.jpg"
+    },
+    {
+        "id": "Q31685464",
+        "name": "Shutendōji Yama",
+        "type": "山",
+        "coordinates": "Point(130.910277777 33.096388888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31687095",
+        "name": "Tōmi Yama",
+        "type": "山",
+        "coordinates": "Point(131.888 33.2525)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q28424432",
+        "name": "天面山",
+        "type": "山",
+        "coordinates": "Point(131.618416666 33.107055555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q21653766",
+        "name": "飛岳",
+        "type": "山",
+        "coordinates": "Point(131.366333333 33.290111111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31518347",
+        "name": "一目山",
+        "type": "山",
+        "coordinates": "Point(131.17345 33.10454)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31687666",
+        "name": "立石山",
+        "type": "山",
+        "coordinates": "Point(131.35252 33.30935)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31687680",
+        "name": "Tategajō-san",
+        "type": "山",
+        "coordinates": "Point(131.726666666 32.968055555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31506321",
+        "name": "Mikazuki Yama",
+        "type": "山",
+        "coordinates": "Point(130.858888888 33.356388888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31685586",
+        "name": "緩木山",
+        "type": "山",
+        "coordinates": "Point(131.32783 32.85782)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11151792",
+        "name": "涌蓋山",
+        "type": "山",
+        "coordinates": "Point(131.164722222 33.139722222)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31697694",
+        "name": "Kumoga Dake",
+        "type": "山",
+        "coordinates": "Point(131.409722222 33.483055555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31703365",
+        "name": "彦岳",
+        "type": "山",
+        "coordinates": "Point(131.88955 33.04174)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31693270",
+        "name": "Ō Dake",
+        "type": "山",
+        "coordinates": "Point(131.165 33.451388888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31506338",
+        "name": "Dōtoko Yama",
+        "type": "山",
+        "coordinates": "Point(130.895277777 33.392777777)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31701231",
+        "name": "Jōgū San",
+        "type": "山",
+        "coordinates": "Point(130.9214 33.3914)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q28683043",
+        "name": "カルト山",
+        "type": "山",
+        "coordinates": "Point(131.288055555 33.2675)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31506445",
+        "name": "Koyaga Take",
+        "type": "山",
+        "coordinates": "Point(131.029444444 33.508888888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11381133",
+        "name": "伐株山",
+        "type": "山",
+        "coordinates": "Point(131.139444 33.262222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kirikabu%20mountain.JPG"
+    },
+    {
+        "id": "Q21654867",
+        "name": "三宅山",
+        "type": "山",
+        "coordinates": "Point(131.380555555 33.023055555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11364336",
+        "name": "中岳",
+        "type": "山",
+        "coordinates": "Point(131.24897222 33.08594444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nakadake%20%2CKuju.jpg"
+    },
+    {
+        "id": "Q31703697",
+        "name": "Heike Zan",
+        "type": "山",
+        "coordinates": "Point(131.253611111 33.275833333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31687197",
+        "name": "Toki San",
+        "type": "山",
+        "coordinates": "Point(131.357 33.1641)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31709078",
+        "name": "Amagoi Dake",
+        "type": "山",
+        "coordinates": "Point(131.403611111 33.226666666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11630687",
+        "name": "角埋山",
+        "type": "山",
+        "coordinates": "Point(131.1545 33.309722)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31506357",
+        "name": "Fukuno Yama",
+        "type": "山",
+        "coordinates": "Point(130.9425 33.426944444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11678141",
+        "name": "黒岳",
+        "type": "山",
+        "coordinates": "Point(131.292944444 33.105944444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31704042",
+        "name": "Hanamure Yama",
+        "type": "山",
+        "coordinates": "Point(131.322222222 33.142222222)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31506535",
+        "name": "Gozaga Dake",
+        "type": "山",
+        "coordinates": "Point(131.541388888 33.114166666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31701285",
+        "name": "Jōga Dake",
+        "type": "山",
+        "coordinates": "Point(131.373611111 33.228888888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31709049",
+        "name": "Hibaru San",
+        "type": "山",
+        "coordinates": "Point(131.088611111 33.491388888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31705306",
+        "name": "Fukuma Yama",
+        "type": "山",
+        "coordinates": "Point(131.315277777 33.288333333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31506392",
+        "name": "Kamizuka Yama",
+        "type": "山",
+        "coordinates": "Point(130.9381 33.4489)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q31694925",
+        "name": "Mominoki Yama",
+        "type": "山",
+        "coordinates": "Point(131.833888888 33.206666666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11678146",
+        "name": "黑島",
+        "type": "島嶼",
+        "coordinates": "Point(131.838055555 33.176666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kuroshima%20Island%20in%20Usuki%20City%202005-10-09.jpg"
+    },
+    {
+        "id": "Q97495956",
+        "name": "大分香りの博物館",
+        "type": "博物館",
+        "coordinates": "Point(131.488805555 33.312)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oita%20Fragrance%20Museum.jpg"
+    },
+    {
+        "id": "Q10875792",
+        "name": "中津城",
+        "type": "日式城堡",
+        "coordinates": "Point(131.186422 33.606633)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nakatu%20Castle%204.jpg"
+    },
+    {
+        "id": "Q123378080",
+        "name": "血の池地獄",
+        "type": "池塘",
+        "coordinates": "Point(131.47816 33.3272)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20Blood%20Pond%20Hell%20Hot%20Spring%201.jpg"
+    },
+    {
+        "id": "Q11542683",
+        "name": "横島",
+        "type": "島嶼",
+        "coordinates": "Point(132.0469 32.9169)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11465691",
+        "name": "屋形島",
+        "type": "島嶼",
+        "coordinates": "Point(131.916667 32.773056)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11434805",
+        "name": "大島",
+        "type": "島嶼",
+        "coordinates": "Point(132.07449 32.96451)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saiki%20ohshima.jpg"
+    },
+    {
+        "id": "Q11655691",
+        "name": "関埼灯台",
+        "type": "燈塔",
+        "coordinates": "Point(131.902222 33.266667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oita%20sekizaki%20lighthouse.jpg"
+    },
+    {
+        "id": "Q18700141",
+        "name": "鶴崎橋",
+        "type": "橋",
+        "coordinates": "Point(131.698611111 33.238972222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tsurusaki%20Bridge.jpg"
+    },
+    {
+        "id": "Q126733854",
+        "name": "琵琶埼灯台",
+        "type": "燈塔",
+        "coordinates": "Point(131.56098 33.68625)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q3329680",
+        "name": "大分縣立歷史博物館",
+        "type": "博物館",
+        "coordinates": "Point(131.365 33.5425)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oita%20Prefectural%20Museum%20of%20History%20in%20Usa%20city%2C%20Oita%20prefecture.JPG"
+    },
+    {
+        "id": "Q11559986",
+        "name": "深島",
+        "type": "島嶼",
+        "coordinates": "Point(131.926389 32.719444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q3695986",
+        "name": "祖母山",
+        "type": "山",
+        "coordinates": "Point(131.346944444 32.828055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.Sobo.jpg"
+    },
+    {
+        "id": "Q11447410",
+        "name": "姫島灯台",
+        "type": "燈塔",
+        "coordinates": "Point(131.7007002 33.7306586)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%A7%AB%E5%B3%B6%E7%81%AF%E5%8F%B0.jpg"
+    },
+    {
+        "id": "Q11596823",
+        "name": "稲積水中鍾乳洞",
+        "type": "洞穴",
+        "coordinates": "Point(131.542783 32.900092)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q124459383",
+        "name": "血の池地獄",
+        "type": "溫泉",
+        "coordinates": "Point(131.47815 33.3272)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chinoike%20Jigoku.jpg"
+    },
+    {
+        "id": "Q11641576",
+        "name": "道の駅鯛生金山",
+        "type": "道之驛",
+        "coordinates": "Point(130.882694444 33.129166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Taio%20mine%20shoppingCenter.jpg"
+    },
+    {
+        "id": "Q49645262",
+        "name": "官島",
+        "type": "島嶼",
+        "coordinates": "Point(131.925277777 33.021944444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q1142070",
+        "name": "府內城",
+        "type": "日式城堡",
+        "coordinates": "Point(131.611417 33.24013)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Funai%20Castle02n4272.jpg"
+    },
+    {
+        "id": "Q11385421",
+        "name": "佩楯山",
+        "type": "山",
+        "coordinates": "Point(131.645556 32.953056)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11548193",
+        "name": "水ノ子島",
+        "type": "島嶼",
+        "coordinates": "Point(132.17675 33.04378)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%B0%B4%E3%81%AE%E5%AD%90%E5%B3%B6%E7%81%AF%E5%8F%B0%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q11676022",
+        "name": "鶴御埼灯台",
+        "type": "燈塔",
+        "coordinates": "Point(132.082944 32.933111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tsurumisaki%2001.JPG"
+    },
+    {
+        "id": "Q11509923",
+        "name": "日田祇園山鉾會館",
+        "type": "山車会館",
+        "coordinates": "Point(130.93142778 33.31555556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hita%20Gion%20Museum.jpg"
+    },
+    {
+        "id": "Q11411554",
+        "name": "古祖母山",
+        "type": "山",
+        "coordinates": "Point(131.364444444 32.802777777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.Furusobosan.jpg"
+    },
+    {
+        "id": "Q11555929",
+        "name": "津久見島",
+        "type": "島嶼",
+        "coordinates": "Point(131.859722 33.141389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Usuki%20tsukumi%20jima.jpg"
+    },
+    {
+        "id": "Q34783964",
+        "name": "八島",
+        "type": "島嶼",
+        "coordinates": "Point(131.956388888 32.968333333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q49645535",
+        "name": "片白島",
+        "type": "島嶼",
+        "coordinates": "Point(131.955555555 32.994444444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q3785700",
+        "name": "姫島 (大分縣)",
+        "type": "島嶼",
+        "coordinates": "Point(131.666388888 33.728333333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11424752",
+        "name": "地黒島",
+        "type": "島嶼",
+        "coordinates": "Point(132.024167 32.888056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jiguro-shima%20and%20Okiguro-shima%20Islands%20Aerial%20photograph.2008.jpg"
+    },
+    {
+        "id": "Q11432478",
+        "name": "大入島",
+        "type": "島嶼",
+        "coordinates": "Point(131.924444 32.996389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saiki%20ohnyujima.jpg"
+    },
+    {
+        "id": "Q6884889",
+        "name": "水之子島燈塔",
+        "type": "燈塔",
+        "coordinates": "Point(132.17722222 33.04361111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saiki%20mizunokojima.jpg"
+    },
+    {
+        "id": "Q17191315",
+        "name": "網代島",
+        "type": "島嶼",
+        "coordinates": "Point(131.91972222 33.07055556)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q125272543",
+        "name": "天領日田洋酒博物館",
+        "type": "博物館",
+        "coordinates": "Point(130.932639 33.318833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tenryo%20Hita%20Whisky%20Museum%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q49661545",
+        "name": "中ノ島",
+        "type": "島嶼",
+        "coordinates": "Point(131.991666666 33.086666666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11552549",
+        "name": "沖無垢島",
+        "type": "島嶼",
+        "coordinates": "Point(131.986111111 33.1675)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11424450",
+        "name": "地無垢島",
+        "type": "島嶼",
+        "coordinates": "Point(131.9775 33.156666666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11385812",
+        "name": "保戶島",
+        "type": "島嶼",
+        "coordinates": "Point(132.01 33.106388888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hotojima%2020130814.JPG"
+    },
+    {
+        "id": "Q11669751",
+        "name": "高崎山自然动物园",
+        "type": "動物園",
+        "coordinates": "Point(131.524083 33.251972)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takasakiyama%20esayari%2001.jpg"
+    }
+]
