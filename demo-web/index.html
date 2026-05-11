@@ -22,12 +22,24 @@
     <div class="page-shell">
       <header class="hero">
         <div>
-          <p class="eyebrow">Japan Travel Dataset</p>
-          <h1>依地區瀏覽景點資料</h1>
+          <p class="eyebrow">Travel World Demo Web</p>
+          <h1>改成直接串 backend API 的景點推薦測試台</h1>
           <p class="hero-copy">
-            直接讀取目前的 JSON，快速檢視不同地區的景點、評分、推薦分數與交通資訊。
+            這版不再讀本地舊 JSON，改成直接呼叫 `metadata`、`pois`、`poi detail`、`user preferences`、
+            `recommendations`，方便完整測 API。
           </p>
+
+          <div class="api-toolbar">
+            <label class="field api-field">
+              <span>API Base</span>
+              <input id="apiBaseInput" type="text" placeholder="http://127.0.0.1:8000/api" />
+            </label>
+            <button id="applyApiBaseButton" class="secondary-button" type="button">套用 API Base</button>
+            <button id="refreshDataButton" class="primary-button" type="button">重新同步資料</button>
+          </div>
+          <p id="dataStatus" class="status-line">等待載入資料...</p>
         </div>
+
         <div class="hero-stats">
           <article>
             <span id="totalRegions">-</span>
@@ -35,11 +47,15 @@
           </article>
           <article>
             <span id="totalSpots">-</span>
-            <p>景點筆數</p>
+            <p>全部景點</p>
           </article>
           <article>
             <span id="visibleSpots">-</span>
-            <p>目前顯示</p>
+            <p>目前瀏覽</p>
+          </article>
+          <article>
+            <span id="recommendationCount">-</span>
+            <p>推薦結果</p>
           </article>
         </div>
       </header>
@@ -53,9 +69,78 @@
             </div>
             <div id="regionList" class="region-list"></div>
           </div>
+
+          <div class="panel preference-panel">
+            <div class="panel-heading">
+              <h2>偏好與推薦</h2>
+              <span>測試 user profile</span>
+            </div>
+
+            <div class="preference-grid">
+              <label class="field">
+                <span>User ID</span>
+                <input id="userIdInput" type="number" min="1" placeholder="例如：1" value="1" />
+              </label>
+
+              <label class="field">
+                <span>旅遊地區</span>
+                <select id="preferenceRegionSelect"></select>
+              </label>
+
+              <label class="field">
+                <span>景點類別</span>
+                <select id="preferenceCategorySelect"></select>
+              </label>
+
+              <label class="field">
+                <span>推薦數量</span>
+                <select id="topKSelect">
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="preference-subsection">
+              <div class="subsection-header">
+                <h3>興趣權重</h3>
+                <p>0.0 到 1.0</p>
+              </div>
+              <div id="interestControls" class="interest-grid"></div>
+            </div>
+
+            <div class="button-group">
+              <button id="loadPreferenceButton" class="secondary-button" type="button">讀取已存偏好</button>
+              <button id="savePreferenceButton" class="secondary-button" type="button">儲存偏好</button>
+              <button id="recommendDirectButton" class="primary-button" type="button">用表單偏好推薦</button>
+              <button id="recommendStoredButton" class="primary-button" type="button">用 user id 推薦</button>
+            </div>
+
+            <p id="preferenceStatus" class="status-line">尚未讀取或儲存偏好。</p>
+            <div id="savedProfilePreview" class="profile-preview">
+              <p class="empty-inline">尚未載入或儲存任何 profile。</p>
+            </div>
+          </div>
         </aside>
 
         <section class="content">
+          <div class="panel recommendation-panel" id="recommendationPanel" hidden>
+            <div class="controls-header">
+              <div>
+                <p class="eyebrow">Recommendation</p>
+                <h2>推薦查詢結果</h2>
+              </div>
+              <div class="view-toggle">
+                <button id="browseModeButton" class="toggle-button active" type="button">全部景點</button>
+                <button id="recommendationModeButton" class="toggle-button" type="button">推薦結果</button>
+              </div>
+            </div>
+            <div id="recommendationSummary" class="recommendation-summary"></div>
+            <p id="recommendationStatus" class="status-line">尚未送出推薦查詢。</p>
+          </div>
+
           <div class="panel route-panel">
             <div class="controls-header">
               <div>
@@ -94,9 +179,7 @@
 
             <div class="route-history-header">
               <h3>查詢紀錄</h3>
-              <button id="clearHistoryButton" class="secondary-button" type="button">
-                清空紀錄
-              </button>
+              <button id="clearHistoryButton" class="secondary-button" type="button">清空紀錄</button>
             </div>
             <div id="routeHistory" class="route-history"></div>
           </div>
@@ -116,22 +199,16 @@
           <div class="panel controls-panel">
             <div class="controls-header">
               <div>
-                <p class="eyebrow">Filters</p>
+                <p class="eyebrow">Browse API</p>
                 <h2 id="contentTitle">全部地區</h2>
               </div>
-              <p id="contentSubtitle" class="content-subtitle">
-                依 `xai_score` 排序
-              </p>
+              <p id="contentSubtitle" class="content-subtitle">依 API 排序與篩選景點</p>
             </div>
 
             <div class="controls-grid">
               <label class="field">
                 <span>搜尋景點名稱</span>
-                <input
-                  id="searchInput"
-                  type="search"
-                  placeholder="例如：東京鐵塔、神宮、博物館"
-                />
+                <input id="searchInput" type="search" placeholder="例如：東京鐵塔、神宮、博物館" />
               </label>
 
               <label class="field">
@@ -144,12 +221,18 @@
               <label class="field">
                 <span>排序方式</span>
                 <select id="sortSelect">
-                  <option value="xai_score">推薦分數</option>
-                  <option value="google_rating">Google 評分</option>
-                  <option value="review_count">評論數</option>
-                  <option value="distance_to_station_km">距離車站</option>
+                  <option value="-static_score">Static Score</option>
+                  <option value="-google_rating">Google 評分</option>
+                  <option value="-review_count">評論數</option>
+                  <option value="static_score">Static Score（低到高）</option>
+                  <option value="google_rating">Google 評分（低到高）</option>
+                  <option value="review_count">評論數（低到高）</option>
                 </select>
               </label>
+            </div>
+
+            <div class="button-row">
+              <button id="resetBrowseButton" class="secondary-button" type="button">重設瀏覽條件</button>
             </div>
           </div>
 
@@ -172,8 +255,8 @@
           <p class="spot-category"></p>
           <dl class="metrics">
             <div>
-              <dt>推薦分數</dt>
-              <dd class="metric-xai"></dd>
+              <dt class="metric-score-label">Static Score</dt>
+              <dd class="metric-score"></dd>
             </div>
             <div>
               <dt>Google 評分</dt>
@@ -204,6 +287,10 @@
                 <dd class="detail-interest-match"></dd>
               </div>
               <div>
+                <dt>最終分數</dt>
+                <dd class="detail-final-score"></dd>
+              </div>
+              <div>
                 <dt>評分標準化</dt>
                 <dd class="detail-rating-norm"></dd>
               </div>
@@ -220,7 +307,7 @@
                 <dd class="detail-coordinates"></dd>
               </div>
               <div>
-                <dt>來源 ID</dt>
+                <dt>POI ID</dt>
                 <dd class="detail-source-id"></dd>
               </div>
               <div>
@@ -239,6 +326,6 @@
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
       crossorigin=""
     ></script>
-    <script src="./app.js"></script>
+    <script src="./app.js" type="module"></script>
   </body>
 </html>

@@ -1,6 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.db.models import Q
 from rest_framework import generics, status
+from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -14,8 +15,14 @@ from .serializers import (
 from .services import compute_recommendation_score, normalize_preferences
 
 
+class PoiPagination(PageNumberPagination):
+    page_size_query_param = "page_size"
+    max_page_size = 5000
+
+
 class PoiListView(generics.ListAPIView):
     serializer_class = PointOfInterestSerializer
+    pagination_class = PoiPagination
 
     def get_queryset(self):
         queryset = PointOfInterest.objects.all()
