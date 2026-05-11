@@ -1,0 +1,7 @@
+
+/node_modules
+*.venv/
+/miscellaneous
+*.env
+*__pycache__/
+run_all.bat

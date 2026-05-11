@@ -1,0 +1,23 @@
+{
+  "timestamp": "20260511_194752",
+  "api_base": "http://127.0.0.1:8010",
+  "dataset_path": "C:\\NTU_YANBH\\WebAPP1\\project\\backend\\rag_prototype\\eval_seed_questions.jsonl",
+  "sample_count": 40,
+  "failure_count": 0,
+  "failures": [],
+  "basic_metrics": {
+    "sample_count": 40,
+    "empty_answer_count": 0,
+    "latency_ms_avg": 715.41,
+    "latency_ms_p95": 838.19,
+    "spot_precision_avg": 0.8021,
+    "spot_recall_avg": 0.7396,
+    "spot_f1_avg": 0.7635
+  },
+  "ragas": {
+    "status": "ok",
+    "metrics": {
+      "raw": "{'faithfulness': nan, 'answer_relevancy': nan, 'context_precision': nan, 'context_recall': nan}"
+    }
+  }
+}
