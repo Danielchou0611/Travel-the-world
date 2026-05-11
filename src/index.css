@@ -4,15 +4,29 @@
 
 :root {
   /* Minimalist Zen Palette */
-  --color-primary: #2C363F; /* Charcoal */
+  --color-primary: #2C363F;
+  /* Charcoal */
   --color-primary-dark: #1A1F24;
-  --color-accent: #BE3144; /* Traditional deep red */
-  --color-bg: #F7F7F5; /* Warm Washi paper color */
+  --color-accent: #C45A3F;
+  /* Warm burnt orange */
+  --color-bg: #FAF7F2;
+  /* Warmer cream to match image */
   --color-surface: #FFFFFF;
   --color-border: #E8E6E1;
   --color-text: #2C2C2A;
   --color-text-muted: #7E7C73;
+  --font-serif: 'Playfair Display', 'Noto Serif TC', serif;
 }
+
+.bg-hero {
+  background-color: var(--color-bg);
+  background-image: linear-gradient(to right, var(--color-bg) 50%, rgba(250, 247, 242, 0.8) 65%, transparent 90%),
+    url('./assets/background.png');
+  background-size: cover;
+  background-position: center right;
+  background-attachment: fixed;
+}
+
 
 * {
   box-sizing: border-box;
@@ -20,7 +34,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   font-family: 'Inter', 'Noto Sans TC', sans-serif;
@@ -37,19 +52,31 @@ body {
 }
 
 /* Scrollbar */
-::-webkit-scrollbar { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 ::-webkit-scrollbar-thumb {
   background: #D4D2CD;
   border-radius: 3px;
 }
-::-webkit-scrollbar-thumb:hover { background: #B3B1AC; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B3B1AC;
+}
 
 /* Flat minimalist card */
 .glass-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
   border-radius: 12px;
 }
 
@@ -70,7 +97,8 @@ body {
 }
 
 .btn-primary:hover:not(:disabled) {
-  background: #A82435; /* Slightly darker red */
+  background: #A9482F;
+  /* Slightly darker burnt orange */
 }
 
 .btn-primary:active:not(:disabled) {
@@ -101,8 +129,14 @@ body {
   box-shadow: 0 0 0 1px #A3A09A;
 }
 
-.glass-input::placeholder { color: #B3B1AC; }
-.glass-input option { background: #FFFFFF; color: var(--color-text); }
+.glass-input::placeholder {
+  color: #B3B1AC;
+}
+
+.glass-input option {
+  background: #FFFFFF;
+  color: var(--color-text);
+}
 
 /* Custom range slider */
 .style-slider {
@@ -125,7 +159,7 @@ body {
   cursor: grab;
   border: 2px solid white;
   transition: all 0.2s;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .style-slider::-webkit-slider-thumb:hover {
@@ -159,8 +193,10 @@ body {
 
 /* Stat card */
 .stat-card {
-  background: #FFFFFF;
-  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 8px;
   padding: 16px 20px;
 }
@@ -220,7 +256,8 @@ body {
 
 .interest-item.selected {
   border-color: var(--color-accent);
-  background: #FAF5F5; /* Very subtle pink/red tint */
+  background: #FDF6F4;
+  /* Very subtle orange tint */
 }
 
 /* Label */
@@ -270,7 +307,7 @@ body {
   padding: 16px 24px 20px;
   background: rgba(255, 255, 255, 0.98);
   border-top: 1px solid var(--color-border);
-  box-shadow: 0 -4px 30px rgba(0,0,0,0.03);
+  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.03);
 }
 
 /* Map stub */
@@ -281,8 +318,15 @@ body {
 }
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-up {
@@ -290,17 +334,37 @@ body {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
+
 .spinning {
   animation: spin 1s linear infinite;
 }
 
 @keyframes wiggle {
-  0%   { transform: rotate(0deg); }
-  20%  { transform: rotate(-6deg); }
-  40%  { transform: rotate(6deg); }
-  60%  { transform: rotate(-4deg); }
-  80%  { transform: rotate(4deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(-6deg);
+  }
+
+  40% {
+    transform: rotate(6deg);
+  }
+
+  60% {
+    transform: rotate(-4deg);
+  }
+
+  80% {
+    transform: rotate(4deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }

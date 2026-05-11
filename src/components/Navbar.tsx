@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import occupathLogo from '../assets/occupath_logo_v2.png';
 
 interface NavbarProps {
   showBack?: boolean;
@@ -16,7 +17,7 @@ export default function Navbar({ showBack, backLabel = '返回', backPath = '/',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        padding: '16px 48px',
+        padding: '12px 48px',
         borderBottom: '1px solid var(--color-border)',
         background: 'var(--color-surface)',
         position: 'sticky',
@@ -27,21 +28,9 @@ export default function Navbar({ showBack, backLabel = '返回', backPath = '/',
     >
       <div
         onClick={() => navigate('/')}
-        style={{ display: 'flex', alignItems: 'center', gap: 12, cursor: 'pointer' }}
+        style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}
       >
-        <div style={{
-          width: 32, height: 32,
-          background: 'var(--color-accent)',
-          borderRadius: 6,
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-        }}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
-          </svg>
-        </div>
-        <div style={{ fontSize: 18, fontWeight: 700, color: 'var(--color-text)', letterSpacing: '-0.02em' }}>
-          JapanAI
-        </div>
+        <img src={occupathLogo} alt="Occupath Logo" style={{ height: 50, width: 'auto', objectFit: 'contain', margin: '-4px 0' }} />
       </div>
 
       <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>

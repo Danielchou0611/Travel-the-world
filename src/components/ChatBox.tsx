@@ -76,7 +76,7 @@ export default function ChatBox({ trip, setTrip }: ChatBoxProps) {
 
     try {
       // Note: Using hardcoded destination if not present. Should get from preferences ideally
-      // For Japan AI, we assume "京都" or from trip.preferences if we had it
+      // For Occupath, we assume "京都" or from trip.preferences if we had it
       const destination = '京都'; // default or extract from somewhere
 
       const updatedTrip = await modifyTrip(destination, trip, userText);
