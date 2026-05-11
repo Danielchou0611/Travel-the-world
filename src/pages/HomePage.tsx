@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import type { TripPreferences, Interest } from '../types';
 import { generateTrip } from '../services/api';
 import occupathLogo from '../assets/occupath_logo_v2.png';
+import occupathIcon from '../assets/occupath_o.png';
 
 // --- Icons ---
 const IconFood = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" /><path d="M7 2v20" /><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" /></svg>;
@@ -118,67 +119,90 @@ export default function HomePage() {
       <div style={{ display: 'flex', flex: 1, gap: 48, padding: viewState === 'form' ? '24px 48px 48px' : '48px', maxWidth: 1200, margin: '0 auto', width: '100%', alignItems: 'flex-start' }}>
 
         {/* ─── Left: Form ─── */}
-        <div style={{ flex: 1, maxWidth: 560, display: 'flex', flexDirection: 'column', gap: 24, marginTop: viewState === 'form' ? 0 : 80 }}>
+        <div style={{ flex: 1, maxWidth: viewState === 'form' ? 560 : 760, display: 'flex', flexDirection: 'column', gap: 24, marginTop: viewState === 'form' ? 0 : 60, transition: 'max-width 0.3s' }}>
 
           {viewState !== 'form' && (
-            <div>
-              <div className="animate-fade-up">
-                <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 44, fontWeight: 700, lineHeight: 1.2, color: 'var(--color-primary-dark)', margin: 0, letterSpacing: '-0.02em' }}>
-                  Occupy the moment. <br />
-                  Discover Japan.
-                </h1>
-                <p style={{ fontFamily: 'var(--font-serif)', fontSize: 18, color: 'var(--color-text-muted)', marginTop: 16, lineHeight: 1.6, maxWidth: 460 }}>
-                  專屬您的日本之旅。<br />
-                  Discover Japan beyond the ordinary. Curated experiences that connect you with culture, nature, and timeless beauty.
-                </p>
-              </div>
+            <div className="animate-fade-up" style={{ display: 'flex', gap: 32, alignItems: 'flex-start', marginLeft: -80 }}>
 
-              {viewState === 'initial' && (
-                <button
-                  onClick={() => setViewState('personality')}
-                  className="animate-fade-up"
-                  style={{
-                    marginTop: 40,
-                    background: '#C45A3F',
-                    color: 'white',
-                    border: 'none',
-                    borderRadius: 6,
-                    padding: '14px 28px',
-                    fontSize: 16,
-                    fontWeight: 500,
-                    cursor: 'pointer',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: 12,
-                    fontFamily: 'inherit',
-                    width: 'fit-content'
-                  }}
-                >
-                  Start Your Journey
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-                </button>
-              )}
+              {/* Left Column: Icon */}
+              <img src={occupathIcon} alt="Occupath Icon" style={{ width: 180, height: 180, objectFit: 'contain', flexShrink: 0 }} />
 
-              {viewState === 'personality' && (
-                <div className="animate-fade-up" style={{ marginTop: 40, display: 'flex', gap: 16 }}>
-                  <button
-                    onClick={() => setViewState('form')}
-                    className="glass-card"
-                    style={{ flex: 1, padding: '32px 24px', textAlign: 'center', cursor: 'pointer', transition: 'all 0.2s', border: 'none', boxShadow: '0 8px 24px rgba(0,0,0,0.06)' }}
-                  >
-                    <div style={{ fontSize: 28, fontWeight: 700, color: 'var(--color-primary-dark)', fontFamily: 'var(--font-serif)' }}>J 人</div>
-                    <div style={{ fontSize: 14, color: 'var(--color-text-muted)', marginTop: 12 }}>精打細算，完美計畫</div>
-                  </button>
-                  <button
-                    onClick={() => setViewState('form')}
-                    className="glass-card"
-                    style={{ flex: 1, padding: '32px 24px', textAlign: 'center', cursor: 'pointer', transition: 'all 0.2s', border: 'none', boxShadow: '0 8px 24px rgba(0,0,0,0.06)' }}
-                  >
-                    <div style={{ fontSize: 28, fontWeight: 700, color: 'var(--color-primary-dark)', fontFamily: 'var(--font-serif)' }}>P 人</div>
-                    <div style={{ fontSize: 14, color: 'var(--color-text-muted)', marginTop: 12 }}>隨心所欲，說走就走</div>
-                  </button>
+              {/* Right Column: Text and Actions */}
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+
+                {/* Logo alignment block: exactly matches the height of the icon (180px) */}
+                <div style={{ height: 180, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', paddingBottom: 8 }}>
+                  <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 72, fontWeight: 400, color: 'var(--color-primary-dark)', margin: 0, lineHeight: 1, letterSpacing: '-0.02em', paddingTop: 32 }}>
+                    Occupath
+                  </h1>
+
+                  <div>
+                    <div style={{ color: 'var(--color-accent)', fontSize: 13, fontWeight: 500, letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: 12 }}>
+                      Journeys with purpose
+                    </div>
+                    <div style={{ width: 40, height: 2, background: 'var(--color-accent)' }} />
+                  </div>
                 </div>
-              )}
+
+                <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 36, fontWeight: 400, lineHeight: 1.3, color: 'var(--color-primary-dark)', margin: 0, marginTop: 20, letterSpacing: '-0.01em' }}>
+                  Occupy the moment.<br />
+                  Discover Japan.
+                </h2>
+
+                <p style={{ fontFamily: 'var(--font-serif)', fontSize: 17, fontWeight: 300, color: 'var(--color-text-muted)', marginTop: 16, lineHeight: 1.6, maxWidth: 460 }}>
+                  專屬您的日本之旅。
+                </p>
+
+                {viewState === 'initial' && (
+                  <button
+                    onClick={() => setViewState('personality')}
+                    className="animate-fade-up"
+                    style={{
+                      marginTop: 40,
+                      background: 'var(--color-accent)',
+                      color: 'white',
+                      border: 'none',
+                      borderRadius: 6,
+                      padding: '14px 28px',
+                      fontSize: 16,
+                      fontWeight: 500,
+                      cursor: 'pointer',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 12,
+                      fontFamily: 'inherit',
+                      width: 'fit-content',
+                      transition: 'background 0.2s'
+                    }}
+                    onMouseEnter={e => e.currentTarget.style.background = '#A9482F'}
+                    onMouseLeave={e => e.currentTarget.style.background = 'var(--color-accent)'}
+                  >
+                    Start Your Journey
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                  </button>
+                )}
+
+                {viewState === 'personality' && (
+                  <div className="animate-fade-up" style={{ marginTop: 40, display: 'flex', gap: 16 }}>
+                    <button
+                      onClick={() => setViewState('form')}
+                      className="glass-card"
+                      style={{ flex: 1, padding: '32px 24px', textAlign: 'center', cursor: 'pointer', transition: 'all 0.2s', border: 'none', boxShadow: '0 8px 24px rgba(0,0,0,0.06)' }}
+                    >
+                      <div style={{ fontSize: 28, fontWeight: 700, color: 'var(--color-primary-dark)', fontFamily: 'var(--font-serif)' }}>J 人</div>
+                      <div style={{ fontSize: 14, color: 'var(--color-text-muted)', marginTop: 12, whiteSpace: 'nowrap' }}>精打細算，完美計畫</div>
+                    </button>
+                    <button
+                      onClick={() => setViewState('form')}
+                      className="glass-card"
+                      style={{ flex: 1, padding: '32px 24px', textAlign: 'center', cursor: 'pointer', transition: 'all 0.2s', border: 'none', boxShadow: '0 8px 24px rgba(0,0,0,0.06)' }}
+                    >
+                      <div style={{ fontSize: 28, fontWeight: 700, color: 'var(--color-primary-dark)', fontFamily: 'var(--font-serif)' }}>P 人</div>
+                      <div style={{ fontSize: 14, color: 'var(--color-text-muted)', marginTop: 12, whiteSpace: 'nowrap' }}>隨心所欲，說走就走</div>
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
           )}
 
