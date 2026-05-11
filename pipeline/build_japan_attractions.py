@@ -15,7 +15,6 @@ from typing import Any
 SOURCE_NAME = "japan_with_rating"
 DEFAULT_GOOGLE_RATING = 4.0
 DEFAULT_REVIEW_COUNT = 100
-DEFAULT_INTEREST_MATCH = 0.70
 DEFAULT_LOOKUP_PATH = Path(__file__).resolve().parent / "reference" / "source_id_metadata_lookup.csv"
 DEFAULT_LOOKUP_REPORT_PATH = Path("reference/source_id_metadata_lookup.csv")
 
@@ -97,11 +96,10 @@ SCORED_FIELDS = [
     "interest_tags",
     "station_anchor",
     "distance_to_station_km",
-    "interest_match",
     "rating_norm",
     "review_norm",
     "station_distance_efficiency",
-    "xai_score",
+    "static_score",
     "image_url",
     "lat",
     "lng",
@@ -310,11 +308,10 @@ def build_scored_rows(rows: list[dict[str, str]]) -> tuple[list[dict[str, str]],
         rating_norm = google_rating / 5
         review_norm = math.log1p(review_count) / max_log_reviews
         station_distance_efficiency = 1 / (1 + distance_to_station / 5)
-        xai_score = (
-            0.4 * rating_norm
-            + 0.3 * review_norm
-            + 0.2 * DEFAULT_INTEREST_MATCH
-            + 0.1 * station_distance_efficiency
+        static_score = (
+            0.5 * rating_norm
+            + 0.35 * review_norm
+            + 0.15 * station_distance_efficiency
         )
 
         scored_rows.append(
@@ -328,11 +325,10 @@ def build_scored_rows(rows: list[dict[str, str]]) -> tuple[list[dict[str, str]],
                 "interest_tags": row["category"],
                 "station_anchor": anchor_name,
                 "distance_to_station_km": f"{distance_to_station:.1f}",
-                "interest_match": f"{DEFAULT_INTEREST_MATCH:.2f}",
                 "rating_norm": f"{rating_norm:.4f}",
                 "review_norm": f"{review_norm:.4f}",
                 "station_distance_efficiency": f"{station_distance_efficiency:.4f}",
-                "xai_score": f"{xai_score:.4f}",
+                "static_score": f"{static_score:.4f}",
                 "image_url": row["image_url"],
                 "lat": f"{lat:.7f}",
                 "lng": f"{lng:.7f}",
@@ -341,7 +337,7 @@ def build_scored_rows(rows: list[dict[str, str]]) -> tuple[list[dict[str, str]],
             }
         )
 
-    scored_rows.sort(key=lambda item: float(item["xai_score"]), reverse=True)
+    scored_rows.sort(key=lambda item: float(item["static_score"]), reverse=True)
     return scored_rows, {"scored_rows": len(scored_rows), "skipped_rows": len(rows) - len(scored_rows)}
 
 
@@ -395,7 +391,6 @@ def main() -> None:
         "normalized_rows": len(normalized_rows),
         "default_google_rating": DEFAULT_GOOGLE_RATING,
         "default_review_count": DEFAULT_REVIEW_COUNT,
-        "default_interest_match": DEFAULT_INTEREST_MATCH,
         "normalized_output": str(normalized_output),
         "scored_output": str(scored_output),
     }

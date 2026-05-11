@@ -183,6 +183,7 @@ python3 run_pipeline.py input.json ./output --output-prefix my_data
 
 - 如果你的最終目標是 `japan_with_rating_interest.json`，通常不需要跑 `csv_to_json.py`
 - `csv_to_json.py` 只在你另外需要 `scored.json` 給其他 consumer 時才需要
+- `interest_match` 不在 pipeline 階段產出，應由推薦 API 根據 user preference 動態計算
 
 ### simplify_interest_json.py 輸出欄位
 
@@ -195,11 +196,10 @@ python3 run_pipeline.py input.json ./output --output-prefix my_data
 - `review_count`: Google 評論數
 - `station_anchor`: 對應車站
 - `distance_to_station_km`: 與車站距離
-- `interest_match`: 原始 interest match 分數
 - `rating_norm`: 評分正規化分數
 - `review_norm`: 評論數正規化分數
 - `station_distance_efficiency`: 車站距離效率分數
-- `xai_score`: 綜合排序分數
+- `static_score`: 靜態排序分數（尚未包含 user-specific interest match）
 - `image_url`: 圖片網址
 - `lat`: 緯度
 - `lng`: 經度

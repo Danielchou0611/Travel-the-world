@@ -15,7 +15,6 @@
   "normalized_rows": 4003,
   "default_google_rating": 4.0,
   "default_review_count": 100,
-  "default_interest_match": 0.7,
   "normalized_output": "output/japan_with_rating_normalized.csv",
   "scored_output": "output/japan_with_rating_scored.csv"
 }
