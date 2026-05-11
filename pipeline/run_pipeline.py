@@ -30,6 +30,16 @@ def parse_args() -> argparse.Namespace:
         help="Optional lookup CSV for backfilling prefecture/category/coordinates by source_id.",
     )
     parser.add_argument(
+        "--prefecture-json-dir",
+        default="",
+        help="Optional directory of per-prefecture JSON files used to backfill prefecture metadata.",
+    )
+    parser.add_argument(
+        "--source-prefecture",
+        default="",
+        help="Optional prefecture label to apply to all rows when the input JSON is a single-prefecture file.",
+    )
+    parser.add_argument(
         "--output-prefix",
         default="",
         help="Optional filename prefix. Defaults to the input filename stem.",
@@ -67,6 +77,10 @@ def main() -> None:
     ]
     if args.prefecture_lookup:
         build_command.extend(["--prefecture-lookup", args.prefecture_lookup])
+    if args.prefecture_json_dir:
+        build_command.extend(["--prefecture-json-dir", args.prefecture_json_dir])
+    if args.source_prefecture:
+        build_command.extend(["--source-prefecture", args.source_prefecture])
     if args.output_prefix:
         build_command.extend(["--output-prefix", args.output_prefix])
 

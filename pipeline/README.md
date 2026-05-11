@@ -53,6 +53,8 @@ python3 build_japan_attractions.py ../raw-data/japan_with_rating.json ./output
 - `input_json`: 原始 JSON 路徑
 - `output_dir`: 輸出資料夾
 - `--prefecture-lookup`: 自訂 lookup CSV；預設使用 `pipline/reference/source_id_metadata_lookup.csv`
+- `--prefecture-json-dir`: 指定各縣市 JSON 資料夾，會用檔名當 prefecture 回填地區
+- `--source-prefecture`: 當輸入是一個單一縣市 JSON 時，直接指定整份資料的 prefecture
 - `--output-prefix`: 自訂輸出檔名前綴
 
 支援的原始 JSON 欄位：
@@ -70,6 +72,12 @@ python3 build_japan_attractions.py ../raw-data/japan_with_rating.json ./output
 - `image` 或 `image_url`
 
 如果 JSON 沒有 `prefecture`、`category`、`lat`、`lng`，會優先用 `source_id` 去 lookup CSV 回填。
+
+補充：
+
+- 如果輸入檔旁邊存在 `japan_data_v2_with_rating/`，腳本會自動把那個資料夾當成各縣市 lookup 來源
+- 如果輸入本身就是 `japan_data_v2_with_rating/東京都.json` 這種單一縣市檔案，腳本會自動把檔名當成 prefecture
+- 各縣市檔之間若有重複 `source_id`，會保留第一個找到的 prefecture，並在 pipeline report 記錄 `prefecture_json_conflicts`
 
 ## 2. csv_to_json.py
 
@@ -176,6 +184,8 @@ python3 run_pipeline.py input.json ./output --output-prefix my_data
 可選參數：
 
 - `--prefecture-lookup /path/to/lookup.csv`
+- `--prefecture-json-dir /path/to/japan_data_v2_with_rating`
+- `--source-prefecture 東京都`
 - `--output-prefix my_data`
 - `--indent 2`
 

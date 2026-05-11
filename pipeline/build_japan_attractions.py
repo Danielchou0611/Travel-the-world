@@ -17,6 +17,7 @@ DEFAULT_GOOGLE_RATING = 4.0
 DEFAULT_REVIEW_COUNT = 100
 DEFAULT_LOOKUP_PATH = Path(__file__).resolve().parent / "reference" / "source_id_metadata_lookup.csv"
 DEFAULT_LOOKUP_REPORT_PATH = Path("reference/source_id_metadata_lookup.csv")
+DEFAULT_PREFECTURE_JSON_DIRNAME = "japan_data_v2_with_rating"
 
 COORDINATE_PATTERN = re.compile(r"Point\((?P<lng>-?\d+(?:\.\d+)?) (?P<lat>-?\d+(?:\.\d+)?)\)")
 
@@ -120,6 +121,19 @@ def parse_args() -> argparse.Namespace:
         help="Optional lookup CSV for backfilling prefecture/category/coordinates by source_id.",
     )
     parser.add_argument(
+        "--prefecture-json-dir",
+        default="",
+        help=(
+            "Optional directory of per-prefecture JSON files used to backfill prefecture/category/"
+            "coordinates for missing source_id metadata."
+        ),
+    )
+    parser.add_argument(
+        "--source-prefecture",
+        default="",
+        help="Optional prefecture label to apply to all rows when the input JSON is a single-prefecture file.",
+    )
+    parser.add_argument(
         "--output-prefix",
         default="",
         help="Optional filename prefix. Defaults to the input filename stem.",
@@ -173,6 +187,89 @@ def load_prefecture_lookup(path: Path) -> dict[str, dict[str, str]]:
     return lookup
 
 
+def discover_prefecture_json_dir(input_json: Path, configured_dir: str) -> Path | None:
+    if configured_dir:
+        path = Path(configured_dir)
+        return path if path.exists() else None
+
+    candidate = input_json.parent / DEFAULT_PREFECTURE_JSON_DIRNAME
+    if candidate.exists():
+        return candidate
+    return None
+
+
+def infer_source_prefecture(input_json: Path, configured_prefecture: str) -> str:
+    if configured_prefecture:
+        return configured_prefecture.strip()
+    if input_json.parent.name == DEFAULT_PREFECTURE_JSON_DIRNAME and input_json.stem in STATION_ANCHORS:
+        return input_json.stem
+    return ""
+
+
+def merge_lookup_rows(
+    base_row: dict[str, str] | None,
+    incoming_row: dict[str, str],
+) -> dict[str, str]:
+    if base_row is None:
+        return incoming_row
+
+    merged = dict(base_row)
+    for key, value in incoming_row.items():
+        if not merged.get(key) and value:
+            merged[key] = value
+    return merged
+
+
+def load_prefecture_json_lookup(path: Path) -> tuple[dict[str, dict[str, str]], int]:
+    if not path.exists():
+        return {}, 0
+
+    lookup: dict[str, dict[str, str]] = {}
+    conflicting_ids: set[str] = set()
+
+    for prefecture_file in sorted(path.glob("*.json")):
+        prefecture = prefecture_file.stem.strip()
+        raw_data = json.loads(prefecture_file.read_text(encoding="utf-8"))
+        if not isinstance(raw_data, list):
+            continue
+
+        for record in raw_data:
+            if not isinstance(record, dict):
+                continue
+
+            source_id = coalesce(record, ["id", "source_id"])
+            if not source_id:
+                continue
+
+            lat, lng = parse_coordinates(record)
+            incoming_row = {
+                "source_id": source_id,
+                "name": coalesce(record, ["name"]),
+                "prefecture": prefecture,
+                "category": coalesce(record, ["category", "type"]),
+                "lat": lat,
+                "lng": lng,
+                "image_url": clean_image_url(coalesce(record, ["image_url", "image"])),
+            }
+
+            existing_row = lookup.get(source_id)
+            if existing_row and existing_row.get("prefecture") not in ("", prefecture):
+                conflicting_ids.add(source_id)
+            lookup[source_id] = merge_lookup_rows(existing_row, incoming_row)
+
+    return lookup, len(conflicting_ids)
+
+
+def combine_prefecture_lookups(
+    csv_lookup: dict[str, dict[str, str]],
+    json_lookup: dict[str, dict[str, str]],
+) -> dict[str, dict[str, str]]:
+    combined = {source_id: dict(row) for source_id, row in csv_lookup.items()}
+    for source_id, row in json_lookup.items():
+        combined[source_id] = merge_lookup_rows(combined.get(source_id), row)
+    return combined
+
+
 def metadata_score(row: dict[str, str]) -> tuple[int, int, int, int]:
     return (
         1 if row["prefecture"] else 0,
@@ -185,6 +282,7 @@ def metadata_score(row: dict[str, str]) -> tuple[int, int, int, int]:
 def load_normalized_rows(
     input_json: Path,
     prefecture_lookup: dict[str, dict[str, str]],
+    source_prefecture: str,
 ) -> tuple[list[dict[str, str]], dict[str, int]]:
     raw_data = json.loads(input_json.read_text(encoding="utf-8"))
     if not isinstance(raw_data, list):
@@ -216,7 +314,10 @@ def load_normalized_rows(
             lat = lat or lookup_row.get("lat", "")
             lng = lng or lookup_row.get("lng", "")
 
-        prefecture = coalesce(record, ["prefecture", "region", "address_prefecture", "address_region"])
+        prefecture = (
+            coalesce(record, ["prefecture", "region", "address_prefecture", "address_region"])
+            or source_prefecture
+        )
         if not prefecture and lookup_row:
             prefecture = lookup_row.get("prefecture", "")
             if prefecture:
@@ -370,9 +471,19 @@ def main() -> None:
     input_json = Path(args.input_json)
     output_dir = Path(args.output_dir)
     prefix = output_prefix(args)
-    prefecture_lookup = load_prefecture_lookup(Path(args.prefecture_lookup))
+    csv_lookup = load_prefecture_lookup(Path(args.prefecture_lookup))
+    prefecture_json_dir = discover_prefecture_json_dir(input_json, args.prefecture_json_dir)
+    prefecture_json_lookup, prefecture_json_conflicts = load_prefecture_json_lookup(
+        prefecture_json_dir
+    ) if prefecture_json_dir else ({}, 0)
+    prefecture_lookup = combine_prefecture_lookups(csv_lookup, prefecture_json_lookup)
+    source_prefecture = infer_source_prefecture(input_json, args.source_prefecture)
 
-    normalized_rows, normalize_stats = load_normalized_rows(input_json, prefecture_lookup)
+    normalized_rows, normalize_stats = load_normalized_rows(
+        input_json,
+        prefecture_lookup,
+        source_prefecture,
+    )
     scored_rows, score_stats = build_scored_rows(normalized_rows)
 
     normalized_output = output_dir / f"{prefix}_normalized.csv"
@@ -387,7 +498,12 @@ def main() -> None:
         **score_stats,
         "input_json": str(input_json),
         "prefecture_lookup": report_lookup_path(args),
-        "prefecture_lookup_rows": len(prefecture_lookup),
+        "prefecture_lookup_rows": len(csv_lookup),
+        "prefecture_json_dir": str(prefecture_json_dir) if prefecture_json_dir else "",
+        "prefecture_json_lookup_rows": len(prefecture_json_lookup),
+        "prefecture_json_conflicts": prefecture_json_conflicts,
+        "combined_prefecture_lookup_rows": len(prefecture_lookup),
+        "source_prefecture": source_prefecture,
         "normalized_rows": len(normalized_rows),
         "default_google_rating": DEFAULT_GOOGLE_RATING,
         "default_review_count": DEFAULT_REVIEW_COUNT,
