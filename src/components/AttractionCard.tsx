@@ -196,7 +196,7 @@ export default function AttractionCard({
         <div style={{ flex: 1, minWidth: 0, padding: '24px', display: 'flex', flexDirection: 'column', gap: 16 }}>
           <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
             <div>
-              <h3 style={{ fontSize: 18, fontWeight: 600, color: 'var(--color-text)', margin: 0, marginBottom: 4 }}>{attraction.name}</h3>
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 18, fontWeight: 600, color: 'var(--color-text)', margin: 0, marginBottom: 4 }}>{attraction.name}</h3>
               <div style={{ color: 'var(--color-text-muted)', fontSize: 13 }}>{attraction.nameEn}</div>
             </div>
             <span style={{ fontSize: 11, padding: '3px 8px', borderRadius: 4, border: '1px solid var(--color-border)', color: 'var(--color-text-muted)', background: '#FAF9F7', flexShrink: 0, marginLeft: 12 }}>

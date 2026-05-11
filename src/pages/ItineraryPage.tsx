@@ -383,7 +383,7 @@ export default function ItineraryPage() {
           <>
             <div style={{ marginBottom: 32, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
               <div>
-                <h1 style={{ fontSize: 24, fontWeight: 700, color: 'var(--color-text)', margin: 0 }}>
+                <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 700, color: 'var(--color-text)', margin: 0 }}>
                   {trip?.preferences?.days ?? 0} 天旅遊行程
                 </h1>
                 <div style={{ fontSize: 13, color: 'var(--color-text-muted)', marginTop: 6, display: 'flex', alignItems: 'center', gap: 8 }}>
@@ -413,11 +413,11 @@ export default function ItineraryPage() {
             { label: '日均行程', value: `${trip.summary.avgPerDay} 處`, icon: <IconChart /> },
           ].map(stat => (
             <div key={stat.label} className="stat-card animate-fade-up">
-              <div style={{ fontSize: 12, color: 'var(--color-text-muted)', marginBottom: 8, display: 'flex', alignItems: 'center', gap: 8 }}>
+              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 13, fontWeight: 500, color: 'var(--color-text-muted)', marginBottom: 8, display: 'flex', alignItems: 'center', gap: 8 }}>
                 {stat.icon}
                 {stat.label}
               </div>
-              <div style={{ fontSize: 20, fontWeight: 600, color: 'var(--color-text)' }}>{stat.value}</div>
+              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 22, fontWeight: 600, color: 'var(--color-text)' }}>{stat.value}</div>
             </div>
           ))}
         </div>
@@ -491,7 +491,7 @@ export default function ItineraryPage() {
           {/* Right: Attractions */}
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 16 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8 }}>
-              <h2 style={{ fontSize: 16, fontWeight: 600, color: 'var(--color-text)', margin: 0 }}>
+              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 16, fontWeight: 600, color: 'var(--color-text)', margin: 0 }}>
                 Day {currentDay?.day} 第 {currentDay?.day} 天行程
               </h2>
               <span style={{ fontSize: 12, padding: '2px 10px', borderRadius: 4, background: '#F0EEE9', color: 'var(--color-text-muted)' }}>

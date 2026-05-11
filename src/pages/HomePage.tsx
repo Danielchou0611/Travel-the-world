@@ -221,7 +221,7 @@ export default function HomePage() {
                   marginBottom: 16,
                   fontSize: 14,
                   fontWeight: 600,
-                  fontFamily: 'inherit',
+                  fontFamily: 'var(--font-serif)',
                   padding: '4px 8px 4px 0',
                   transition: 'opacity 0.2s',
                 }}
