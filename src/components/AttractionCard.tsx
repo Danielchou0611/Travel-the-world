@@ -171,12 +171,23 @@ export default function AttractionCard({
       <div style={{ display: 'flex' }}>
 
         {/* ── Image side ──────────────────────────────────────── */}
-        <div style={{ width: 200, flexShrink: 0, position: 'relative', overflow: 'hidden', borderRight: '1px solid var(--color-border)' }}>
-          <img
-            src={attraction.image}
-            alt={attraction.name}
-            style={{ width: '100%', height: '100%', minHeight: 200, objectFit: 'cover', display: 'block' }}
-          />
+        <div style={{ width: 200, flexShrink: 0, position: 'relative', overflow: 'hidden', borderRight: '1px solid var(--color-border)', backgroundColor: 'var(--color-surface)', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 200 }}>
+          {attraction.image ? (
+            <img
+              src={attraction.image}
+              alt={attraction.name}
+              style={{ width: '100%', height: '100%', minHeight: 200, objectFit: 'cover', display: 'block', position: 'absolute', inset: 0 }}
+            />
+          ) : (
+            <div style={{ color: 'var(--color-text-muted)', fontSize: 14, fontFamily: 'var(--font-serif)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.5">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+              目前無圖片
+            </div>
+          )}
           {/* Sequence number (hide in edit mode) */}
           {!isEditing && (
             <div style={{

@@ -555,20 +555,24 @@ export async function generateTrip(preferences: TripPreferences): Promise<Trip> 
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
       throw new Error(
-        errorData.message || 
+        errorData.message ||
         `API Error: ${response.status} ${response.statusText}`
       );
     }
 
     const backendResponse = await response.json() as any;
-    
+
+    // 印出後端回傳的原始資料，讓開發者確認
+    console.log("=== Backend Generate Response ===");
+    console.log(JSON.stringify(backendResponse, null, 2));
+
     // 🚨 後端返回格式可能是 {status, data} 或直接是 Trip 物件
     // 先檢查是否需要解包
     let tripData = backendResponse;
     if (backendResponse?.status === "success" && backendResponse?.data) {
       tripData = backendResponse.data;
     }
-    
+
     // Ensure we have a complete trip object with all required fields
     // The backend might return a partial object with just an ID
     const trip: Trip = {
@@ -584,14 +588,14 @@ export async function generateTrip(preferences: TripPreferences): Promise<Trip> 
       days: tripData?.days || MOCK_TRIP.days,
       generatedAt: tripData?.generatedAt || new Date().toISOString(),
     };
-    
+
     return trip;
   } catch (error) {
     console.error('❌ API call failed:', error);
-    
+
     // If API fails, fallback to MOCK_TRIP for frontend testing
     console.warn('Using MOCK_TRIP for testing');
-    
+
     // Return a mock trip with user preferences
     return {
       ...MOCK_TRIP,
@@ -644,17 +648,17 @@ export async function modifyTrip(destination: string, current_itinerary: Trip, u
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
       throw new Error(
-        errorData.message || 
+        errorData.message ||
         `API Error: ${response.status} ${response.statusText}`
       );
     }
 
     const backendResponse = await response.json() as any;
-    
+
     // 印出後端回傳的原始資料，讓開發者確認
     console.log("=== Backend Modify Response ===");
     console.log(JSON.stringify(backendResponse, null, 2));
-    
+
     let modifiedData = backendResponse;
     if (backendResponse?.status === "success" && backendResponse?.data) {
       modifiedData = backendResponse.data;
@@ -667,10 +671,10 @@ export async function modifyTrip(destination: string, current_itinerary: Trip, u
       days: modifiedData.days || modifiedData.itinerary || modifiedData, // Handle different possible structures
       generatedAt: new Date().toISOString(),
     };
-    
+
     console.log("=== Frontend Updated Trip ===");
     console.log(updatedTrip);
-    
+
     return updatedTrip;
   } catch (error) {
     console.error('❌ Modify API call failed:', error);
