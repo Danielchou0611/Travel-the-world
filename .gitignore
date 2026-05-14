@@ -12,3 +12,9 @@ backend/rag_prototype/.venv/Lib/site-packages/_cffi_backend.cp310-win_amd64.pyd
 backend/rag_prototype/sample_article.txt
 miscellaneous/
 run_all.bat
+# .bak files
+*.bak
+# OS
+.DS_Store
+# logs
+*.log

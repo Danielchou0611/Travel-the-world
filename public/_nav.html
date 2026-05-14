@@ -1,0 +1,40 @@
+<!--
+  Occupath Navigation Bar
+  在每頁開頭插入,記得改 active class
+-->
+<nav class="fixed top-0 inset-x-0 z-[100] backdrop-blur-md bg-washi/80 border-b border-prussian/10">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
+    <a href="brand_preview.html" class="font-display text-2xl tracking-widest text-prussian-deep hover:text-vermillion transition-colors">
+      Occupath
+    </a>
+    <div class="hidden md:flex items-center gap-10 text-sm font-mincho">
+      <a href="brand_preview.html" class="nav-link" data-page="brand">品牌</a>
+      <a href="features.html" class="nav-link" data-page="features">功能</a>
+      <a href="research.html" class="nav-link" data-page="research">市場</a>
+      <a href="business.html" class="nav-link" data-page="business">商業</a>
+      <a href="#" class="nav-link nav-cta" data-page="app">進入產品 →</a>
+    </div>
+    <!-- Mobile menu icon (簡單版) -->
+    <button class="md:hidden text-prussian-deep">☰</button>
+  </div>
+</nav>
+
+<style>
+  .nav-link {
+    color: rgba(15, 41, 66, 0.65);
+    transition: color 0.5s, border-color 0.5s;
+    padding-bottom: 4px;
+    border-bottom: 1px solid transparent;
+  }
+  .nav-link:hover {
+    color: #0F2942;
+  }
+  .nav-link.active {
+    color: #C8472B;
+    border-bottom-color: #C8472B;
+  }
+  .nav-cta {
+    color: #C8472B !important;
+    font-weight: 500;
+  }
+</style>

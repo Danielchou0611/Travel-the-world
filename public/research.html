@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Occupath — 市場 · 敬請期待</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'prussian': '#1B3A5C', 'prussian-deep': '#0F2942', 'prussian-night': '#091A2B',
+            'vermillion': '#C8472B', 'ochre': '#D4A574',
+            'washi': '#F5EFE3', 'washi-warm': '#EAE0CC',
+            'sumi': '#1A1A1A', 'mist': '#7A7A7A',
+          },
+          fontFamily: {
+            display: ['Cormorant Garamond', 'Shippori Mincho', 'serif'],
+            mincho: ['Shippori Mincho', 'Noto Serif TC', 'serif'],
+            body: ['Inter', 'Noto Serif TC', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Inter', 'Noto Serif TC', sans-serif; overflow-x: hidden; }
+    .font-display { font-family: 'Cormorant Garamond', 'Shippori Mincho', serif; font-weight: 300; }
+    .font-mincho { font-family: 'Shippori Mincho', 'Noto Serif TC', serif; }
+    html { scroll-behavior: smooth; }
+
+    .washi-texture::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      opacity: 0.07;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='5'/%3E%3CfeDiffuseLighting in='paper' lighting-color='%23fff' surfaceScale='1.5'%3E%3CfeDistantLight azimuth='45' elevation='60'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paper)'/%3E%3C/svg%3E");
+      mix-blend-mode: multiply;
+    }
+
+    .seal-large {
+      display: inline-block; width: 90px; height: 90px;
+      background: #C8472B; color: #F5EFE3;
+      font-family: 'Shippori Mincho', serif;
+      font-weight: 800; font-size: 42px; line-height: 90px;
+      text-align: center; transform: rotate(-4deg);
+      box-shadow: 3px 3px 0 rgba(0,0,0,0.15);
+    }
+
+    .vertical-rl { writing-mode: vertical-rl; letter-spacing: 0.4em; }
+
+    @keyframes inkBleed {
+      0% { opacity: 0; filter: blur(20px); transform: translateY(20px); }
+      60% { opacity: 1; filter: blur(2px); }
+      100% { opacity: 1; filter: blur(0); transform: translateY(0); }
+    }
+    .ink-bleed { animation: inkBleed 2s ease-out forwards; opacity: 0; }
+    .ink-1 { animation-delay: 0.4s; }
+    .ink-2 { animation-delay: 1.2s; }
+    .ink-3 { animation-delay: 2s; }
+
+    /* Subtle data-grid background */
+    @keyframes drift {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(-10px, -8px); }
+    }
+    .grid-drift { animation: drift 20s ease-in-out infinite; }
+
+    .nav-link { color: rgba(15, 41, 66, 0.65); transition: color 0.5s, border-color 0.5s; padding-bottom: 4px; border-bottom: 1px solid transparent; }
+    .nav-link:hover { color: #0F2942; }
+    .nav-link.active { color: #C8472B; border-bottom-color: #C8472B; }
+    .nav-cta { color: #C8472B !important; font-weight: 500; }
+  </style>
+</head>
+<body class="bg-washi-warm text-sumi antialiased min-h-screen flex flex-col">
+
+  <!-- 頂部導航 -->
+  <nav class="fixed top-0 inset-x-0 z-[100] backdrop-blur-md bg-washi/80 border-b border-prussian/10">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
+      <a href="brand_preview.html" class="font-display text-2xl tracking-widest text-prussian-deep hover:text-vermillion transition-colors">Occupath</a>
+      <div class="hidden md:flex items-center gap-10 text-sm font-mincho">
+        <a href="brand_preview.html" class="nav-link">品牌</a>
+        <a href="features.html" class="nav-link">功能</a>
+        <a href="research.html" class="nav-link active">市場</a>
+        <a href="business.html" class="nav-link">商業</a>
+        <a href="#" class="nav-link nav-cta">進入產品 →</a>
+      </div>
+      <button class="md:hidden text-prussian-deep">☰</button>
+    </div>
+  </nav>
+
+  <!-- Coming Soon Section -->
+  <section class="flex-1 flex items-center justify-center px-6 pt-24 pb-12 relative washi-texture overflow-hidden">
+
+    <!-- 數據網格裝飾 (背景,微妙) -->
+    <svg class="absolute inset-0 w-full h-full opacity-10 pointer-events-none grid-drift" viewBox="0 0 800 600">
+      <defs>
+        <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+          <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1B3A5C" stroke-width="0.5"/>
+        </pattern>
+      </defs>
+      <rect width="800" height="600" fill="url(#grid)"/>
+    </svg>
+
+    <!-- 縱書 -->
+    <div class="hidden md:block absolute top-32 right-12 text-vermillion/40 vertical-rl font-mincho text-sm tracking-[0.5em] ink-bleed ink-1">
+      第三章 ・ 市場
+    </div>
+
+    <div class="text-center max-w-3xl relative z-10">
+      <p class="ink-bleed ink-1 text-xs tracking-[0.5em] uppercase text-vermillion mb-8 font-display">
+        — Chapter Ⅲ · Research —
+      </p>
+
+      <h1 class="ink-bleed ink-2 font-display text-7xl md:text-9xl text-prussian-deep mb-4 leading-none">
+        市場
+      </h1>
+      <p class="ink-bleed ink-2 font-display italic text-3xl md:text-5xl text-prussian/80 mb-16 tracking-wide">
+        Research
+      </p>
+
+      <div class="ink-bleed ink-3 mb-12">
+        <p class="font-mincho text-xl md:text-2xl text-sumi/80 leading-loose mb-6">
+          此處,我們將攤開 ——
+        </p>
+        <p class="font-mincho text-lg md:text-xl text-mist leading-loose mb-2">
+          30+ 競品的紋路,
+        </p>
+        <p class="font-mincho text-lg md:text-xl text-mist leading-loose mb-2">
+          1141 篇 Reddit 痛點的回聲,
+        </p>
+        <p class="font-mincho text-lg md:text-xl text-mist leading-loose mb-6">
+          以及 15 場 Persona 試煉的數據。
+        </p>
+        <p class="font-mincho text-lg md:text-xl text-mist italic leading-loose">
+          我們做了功課,讓你可以信任。
+        </p>
+      </div>
+
+      
+
+      <p class="ink-bleed ink-3 font-display italic text-mist text-lg tracking-widest mb-12">
+        敬請期待 · Coming Soon
+      </p>
+
+      <a href="brand_preview.html" class="ink-bleed ink-3 inline-flex items-center gap-3 text-vermillion hover:text-prussian-deep transition-all duration-700 group font-mincho">
+        <span class="w-12 h-px bg-vermillion group-hover:w-20 transition-all duration-500"></span>
+        <span class="text-sm tracking-widest">回到品牌故事</span>
+      </a>
+    </div>
+  </section>
+
+</body>
+</html>

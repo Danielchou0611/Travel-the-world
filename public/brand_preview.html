@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Occupath — Brand Preview · 浮世繪 v3 (動態版)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@300;400;500;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'prussian': '#1B3A5C',
+            'prussian-deep': '#0F2942',
+            'prussian-night': '#091A2B',
+            'vermillion': '#BC4630',        /* v2: Hara 朱印紅,微調 */
+            'vermillion-soft': '#D96A4F',
+            'ochre': '#D4A574',
+            'ochre-deep': '#A87E50',
+            'washi': '#F4EEE2',             /* v2: Aesop Rice Cake 感,微調 */
+            'washi-warm': '#EAE0CC',
+            'sumi': '#1A1A1A',
+            'sumi-warm': '#544D4B',         /* v2 新增: Aesop Mine Shaft 親屬,body text */
+            'mist': '#7A7A7A',
+            'kohaku': '#92BED2',            /* v2 新增: Cereal muted teal,冷中介 */
+          },
+          fontFamily: {
+            display: ['Cormorant Garamond', 'Shippori Mincho', 'serif'],
+            mincho: ['Shippori Mincho', 'Noto Serif TC', 'serif'],
+            body: ['Inter', 'Noto Serif TC', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', 'Noto Serif TC', sans-serif;
+      overflow-x: hidden;
+    }
+    .font-display { font-family: 'Cormorant Garamond', 'Shippori Mincho', serif; font-weight: 300; }
+    .font-mincho { font-family: 'Shippori Mincho', 'Noto Serif TC', serif; }
+    html { scroll-behavior: smooth; }
+
+    /* ========== 和紙紋理 ========== */
+    .washi-texture::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.08;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='5' result='noise'/%3E%3CfeDiffuseLighting in='noise' lighting-color='%23fff' surfaceScale='1.5'%3E%3CfeDistantLight azimuth='45' elevation='60'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paper)'/%3E%3C/svg%3E");
+      mix-blend-mode: multiply;
+      z-index: 1;
+    }
+
+    /* ========== 印章 ========== */
+    .seal-large {
+      display: inline-block;
+      width: 80px; height: 80px;
+      background: #BC4630;
+      color: #F5EFE3;
+      font-family: 'Shippori Mincho', serif;
+      font-weight: 800;
+      font-size: 36px;
+      line-height: 80px;
+      text-align: center;
+      transform: rotate(-4deg);
+      box-shadow: 3px 3px 0 rgba(0,0,0,0.15);
+    }
+    .seal-small {
+      display: inline-block;
+      width: 50px; height: 50px;
+      background: #BC4630;
+      color: #F5EFE3;
+      font-family: 'Shippori Mincho', serif;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 50px;
+      text-align: center;
+      transform: rotate(-2deg);
+    }
+
+    /* ========== 縱書 ========== */
+    .vertical-rl {
+      writing-mode: vertical-rl;
+      letter-spacing: 0.4em;
+    }
+
+    /* ============================================== */
+    /* 動態背景動畫                                    */
+    /* ============================================== */
+
+    /* 海浪 — 多層 parallax (使用平移 -50% 的循環) */
+    @keyframes waveMove {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .wave-back  { animation: waveMove 28s linear infinite; }
+    .wave-mid   { animation: waveMove 18s linear infinite; }
+    .wave-front { animation: waveMove 11s linear infinite; }
+
+    /* 富士山呼吸 (極微妙) */
+    @keyframes fujiBreath {
+      0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.7; }
+      50%      { transform: translateX(-50%) scale(1.015); opacity: 0.78; }
+    }
+    .fuji-breath { animation: fujiBreath 9s ease-in-out infinite; }
+
+    /* 雲朵飄移 */
+    @keyframes cloudDrift {
+      0%   { transform: translateX(-200px); }
+      100% { transform: translateX(calc(100vw + 200px)); }
+    }
+    .cloud-1 { animation: cloudDrift 50s linear infinite; }
+    .cloud-2 { animation: cloudDrift 70s linear infinite; animation-delay: -25s; }
+    .cloud-3 { animation: cloudDrift 90s linear infinite; animation-delay: -60s; }
+
+    /* 飄落雪粒 */
+    @keyframes snowFall {
+      0%   { transform: translateY(-10vh) translateX(0); opacity: 0; }
+      10%  { opacity: 0.5; }
+      50%  { transform: translateY(50vh) translateX(20px); }
+      90%  { opacity: 0.5; }
+      100% { transform: translateY(105vh) translateX(-20px); opacity: 0; }
+    }
+    .snow {
+      position: absolute;
+      width: 2px; height: 2px;
+      background: rgba(245, 239, 227, 0.6);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    /* 文字浮現 */
+    @keyframes inkBleed {
+      0% { opacity: 0; filter: blur(20px); transform: translateY(20px); }
+      60% { opacity: 1; filter: blur(2px); }
+      100% { opacity: 1; filter: blur(0); transform: translateY(0); }
+    }
+    .ink-bleed { animation: inkBleed 2s ease-out forwards; opacity: 0; }
+    .ink-1 { animation-delay: 0.5s; }
+    .ink-2 { animation-delay: 1.5s; }
+    .ink-3 { animation-delay: 2.5s; }
+    .ink-4 { animation-delay: 3.5s; }
+
+    /* 路徑筆觸 */
+    @keyframes drawStroke {
+      to { stroke-dashoffset: 0; }
+    }
+    .draw-stroke {
+      stroke-dasharray: 2000;
+      stroke-dashoffset: 2000;
+      animation: drawStroke 4s ease-in-out forwards;
+      animation-delay: 1s;
+    }
+
+    /* Reveal on scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    }
+    .reveal.in-view { opacity: 1; transform: translateY(0); }
+
+    /* ============================================
+       全頁水墨流動背景(極淡,在內容下方)
+       ============================================ */
+    @keyframes inkFlow1 {
+      0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+      50%      { transform: translate(40px, -30px) scale(1.15) rotate(15deg); }
+    }
+    @keyframes inkFlow2 {
+      0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+      50%      { transform: translate(-50px, 40px) scale(0.9) rotate(-20deg); }
+    }
+    @keyframes inkFlow3 {
+      0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+      50%      { transform: translate(30px, 50px) scale(1.2) rotate(10deg); }
+    }
+    .ink-flow-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .ink-flow-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.18;
+    }
+    .ink-flow-blob.blob-1 {
+      top: 10%; left: 8%; width: 400px; height: 400px;
+      background: radial-gradient(circle, #1B3A5C 0%, transparent 70%);
+      animation: inkFlow1 18s ease-in-out infinite;
+    }
+    .ink-flow-blob.blob-2 {
+      top: 60%; right: 12%; width: 500px; height: 500px;
+      background: radial-gradient(circle, #BC4630 0%, transparent 70%);
+      animation: inkFlow2 22s ease-in-out infinite;
+    }
+    .ink-flow-blob.blob-3 {
+      bottom: 5%; left: 40%; width: 350px; height: 350px;
+      background: radial-gradient(circle, #D4A574 0%, transparent 70%);
+      animation: inkFlow3 25s ease-in-out infinite;
+    }
+
+    /* ============================================
+       「壹」四根柱子音波呼吸
+       ============================================ */
+    @keyframes pillarBreath1 { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(0.7); } }
+    @keyframes pillarBreath2 { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(0.85); } }
+    @keyframes pillarBreath3 { 0%, 100% { transform: scaleY(0.75); } 50% { transform: scaleY(1); } }
+    @keyframes pillarBreath4 { 0%, 100% { transform: scaleY(0.9); } 50% { transform: scaleY(0.6); } }
+    .pillar-1 { animation: pillarBreath1 4s ease-in-out infinite; transform-origin: center bottom; }
+    .pillar-2 { animation: pillarBreath2 5.5s ease-in-out infinite; transform-origin: center bottom; animation-delay: 0.4s; }
+    .pillar-3 { animation: pillarBreath3 5s ease-in-out infinite; transform-origin: center bottom; animation-delay: 0.8s; }
+    .pillar-4 { animation: pillarBreath4 6s ease-in-out infinite; transform-origin: center bottom; animation-delay: 0.2s; }
+
+    /* ============================================
+       「貳」滑桿小球漂浮
+       ============================================ */
+    @keyframes sliderFloat {
+      0%, 100% { transform: translate(0, 0); }
+      25%      { transform: translate(2px, -3px); }
+      50%      { transform: translate(0, -1px); }
+      75%      { transform: translate(-2px, -2px); }
+    }
+    .slider-orb-float { animation: sliderFloat 4s ease-in-out infinite; }
+
+    /* ============================================
+       「參」此處留白卡呼吸
+       ============================================ */
+    @keyframes paperBreath {
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      50%      { opacity: 0.7; transform: scale(1.02); }
+    }
+    .paper-breath { animation: paperBreath 5s ease-in-out infinite; }
+
+    /* ============================================
+       「AI travels」分隔線中央圓點旋轉
+       ============================================ */
+    @keyframes orbitDot {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .orbit-dot { animation: orbitDot 12s linear infinite; transform-origin: center; }
+
+    /* 確保內容在背景之上 */
+    nav, section, footer { position: relative; z-index: 2; }
+
+    /* ============================================
+       功能 Mega-Menu(nav dropdown panel)
+       ============================================ */
+    .nav-features-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+    }
+    .nav-features-caret {
+      font-size: 0.7rem;
+      transition: transform 0.3s ease;
+    }
+    .nav-features-toggle.is-active .nav-features-caret {
+      transform: rotate(180deg);
+    }
+
+    .features-mega-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: linear-gradient(180deg, rgba(245, 239, 227, 0.98) 0%, rgba(234, 224, 204, 0.96) 100%);
+      backdrop-filter: blur(24px);
+      border-bottom: 1px solid rgba(15, 41, 66, 0.12);
+      box-shadow: 0 24px 48px rgba(15, 41, 66, 0.12);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-8px);
+      transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                  visibility 0s linear 0.4s;
+      z-index: 99;
+    }
+    .features-mega-menu.is-open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                  visibility 0s linear 0s;
+    }
+    .features-mega-menu__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 36px 48px 32px;
+    }
+    .features-mega-menu__header {
+      text-align: center;
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(15, 41, 66, 0.08);
+    }
+    .features-mega-menu__eyebrow {
+      font-style: italic;
+      color: #BC4630;
+      font-size: 0.78rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      margin: 0 0 8px;
+      opacity: 0.85;
+    }
+    .features-mega-menu__title {
+      font-size: 1.4rem;
+      color: #0F2942;
+      font-weight: 500;
+      margin: 0;
+      letter-spacing: 0.06em;
+    }
+    .features-mega-menu__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 24px;
+    }
+    .features-col {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .features-col__label {
+      font-style: italic;
+      color: #7A7A7A;
+      font-size: 0.72rem;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      padding-left: 8px;
+      margin-bottom: 4px;
+    }
+    .features-card {
+      display: flex;
+      gap: 16px;
+      padding: 18px 18px;
+      background: rgba(255, 253, 248, 0.7);
+      border: 1px solid rgba(15, 41, 66, 0.10);
+      border-radius: 14px;
+      text-decoration: none;
+      transition: border-color 0.3s ease,
+                  background 0.3s ease,
+                  transform 0.3s ease,
+                  box-shadow 0.3s ease;
+    }
+    .features-card:hover {
+      border-color: rgba(200, 71, 43, 0.4);
+      background: rgba(255, 253, 248, 1);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(15, 41, 66, 0.10);
+    }
+    .features-card__icon {
+      font-size: 1.6rem;
+      line-height: 1;
+      flex-shrink: 0;
+      width: 38px;
+      text-align: center;
+      padding-top: 2px;
+    }
+    .features-card__body {
+      flex: 1;
+      min-width: 0;
+    }
+    .features-card__title {
+      font-size: 0.95rem;
+      color: #0F2942;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      margin: 0 0 2px;
+    }
+    .features-card__subtitle {
+      font-style: italic;
+      font-size: 0.72rem;
+      color: #BC4630;
+      letter-spacing: 0.15em;
+      opacity: 0.75;
+      margin-bottom: 8px;
+    }
+    .features-card__desc {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 0.82rem;
+      color: #1A1A1A;
+      line-height: 1.7;
+      opacity: 0.82;
+      margin: 0;
+      letter-spacing: 0.03em;
+    }
+    .features-mega-menu__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 20px;
+      border-top: 1px solid rgba(15, 41, 66, 0.08);
+    }
+    .features-mega-menu__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: #BC4630;
+      font-size: 0.9rem;
+      letter-spacing: 0.2em;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .features-mega-menu__cta:hover { color: #0F2942; }
+    .features-mega-menu__cta-arrow {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+    .features-mega-menu__cta:hover .features-mega-menu__cta-arrow {
+      transform: translateX(6px);
+    }
+    .features-mega-menu__hint {
+      font-style: italic;
+      font-size: 0.7rem;
+      color: #7A7A7A;
+      letter-spacing: 0.3em;
+      text-transform: lowercase;
+      opacity: 0.6;
+    }
+    .features-mega-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 41, 66, 0.04);
+      opacity: 0;
+      visibility: hidden;
+      z-index: 98;
+      transition: opacity 0.4s ease, visibility 0s linear 0.4s;
+    }
+    .features-mega-backdrop.is-open {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.4s ease, visibility 0s linear 0s;
+    }
+  </style>
+</head>
+<body class="bg-washi text-sumi antialiased">
+
+  <!-- 全頁水墨流動背景 -->
+  <div class="ink-flow-bg" aria-hidden="true">
+    <div class="ink-flow-blob blob-1"></div>
+    <div class="ink-flow-blob blob-2"></div>
+    <div class="ink-flow-blob blob-3"></div>
+  </div>
+
+  <!-- ==================================================================== -->
+  <!-- 頂部導航                                                              -->
+  <!-- ==================================================================== -->
+  <nav id="mainNav" class="fixed top-0 inset-x-0 z-[100] backdrop-blur-md bg-washi/80 border-b border-prussian/10">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
+      <a href="brand_preview.html" class="font-display text-2xl tracking-widest text-prussian-deep hover:text-vermillion transition-colors">
+        Occupath
+      </a>
+      <div class="hidden md:flex items-center gap-10 text-sm font-mincho">
+        <a href="brand_preview.html" class="nav-link active" data-page="brand">品牌</a>
+        <a href="javascript:void(0)" id="navFeaturesBtn" class="nav-link nav-features-toggle" data-page="features">
+          功能
+          <span class="nav-features-caret">▾</span>
+        </a>
+        <a href="research.html" class="nav-link" data-page="research">市場</a>
+        <a href="business.html" class="nav-link" data-page="business">商業</a>
+        <a href="/quiz" class="nav-link nav-cta" data-page="app">進入產品 →</a>
+      </div>
+      <button class="md:hidden text-prussian-deep">☰</button>
+    </div>
+
+    <!-- ============================================
+         功能 Mega-Menu(hover / click 觸發)
+         ============================================ -->
+    <div id="featuresMegaMenu" class="features-mega-menu" aria-hidden="true">
+      <div class="features-mega-menu__inner">
+        <div class="features-mega-menu__header">
+          <p class="features-mega-menu__eyebrow font-display">— Features Overview —</p>
+          <h3 class="features-mega-menu__title font-mincho">Occupath 的五個關鍵體驗</h3>
+        </div>
+
+        <div class="features-mega-menu__grid">
+
+          <!-- 欄 1:人格分流 -->
+          <div class="features-col">
+            <div class="features-col__label font-display">— 人格分流 —</div>
+            <a href="/quiz" class="features-card">
+              <div class="features-card__icon">⛩</div>
+              <div class="features-card__body">
+                <div class="features-card__title font-mincho">MBTI 30 秒快測</div>
+                <div class="features-card__subtitle font-display">Conductor or Wanderer</div>
+                <p class="features-card__desc">3 道場景化選項,判斷你是規劃型還是隨性型。</p>
+              </div>
+            </a>
+            <a href="/result/p" class="features-card">
+              <div class="features-card__icon">🌸</div>
+              <div class="features-card__body">
+                <div class="features-card__title font-mincho">P 探索 mood</div>
+                <div class="features-card__subtitle font-display">Wandering by feeling</div>
+                <p class="features-card__desc">8 個情緒詞,點一個給 3 個靈感景點。</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- 欄 2:路線推演 -->
+          <div class="features-col">
+            <div class="features-col__label font-display">— 路線推演 —</div>
+            <a href="/plan-j" class="features-card">
+              <div class="features-card__icon">🗻</div>
+              <div class="features-card__body">
+                <div class="features-card__title font-mincho">J 結構規劃</div>
+                <div class="features-card__subtitle font-display">For The Conductor</div>
+                <p class="features-card__desc">天數 / 預算 / 4 維滑桿 / 興趣標籤,精準掌控。</p>
+              </div>
+            </a>
+            <a href="/plan-p" class="features-card">
+              <div class="features-card__icon">🎲</div>
+              <div class="features-card__body">
+                <div class="features-card__title font-mincho">P 主題行程</div>
+                <div class="features-card__subtitle font-display">For The Wanderer</div>
+                <p class="features-card__desc">4 個狀態主題,卡片刷新感,沒有時間表。</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- 欄 3:對話與調整 -->
+          <div class="features-col">
+            <div class="features-col__label font-display">— 對話與調整 —</div>
+            <a href="/plan" class="features-card">
+              <div class="features-card__icon">💬</div>
+              <div class="features-card__body">
+                <div class="features-card__title font-mincho">ChatBox 對話修改</div>
+                <div class="features-card__subtitle font-display">Talk to your trip</div>
+                <p class="features-card__desc">「不想清水寺,人太多」AI 替你重排。</p>
+              </div>
+            </a>
+            <a href="/plan-j" class="features-card">
+              <div class="features-card__icon">🎚</div>
+              <div class="features-card__body">
+                <div class="features-card__title font-mincho">What-if 即時重排</div>
+                <div class="features-card__subtitle font-display">Reweight in real time</div>
+                <p class="features-card__desc">拉動偏好滑桿,0.3 秒所有景點重新排序。</p>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="features-mega-menu__footer">
+          <a href="/quiz" class="features-mega-menu__cta font-mincho">
+            <span>從頭體驗完整 demo</span>
+            <span class="features-mega-menu__cta-arrow">→</span>
+          </a>
+          <p class="features-mega-menu__hint font-display">esc to close</p>
+        </div>
+      </div>
+    </div>
+    <!-- End mega-menu -->
+  </nav>
+
+  <!-- 點 menu 外關閉用的遮罩 -->
+  <div id="featuresMegaBackdrop" class="features-mega-backdrop" aria-hidden="true"></div>
+
+  <style>
+    .nav-link {
+      color: rgba(15, 41, 66, 0.65);
+      transition: color 0.5s, border-color 0.5s;
+      padding-bottom: 4px;
+      border-bottom: 1px solid transparent;
+    }
+    .nav-link:hover { color: #0F2942; }
+    .nav-link.active {
+      color: #BC4630;
+      border-bottom-color: #BC4630;
+    }
+    .nav-cta {
+      color: #BC4630 !important;
+      font-weight: 500;
+    }
+  </style>
+
+
+  <!-- ==================================================================== -->
+  <!-- ① HERO — 全屏動態浮世繪 + 前導片預留區                                  -->
+  <!-- ==================================================================== -->
+  <section class="hero relative min-h-screen overflow-hidden">
+
+    <!-- 天空漸層 -->
+    <div class="absolute inset-0 bg-gradient-to-b from-prussian-night via-prussian to-prussian-deep"></div>
+
+    <!-- 前導片影片 (5 幕季節循環) -->
+    <video autoplay muted loop playsinline preload="auto"
+           class="absolute inset-0 w-full h-full object-cover z-[5]">
+      <source src="intro.mp4" type="video/mp4">
+    </video>
+    <!-- 影片之上加深一層暗色 overlay 確保 Logo/文字可讀 -->
+    <div class="absolute inset-0 z-[6] bg-gradient-to-b from-prussian-night/30 via-prussian-deep/50 to-prussian-night/85 pointer-events-none"></div>
+
+    <!-- 雲朵 (3 層,不同速度與高度) -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <svg class="absolute cloud-1" style="top: 12%; opacity: 0.18" width="280" height="60" viewBox="0 0 280 60">
+        <path d="M40,40 Q70,20 110,35 Q150,15 200,35 Q235,20 260,40 Q220,55 40,40 Z" fill="#F5EFE3"/>
+      </svg>
+      <svg class="absolute cloud-2" style="top: 22%; opacity: 0.12" width="220" height="50" viewBox="0 0 220 50">
+        <path d="M30,30 Q60,15 95,30 Q130,12 170,28 Q200,18 215,32 Q180,45 30,30 Z" fill="#F5EFE3"/>
+      </svg>
+      <svg class="absolute cloud-3" style="top: 35%; opacity: 0.1" width="180" height="40" viewBox="0 0 180 40">
+        <path d="M20,25 Q50,10 80,22 Q110,8 145,22 Q170,15 175,28 Q140,35 20,25 Z" fill="#F5EFE3"/>
+      </svg>
+    </div>
+
+    <!-- 富士山 (中後景, 呼吸動畫) -->
+    <svg class="fuji-breath absolute" style="bottom: 22%; left: 50%; width: 80%; max-width: 1200px; opacity: 0.7" viewBox="0 0 1200 360" preserveAspectRatio="xMidYMax meet">
+      <!-- 山體 -->
+      <path d="M0,360 L300,360 L450,180 Q500,135 530,180 L600,75 Q620,55 640,75 L710,180 Q740,135 790,180 L900,360 L1200,360 Z"
+            fill="#091A2B"/>
+      <!-- 雪頂 -->
+      <path d="M520,180 Q540,158 555,170 L600,75 Q620,55 640,75 L685,170 Q700,158 720,180 Q670,158 650,170 L620,135 L590,170 Q565,158 520,180 Z"
+            fill="#F5EFE3" opacity="0.9"/>
+    </svg>
+
+    <!-- 雪粒 / 飄落微粒 (CSS 隨機分佈) -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <span class="snow" style="left: 8%; animation: snowFall 14s linear infinite; animation-delay: -2s;"></span>
+      <span class="snow" style="left: 17%; animation: snowFall 17s linear infinite; animation-delay: -7s;"></span>
+      <span class="snow" style="left: 24%; animation: snowFall 13s linear infinite; animation-delay: -10s;"></span>
+      <span class="snow" style="left: 33%; animation: snowFall 19s linear infinite; animation-delay: -3s;"></span>
+      <span class="snow" style="left: 41%; animation: snowFall 15s linear infinite; animation-delay: -8s;"></span>
+      <span class="snow" style="left: 48%; animation: snowFall 16s linear infinite; animation-delay: -12s;"></span>
+      <span class="snow" style="left: 56%; animation: snowFall 14s linear infinite; animation-delay: -1s;"></span>
+      <span class="snow" style="left: 63%; animation: snowFall 18s linear infinite; animation-delay: -5s;"></span>
+      <span class="snow" style="left: 71%; animation: snowFall 13s linear infinite; animation-delay: -9s;"></span>
+      <span class="snow" style="left: 79%; animation: snowFall 16s linear infinite; animation-delay: -4s;"></span>
+      <span class="snow" style="left: 87%; animation: snowFall 15s linear infinite; animation-delay: -11s;"></span>
+      <span class="snow" style="left: 94%; animation: snowFall 17s linear infinite; animation-delay: -6s;"></span>
+    </div>
+
+    <!-- 動態海浪 (3 層 parallax,前後速度不同) -->
+    <div class="absolute bottom-0 left-0 w-full h-72 overflow-hidden pointer-events-none">
+      <!-- Wave back -->
+      <svg class="wave-back absolute bottom-0 left-0" style="width: 200%; height: 180px;" viewBox="0 0 2400 180" preserveAspectRatio="none">
+        <path d="M0,90 Q150,50 300,90 T600,90 T900,90 T1200,90 T1500,90 T1800,90 T2100,90 T2400,90 V180 H0 Z" fill="#1B3A5C" opacity="0.55"/>
+      </svg>
+      <!-- Wave mid -->
+      <svg class="wave-mid absolute bottom-0 left-0" style="width: 200%; height: 160px;" viewBox="0 0 2400 160" preserveAspectRatio="none">
+        <path d="M0,80 Q200,30 400,80 T800,80 T1200,80 T1600,80 T2000,80 T2400,80 V160 H0 Z" fill="#0F2942" opacity="0.7"/>
+      </svg>
+      <!-- Wave front -->
+      <svg class="wave-front absolute bottom-0 left-0" style="width: 200%; height: 140px;" viewBox="0 0 2400 140" preserveAspectRatio="none">
+        <path d="M0,70 Q120,20 240,70 T480,70 T720,70 T960,70 T1200,70 T1440,70 T1680,70 T1920,70 T2160,70 T2400,70 V140 H0 Z" fill="#091A2B"/>
+      </svg>
+    </div>
+
+    <!-- 縱書日文 -->
+    <div class="absolute top-12 right-12 text-washi/40 text-xs vertical-rl font-mincho ink-bleed ink-1 z-20">
+      道を占める ・ 旅人へ
+    </div>
+
+    <!-- 落款 -->
+    <div class="absolute top-12 left-12 text-washi/30 text-xs font-mincho tracking-widest ink-bleed ink-1 z-20">
+      二〇二六 · 春
+    </div>
+
+    <!-- Logo + tagline + 產品定位 -->
+    <div class="absolute bottom-32 left-12 md:left-24 max-w-2xl z-20">
+      <p class="ink-bleed ink-1 text-xs tracking-[0.5em] uppercase text-ochre mb-6 font-display">
+        Occupy your path · Own your reason
+      </p>
+
+      <h1 class="ink-bleed ink-2 font-display text-8xl md:text-[10rem] text-washi leading-none mb-6 tracking-tight">
+        Occupath
+      </h1>
+
+      <p class="ink-bleed ink-3 font-mincho text-lg md:text-xl text-washi/85 tracking-[0.2em] mb-4">
+        讓你的路,由你自己佔據
+      </p>
+
+      <!-- 產品定位副標 (新增,讓使用者第一眼識別) -->
+      <div class="ink-bleed ink-4 flex items-center gap-3 text-washi/55">
+        <div class="h-px w-12 bg-vermillion"></div>
+        <p class="font-display text-sm tracking-[0.3em] uppercase">
+          Explainable AI Trip Planner · Japan
+        </p>
+      </div>
+      <p class="ink-bleed ink-4 font-mincho text-sm md:text-base text-washi/50 tracking-wider mt-2 ml-15">
+        日本自由行 · AI 規劃 · 看得見每個推薦的理由
+      </p>
+    </div>
+
+    <!-- 進入按鈕 -->
+    <a href="#story" class="ink-bleed ink-4 absolute bottom-12 right-12 inline-flex items-center gap-3 text-washi/70 hover:text-ochre transition-all duration-700 group z-20">
+      <span class="text-xs tracking-[0.4em] uppercase font-display">enter</span>
+      <span class="w-12 h-px bg-ochre group-hover:w-20 transition-all duration-500"></span>
+    </a>
+
+  </section>
+
+
+  <!-- ==================================================================== -->
+  <!-- ② HOOK — 那個夜晚 (具體痛點版)                                         -->
+  <!-- ==================================================================== -->
+  <section id="story" class="relative bg-washi washi-texture py-48 px-6">
+
+    <!-- 縱書章節 -->
+    <div class="hidden md:block absolute top-32 right-20 text-vermillion/60 vertical-rl font-mincho text-sm tracking-[0.5em]">
+      第一章 ・ 那個夜晚
+    </div>
+
+    <!-- 雲紋裝飾 -->
+    <svg class="absolute top-20 left-0 w-96 opacity-30" viewBox="0 0 400 100">
+      <path d="M50,60 Q80,30 130,55 Q170,25 220,55 Q260,30 320,60 Q280,75 50,60 Z"
+            fill="none" stroke="#1B3A5C" stroke-width="1"/>
+    </svg>
+
+    <div class="max-w-2xl ml-12 md:ml-32 relative z-10">
+
+      <p class="reveal font-mincho text-2xl md:text-3xl text-prussian-deep mb-12 leading-loose">
+        那個夜晚,你做了同一件事 ——
+      </p>
+
+      <p class="reveal font-mincho text-xl md:text-2xl text-sumi/85 mb-10 leading-loose">
+        你打開三個瀏覽器分頁:<br/>
+        <span class="font-display italic text-vermillion">Klook</span>、
+        <span class="font-display italic text-vermillion">ChatGPT</span>、
+        <span class="font-display italic text-vermillion">Google Maps</span>。
+      </p>
+
+      <p class="reveal font-mincho text-xl md:text-2xl text-sumi/85 mb-14 leading-loose">
+        三十個景點。<br/>
+        五個版本的行程。<br/>
+        四種預算試算。
+      </p>
+
+      <p class="reveal font-mincho text-xl md:text-2xl text-sumi/85 mb-14 leading-loose">
+        一個小時過去,<br/>
+        你還是不知道,<br/>
+        明天的早上該去哪裡。
+      </p>
+
+      <div class="reveal border-l-[3px] border-vermillion pl-10 py-6 mb-16">
+        <p class="font-mincho text-xl md:text-2xl text-prussian-deep leading-loose mb-4">
+          AI 給的那份完美行程 ——
+        </p>
+        <p class="font-mincho text-lg md:text-xl text-sumi/80 leading-loose mb-3">
+          你看不懂它為什麼是這樣。
+        </p>
+        <p class="font-mincho text-lg md:text-xl text-sumi/80 leading-loose mb-3">
+          你想改一個景點,它整段重寫。
+        </p>
+        <p class="font-mincho text-lg md:text-xl text-sumi/80 leading-loose">
+          你想問為什麼推薦這家店,<br/>
+          它沒有回答。
+        </p>
+      </div>
+
+      <p class="reveal font-display italic text-2xl md:text-3xl text-prussian-deep leading-loose mb-2">
+        於是你關掉所有分頁,
+      </p>
+      <p class="reveal font-display italic text-2xl md:text-3xl text-prussian-deep leading-loose">
+        心想:也許今晚先睡吧。
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- ==================================================================== -->
+  <!-- ③ ANSWER — Occupath 揭曉 (動態富士山 + 路徑)                            -->
+  <!-- ==================================================================== -->
+  <section class="relative bg-prussian-deep washi-texture overflow-hidden min-h-screen flex items-center">
+
+    <!-- 雲朵飄移 -->
+    <svg class="absolute cloud-1" style="top: 18%; opacity: 0.12" width="200" viewBox="0 0 200 50">
+      <path d="M30,30 Q60,15 95,30 Q130,12 170,28 Q200,18 215,32 Q180,45 30,30 Z" fill="#F5EFE3"/>
+    </svg>
+    <svg class="absolute cloud-2" style="top: 32%; opacity: 0.08" width="160" viewBox="0 0 160 40">
+      <path d="M20,25 Q50,10 80,22 Q110,8 145,22 Z" fill="#F5EFE3"/>
+    </svg>
+
+    <!-- 富士山 (背景,呼吸) -->
+    <svg class="fuji-breath absolute" style="bottom: 0; left: 50%; width: 100%; max-width: 1400px; opacity: 0.5" viewBox="0 0 1400 500">
+      <path d="M-100,500 L150,500 L400,200 Q450,150 480,200 L600,80 Q620,55 645,80 L760,200 Q815,150 870,200 L1100,500 L1500,500 Z" fill="#091A2B"/>
+      <path d="M460,200 Q480,175 495,190 L600,80 Q620,55 645,80 L750,190 Q765,175 785,200 Q730,175 705,190 L645,140 L600,190 Q525,175 460,200 Z" fill="#F5EFE3" opacity="0.85"/>
+    </svg>
+
+    <!-- 縱書 -->
+    <div class="hidden md:block absolute top-32 right-12 text-ochre/50 vertical-rl font-mincho text-sm tracking-[0.5em] z-10">
+      第二章 ・ 我們的答覆
+    </div>
+
+    <!-- 內容 -->
+    <div class="relative z-10 max-w-2xl ml-12 md:ml-32 py-32">
+
+      <svg viewBox="0 0 600 100" class="w-full max-w-md mb-12">
+        <path d="M 20 50 Q 150 0 300 50 T 580 50" fill="none" stroke="#BC4630" stroke-width="2" class="draw-stroke"/>
+        <circle cx="20" cy="50" r="6" fill="#BC4630"/>
+        <circle cx="580" cy="50" r="6" fill="#D4A574"/>
+      </svg>
+
+      <h2 class="font-display text-7xl md:text-9xl text-washi mb-4 leading-none">
+        Occupath
+      </h2>
+      <p class="font-display italic text-2xl md:text-3xl text-ochre mb-16 tracking-wide">
+        Occupy + Path
+      </p>
+
+      <!-- 直接呼應 Hook 痛點 -->
+      <div class="space-y-6 mb-12 font-mincho text-lg md:text-xl text-washi/85 leading-loose">
+        <p class="reveal">
+          在 Occupath,<br/>
+          每一次推薦都會 <span class="text-ochre">告訴你為什麼</span>。
+        </p>
+        <p class="reveal">
+          你想改一個景點 ——<br/>
+          動的只是那一個,其餘的會 <span class="text-ochre">跟著你的決定重新生成</span>。
+        </p>
+        <p class="reveal">
+          你想知道為什麼推薦這條路 ——<br/>
+          它會 <span class="text-ochre">攤開四條理由</span> 給你看。
+        </p>
+      </div>
+
+      <div class="h-px w-24 bg-vermillion mb-8"></div>
+
+      <p class="font-mincho text-base md:text-lg text-washi/55 leading-loose italic">
+        旅行的意義,從來不在於他去了哪裡,<br/>
+        而在於他知道 —— 為什麼要去那裡。
+      </p>
+    </div>
+
+  </section>
+
+
+  <!-- ==================================================================== -->
+  <!-- ④ 三層 XAI · 卷軸式垂直流                                              -->
+  <!-- ==================================================================== -->
+
+  <section class="relative bg-washi washi-texture py-32 px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-xs tracking-[0.4em] uppercase text-vermillion mb-8 font-display">
+        第三章 ・ 三層紋理
+      </p>
+      <h2 class="font-display text-4xl md:text-6xl text-prussian-deep leading-tight mb-12">
+        每一個決定,<br/>都看得見紋理。
+      </h2>
+      <p class="font-mincho text-lg text-mist leading-loose">
+        像翻開一封信,看見落款,<br/>
+        看見墨色,看見遲疑的筆觸。
+      </p>
+    </div>
+  </section>
+
+  <!-- Layer 1 -->
+  <section class="relative bg-washi-warm washi-texture py-32 px-6">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+      <div class="md:col-span-5 md:col-start-2 reveal">
+        <p class="font-display text-9xl text-vermillion/30 leading-none mb-2">壱</p>
+        <p class="font-display text-2xl text-vermillion mb-6 tracking-widest">— 01 —</p>
+        <h3 class="font-mincho text-3xl md:text-4xl text-prussian-deep mb-8 leading-snug">
+          四條理由,<br/>像四根柱子。
+        </h3>
+        <p class="font-mincho text-lg text-sumi/75 leading-loose">
+          每個推薦背後,
+          有四條清楚的理由 ——
+          像撐起木造寺院的四根柱子。
+        </p>
+        <p class="font-mincho text-lg text-sumi/75 leading-loose mt-6">
+          你可以走近,看清每一根的紋路 ——
+          它從哪裡來,占了多少分量。
+        </p>
+      </div>
+      <div class="md:col-span-5 hidden md:flex justify-center reveal">
+        <svg viewBox="0 0 200 280" class="w-56">
+          <!-- 四根柱子(各自呼吸) -->
+          <line class="pillar-1" x1="40" y1="20" x2="40" y2="240" stroke="#1B3A5C" stroke-width="3" stroke-linecap="round"/>
+          <line class="pillar-2" x1="80" y1="20" x2="80" y2="240" stroke="#1B3A5C" stroke-width="3" stroke-linecap="round"/>
+          <line class="pillar-3" x1="120" y1="20" x2="120" y2="240" stroke="#BC4630" stroke-width="3" stroke-linecap="round"/>
+          <line class="pillar-4" x1="160" y1="20" x2="160" y2="240" stroke="#1B3A5C" stroke-width="3" stroke-linecap="round"/>
+
+          <!-- 各柱底部呈百分比小圓點(評分權重視覺化) -->
+          <circle cx="40" cy="244" r="3" fill="#1B3A5C">
+            <animate attributeName="r" values="3;5;3" dur="4s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="80" cy="244" r="3" fill="#1B3A5C">
+            <animate attributeName="r" values="3;5;3" dur="5.5s" repeatCount="indefinite" begin="0.4s"/>
+          </circle>
+          <circle cx="120" cy="244" r="3" fill="#BC4630">
+            <animate attributeName="r" values="3;5;3" dur="5s" repeatCount="indefinite" begin="0.8s"/>
+          </circle>
+          <circle cx="160" cy="244" r="3" fill="#1B3A5C">
+            <animate attributeName="r" values="3;5;3" dur="6s" repeatCount="indefinite" begin="0.2s"/>
+          </circle>
+
+          <text x="40" y="265" font-family="Shippori Mincho" font-size="11" fill="#1B3A5C" text-anchor="middle">評分</text>
+          <text x="80" y="265" font-family="Shippori Mincho" font-size="11" fill="#1B3A5C" text-anchor="middle">評論</text>
+          <text x="120" y="265" font-family="Shippori Mincho" font-size="11" fill="#BC4630" text-anchor="middle">興趣</text>
+          <text x="160" y="265" font-family="Shippori Mincho" font-size="11" fill="#1B3A5C" text-anchor="middle">動線</text>
+          <text x="40" y="278" font-family="Cormorant Garamond" font-style="italic" font-size="8" fill="#7A7A7A" text-anchor="middle">40%</text>
+          <text x="80" y="278" font-family="Cormorant Garamond" font-style="italic" font-size="8" fill="#7A7A7A" text-anchor="middle">30%</text>
+          <text x="120" y="278" font-family="Cormorant Garamond" font-style="italic" font-size="8" fill="#7A7A7A" text-anchor="middle">20%</text>
+          <text x="160" y="278" font-family="Cormorant Garamond" font-style="italic" font-size="8" fill="#7A7A7A" text-anchor="middle">10%</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Layer 2 -->
+  <section class="relative bg-washi washi-texture py-32 px-6">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+      <div class="md:col-span-5 hidden md:flex justify-center reveal">
+        <svg viewBox="0 0 240 120" class="w-64">
+          <!-- 軌道線 -->
+          <line x1="20" y1="60" x2="220" y2="60" stroke="#1B3A5C" stroke-width="2" stroke-linecap="round"/>
+          <!-- 軌道刻度 -->
+          <line x1="20" y1="55" x2="20" y2="65" stroke="#1B3A5C" stroke-width="1" opacity="0.4"/>
+          <line x1="220" y1="55" x2="220" y2="65" stroke="#1B3A5C" stroke-width="1" opacity="0.4"/>
+          <!-- 滑桿主球(漂浮 + 朱紅光暈)-->
+          <g class="slider-orb-float">
+            <circle cx="100" cy="60" r="18" fill="#BC4630" opacity="0.15">
+              <animate attributeName="r" values="18;26;18" dur="3s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="100" cy="60" r="10" fill="#BC4630"/>
+            <circle cx="100" cy="60" r="4" fill="#F5EFE3"/>
+          </g>
+          <!-- 飄移的小光點(暗示 What-if 即時重排) -->
+          <circle cx="60" cy="30" r="2" fill="#D4A574" opacity="0.5">
+            <animate attributeName="cy" values="30;25;30" dur="4s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.5;0.9;0.5" dur="4s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="160" cy="90" r="2" fill="#1B3A5C" opacity="0.4">
+            <animate attributeName="cy" values="90;95;90" dur="5s" repeatCount="indefinite" begin="0.5s"/>
+            <animate attributeName="opacity" values="0.4;0.8;0.4" dur="5s" repeatCount="indefinite" begin="0.5s"/>
+          </circle>
+          <circle cx="180" cy="35" r="2" fill="#D4A574" opacity="0.6">
+            <animate attributeName="cy" values="35;28;35" dur="3.5s" repeatCount="indefinite" begin="1s"/>
+          </circle>
+          <text x="20" y="100" font-family="Shippori Mincho" font-size="11" fill="#1B3A5C">輕鬆</text>
+          <text x="220" y="100" font-family="Shippori Mincho" font-size="11" fill="#1B3A5C" text-anchor="end">探索</text>
+          <text x="100" y="110" font-family="Cormorant Garamond" font-style="italic" font-size="9" fill="#BC4630" text-anchor="middle">— now —</text>
+        </svg>
+      </div>
+      <div class="md:col-span-5 md:col-start-7 reveal">
+        <p class="font-display text-9xl text-vermillion/30 leading-none mb-2">弍</p>
+        <p class="font-display text-2xl text-vermillion mb-6 tracking-widest">— 02 —</p>
+        <h3 class="font-mincho text-3xl md:text-4xl text-prussian-deep mb-8 leading-snug">
+          偏好若再傾斜一點,<br/>路會怎麼長?
+        </h3>
+        <p class="font-mincho text-lg text-sumi/75 leading-loose">
+          你的偏好若再傾斜一點,
+          路徑會如何重新生成?
+        </p>
+        <p class="font-mincho text-lg text-sumi/75 leading-loose mt-6">
+          這個答案,我們不讓你等。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Layer 3 -->
+  <section class="relative bg-washi-warm washi-texture py-32 px-6">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+      <div class="md:col-span-5 md:col-start-2 reveal">
+        <p class="font-display text-9xl text-vermillion/30 leading-none mb-2">参</p>
+        <p class="font-display text-2xl text-vermillion mb-6 tracking-widest">— 03 —</p>
+        <h3 class="font-mincho text-3xl md:text-4xl text-prussian-deep mb-8 leading-snug">
+          不夠多的時候,<br/>我們不裝知道。
+        </h3>
+        <p class="font-mincho text-lg text-sumi/75 leading-loose">
+          當資料不夠多,<br/>
+          我們不會替你假裝知道。
+        </p>
+        <p class="font-mincho text-lg text-sumi/75 leading-loose mt-6">
+          我們會說 ——<br/>
+          這裡,你要再走近一些看看。
+        </p>
+      </div>
+      <div class="md:col-span-5 hidden md:flex justify-center reveal">
+        <svg viewBox="0 0 220 220" class="w-56">
+          <!-- 紙張底色(呼吸)-->
+          <rect class="paper-breath" x="20" y="20" width="180" height="180" fill="#F5EFE3" stroke="#1B3A5C" stroke-width="1" stroke-dasharray="3,3" opacity="0.7"/>
+          <!-- 隨機消失的內容線(暗示「資料不足」)-->
+          <line x1="40" y1="55" x2="180" y2="55" stroke="#1B3A5C" stroke-width="1" opacity="0.4"/>
+          <line x1="40" y1="75" x2="160" y2="75" stroke="#1B3A5C" stroke-width="1" opacity="0.4"/>
+          <line x1="40" y1="95" x2="140" y2="95" stroke="#1B3A5C" stroke-width="1" opacity="0.4">
+            <animate attributeName="opacity" values="0.4;0.1;0.4" dur="3s" repeatCount="indefinite"/>
+          </line>
+          <line x1="40" y1="115" x2="120" y2="115" stroke="#1B3A5C" stroke-width="1" opacity="0.2" stroke-dasharray="2,4">
+            <animate attributeName="x2" values="120;100;120" dur="4s" repeatCount="indefinite"/>
+          </line>
+          <line x1="40" y1="135" x2="90" y2="135" stroke="#1B3A5C" stroke-width="1" opacity="0.15" stroke-dasharray="1,5"/>
+          <!-- 朱紅警示三角(誠實警告)-->
+          <g transform="translate(110, 165)">
+            <polygon points="0,-12 -11,8 11,8" fill="none" stroke="#BC4630" stroke-width="1.5" opacity="0.7">
+              <animate attributeName="opacity" values="0.7;1;0.7" dur="2.5s" repeatCount="indefinite"/>
+            </polygon>
+            <text x="0" y="4" font-family="Shippori Mincho" font-size="11" fill="#BC4630" text-anchor="middle" font-weight="500">!</text>
+          </g>
+          <text x="110" y="195" font-family="Shippori Mincho" font-size="13" fill="#BC4630" text-anchor="middle">— 此處留白 —</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================================================================== -->
+  <!-- ⑤ BELIEF — 同行                                                      -->
+  <!-- ==================================================================== -->
+  <section class="relative bg-prussian-night washi-texture py-48 px-6 overflow-hidden">
+
+    <!-- 動態雲 -->
+    <svg class="absolute cloud-1" style="top: 15%; opacity: 0.08" width="240" viewBox="0 0 240 60">
+      <path d="M30,35 Q70,15 110,35 Q150,12 200,32 Q230,18 240,38 Q200,50 30,35 Z" fill="#F5EFE3"/>
+    </svg>
+
+    <div class="max-w-4xl mx-auto text-center relative">
+      <div class="absolute -top-4 left-1/2 -translate-x-1/2 vertical-rl text-ochre/40 font-mincho text-xl tracking-[0.6em]">
+        同行
+      </div>
+
+      <p class="text-xs tracking-[0.4em] uppercase text-ochre mt-32 mb-12 font-display">
+        第四章 ・ 信念
+      </p>
+
+      <p class="font-display italic text-4xl md:text-7xl text-washi leading-tight mb-4">
+        AI travels with you,
+      </p>
+      <p class="font-display italic text-4xl md:text-7xl text-washi leading-tight mb-16">
+        not for you.
+      </p>
+
+      <!-- 「同行」象徵:兩個行者 (琥珀=你,朱紅=AI) 連接一條輕巧的路 -->
+      <div class="flex items-center justify-center gap-8 mb-16">
+        <div class="h-px w-20 bg-ochre/40"></div>
+        <svg viewBox="0 0 120 32" class="w-32 h-10" xmlns="http://www.w3.org/2000/svg">
+          <!-- 連接的弧線路徑(stroke-dasharray 動畫 = 路徑流動) -->
+          <path d="M 12 16 Q 60 -2 108 16" stroke="#D4A574" stroke-width="1" fill="none" opacity="0.6"
+                stroke-dasharray="3 4">
+            <animate attributeName="stroke-dashoffset" from="0" to="14" dur="3s" repeatCount="indefinite"/>
+          </path>
+          <!-- 起點 (琥珀):你 -->
+          <circle cx="12" cy="16" r="4" fill="none" stroke="#D4A574" stroke-width="1.2"/>
+          <circle cx="12" cy="16" r="1.5" fill="#D4A574">
+            <animate attributeName="r" values="1.5;2.5;1.5" dur="2.5s" repeatCount="indefinite"/>
+          </circle>
+          <!-- 終點 (朱紅):AI -->
+          <circle cx="108" cy="16" r="4" fill="none" stroke="#BC4630" stroke-width="1.2"/>
+          <circle cx="108" cy="16" r="1.5" fill="#BC4630">
+            <animate attributeName="r" values="1.5;2.5;1.5" dur="2.5s" repeatCount="indefinite" begin="1.25s"/>
+          </circle>
+          <!-- 中間沿著弧線移動的小光點(暗示「同行」的當下)-->
+          <circle r="1.8" fill="#F5EFE3" opacity="0.8">
+            <animateMotion dur="6s" repeatCount="indefinite"
+                           path="M 12 16 Q 60 -2 108 16 Q 60 -2 12 16"/>
+            <animate attributeName="opacity" values="0;0.9;0.9;0" dur="6s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+        <div class="h-px w-20 bg-ochre/40"></div>
+      </div>
+
+      <p class="font-mincho text-2xl md:text-3xl text-washi/85 leading-loose mb-12">
+        AI 與你同行,<br/>
+        而非代你出行。
+      </p>
+
+      <p class="font-mincho text-base md:text-lg text-washi/50 leading-loose max-w-md mx-auto italic">
+        像旅店的老闆,他可以告訴你 ——<br/>
+        哪條巷子有櫻花,<br/>
+        但他不會替你決定要不要繞過去。
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ==================================================================== -->
+  <!-- ⑥ DEPARTURE                                                          -->
+  <!-- ==================================================================== -->
+  <section class="relative bg-vermillion washi-texture py-48 px-6 overflow-hidden">
+
+    <!-- 動態波紋裝飾 -->
+    <div class="absolute bottom-0 left-0 w-full h-32 overflow-hidden opacity-30 pointer-events-none">
+      <svg class="wave-front absolute bottom-0 left-0" style="width: 200%; height: 100%" viewBox="0 0 2400 100" preserveAspectRatio="none">
+        <path d="M0,50 Q200,10 400,50 T800,50 T1200,50 T1600,50 T2000,50 T2400,50" fill="none" stroke="#F5EFE3" stroke-width="2"/>
+      </svg>
+    </div>
+
+    <div class="max-w-3xl mx-auto text-center relative z-10">
+      <p class="text-xs tracking-[0.4em] uppercase text-washi/70 mb-12 font-display">
+        第五章 ・ 出立
+      </p>
+
+      <h2 class="font-display text-5xl md:text-8xl text-washi leading-tight mb-4">
+        Now,
+      </h2>
+      <h2 class="font-display italic text-5xl md:text-8xl text-washi leading-tight mb-16">
+        go occupy your path.
+      </h2>
+
+      <p class="font-mincho text-xl md:text-2xl text-washi/90 mb-16 leading-loose">
+        你的路,<br/>
+        永遠該由你自己佔據。
+      </p>
+
+      <a href="/quiz" class="inline-block border-2 border-washi text-washi px-16 py-4 text-sm tracking-[0.4em] uppercase font-display hover:bg-washi hover:text-vermillion transition-all duration-700">
+        進入產品
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ==================================================================== -->
+  <!-- ⑦ Brand Specs (簡化)                                                  -->
+  <!-- ==================================================================== -->
+  <section class="bg-washi-warm py-20 px-6 border-t border-ochre/20">
+    <div class="max-w-5xl mx-auto">
+      <p class="text-xs tracking-[0.4em] uppercase text-vermillion mb-3 text-center font-display">
+        Brand Specifications
+      </p>
+      <h2 class="font-display text-2xl text-prussian mb-12 text-center">
+        浮世繪 × 三毛 × 動態
+      </h2>
+
+      <div class="grid grid-cols-3 md:grid-cols-6 gap-3 mb-10">
+        <div><div class="bg-prussian-night h-16 rounded mb-1"></div><p class="text-xs font-mincho">藍墨</p></div>
+        <div><div class="bg-prussian h-16 rounded mb-1"></div><p class="text-xs font-mincho">普魯士藍</p></div>
+        <div><div class="bg-vermillion h-16 rounded mb-1"></div><p class="text-xs font-mincho">朱</p></div>
+        <div><div class="bg-ochre h-16 rounded mb-1"></div><p class="text-xs font-mincho">黃土</p></div>
+        <div><div class="bg-washi border border-ochre/30 h-16 rounded mb-1"></div><p class="text-xs font-mincho">和紙</p></div>
+        <div><div class="bg-sumi h-16 rounded mb-1"></div><p class="text-xs font-mincho">墨</p></div>
+      </div>
+
+      <p class="text-center text-xs text-mist mt-8 font-mincho">
+        Occupath · 浮世繪 v3 動態版 · 二〇二六年春
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ============================================== -->
+  <!-- Scroll-triggered reveal animation               -->
+  <!-- ============================================== -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ============================================
+    // 功能 Mega-Menu toggle
+    // ============================================
+    (function() {
+      const btn = document.getElementById('navFeaturesBtn');
+      const menu = document.getElementById('featuresMegaMenu');
+      const backdrop = document.getElementById('featuresMegaBackdrop');
+      const nav = document.getElementById('mainNav');
+      if (!btn || !menu || !nav) return;
+
+      function open() {
+        menu.classList.add('is-open');
+        backdrop.classList.add('is-open');
+        btn.classList.add('is-active');
+        menu.setAttribute('aria-hidden', 'false');
+      }
+      function close() {
+        menu.classList.remove('is-open');
+        backdrop.classList.remove('is-open');
+        btn.classList.remove('is-active');
+        menu.setAttribute('aria-hidden', 'true');
+      }
+
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        menu.classList.contains('is-open') ? close() : open();
+      });
+
+      backdrop.addEventListener('click', close);
+      document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target) && !btn.contains(e.target)) close();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') close();
+      });
+
+      // hover 也能開啟(桌機)
+      if (window.matchMedia('(min-width: 768px)').matches) {
+        let hoverTimeout;
+        btn.addEventListener('mouseenter', () => { clearTimeout(hoverTimeout); open(); });
+        nav.addEventListener('mouseleave', () => { hoverTimeout = setTimeout(close, 300); });
+        menu.addEventListener('mouseenter', () => clearTimeout(hoverTimeout));
+        menu.addEventListener('mouseleave', () => { hoverTimeout = setTimeout(close, 300); });
+      }
+    })();
+  </script>
+
+</body>
+</html>
