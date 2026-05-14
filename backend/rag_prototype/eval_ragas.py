@@ -196,6 +196,201 @@ def compute_basic_metrics(samples: list[dict[str, Any]]) -> dict[str, Any]:
     return summary
 
 
+POI_COMPARE_VARIANT_MAP = str.maketrans(
+    {
+        "溫": "温",
+        "稻": "稲",
+        "觀": "観",
+        "禪": "禅",
+        "滿": "満",
+        "靈": "霊",
+        "國": "国",
+    }
+)
+
+
+def normalize_poi_compare(value: Any) -> str:
+    normalized = str(value or "").translate(POI_COMPARE_VARIANT_MAP)
+    return re.sub(r"[\W_]+", "", normalized, flags=re.UNICODE).strip().lower()
+
+
+def is_poi_matched(spot: dict[str, Any]) -> bool:
+    poi_match = spot.get("poiMatch") or {}
+    return bool(poi_match.get("matched") or spot.get("poi"))
+
+
+def has_position(spot: dict[str, Any]) -> bool:
+    position = spot.get("position") or {}
+    if not isinstance(position, dict):
+        return False
+    return position.get("lat") is not None and position.get("lng") is not None
+
+
+def has_rating(spot: dict[str, Any]) -> bool:
+    rating = spot.get("rating")
+    if rating in {None, "", "-"}:
+        return False
+    try:
+        return math.isfinite(float(rating))
+    except (TypeError, ValueError):
+        return False
+
+
+def safe_positive_int(value: Any) -> bool:
+    try:
+        return int(value) > 0
+    except (TypeError, ValueError):
+        return False
+
+
+def classify_poi_match_quality(spot: dict[str, Any]) -> str:
+    if not is_poi_matched(spot):
+        return "unmatched"
+
+    extracted_name = spot.get("extracted_name") or spot.get("name") or ""
+    poi = spot.get("poi") or {}
+    candidate_names = [
+        spot.get("matchedName"),
+        poi.get("name") if isinstance(poi, dict) else "",
+        poi.get("google_name_matched") if isinstance(poi, dict) else "",
+    ]
+    query = (spot.get("poiMatch") or {}).get("query", "")
+
+    extracted_key = normalize_poi_compare(extracted_name)
+    query_key = normalize_poi_compare(query)
+    candidate_keys = [normalize_poi_compare(value) for value in candidate_names if normalize_poi_compare(value)]
+
+    if extracted_key and extracted_key in candidate_keys:
+        return "exact"
+    if extracted_key and any(extracted_key in key or key in extracted_key for key in candidate_keys):
+        return "partial"
+    if query_key and (
+        query_key in candidate_keys or any(query_key in key or key in query_key for key in candidate_keys)
+    ):
+        return "query_variant"
+    return "weak"
+
+
+def compute_poi_match_metrics(samples: list[dict[str, Any]], detail_limit: int = 30) -> dict[str, Any]:
+    if not samples:
+        return {"sample_count": 0}
+
+    total_spots = 0
+    matched_spots = 0
+    position_count = 0
+    rating_count = 0
+    review_count = 0
+    image_count = 0
+    quality_counts = {
+        "exact": 0,
+        "partial": 0,
+        "query_variant": 0,
+        "weak": 0,
+        "unmatched": 0,
+    }
+    quality_weights = {
+        "exact": 1.0,
+        "partial": 0.85,
+        "query_variant": 0.7,
+        "weak": 0.35,
+        "unmatched": 0.0,
+    }
+    quality_score_sum = 0.0
+    per_sample: list[dict[str, Any]] = []
+    unmatched_details: list[dict[str, Any]] = []
+    weak_match_details: list[dict[str, Any]] = []
+    sample_rates: list[float] = []
+
+    for sample in samples:
+        api_result = sample.get("api_result") or {}
+        spots = [spot for spot in (api_result.get("spots") or []) if isinstance(spot, dict)]
+        sample_total = len(spots)
+        sample_matched = 0
+        sample_unmatched: list[str] = []
+
+        for spot in spots:
+            total_spots += 1
+            quality = classify_poi_match_quality(spot)
+            quality_counts[quality] = quality_counts.get(quality, 0) + 1
+            quality_score_sum += quality_weights.get(quality, 0.0)
+
+            if is_poi_matched(spot):
+                matched_spots += 1
+                sample_matched += 1
+                if has_position(spot):
+                    position_count += 1
+                if has_rating(spot):
+                    rating_count += 1
+                if safe_positive_int(spot.get("reviewsCount") or spot.get("reviews_count") or 0):
+                    review_count += 1
+                if spot.get("imageUrl") or (isinstance(spot.get("poi"), dict) and spot["poi"].get("image_url")):
+                    image_count += 1
+                if quality == "weak" and len(weak_match_details) < detail_limit:
+                    poi = spot.get("poi") or {}
+                    weak_match_details.append(
+                        {
+                            "sample_id": sample.get("id", ""),
+                            "spot_name": spot.get("name", ""),
+                            "query": (spot.get("poiMatch") or {}).get("query", ""),
+                            "matched_name": spot.get("matchedName") or (poi.get("name") if isinstance(poi, dict) else ""),
+                            "google_name_matched": poi.get("google_name_matched") if isinstance(poi, dict) else "",
+                        }
+                    )
+            else:
+                sample_unmatched.append(str(spot.get("name", "")))
+                if len(unmatched_details) < detail_limit:
+                    unmatched_details.append(
+                        {
+                            "sample_id": sample.get("id", ""),
+                            "spot_name": spot.get("name", ""),
+                            "query": (spot.get("poiMatch") or {}).get("query", ""),
+                        }
+                    )
+
+        sample_rate = sample_matched / sample_total if sample_total else 0.0
+        sample_rates.append(sample_rate)
+        per_sample.append(
+            {
+                "id": sample.get("id", ""),
+                "spot_count": sample_total,
+                "poi_matched_count": sample_matched,
+                "poi_match_rate": round(sample_rate, 4),
+                "unmatched_spots": sample_unmatched[:detail_limit],
+            }
+        )
+
+    match_rate = matched_spots / total_spots if total_spots else 0.0
+    quality_score = quality_score_sum / total_spots if total_spots else 0.0
+    position_rate = position_count / matched_spots if matched_spots else 0.0
+    rating_rate = rating_count / matched_spots if matched_spots else 0.0
+    review_rate = review_count / matched_spots if matched_spots else 0.0
+    image_rate = image_count / matched_spots if matched_spots else 0.0
+    enrichment_score = statistics.mean([position_rate, rating_rate, review_rate, image_rate]) if matched_spots else 0.0
+    integration_score = (0.5 * match_rate) + (0.3 * quality_score) + (0.2 * enrichment_score)
+
+    return {
+        "sample_count": len(samples),
+        "total_spot_count": total_spots,
+        "poi_matched_count": matched_spots,
+        "poi_unmatched_count": max(0, total_spots - matched_spots),
+        "poi_match_rate": round(match_rate, 4),
+        "poi_match_quality_score": round(quality_score, 4),
+        "poi_enrichment_score": round(enrichment_score, 4),
+        "poi_integration_score": round(integration_score, 4),
+        "sample_poi_match_rate_avg": round(statistics.mean(sample_rates), 4) if sample_rates else 0.0,
+        "sample_full_match_count": sum(1 for item in per_sample if item["spot_count"] and item["poi_matched_count"] == item["spot_count"]),
+        "sample_any_match_count": sum(1 for item in per_sample if item["poi_matched_count"] > 0),
+        "match_quality_counts": quality_counts,
+        "matched_position_rate": round(position_rate, 4),
+        "matched_rating_rate": round(rating_rate, 4),
+        "matched_review_count_rate": round(review_rate, 4),
+        "matched_image_rate": round(image_rate, 4),
+        "per_sample": per_sample,
+        "unmatched_details": unmatched_details,
+        "weak_match_details": weak_match_details,
+    }
+
+
 def maybe_run_ragas(samples: list[dict[str, Any]], eval_model: str, eval_embedding_model: str) -> dict[str, Any]:
     if not samples:
         return {"status": "skipped", "reason": "no samples"}
@@ -272,6 +467,7 @@ def main() -> None:
     parser.add_argument("--eval-model", default="gpt-4o-mini")
     parser.add_argument("--eval-embedding-model", default="text-embedding-3-small")
     parser.add_argument("--output-dir", default="eval_outputs")
+    parser.add_argument("--poi-detail-limit", type=int, default=30)
     args = parser.parse_args()
 
     dataset_path = Path(args.dataset).resolve()
@@ -293,6 +489,7 @@ def main() -> None:
             failures.append({"id": row.get("id", ""), "error": str(error)})
 
     basic_metrics = compute_basic_metrics(samples)
+    poi_match_metrics = compute_poi_match_metrics(samples, detail_limit=args.poi_detail_limit)
     ragas_result = (
         maybe_run_ragas(samples, args.eval_model, args.eval_embedding_model)
         if args.run_ragas
@@ -319,6 +516,7 @@ def main() -> None:
                 "failure_count": len(failures),
                 "failures": failures,
                 "basic_metrics": basic_metrics,
+                "poi_match_metrics": poi_match_metrics,
                 "ragas": ragas_result,
             },
             ensure_ascii=False,
@@ -334,6 +532,8 @@ def main() -> None:
     print(f"Summary file: {summary_path}")
     print("\nBasic metrics:")
     print(json.dumps(basic_metrics, ensure_ascii=False, indent=2))
+    print("\nPOI match metrics:")
+    print(json.dumps(poi_match_metrics, ensure_ascii=False, indent=2))
     print("\nRAGAS:")
     print(json.dumps(ragas_result, ensure_ascii=False, indent=2))
 
