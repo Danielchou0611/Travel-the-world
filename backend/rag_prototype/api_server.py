@@ -21,7 +21,7 @@ from rag_week2 import OLLAMA_BASE_URL, extract_names_with_fallback, list_ollama_
 load_dotenv()
 URL_FETCH_MAX_BYTES = int(os.getenv("RAG_URL_FETCH_MAX_BYTES", "4000000"))
 POI_API_BASE_URL = os.getenv("POI_API_BASE_URL", "http://127.0.0.1:8000").rstrip("/")
-POI_LOOKUP_PAGE_SIZE = max(1, int(os.getenv("POI_LOOKUP_PAGE_SIZE", "5")))
+POI_LOOKUP_PAGE_SIZE = max(1, int(os.getenv("POI_LOOKUP_PAGE_SIZE", "20")))
 POI_LOOKUP_TIMEOUT_SECONDS = float(os.getenv("POI_LOOKUP_TIMEOUT_SECONDS", "5"))
 ITINERARY_MIN_SPOTS = int(os.getenv("RAG_ITINERARY_MIN_SPOTS", "3"))
 DAY_GROUP_MIN_SPOTS = max(1, int(os.getenv("RAG_DAY_GROUP_MIN_SPOTS", "2")))
@@ -759,6 +759,88 @@ POI_SEARCH_ALIASES = {
 }
 
 
+POI_SEARCH_ALIASES.update(
+    {
+        "\u9577\u5d0e\u7a3b\u4f50\u5c71": ["\u7a32\u4f50\u5c71", "\u9577\u5d0e\u7a32\u4f50\u5c71", "Mount Inasa"],
+        "\u5225\u5e9c\u6eab\u6cc9": ["\u5225\u5e9c\u6e29\u6cc9"],
+        "\u5b09\u91ce\u6eab\u6cc9": ["\u5b09\u91ce\u6e29\u6cc9"],
+        "\u5ca1\u5d0e\u8526\u5c4b": [
+            "\u4eac\u90fd\u5ca1\u5d0e \u8526\u5c4b\u66f8\u5e97",
+            "\u4eac\u90fd\u5ca1\u5d0e\u8526\u5c4b\u66f8\u5e97",
+            "\u8526\u5c4b\u66f8\u5e97",
+        ],
+        "\u6c38\u89c0\u5802": ["\u6c38\u89b3\u5802", "\u6c38\u89c0\u5802\u79aa\u6797\u5bfa", "\u6c38\u89b3\u5802\u7985\u6797\u5bfa"],
+        "\u5357\u79aa\u5bfa": ["\u5357\u7985\u5bfa"],
+        "\u5317\u91ce\u5929\u6eff\u5bae": ["\u5317\u91ce\u5929\u6e80\u5bae"],
+        "\u9748\u5c71\u8b77\u570b\u795e\u793e": [
+            "\u970a\u5c71\u8b77\u56fd\u795e\u793e",
+            "\u4eac\u90fd\u970a\u5c71\u8b77\u570b\u795e\u793e",
+            "\u4eac\u90fd\u970a\u5c71\u8b77\u56fd\u795e\u793e",
+        ],
+    }
+)
+
+POI_SEARCH_ALIASES.update(
+    {
+        "合羽橋道具街": ["合羽橋本通り商店街", "東京合羽橋商店街振興組合", "合羽橋"],
+        "宇治平等院": ["平等院"],
+        "心齋橋": ["心斎橋", "心斎橋筋商店街"],
+        "新世界商店街": ["新世界"],
+        "阿倍野展望台": ["ハルカス300", "ハルカス300（展望台）", "あべのハルカス"],
+        "鎌倉大佛": ["鎌倉大仏殿高徳院", "鎌倉大仏", "高徳院"],
+        "箱根雕刻之森美術館": ["箱根雕刻森林美術館", "彫刻の森美術館"],
+        "札幌電視塔": ["さっぽろテレビ塔"],
+        "堺町通商店街": ["小樽堺町通り商店街"],
+        "小樽音樂盒堂": ["小樽オルゴール堂"],
+        "北一硝子": ["北一ヴェネツィア美術館", "大正硝子館 本店"],
+        "金森紅磚倉庫": ["金森赤レンガ倉庫"],
+        "金森红砖仓库": ["金森赤レンガ倉庫"],
+        "元町教會群": ["カトリック元町教会"],
+        "元町教会群": ["カトリック元町教会"],
+        "函館山展望台": ["函館山展望台"],
+        "函馆山展望台": ["函館山展望台"],
+        "兼六园": ["兼六園"],
+        "兼六園": ["兼六園"],
+        "東茶屋街": ["ひがし茶屋街"],
+        "二十一世紀美術館": ["金澤21世紀美術館", "金沢21世紀美術館"],
+        "三町老街": ["高山市三町伝統的建造物群保存地区", "三町筋"],
+        "神戶港灣": ["神戸ハーバーランド"],
+        "馬賽克廣場": ["神戸ハーバーランドumie モザイク", "モザイク大観覧車"],
+        "姬路城": ["姫路城"],
+        "書寫山圓教寺": ["書寫山", "書写山"],
+        "书写山圆教寺": ["書寫山", "書写山"],
+        "和平紀念公園": ["平和記念公園", "广岛和平纪念公园"],
+        "原爆圓頂館": ["原爆ドーム"],
+        "博多運河城": ["キャナルシティ博多"],
+        "稻佐山展望台": ["稲佐山山頂展望台", "稲佐山"],
+        "櫻之馬場城彩苑": ["桜の馬場 城彩苑"],
+        "仙巒園": ["仙巖園", "仙巌園"],
+        "備瀨福木林道": ["備瀬のフクギ並木"],
+        "壺屋通": ["壺屋やちむん通り"],
+        "瑞巖寺": ["瑞巌寺"],
+        "松島灣": ["松島海岸", "松島"],
+        "華嚴瀑布": ["華厳滝"],
+        "伊勢神宮內宮": ["皇大神宮（伊勢神宮 内宮）", "伊勢神宮 内宮"],
+        "御蔭橫丁": ["おかげ横丁"],
+        "直島草間彌生南瓜": ["南瓜", "「南瓜」草間彌生"],
+        "萬翠莊": ["萬翠荘"],
+        "血池地獄": ["血の池地獄"],
+        "金鱃湖": ["金鱗湖"],
+        "湯之坪街道": ["湯の坪街道"],
+        "津輕藩睡魔村": ["津軽藩ねぷた村", "ねぶたの家 ワ･ラッセ"],
+        "青森魚菜中心": ["株式会社青森魚菜センター 本店"],
+        "乳頭溫泉鄉": ["乳頭温泉郷 鶴の湯温泉"],
+        "中町通": ["中町商店街振興組合"],
+        "戶隱神社": ["戸隠神社 奥社", "戸隠神社 中社"],
+        "黑部水壩": ["黒部ダム"],
+        "立山黑部路線": ["黒部ダム", "立山ケーブルカー"],
+        "城崎海岸": ["城ヶ崎海岸"],
+        "高野山奧之院": ["高野山奥之院"],
+        "白兔神社": ["白兎神社"],
+    }
+)
+
+
 POI_QUERY_VARIANT_MAP = {
     "溫": "温",
     "稻": "稲",
@@ -768,6 +850,45 @@ POI_QUERY_VARIANT_MAP = {
     "靈": "霊",
     "國": "国",
 }
+
+POI_QUERY_VARIANT_MAP.update(
+    {
+        "\u6dfa": "\u6d45",  # 淺 -> 浅
+        "\u5ee3": "\u5e83",  # 廣 -> 広
+        "\u6a02": "\u697d",  # 樂 -> 楽
+        "\u81fa": "\u53f0",  # 臺 -> 台
+        "\u6ff1": "\u6d5c",  # 濱 -> 浜
+        "\u5cef": "\u5cf0",  # 峯 -> 峰
+        "\u7028": "\u702c",  # 瀨 -> 瀬
+        "\u9f8d": "\u7adc",  # 龍 -> 竜
+        "\u5713": "\u5186",  # 圓 -> 円
+        "\u6afb": "\u685c",  # 櫻 -> 桜
+        "\u9435": "\u9244",  # 鐵 -> 鉄
+        "\u8c50": "\u8c4a",  # 豐 -> 豊
+        "\u6eab": "\u6e29",  # 溫 -> 温
+        "\u89c0": "\u89b3",  # 觀 -> 観
+        "\u79aa": "\u7985",  # 禪 -> 禅
+        "\u6eff": "\u6e80",  # 滿 -> 満
+        "\u7a3b": "\u7a32",  # 稻 -> 稲
+        "\u9748": "\u970a",  # 靈 -> 霊
+        "齋": "斎",
+        "斋": "斎",
+        "佛": "仏",
+        "戶": "戸",
+        "巖": "巌",
+        "鱃": "鱗",
+        "园": "園",
+        "红": "紅",
+        "仓": "倉",
+        "馆": "館",
+        "书": "書",
+        "圆": "円",
+        "黑": "黒",
+        "嚴": "厳",
+        "瀑": "滝",
+        "灣": "湾",
+    }
+)
 
 POI_REGION_PREFIXES = [
     "東京都",
@@ -790,6 +911,135 @@ POI_REGION_PREFIXES = [
     "沖繩",
 ]
 
+POI_REGION_PREFIXES.extend(
+    [
+        "\u6771\u4eac\u90fd",
+        "\u4eac\u90fd\u5e9c",
+        "\u5927\u962a\u5e9c",
+        "\u5317\u6d77\u9053",
+        "\u795e\u5948\u5ddd\u7e23",
+        "\u5343\u8449\u7e23",
+        "\u5948\u826f\u7e23",
+        "\u5175\u5eab\u7e23",
+        "\u9577\u5d0e\u7e23",
+        "\u5927\u5206\u7e23",
+        "\u4f50\u8cc0\u7e23",
+        "\u798f\u5ca1\u7e23",
+        "\u718a\u672c\u7e23",
+        "\u9e7f\u5152\u5cf6\u7e23",
+        "\u6c96\u7e69\u7e23",
+        "\u9752\u68ee\u7e23",
+        "\u79cb\u7530\u7e23",
+        "\u9577\u91ce\u7e23",
+        "\u975c\u5ca1\u7e23",
+        "\u548c\u6b4c\u5c71\u7e23",
+        "\u5cf6\u6839\u7e23",
+        "\u9ce5\u53d6\u7e23",
+        "\u6771\u4eac",
+        "\u4eac\u90fd",
+        "\u5927\u962a",
+        "\u5948\u826f",
+        "\u795e\u6236",
+        "\u9577\u5d0e",
+        "\u5225\u5e9c",
+        "\u5b09\u91ce",
+        "\u672d\u5e4c",
+        "\u5c0f\u6a3d",
+        "\u51fd\u9928",
+        "\u540d\u53e4\u5c4b",
+        "\u91d1\u6fa4",
+        "\u9ad8\u5c71",
+        "\u5ee3\u5cf6",
+        "\u798f\u5ca1",
+        "\u718a\u672c",
+        "\u9e7f\u5152\u5cf6",
+        "\u6c96\u7e69",
+        "\u7bb1\u6839",
+        "\u938c\u5009",
+        "\u4ed9\u53f0",
+        "\u65e5\u5149",
+        "\u4f0a\u52e2",
+        "\u9ad8\u677e",
+        "\u677e\u5c71",
+    ]
+)
+
+POI_REGION_HINTS = [
+    ("\u6771\u4eac", "\u6771\u4eac\u90fd"),
+    ("合羽橋", "\u6771\u4eac\u90fd"),
+    ("\u4eac\u90fd", "\u4eac\u90fd\u5e9c"),
+    ("\u5ca1\u5d0e\u8526\u5c4b", "\u4eac\u90fd\u5e9c"),
+    ("宇治", "\u4eac\u90fd\u5e9c"),
+    ("平等院", "\u4eac\u90fd\u5e9c"),
+    ("\u5927\u962a", "\u5927\u962a\u5e9c"),
+    ("心齋橋", "\u5927\u962a\u5e9c"),
+    ("新世界", "\u5927\u962a\u5e9c"),
+    ("阿倍野", "\u5927\u962a\u5e9c"),
+    ("\u5948\u826f", "\u5948\u826f\u7e23"),
+    ("鎌倉大佛", "\u795e\u5948\u5ddd\u7e23"),
+    ("\u795e\u6236", "\u5175\u5eab\u7e23"),
+    ("神戶港", "\u5175\u5eab\u7e23"),
+    ("馬賽克", "\u5175\u5eab\u7e23"),
+    ("\u59ec\u8def", "\u5175\u5eab\u7e23"),
+    ("姬路", "\u5175\u5eab\u7e23"),
+    ("\u9577\u5d0e", "\u9577\u5d0e\u7e23"),
+    ("\u5225\u5e9c", "\u5927\u5206\u7e23"),
+    ("\u7531\u5e03\u9662", "\u5927\u5206\u7e23"),
+    ("血池地獄", "\u5927\u5206\u7e23"),
+    ("金鱃湖", "\u5927\u5206\u7e23"),
+    ("湯之坪", "\u5927\u5206\u7e23"),
+    ("\u5b09\u91ce", "\u4f50\u8cc0\u7e23"),
+    ("\u4f50\u8cc0", "\u4f50\u8cc0\u7e23"),
+    ("\u798f\u5ca1", "\u798f\u5ca1\u7e23"),
+    ("博多運河城", "\u798f\u5ca1\u7e23"),
+    ("\u718a\u672c", "\u718a\u672c\u7e23"),
+    ("城彩苑", "\u718a\u672c\u7e23"),
+    ("\u9e7f\u5152\u5cf6", "\u9e7f\u5152\u5cf6\u7e23"),
+    ("仙巒園", "\u9e7f\u5152\u5cf6\u7e23"),
+    ("\u6c96\u7e69", "\u6c96\u7e69\u7e23"),
+    ("備瀨", "\u6c96\u7e69\u7e23"),
+    ("壺屋", "\u6c96\u7e69\u7e23"),
+    ("\u672d\u5e4c", "\u5317\u6d77\u9053"),
+    ("\u5c0f\u6a3d", "\u5317\u6d77\u9053"),
+    ("\u51fd\u9928", "\u5317\u6d77\u9053"),
+    ("金森", "\u5317\u6d77\u9053"),
+    ("元町教", "\u5317\u6d77\u9053"),
+    ("\u540d\u53e4\u5c4b", "\u611b\u77e5\u7e23"),
+    ("\u91d1\u6fa4", "\u77f3\u5ddd\u7e23"),
+    ("兼六", "\u77f3\u5ddd\u7e23"),
+    ("茶屋街", "\u77f3\u5ddd\u7e23"),
+    ("二十一世紀", "\u77f3\u5ddd\u7e23"),
+    ("21世紀", "\u77f3\u5ddd\u7e23"),
+    ("\u9ad8\u5c71", "\u5c90\u961c\u7e23"),
+    ("三町", "\u5c90\u961c\u7e23"),
+    ("\u5ee3\u5cf6", "\u5ee3\u5cf6\u7e23"),
+    ("和平紀念", "\u5ee3\u5cf6\u7e23"),
+    ("原爆", "\u5ee3\u5cf6\u7e23"),
+    ("\u5ca1\u5c71", "\u5ca1\u5c71\u7e23"),
+    ("\u4ed9\u53f0", "\u5bae\u57ce\u7e23"),
+    ("瑞巖寺", "\u5bae\u57ce\u7e23"),
+    ("松島", "\u5bae\u57ce\u7e23"),
+    ("\u65e5\u5149", "\u6803\u6728\u7e23"),
+    ("華嚴", "\u6803\u6728\u7e23"),
+    ("\u7bb1\u6839", "\u795e\u5948\u5ddd\u7e23"),
+    ("\u938c\u5009", "\u795e\u5948\u5ddd\u7e23"),
+    ("\u6cb3\u53e3\u6e56", "\u5c71\u68a8\u7e23"),
+    ("伊勢", "\u4e09\u91cd\u7e23"),
+    ("御蔭", "\u4e09\u91cd\u7e23"),
+    ("直島", "\u9999\u5ddd\u7e23"),
+    ("南瓜", "\u9999\u5ddd\u7e23"),
+    ("萬翠", "\u611b\u5a9b\u7e23"),
+    ("津輕", "\u9752\u68ee\u7e23"),
+    ("青森", "\u9752\u68ee\u7e23"),
+    ("乳頭", "\u79cb\u7530\u7e23"),
+    ("戶隱", "\u9577\u91ce\u7e23"),
+    ("中町通", "\u9577\u91ce\u7e23"),
+    ("立山", "\u5bcc\u5c71\u7e23"),
+    ("黑部", "\u5bcc\u5c71\u7e23"),
+    ("城崎海岸", "\u975c\u5ca1\u7e23"),
+    ("高野山", "\u548c\u6b4c\u5c71\u7e23"),
+]
+
 
 def build_text_variants(value: str) -> list[str]:
     variants = [value]
@@ -798,11 +1048,22 @@ def build_text_variants(value: str) -> list[str]:
     return dedupe_keep_order(variants)
 
 
+def infer_poi_region_hints(text: str) -> list[str]:
+    hints: list[str] = []
+    variant_text = " ".join(build_text_variants(text or ""))
+    for keyword, region in POI_REGION_HINTS:
+        if keyword in variant_text:
+            hints.append(region)
+    return dedupe_keep_order(hints)
+
+
 def strip_region_prefixes(value: str) -> list[str]:
     stripped: list[str] = []
     for prefix in POI_REGION_PREFIXES:
-        if value.startswith(prefix) and len(value) > len(prefix) + 1:
-            stripped.append(value[len(prefix) :])
+        if value.startswith(prefix):
+            candidate = value[len(prefix) :].strip()
+            if len(normalize_for_match(candidate)) >= 3:
+                stripped.append(candidate)
     return stripped
 
 
@@ -841,11 +1102,14 @@ def build_poi_lookup_queries(spot_name: str) -> list[str]:
     return dedupe_keep_order([query.strip() for query in queries if query and query.strip()])
 
 
-def fetch_poi_candidates(query: str) -> list[dict[str, Any]]:
+def fetch_poi_candidates(query: str, region: str = "") -> list[dict[str, Any]]:
     if not POI_API_BASE_URL:
         return []
 
-    params = urlencode({"search": query, "page_size": POI_LOOKUP_PAGE_SIZE})
+    params_payload = {"search": query, "page_size": POI_LOOKUP_PAGE_SIZE}
+    if region:
+        params_payload["region"] = region
+    params = urlencode(params_payload)
     request = Request(
         f"{POI_API_BASE_URL}/api/pois/?{params}",
         headers={"Accept": "application/json"},
@@ -879,18 +1143,25 @@ def poi_match_score(spot_name: str, poi: dict[str, Any]) -> float:
     return float(poi.get("static_score") or 0)
 
 
-def lookup_poi_for_spot(spot_name: str) -> tuple[dict[str, Any] | None, str]:
+def lookup_poi_for_spot(spot_name: str, region_hints: list[str] | None = None) -> tuple[dict[str, Any] | None, str]:
     best_poi: dict[str, Any] | None = None
     best_query = ""
     best_score = -1.0
+    regions = dedupe_keep_order(region_hints or [])
 
     for query in build_poi_lookup_queries(spot_name):
-        for candidate in fetch_poi_candidates(query):
-            score = poi_match_score(query, candidate)
-            if score > best_score:
-                best_poi = candidate
-                best_query = query
-                best_score = score
+        for region in regions + [""]:
+            for candidate in fetch_poi_candidates(query, region=region):
+                score = poi_match_score(query, candidate)
+                candidate_region = str(candidate.get("region") or "")
+                if regions and candidate_region and candidate_region not in regions:
+                    continue
+                if region and candidate_region == region:
+                    score += 5.0
+                if score > best_score:
+                    best_poi = candidate
+                    best_query = query
+                    best_score = score
 
     return best_poi, best_query
 
@@ -1003,7 +1274,8 @@ def build_spots_payload(result: dict[str, Any], spot_names: list[str]) -> list[d
             retrieved_chunk_indices=retrieved_chunk_indices,
         )
         excerpt = build_excerpt(name, source_text)
-        poi, poi_query = lookup_poi_for_spot(name)
+        region_hints = infer_poi_region_hints(f"{name} {source_text}")
+        poi, poi_query = lookup_poi_for_spot(name, region_hints=region_hints)
         spots.append(
             build_enriched_spot_payload(
                 spot_name=name,
