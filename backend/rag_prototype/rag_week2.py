@@ -343,17 +343,22 @@ def _build_extraction_prompt(user_query: str, chunks: list[str], chunk_indices: 
     context_text = "\n".join(lines)
 
     return f"""
-你是旅遊資料整理助手。請根據以下內容抽取景點名稱：
-- 只回傳景點名稱清單
-- 不要加入未出現在內容中的地點
-- 每行一個
+你是日本旅遊景點名稱抽取器。請根據使用者問題，從文章段落中抽取「正式景點/設施名稱」。
 
-使用者問題：{user_query}
+輸出規則：
+- 只輸出景點名稱，每行一個。
+- 不要輸出編號、解釋、分類、JSON、Markdown。
+- 不要輸出交通方式、票券、Pass、車站轉乘、住宿名稱、餐廳名稱、地區泛稱、形容詞片語。
+- 如果文字同時有地區和景點，例如「京都清水寺」，優先輸出「清水寺」；如果地區是正式名稱的一部分才保留。
+- 使用原文中最接近正式名稱的寫法，不要自行翻譯或補描述。
+- 沒有明確景點時輸出空白。
 
-檢索內容：
+使用者問題：
+{user_query}
+
+文章段落：
 {context_text}
 """.strip()
-
 
 def _extract_names_from_chunks_with_model(
     *,
