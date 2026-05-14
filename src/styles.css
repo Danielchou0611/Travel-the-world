@@ -47,12 +47,34 @@ body {
 
 .layout__content {
   display: grid;
-  grid-template-columns: 420px 1fr;
+  grid-template-columns: minmax(340px, 420px) minmax(0, 1fr);
+  grid-template-areas:
+    "input map"
+    "results results"
+    "itinerary itinerary";
   gap: 16px;
+  align-items: start;
 }
 
-.left-panel,
+.left-panel {
+  display: contents;
+}
+
+.input-card {
+  grid-area: input;
+}
+
+.results-card {
+  grid-area: results;
+}
+
+.itinerary-card {
+  grid-area: itinerary;
+  width: 100%;
+}
+
 .map-panel {
+  grid-area: map;
   display: grid;
   gap: 14px;
   align-content: start;
@@ -260,7 +282,7 @@ body {
 
 .results-scroll-area {
   margin-top: 10px;
-  max-height: min(56vh, 560px);
+  max-height: min(68vh, 760px);
   overflow-y: auto;
   padding-right: 4px;
   display: grid;
@@ -297,6 +319,7 @@ body {
   padding: 0;
   list-style: none;
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 10px;
 }
 
@@ -307,6 +330,26 @@ body {
   padding: 10px;
   cursor: pointer;
   transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+
+.spot-item--with-image {
+  grid-template-columns: 1fr;
+}
+
+.spot-item__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #d8cab6;
+  background: #f4ede2;
+}
+
+.spot-item__details {
+  min-width: 0;
 }
 
 .spot-item:hover {
@@ -328,8 +371,13 @@ body {
 .spot-item__head {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
+}
+
+.spot-item__head strong {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .spot-item__head-badges {
@@ -394,14 +442,14 @@ body {
 }
 
 .map-card {
-  min-height: 640px;
+  min-height: 520px;
 }
 
 .map-canvas,
 .map-placeholder {
   position: relative;
   width: 100%;
-  min-height: 510px;
+  min-height: 420px;
   border-radius: 18px;
   overflow: hidden;
 }
@@ -488,6 +536,11 @@ body {
 @media (max-width: 980px) {
   .layout__content {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "input"
+      "results"
+      "itinerary"
+      "map";
   }
 
   .map-card {
@@ -500,5 +553,15 @@ body {
 
   .results-scroll-area {
     max-height: 48vh;
+  }
+
+  .spot-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .spot-item__image {
+    max-height: 190px;
   }
 }

@@ -225,6 +225,7 @@ function toSpotFromBackend(name, index, sourceText, backendSpot) {
       reviewsCount,
       tags,
       position,
+      imageUrl: backendSpot.imageUrl || backendSpot.poi?.image_url || "",
       source: backendSpot.source || `RAG #${index + 1}`,
       sourceExcerpt: backendSpot.sourceExcerpt || backendSpot.source_excerpt || "",
       sourceChunkIndex: backendSpot.source_chunk_index || 0,
@@ -477,7 +478,7 @@ export default function MapPlanningPage() {
 
       <section className="layout__content">
         <aside className="left-panel">
-          <Card>
+          <Card className="input-card">
             <CardHeader>
               <CardTitle>RAG 輸入區（已串接後端）</CardTitle>
               <CardDescription>API Endpoint: {ragApiBaseUrl}/api/rag/extract</CardDescription>
@@ -525,7 +526,7 @@ export default function MapPlanningPage() {
             </CardFooter>
           </Card>
 
-          <Card>
+          <Card className="results-card">
             <CardHeader>
               <CardTitle>萃取結果</CardTitle>
               <CardDescription>點擊景點卡可同步右側地圖焦點</CardDescription>
@@ -569,10 +570,24 @@ export default function MapPlanningPage() {
                   <ul className="spot-list">
                     {visibleSpots.map((spot) => (
                       <li
-                        className={`spot-item ${selectedSpot?.name === spot.name ? "spot-item--active" : ""}`}
+                        className={`spot-item ${spot.imageUrl ? "spot-item--with-image" : ""} ${
+                          selectedSpot?.name === spot.name ? "spot-item--active" : ""
+                        }`}
                         key={`${spot.name}-${spot.source}`}
                         onClick={() => setSelectedSpotName(spot.name)}
                       >
+                        {spot.imageUrl ? (
+                          <img
+                            className="spot-item__image"
+                            src={spot.imageUrl}
+                            alt={spot.name}
+                            loading="lazy"
+                            onError={(event) => {
+                              event.currentTarget.style.display = "none";
+                            }}
+                          />
+                        ) : null}
+                        <div className="spot-item__details">
                         <div className="spot-item__head">
                           <strong>{spot.name}</strong>
                           <div className="spot-item__head-badges">
@@ -605,6 +620,7 @@ export default function MapPlanningPage() {
                             加入行程
                           </Button>
                         </div>
+                        </div>
                       </li>
                     ))}
                   </ul>
@@ -628,7 +644,7 @@ export default function MapPlanningPage() {
             </CardFooter>
           </Card>
 
-          <Card>
+          <Card className="itinerary-card">
             <CardHeader>
               <CardTitle>我的行程（Week 3）</CardTitle>
               <CardDescription>加入至少 2 個景點即可在地圖顯示建議路線</CardDescription>
