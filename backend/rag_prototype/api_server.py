@@ -2,9 +2,10 @@ from __future__ import annotations
 
 import os
 import re
+import json
 from typing import Any
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlparse
+from urllib.parse import urlencode, urlparse
 from urllib.request import Request, urlopen
 
 from html.parser import HTMLParser
@@ -19,6 +20,9 @@ from rag_week2 import OLLAMA_BASE_URL, extract_names_with_fallback, list_ollama_
 
 load_dotenv()
 URL_FETCH_MAX_BYTES = int(os.getenv("RAG_URL_FETCH_MAX_BYTES", "4000000"))
+POI_API_BASE_URL = os.getenv("POI_API_BASE_URL", "http://127.0.0.1:8000").rstrip("/")
+POI_LOOKUP_PAGE_SIZE = max(1, int(os.getenv("POI_LOOKUP_PAGE_SIZE", "5")))
+POI_LOOKUP_TIMEOUT_SECONDS = float(os.getenv("POI_LOOKUP_TIMEOUT_SECONDS", "5"))
 ITINERARY_MIN_SPOTS = int(os.getenv("RAG_ITINERARY_MIN_SPOTS", "3"))
 DAY_GROUP_MIN_SPOTS = max(1, int(os.getenv("RAG_DAY_GROUP_MIN_SPOTS", "2")))
 URL_MIN_TOP_K = max(1, int(os.getenv("RAG_URL_MIN_TOP_K", "50")))
@@ -741,6 +745,195 @@ def infer_review_count(spot_name: str, source_text: str, order: int) -> int:
     return 15 + (value % 220)
 
 
+POI_SEARCH_ALIASES = {
+    "東京晴空塔": ["東京スカイツリー", "晴空塔", "Tokyo Skytree"],
+    "晴空塔": ["東京スカイツリー", "Tokyo Skytree"],
+    "東京鐵塔": ["東京タワー", "Tokyo Tower"],
+    "東京铁塔": ["東京タワー", "Tokyo Tower"],
+    "淺草寺": ["浅草寺"],
+    "浅草寺": ["淺草寺"],
+    "澀谷十字路口": ["渋谷スクランブル交差点", "渋谷", "澀谷"],
+    "涩谷十字路口": ["渋谷スクランブル交差点", "渋谷", "涩谷"],
+    "伏見稻荷大社": ["伏見稲荷大社"],
+    "清水寺": ["清水寺"],
+}
+
+
+def _as_float(value: Any) -> float | None:
+    if value is None or value == "":
+        return None
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def _as_int(value: Any, default: int = 0) -> int:
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return default
+
+
+def build_poi_lookup_queries(spot_name: str) -> list[str]:
+    queries = [spot_name]
+    normalized_name = normalize_for_match(spot_name)
+    if normalized_name and normalized_name != spot_name:
+        queries.append(normalized_name)
+
+    for key, aliases in POI_SEARCH_ALIASES.items():
+        if key in spot_name or key in normalized_name:
+            queries.extend(aliases)
+
+    return dedupe_keep_order([query.strip() for query in queries if query and query.strip()])
+
+
+def fetch_poi_candidates(query: str) -> list[dict[str, Any]]:
+    if not POI_API_BASE_URL:
+        return []
+
+    params = urlencode({"search": query, "page_size": POI_LOOKUP_PAGE_SIZE})
+    request = Request(
+        f"{POI_API_BASE_URL}/api/pois/?{params}",
+        headers={"Accept": "application/json"},
+    )
+
+    try:
+        with urlopen(request, timeout=POI_LOOKUP_TIMEOUT_SECONDS) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except (HTTPError, URLError, TimeoutError, OSError, ValueError):
+        return []
+
+    results = payload.get("results", []) if isinstance(payload, dict) else payload
+    return [item for item in results if isinstance(item, dict)]
+
+
+def poi_match_score(spot_name: str, poi: dict[str, Any]) -> float:
+    query_key = normalize_for_match(spot_name).lower()
+    candidate_names = [
+        str(poi.get("name") or ""),
+        str(poi.get("google_name_matched") or ""),
+        str(poi.get("id") or ""),
+    ]
+    candidate_keys = [normalize_for_match(name).lower() for name in candidate_names if name]
+
+    if query_key and query_key in candidate_keys:
+        return 100.0 + float(poi.get("static_score") or 0)
+
+    if query_key and any(query_key in key or key in query_key for key in candidate_keys if key):
+        return 80.0 + float(poi.get("static_score") or 0)
+
+    return float(poi.get("static_score") or 0)
+
+
+def lookup_poi_for_spot(spot_name: str) -> tuple[dict[str, Any] | None, str]:
+    best_poi: dict[str, Any] | None = None
+    best_query = ""
+    best_score = -1.0
+
+    for query in build_poi_lookup_queries(spot_name):
+        for candidate in fetch_poi_candidates(query):
+            score = poi_match_score(query, candidate)
+            if score > best_score:
+                best_poi = candidate
+                best_query = query
+                best_score = score
+
+    return best_poi, best_query
+
+
+def tags_from_poi(poi: dict[str, Any] | None) -> list[str]:
+    if not poi:
+        return ["RAG only"]
+
+    values: list[str] = []
+    category = str(poi.get("category") or "").strip()
+    if category:
+        values.append(category)
+    interests = poi.get("interests") or []
+    if isinstance(interests, list):
+        values.extend(str(item).strip() for item in interests if str(item).strip())
+    return dedupe_keep_order(values) or ["POI"]
+
+
+def build_enriched_spot_payload(
+    spot_name: str,
+    order: int,
+    source_chunk_index: int,
+    source_text: str,
+    source_excerpt: str,
+    poi: dict[str, Any] | None,
+    poi_query: str,
+) -> dict[str, Any]:
+    reason = f"RAG source excerpt: {source_excerpt}" if source_excerpt else "Extracted by RAG from the travel guide."
+
+    if not poi:
+        return {
+            "schema": "rag_enriched_spot_v1",
+            "name": spot_name,
+            "extracted_name": spot_name,
+            "area": "",
+            "rating": "-",
+            "reason": reason,
+            "reviewsCount": 0,
+            "tags": ["RAG only"],
+            "position": None,
+            "source": f"RAG chunk #{source_chunk_index}" if source_chunk_index > 0 else "RAG extracted spot",
+            "sourceExcerpt": source_excerpt,
+            "source_chunk_index": source_chunk_index,
+            "source_text": source_text,
+            "dataInsufficient": True,
+            "poiMatch": {
+                "matched": False,
+                "query": poi_query or spot_name,
+                "apiBaseUrl": POI_API_BASE_URL,
+            },
+            "reviews_count": 0,
+            "is_data_insufficient": True,
+        }
+
+    lat = _as_float(poi.get("lat"))
+    lng = _as_float(poi.get("lng"))
+    review_count = _as_int(poi.get("review_count"), 0)
+    rating = _as_float(poi.get("google_rating"))
+    position = {"lat": lat, "lng": lng} if lat is not None and lng is not None else None
+
+    return {
+        "schema": "rag_enriched_spot_v1",
+        "name": spot_name,
+        "extracted_name": spot_name,
+        "matchedName": poi.get("name") or spot_name,
+        "area": poi.get("region") or "",
+        "rating": f"{rating:.1f}" if rating is not None else "-",
+        "reason": reason,
+        "reviewsCount": review_count,
+        "tags": tags_from_poi(poi),
+        "position": position,
+        "source": f"RAG chunk #{source_chunk_index}; POI database match",
+        "sourceExcerpt": source_excerpt,
+        "source_chunk_index": source_chunk_index,
+        "source_text": source_text,
+        "dataInsufficient": review_count < 50,
+        "poi": {
+            "id": poi.get("id"),
+            "name": poi.get("name"),
+            "google_name_matched": poi.get("google_name_matched"),
+            "category": poi.get("category"),
+            "static_score": poi.get("static_score"),
+            "image_url": poi.get("image_url"),
+            "station_anchor": poi.get("station_anchor"),
+            "distance_to_station_km": poi.get("distance_to_station_km"),
+        },
+        "poiMatch": {
+            "matched": True,
+            "query": poi_query or spot_name,
+            "apiBaseUrl": POI_API_BASE_URL,
+        },
+        "reviews_count": review_count,
+        "is_data_insufficient": review_count < 50,
+    }
+
+
 def build_spots_payload(result: dict[str, Any], spot_names: list[str]) -> list[dict[str, Any]]:
     chunks = result.get("chunks") or []
     retrieved_chunks = result.get("retrieved_chunks") or []
@@ -755,18 +948,17 @@ def build_spots_payload(result: dict[str, Any], spot_names: list[str]) -> list[d
             retrieved_chunk_indices=retrieved_chunk_indices,
         )
         excerpt = build_excerpt(name, source_text)
-        reviews_count = infer_review_count(name, source_text, order)
-
+        poi, poi_query = lookup_poi_for_spot(name)
         spots.append(
-            {
-                "name": name,
-                "source_chunk_index": source_chunk_index,
-                "source_excerpt": excerpt,
-                "source_text": source_text,
-                "xai": f"此景點來源：攻略文章第{source_chunk_index}段" if source_chunk_index > 0 else "此景點來源：待確認",
-                "reviews_count": reviews_count,
-                "is_data_insufficient": reviews_count < 50,
-            }
+            build_enriched_spot_payload(
+                spot_name=name,
+                order=order,
+                source_chunk_index=source_chunk_index,
+                source_text=source_text,
+                source_excerpt=excerpt,
+                poi=poi,
+                poi_query=poi_query,
+            )
         )
 
     return spots
@@ -836,6 +1028,7 @@ def extract_spots(payload: ExtractRequest) -> dict[str, Any]:
     spot_names, spot_clean_debug = clean_spot_names_with_debug(spot_names)
 
     spots = build_spots_payload(result, spot_names)
+    poi_matched_count = sum(1 for spot in spots if spot.get("poiMatch", {}).get("matched"))
     itinerary_groups, group_debug = build_itinerary_groups_with_debug(result, spot_names)
 
     debug_metrics = {
@@ -847,6 +1040,9 @@ def extract_spots(payload: ExtractRequest) -> dict[str, Any]:
         "spot_raw_count": spot_clean_debug.get("raw_count", 0),
         "spot_clean_count": spot_clean_debug.get("clean_count", 0),
         "spot_dropped_count": spot_clean_debug.get("dropped_count", 0),
+        "poi_api_base_url": POI_API_BASE_URL,
+        "poi_matched_count": poi_matched_count,
+        "poi_unmatched_count": max(0, len(spots) - poi_matched_count),
         "group_count": len(itinerary_groups),
         "sections_total": group_debug.get("sections_total", 0),
         "sections_auto_title": group_debug.get("sections_auto_title", 0),

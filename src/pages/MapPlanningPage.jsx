@@ -209,6 +209,31 @@ function toSpotFromBackend(name, index, sourceText, backendSpot) {
   };
   const normalizedName = aliases[cleanedName] || cleanedName;
 
+  if (backendSpot?.schema === "rag_enriched_spot_v1" || backendSpot?.poiMatch) {
+    const reviewsCount = Number(backendSpot.reviewsCount ?? backendSpot.reviews_count ?? 0);
+    const lat = Number(backendSpot.position?.lat);
+    const lng = Number(backendSpot.position?.lng);
+    const position = Number.isFinite(lat) && Number.isFinite(lng) ? { lat, lng } : null;
+    const tags = Array.isArray(backendSpot.tags) && backendSpot.tags.length > 0 ? backendSpot.tags : ["RAG only"];
+
+    return {
+      name: backendSpot.name || normalizedName,
+      matchedName: backendSpot.matchedName || backendSpot.poi?.name || "",
+      area: backendSpot.area || "",
+      rating: String(backendSpot.rating ?? "-"),
+      reason: backendSpot.reason || backendSpot.sourceExcerpt || "",
+      reviewsCount,
+      tags,
+      position,
+      source: backendSpot.source || `RAG #${index + 1}`,
+      sourceExcerpt: backendSpot.sourceExcerpt || backendSpot.source_excerpt || "",
+      sourceChunkIndex: backendSpot.source_chunk_index || 0,
+      dataInsufficient: Boolean(backendSpot.dataInsufficient ?? backendSpot.is_data_insufficient),
+      poi: backendSpot.poi || null,
+      poiMatch: backendSpot.poiMatch || null,
+    };
+  }
+
   const catalogEntry =
     spotCatalog[normalizedName] ||
     Object.entries(spotCatalog).find(([key]) => normalizedName.includes(key) || key.includes(normalizedName))?.[1] ||
@@ -329,9 +354,13 @@ export default function MapPlanningPage() {
 
       const payload = await response.json();
       const names = dedupe((payload.spot_names || []).map((item) => normalizeSpotName(item)));
-      const backendSpotMap = new Map(
-        (payload.spots || []).map((item) => [normalizeSpotName(item.name), item])
-      );
+      const backendSpotMap = new Map();
+      (payload.spots || []).forEach((item) => {
+        backendSpotMap.set(normalizeSpotName(item.name), item);
+        if (item.extracted_name) {
+          backendSpotMap.set(normalizeSpotName(item.extracted_name), item);
+        }
+      });
       const sourceTextForFallback = text || (payload.spots || []).map((item) => item.source_text || "").join("\n");
       const nextSpots = names.map((name, index) =>
         toSpotFromBackend(name, index, sourceTextForFallback, backendSpotMap.get(normalizeSpotName(name)))
