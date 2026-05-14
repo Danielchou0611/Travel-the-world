@@ -759,6 +759,53 @@ POI_SEARCH_ALIASES = {
 }
 
 
+POI_QUERY_VARIANT_MAP = {
+    "溫": "温",
+    "稻": "稲",
+    "觀": "観",
+    "禪": "禅",
+    "滿": "満",
+    "靈": "霊",
+    "國": "国",
+}
+
+POI_REGION_PREFIXES = [
+    "東京都",
+    "京都府",
+    "大阪府",
+    "北海道",
+    "長崎縣",
+    "大分縣",
+    "佐賀縣",
+    "福岡縣",
+    "熊本縣",
+    "鹿兒島縣",
+    "沖繩縣",
+    "長崎",
+    "大分",
+    "佐賀",
+    "福岡",
+    "熊本",
+    "鹿兒島",
+    "沖繩",
+]
+
+
+def build_text_variants(value: str) -> list[str]:
+    variants = [value]
+    for source, replacement in POI_QUERY_VARIANT_MAP.items():
+        variants.extend([item.replace(source, replacement) for item in list(variants) if source in item])
+    return dedupe_keep_order(variants)
+
+
+def strip_region_prefixes(value: str) -> list[str]:
+    stripped: list[str] = []
+    for prefix in POI_REGION_PREFIXES:
+        if value.startswith(prefix) and len(value) > len(prefix) + 1:
+            stripped.append(value[len(prefix) :])
+    return stripped
+
+
 def _as_float(value: Any) -> float | None:
     if value is None or value == "":
         return None
@@ -780,6 +827,12 @@ def build_poi_lookup_queries(spot_name: str) -> list[str]:
     normalized_name = normalize_for_match(spot_name)
     if normalized_name and normalized_name != spot_name:
         queries.append(normalized_name)
+
+    for candidate in list(queries):
+        queries.extend(build_text_variants(candidate))
+        queries.extend(strip_region_prefixes(candidate))
+        for stripped in strip_region_prefixes(candidate):
+            queries.extend(build_text_variants(stripped))
 
     for key, aliases in POI_SEARCH_ALIASES.items():
         if key in spot_name or key in normalized_name:
