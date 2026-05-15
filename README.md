@@ -43,9 +43,9 @@
     ```
 4. **啟動後端伺服器:**
     ```bash
-    uvicorn server:app --reload
+    uvicorn server:app --reload --port 8001
     ```
-    預設會執行在 http://127.0.0.1:8000
+    預設會執行在 http://127.0.0.1:8001
 ### II. **前端設定 (React + Vite)**
 1. **進入前端目錄**：
 ```Bash
@@ -62,6 +62,24 @@ npm install
 npm run dev
 ```
 預設會執行在 http://localhost:5173
+
+4. **啟動後端資料庫**：
+根據Gary's branch的readme進行資料庫初始設定及啟動
+
+Run Migrations
+cd backend
+```Bash
+python manage.py migrate
+```
+
+Import POI Data
+```Bash
+python manage.py import_pois ../japan_with_rating_interest.json --replace
+```
+Start Server
+```Bash
+python manage.py runserver
+```
 ### III. **📁 專案結構簡介**
 ```Bash
 .
@@ -84,4 +102,4 @@ npm run dev
 
 >　gen_gm_ver7.py: 新增可單獨執行的測試範例，解決回傳json沒有圖片的問題    
 
-> Todo: 有些跟RAG中不同的景點沒有圖片
+> 要先啟動Gary的資料庫
