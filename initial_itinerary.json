@@ -1,8 +1,8 @@
 {
-  "id": "trip-2a4e9b7e",
+  "id": "trip-112fcdbf",
   "preferences": {
     "destination": "京都",
-    "days": 3,
+    "days": 5,
     "budget": 30000,
     "interests": [
       "美食",
@@ -14,9 +14,9 @@
     "ragContent": ""
   },
   "summary": {
-    "totalDays": 3,
+    "totalDays": 5,
     "totalBudget": "NT$ 30,000",
-    "totalAttractions": 9,
+    "totalAttractions": 15,
     "avgPerDay": 3.0
   },
   "days": [
@@ -26,16 +26,67 @@
       "attractions": [
         {
           "id": "a01",
-          "name": "京都絞り工芸館",
+          "name": "MIMARU SUITES 京都四条",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGypB_eYCIq17p-ciDpC9rpCM2YhV-aMr_hybxZ3wtCkp4aiMPCqhiUMwZCC1SM9o-P1adUqCa4ANlTcangiOU7fVY-3Z8uSbc-X2g9SlR7l_xAkxlgNS8a-U0gLTqMcqPjliA=w408-h272-k-no",
+          "category": "住宿",
+          "description": "位於京都四条區域的高端套房酒店，提供舒適的住宿環境與便捷的交通。",
+          "duration": "2 小時",
+          "estimatedCost": "¥15,000",
+          "location": "京都・四条",
+          "lat": 35.003,
+          "lng": 135.759,
+          "xai": {
+            "summary": "符合使用者對高品質住宿的需求，位於文化中心地帶。",
+            "scores": [
+              {
+                "label": "交通便利度",
+                "value": 90
+              },
+              {
+                "label": "舒適度",
+                "value": 95
+              }
+            ]
+          }
+        },
+        {
+          "id": "a02",
+          "name": "JAPAN EDITION 京都",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFv_HjYuGvT9MOTedVMRiDnML1gqNAFsZk2gtTTK0YCfJwXweqZQFXNPeuL2eL47clh2E4Ee3unllDnsUv0Ev-AklrX7gUEdGk0eW2g6eHvw_SHdVkz0wPyvHh-BDVpLrrzJSUrHhbtbDgb=w408-h306-k-no",
           "category": "景點",
-          "description": "展示京都傳統的絞染工藝，讓遊客深入了解日本傳統紡織藝術。",
+          "description": "結合現代設計與京都傳統文化的酒店及綜合設施，提供獨特的視覺體驗。",
+          "duration": "2-3 小時",
+          "estimatedCost": "¥5,000",
+          "location": "京都・中京区",
+          "lat": 35.011,
+          "lng": 135.765,
+          "xai": {
+            "summary": "將現代設計與文化元素融合，符合使用者對文化的興趣。",
+            "scores": [
+              {
+                "label": "文化符合度",
+                "value": 90
+              },
+              {
+                "label": "人氣熱度",
+                "value": 85
+              }
+            ]
+          }
+        },
+        {
+          "id": "a03",
+          "name": "ROJIYU KYOTO ‐路地湯 京都‐",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEtl2h8qBdZ6g1r6Lt0mqy72mwPruzfUn37YCxXddDJ1UMVbDxblNPTXkg4CUC1ob_sfjSU_eh1kE1cM9an7S8-eD25e34OEuLG4TKJvoxx2axLN1xZjhLDjv_amuu3Zki4x_b6FQ=w408-h271-k-no",
+          "category": "景點",
+          "description": "體驗京都傳統路地湯（公共浴場）文化，感受當地人的生活氣息。",
           "duration": "2 小時",
           "estimatedCost": "¥1,000",
           "location": "京都・中京区",
-          "lat": 35.011,
-          "lng": 135.758,
+          "lat": 35.005,
+          "lng": 135.762,
           "xai": {
-            "summary": "符合使用者對文化的興趣，展示傳統工藝之美。",
+            "summary": "深度體驗京都文化，符合使用者對文化探索的偏好。",
             "scores": [
               {
                 "label": "文化符合度",
@@ -46,58 +97,7 @@
                 "value": 80
               }
             ]
-          },
-          "image": ""
-        },
-        {
-          "id": "a02",
-          "name": "鴨川デルタ",
-          "category": "景點",
-          "description": "鴨川與高野川的匯流處，是京都當地人放鬆與散步的熱門地點。",
-          "duration": "1.5 小時",
-          "estimatedCost": "免費",
-          "location": "京都・上京区",
-          "lat": 35.03,
-          "lng": 135.771,
-          "xai": {
-            "summary": "提供放鬆的文化氛圍，適合步調適中的行程。",
-            "scores": [
-              {
-                "label": "人氣熱度",
-                "value": 85
-              },
-              {
-                "label": "交通便利度",
-                "value": 90
-              }
-            ]
-          },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%B4%A8%E5%B7%9D%E3%83%87%E3%83%AB%E3%82%BF3.jpg"
-        },
-        {
-          "id": "a03",
-          "name": "錦市場",
-          "category": "美食",
-          "description": "被稱為「京都的廚房」，聚集了大量當地食材與美食小吃。",
-          "duration": "2 小時",
-          "estimatedCost": "¥3,000",
-          "location": "京都・中京区",
-          "lat": 35.005,
-          "lng": 135.765,
-          "xai": {
-            "summary": "完美符合使用者對美食的興趣，體驗在地飲食文化。",
-            "scores": [
-              {
-                "label": "美食符合度",
-                "value": 100
-              },
-              {
-                "label": "人氣熱度",
-                "value": 95
-              }
-            ]
-          },
-          "image": ""
+          }
         }
       ]
     },
@@ -106,20 +106,46 @@
       "date": "第2天",
       "attractions": [
         {
-          "id": "b01",
-          "name": "京都鐵道博物館",
+          "id": "a04",
+          "name": "忍者ハウス京都 NINJA HOUSE KYOTO",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHLEQph7pZlPM0QiLRrnuENZFwyfqzCy7HAwEGzzAj4PEar-VyuFmzMmxIUVoX2z60RiXQguISPaf3iT5fb5IsAXsQasp7okMup9qGmILBIchnzjegmOaxWI0Pp8tuRNzAtqz-PpcTNWdFX=w408-h612-k-no",
           "category": "景點",
-          "description": "日本頂級的鐵道博物館，展示從蒸汽機車到新幹線的演進。",
-          "duration": "3 小時",
-          "estimatedCost": "¥1,500",
+          "description": "互動式體驗館，讓遊客體驗忍者文化與技巧。",
+          "duration": "2-3 小時",
+          "estimatedCost": "¥3,000",
           "location": "京都・下京区",
-          "lat": 34.987,
-          "lng": 135.743,
+          "lat": 34.992,
+          "lng": 135.755,
           "xai": {
-            "summary": "結合科學與文化，提供豐富的視覺體驗。",
+            "summary": "提供有趣的文化互動體驗，符合使用者對文化的興趣。",
             "scores": [
               {
                 "label": "興趣符合度",
+                "value": 85
+              },
+              {
+                "label": "人氣熱度",
+                "value": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "a05",
+          "name": "kindal カインドオル 京都店",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFti3fF0709QBHnsJNQGa55ZHvHLrd-DJqUoBWZ9nEJ7b6EpVzHgfEINejrsoOuxAB1skuukRzAIxY_jr1yk0C7ePdYKqC9joeomJFgFNi9vJfnTtSDFQ_656b2VJ9yyKDxdPzwizrY18KW=w408-h360-k-no",
+          "category": "購物",
+          "description": "高品質的二手精品店，適合在京都街頭漫步購物。",
+          "duration": "2 小時",
+          "estimatedCost": "視消費而定",
+          "location": "京都・下京区",
+          "lat": 34.995,
+          "lng": 135.761,
+          "xai": {
+            "summary": "均衡安排購物與觀光，增加行程豐富度。",
+            "scores": [
+              {
+                "label": "購物體驗",
                 "value": 80
               },
               {
@@ -127,58 +153,32 @@
                 "value": 85
               }
             ]
-          },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Railway%20Museum%2C%20enkei.jpg"
+          }
         },
         {
-          "id": "b02",
-          "name": "京都清宗根付館",
-          "category": "景點",
-          "description": "專門展出「根付」微雕藝術的博物館，展現極致的日本工藝。",
-          "duration": "1.5 小時",
-          "estimatedCost": "¥1,000",
-          "location": "京都・中京区",
-          "lat": 35.012,
-          "lng": 135.762,
-          "xai": {
-            "summary": "深度文化體驗，符合使用者對傳統藝術的偏好。",
-            "scores": [
-              {
-                "label": "文化符合度",
-                "value": 90
-              },
-              {
-                "label": "人氣熱度",
-                "value": 70
-              }
-            ]
-          },
-          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Netsuke%20art%20museum%20%28Kyoto%29%20Minka%20outdoor%20hdsr%20S5%20a2.jpg"
-        },
-        {
-          "id": "b03",
-          "name": "祇園 懷石料理",
+          "id": "a06",
+          "name": "casino bar Leje 京都",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEjPOVdLnjs1s7aZOu6auAASBwjQe5iqpeiT7W_vbzMb5192QGRRniNBSG-zBmSdWmJA3qcKgvJ1FNzNHFX-n3Gwhs0YBWn1476J7E9vRolHRBFAX62J9P83oRlTMsTFg94qm4=w408-h306-k-no",
           "category": "美食",
-          "description": "在京都最具代表性的祇園地區享用精緻的傳統懷石料理。",
-          "duration": "2.5 小時",
-          "estimatedCost": "¥15,000",
-          "location": "京都・東山区",
-          "lat": 35.002,
-          "lng": 135.775,
+          "description": "結合賭場風格的酒吧，提供獨特的飲品與小食。",
+          "duration": "2 小時",
+          "estimatedCost": "¥3,000",
+          "location": "京都・下京区",
+          "lat": 34.998,
+          "lng": 135.763,
           "xai": {
-            "summary": "頂級美食體驗，將文化與飲食完美結合。",
+            "summary": "符合使用者對美食與獨特氛圍的追求。",
             "scores": [
               {
                 "label": "美食符合度",
-                "value": 100
+                "value": 80
               },
               {
-                "label": "文化符合度",
-                "value": 95
+                "label": "氛圍感",
+                "value": 90
               }
             ]
-          },
-          "image": ""
+          }
         }
       ]
     },
@@ -187,82 +187,244 @@
       "date": "第3天",
       "attractions": [
         {
-          "id": "c01",
-          "name": "チームラボ バイオヴォルテックス 京都",
+          "id": "a07",
+          "name": "ギャラリー京都寺町菜の花",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHyjbXNU8u6zglNAdpSwOYIqeLAp92tsWBk2uK4HTW_ChFdBPIilnEXfZpF1FWyyKoF1h5NHyjzwY0NhaTtB5nqNYQEJ17RBPg8Pr1WmSJSZ-ZH0YVg_j5hu2hz9yeImJLlldZb=w408-h544-k-no",
           "category": "景點",
-          "description": "將數位藝術與生物學概念結合的沉浸式藝術體驗。",
-          "duration": "2 小時",
-          "estimatedCost": "¥2,500",
-          "location": "京都",
-          "lat": 35.015,
-          "lng": 135.76,
+          "description": "展示京都傳統工藝與藝術的畫廊，感受靜謐的藝術氛圍。",
+          "duration": "1-2 小時",
+          "estimatedCost": "免費",
+          "location": "京都・中京区",
+          "lat": 35.012,
+          "lng": 135.768,
           "xai": {
-            "summary": "現代文化藝術體驗，為行程增加多樣性。",
+            "summary": "深度文化體驗，符合使用者對文化的興趣。",
             "scores": [
               {
-                "label": "興趣符合度",
+                "label": "文化符合度",
+                "value": 90
+              },
+              {
+                "label": "靜謐度",
+                "value": 85
+              }
+            ]
+          }
+        },
+        {
+          "id": "a08",
+          "name": "京都の自然200選 船岡山",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHMrQv9FQDxOiEcKrJwDtKME7XUEzgsduLsMdjI1tn9LQpKSwVNrQnwTplx_Jg-d1flF-A0EDFJ6ku5OGyV4SY6ZPaWDW-cXcolqcLFwqi_KxvEFoV1bxzkG9il9lgK8_wivRZ9dA=w408-h241-k-no",
+          "category": "景點",
+          "description": "可俯瞰京都全市景觀的自然山丘，適合散步與放鬆。",
+          "duration": "2 小時",
+          "estimatedCost": "免費",
+          "location": "京都・上京区",
+          "lat": 35.031,
+          "lng": 135.761,
+          "xai": {
+            "summary": "自然景觀與文化地理的結合，符合使用者偏好。",
+            "scores": [
+              {
+                "label": "自然符合度",
                 "value": 85
               },
               {
-                "label": "人氣熱度",
-                "value": 90
+                "label": "交通便利度",
+                "value": 70
               }
             ]
-          },
-          "image": ""
+          }
         },
         {
-          "id": "c02",
-          "name": "清水寺",
-          "category": "景點",
-          "description": "京都最著名的世界文化遺產，以懸空的木造舞台聞名。",
-          "duration": "2.5 小時",
-          "estimatedCost": "¥500",
-          "location": "京都・東山区",
-          "lat": 34.994,
-          "lng": 135.785,
-          "xai": {
-            "summary": "必訪的文化地標，符合使用者對文化探索的需求。",
-            "scores": [
-              {
-                "label": "文化符合度",
-                "value": 100
-              },
-              {
-                "label": "人氣熱度",
-                "value": 100
-              }
-            ]
-          },
-          "image": ""
-        },
-        {
-          "id": "c03",
-          "name": "宇治抹茶甜點",
+          "id": "a09",
+          "name": "錦市場",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFv_HjYuGvT9MOTedVMRiDnML1gqNAFsZk2gtTTK0YCfJwXweqZQFXNPeuL2eL47clh2E4Ee3unllDnsUv0Ev-AklrX7gUEdGk0eW2g6eHvw_SHdVkz0wPyvHh-BDVpLrrzJSUrHhbtbDgb=w408-h306-k-no",
           "category": "美食",
-          "description": "前往宇治品嚐最正宗的抹茶甜點與濃郁的抹茶茶飲。",
-          "duration": "2 小時",
-          "estimatedCost": "¥2,000",
-          "location": "京都・宇治市",
-          "lat": 34.89,
-          "lng": 135.84,
+          "description": "京都的廚房，提供各種傳統美食與在地食材。",
+          "duration": "2-3 小時",
+          "estimatedCost": "¥3,000",
+          "location": "京都・中京区",
+          "lat": 35.005,
+          "lng": 135.765,
           "xai": {
-            "summary": "美食與文化結合，體驗京都特有的茶道文化。",
+            "summary": "極高符合度之美食景點，滿足使用者對美食的興趣。",
             "scores": [
               {
                 "label": "美食符合度",
-                "value": 95
+                "value": 100
               },
               {
+                "label": "人氣熱度",
+                "value": 95
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "date": "第4天",
+      "attractions": [
+        {
+          "id": "a10",
+          "name": "Japan Jackets Dept \"tow\"",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGdE6DnDSXHt54G9aYparBKXw05-rbCENGaUqBL1oDb6R3H1FJY6ABFjflIAmToTNTtEfVTjFwCffHDEvEh89ticd4n92WGahMw1tqrzWZbbn2oAlBZ0Ik-243EdVDS6z3kldNi=w408-h725-k-no",
+          "category": "購物",
+          "description": "專營京都風格的刺繡夾克，結合傳統與現代時尚。",
+          "duration": "1-2 小時",
+          "estimatedCost": "視消費而定",
+          "location": "京都・下京区",
+          "lat": 34.991,
+          "lng": 135.762,
+          "xai": {
+            "summary": "文化與時尚的結合，符合使用者對文化的興趣。",
+            "scores": [
+              {
                 "label": "文化符合度",
+                "value": 80
+              },
+              {
+                "label": "購物體驗",
+                "value": 85
+              }
+            ]
+          }
+        },
+        {
+          "id": "a11",
+          "name": "京都大学花山天文台別館",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF0tf2ceT2hfn2gjXd7FCtWHDM2r14_ydRRCW7ipuZUkQ0Dihnz4F6VUzSds1btXAvkHmIiADJGSECgbrcUXviXXbmhAxzvgL9U1dyPOAROAY5bixmozw3qbtki3qU2-4W4wJUB=w408-h544-k-no",
+          "category": "景點",
+          "description": "具有歷史價值的天文台別館，探索科學與歷史的交集。",
+          "duration": "1-2 小時",
+          "estimatedCost": "免費",
+          "location": "京都・山科区",
+          "lat": 34.971,
+          "lng": 135.801,
+          "xai": {
+            "summary": "文化與科學的結合，增加行程的多樣性。",
+            "scores": [
+              {
+                "label": "文化符合度",
+                "value": 70
+              },
+              {
+                "label": "交通便利度",
+                "value": 60
+              }
+            ]
+          }
+        },
+        {
+          "id": "a12",
+          "name": "祇園",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFv_HjYuGvT9MOTedVMRiDnML1gqNAFsZk2gtTTK0YCfJwXweqZQFXNPeuL2eL47clh2E4Ee3unllDnsUv0Ev-AklrX7gUEdGk0eW2g6eHvw_SHdVkz0wPyvHh-BDVpLrrzJSUrHhbtbDgb=w408-h306-k-no",
+          "category": "景點",
+          "description": "京都最著名的藝伎區，充滿傳統建築與文化氛圍。",
+          "duration": "2-3 小時",
+          "estimatedCost": "免費",
+          "location": "京都・東山区",
+          "lat": 35.003,
+          "lng": 135.775,
+          "xai": {
+            "summary": "核心文化景點，極高符合度，滿足使用者對文化的興趣。",
+            "scores": [
+              {
+                "label": "文化符合度",
+                "value": 100
+              },
+              {
+                "label": "人氣熱度",
+                "value": 95
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "date": "第5天",
+      "attractions": [
+        {
+          "id": "a13",
+          "name": "京都市花き地方卸売市場京都府花商協同組合",
+          "image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=Z5P72E-sYqY1_Yorr1B9Xw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=176.27493&pitch=0&thumbfov=100",
+          "category": "購物",
+          "description": "體驗京都的花卉市場，感受在地生活與美學。",
+          "duration": "1-2 小時",
+          "estimatedCost": "¥1,000",
+          "location": "京都・下京区",
+          "lat": 34.981,
+          "lng": 135.741,
+          "xai": {
+            "summary": "文化與生活美學的結合，符合使用者偏好。",
+            "scores": [
+              {
+                "label": "文化符合度",
+                "value": 75
+              },
+              {
+                "label": "交通便利度",
+                "value": 80
+              }
+            ]
+          }
+        },
+        {
+          "id": "a14",
+          "name": "グランツケイ京都駅",
+          "image": "https://lh3.googleusercontent.com/gps-proxy/ALd4DhGy5xXgt0hK4bW8HU1sVQSQ8SZZpNi8M_JSKtUzPbOmre_ZvGS4GUzd-GCzyoURSa12OkkJ0YPsy7xSrzHtdU7HKvpRUbBvSsyjWV7fpBMMY4KOP71vIKtm-cwCiUHvl-B6kOzbUWMTWAd1EFolcWZv7BdrBpOYZFL0lsiW8mGx9uTp8S0yPPga=w408-h306-k-no",
+          "category": "景點",
+          "description": "位於京都車站附近的便捷設施，適合在離開前最後的採買與休息。",
+          "duration": "1-2 小時",
+          "estimatedCost": "¥2,000",
+          "location": "京都・下京区",
+          "lat": 34.985,
+          "lng": 135.759,
+          "xai": {
+            "summary": "交通便利，方便使用者在行程結束前進行最後的調整。",
+            "scores": [
+              {
+                "label": "交通便利度",
+                "value": 100
+              },
+              {
+                "label": "便利度",
                 "value": 90
               }
             ]
-          },
-          "image": ""
+          }
+        },
+        {
+          "id": "a15",
+          "name": "京都車站美食街",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFv_HjYuGvT9MOTedVMRiDnML1gqNAFsZk2gtTTK0YCfJwXweqZQFXNPeuL2eL47clh2E4Ee3unllDnsUv0Ev-AklrX7gUEdGk0eW2g6eHvw_SHdVkz0wPyvHh-BDVpLrrzJSUrHhbtbDgb=w408-h306-k-no",
+          "category": "美食",
+          "description": "聚集大量高品質京都美食，適合在離開前享受最後一餐。",
+          "duration": "2 小時",
+          "estimatedCost": "¥4,000",
+          "location": "京都・下京区",
+          "lat": 34.985,
+          "lng": 135.759,
+          "xai": {
+            "summary": "滿足使用者對美食的興趣，且交通極其便利。",
+            "scores": [
+              {
+                "label": "美食符合度",
+                "value": 90
+              },
+              {
+                "label": "交通便利度",
+                "value": 100
+              }
+            ]
+          }
         }
       ]
     }
   ],
-  "generatedAt": "2026-05-08T08:43:25Z"
+  "generatedAt": "2026-05-15T13:13:05Z"
 }
