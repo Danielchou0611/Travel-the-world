@@ -73,6 +73,8 @@
   依偏好產生推薦結果
 
 ## Setup
+###
+unzip japan_restaurant_with_rating_interest.json.zip
 
 ### 1. Create Virtualenv
 

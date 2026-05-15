@@ -25,4 +25,6 @@ htmlcov/
 .pytest_cache/
 .mypy_cache/
 
-raw-data/tourism/
+
+raw-data/
+japan_restaurant_with_rating_interest.json
