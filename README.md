@@ -1,22 +1,23 @@
 # Travel The World Gary
 
-這個 repo 目前包含三個主要部分：
+這個 repo 目前包含四個主要部分：
 
 - `pipeline/`：整理與產出日本景點資料
+- `pipeline-restaurant/`：整理與產出日本餐廳資料
 - `demo-web/`：靜態 demo 頁面
 - `backend/`：Django + DRF 推薦 API
 
-這次新增的重點是把 recommendation backend 補完整，讓前端可以直接打 API 取得景點與推薦結果。
+目前 backend 已可同時提供景點與餐廳資料查詢與推薦，前端可直接打 API 取得結果。
 
 ## This Round: What Was Added
 
 本次主要完成：
 
 1. 建立 Django + DRF backend 骨架
-2. 建立 POI、user preference、recommendation log 資料表
-3. 實作 POI API 與 recommendation API
-4. 加入 JSON 匯入指令，讓 `japan_with_rating_interest.json` 可以進 DB
-5. 加入 smoke test 與 user preference test script
+2. 建立 POI、Restaurant、user preference、recommendation log 資料表
+3. 實作景點 API、景點 recommendation API、餐廳 API、餐廳 recommendation API
+4. 加入 JSON 匯入指令，讓 `japan_with_rating_interest.json` 與 `japan_restaurant_with_rating_interest.json` 可以進 DB
+5. 加入 smoke test、strict restaurant test 與 user preference test script
 6. 補上前端偏好欄位 spec 文件
 7. 整理 repo `.gitignore`
 
@@ -28,10 +29,13 @@
 │   ├── config/
 │   ├── recommendations/
 │   ├── test_api.sh
+│   ├── test_restaurants.sh
+│   ├── test_restaurants_strict.sh
 │   ├── test_user_preferences.sh
 │   └── manage.py
 ├── demo-web/
 ├── doc/
+├── japan_restaurant_with_rating_interest.json.zip
 ├── pipeline/
 ├── japan_with_rating_interest.json
 ├── requirements.txt
@@ -49,9 +53,10 @@
 
 ### Main Models
 
-定義在 [backend/recommendations/models.py](/Users/liguanlin/Desktop/github/1142-webapp/Travel-the-world-Gary/backend/recommendations/models.py:1)：
+定義在 `backend/recommendations/models.py`：
 
 - `PointOfInterest`
+- `Restaurant`
 - `UserPreferenceProfile`
 - `RecommendationQueryLog`
 
@@ -65,6 +70,14 @@
   取得景點列表，可用 `region`、`category`、`search`、`interests`
 - `GET /api/pois/{poi_id}/`
   取得單一景點
+- `GET /api/restaurants/`
+  取得餐廳列表，可用 `region`、`category`、`venue_type`、`search`
+- `GET /api/restaurants/{restaurant_id}/`
+  取得單一餐廳
+- `GET /api/restaurants/metadata/`
+  取得 `regions`、`categories`、`venue_types`、`restaurant_count`
+- `POST /api/restaurants/recommendations/`
+  依地區 / 類別 / 座標半徑取得餐廳推薦，排序依 `static_score`
 - `PUT /api/users/{user_id}/preferences/`
   儲存使用者偏好
 - `GET /api/users/{user_id}/preferences/`
@@ -73,8 +86,9 @@
   依偏好產生推薦結果
 
 ## Setup
-###
+```bash
 unzip japan_restaurant_with_rating_interest.json.zip
+```
 
 ### 1. Create Virtualenv
 
@@ -99,7 +113,15 @@ python manage.py import_pois ../japan_with_rating_interest.json --replace
 
 目前已驗證可成功匯入約 4003 筆 POI。
 
-### 4. Start Server
+### 4. Import Restaurant Data
+
+```bash
+python manage.py import_restaurants ../japan_restaurant_with_rating_interest.json
+```
+
+目前已驗證可成功匯入約 175979 筆餐廳資料。
+
+### 5. Start Server
 
 ```bash
 python manage.py runserver
@@ -110,6 +132,8 @@ python manage.py runserver
 - [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 - [http://127.0.0.1:8000/api/metadata/](http://127.0.0.1:8000/api/metadata/)
 - [http://127.0.0.1:8000/api/pois/](http://127.0.0.1:8000/api/pois/)
+- [http://127.0.0.1:8000/api/restaurants/](http://127.0.0.1:8000/api/restaurants/)
+- [http://127.0.0.1:8000/api/restaurants/metadata/](http://127.0.0.1:8000/api/restaurants/metadata/)
 
 ## Test Flow
 
@@ -127,6 +151,38 @@ python manage.py runserver
 - metadata endpoint
 - POI list endpoint
 - recommendation endpoint
+
+### Restaurant Smoke Test
+
+在 repo root 執行：
+
+```bash
+./backend/test_restaurants.sh
+```
+
+這會測：
+
+- restaurant metadata endpoint
+- restaurant list endpoint
+- region recommendation
+- region + category recommendation
+- nearby recommendation
+- nearby + category recommendation
+
+### Restaurant Strict Test
+
+在 repo root 執行：
+
+```bash
+./backend/test_restaurants_strict.sh
+```
+
+這會額外驗證：
+
+- `final_score == static_score`
+- nearby 結果 `distance_m <= radius_m`
+- 東京列表與拉麵列表的篩選正確
+- 缺 `lat` 或 `lng` 時會回 validation error
 
 ### User Preference Test
 
@@ -162,6 +218,7 @@ python manage.py test
 - interest tag 缺值預設為 `0`
 - matching interest 會排比較前面
 - user preference 可被 recommendation API 重用
+- restaurant list / metadata / recommendation / nearby API
 
 ## Frontend Integration
 
@@ -172,9 +229,19 @@ python manage.py test
 - `top_k`
 - `interest_preferences`
 
+若是餐廳推薦，第一版可直接帶：
+
+- `region`
+- `category`
+- `venue_type`
+- `lat`
+- `lng`
+- `radius_m`
+- `top_k`
+
 完整規格在：
 
-- [doc/frontend_user_preference_spec.md](/Users/liguanlin/Desktop/github/1142-webapp/Travel-the-world-Gary/doc/frontend_user_preference_spec.md:1)
+- `doc/frontend_user_preference_spec.md`
 
 ### Example: Save Preference
 
@@ -204,12 +271,34 @@ python manage.py test
 }
 ```
 
+### Example: Get Restaurant Recommendations
+
+```json
+{
+  "region": "東京都",
+  "category": "拉麵",
+  "top_k": 10
+}
+```
+
+### Example: Get Nearby Restaurant Recommendations
+
+```json
+{
+  "lat": 35.681236,
+  "lng": 139.767125,
+  "radius_m": 300,
+  "top_k": 10
+}
+```
+
 ## Related Docs
 
-- [backend/README.md](/Users/liguanlin/Desktop/github/1142-webapp/Travel-the-world-Gary/backend/README.md:1)
-- [pipeline/README.md](/Users/liguanlin/Desktop/github/1142-webapp/Travel-the-world-Gary/pipeline/README.md:1)
-- [doc/recommendation_api_plan.md](/Users/liguanlin/Desktop/github/1142-webapp/Travel-the-world-Gary/doc/recommendation_api_plan.md:1)
-- [doc/frontend_user_preference_spec.md](/Users/liguanlin/Desktop/github/1142-webapp/Travel-the-world-Gary/doc/frontend_user_preference_spec.md:1)
+- `backend/README.md`
+- `pipeline/README.md`
+- `doc/recommendation_api_plan.md`
+- `doc/frontend_user_preference_spec.md`
+- `doc/restaurant_regions_categories.md`
 
 ## Git Ignore
 
@@ -226,6 +315,7 @@ python manage.py test
 ## Notes
 
 - `japan_with_rating_interest.json` 目前被當成可匯入、可 demo 的資料檔，沒有先忽略
+- `japan_restaurant_with_rating_interest.json` 體積較大，目前以 zip 形式放在 repo 外層來源流程中使用
 - `pipeline/output/` 是否要進版控，取決於你們團隊要不要把它視為 build artifact
 - 若下一步要給前端正式串接，通常會再補：
   - CORS
