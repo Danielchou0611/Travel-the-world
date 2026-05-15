@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import ParticleBackground from "../components/ParticleBackground";
+import { generateTrip, MOCK_TRIP_FALLBACK } from "../services/api";
 
 const INTERESTS = [
   { emoji: "⛩", label: "文化" },
@@ -36,23 +37,26 @@ export default function PlanJPage() {
     );
   }
 
-  function handleGenerate() {
+  async function handleGenerate() {
     setLoading(true);
     const prefs = {
       mbtiType: "j",
-      days,
-      budget,
-      explorationStyle,
-      foodVsAttractions,
-      natureVsCity,
-      crowdTolerance,
-      interests,
-      mustVisit,
-      specialRequirements,
+      destination: "京都",
+      days, budget,
+      explorationStyle, foodVsAttractions, natureVsCity, crowdTolerance,
+      interests, mustVisit, specialRequirements,
     };
-    // 暫存到 sessionStorage,讓 /plan (MapPlanningPage) 之後可取用
     sessionStorage.setItem("occupath_prefs", JSON.stringify(prefs));
-    setTimeout(() => navigate("/plan"), 600);
+
+    let trip;
+    try {
+      const res = await generateTrip(prefs);
+      trip = res.trip || res.itinerary || res;
+    } catch (err) {
+      console.warn("Wen :8001 無回應,使用 MOCK_TRIP fallback:", err.message);
+      trip = { ...MOCK_TRIP_FALLBACK, preferences: { ...MOCK_TRIP_FALLBACK.preferences, ...prefs } };
+    }
+    navigate("/itinerary", { state: { trip } });
   }
 
   return (

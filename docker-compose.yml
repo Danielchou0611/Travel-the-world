@@ -1,0 +1,58 @@
+# Occupath v0 — 三後端服務 docker-compose
+# 使用方式:
+#   1. 先把 5 個 branch 用 git worktree 拉到 ../branches/
+#      (見 scripts/setup-worktrees.sh)
+#   2. cp .env.example .env 並填入 GEMINI_API_KEY / GOOGLE_MAPS_API_KEY
+#   3. docker compose up --build
+#
+# Port 配置:
+#   - Django(李冠霖):8000  → 景點資料 + 評分
+#   - Wen FastAPI(Gemini):8001 → 行程生成 + 對話修改
+#   - Austin RAG:8010      → 攻略文字 → 景點萃取
+
+version: "3.9"
+
+services:
+  django:
+    image: python:3.11-slim
+    working_dir: /app
+    volumes:
+      - ../branches/Gary:/app
+    command: >
+      bash -c "pip install -q -r requirements.txt &&
+               cd backend && python manage.py migrate --noinput &&
+               python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+    environment:
+      - DJANGO_DEBUG=1
+
+  wen:
+    image: python:3.11-slim
+    working_dir: /app
+    volumes:
+      - ../branches/wen:/app
+    command: >
+      bash -c "pip install -q fastapi uvicorn google-generativeai pydantic &&
+               uvicorn server:app --host 0.0.0.0 --port 8001 --reload"
+    ports:
+      - "8001:8001"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+
+  austin-rag:
+    image: python:3.11-slim
+    working_dir: /app
+    volumes:
+      - ./backend/rag_prototype:/app
+    command: >
+      bash -c "pip install -q -r requirements.txt &&
+               python api_server.py"
+    ports:
+      - "8010:8010"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - GOOGLE_MAPS_API_KEY=${GOOGLE_MAPS_API_KEY}
+
+# Ollama 需另起(macOS 上跑本機,不入 compose):
+#   brew install ollama && ollama serve && ollama pull llama3.2

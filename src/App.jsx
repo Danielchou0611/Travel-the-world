@@ -5,6 +5,7 @@ import MapPlanningPage from "./pages/MapPlanningPage";
 import ExplorePage from "./pages/ExplorePage";
 import PlanJPage from "./pages/PlanJPage";
 import PlanPPage from "./pages/PlanPPage";
+import ItineraryPage from "./pages/ItineraryPage";
 import CursorTrail from "./components/CursorTrail";
 
 export default function App() {
@@ -33,6 +34,10 @@ export default function App() {
 
         {/* P 人 flow · 結果:4 個 day theme + 卡片刷新(無時間表)*/}
         <Route path="/plan-p" element={<PlanPPage />} />
+
+        {/* 主產品層:Wen Gemini 生成的行程 + Day tab + ChatBox + What-if(Apple port) */}
+        <Route path="/itinerary" element={<ItineraryPage />} />
+        <Route path="/itinerary/:tripId" element={<ItineraryPage />} />
 
         {/* fallback */}
         <Route path="*" element={<Navigate to="/quiz" replace />} />
