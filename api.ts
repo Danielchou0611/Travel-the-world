@@ -523,7 +523,7 @@ export const MOCK_TRIP: Trip = {
 
 export async function generateTrip(preferences: TripPreferences): Promise<Trip> {
   try {
-    const response = await fetch('http://127.0.0.1:8000/api/generate', {
+    const response = await fetch('http://127.0.0.1:8001/api/generate', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
