@@ -5,17 +5,29 @@ from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from .models import PointOfInterest, RecommendationQueryLog, UserPreferenceProfile
+from .models import PointOfInterest, RecommendationQueryLog, Restaurant, UserPreferenceProfile
 from .serializers import (
     PointOfInterestSerializer,
     RecommendationRequestSerializer,
+    RestaurantRecommendationRequestSerializer,
+    RestaurantSerializer,
     UserPreferenceProfileSerializer,
     UserPreferenceUpsertSerializer,
 )
-from .services import compute_recommendation_score, normalize_preferences
+from .services import (
+    build_bounding_box,
+    compute_recommendation_score,
+    haversine_distance_meters,
+    normalize_preferences,
+)
 
 
 class PoiPagination(PageNumberPagination):
+    page_size_query_param = "page_size"
+    max_page_size = 5000
+
+
+class RestaurantPagination(PageNumberPagination):
     page_size_query_param = "page_size"
     max_page_size = 5000
 
@@ -86,6 +98,66 @@ class MetadataView(APIView):
                 "regions": regions,
                 "categories": [item for item in categories if item],
                 "poi_count": PointOfInterest.objects.count(),
+            }
+        )
+
+
+class RestaurantListView(generics.ListAPIView):
+    serializer_class = RestaurantSerializer
+    pagination_class = RestaurantPagination
+
+    def get_queryset(self):
+        queryset = Restaurant.objects.all()
+        region = self.request.query_params.get("region")
+        category = self.request.query_params.get("category")
+        venue_type = self.request.query_params.get("venue_type")
+        search = self.request.query_params.get("search")
+        ordering = self.request.query_params.get("ordering", "-static_score")
+
+        if region:
+            queryset = queryset.filter(region=region)
+        if category:
+            queryset = queryset.filter(category=category)
+        if venue_type:
+            queryset = queryset.filter(venue_type=venue_type)
+        if search:
+            queryset = queryset.filter(
+                Q(name__icontains=search)
+                | Q(google_name_matched__icontains=search)
+                | Q(restaurant_id__icontains=search)
+                | Q(raw_type__icontains=search)
+            )
+
+        allowed_ordering = {
+            "static_score",
+            "-static_score",
+            "google_rating",
+            "-google_rating",
+            "review_count",
+            "-review_count",
+        }
+        if ordering in allowed_ordering:
+            queryset = queryset.order_by(ordering, "name")
+        return queryset
+
+
+class RestaurantDetailView(generics.RetrieveAPIView):
+    serializer_class = RestaurantSerializer
+    lookup_field = "restaurant_id"
+    queryset = Restaurant.objects.all()
+
+
+class RestaurantMetadataView(APIView):
+    def get(self, request):
+        regions = list(Restaurant.objects.order_by("region").values_list("region", flat=True).distinct())
+        categories = list(Restaurant.objects.order_by("category").values_list("category", flat=True).distinct())
+        venue_types = list(Restaurant.objects.order_by("venue_type").values_list("venue_type", flat=True).distinct())
+        return Response(
+            {
+                "regions": regions,
+                "categories": [item for item in categories if item],
+                "venue_types": [item for item in venue_types if item],
+                "restaurant_count": Restaurant.objects.count(),
             }
         )
 
@@ -184,6 +256,102 @@ class RecommendationView(APIView):
                     "top_k": top_k,
                 },
                 "preferences": preferences,
+                "results": results,
+            }
+        )
+
+
+class RestaurantRecommendationView(APIView):
+    DEFAULT_RADIUS_M = 300
+
+    def post(self, request):
+        serializer = RestaurantRecommendationRequestSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        payload = serializer.validated_data
+
+        queryset = Restaurant.objects.all()
+        if payload.get("region"):
+            queryset = queryset.filter(region=payload["region"])
+        if payload.get("category"):
+            queryset = queryset.filter(category=payload["category"])
+        if payload.get("venue_type"):
+            queryset = queryset.filter(venue_type=payload["venue_type"])
+
+        lat = payload.get("lat")
+        lng = payload.get("lng")
+        radius_m = None
+        if lat is not None and lng is not None:
+            radius_m = payload.get("radius_m", self.DEFAULT_RADIUS_M)
+            bounds = build_bounding_box(lat=lat, lng=lng, radius_m=radius_m)
+            queryset = queryset.filter(
+                lat__isnull=False,
+                lng__isnull=False,
+                lat__gte=bounds["min_lat"],
+                lat__lte=bounds["max_lat"],
+                lng__gte=bounds["min_lng"],
+                lng__lte=bounds["max_lng"],
+            )
+
+        results = []
+        for restaurant in queryset:
+            distance_m = None
+            if lat is not None and lng is not None:
+                distance_m = haversine_distance_meters(
+                    lat1=lat,
+                    lng1=lng,
+                    lat2=restaurant.lat,
+                    lng2=restaurant.lng,
+                )
+                if distance_m > radius_m:
+                    continue
+
+            results.append(
+                {
+                    "id": restaurant.restaurant_id,
+                    "name": restaurant.name,
+                    "region": restaurant.region,
+                    "category": restaurant.category,
+                    "venue_type": restaurant.venue_type,
+                    "interests": restaurant.interests,
+                    "google_rating": restaurant.google_rating,
+                    "review_count": restaurant.review_count,
+                    "rating_norm": restaurant.rating_norm,
+                    "review_norm": restaurant.review_norm,
+                    "station_distance_efficiency": restaurant.station_distance_efficiency,
+                    "static_score": round(float(restaurant.static_score), 4),
+                    "distance_to_station_km": restaurant.distance_to_station_km,
+                    "station_anchor": restaurant.station_anchor,
+                    "lat": restaurant.lat,
+                    "lng": restaurant.lng,
+                    "image_url": restaurant.image_url,
+                    "google_name_matched": restaurant.google_name_matched,
+                    "raw_type": restaurant.raw_type,
+                    "distance_m": round(distance_m, 1) if distance_m is not None else None,
+                    "final_score": round(float(restaurant.static_score), 4),
+                }
+            )
+
+        results.sort(
+            key=lambda item: (
+                -item["final_score"],
+                item["distance_m"] if item["distance_m"] is not None else float("inf"),
+                item["name"],
+            )
+        )
+        results = results[: payload["top_k"]]
+
+        return Response(
+            {
+                "count": len(results),
+                "filters": {
+                    "region": payload.get("region", ""),
+                    "category": payload.get("category", ""),
+                    "venue_type": payload.get("venue_type", ""),
+                    "lat": lat,
+                    "lng": lng,
+                    "radius_m": radius_m,
+                    "top_k": payload["top_k"],
+                },
                 "results": results,
             }
         )

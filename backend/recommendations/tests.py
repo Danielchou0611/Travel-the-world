@@ -2,7 +2,7 @@ from django.contrib.auth import get_user_model
 from django.test import TestCase
 from rest_framework.test import APIClient
 
-from .models import PointOfInterest, UserPreferenceProfile
+from .models import PointOfInterest, Restaurant, UserPreferenceProfile
 from .services import compute_interest_match
 
 
@@ -56,3 +56,96 @@ class RecommendationApiTests(TestCase):
         )
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.data["results"][0]["id"], "Q2")
+
+
+class RestaurantApiTests(TestCase):
+    def setUp(self):
+        self.client = APIClient()
+        Restaurant.objects.create(
+            restaurant_id="R1",
+            name="東京拉麵一號店",
+            region="東京都",
+            category="拉麵",
+            venue_type="餐廳",
+            static_score=0.95,
+            google_rating=4.8,
+            review_count=1000,
+            lat=35.6812,
+            lng=139.7671,
+            raw_type="拉麵店",
+        )
+        Restaurant.objects.create(
+            restaurant_id="R2",
+            name="東京咖啡店",
+            region="東京都",
+            category="咖啡",
+            venue_type="小店",
+            static_score=0.85,
+            google_rating=4.6,
+            review_count=500,
+            lat=35.6820,
+            lng=139.7680,
+            raw_type="咖啡廳",
+        )
+        Restaurant.objects.create(
+            restaurant_id="R3",
+            name="大阪壽司店",
+            region="大阪府",
+            category="壽司",
+            venue_type="餐廳",
+            static_score=0.92,
+            google_rating=4.7,
+            review_count=800,
+            lat=34.6937,
+            lng=135.5023,
+            raw_type="壽司店",
+        )
+
+    def test_restaurant_list_filters_by_region_and_category(self):
+        response = self.client.get("/api/restaurants/?region=東京都&category=拉麵")
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.data["count"], 1)
+        self.assertEqual(response.data["results"][0]["id"], "R1")
+        self.assertEqual(response.data["results"][0]["raw_type"], "拉麵店")
+
+    def test_restaurant_metadata_includes_venue_types(self):
+        response = self.client.get("/api/restaurants/metadata/")
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.data["restaurant_count"], 3)
+        self.assertIn("東京都", response.data["regions"])
+        self.assertIn("拉麵", response.data["categories"])
+        self.assertIn("餐廳", response.data["venue_types"])
+        self.assertIn("小店", response.data["venue_types"])
+
+    def test_restaurant_recommendations_by_region_use_static_score(self):
+        response = self.client.post(
+            "/api/restaurants/recommendations/",
+            {"region": "東京都", "top_k": 2},
+            format="json",
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.data["count"], 2)
+        self.assertEqual(response.data["results"][0]["id"], "R1")
+        self.assertEqual(response.data["results"][0]["final_score"], 0.95)
+        self.assertIsNone(response.data["results"][0]["distance_m"])
+
+    def test_restaurant_recommendations_support_nearby_defaults(self):
+        response = self.client.post(
+            "/api/restaurants/recommendations/",
+            {"lat": 35.681236, "lng": 139.767125, "top_k": 10},
+            format="json",
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.data["filters"]["radius_m"], 300)
+        result_ids = [item["id"] for item in response.data["results"]]
+        self.assertEqual(result_ids, ["R1", "R2"])
+        self.assertLessEqual(response.data["results"][0]["distance_m"], 300)
+        self.assertLessEqual(response.data["results"][1]["distance_m"], 300)
+
+    def test_restaurant_recommendations_require_lat_lng_together(self):
+        response = self.client.post(
+            "/api/restaurants/recommendations/",
+            {"lat": 35.681236, "top_k": 10},
+            format="json",
+        )
+        self.assertEqual(response.status_code, 400)

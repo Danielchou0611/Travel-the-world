@@ -1,7 +1,7 @@
 from django.contrib.auth import get_user_model
 from rest_framework import serializers
 
-from .models import PointOfInterest, UserPreferenceProfile
+from .models import PointOfInterest, Restaurant, UserPreferenceProfile
 
 
 class PointOfInterestSerializer(serializers.ModelSerializer):
@@ -27,6 +27,34 @@ class PointOfInterestSerializer(serializers.ModelSerializer):
             "lng",
             "image_url",
             "google_name_matched",
+        ]
+
+
+class RestaurantSerializer(serializers.ModelSerializer):
+    id = serializers.CharField(source="restaurant_id")
+
+    class Meta:
+        model = Restaurant
+        fields = [
+            "id",
+            "name",
+            "region",
+            "category",
+            "venue_type",
+            "interests",
+            "google_rating",
+            "review_count",
+            "rating_norm",
+            "review_norm",
+            "station_distance_efficiency",
+            "static_score",
+            "distance_to_station_km",
+            "station_anchor",
+            "lat",
+            "lng",
+            "image_url",
+            "google_name_matched",
+            "raw_type",
         ]
 
 
@@ -64,4 +92,21 @@ class RecommendationRequestSerializer(serializers.Serializer):
             user_model = get_user_model()
             if not user_model.objects.filter(id=attrs["user_id"]).exists():
                 raise serializers.ValidationError({"user_id": "User does not exist."})
+        return attrs
+
+
+class RestaurantRecommendationRequestSerializer(serializers.Serializer):
+    region = serializers.CharField(required=False, allow_blank=True)
+    category = serializers.CharField(required=False, allow_blank=True)
+    venue_type = serializers.CharField(required=False, allow_blank=True)
+    lat = serializers.FloatField(required=False, min_value=-90, max_value=90)
+    lng = serializers.FloatField(required=False, min_value=-180, max_value=180)
+    radius_m = serializers.FloatField(required=False, min_value=1)
+    top_k = serializers.IntegerField(required=False, min_value=1, max_value=100, default=20)
+
+    def validate(self, attrs):
+        has_lat = "lat" in attrs
+        has_lng = "lng" in attrs
+        if has_lat != has_lng:
+            raise serializers.ValidationError("lat and lng must be provided together.")
         return attrs

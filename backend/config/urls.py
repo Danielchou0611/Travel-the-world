@@ -13,6 +13,9 @@ def root_view(request):
                 "metadata": "/api/metadata/",
                 "pois": "/api/pois/",
                 "recommendations": "/api/recommendations/",
+                "restaurants": "/api/restaurants/",
+                "restaurant_metadata": "/api/restaurants/metadata/",
+                "restaurant_recommendations": "/api/restaurants/recommendations/",
             },
         }
     )

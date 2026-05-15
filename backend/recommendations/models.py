@@ -29,6 +29,35 @@ class PointOfInterest(models.Model):
         ordering = ["-static_score", "name"]
 
 
+class Restaurant(models.Model):
+    restaurant_id = models.CharField(max_length=64, unique=True)
+    name = models.CharField(max_length=255)
+    region = models.CharField(max_length=128, db_index=True)
+    category = models.CharField(max_length=128, blank=True, default="", db_index=True)
+    venue_type = models.CharField(max_length=64, blank=True, default="", db_index=True)
+    interests = models.JSONField(default=list)
+    google_rating = models.FloatField(null=True, blank=True)
+    review_count = models.PositiveIntegerField(default=0)
+    rating_norm = models.FloatField(default=0)
+    review_norm = models.FloatField(default=0)
+    station_distance_efficiency = models.FloatField(default=0)
+    static_score = models.FloatField(default=0, db_index=True)
+    distance_to_station_km = models.FloatField(null=True, blank=True)
+    station_anchor = models.CharField(max_length=255, blank=True, default="")
+    lat = models.FloatField(null=True, blank=True)
+    lng = models.FloatField(null=True, blank=True)
+    image_url = models.URLField(blank=True, default="")
+    google_name_matched = models.CharField(max_length=255, blank=True, default="")
+    raw_type = models.CharField(max_length=255, blank=True, default="")
+    raw_payload = models.JSONField(default=dict, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = "restaurants"
+        ordering = ["-static_score", "name"]
+
+
 class UserPreferenceProfile(models.Model):
     user = models.OneToOneField(
         settings.AUTH_USER_MODEL,
