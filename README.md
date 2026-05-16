@@ -13,7 +13,7 @@
 ## 🛠️ 技術棧
 - **前端 (Frontend)**: React 18, TypeScript, Vite, React Router。
 - **後端 (Backend)**: Python 3.9+, FastAPI, Uvicorn, Pydantic。
-- **AI 模型**: Google Generative AI (Gemma-4 -31B)。
+- **AI 模型**: Google Generative AI (gemini-2.5-flash)。
 - **資料庫/檢索**: 本地 JSON 向量檢索 (RAG)。
 
 ---
@@ -33,7 +33,7 @@
     ```
 2. **安裝必要套件**
     ```bash
-    pip install fastapi uvicorn google-generativeai python-dotenv requests pydantic
+    pip install fastapi uvicorn python-dotenv requests pydantic google-genai
     ```
 3. **設定環境變數:**  
 在後端根目錄建立 .env 檔案，並填入你的 API Key：
@@ -84,7 +84,7 @@ python manage.py runserver
 ```Bash
 .
 ├── backend/
-│   ├── gen_gm_ver6.py           # AI 生成與修改的核心邏輯 (RAG/Prompt)
+│   ├── gen_gm_ver8.py           # AI 生成與修改的核心邏輯 (RAG/Prompt)
 │   ├── server.py                # FastAPI 路由與伺服器設定
 │   └── japan_with_rating_interest.json # RAG 景點知識庫
 ├── src/
@@ -98,8 +98,16 @@ python manage.py runserver
 │       └── api.ts               # 前端 API 呼叫封裝
 └── .env                         # 金鑰管理 (不進入版本控制)
 ```
->　要把apple-branch的code的/src/services/api.ts替換成這個倉庫中的版本 
+> 要把apple-branch的code的/src/services/api.ts替換成這個倉庫中的版本 
 
->　gen_gm_ver7.py: 新增可單獨執行的測試範例，解決回傳json沒有圖片的問題    
+> gen_gm_ver7.py: 新增可單獨執行的測試範例，解決回傳json沒有圖片的問題    
 
 > 要先啟動Gary的資料庫
+
+> gen_gm_ver8.py: 更換了模型並提升了生成速度，並保證能使用資料庫中一樣的圖片網址，如果前端沒有圖片的話，應該是那個網址失效了
+
+> 請改安裝python的google-genai套件
+
+> 因為更換了模型，所以一天只能測試20次(修改行程也算一次)
+
+> sql那邊可能需要改port，目前沒有影響，但是如果未來出bug的話可能會在這邊

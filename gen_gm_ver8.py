@@ -1,4 +1,5 @@
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 import json
 import logging
 import time
@@ -50,12 +51,12 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 # --- 1. RAG 檢索器 (Retriever) - 【改為呼叫 Django API】 ---
-def retrieve_local_knowledge(destination: str, required_count: int) -> str:
+def retrieve_local_knowledge(destination: str, required_count: int, user_prefs: dict) -> str:
     """
     呼叫組員的 Django API 讀取景點資料。若符合的高分景點數量不足，會自動降低星等標準。
     """
     DJANGO_API_URL = "http://127.0.0.1:8000/api/pois/"
-    
+    url_mapping = {}
     try:
         # 建立降級策略：從嚴格到寬鬆 (4.2 -> 3.8 -> 3.0 -> 0.0)
         thresholds = [4.2, 3.8, 3.0, 0.0]
@@ -96,8 +97,12 @@ def retrieve_local_knowledge(destination: str, required_count: int) -> str:
             return "目前資料庫無該地區的景點資料。"
             
         # 轉為文字 Context
-        context_lines = []
+        context_lines = ["【📍 官方景點候選清單】"]
         for p in top_places:
+            url_mapping[p['name']] = {
+                "image": p.get('image_url', ''),
+                "id": p.get('id', '')
+            }
             interests_str = ", ".join(p.get("interests", []))
             line = (f"- {p['name']} ({p.get('google_name_matched', '')}) | "
                     f"評分: {p.get('google_rating', '無')} ({p.get('review_count', 0)}則) | "
@@ -105,8 +110,46 @@ def retrieve_local_knowledge(destination: str, required_count: int) -> str:
                     f"交通: 距 {p.get('station_anchor', '')} {p.get('distance_to_station_km', 0)}km | "
                     f"圖片網址: {p.get('image_url', '')}") # ✅ 確保圖片網址餵給 AI
             context_lines.append(line)
+        
+
+        # --- 2. 抓取餐廳 (Restaurants) ---
+        # 根據使用者的 foodVsAttractions 決定抓取多少餐廳 (數值越低代表越重視美食)
+        days = user_prefs.get('days', 3)
+        food_weight = user_prefs.get('foodVsAttractions', 50)
+        #rest_count = 30 if food_weight < 30 else 15 # 吃貨抓20間，普通抓10間給AI選
+        # 動態計算餐廳需求量：每天至少預備 2 間餐廳，再加上 Buffer 讓 AI 挑
+        base_rest_needed = days * 2
+        buffer = 15 if food_weight < 30 else 8 # 偏好美食就給更多 Buffer
+        rest_count = base_rest_needed + buffer
+        context_lines.append("\n【🍜 官方餐廳與美食候選清單】")
+        try:
+            # 使用組員新增的 POST 推薦端點
+            rest_payload = {
+                "search": destination,
+                "top_k": rest_count
+            }
+            res_resp = requests.post("http://127.0.0.1:8000/api/restaurants/recommendations/", json=rest_payload)
             
-        return "\n".join(context_lines)
+            if res_resp.status_code == 200:
+                rests = res_resp.json().get("results", [])
+                for r in rests:
+                    url_mapping[r['name']] = {
+                        "image": r.get('image_url', ''),
+                        "id": r.get('id', '')
+                    }
+                    interests_str = ", ".join(r.get("interests", []))
+                    line = (f"- {r['name']} ({r.get('category', '美食')}) | "
+                            f"地區: {r.get('region', '')} | "
+                            f"評分: {r.get('google_rating', '無')} ({r.get('review_count', 0)}則) | "
+                            f"標籤: {interests_str} | "
+                            f"圖片: {r.get('image_url', '')}")
+                    context_lines.append(line)
+            else:
+                context_lines.append("- (目前無推薦餐廳資料)")
+        except Exception as e:
+            logger.error(f"抓取餐廳失敗: {e}")
+            context_lines.append("- (餐廳 API 連線異常)")
+        return "\n".join(context_lines), url_mapping
         
     except requests.exceptions.RequestException as e:
         logger.error(f"與 Django API 連線失敗！請確認組員的伺服器有開啟: {e}")
@@ -140,14 +183,14 @@ def build_modify_prompt(current_itinerary: dict, user_request: str, rag_context:
     3. 輸出必須是一份完整的、包含所有天數的最新 JSON 行程表，格式必須與原始結構完全一致。
     4. 🚨 【格式絕對限制】：請「直接」輸出 JSON 內容，絕對不要加上 ```json 的 Markdown 標記，也絕對不要在 JSON 前後加上任何問候語、解釋或額外文字！
     """
-def modify_itinerary(destination: str, current_itinerary: dict, user_request: str, max_retries: int = 3) -> dict:
+def modify_itinerary(destination: str, current_itinerary: dict, user_request: str, user_prefs: dict, max_retries: int = 3) -> dict:
     """
     處理使用者從前端聊天室發出的修改請求
     """
     logger.info(f"💬 收到使用者的修改需求: {user_request}")
      
     # 步驟 1：檢索 RAG 知識 (一樣需要載入候選名單供 AI 替換)
-    rag_context = retrieve_local_knowledge(destination, required_count=15)
+    rag_context,url_mapping = retrieve_local_knowledge(destination, required_count=15, user_prefs=user_prefs)
     if not rag_context or "無該城市" in rag_context:
         return {"status": "error", "message": "資料庫異常，無法進行修改。"}
 
@@ -157,13 +200,23 @@ def modify_itinerary(destination: str, current_itinerary: dict, user_request: st
     # 步驟 3：執行生成與重試機制
     for attempt in range(1, max_retries + 1):
         try:
-            response = model.generate_content(
-                prompt,
-                generation_config=genai.GenerationConfig(
-                    response_mime_type="application/json",
-                    response_schema=itinerary_schema, # 繼續使用同一個 Schema 確保格式不變
-                    temperature=0.1, 
+            response = client.models.generate_content(
+            #model="gemma-4-31b-it",
+            #model="gemma-4-31b-it",
+            model="gemini-2.5-flash",
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                response_mime_type="application/json",
+                response_json_schema=itinerary_schema,  # 注意新版叫 response_json_schema
+                temperature=0.1,
+                thinking_config=types.ThinkingConfig(
+                    #thinking_level="high"
+                    thinking_budget=2048
+                    ),
+                automatic_function_calling=types.AutomaticFunctionCallingConfig(
+                    disable=True
                 )
+                ) 
             )
             
 
@@ -181,7 +234,12 @@ def modify_itinerary(destination: str, current_itinerary: dict, user_request: st
                 
             raw_text = raw_text.strip() # 再次清除前後空白與換行
             result_json = json.loads(raw_text)
-            
+            for day in result_json.get('days', []):
+                for attr in day.get('attractions', []):
+                    place_name = attr.get('name', '')
+                    if place_name in url_mapping:
+                        attr['image'] = url_mapping[place_name]['image']
+                        attr['id'] = url_mapping[place_name]['id']
             # (可選) 這裡一樣可以加入 verify_place_with_google_maps 來做二次防護
             
             logger.info("✅ 行程修改成功！")
@@ -239,14 +297,15 @@ def build_rag_prompt(destination: str, user_prefs: dict, rag_context: str) -> st
 
     【任務邏輯規範】
     1. 行程密度：請嚴格遵守「{pace_desc}」的規範安排每日景點數量。
-    2. 偏好權重：請根據「{focus_desc}」來篩選景點類別。
-    3. 必去優先：如果「{must_visit}」在清單中，請務必排入行程。
-    4. "image" 欄位：請直接將【官方景點候選清單】中對應的「圖片網址」原封不動地填入。若清單中無網址，請填入空字串 ""。
+    2. 美食安排：🚨【強制要求】每一天的行程中，務必「至少」安排 1 到 2 間【官方餐廳與美食候選清單】中的店家作為午餐或晚餐！絕不可出現沒有安排任何餐廳的天數。請注意「地理位置合理性」，餐廳應盡量安排在當天景點的附近。
+    3. 偏好權重：請根據「{focus_desc}」來篩選景點與餐廳的比例。
+    4. "image" 欄位：為了大幅提升生成速度，請一律直接填入空字串 "" 即可！系統會在後續自動為你補上正確的圖片網址。
     5. "xai" 欄位規範：
        - `summary`: 必須直接提及使用者的興趣（如 {", ".join(user_prefs.get('interests', []))}）與此景點的關聯。
        - `scores`: 請提供 2-3 個評分維度，例如：「興趣符合度」、「交通便利度」、「人氣熱度」。
-       - 50字以內
+       - 20字以內
     6. 🚨 【格式絕對限制】：請直接輸出 JSON 內容，絕對不要加上 ```json 的 Markdown 標記，也絕對不要在 JSON 前後加上任何問候語或額外文字！
+    7. ⚡ 【速度與長度最佳化】：為了加快你的輸出速度，請將所有景點與餐廳的 `description` (詳細介紹) 嚴格控制在「30字以內」的精華短語！
     """
 # --- 1. 定義更新後的 JSON Schema ---
 # 加入 day_number 讓行程有時間序
@@ -304,9 +363,7 @@ itinerary_schema = {
     }
 }
 
-genai.configure(api_key=GEMINI_KEY)
-# 官方目前穩定支援 Structured Outputs 的主要模型是 gemini-1.5-flash 或 gemini-1.5-pro
-model = genai.GenerativeModel('gemma-4-31b-it') 
+
 
 # --- 2. Prompt 優化：動態生成提示詞 ---
 def build_prompt(destination: str, user_prefs: dict) -> str:
@@ -334,6 +391,7 @@ def build_prompt(destination: str, user_prefs: dict) -> str:
     4. 總輸出請涵蓋第 1 天到第 {days} 天的完整行程。
     5. 若你對某個地點的真實性不確定，請改推薦該地區絕對知名、具代表性的真實景點。
     6. "xai_reason" 欄位請精準說明該地點為何契合使用者的預算或旅遊風格。
+    7. ⚡ 【速度與長度最佳化】：為了加快你的輸出速度，請將所有景點與餐廳的 `description` (詳細介紹) 嚴格控制在「30字以內」的精華短語！
     """
 
 # --- 3. Mock Database Function ---
@@ -345,6 +403,8 @@ def save_to_db(user_id: str, destination: str, itinerary_data: dict):
     return True
 
 # --- 4. 服務層：生成、重試與驗證 ---
+client = genai.Client(api_key=GEMINI_KEY)
+#model = genai.GenerativeModel('gemma-4-31b-it') 
 def generate_itinerary(destination: str, user_prefs: dict, max_retries: int = 3) -> dict:
     # 步驟 1：檢索 RAG 知識
     days = user_prefs.get('days', 3)
@@ -362,7 +422,7 @@ def generate_itinerary(destination: str, user_prefs: dict, max_retries: int = 3)
     # 計算最低需求量，並額外加上 5~10 個「候補額度 (Buffer)」給 AI 挑選
     required_count = (days * points_per_day) + 5
     # 步驟 1：檢索 RAG 知識 (傳入所需數量)
-    rag_context = retrieve_local_knowledge(destination, required_count)
+    rag_context, url_mapping = retrieve_local_knowledge(destination, required_count,user_prefs)
     #rag_context = retrieve_local_knowledge(destination)
     if not rag_context or "無該城市" in rag_context:
         return {"status": "error", "message": "資料庫缺乏景點資訊"}
@@ -373,19 +433,35 @@ def generate_itinerary(destination: str, user_prefs: dict, max_retries: int = 3)
     for attempt in range(1, max_retries + 1):
         try:
             # 💡 再次建議：使用 'gemini-1.5-flash' 以獲得最穩定的 JSON 輸出
-            response = model.generate_content(
-                prompt,
-                generation_config=genai.GenerationConfig(
-                    response_mime_type="application/json",
-                    response_schema=itinerary_schema,
-                    temperature=0.1,
+            response = client.models.generate_content(
+            #model="gemma-4-31b-it",
+            model="gemini-2.5-flash",
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                response_mime_type="application/json",
+                response_json_schema=itinerary_schema,  # 注意新版叫 response_json_schema
+                temperature=0.1,
+                thinking_config=types.ThinkingConfig(
+                    #thinking_level="high"
+                    thinking_budget=2048
+                    )
+                ,automatic_function_calling=types.AutomaticFunctionCallingConfig(
+                    disable=True
+                )
                 )
             )
+
             
             # 清洗並解析 JSON
             raw_text = response.text.strip().replace("```json", "").replace("```", "")
             generated_data = json.loads(raw_text)
-            
+            for day in generated_data.get('days', []):
+                for attr in day.get('attractions', []):
+                    place_name = attr.get('name', '')
+                    # 如果 AI 生成的名稱有在我們提供的名單內
+                    if place_name in url_mapping:
+                        attr['image'] = url_mapping[place_name]['image']  # 注入真實圖片網址
+                        attr['id'] = url_mapping[place_name]['id']        # 注入真實資料庫 ID
             # --- 步驟 3：包裝前端所需的完整 Trip 物件 ---
             total_attractions = sum(len(day['attractions']) for day in generated_data['days'])
             
@@ -459,7 +535,8 @@ if __name__ == "__main__":
         modify_result = modify_itinerary(
             destination="京都",
             current_itinerary=current_itinerary_state, # 傳入剛剛生成的狀態
-            user_request=user_chat_message
+            user_request=user_chat_message,
+            user_prefs=current_itinerary_state.get("preferences")
         )
         
         if modify_result["status"] == "success":

@@ -19,3 +19,58 @@
 2026-05-15 20:52:03,763 - INFO - 🔍 API 檢索成功：使用最低星等 4.2，找到 30 個候選景點
 2026-05-15 20:53:19,380 - INFO - ✅ 行程修改成功！
 2026-05-15 20:53:19,380 - INFO - 🎉 行程修改成功！(寫入 updated_itinerary.json)
+2026-05-16 14:58:27,499 - INFO - === 階段 1：模擬前端首次請求行程 ===
+2026-05-16 14:58:29,547 - ERROR - 與 Django API 連線失敗！請確認組員的伺服器有開啟: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/pois/?search=%E4%BA%AC%E9%83%BD&page_size=50&ordering=-google_rating (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [WinError 10061] 無法連線，因為目標電腦拒絕連線。"))
+2026-05-16 14:58:29,548 - ERROR - ❌ 初始生成失敗: 資料庫缺乏景點資訊
+2026-05-16 15:01:07,174 - INFO - === 階段 1：模擬前端首次請求行程 ===
+2026-05-16 15:01:07,296 - WARNING - ⚠️ Django API 完全沒有 京都 的資料！
+2026-05-16 15:01:08,193 - ERROR - ❌ 生成失敗 (嘗試 1/3): 500 Internal error encountered.
+2026-05-16 15:02:19,130 - INFO - === 階段 1：模擬前端首次請求行程 ===
+2026-05-16 15:02:19,184 - WARNING - ⚠️ Django API 完全沒有 京都 的資料！
+2026-05-16 15:14:58,513 - INFO - === 階段 1：模擬前端首次請求行程 ===
+2026-05-16 15:14:58,591 - WARNING - ⚠️ Django API 完全沒有 京都 的資料！
+2026-05-17 00:56:58,365 - INFO - === 階段 1：模擬前端首次請求行程 ===
+2026-05-17 00:56:59,008 - INFO - 🔍 API 檢索成功：使用最低星等 4.2，找到 30 個候選景點
+2026-05-17 00:57:26,908 - ERROR - ❌ 生成失敗 (嘗試 1/3): 500 Internal error encountered.
+2026-05-17 00:58:51,376 - INFO - ✅ 成功生成符合前端格式的 Trip 物件
+2026-05-17 00:58:51,376 - INFO - 🎉 初版行程生成成功！(寫入 initial_itinerary.json)
+2026-05-17 00:58:51,383 - INFO - 
+=== 階段 2：模擬使用者在聊天室提出修改 ===
+2026-05-17 00:58:51,384 - INFO - 使用者輸入: 我覺得人潮眾多的地方太多了，能不能把其中一個景點換成可以看海或是遠離喧囂爬山的地方？
+2026-05-17 00:58:51,384 - INFO - 💬 收到使用者的修改需求: 我覺得人潮眾多的地方太多了，能不能把其中一個景點換成可以看海或是遠離喧囂爬山的地方？
+2026-05-17 00:58:51,963 - INFO - 🔍 API 檢索成功：使用最低星等 4.2，找到 30 個候選景點
+2026-05-17 01:00:28,351 - INFO - ✅ 行程修改成功！
+2026-05-17 01:00:28,351 - INFO - 🎉 行程修改成功！(寫入 updated_itinerary.json)
+2026-05-17 01:46:42,994 - INFO - === 階段 1：模擬前端首次請求行程 ===
+2026-05-17 01:46:43,488 - INFO - 🔍 API 檢索成功：使用最低星等 4.2，找到 30 個候選景點
+2026-05-17 01:46:55,285 - INFO - AFC is enabled with max remote calls: 10.
+2026-05-17 01:46:55,805 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemma-4-31b-it:generateContent "HTTP/1.1 500 Internal Server Error"
+2026-05-17 01:46:55,805 - ERROR - ❌ 生成失敗 (嘗試 1/3): 500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}
+2026-05-17 01:46:57,810 - INFO - AFC is enabled with max remote calls: 10.
+2026-05-17 01:46:58,279 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemma-4-31b-it:generateContent "HTTP/1.1 500 Internal Server Error"
+2026-05-17 01:46:58,280 - ERROR - ❌ 生成失敗 (嘗試 2/3): 500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}
+2026-05-17 01:47:00,282 - INFO - AFC is enabled with max remote calls: 10.
+2026-05-17 01:49:17,912 - INFO - === 階段 1：模擬前端首次請求行程 ===
+2026-05-17 01:49:18,535 - INFO - 🔍 API 檢索成功：使用最低星等 4.2，找到 30 個候選景點
+2026-05-17 01:49:30,408 - ERROR - ❌ 生成失敗 (嘗試 1/3): Models.generate_content() got an unexpected keyword argument 'automatic_function_calling'
+2026-05-17 01:49:32,409 - ERROR - ❌ 生成失敗 (嘗試 2/3): Models.generate_content() got an unexpected keyword argument 'automatic_function_calling'
+2026-05-17 01:49:34,411 - ERROR - ❌ 生成失敗 (嘗試 3/3): Models.generate_content() got an unexpected keyword argument 'automatic_function_calling'
+2026-05-17 01:49:34,411 - ERROR - ❌ 初始生成失敗: 行程生成失敗，請稍後再試
+2026-05-17 01:49:52,204 - INFO - === 階段 1：模擬前端首次請求行程 ===
+2026-05-17 01:49:52,768 - INFO - 🔍 API 檢索成功：使用最低星等 4.2，找到 30 個候選景點
+2026-05-17 01:50:05,373 - INFO - AFC is enabled with max remote calls: 10.
+2026-05-17 01:50:16,751 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemma-4-31b-it:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-05-17 01:50:16,752 - ERROR - ❌ 生成失敗 (嘗試 1/3): 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-05-17 01:50:18,753 - INFO - AFC is enabled with max remote calls: 10.
+2026-05-17 01:51:17,918 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemma-4-31b-it:generateContent "HTTP/1.1 200 OK"
+2026-05-17 01:51:17,918 - INFO - ✅ 成功生成符合前端格式的 Trip 物件
+2026-05-17 01:51:17,930 - INFO - 🎉 初版行程生成成功！(寫入 initial_itinerary.json)
+2026-05-17 01:51:17,937 - INFO - 
+=== 階段 2：模擬使用者在聊天室提出修改 ===
+2026-05-17 01:51:17,938 - INFO - 使用者輸入: 我覺得人潮眾多的地方太多了，能不能把其中一個景點換成可以看海或是遠離喧囂爬山的地方？
+2026-05-17 01:51:17,938 - INFO - 💬 收到使用者的修改需求: 我覺得人潮眾多的地方太多了，能不能把其中一個景點換成可以看海或是遠離喧囂爬山的地方？
+2026-05-17 01:51:18,510 - INFO - 🔍 API 檢索成功：使用最低星等 4.2，找到 30 個候選景點
+2026-05-17 01:51:30,033 - ERROR - ❌ 修改過程中發生錯誤 (嘗試 1/3): Models.generate_content() got an unexpected keyword argument 'automatic_function_calling'
+2026-05-17 01:51:32,038 - ERROR - ❌ 修改過程中發生錯誤 (嘗試 2/3): Models.generate_content() got an unexpected keyword argument 'automatic_function_calling'
+2026-05-17 01:51:34,040 - ERROR - ❌ 修改過程中發生錯誤 (嘗試 3/3): Models.generate_content() got an unexpected keyword argument 'automatic_function_calling'
+2026-05-17 01:51:34,040 - ERROR - ❌ 修改失敗: 行程修改失敗，請換個說法再試一次。

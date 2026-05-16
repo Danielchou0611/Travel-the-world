@@ -77,11 +77,12 @@ async def api_modify(req: ModifyRequest):
     接收聊天室對話與當前行程，進行局部修改
     """
     print(f"收到修改請求：{req.user_request}")
-    
+    user_prefs = req.current_itinerary.get("preferences", {})
     result = modify_itinerary(
         destination=req.destination,
         current_itinerary=req.current_itinerary,
-        user_request=req.user_request
+        user_request=req.user_request,
+        user_prefs=user_prefs
     )
     
     if result["status"] == "success":
