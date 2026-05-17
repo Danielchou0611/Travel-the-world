@@ -3,6 +3,7 @@ from __future__ import annotations
 import os
 import re
 import json
+from functools import lru_cache
 from typing import Any
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode, urlparse
@@ -26,6 +27,7 @@ URL_FETCH_MAX_BYTES = int(os.getenv("RAG_URL_FETCH_MAX_BYTES", "4000000"))
 POI_API_BASE_URL = os.getenv("POI_API_BASE_URL", "http://127.0.0.1:8000").rstrip("/")
 POI_LOOKUP_PAGE_SIZE = max(1, int(os.getenv("POI_LOOKUP_PAGE_SIZE", "20")))
 POI_LOOKUP_TIMEOUT_SECONDS = float(os.getenv("POI_LOOKUP_TIMEOUT_SECONDS", "5"))
+POI_LOOKUP_MAX_QUERIES = max(1, int(os.getenv("POI_LOOKUP_MAX_QUERIES", "18")))
 
 # 行程分組與 URL 輸入的檢索策略設定。
 ITINERARY_MIN_SPOTS = int(os.getenv("RAG_ITINERARY_MIN_SPOTS", "3"))
@@ -950,6 +952,127 @@ POI_QUERY_VARIANT_MAP.update(
     }
 )
 
+# 餐廳查詢需要比景點更積極地處理繁簡、日文漢字與食品類別詞。
+RESTAURANT_QUERY_VARIANT_MAP = {
+    "拉麵": "ラーメン",
+    "拉面": "ラーメン",
+    "壽司": "寿司",
+    "豬排": "とんかつ",
+    "猪排": "とんかつ",
+    "燒肉": "焼肉",
+    "總": "総",
+    "雙": "双",
+    "華": "華",
+    "淺": "浅",
+    "國": "国",
+    "區": "区",
+    "車站": "駅",
+    "神戶": "神戸",
+    "燈": "灯",
+    "斯斯穆": "ススム",
+}
+
+# 常見日本餐廳品牌與別名，用於把「品牌 + 分店名」降階成資料庫較容易命中的查詢。
+RESTAURANT_CHAIN_ALIASES = {
+    "一蘭": ["一蘭", "ICHIRAN"],
+    "鳥貴族": ["鳥貴族"],
+    "淺草今半": ["浅草今半", "淺草今半"],
+    "浅草今半": ["浅草今半"],
+    "無敵家": ["無敵家", "麺創房 無敵家"],
+    "築地壽司清": ["築地寿司清", "築地壽司清"],
+    "築地寿司清": ["築地寿司清"],
+    "星乃珈琲店": ["星乃珈琲店"],
+    "美津の": ["美津の", "お好み焼 美津の"],
+    "串カツだるま": ["串カツだるま", "だるま"],
+    "金龍拉麵": ["金龍ラーメン", "金龍拉麵"],
+    "鶴橋風月": ["鶴橋風月"],
+    "本家第一旭": ["本家第一旭", "第一旭"],
+    "祇園辻利": ["祇園辻利"],
+    "かつくら": ["かつくら", "名代とんかつ かつくら"],
+    "先斗町魯ビン": ["先斗町魯ビン", "魯ビン"],
+    "GARAKU": ["GARAKU", "スープカレーGARAKU"],
+    "成吉思汗だるま": ["成吉思汗だるま", "だるま"],
+    "政壽司": ["政寿司", "おたる政寿司"],
+    "政寿司": ["政寿司", "おたる政寿司"],
+    "LeTAO": ["LeTAO", "小樽洋菓子舗ルタオ"],
+    "けやき": ["けやき", "らーめんけやき"],
+    "六花亭": ["六花亭"],
+    "博多一雙": ["博多一双", "博多一雙"],
+    "博多一双": ["博多一双"],
+    "元祖博多めんたい重": ["元祖博多めんたい重"],
+    "一風堂": ["一風堂"],
+    "博多華味鳥": ["博多華味鳥"],
+    "あつた蓬莱軒": ["あつた蓬莱軒"],
+    "矢場とん": ["矢場とん"],
+    "山本屋總本家": ["山本屋総本家", "山本屋總本家"],
+    "山本屋総本家": ["山本屋総本家"],
+    "コメダ珈琲店": ["コメダ珈琲店", "珈琲所 コメダ珈琲店"],
+    "志津香": ["志津香"],
+    "中村藤吉": ["中村藤吉", "中村藤吉本店"],
+    "ますたに": ["ますたに"],
+    "暖暮": ["暖暮", "ラーメン 暖暮"],
+    "本部牧場": ["本部牧場"],
+    "首里そば": ["首里そば"],
+    "BLUE SEAL": ["BLUE SEAL", "ブルーシール"],
+    "HARBS": ["HARBS"],
+    "bills": ["bills"],
+    "上野藪そば": ["上野 藪そば", "藪そば"],
+    "藪そば": ["藪そば"],
+    "牛かつもと村": ["牛かつもと村", "牛かつ もと村"],
+    "くら寿司": ["くら寿司", "蔵寿司"],
+    "京丹波": ["京丹波"],
+    "麺闘庵": ["麺闘庵"],
+    "551蓬莱": ["551蓬莱", "蓬莱"],
+    "松原庵": ["松原庵", "鎌倉 松原庵"],
+    "とびっちょ": ["とびっちょ"],
+    "六厘舍": ["六厘舎", "六厘舍"],
+    "NewYork Perfect Cheese": ["NewYork Perfect Cheese", "NEWYORK PERFECT CHEESE"],
+    "斑鳩": ["斑鳩"],
+    "松屋": ["松屋"],
+    "鯛匠 HANANA": ["鯛匠 HANANA", "HANANA"],
+    "Arabica": ["% Arabica", "Arabica"],
+    "% Arabica": ["% Arabica", "Arabica"],
+    "餃子の王将": ["餃子の王将"],
+    "Steak Land": ["Steak Land", "ステーキランド"],
+    "Ishida": ["Ishida", "神戸牛ステーキIshida"],
+    "神戶牛ステーキIshida": ["Ishida", "神戸牛ステーキIshida"],
+    "神戸牛ステーキIshida": ["Ishida", "神戸牛ステーキIshida"],
+    "老祥記": ["老祥記"],
+    "磯丸水産": ["磯丸水産"],
+    "みっちゃん": ["みっちゃん", "みっちゃん総本店"],
+    "八昌": ["八昌"],
+    "牡蠣屋": ["牡蠣屋"],
+    "藤い屋": ["藤い屋"],
+    "もりもり寿し": ["もりもり寿し"],
+    "茶房素心": ["茶房素心"],
+    "Go Go Curry": ["Go Go Curry", "ゴーゴーカレー"],
+    "四海樓": ["四海楼", "四海樓"],
+    "文明堂": ["文明堂", "文明堂総本店"],
+    "吉宗": ["吉宗"],
+    "AFURI": ["AFURI"],
+    "麺屋一燈": ["麺屋一燈", "麺屋一燈"],
+    "肉汁麺ススム": ["肉汁麺ススム"],
+    "すき家": ["すき家"],
+    "CoCo壱番屋": ["CoCo壱番屋", "カレーハウス CoCo壱番屋"],
+    "やよい軒": ["やよい軒"],
+    "大戸屋": ["大戸屋", "大戸屋ごはん処"],
+    "スシロー": ["スシロー"],
+    "牛角": ["牛角"],
+    "根室花まる": ["根室花まる"],
+    "焼肉ライク": ["焼肉ライク"],
+    "はま寿司": ["はま寿司"],
+}
+
+RESTAURANT_BRANCH_WORDS = [
+    "本店",
+    "総本店",
+    "總本店",
+    "本社総本店",
+    "駅店",
+    "站店",
+    "店",
+]
+
 # 地區前綴表：查 POI 前可移除「東京都」「京都府」等地名，增加模糊搜尋命中。
 POI_REGION_PREFIXES = [
     "東京都",
@@ -1113,6 +1236,76 @@ def build_text_variants(value: str) -> list[str]:
     return dedupe_keep_order(variants)
 
 
+def build_restaurant_text_variants(value: str) -> list[str]:
+    """產生餐廳查詢專用字串變體，補強繁簡、日文漢字與食品詞轉換。"""
+    variants = build_text_variants(value)
+    for source, replacement in RESTAURANT_QUERY_VARIANT_MAP.items():
+        variants.extend([item.replace(source, replacement) for item in list(variants) if source in item])
+    return dedupe_keep_order(variants)
+
+
+def _strip_restaurant_food_words(value: str) -> str:
+    """移除品牌與分店名之間常見的食品類別詞，例如拉麵、壽司或燒肉。"""
+    cleaned = value
+    for word in ["拉麵", "拉面", "ラーメン", "らーめん", "壽司", "寿司", "燒肉", "焼肉", "豬排", "猪排"]:
+        cleaned = cleaned.replace(word, "")
+    return cleaned.strip()
+
+
+def _split_restaurant_chain_branch(value: str) -> list[str]:
+    """將「品牌 + 分店」拆成品牌查詢與帶空格的分店查詢。"""
+    queries: list[str] = []
+    variants = build_restaurant_text_variants(value)
+    for variant in variants:
+        compact_variant = normalize_for_match(variant)
+        for brand, aliases in RESTAURANT_CHAIN_ALIASES.items():
+            brand_variants = build_restaurant_text_variants(brand) + aliases
+            for brand_variant in dedupe_keep_order(brand_variants):
+                compact_brand = normalize_for_match(brand_variant)
+                if not compact_brand or compact_brand not in compact_variant:
+                    continue
+
+                queries.extend(aliases)
+                queries.append(brand_variant)
+
+                start = compact_variant.find(compact_brand)
+                if start != 0:
+                    continue
+
+                branch = compact_variant[len(compact_brand) :]
+                branch = _strip_restaurant_food_words(branch)
+                if len(branch) >= 2:
+                    for alias in aliases + [brand_variant]:
+                        queries.append(f"{alias} {branch}")
+                        queries.append(f"{alias}{branch}")
+                    for branch_word in RESTAURANT_BRANCH_WORDS:
+                        if branch.endswith(branch_word) and len(branch) > len(branch_word) + 1:
+                            short_branch = branch[: -len(branch_word)]
+                            for alias in aliases + [brand_variant]:
+                                queries.append(f"{alias} {short_branch}")
+                                queries.append(f"{alias}{short_branch}")
+    return dedupe_keep_order([query.strip() for query in queries if query and query.strip()])
+
+
+def build_restaurant_lookup_queries(spot_name: str) -> list[str]:
+    """建立餐廳優先的查詢清單，從完整分店名逐步降階到品牌名。"""
+    queries: list[str] = []
+    base_values = [spot_name, _strip_restaurant_food_words(spot_name)]
+    normalized_name = normalize_for_match(spot_name)
+    if normalized_name:
+        base_values.append(normalized_name)
+
+    for value in dedupe_keep_order([item for item in base_values if item]):
+        queries.extend(_split_restaurant_chain_branch(value))
+        queries.extend(build_restaurant_text_variants(value))
+        queries.extend(strip_region_prefixes(value))
+        for stripped in strip_region_prefixes(value):
+            queries.extend(_split_restaurant_chain_branch(stripped))
+            queries.extend(build_restaurant_text_variants(stripped))
+
+    return dedupe_keep_order([query.strip() for query in queries if query and query.strip()])
+
+
 def infer_poi_region_hints(text: str) -> list[str]:
     """從名稱或來源文字推測可能的日本地區，用於縮小 POI 查詢範圍。"""
     hints: list[str] = []
@@ -1154,7 +1347,11 @@ def _as_int(value: Any, default: int = 0) -> int:
 
 def build_poi_lookup_queries(spot_name: str) -> list[str]:
     """為單一景點建立多組 POI API 搜尋 query，提高資料庫匹配機率。"""
-    queries = [spot_name]
+    queries = []
+
+    # 餐廳名稱常含分店資訊或食品類別詞，先加入餐廳專用降階查詢。
+    queries.extend(build_restaurant_lookup_queries(spot_name))
+    queries.append(spot_name)
     normalized_name = normalize_for_match(spot_name)
     if normalized_name and normalized_name != spot_name:
         queries.append(normalized_name)
@@ -1171,9 +1368,10 @@ def build_poi_lookup_queries(spot_name: str) -> list[str]:
         if key in spot_name or key in normalized_name:
             queries.extend(aliases)
 
-    return dedupe_keep_order([query.strip() for query in queries if query and query.strip()])
+    return dedupe_keep_order([query.strip() for query in queries if query and query.strip()])[:POI_LOOKUP_MAX_QUERIES]
 
 
+@lru_cache(maxsize=2048)
 def fetch_api_candidates(endpoint: str, query: str, region: str = "") -> list[dict[str, Any]]:
     """呼叫本機 POI/restaurant API，回傳符合搜尋字串的候選資料。"""
     if not POI_API_BASE_URL:
@@ -1224,6 +1422,9 @@ def poi_match_score(spot_name: str, poi: dict[str, Any]) -> float:
         # 完全命中名稱時給最高基本分。
         return 100.0 + float(poi.get("static_score") or 0)
 
+    if query_key and any(key.startswith(query_key) or query_key.startswith(key) for key in candidate_keys if key):
+        return 92.0 + float(poi.get("static_score") or 0)
+
     if query_key and any(query_key in key or key in query_key for key in candidate_keys if key):
         # 部分包含也視為合理候選，但分數低於完全命中。
         return 80.0 + float(poi.get("static_score") or 0)
@@ -1238,30 +1439,40 @@ def lookup_poi_for_spot(spot_name: str, region_hints: list[str] | None = None) -
     best_source_type = ""
     best_score = -1.0
     regions = dedupe_keep_order(region_hints or [])
-    sources = [
-        ("poi", fetch_poi_candidates),
-        ("restaurant", fetch_restaurant_candidates),
-    ]
+    lookup_queries = build_poi_lookup_queries(spot_name)
 
-    for query in build_poi_lookup_queries(spot_name):
-        # 每個 query 都先嘗試推論地區，再嘗試不帶地區的泛查詢。
+    def consider_candidate(query: str, region: str, source_type: str, candidate: dict[str, Any]) -> bool:
+        """更新目前最佳候選；若餐廳高分命中則回傳 True 讓外層提早停止。"""
+        nonlocal best_poi, best_query, best_source_type, best_score
+        score = poi_match_score(query, candidate)
+        candidate_region = str(candidate.get("region") or "")
+        if region and candidate_region == region:
+            # 區域完全符合時加分，降低同名異地景點誤配。
+            score += 5.0
+        elif regions and candidate_region and candidate_region not in regions:
+            # 分店資料不完整時仍允許品牌命中，但對跨區候選降權。
+            score -= 12.0
+        if source_type == "restaurant":
+            score += 8.0
+        if score > best_score:
+            best_poi = candidate
+            best_query = query
+            best_source_type = source_type
+            best_score = score
+        return source_type == "restaurant" and score >= 88.0
+
+    # 餐廳資料先查，命中高分候選就不用再打 POI endpoint，降低延遲與誤配。
+    for query in lookup_queries:
         for region in regions + [""]:
-            for source_type, fetch_candidates in sources:
-                for candidate in fetch_candidates(query, region=region):
-                    score = poi_match_score(query, candidate)
-                    candidate_region = str(candidate.get("region") or "")
-                    if regions and candidate_region and candidate_region not in regions:
-                        continue
-                    if region and candidate_region == region:
-                        # 區域完全符合時加分，降低同名異地景點誤配。
-                        score += 5.0
-                    if source_type == "restaurant":
-                        score += 0.5
-                    if score > best_score:
-                        best_poi = candidate
-                        best_query = query
-                        best_source_type = source_type
-                        best_score = score
+            for candidate in fetch_restaurant_candidates(query, region=region):
+                if consider_candidate(query, region, "restaurant", candidate):
+                    return best_poi, best_query, best_source_type
+
+    # 餐廳查不到或分數不足時，再退回一般 POI endpoint。
+    for query in lookup_queries:
+        for region in regions + [""]:
+            for candidate in fetch_poi_candidates(query, region=region):
+                consider_candidate(query, region, "poi", candidate)
 
     return best_poi, best_query, best_source_type
 
