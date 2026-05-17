@@ -427,7 +427,7 @@ export default function ItineraryPage() {
             <span style={{ color: '#B45309' }}><IconAlert /></span>
             <div style={{ flex: 1 }}>
               <p style={{ fontSize: 13, fontWeight: 600, color: '#92400E', margin: 0 }}>
-                行程提示：Day {currentDay.day} ({currentDay.date})
+                行程提示：Day {currentDay.day}
               </p>
               <p style={{ fontSize: 12, color: '#B45309', marginTop: 4, lineHeight: 1.5 }}>
                 {currentDay.warning} 目前排定了 {currentDay.attractions.length} 個行程，若要確保旅遊節奏，建議減至 3-4 個。
@@ -482,8 +482,7 @@ export default function ItineraryPage() {
                   transition: 'all 0.15s',
                 }}
               >
-                <div style={{ fontWeight: 600, marginBottom: 2 }}>Day {day.day}</div>
-                <div style={{ fontSize: 11, opacity: 0.8 }}>{day.date}</div>
+                <div style={{ fontWeight: 600 }}>Day {day.day}</div>
               </div>
             ))}
           </div>
@@ -492,7 +491,7 @@ export default function ItineraryPage() {
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 16 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8 }}>
               <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 16, fontWeight: 600, color: 'var(--color-text)', margin: 0 }}>
-                Day {currentDay?.day} 第 {currentDay?.day} 天行程
+                Day {currentDay?.day}
               </h2>
               <span style={{ fontSize: 12, padding: '2px 10px', borderRadius: 4, background: '#F0EEE9', color: 'var(--color-text-muted)' }}>
                 {displayAttractions.length} 個景點

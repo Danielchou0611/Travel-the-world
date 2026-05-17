@@ -57,7 +57,7 @@
           "id": "a01",                  // 景點唯一識別碼 (String)
           "name": "伏見稻荷大社",         // 景點名稱 (String)
           "nameEn": "Fushimi Inari Taisha", // 英文名稱 (String)
-          "category": "景點",             // 類別 (String: "景點" | "美食" | "活動" | "購物" | "自然" | "溫泉")
+          "category": "景點",             // 類別 (String: "景點" | "文化" | "購物" | "自然")
           "description": "千本鳥居是京都最具代表性的景點...", // 景點描述 (String)
           "image": "https://...",       // 外部圖床圖片 URL (String)
           "duration": "2–3 小時",        // 建議停留時間 (String)
