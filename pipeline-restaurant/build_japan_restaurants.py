@@ -20,6 +20,8 @@ DEFAULT_LOOKUP_REPORT_PATH = Path("reference/source_id_metadata_lookup.csv")
 DEFAULT_PREFECTURE_JSON_DIRNAME = "japan_data_v1_with_rating"
 
 COORDINATE_PATTERN = re.compile(r"Point\((?P<lng>-?\d+(?:\.\d+)?) (?P<lat>-?\d+(?:\.\d+)?)\)")
+JAPAN_LAT_RANGE = (20.0, 46.5)
+JAPAN_LNG_RANGE = (122.0, 154.5)
 
 EXCLUDED_TYPE_EXACT = {
     "",
@@ -250,6 +252,19 @@ def should_exclude_type(raw_type: str) -> bool:
     return False
 
 
+def is_in_japan_bbox(lat: str, lng: str) -> bool:
+    try:
+        lat_value = float(lat)
+        lng_value = float(lng)
+    except (TypeError, ValueError):
+        return True
+
+    return (
+        JAPAN_LAT_RANGE[0] <= lat_value <= JAPAN_LAT_RANGE[1]
+        and JAPAN_LNG_RANGE[0] <= lng_value <= JAPAN_LNG_RANGE[1]
+    )
+
+
 def load_prefecture_lookup(path: Path) -> dict[str, dict[str, str]]:
     if not path.exists():
         return {}
@@ -360,7 +375,7 @@ def load_normalized_rows(
     input_json: Path,
     prefecture_lookup: dict[str, dict[str, str]],
     source_prefecture: str,
-) -> tuple[list[dict[str, str]], dict[str, int]]:
+) -> tuple[list[dict[str, str]], dict[str, int], list[dict[str, str]]]:
     raw_data = json.loads(input_json.read_text(encoding="utf-8"))
     if not isinstance(raw_data, list):
         raise ValueError("Input JSON must be a list of restaurant objects.")
@@ -369,6 +384,7 @@ def load_normalized_rows(
         "raw_rows": len(raw_data),
         "duplicate_rows_removed": 0,
         "excluded_non_restaurant_rows": 0,
+        "excluded_outside_japan_bbox_rows": 0,
         "lookup_prefecture_hits": 0,
         "rows_missing_prefecture": 0,
         "rows_missing_coordinates": 0,
@@ -378,6 +394,7 @@ def load_normalized_rows(
     }
 
     deduped: dict[str, dict[str, str]] = {}
+    excluded_rows: list[dict[str, str]] = []
     for record in raw_data:
         if not isinstance(record, dict):
             continue
@@ -386,11 +403,37 @@ def load_normalized_rows(
         if not source_id:
             continue
 
+        raw_type = coalesce(record, ["category", "type"])
+
         lookup_row = prefecture_lookup.get(source_id, {})
         lat, lng = parse_coordinates(record)
         if (not lat or not lng) and lookup_row:
             lat = lat or lookup_row.get("lat", "")
             lng = lng or lookup_row.get("lng", "")
+        if lat and lng and not is_in_japan_bbox(lat, lng):
+            stats["excluded_outside_japan_bbox_rows"] += 1
+            excluded_rows.append(
+                {
+                    "source_id": source_id,
+                    "name": coalesce(record, ["name"]) or lookup_row.get("name", ""),
+                    "prefecture": (
+                        coalesce(record, ["prefecture", "region", "address_prefecture", "address_region"])
+                        or source_prefecture
+                        or lookup_row.get("prefecture", "")
+                    ).strip(),
+                    "raw_type": raw_type or lookup_row.get("category", ""),
+                    "lat": lat,
+                    "lng": lng,
+                    "google_rating": coalesce(record, ["google_rating", "google_star", "rating"]),
+                    "google_review_count": coalesce(
+                        record,
+                        ["google_review_count", "review_count", "reviews", "rating_count"],
+                    ),
+                    "google_name_matched": coalesce(record, ["google_name_matched", "matched_name"]),
+                    "reason": "outside_japan_bbox",
+                }
+            )
+            continue
 
         prefecture = (
             coalesce(record, ["prefecture", "region", "address_prefecture", "address_region"])
@@ -401,9 +444,26 @@ def load_normalized_rows(
             if prefecture:
                 stats["lookup_prefecture_hits"] += 1
 
-        category = coalesce(record, ["category", "type"]) or lookup_row.get("category", "")
+        category = raw_type or lookup_row.get("category", "")
         if should_exclude_type(category):
             stats["excluded_non_restaurant_rows"] += 1
+            excluded_rows.append(
+                {
+                    "source_id": source_id,
+                    "name": coalesce(record, ["name"]) or lookup_row.get("name", ""),
+                    "prefecture": prefecture.strip(),
+                    "raw_type": category,
+                    "lat": lat,
+                    "lng": lng,
+                    "google_rating": coalesce(record, ["google_rating", "google_star", "rating"]),
+                    "google_review_count": coalesce(
+                        record,
+                        ["google_review_count", "review_count", "reviews", "rating_count"],
+                    ),
+                    "google_name_matched": coalesce(record, ["google_name_matched", "matched_name"]),
+                    "reason": "excluded_non_restaurant_type",
+                }
+            )
             continue
         image_url = clean_image_url(coalesce(record, ["image_url", "image"])) or lookup_row.get(
             "image_url",
@@ -451,7 +511,7 @@ def load_normalized_rows(
             stats["rows_missing_review_count"] += 1
 
     normalized_rows.sort(key=lambda row: (row["prefecture"], row["name"], row["source_id"]))
-    return normalized_rows, stats
+    return normalized_rows, stats, excluded_rows
 
 
 def haversine_km(lat1: float, lng1: float, lat2: float, lng2: float) -> float:
@@ -537,6 +597,11 @@ def write_report(path: Path, report: dict[str, Any]) -> None:
     path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def write_json(path: Path, rows: list[dict[str, str]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
 def output_prefix(args: argparse.Namespace) -> str:
     return args.output_prefix or Path(args.input_json).stem
 
@@ -561,7 +626,7 @@ def main() -> None:
     prefecture_lookup = combine_prefecture_lookups(csv_lookup, prefecture_json_lookup)
     source_prefecture = infer_source_prefecture(input_json, args.source_prefecture)
 
-    normalized_rows, normalize_stats = load_normalized_rows(
+    normalized_rows, normalize_stats, excluded_rows = load_normalized_rows(
         input_json,
         prefecture_lookup,
         source_prefecture,
@@ -571,9 +636,11 @@ def main() -> None:
     normalized_output = output_dir / f"{prefix}_normalized.csv"
     scored_output = output_dir / f"{prefix}_scored.csv"
     report_output = output_dir / f"{prefix}_pipeline_report.json"
+    excluded_output = output_dir / f"{prefix}_excluded.json"
 
     write_csv(normalized_output, normalized_rows, NORMALIZED_FIELDS)
     write_csv(scored_output, scored_rows, SCORED_FIELDS)
+    write_json(excluded_output, excluded_rows)
 
     report: dict[str, Any] = {
         **normalize_stats,
@@ -591,12 +658,14 @@ def main() -> None:
         "default_review_count": DEFAULT_REVIEW_COUNT,
         "normalized_output": str(normalized_output),
         "scored_output": str(scored_output),
+        "excluded_output": str(excluded_output),
         "score_formula": "0.7 * rating_norm + 0.3 * review_norm",
     }
     write_report(report_output, report)
 
     print(f"Wrote {len(normalized_rows)} normalized restaurants to {normalized_output}")
     print(f"Wrote {len(scored_rows)} scored restaurants to {scored_output}")
+    print(f"Wrote {len(excluded_rows)} excluded restaurants to {excluded_output}")
     print(f"Wrote pipeline report to {report_output}")
 
 

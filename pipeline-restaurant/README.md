@@ -47,6 +47,7 @@ python3 build_japan_restaurants.py ../raw-data/restaurant/日本全_v1_with_rati
 - `output/日本全_v1_with_rating_normalized.csv`
 - `output/日本全_v1_with_rating_scored.csv`
 - `output/日本全_v1_with_rating_pipeline_report.json`
+- `output/日本全_v1_with_rating_excluded.json`
 
 參數：
 
@@ -76,6 +77,34 @@ python3 build_japan_restaurants.py ../raw-data/restaurant/日本全_v1_with_rati
 - 仍會保留 `station_anchor`、`distance_to_station_km`、`station_distance_efficiency`
 - 但這三個欄位不再參與 `static_score`
 - pipeline report 會額外記錄 `excluded_non_restaurant_rows`
+- pipeline report 也會記錄 `excluded_outside_japan_bbox_rows`
+
+另外會輸出一份排除資料：
+
+- `<stem>_excluded.json`
+
+用途：
+
+- 保留所有被 build 階段排除的資料，方便人工檢查
+- 可用來確認過濾是否過嚴，或是否還有漏網之魚
+
+每筆欄位包含：
+
+- `source_id`
+- `name`
+- `prefecture`
+- `raw_type`
+- `lat`
+- `lng`
+- `google_rating`
+- `google_review_count`
+- `google_name_matched`
+- `reason`
+
+`reason` 目前有兩種：
+
+- `excluded_non_restaurant_type`
+- `outside_japan_bbox`
 
 過濾規則：
 
@@ -88,6 +117,13 @@ python3 build_japan_restaurants.py ../raw-data/restaurant/日本全_v1_with_rati
 - 非餐飲服務：`タイ マッサージ セラピスト`, 含 `マッサージ` 的類型, `企業のオフィス`, `結婚式場`, `ライブ会場`
 - 夜生活場館：`ナイトクラブ`, `ジャズ クラブ`, `キャバレー クラブ`
 - 其他非餐廳場域：`農場`, `果樹園`, `ディスカウント ストア`, `ワイナリー`
+
+另外，若座標明顯不在日本，也會直接排除：
+
+- 緯度範圍：`20.0 ~ 46.5`
+- 經度範圍：`122.0 ~ 154.5`
+
+這一條主要用來清掉被誤配到日本縣市、但實際座標在台灣或其他國家的資料，例如台北三重被誤配成 `三重縣`。
 
 評分公式：
 
