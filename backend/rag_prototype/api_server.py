@@ -18,11 +18,16 @@ from pydantic import BaseModel, Field
 from rag_week2 import OLLAMA_BASE_URL, extract_names_with_fallback, list_ollama_models, run_rag_prototype
 
 
+# 載入 .env，讓 API 服務可透過環境變數調整 RAG、URL 抓取與 POI 查詢參數。
 load_dotenv()
+
+# URL 與 POI 查詢相關設定：限制遠端文章下載大小、查詢分頁大小與逾時秒數。
 URL_FETCH_MAX_BYTES = int(os.getenv("RAG_URL_FETCH_MAX_BYTES", "4000000"))
 POI_API_BASE_URL = os.getenv("POI_API_BASE_URL", "http://127.0.0.1:8000").rstrip("/")
 POI_LOOKUP_PAGE_SIZE = max(1, int(os.getenv("POI_LOOKUP_PAGE_SIZE", "20")))
 POI_LOOKUP_TIMEOUT_SECONDS = float(os.getenv("POI_LOOKUP_TIMEOUT_SECONDS", "5"))
+
+# 行程分組與 URL 輸入的檢索策略設定。
 ITINERARY_MIN_SPOTS = int(os.getenv("RAG_ITINERARY_MIN_SPOTS", "3"))
 DAY_GROUP_MIN_SPOTS = max(1, int(os.getenv("RAG_DAY_GROUP_MIN_SPOTS", "2")))
 URL_MIN_TOP_K = max(1, int(os.getenv("RAG_URL_MIN_TOP_K", "50")))
@@ -34,6 +39,7 @@ MERGE_CONSECUTIVE_DAY_GROUPS = os.getenv("RAG_MERGE_CONSECUTIVE_DAY_GROUPS", "tr
     "on",
 }
 
+# 明確排除泛稱標籤，避免把「景點」「推薦景點」這類詞當成實際景點名稱。
 GENERIC_TAG_EXACT = {
     "景點",
     "景點名稱",
@@ -45,6 +51,7 @@ GENERIC_TAG_EXACT = {
     "海中鳥居",
 }
 
+# 地區名稱白名單式排除表：這些通常是城市或行政區，不是單一 POI。
 REGION_NAME_EXACT = {
     "日本",
     "東京",
@@ -83,6 +90,7 @@ REGION_NAME_EXACT = {
     "五島",
 }
 
+# 景點抽取後的雜訊片段：命中時會被視為泛稱或非景點。
 GENERIC_SPOT_SUBSTRINGS = [
     "自由行",
     "行程",
@@ -103,6 +111,7 @@ GENERIC_SPOT_SUBSTRINGS = [
     "半日遊",
 ]
 
+# 交通票券、車站或通行方式等字串，避免混入景點清單。
 TRANSPORT_NOISE_SUBSTRINGS = [
     "周遊券",
     "周游券",
@@ -116,6 +125,7 @@ TRANSPORT_NOISE_SUBSTRINGS = [
     "旅客服务中心",
 ]
 
+# 住宿、商店或非景點服務字串，避免被前端當成可推薦景點。
 STAY_SHOP_NOISE_SUBSTRINGS = [
     "飯店",
     "酒店",
@@ -127,6 +137,7 @@ STAY_SHOP_NOISE_SUBSTRINGS = [
     "别栋",
 ]
 
+# 景點名稱正規化對照表：把常見別名、錯字或繁簡差異映射到統一名稱。
 SPOT_CANONICAL_MAP = {
     "东京": "東京",
     "东京车站": "東京車站",
@@ -147,6 +158,8 @@ SPOT_CANONICAL_MAP = {
 
 
 class ExtractRequest(BaseModel):
+    """RAG 抽取 API 的請求格式，支援直接傳文字或提供 URL。"""
+
     text: str = ""
     url: str = ""
     query: str = Field(default="請列出文章中的旅遊景點名稱")
@@ -156,6 +169,7 @@ class ExtractRequest(BaseModel):
 
 
 def parse_spot_names(model_output: str) -> list[str]:
+    """從模型輸出的多行文字中取出景點名稱候選清單。"""
     lines = model_output.splitlines()
     names: list[str] = []
     for line in lines:
@@ -166,6 +180,7 @@ def parse_spot_names(model_output: str) -> list[str]:
 
 
 def dedupe_keep_order(values: list[str]) -> list[str]:
+    """去除重複項目，同時保留原本出現順序。"""
     seen: set[str] = set()
     result: list[str] = []
     for value in values:
@@ -176,10 +191,12 @@ def dedupe_keep_order(values: list[str]) -> list[str]:
 
 
 def normalize_for_match(text: str) -> str:
+    """移除空白與常見標點，產生適合模糊比對的 key。"""
     return re.sub(r"[\s，。、,.!！?？:：;；'\"`~\-_/\\()\[\]{}<>《》【】·•]+", "", text or "").strip()
 
 
 def canonicalize_spot_name(name: str) -> str:
+    """清理景點名稱並套用 canonical 對照，讓同一景點用一致名稱表示。"""
     cleaned = normalize_heading_text(name)
     cleaned = re.sub(r"^(東京綜合|東京综合|東京綜合版|東京综合版)", "", cleaned).strip()
     cleaned = re.sub(r"^(東京綜合|東京综合)", "", cleaned).strip()
@@ -191,16 +208,19 @@ def canonicalize_spot_name(name: str) -> str:
 
 
 def _contains_any_keyword(name: str, keywords: list[str]) -> bool:
+    """判斷名稱是否包含任何雜訊關鍵字。"""
     return any(keyword in name for keyword in keywords)
 
 
 def _looks_like_region_name(name: str) -> bool:
+    """判斷候選名稱是否比較像地區或行政區，而不是景點。"""
     if name in REGION_NAME_EXACT:
         return True
     return bool(re.search(r"(縣|县|市|町|村|州|道|區|区)$", name)) and len(name) <= 4
 
 
 def is_valid_spot_name(name: str) -> bool:
+    """檢查清理後的候選字串是否可作為有效景點名稱。"""
     if not name:
         return False
     if len(name) < 2 or len(name) > 22:
@@ -221,6 +241,7 @@ def is_valid_spot_name(name: str) -> bool:
 
 
 def classify_invalid_spot_name(name: str) -> str:
+    """回傳候選名稱被濾掉的原因，供 debug_samples 顯示。"""
     if not name:
         return "empty"
     if len(name) < 2:
@@ -245,6 +266,7 @@ def classify_invalid_spot_name(name: str) -> str:
 
 
 def clean_spot_names_with_debug(values: list[str], sample_limit: int = 20) -> tuple[list[str], dict[str, Any]]:
+    """清理、去重景點名稱，並收集被濾掉的樣本與原因統計。"""
     names: list[str] = []
     seen_keys: set[str] = set()
     dropped_samples: list[dict[str, str]] = []
@@ -301,21 +323,25 @@ def clean_spot_names_with_debug(values: list[str], sample_limit: int = 20) -> tu
 
 
 def clean_spot_names(values: list[str]) -> list[str]:
+    """只回傳清理後景點清單，不帶 debug 資訊。"""
     names, _ = clean_spot_names_with_debug(values, sample_limit=0)
     return names
 
 
 def normalize_heading_text(text: str) -> str:
+    """清理行程標題或候選名稱前面的編號、符號與多餘空白。"""
     cleaned = re.sub(r"^[\-\*\d\.\)\(、:：\s▶]+", "", text).strip()
     cleaned = re.sub(r"\s+", " ", cleaned)
     return cleaned
 
 
 def is_day_title(title: str) -> bool:
+    """判斷標題是否為 DAY1、DAY 2 或中文第幾天格式。"""
     return bool(re.search(r"^(DAY\s*\d+|第[一二三四五六七八九十0-9]+\s*天)$", str(title or ""), flags=re.IGNORECASE))
 
 
 def extract_itinerary_heading(text: str) -> str:
+    """從 chunk 文字中判斷是否存在行程段落標題，供後續分組使用。"""
     line = normalize_heading_text(text)
     if not line:
         return ""
@@ -363,6 +389,7 @@ def extract_itinerary_heading(text: str) -> str:
 
 
 def _parse_chinese_number(token: str) -> int | None:
+    """將中文數字或阿拉伯數字轉成整數，用於解析第幾天。"""
     token = str(token or "").strip()
     if not token:
         return None
@@ -398,6 +425,7 @@ def _parse_chinese_number(token: str) -> int | None:
 
 
 def extract_day_number_from_title(title: str) -> int | None:
+    """從 DAY 標題取出天數，無法判斷時回傳 None。"""
     title_text = str(title or "").strip()
     day_match = re.match(r"^DAY\s*(\d+)$", title_text, flags=re.IGNORECASE)
     if day_match:
@@ -413,6 +441,7 @@ def extract_day_number_from_title(title: str) -> int | None:
 
 
 def merge_consecutive_day_groups(groups: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """合併連續 DAY 分組，讓同一趟多日行程可回傳成較完整的 group。"""
     if not groups:
         return []
 
@@ -422,6 +451,7 @@ def merge_consecutive_day_groups(groups: list[dict[str, Any]]) -> list[dict[str,
     end_day: int | None = None
 
     def finalize_current() -> None:
+        """結束目前累積的 DAY group，補上標題與景點數後放入結果。"""
         nonlocal current, start_day, end_day
         if current is None:
             return
@@ -434,6 +464,7 @@ def merge_consecutive_day_groups(groups: list[dict[str, Any]]) -> list[dict[str,
         end_day = None
 
     for group in groups:
+        # 每個 group 先轉成固定欄位格式，避免缺少欄位造成後續處理失敗。
         day_number = extract_day_number_from_title(str(group.get("title", "")))
         normalized_group = {
             "group_id": group.get("group_id"),
@@ -456,6 +487,7 @@ def merge_consecutive_day_groups(groups: list[dict[str, Any]]) -> list[dict[str,
 
         current_end = end_day if end_day is not None else day_number
         is_new_itinerary = day_number == 1 and (start_day or 0) >= 1
+        # DAY 編號回到 1 或倒退時，視為另一條行程的開始。
         if is_new_itinerary or day_number < current_end:
             finalize_current()
             current = normalized_group
@@ -475,11 +507,13 @@ def merge_consecutive_day_groups(groups: list[dict[str, Any]]) -> list[dict[str,
 
 
 def split_chunks_into_itinerary_sections(chunks: list[str]) -> list[dict[str, Any]]:
+    """依據行程標題把 chunks 切成多個 itinerary section。"""
     sections: list[dict[str, Any]] = []
     current: dict[str, Any] | None = None
     auto_index = 1
 
     for index, chunk in enumerate(chunks, start=1):
+        # 偵測到新標題時，先收尾上一個 section，再建立新的 section。
         heading = extract_itinerary_heading(chunk)
         if heading:
             if current and current.get("chunk_indices"):
@@ -493,6 +527,7 @@ def split_chunks_into_itinerary_sections(chunks: list[str]) -> list[dict[str, An
             continue
 
         if current is None:
+            # 沒有明確標題的內容使用自動標題，仍保留成可分組 section。
             current = {
                 "group_id": f"group-{len(sections) + 1}",
                 "title": f"行程 {auto_index}",
@@ -510,6 +545,7 @@ def split_chunks_into_itinerary_sections(chunks: list[str]) -> list[dict[str, An
 
 
 def build_itinerary_groups_with_debug(result: dict[str, Any], spot_names: list[str]) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """把抽取出的景點對回文章段落，建立前端可用的行程群組與 debug 統計。"""
     chunks = result.get("chunks") or []
     if not chunks or not spot_names:
         return [], {
@@ -527,6 +563,7 @@ def build_itinerary_groups_with_debug(result: dict[str, Any], spot_names: list[s
     auto_title_count = 0
 
     for section in sections:
+        # 將 section 文字正規化後，檢查哪些 spot_names 實際出現在該段內容中。
         if str(section.get("title", "")).startswith("行程 "):
             auto_title_count += 1
 
@@ -540,6 +577,7 @@ def build_itinerary_groups_with_debug(result: dict[str, Any], spot_names: list[s
         group_spot_names = clean_spot_names(group_spot_names)
 
         required_spots = DAY_GROUP_MIN_SPOTS if is_day_title(str(section.get("title", ""))) else ITINERARY_MIN_SPOTS
+        # 景點數不足的 section 不回傳給前端，但保留少量樣本供 debug。
         if len(group_spot_names) < required_spots:
             if len(dropped_sections) < 20:
                 dropped_sections.append(
@@ -585,12 +623,16 @@ def build_itinerary_groups_with_debug(result: dict[str, Any], spot_names: list[s
 
 
 class GuideHTMLParser(HTMLParser):
+    """簡易 HTML 文字抽取器，用來從旅遊文章頁面取出可餵給 RAG 的純文字。"""
+
     def __init__(self) -> None:
+        """初始化文字暫存與 skip 狀態。"""
         super().__init__()
         self.parts: list[str] = []
         self._skip_depth = 0
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        """遇到區塊型標籤時補換行，遇到 script/style 則開始略過內容。"""
         tag_name = tag.lower()
         if tag_name in {"script", "style", "noscript"}:
             self._skip_depth += 1
@@ -599,6 +641,7 @@ class GuideHTMLParser(HTMLParser):
             self.parts.append("\n")
 
     def handle_endtag(self, tag: str) -> None:
+        """處理結束標籤，並在區塊結束處補換行。"""
         tag_name = tag.lower()
         if tag_name in {"script", "style", "noscript"} and self._skip_depth > 0:
             self._skip_depth -= 1
@@ -607,6 +650,7 @@ class GuideHTMLParser(HTMLParser):
             self.parts.append("\n")
 
     def handle_data(self, data: str) -> None:
+        """收集可讀文字，略過 script/style/noscript 中的內容。"""
         if self._skip_depth > 0:
             return
         text = data.strip()
@@ -614,6 +658,7 @@ class GuideHTMLParser(HTMLParser):
             self.parts.append(text)
 
     def text(self) -> str:
+        """合併已收集文字並清理多餘空白。"""
         merged = " ".join(self.parts)
         merged = re.sub(r"\n\s*\n+", "\n", merged)
         merged = re.sub(r"[ \t]+", " ", merged)
@@ -621,10 +666,12 @@ class GuideHTMLParser(HTMLParser):
 
 
 def fetch_guide_text_from_url(url: str) -> str:
+    """下載指定 URL 的 HTML，抽取成純文字並復原常見行程段落邊界。"""
     parsed = urlparse(url)
     if parsed.scheme not in {"http", "https"}:
         raise HTTPException(status_code=400, detail="url must start with http:// or https://")
 
+    # 使用瀏覽器風格 User-Agent，降低部分網站拒絕簡單 urllib request 的機率。
     request = Request(
         url,
         headers={
@@ -635,6 +682,7 @@ def fetch_guide_text_from_url(url: str) -> str:
 
     try:
         with urlopen(request, timeout=15) as response:
+            # 分段讀取並限制最大位元組數，避免大型頁面佔用過多記憶體。
             content_type = response.headers.get("Content-Type", "")
             total = 0
             chunks: list[bytes] = []
@@ -659,12 +707,14 @@ def fetch_guide_text_from_url(url: str) -> str:
     if match:
         charset = match.group(1).strip("\"'").lower()
 
+    # 依 HTTP header 的 charset 解碼；失敗字元直接忽略以保留可讀內容。
     html = raw.decode(charset, errors="ignore")
     parser = GuideHTMLParser()
     parser.feed(html)
     parser.close()
     extracted_text = parser.text()
     # Recover itinerary boundaries that are often flattened in website HTML.
+    # 網頁轉純文字後常會把 DAY 標題壓在同一行，這裡補回換行方便後續切 chunk。
     extracted_text = re.sub(
         r"(?i)(?<!\n)\s*(day\s*\d+)",
         r"\n\1",
@@ -694,14 +744,17 @@ def find_source_for_spot(
     retrieved_chunks: list[str],
     retrieved_chunk_indices: list[int],
 ) -> tuple[int, str]:
+    """在檢索結果或完整 chunks 中找出景點名稱最可能來自哪個段落。"""
     normalized_name = normalize_for_match(spot_name)
     retrieved_pairs = list(zip(retrieved_chunk_indices, retrieved_chunks))
 
     for chunk_index, chunk_text in retrieved_pairs:
+        # 優先使用向量檢索回來的 chunks，因為它們是本次回答的主要來源。
         if normalized_name and normalized_name in normalize_for_match(chunk_text):
             return chunk_index, chunk_text
 
     for index, chunk_text in enumerate(chunks, start=1):
+        # 若檢索 chunks 找不到，退回完整索引 chunks 全文搜尋。
         if normalized_name and normalized_name in normalize_for_match(chunk_text):
             return index, chunk_text
 
@@ -716,6 +769,7 @@ def find_source_for_spot(
 
 
 def build_excerpt(spot_name: str, source_text: str, radius: int = 45) -> str:
+    """從來源段落擷取景點附近的一小段文字，作為推薦理由與 trace。"""
     if not source_text:
         return ""
 
@@ -731,6 +785,7 @@ def build_excerpt(spot_name: str, source_text: str, radius: int = 45) -> str:
 
 
 def infer_review_count(spot_name: str, source_text: str, order: int) -> int:
+    """從文字中推測評論數；若沒有明確數字則產生穩定的備援值。"""
     count_match = re.search(r"(\d{2,6})\s*(?:則)?(?:評論|評價)", source_text)
     if count_match:
         try:
@@ -745,6 +800,7 @@ def infer_review_count(spot_name: str, source_text: str, order: int) -> int:
     return 15 + (value % 220)
 
 
+# POI 查詢別名表：把 RAG 抽出的中文名稱擴展成資料庫或 Google 常見名稱。
 POI_SEARCH_ALIASES = {
     "東京晴空塔": ["東京スカイツリー", "晴空塔", "Tokyo Skytree"],
     "晴空塔": ["東京スカイツリー", "Tokyo Skytree"],
@@ -759,6 +815,7 @@ POI_SEARCH_ALIASES = {
 }
 
 
+# 補充以 Unicode escape 表示的正確中文別名，避免原始檔編碼或字型顯示問題。
 POI_SEARCH_ALIASES.update(
     {
         "\u9577\u5d0e\u7a3b\u4f50\u5c71": ["\u7a32\u4f50\u5c71", "\u9577\u5d0e\u7a32\u4f50\u5c71", "Mount Inasa"],
@@ -780,6 +837,7 @@ POI_SEARCH_ALIASES.update(
     }
 )
 
+# 各地景點的人工別名補強，用來提高 POI / restaurant API 的命中率。
 POI_SEARCH_ALIASES.update(
     {
         "合羽橋道具街": ["合羽橋本通り商店街", "東京合羽橋商店街振興組合", "合羽橋"],
@@ -841,6 +899,7 @@ POI_SEARCH_ALIASES.update(
 )
 
 
+# 查詢字串變體表：處理常見繁簡、日文新舊字體或 OCR/編碼差異。
 POI_QUERY_VARIANT_MAP = {
     "溫": "温",
     "稻": "稲",
@@ -851,6 +910,7 @@ POI_QUERY_VARIANT_MAP = {
     "國": "国",
 }
 
+# 使用 Unicode code point 建立跨字形替換，避免直接顯示時混淆。
 POI_QUERY_VARIANT_MAP.update(
     {
         "\u6dfa": "\u6d45",  # 淺 -> 浅
@@ -890,6 +950,7 @@ POI_QUERY_VARIANT_MAP.update(
     }
 )
 
+# 地區前綴表：查 POI 前可移除「東京都」「京都府」等地名，增加模糊搜尋命中。
 POI_REGION_PREFIXES = [
     "東京都",
     "京都府",
@@ -911,6 +972,7 @@ POI_REGION_PREFIXES = [
     "沖繩",
 ]
 
+# 補上標準日本地區與城市名稱，支援更多資料來源格式。
 POI_REGION_PREFIXES.extend(
     [
         "\u6771\u4eac\u90fd",
@@ -964,6 +1026,7 @@ POI_REGION_PREFIXES.extend(
     ]
 )
 
+# 區域推論表：從文章或景點名稱中的關鍵字推測 POI API 的 region 查詢條件。
 POI_REGION_HINTS = [
     ("\u6771\u4eac", "\u6771\u4eac\u90fd"),
     ("合羽橋", "\u6771\u4eac\u90fd"),
@@ -1042,13 +1105,16 @@ POI_REGION_HINTS = [
 
 
 def build_text_variants(value: str) -> list[str]:
+    """根據變體對照表產生多個查詢字串版本。"""
     variants = [value]
     for source, replacement in POI_QUERY_VARIANT_MAP.items():
+        # 對既有 variants 逐步展開，讓多個替換規則可以疊加。
         variants.extend([item.replace(source, replacement) for item in list(variants) if source in item])
     return dedupe_keep_order(variants)
 
 
 def infer_poi_region_hints(text: str) -> list[str]:
+    """從名稱或來源文字推測可能的日本地區，用於縮小 POI 查詢範圍。"""
     hints: list[str] = []
     variant_text = " ".join(build_text_variants(text or ""))
     for keyword, region in POI_REGION_HINTS:
@@ -1058,6 +1124,7 @@ def infer_poi_region_hints(text: str) -> list[str]:
 
 
 def strip_region_prefixes(value: str) -> list[str]:
+    """移除地區前綴後產生候選查詢字串。"""
     stripped: list[str] = []
     for prefix in POI_REGION_PREFIXES:
         if value.startswith(prefix):
@@ -1068,6 +1135,7 @@ def strip_region_prefixes(value: str) -> list[str]:
 
 
 def _as_float(value: Any) -> float | None:
+    """安全轉換成 float，空值或非法格式回傳 None。"""
     if value is None or value == "":
         return None
     try:
@@ -1077,6 +1145,7 @@ def _as_float(value: Any) -> float | None:
 
 
 def _as_int(value: Any, default: int = 0) -> int:
+    """安全轉換成 int，失敗時回傳預設值。"""
     try:
         return int(value)
     except (TypeError, ValueError):
@@ -1084,25 +1153,29 @@ def _as_int(value: Any, default: int = 0) -> int:
 
 
 def build_poi_lookup_queries(spot_name: str) -> list[str]:
+    """為單一景點建立多組 POI API 搜尋 query，提高資料庫匹配機率。"""
     queries = [spot_name]
     normalized_name = normalize_for_match(spot_name)
     if normalized_name and normalized_name != spot_name:
         queries.append(normalized_name)
 
     for candidate in list(queries):
+        # 同時嘗試字形變體與去除地區前綴後的版本。
         queries.extend(build_text_variants(candidate))
         queries.extend(strip_region_prefixes(candidate))
         for stripped in strip_region_prefixes(candidate):
             queries.extend(build_text_variants(stripped))
 
     for key, aliases in POI_SEARCH_ALIASES.items():
+        # 若命中人工別名表，加入更多資料庫常見名稱。
         if key in spot_name or key in normalized_name:
             queries.extend(aliases)
 
     return dedupe_keep_order([query.strip() for query in queries if query and query.strip()])
 
 
-def fetch_poi_candidates(query: str, region: str = "") -> list[dict[str, Any]]:
+def fetch_api_candidates(endpoint: str, query: str, region: str = "") -> list[dict[str, Any]]:
+    """呼叫本機 POI/restaurant API，回傳符合搜尋字串的候選資料。"""
     if not POI_API_BASE_URL:
         return []
 
@@ -1111,7 +1184,7 @@ def fetch_poi_candidates(query: str, region: str = "") -> list[dict[str, Any]]:
         params_payload["region"] = region
     params = urlencode(params_payload)
     request = Request(
-        f"{POI_API_BASE_URL}/api/pois/?{params}",
+        f"{POI_API_BASE_URL}/api/{endpoint}/?{params}",
         headers={"Accept": "application/json"},
     )
 
@@ -1119,54 +1192,82 @@ def fetch_poi_candidates(query: str, region: str = "") -> list[dict[str, Any]]:
         with urlopen(request, timeout=POI_LOOKUP_TIMEOUT_SECONDS) as response:
             payload = json.loads(response.read().decode("utf-8"))
     except (HTTPError, URLError, TimeoutError, OSError, ValueError):
+        # POI API 不可用時不讓整個 RAG API 失敗，只回傳空候選。
         return []
 
     results = payload.get("results", []) if isinstance(payload, dict) else payload
     return [item for item in results if isinstance(item, dict)]
 
 
+def fetch_poi_candidates(query: str, region: str = "") -> list[dict[str, Any]]:
+    """查詢景點 POI endpoint。"""
+    return fetch_api_candidates("pois", query, region=region)
+
+
+def fetch_restaurant_candidates(query: str, region: str = "") -> list[dict[str, Any]]:
+    """查詢餐廳 endpoint，讓餐飲景點也能被匹配。"""
+    return fetch_api_candidates("restaurants", query, region=region)
+
+
 def poi_match_score(spot_name: str, poi: dict[str, Any]) -> float:
+    """根據名稱吻合程度與 static_score 計算候選 POI 分數。"""
     query_key = normalize_for_match(spot_name).lower()
     candidate_names = [
         str(poi.get("name") or ""),
         str(poi.get("google_name_matched") or ""),
         str(poi.get("id") or ""),
+        str(poi.get("raw_type") or ""),
     ]
     candidate_keys = [normalize_for_match(name).lower() for name in candidate_names if name]
 
     if query_key and query_key in candidate_keys:
+        # 完全命中名稱時給最高基本分。
         return 100.0 + float(poi.get("static_score") or 0)
 
     if query_key and any(query_key in key or key in query_key for key in candidate_keys if key):
+        # 部分包含也視為合理候選，但分數低於完全命中。
         return 80.0 + float(poi.get("static_score") or 0)
 
     return float(poi.get("static_score") or 0)
 
 
-def lookup_poi_for_spot(spot_name: str, region_hints: list[str] | None = None) -> tuple[dict[str, Any] | None, str]:
+def lookup_poi_for_spot(spot_name: str, region_hints: list[str] | None = None) -> tuple[dict[str, Any] | None, str, str]:
+    """用多組 query 與 region hint 查詢 POI/餐廳資料，選出最佳匹配。"""
     best_poi: dict[str, Any] | None = None
     best_query = ""
+    best_source_type = ""
     best_score = -1.0
     regions = dedupe_keep_order(region_hints or [])
+    sources = [
+        ("poi", fetch_poi_candidates),
+        ("restaurant", fetch_restaurant_candidates),
+    ]
 
     for query in build_poi_lookup_queries(spot_name):
+        # 每個 query 都先嘗試推論地區，再嘗試不帶地區的泛查詢。
         for region in regions + [""]:
-            for candidate in fetch_poi_candidates(query, region=region):
-                score = poi_match_score(query, candidate)
-                candidate_region = str(candidate.get("region") or "")
-                if regions and candidate_region and candidate_region not in regions:
-                    continue
-                if region and candidate_region == region:
-                    score += 5.0
-                if score > best_score:
-                    best_poi = candidate
-                    best_query = query
-                    best_score = score
+            for source_type, fetch_candidates in sources:
+                for candidate in fetch_candidates(query, region=region):
+                    score = poi_match_score(query, candidate)
+                    candidate_region = str(candidate.get("region") or "")
+                    if regions and candidate_region and candidate_region not in regions:
+                        continue
+                    if region and candidate_region == region:
+                        # 區域完全符合時加分，降低同名異地景點誤配。
+                        score += 5.0
+                    if source_type == "restaurant":
+                        score += 0.5
+                    if score > best_score:
+                        best_poi = candidate
+                        best_query = query
+                        best_source_type = source_type
+                        best_score = score
 
-    return best_poi, best_query
+    return best_poi, best_query, best_source_type
 
 
 def tags_from_poi(poi: dict[str, Any] | None) -> list[str]:
+    """從 POI 資料產生前端顯示用 tags；沒有匹配時標記為 RAG only。"""
     if not poi:
         return ["RAG only"]
 
@@ -1188,10 +1289,16 @@ def build_enriched_spot_payload(
     source_excerpt: str,
     poi: dict[str, Any] | None,
     poi_query: str,
+    match_source_type: str = "",
 ) -> dict[str, Any]:
+    """組合單一景點的前端 payload，包含 RAG 來源、POI 匹配與評分資訊。"""
     reason = f"RAG source excerpt: {source_excerpt}" if source_excerpt else "Extracted by RAG from the travel guide."
+    match_source_type = match_source_type or "poi"
+    is_restaurant = match_source_type == "restaurant"
+    api_endpoint = "restaurants" if is_restaurant else "pois"
 
     if not poi:
+        # 找不到 POI 資料時仍回傳 RAG 抽取結果，並標記資料不足。
         return {
             "schema": "rag_enriched_spot_v1",
             "name": spot_name,
@@ -1212,11 +1319,20 @@ def build_enriched_spot_payload(
                 "matched": False,
                 "query": poi_query or spot_name,
                 "apiBaseUrl": POI_API_BASE_URL,
+                "endpoint": api_endpoint,
+                "sourceType": match_source_type,
+            },
+            "restaurantMatch": {
+                "matched": False,
+                "query": poi_query or spot_name,
+                "apiBaseUrl": POI_API_BASE_URL,
+                "endpoint": "restaurants",
             },
             "reviews_count": 0,
             "is_data_insufficient": True,
         }
 
+    # POI 命中時，轉換座標、評分與評論數，整理成前端既有 schema。
     lat = _as_float(poi.get("lat"))
     lng = _as_float(poi.get("lng"))
     review_count = _as_int(poi.get("review_count"), 0)
@@ -1235,25 +1351,50 @@ def build_enriched_spot_payload(
         "tags": tags_from_poi(poi),
         "position": position,
         "imageUrl": poi.get("image_url") or "",
-        "source": f"RAG chunk #{source_chunk_index}; POI database match",
+        "source": f"RAG chunk #{source_chunk_index}; {'restaurant' if is_restaurant else 'POI'} database match",
         "sourceExcerpt": source_excerpt,
         "source_chunk_index": source_chunk_index,
         "source_text": source_text,
         "dataInsufficient": review_count < 50,
+        "matchSourceType": match_source_type,
         "poi": {
             "id": poi.get("id"),
             "name": poi.get("name"),
             "google_name_matched": poi.get("google_name_matched"),
             "category": poi.get("category"),
+            "venue_type": poi.get("venue_type"),
             "static_score": poi.get("static_score"),
             "image_url": poi.get("image_url"),
             "station_anchor": poi.get("station_anchor"),
             "distance_to_station_km": poi.get("distance_to_station_km"),
+            "source_type": match_source_type,
         },
+        "restaurant": {
+            "id": poi.get("id"),
+            "name": poi.get("name"),
+            "google_name_matched": poi.get("google_name_matched"),
+            "category": poi.get("category"),
+            "venue_type": poi.get("venue_type"),
+            "raw_type": poi.get("raw_type"),
+            "static_score": poi.get("static_score"),
+            "image_url": poi.get("image_url"),
+            "station_anchor": poi.get("station_anchor"),
+            "distance_to_station_km": poi.get("distance_to_station_km"),
+        }
+        if is_restaurant
+        else None,
         "poiMatch": {
             "matched": True,
             "query": poi_query or spot_name,
             "apiBaseUrl": POI_API_BASE_URL,
+            "endpoint": api_endpoint,
+            "sourceType": match_source_type,
+        },
+        "restaurantMatch": {
+            "matched": is_restaurant,
+            "query": poi_query or spot_name,
+            "apiBaseUrl": POI_API_BASE_URL,
+            "endpoint": "restaurants",
         },
         "reviews_count": review_count,
         "is_data_insufficient": review_count < 50,
@@ -1261,12 +1402,14 @@ def build_enriched_spot_payload(
 
 
 def build_spots_payload(result: dict[str, Any], spot_names: list[str]) -> list[dict[str, Any]]:
+    """把 RAG 抽出的景點名稱批次轉成帶 POI 資料的 spots payload。"""
     chunks = result.get("chunks") or []
     retrieved_chunks = result.get("retrieved_chunks") or []
     retrieved_chunk_indices = result.get("retrieved_chunk_indices") or []
 
     spots: list[dict[str, Any]] = []
     for order, name in enumerate(spot_names):
+        # 先找出來源段落與摘要，再用名稱加來源文字推測地區並查詢 POI。
         source_chunk_index, source_text = find_source_for_spot(
             spot_name=name,
             chunks=chunks,
@@ -1275,7 +1418,7 @@ def build_spots_payload(result: dict[str, Any], spot_names: list[str]) -> list[d
         )
         excerpt = build_excerpt(name, source_text)
         region_hints = infer_poi_region_hints(f"{name} {source_text}")
-        poi, poi_query = lookup_poi_for_spot(name, region_hints=region_hints)
+        poi, poi_query, match_source_type = lookup_poi_for_spot(name, region_hints=region_hints)
         spots.append(
             build_enriched_spot_payload(
                 spot_name=name,
@@ -1285,14 +1428,17 @@ def build_spots_payload(result: dict[str, Any], spot_names: list[str]) -> list[d
                 source_excerpt=excerpt,
                 poi=poi,
                 poi_query=poi_query,
+                match_source_type=match_source_type,
             )
         )
 
     return spots
 
 
+# FastAPI app 主體：提供健康檢查與 RAG 景點抽取 endpoint。
 app = FastAPI(title="Japan Travel RAG API", version="0.1.0")
 
+# CORS 設定：允許本機 Vite dev server 與 preview server 呼叫 API。
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -1309,6 +1455,7 @@ app.add_middleware(
 
 @app.get("/health")
 def health() -> dict[str, Any]:
+    """健康檢查 endpoint，回報 Ollama 是否可用與本機模型清單。"""
     ollama_models = list_ollama_models()
     return {
         "status": "ok",
@@ -1321,10 +1468,12 @@ def health() -> dict[str, Any]:
 
 @app.post("/api/rag/extract")
 def extract_spots(payload: ExtractRequest) -> dict[str, Any]:
+    """RAG 抽取主 endpoint：接受文字或 URL，回傳景點、POI 補強資料與 debug 指標。"""
     text = payload.text.strip()
     url = payload.url.strip()
     input_source = "text"
     if not text and url:
+        # 若使用者提供 URL，先抓取並轉成純文字再進入 RAG 流程。
         text = fetch_guide_text_from_url(url)
         input_source = "url"
     if not text:
@@ -1333,10 +1482,12 @@ def extract_spots(payload: ExtractRequest) -> dict[str, Any]:
     effective_top_k = payload.top_k
     read_full_document = False
     if input_source == "url":
+        # URL 文章通常較長，因此提高最低 top_k，並可透過環境變數改成讀完整文件。
         effective_top_k = max(payload.top_k, URL_MIN_TOP_K)
         read_full_document = URL_READ_FULL_DOCUMENT
 
     try:
+        # 呼叫 rag_week2 的核心流程：切塊、embedding、檢索與模型抽取景點名稱。
         result = run_rag_prototype(
             input_text=text,
             user_query=payload.query,
@@ -1351,13 +1502,22 @@ def extract_spots(payload: ExtractRequest) -> dict[str, Any]:
         [item.strip() for item in (result.get("spot_names") or parse_spot_names(result.get("model_output", ""))) if item]
     )
     if not spot_names:
+        # 若模型輸出沒有可用名稱，退回 regex fallback 從檢索 chunks 中再抽一次。
         spot_names = dedupe_keep_order(extract_names_with_fallback(" ".join(result.get("retrieved_chunks") or [])))
     spot_names, spot_clean_debug = clean_spot_names_with_debug(spot_names)
 
+    # 將乾淨的景點名稱補上 POI/餐廳資料，並建立行程分組。
     spots = build_spots_payload(result, spot_names)
-    poi_matched_count = sum(1 for spot in spots if spot.get("poiMatch", {}).get("matched"))
+    matched_count = sum(1 for spot in spots if spot.get("poiMatch", {}).get("matched"))
+    restaurant_matched_count = sum(1 for spot in spots if spot.get("restaurantMatch", {}).get("matched"))
+    poi_matched_count = sum(
+        1
+        for spot in spots
+        if spot.get("poiMatch", {}).get("matched") and spot.get("matchSourceType") != "restaurant"
+    )
     itinerary_groups, group_debug = build_itinerary_groups_with_debug(result, spot_names)
 
+    # debug_metrics 給前端或開發者觀察 RAG、清理、POI 匹配與分組效果。
     debug_metrics = {
         "chunk_count": len(result.get("chunks") or []),
         "retrieved_chunk_count": len(result.get("retrieved_chunks") or []),
@@ -1368,8 +1528,10 @@ def extract_spots(payload: ExtractRequest) -> dict[str, Any]:
         "spot_clean_count": spot_clean_debug.get("clean_count", 0),
         "spot_dropped_count": spot_clean_debug.get("dropped_count", 0),
         "poi_api_base_url": POI_API_BASE_URL,
+        "matched_count": matched_count,
         "poi_matched_count": poi_matched_count,
-        "poi_unmatched_count": max(0, len(spots) - poi_matched_count),
+        "restaurant_matched_count": restaurant_matched_count,
+        "lookup_unmatched_count": max(0, len(spots) - matched_count),
         "group_count": len(itinerary_groups),
         "sections_total": group_debug.get("sections_total", 0),
         "sections_auto_title": group_debug.get("sections_auto_title", 0),
@@ -1378,6 +1540,7 @@ def extract_spots(payload: ExtractRequest) -> dict[str, Any]:
         "group_dropped_section_count": group_debug.get("dropped_section_count", 0),
     }
 
+    # debug_samples 保留少量被濾掉的樣本，方便調整規則但避免 response 過大。
     debug_samples = {
         "spot_drop_reason_counts": spot_clean_debug.get("drop_reason_counts", {}),
         "spot_dropped_samples": spot_clean_debug.get("dropped_samples", []),
