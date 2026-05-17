@@ -5,40 +5,12 @@
       "date": "第1天",
       "attractions": [
         {
-          "id": "ChIJVVWpqaEIAWARfbQnZTGOZ54",
-          "name": "自然医学研究所カムナビ 京都",
-          "image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=HZgyBI9E_I8mTmSqyUlt0w&cb_client=search.gws-prod.gps&w=408&h=240&yaw=167.27025&pitch=0&thumbfov=100",
-          "category": "景點",
-          "description": "探索自然療法與京都的自然之美，感受身心靈的平靜。",
-          "duration": "1-2 小時",
-          "estimatedCost": "免費",
-          "location": "京都・下京区",
-          "position": {
-            "lat": 34.9940697,
-            "lng": 135.7548935
-          },
-          "rating": 5.0,
-          "xai": {
-            "summary": "符合自然秘境興趣",
-            "scores": [
-              {
-                "label": "興趣符合度",
-                "value": 90
-              },
-              {
-                "label": "交通便利度",
-                "value": 85
-              }
-            ]
-          }
-        },
-        {
           "id": "ChIJZUfbq5oHAWARMRVTigRS2e4",
           "name": "一般財団法人京都森林経営管理サポートセンター",
           "image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=BA2MM7YbugV-4b_lYNgFiw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=195.20636&pitch=0&thumbfov=100",
           "category": "景點",
-          "description": "了解京都森林管理，體驗大自然的奧秘與寧靜。",
-          "duration": "1-2 小時",
+          "description": "探索京都森林管理中心，感受自然氣息。",
+          "duration": "1–2 小時",
           "estimatedCost": "免費",
           "location": "京都・南区",
           "position": {
@@ -47,103 +19,127 @@
           },
           "rating": 5.0,
           "xai": {
-            "summary": "符合自然秘境興趣",
+            "summary": "此景點符合您對自然的偏好，提供森林相關體驗。",
             "scores": [
               {
                 "label": "興趣符合度",
-                "value": 88
+                "value": 90
               },
               {
-                "label": "環境清幽度",
+                "label": "交通便利度",
+                "value": 85
+              }
+            ]
+          }
+        },
+        {
+          "id": "ChIJyTxcXK8PAWARex7hIiFby7I",
+          "name": "Jibo Kannon ( 慈母観音 )",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFXRoRnKijd9CdOdPU7iInE5xcqD-EijYCXUnBs4E8Tmc3UEDUDtlyJ_0PEUBs7xjZOrSRmqP0QSHhNh1GpNQQPjxXmYbMf0hIWajJo2rY-KcBRg8urlwcye9aO1ZrjBetxeV0W=w426-h240-k-no",
+          "category": "景點",
+          "description": "參觀慈母觀音，感受寺社的寧靜與宗教氛圍。",
+          "duration": "1–1.5 小時",
+          "estimatedCost": "免費",
+          "location": "京都・東山区",
+          "position": {
+            "lat": 34.9690048,
+            "lng": 135.7746668
+          },
+          "rating": 5.0,
+          "xai": {
+            "summary": "此寺社提供秘境般的寧靜，符合您對自然與秘境的興趣。",
+            "scores": [
+              {
+                "label": "興趣符合度",
+                "value": 80
+              },
+              {
+                "label": "文化符合度",
                 "value": 90
               }
             ]
           }
         },
         {
-          "id": "ChIJTQMm4UiZ_18RL47u2gpINSI",
-          "name": "丹後上世屋内山京都府自然環境保全地域",
-          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEIal351SroCV7JU6Kin5x0JY679qyG1Qudd1-gej3W6KaKrcWqKItXvZCL0DLc8QfZEQ122bubDpG7XMkz2SImNUZXTLwmAD9AKb39Cbx0LBAjQj4go9tas4wC0PG6CNb6cVn4czaOD-8u=w408-h544-k-no",
-          "category": "景點",
-          "description": "探索丹後地區的自然環境保全地域，享受遠離塵囂的寧靜山林與壯麗景色。",
-          "duration": "2-3 小時",
-          "estimatedCost": "免費",
-          "location": "京都・丹後",
+          "id": "ChIJ-V8YiOUJAWARwBnLN25_I68",
+          "name": "京都とんかつ かつ田 四条烏丸店",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHZ-IHwBvBA2viwC6EYqZ_AIvylXRKH6AXNRnk-FEMGiituxAcTPVEPzsXvknmZCewvcRdzeu7vRBjK-1_HI9-Z7FiBrso-YfswlOz6a2TQ4azr1_9rzylKi4h5pTQqABc4DCjlP-NgaSxB=w408-h272-k-no",
+          "category": "美食",
+          "description": "品嚐美味的京都炸豬排，享受日式料理。",
+          "duration": "1–1.5 小時",
+          "estimatedCost": "¥2,000–¥3,000",
+          "location": "京都・下京区",
           "position": {
-            "lat": 35.622711,
-            "lng": 135.164882
+            "lat": 35.0012535,
+            "lng": 135.7594566
           },
-          "rating": 5.0,
+          "rating": 4.9,
           "xai": {
-            "summary": "提供遠離喧囂的自然山林體驗，符合使用者對秘境和爬山的偏好。",
+            "summary": "此餐廳提供高評價的日式美食，滿足您的餐飲需求。",
             "scores": [
               {
-                "label": "興趣符合度",
-                "value": 95
-              },
-              {
-                "label": "環境清幽度",
+                "label": "美食體驗",
                 "value": 95
               },
               {
                 "label": "交通便利度",
-                "value": 50
+                "value": 80
               }
             ]
           }
         },
         {
-          "id": "ChIJzX0LnkgHAWARM7ZkzWQ387I",
-          "name": "京都の自然200選 雙ヶ岡",
-          "image": "",
+          "id": "ChIJd9oYLwAJAWARgwI_alTcgbA",
+          "name": "レジャーシート",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEeGwkM7s3PZnUWMRIh77DEc7-Qpdp3TmDrf9FSlvMUfElNzN-LN4niyaJpb3C9hwlU7PMktWiw5CGXd7uJ_-envNPv061xcMPEXtvjTD8WzBnqtd8wXoW1iLG2BB2OWRYi6gGKeIgdUJc=w426-h240-k-no",
           "category": "景點",
-          "description": "登上雙ヶ岡，俯瞰京都市景，享受自然風光。",
-          "duration": "1.5-2.5 小時",
+          "description": "在戶外享受悠閒時光，親近自然。",
+          "duration": "1–2 小時",
           "estimatedCost": "免費",
-          "location": "京都・右京区",
+          "location": "京都・左京区",
           "position": {
-            "lat": 35.0222512,
-            "lng": 135.7136145
+            "lat": 35.0267513,
+            "lng": 135.770961
           },
           "rating": 5.0,
           "xai": {
-            "summary": "符合自然秘境興趣",
-            "scores": [
-              {
-                "label": "興趣符合度",
-                "value": 90
-              },
-              {
-                "label": "景觀優美度",
-                "value": 88
-              }
-            ]
-          }
-        },
-        {
-          "id": "ChIJZ2F5EwAHAWARqxwdL922ees",
-          "name": "京都の自然200選 船岡山",
-          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHMrQv9FQDxOiEcKrJwDtKME7XUEzgsduLsMdjI1tn9LQpKSwVNrQnwTplx_Jg-d1flF-A0EDFJ6ku5OGyV4SY6ZPaWDW-cXcolqcLFwqi_KxvEFoV1bxzkG9il9lgK8_wivRZ9dA=w408-h241-k-no",
-          "category": "景點",
-          "description": "船岡山是京都的自然地標，適合散步與觀景。",
-          "duration": "1.5-2.5 小時",
-          "estimatedCost": "免費",
-          "location": "京都・北区",
-          "position": {
-            "lat": 35.0383889,
-            "lng": 135.7442778
-          },
-          "rating": 5.0,
-          "xai": {
-            "summary": "符合自然秘境興趣",
+            "summary": "此戶外景點符合您對自然的偏好，適合放鬆。",
             "scores": [
               {
                 "label": "興趣符合度",
                 "value": 85
               },
               {
-                "label": "戶外活動",
-                "value": 80
+                "label": "放鬆程度",
+                "value": 75
+              }
+            ]
+          }
+        },
+        {
+          "id": "ChIJv-EQDnurAWARUJpbIjr-APc",
+          "name": "ギャラリー祇王寺",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHMHs89vG56I0GWkWyIpaPJ4s1abenbc_J656CpTSGOFEJZRMXZApZIS7XpCMmrXuCoIYmn94Tf45V3SGOXTGwv_6-rFxeQqcrxK0PCUHZhocSdFpcohDkESz_x_Rsy7mDxuX7Mhg=w408-h408-k-no",
+          "category": "景點",
+          "description": "探訪祇王寺藝廊，感受寺廟與藝術的結合。",
+          "duration": "1.5–2 小時",
+          "estimatedCost": "¥500",
+          "location": "京都・右京区",
+          "position": {
+            "lat": 35.0232338,
+            "lng": 135.6677401
+          },
+          "rating": 5.0,
+          "xai": {
+            "summary": "此景點結合自然與宗教，帶有秘境氛圍。",
+            "scores": [
+              {
+                "label": "興趣符合度",
+                "value": 88
+              },
+              {
+                "label": "文化符合度",
+                "value": 85
               }
             ]
           }
@@ -155,141 +151,141 @@
       "date": "第2天",
       "attractions": [
         {
-          "id": "ChIJuaxKVgBFAWAR297SiM7jgP8",
-          "name": "京都の自然200選 福常寺の「ヒノキ」",
-          "image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=TvuJtfY-UwYa_uB91zfTHQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=230.46785&pitch=0&thumbfov=100",
+          "id": "ChIJwSl3cPERAWAR2-jxkdUZF28",
+          "name": "もみじ谷",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEYTSiZNTiZUWyULbIWq-GIEJi6FzbTSkFPz_nAokLu34FfrEftE89HleR_dzUJfoZbEnG6YSZEwwhJqgCTMedU4Bfzklof1RlThvitBpQ9GjSNjgy6_HXarmqWtZeu_l6armQHKYDYlx-n=w408-h612-k-no",
           "category": "景點",
-          "description": "探訪福常寺的古老檜木，感受宗教與自然的結合。",
-          "duration": "1-1.5 小時",
+          "description": "漫步於楓葉谷，欣賞京都的自然美景。",
+          "duration": "1.5–2.5 小時",
           "estimatedCost": "免費",
-          "location": "京都・京北",
+          "location": "京都・北区",
           "position": {
-            "lat": 34.7959493,
-            "lng": 135.999213
+            "lat": 34.8817414,
+            "lng": 135.8163967
           },
           "rating": 5.0,
           "xai": {
-            "summary": "符合自然秘境興趣",
+            "summary": "此景點完美符合您對自然的偏好，景色優美。",
             "scores": [
               {
                 "label": "興趣符合度",
-                "value": 85
+                "value": 95
               },
               {
-                "label": "文化深度",
-                "value": 75
+                "label": "景觀美學",
+                "value": 90
               }
             ]
           }
         },
         {
-          "id": "ChIJA6yQdwCxAWARDfUoGLKHMyk",
-          "name": "常照皇寺京都府歴史的自然環境保全地域",
-          "image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=ixG_HWb7i7-Yj9Ylxw98mg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=321.47876&pitch=0&thumbfov=100",
+          "id": "onigajo01",
+          "name": "Onigajō (鬼ヶ城)",
+          "image": "",
           "category": "景點",
-          "description": "歷史悠久的寺廟與自然環境，感受寧靜與莊嚴。",
-          "duration": "1.5-2 小時",
-          "estimatedCost": "¥500",
-          "location": "京都・右京区",
+          "description": "探索鬼ヶ城，感受其壯麗的自然景觀，遠離城市喧囂，享受海景與戶外體驗。",
+          "duration": "2–3 小時",
+          "estimatedCost": "免費",
+          "location": "三重県熊野市",
           "position": {
-            "lat": 35.1995833,
-            "lng": 135.6849444
+            "lat": 0,
+            "lng": 0
           },
-          "rating": 5.0,
+          "rating": 0,
           "xai": {
-            "summary": "符合自然秘境興趣",
+            "summary": "此景點完美符合您遠離喧囂、親近自然的需求，提供壯麗的海景與戶外體驗。",
             "scores": [
               {
                 "label": "興趣符合度",
-                "value": 88
+                "value": 95
               },
               {
-                "label": "歷史價值",
-                "value": 80
+                "label": "遠離喧囂度",
+                "value": 90
               }
             ]
           }
         },
         {
-          "id": "ChIJ5frBn5fnAGAR2U2yfDm7PXA",
-          "name": "牛カツ京都勝牛 なんばウォーク1番街店",
-          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGD6fJhVlZ8DDKWkh5P6WqLDnZDGltHczuNWK1q0huSUV3Abp7pxPCDdAbToc3Z3_AKXioMD8Y5Uwp_P1VP0Xcs8biCEloStL37pCfaTusTTtOboy6f0Jy6bJkPuUSCC7M9oAi1=w408-h259-k-no",
+          "id": "ChIJpy8tVAAJAWARLfP6q4ygeuQ",
+          "name": "和牛すき焼き 京都力山 京都駅前店",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEgVoYngTX-yM1S38AEXghdgnmzkk_qa8rJKFuurrSeya5VGe_J75gpCfm3xGla-scBBSn7HYnA9xRiVq6LttQ1xHD-S7bgjWuNwd1iocA_uisW3f2Lh1P-WzXYi2FRx6omgnbJOQ=w427-h240-k-no",
           "category": "美食",
-          "description": "享用美味的京都勝牛炸牛排定食。",
-          "duration": "1-1.5 小時",
-          "estimatedCost": "¥1,500-¥2,500",
-          "location": "京都・東山区",
+          "description": "品嚐頂級和牛壽喜燒，享受奢華美食體驗。",
+          "duration": "1.5–2 小時",
+          "estimatedCost": "¥5,000–¥8,000",
+          "location": "京都・下京区",
           "position": {
-            "lat": 34.6673162,
-            "lng": 135.4983566
+            "lat": 34.9891719,
+            "lng": 135.7607067
           },
           "rating": 4.9,
           "xai": {
-            "summary": "提供日式炸牛排美食",
+            "summary": "此餐廳提供高品質日式料理，滿足您的美食期待。",
             "scores": [
               {
-                "label": "餐飲品質",
-                "value": 90
+                "label": "美食體驗",
+                "value": 98
               },
               {
-                "label": "性價比",
+                "label": "服務品質",
+                "value": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "ChIJOZEonloJAWARBU3ReCtS0bI",
+          "name": "Samurai Gyoza Factory Kyoto",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG_xJnl91jjaYTDELOiU3SWtfgRuwV-n4RH2VqIvpjoPd3ddAsTmQU9KZE1M_9J-o6lVkr6acX1XoZUWX-kxcjb2ZTagKCgWeJDXZ2xVkX-EHE4T8xdf92OSjOspKueXvj0NQkI=w408-h271-k-no",
+          "category": "景點",
+          "description": "體驗製作武士餃子，感受日本料理文化。",
+          "duration": "1.5–2 小時",
+          "estimatedCost": "¥3,000–¥5,000",
+          "location": "京都・東山区",
+          "position": {
+            "lat": 35.0130999,
+            "lng": 135.7573894
+          },
+          "rating": 5.0,
+          "xai": {
+            "summary": "此景點提供獨特的文化體驗，適合互動參與。",
+            "scores": [
+              {
+                "label": "文化體驗",
+                "value": 80
+              },
+              {
+                "label": "互動性",
+                "value": 90
+              }
+            ]
+          }
+        },
+        {
+          "id": "ChIJfWp4_yYJAWARuOSfwhHbKQw",
+          "name": "Matcha Factory Kyoto",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAExiosEqXaZNXeeCUnC-KLweWGo-501lfbWBUfvvma3eaxCOsqBXp1PlbSn6pZlhJwqyoLWvyY3qU411toJGZAgmSB0LbEP-RKipABas5xedd3aywjlbWUNAIi4YZ0KGHym39UirdyIf0k3=w408-h272-k-no",
+          "category": "景點",
+          "description": "參觀抹茶工廠，了解抹茶製作過程並品嚐。",
+          "duration": "1–1.5 小時",
+          "estimatedCost": "¥1,000–¥2,000",
+          "location": "京都・東山区",
+          "position": {
+            "lat": 35.0130999,
+            "lng": 135.7573894
+          },
+          "rating": 5.0,
+          "xai": {
+            "summary": "此景點提供獨特的日本文化體驗，適合抹茶愛好者。",
+            "scores": [
+              {
+                "label": "文化體驗",
                 "value": 85
-              }
-            ]
-          }
-        },
-        {
-          "id": "ChIJlWlGFelBAWARAQaskSooutg",
-          "name": "鷲峰山京都府歴史的自然環境保全地域",
-          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEZjsEyBuyxz1NQ4STr9e5mW_YQ_nxhVDtVooadwJ47XT-T_xDloJxSI7-NIf-1xaOCvWU_knHtSEdGTgQduTR6nol4VQiA0NmwWU0b1rD-zuZ3BY_pItBwobFBvXkvWhyUn2CJ=w408-h544-k-no",
-          "category": "景點",
-          "description": "登山遠眺，體驗京都的自然風光與歷史氣息。",
-          "duration": "2-3 小時",
-          "estimatedCost": "免費",
-          "location": "京都・宇治田原町",
-          "position": {
-            "lat": 34.8296651,
-            "lng": 135.9169846
-          },
-          "rating": 5.0,
-          "xai": {
-            "summary": "符合自然秘境興趣",
-            "scores": [
-              {
-                "label": "興趣符合度",
-                "value": 92
               },
               {
-                "label": "挑戰性",
-                "value": 70
-              }
-            ]
-          }
-        },
-        {
-          "id": "ChIJR7XlBKpPAGARyrQUc5YjQV4",
-          "name": "小向山（こむぎやま）(京都の自然200選)",
-          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFZPeRjRXOwIZU-b0UpGlz1ryPDIalVsnQ8LFBSkBMFtgQvvh7p72Q9N0lAQkPxX5VOBY-AWO6h2Ao72GSlER76XHvk5O48kuRhAWgppWEsfkX3FISNyqJQ43bpzzFBV2psZiTUIQ=w408-h306-k-no",
-          "category": "景點",
-          "description": "京都自然200選之一，適合健行與親近自然。",
-          "duration": "1.5-2.5 小時",
-          "estimatedCost": "免費",
-          "location": "京都・南丹市",
-          "position": {
-            "lat": 35.1075932,
-            "lng": 135.4685853
-          },
-          "rating": 5.0,
-          "xai": {
-            "summary": "符合自然秘境興趣",
-            "scores": [
-              {
-                "label": "興趣符合度",
-                "value": 87
-              },
-              {
-                "label": "環境清幽度",
-                "value": 90
+                "label": "獨特性",
+                "value": 80
               }
             ]
           }

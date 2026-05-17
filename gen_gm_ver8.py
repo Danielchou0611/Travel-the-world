@@ -38,6 +38,36 @@ def verify_place_with_google_maps(place_name, destination, api_key=GMAPS_KEY):#"
         print(f"地圖 API 呼叫失敗: {e}")
         # 若 API 壞掉，為了不阻斷流程，可視情況暫時放行
         return True, None, None
+def normalize_region_name(destination: str) -> str:
+    """
+    將口語地名轉換為資料庫使用的標準 47 都道府縣名稱。
+    例如: "京都" -> "京都府", "東京" -> "東京都", "沖繩" -> "沖繩縣"
+    """
+    official_regions = [
+        "三重縣","京都府","佐賀縣","兵庫縣","北海道","千葉縣","和歌山縣","埼玉縣",
+        "大分縣","大阪府","奈良縣","宮城縣","宮崎縣","富山縣","山口縣","山形縣",
+        "山梨縣","岐阜縣","岡山縣","岩手縣","島根縣","廣島縣","德島縣","愛媛縣",
+        "愛知縣","新潟縣","東京都","栃木縣","沖繩縣","滋賀縣","熊本縣","石川縣",
+        "神奈川縣","福井縣","福岡縣","福島縣","秋田縣","群馬縣","茨城縣","長崎縣",
+        "長野縣","青森縣","靜岡縣","香川縣","高知縣","鳥取縣","鹿兒島縣"
+    ]
+    
+    mapping = {}
+    for region in official_regions:
+        # 1. 確保輸入「全名」時能正確回傳 (例如輸入"京都府"回傳"京都府")
+        mapping[region] = region 
+        
+        # 2. 自動產生簡稱對應 (把最後一個字 "都"、"府"、"縣" 拿掉)
+        if region != "北海道": 
+            short_name = region[:-1]
+            mapping[short_name] = region
+            
+    # 3. 處理一些常見的異體字或特例 (可視未來使用者輸入習慣擴充)
+    mapping["冲绳"] = "沖繩縣" 
+    mapping["群馬"] = "群馬縣" 
+    
+    # 若在字典中找不到對應，就維持使用者原本的輸入
+    return mapping.get(destination, destination)
 # 設定日誌，方便在後端 debug
 #logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 #logger = logging.getLogger(__name__)
@@ -61,10 +91,10 @@ def retrieve_local_knowledge(destination: str, required_count: int, user_prefs: 
         # 建立降級策略：從嚴格到寬鬆 (4.2 -> 3.8 -> 3.0 -> 0.0)
         thresholds = [4.2, 3.8, 3.0, 0.0]
         top_places = []
-        
+        rest_region = normalize_region_name(destination)
         for min_rating in thresholds:
             params = {
-                "search": destination,
+                "region": rest_region,
                 "page_size": 50, # 拿多一點來方便 Python 端過濾
                 "ordering": "-google_rating" # 讓 Django 幫忙由高到低排序
             }
@@ -127,8 +157,9 @@ def retrieve_local_knowledge(destination: str, required_count: int, user_prefs: 
         context_lines.append("\n【🍜 官方餐廳與美食候選清單】")
         try:
             # 使用組員新增的 POST 推薦端點
+            rest_region = normalize_region_name(destination)
             rest_payload = {
-                "search": destination,
+                "region": rest_region,
                 "top_k": rest_count
             }
             res_resp = requests.post("http://127.0.0.1:8000/api/restaurants/recommendations/", json=rest_payload)
