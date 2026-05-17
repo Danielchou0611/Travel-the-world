@@ -1,119 +1,120 @@
-### Travel the world
-#### Some Instruction for upload your file to Github
-
-```
-git init                          // 初始化
-git add .                         // 將檔案加進暫存區(.代表全部檔案，如果要指令檔案的話可以改成git add README.md test.py (可以選擇多個檔案)
-git commit -m "first upload"      // 提交變更(first upload可以改成任何你想要的句子方便記錄)
-git branch -M Branch_Name         // 設定你的分支名稱(Branch_Name改成你們自己的英文名字)
-git remote add origin https://github.com/Danielchou0611/Travel-the-world   // 連接到github
-git push -u origin Branch_Name    // 將上面add後面的檔案推送到 GitHub 的對應分支
-```
-
 # Japan Travel Planning App
 
-以 **React + FastAPI + Ollama + ChromaDB** 建構的日本旅遊規劃系統。  
-本專案的核心是 RAG（Retrieval-Augmented Generation）流程：輸入攻略文字或攻略 URL，萃取景點、保留來源片段、分組行程，並同步到地圖與互動式 UI。
+這個專案是一個日本旅遊行程規劃 Web App。前端使用 React + Vite，後端包含兩個服務：
 
----
+- `backend/rag_prototype`：FastAPI + Ollama + ChromaDB，用來從旅遊文章或 URL 抽取景點 / 餐廳名稱。
+- `Travel-the-world-Gary/backend`：Django REST Framework，提供日本景點 POI 與餐廳 POI 資料庫 API。
 
-## 1. 專案目標
+前端會呼叫 RAG API，RAG API 再串接 Gary 的 POI / Restaurant API，把抽取到的名稱補上評分、評論數、圖片、座標、分類與來源段落，最後在地圖規劃頁呈現。
 
-- 將旅遊攻略（文字/網址）轉成可操作的景點清單
-- 提供來源片段（explainable）以利驗證
-- 支援加入行程、移除行程、地圖互動展示
-- 在 API/模型異常時具備 fallback（可 demo）
-
----
-
-## 2. 主要功能
-
-- 攻略輸入模式：
-  - 貼上文字
-  - 貼上 URL（後端抓全文並清洗）
-- RAG 萃取：
-  - chunking
-  - embedding（Ollama）
-  - vector retrieval（ChromaDB）
-  - 生成景點名稱（Ollama）
-  - 景點清洗/去重/分組
-- 前端互動：
-  - 景點卡片
-  - 行程加入/移除
-  - Google Maps marker 與路線展示
-- 穩定性設計：
-  - embedding/generation 模型 fallback
-  - Directions API 被拒時，自動 fallback 至 Google Maps URL 導航
-
----
-
-## 3. 系統架構
+## 系統架構
 
 ```mermaid
 flowchart TD
-    A[React Frontend] -->|POST /api/rag/extract| B[FastAPI api_server.py]
-    B --> C{Input Type}
-    C -->|Text| D[Raw Text]
-    C -->|URL| E[Fetch & Parse HTML]
-    D --> F["split_text()"]
-    E --> F
-    F --> G[Ollama Embedding]
-    G --> H[(ChromaDB)]
-    H --> I[Top-k Retrieval]
-    I --> J[Ollama Generation]
-    J --> K[Spot Post-processing]
-    K --> L[spots / itinerary_groups / source_excerpt]
-    L --> A
+    U[User] --> FE[React + Vite Frontend<br/>src/pages/MapPlanningPage.jsx]
+
+    FE -->|POST /api/rag/extract| RAG[RAG FastAPI<br/>backend/rag_prototype/api_server.py<br/>127.0.0.1:8010]
+
+    RAG -->|text or URL| HTML[URL Fetch + HTML Parser]
+    RAG --> SPLIT[Text Chunking<br/>rag_week2.py]
+    SPLIT --> EMB[Ollama Embedding<br/>nomic-embed-text]
+    EMB --> CHROMA[(ChromaDB<br/>chroma_store)]
+    CHROMA --> RET[Top-k Retrieval]
+    RET --> GEN[Ollama Generation<br/>qwen2.5:7b-instruct]
+    GEN --> CLEAN[Name Cleaning + Itinerary Groups]
+
+    CLEAN -->|GET /api/pois/?search=...| GARY[Gary Django API<br/>Travel-the-world-Gary/backend<br/>127.0.0.1:8000]
+    CLEAN -->|GET /api/restaurants/?search=...| GARY
+
+    GARY --> POIDB[(POI DB<br/>japan_with_rating_interest.json)]
+    GARY --> RESTDB[(Restaurant DB<br/>japan_restaurant_with_rating_interest.json)]
+
+    CLEAN --> ENRICH[Enriched Spots Payload<br/>rating / reviews / image / position]
+    ENRICH --> FE
+    FE --> MAP[Google Maps Panel<br/>markers + route planning]
 ```
 
----
+## 服務與 Port
 
-## 4. 專案結構
+| 服務 | 預設網址 | 主要用途 |
+|---|---|---|
+| Ollama | `http://127.0.0.1:11434` | Embedding 與生成模型 |
+| Gary Django API | `http://127.0.0.1:8000` | 景點 POI、餐廳 POI、推薦 API |
+| RAG FastAPI | `http://127.0.0.1:8010` | 文章抽取、RAG、POI enrich |
+| Vite Frontend | `http://127.0.0.1:5173` | 使用者介面與地圖規劃 |
+
+可直接執行根目錄的 `run_all.bat` 同時啟動三個本機服務。
+
+## 專案結構
 
 ```text
-project/
-├─ src/                              # React 前端
-│  ├─ pages/MapPlanningPage.jsx      # 主頁面（輸入、萃取結果、行程）
-│  ├─ components/map/GoogleMapPanel.jsx
-│  └─ lib/googleMapsLoader.js
-├─ backend/rag_prototype/            # FastAPI + RAG prototype
-│  ├─ api_server.py                  # API 入口
-│  ├─ rag_week2.py                   # RAG 核心流程
-│  ├─ requirements.txt
-│  └─ .env.example
-├─ .env.example                      # 前端環境變數範本
-├─ package.json
-└─ README.md
+Travel-the-world/
+├─ src/
+│  ├─ pages/MapPlanningPage.jsx          # 前端地圖規劃頁，呼叫 RAG API
+│  └─ components/map/GoogleMapPanel.jsx  # Google Maps markers / route
+├─ backend/rag_prototype/
+│  ├─ api_server.py                      # FastAPI，RAG API 與 POI enrich
+│  ├─ rag_week2.py                       # RAG 核心：chunking / embedding / retrieval / generation
+│  ├─ eval_ragas.py                      # 評估腳本
+│  ├─ eval_seed_questions.jsonl          # 景點測試資料
+│  ├─ eval_seed_questions_restaurants.jsonl # 餐廳測試資料
+│  └─ README.md                          # RAG 子系統詳細文件
+├─ Travel-the-world-Gary/
+│  ├─ backend/                           # Django REST Framework API
+│  ├─ pipeline/                          # 景點資料處理
+│  ├─ pipeline-restaurant/               # 餐廳資料處理
+│  ├─ japan_with_rating_interest.json    # 景點資料
+│  └─ japan_restaurant_with_rating_interest.json # 餐廳資料
+├─ miscellaneous/
+│  └─ 評價與優化建議.md
+├─ run_all.bat                           # 同時啟動 Django API、RAG API、Frontend
+├─ .env.example                          # 前端環境變數範例
+└─ package.json
 ```
 
----
+## 功能
 
-## 5. 環境需求
+- 支援直接貼上旅遊文章文字。
+- 支援輸入旅遊文章 URL，由 RAG API 抓取並解析 HTML。
+- 從文章中抽取景點、餐廳、咖啡店、甜點店等名稱。
+- 使用 ChromaDB 做向量檢索，降低長文資訊遺漏。
+- 使用 Gary Django API 補景點 POI 與餐廳 POI。
+- 回傳 enriched spot payload，包含：
+  - 名稱與匹配名稱
+  - 地區
+  - 評分
+  - 評論數
+  - tags
+  - 座標
+  - 圖片
+  - 來源段落摘要
+  - `poiMatch` / `restaurantMatch`
+- 前端可依行程分組顯示景點，並加入地圖路線規劃。
+- 提供景點與餐廳資料集的 evaluation runner。
+
+## 安裝需求
 
 - Node.js 18+
 - Python 3.10+
-- Ollama（本機執行）
-- Google Maps JavaScript API Key（前端地圖）
+- Ollama
+- Google Maps JavaScript API Key
+- Windows PowerShell / CMD 或等效 shell
 
----
+## 前端設定
 
-## 6. 安裝與設定
-
-### 6.1 前端設定
-
-1. 安裝依賴
+安裝 npm 套件：
 
 ```bash
 npm install
 ```
 
-2. 建立前端環境變數
+建立根目錄 `.env`：
 
 ```bash
-cp .env.example .env
+copy .env.example .env
 ```
 
-`.env`（根目錄）範例：
+`.env` 範例：
 
 ```env
 VITE_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
@@ -121,11 +122,78 @@ VITE_GOOGLE_MAP_ID=
 VITE_RAG_API_BASE_URL=http://127.0.0.1:8010
 ```
 
----
+啟動前端：
 
-### 6.2 後端設定（RAG）
+```bash
+npm run dev
+```
 
-1. 進入後端資料夾並建立虛擬環境
+前端網址：
+
+```text
+http://127.0.0.1:5173
+```
+
+## Gary Django API 設定
+
+Gary 子專案提供景點 POI 與餐廳 POI API。
+
+```bash
+cd Travel-the-world-Gary
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+cd backend
+python manage.py migrate
+```
+
+匯入景點資料：
+
+```bash
+python manage.py import_pois ../japan_with_rating_interest.json --replace
+```
+
+匯入餐廳資料：
+
+```bash
+python manage.py import_restaurants ../japan_restaurant_with_rating_interest.json --replace
+```
+
+啟動 Django API：
+
+```bash
+python manage.py runserver
+```
+
+預設網址：
+
+```text
+http://127.0.0.1:8000
+```
+
+重要 API：
+
+```text
+GET /api/pois/
+GET /api/pois/{poi_id}/
+GET /api/metadata/
+
+GET /api/restaurants/
+GET /api/restaurants/{restaurant_id}/
+GET /api/restaurants/metadata/
+POST /api/restaurants/recommendations/
+```
+
+RAG API 目前主要使用：
+
+```text
+GET /api/pois/?search={name}&page_size=20
+GET /api/restaurants/?search={name}&page_size=20
+```
+
+## RAG API 設定
+
+建立 Python 環境：
 
 ```bash
 cd backend/rag_prototype
@@ -134,34 +202,31 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-2. 建立後端環境變數
-
-```bash
-cp .env.example .env
-```
-
-`backend/rag_prototype/.env` 範例：
-
-```env
-OLLAMA_BASE_URL=http://127.0.0.1:11434
-OLLAMA_EMBED_MODEL=nomic-embed-text
-OLLAMA_GEN_MODEL=qwen2.5:7b-instruct
-RAG_CHROMA_DIR=./chroma_store
-RAG_COLLECTION_NAME=japan_guides_week2
-```
-
-3. 下載 Ollama 模型（至少 1 組 embedding + 1 組 generation）
+安裝 Ollama 模型：
 
 ```bash
 ollama pull nomic-embed-text
 ollama pull qwen2.5:7b-instruct
 ```
 
----
+`backend/rag_prototype/.env` 可設定：
 
-## 7. 啟動方式
+```env
+OLLAMA_BASE_URL=http://127.0.0.1:11434
+OLLAMA_EMBED_MODEL=nomic-embed-text
+OLLAMA_GEN_MODEL=qwen2.5:7b-instruct
 
-### 7.1 啟動後端 API
+RAG_CHROMA_DIR=./chroma_store
+RAG_COLLECTION_NAME=japan_guides_week2
+RAG_MAX_CHUNKS_PER_PROMPT=10
+
+POI_API_BASE_URL=http://127.0.0.1:8000
+POI_LOOKUP_PAGE_SIZE=20
+POI_LOOKUP_TIMEOUT_SECONDS=5
+POI_LOOKUP_MAX_QUERIES=18
+```
+
+啟動 RAG API：
 
 ```bash
 cd backend/rag_prototype
@@ -169,80 +234,188 @@ cd backend/rag_prototype
 uvicorn api_server:app --host 127.0.0.1 --port 8010 --reload
 ```
 
-### 7.2 啟動前端
+健康檢查：
 
-```bash
-npm run dev
+```text
+GET http://127.0.0.1:8010/health
 ```
 
-預設前端網址：`http://localhost:5173`
 
----
+## RAG Extract API
 
-## 8. API 規格
+Endpoint：
 
-### `GET /health`
-
-檢查 API 與 Ollama 狀態。
-
-### `POST /api/rag/extract`
+```text
+POST http://127.0.0.1:8010/api/rag/extract
+```
 
 Request body：
 
 ```json
 {
-  "text": "旅遊攻略全文（可空）",
-  "url": "https://example.com/guide（可空）",
-  "query": "請列出文章中的旅遊景點名稱",
+  "text": "東京三日行程：DAY1 去淺草寺，中午吃淺草今半，晚上去東京晴空塔。",
+  "url": "",
+  "query": "請列出文章中的旅遊景點與餐廳名稱",
   "top_k": 4,
   "reset_db": false,
   "debug": true
 }
 ```
 
-Response 重點欄位：
+Response 主要欄位：
 
-- `spot_names`
-- `spots[]`（含 `source_chunk_index`, `source_excerpt`, `source_text`）
-- `itinerary_groups[]`
-- `embed_model`, `gen_model`
-- `debug_metrics`, `debug_samples`
+- `spot_names`：抽取出的景點 / 餐廳名稱。
+- `spots`：已補 Gary POI / Restaurant 資料的完整卡片資料。
+- `itinerary_groups`：依 DAY 或段落建立的行程分組。
+- `retrieved_chunk_indices`：RAG 檢索到的 chunk 編號。
+- `embed_model` / `gen_model`：實際使用的 Ollama 模型。
+- `generation_warning`：fallback 或模型警告。
+- `debug_metrics`：chunk 數、匹配數、餐廳命中數等。
+- `debug_samples`：被濾掉的名稱或分組樣本。
 
----
+`spots[]` 會包含：
 
-## 9. Demo 使用流程
+- `name`
+- `matchedName`
+- `area`
+- `rating`
+- `reviewsCount`
+- `tags`
+- `position`
+- `imageUrl`
+- `sourceExcerpt`
+- `matchSourceType`
+- `poiMatch`
+- `restaurantMatch`
+- `poi`
+- `restaurant`
 
-1. 開啟前端頁面
-2. 貼上攻略文字或攻略 URL
-3. 點擊「驗證萃取景點」
-4. 在萃取結果選擇景點，加入行程
-5. 觀察地圖 marker 與路線（或 fallback 導航連結）
+## 餐廳 POI 串接
 
----
+RAG API 會優先查 Gary 的 restaurant endpoint：
 
-## 10. 常見問題（Troubleshooting）
+```text
+GET /api/restaurants/?search={query}&page_size=20
+```
 
-### 1) Google Maps `InvalidKeyMapError`
-- API Key 無效、限制錯誤，或未啟用對應服務
-- 檢查 `.env` 的 `VITE_GOOGLE_MAPS_API_KEY`
+若查不到，再退回一般 POI：
 
-### 2) `REQUEST_DENIED` / `LegacyApiNotActivatedMapError`
-- 未啟用舊版 Directions API 時，內建路線可能失敗
-- 專案已提供 Google Maps URL fallback，可直接導航
+```text
+GET /api/pois/?search={query}&page_size=20
+```
 
-### 3) URL 可萃取，但 text 模式結果混入舊文章
-- 已修正為每次索引前清空 collection 既有 ids，避免舊向量污染
+餐廳名稱會做 query 補強，例如：
 
-### 4) `mapsjs/gen_204` blocked
-- 常見於 AdBlock 或隱私擴充套件
-- 可改用無痕/停用擴充套件測試
+- `一蘭拉麵新宿中央東口店` -> `一蘭`、`一蘭 新宿中央東口店`
+- `淺草今半國際通本店` -> `浅草今半`
+- `山本屋總本家本家` -> `山本屋総本家`
+- `CoCo壱番屋浪速区難波中一丁目店` -> `CoCo壱番屋`
 
----
+命中後：
 
-## 11. 開發里程碑（對照規劃文件）
+- `matchSourceType: "restaurant"` 表示餐廳資料庫命中。
+- `matchSourceType: "poi"` 表示一般 POI 資料庫命中。
+- `restaurantMatch.matched` 可用來判斷是否為餐廳命中。
 
-- Week 1：RAG 架構調研 + React UI 雛型
-- Week 2：Google Maps 串接 + 基礎 RAG prototype
-- Week 3：URL 解析、行程分組、來源片段追蹤、路線 fallback
-- Week 4+：品質優化（抽取準確率、分組穩定性、評測與快取）
+## Evaluation
+
+RAG 評估腳本：
+
+```text
+backend/rag_prototype/eval_ragas.py
+```
+
+一般景點資料集：
+
+```text
+backend/rag_prototype/eval_seed_questions.jsonl
+```
+
+餐廳測試資料集：
+
+```text
+backend/rag_prototype/eval_seed_questions_restaurants.jsonl
+```
+
+執行一般景點評估：
+
+```bash
+cd backend/rag_prototype
+.venv\Scripts\activate
+python eval_ragas.py --dataset eval_seed_questions.jsonl --api-base http://127.0.0.1:8010 --debug
+```
+
+執行餐廳 POI 評估：
+
+```bash
+python eval_ragas.py --dataset eval_seed_questions_restaurants.jsonl --api-base http://127.0.0.1:8010 --debug
+```
+
+輸出：
+
+```text
+backend/rag_prototype/eval_outputs/rag_eval_samples_*.jsonl
+backend/rag_prototype/eval_outputs/rag_eval_summary_*.json
+```
+
+餐廳第二次測試結果摘要：
+
+- `poi_match_rate`: 約 `0.9474`
+- `poi_matched_count`: `72 / 76`
+- `sample_full_match_count`: `17 / 20`
+- `sample_any_match_count`: `20 / 20`
+- `poi_integration_score`: 約 `0.8873`
+
+剩餘主要問題：
+
+- 少數餐廳資料庫沒有資料。
+- 少數日文片假名餐廳名會被模型音譯或轉壞。
+- 餐廳評估中偶爾會混入非餐廳景點，需要更嚴格的餐廳抽取 prompt 或後處理。
+
+## Troubleshooting
+
+### RAG API 連不上 Gary POI
+
+確認 Django API 有啟動：
+
+```text
+http://127.0.0.1:8000/api/pois/?search=東京&page_size=5
+http://127.0.0.1:8000/api/restaurants/?search=一蘭&page_size=5
+```
+
+確認 RAG `.env`：
+
+```env
+POI_API_BASE_URL=http://127.0.0.1:8000
+```
+
+### 前端連不到 RAG API
+
+確認根目錄 `.env`：
+
+```env
+VITE_RAG_API_BASE_URL=http://127.0.0.1:8010
+```
+
+修改 `.env` 後需要重啟 Vite。
+
+### Ollama 無法產生 embedding 或回答
+
+確認 Ollama 服務與模型：
+
+```bash
+ollama list
+ollama pull nomic-embed-text
+ollama pull qwen2.5:7b-instruct
+```
+
+### Google Maps 無法顯示
+
+確認：
+
+- `VITE_GOOGLE_MAPS_API_KEY`
+- Google Maps JavaScript API 是否啟用
+- Billing / referrer restriction 設定是否正確
+
+若 Directions API 無法使用，前端仍會 fallback 到 Google Maps URL。
 
