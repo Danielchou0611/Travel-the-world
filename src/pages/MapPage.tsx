@@ -1,8 +1,9 @@
-import { useState, useCallback, useRef, useEffect } from 'react';
+import { useState, useCallback, useRef, useEffect, useContext } from 'react';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import { GoogleMap, useJsApiLoader, Marker, InfoWindow } from '@react-google-maps/api';
 import type { Trip, Attraction } from '../types';
 import { MOCK_TRIP } from '../services/api';
+import { TripContext } from '../contexts/TripContext';
 import Navbar from '../components/Navbar';
 
 const CATEGORY_COLORS: Record<string, string> = {
@@ -93,12 +94,9 @@ function AttractionInfoWindow({ attraction }: { attraction: Attraction }) {
       </div>
 
       {/* Name */}
-      <div style={{ fontSize: 15, fontWeight: 700, color: '#2C2C2A', marginBottom: 2 }}>
+      <div style={{ fontSize: 15, fontWeight: 700, color: '#2C2C2A', marginBottom: 6 }}>
         {attraction.name}
       </div>
-      {attraction.nameEn && (
-        <div style={{ fontSize: 11, color: '#9E9C93', marginBottom: 6 }}>{attraction.nameEn}</div>
-      )}
 
       {/* Location */}
       <div style={{ fontSize: 11, color: '#7E7C73', marginBottom: 6 }}>
@@ -240,10 +238,6 @@ function AttractionCard({
           )}
 
           <div style={{ padding: '12px 16px 14px' }}>
-            {/* English name */}
-            {attraction.nameEn && (
-              <div style={{ fontSize: 11, color: '#9E9C93', marginBottom: 8 }}>{attraction.nameEn}</div>
-            )}
 
             {/* Reason / XAI summary */}
             {reason && (
@@ -298,7 +292,9 @@ export default function MapPage() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const trip: Trip = (location.state as { trip?: Trip })?.trip ?? MOCK_TRIP;
+  // Read shared trip from context; fall back to navigation state or MOCK_TRIP
+  const ctx = useContext(TripContext);
+  const trip: Trip = ctx?.trip ?? (location.state as { trip?: Trip })?.trip ?? MOCK_TRIP;
 
   const [activeDay, setActiveDay] = useState(0);
   const [selectedAttraction, setSelectedAttraction] = useState<Attraction | null>(null);

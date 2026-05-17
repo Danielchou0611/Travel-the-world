@@ -5,10 +5,11 @@ interface NavbarProps {
   showBack?: boolean;
   backLabel?: string;
   backPath?: string;
+  backState?: any;
   rightActions?: React.ReactNode;
 }
 
-export default function Navbar({ showBack, backLabel = '返回', backPath = '/', rightActions }: NavbarProps) {
+export default function Navbar({ showBack, backLabel = '返回', backPath = '/', backState, rightActions }: NavbarProps) {
   const navigate = useNavigate();
 
   return (
@@ -36,7 +37,7 @@ export default function Navbar({ showBack, backLabel = '返回', backPath = '/',
       <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
         {showBack && (
           <button
-            onClick={() => navigate(backPath)}
+            onClick={() => navigate(backPath, { state: backState })}
             style={{
               background: '#FFFFFF',
               border: '1px solid var(--color-border)',

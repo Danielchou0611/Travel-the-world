@@ -16,7 +16,6 @@ export interface TripPreferences {
 export interface XAIScore {
   label: string;
   value: number; // 0-100
-  color: string;
 }
 
 export interface XAIExplanation {
@@ -28,8 +27,7 @@ export interface XAIExplanation {
 export interface Attraction {
   id: string;
   name: string;
-  nameEn: string;
-  category: '景點' | '美食' | '活動' | '購物' | '自然';
+  category: '景點' | '美食' | '活動' | '購物' | '自然' | '文化';
   description: string;
   image: string; // URL or gradient placeholder
   duration: string; // e.g. "2–3 小時"

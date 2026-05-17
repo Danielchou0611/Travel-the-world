@@ -8,12 +8,17 @@ const IconStar = ({ filled }: { filled: boolean }) => (
   </svg>
 );
 
+const SCORE_COLORS = ['#6366F1', '#10B981', '#F59E0B', '#EC4899', '#8B5CF6'];
+
 interface XAIBadgeProps {
   xai: Attraction['xai'];
 }
 
 function XAIBadge({ xai }: XAIBadgeProps) {
   const [expanded, setExpanded] = useState(false);
+  if (!xai) return null;
+  const scores = xai.scores ?? [];
+  const matchedInterests = xai.matchedInterests ?? [];
   return (
     <div>
       <div className="xai-tag">
@@ -33,18 +38,18 @@ function XAIBadge({ xai }: XAIBadgeProps) {
       </div>
       {expanded && (
         <div style={{ marginTop: 8, padding: '16px', background: '#FFFFFF', border: '1px solid var(--color-border)', borderRadius: 8, display: 'flex', flexDirection: 'column', gap: 12 }}>
-          {xai.scores.map(score => (
+          {scores.map((score, index) => (
             <div key={score.label} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
               <span style={{ fontSize: 11, color: 'var(--color-text-muted)', width: 72, flexShrink: 0 }}>{score.label}</span>
               <div className="score-track">
-                <div className="score-fill" style={{ width: `${score.value}%` }} />
+                <div className="score-fill" style={{ width: `${score.value}%`, background: SCORE_COLORS[index % SCORE_COLORS.length] }} />
               </div>
               <span style={{ fontSize: 11, fontWeight: 500, color: 'var(--color-text)', width: 28, textAlign: 'right' }}>{score.value}</span>
             </div>
           ))}
-          {xai.matchedInterests.length > 0 && (
+          {matchedInterests.length > 0 && (
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 8 }}>
-              {xai.matchedInterests.map(interest => (
+              {matchedInterests.map(interest => (
                 <span key={interest} style={{ fontSize: 11, padding: '2px 8px', borderRadius: 4, background: '#F0EEE9', color: 'var(--color-text-muted)' }}>{interest}</span>
               ))}
             </div>
@@ -54,6 +59,7 @@ function XAIBadge({ xai }: XAIBadgeProps) {
     </div>
   );
 }
+
 
 interface AttractionCardProps {
   attraction: Attraction;
@@ -208,7 +214,6 @@ export default function AttractionCard({
           <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
             <div>
               <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 18, fontWeight: 600, color: 'var(--color-text)', margin: 0, marginBottom: 4 }}>{attraction.name}</h3>
-              <div style={{ color: 'var(--color-text-muted)', fontSize: 13 }}>{attraction.nameEn}</div>
             </div>
             <span style={{ fontSize: 11, padding: '3px 8px', borderRadius: 4, border: '1px solid var(--color-border)', color: 'var(--color-text-muted)', background: '#FAF9F7', flexShrink: 0, marginLeft: 12 }}>
               {attraction.category}

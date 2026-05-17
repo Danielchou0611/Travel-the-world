@@ -1,7 +1,8 @@
-import { useState, useEffect, useMemo, useRef, useLayoutEffect } from 'react';
+import { useState, useEffect, useMemo, useRef, useLayoutEffect, useContext } from 'react';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import type { Trip, Attraction } from '../types';
 import { MOCK_TRIP, rerankAttractions } from '../services/api';
+import { TripContext } from '../contexts/TripContext';
 import Navbar from '../components/Navbar';
 import AttractionCard from '../components/AttractionCard';
 import WhatIfSliders from '../components/WhatIfSliders';
@@ -18,36 +19,21 @@ export default function ItineraryPage() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Calculate initial trip outside of useState to use in multiple hooks
-  // Safely extract trip from location state, fallback to MOCK_TRIP
-  const initialTrip = (() => {
-    try {
-      const state = location.state as Record<string, any>;
-      if (state && state.trip) {
-        return state.trip;
-      }
-      return MOCK_TRIP;
-    } catch (e) {
-      console.error('❌ Error parsing location.state:', e);
-      return MOCK_TRIP;
-    }
-  })();
-
-  const [trip, setTrip] = useState<Trip>(initialTrip);
+  // Use shared trip state from context (hydrated from navigation state by provider)
+  const { trip, setTrip } = useContext(TripContext);
   const [activeDay, setActiveDay] = useState(0);
   const [explorationStyle, setExplorationStyle] = useState(
-    initialTrip?.preferences?.explorationStyle ?? 50
+    trip?.preferences?.explorationStyle ?? 50
   );
   const [foodVsAttractions, setFoodVsAttractions] = useState(
-    initialTrip?.preferences?.foodVsAttractions ?? 50
+    trip?.preferences?.foodVsAttractions ?? 50
   );
 
-  // Sync trip data when tripId changes (e.g., URL navigation)
+  // Keep sliders in sync when trip changes externally (e.g., navigation hydration)
   useEffect(() => {
-    if (location.state && location.state.trip && location.state.trip.id === tripId) {
-      setTrip(location.state.trip);
-    }
-  }, [tripId, location]);
+    setExplorationStyle(trip?.preferences?.explorationStyle ?? 50);
+    setFoodVsAttractions(trip?.preferences?.foodVsAttractions ?? 50);
+  }, [trip]);
 
   // 已移除监视 useEffect
 
@@ -342,7 +328,7 @@ export default function ItineraryPage() {
                   PDF 匯出
                 </button>
                 <button
-                  onClick={() => navigate(`/map/${tripId}`)}
+                  onClick={() => navigate(`/map/${tripId}`, { state: { trip } })}
                   className="btn-primary"
                   style={{ padding: '6px 14px', width: 'auto' }}
                 >
