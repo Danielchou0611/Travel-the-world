@@ -22,8 +22,8 @@ pip install -r requirements.txt
 ```bash
 cd backend
 python manage.py migrate
-python manage.py import_pois ../japan_with_rating_interest.json
-python manage.py import_restaurants ../japan_restaurant_with_rating_interest.json
+python manage.py import_pois ../japan_with_rating_interest.json --sync
+python manage.py import_restaurants ../japan_restaurant_with_rating_interest.json --sync
 python manage.py runserver
 ```
 
@@ -72,7 +72,20 @@ cd ..
 
 ```bash
 cd backend
-python manage.py import_restaurants ../japan_restaurant_with_rating_interest.json
+python manage.py import_restaurants ../japan_restaurant_with_rating_interest.json --sync
+```
+
+匯入模式說明：
+
+- 預設：`upsert`，相同 `id` 更新，新 `id` 新增
+- `--replace`：先清空整張表，再重新匯入
+- `--sync`：以 JSON 為準同步，會更新/新增，並刪除 DB 中已不在 JSON 內的舊資料
+
+例如：
+
+```bash
+python manage.py import_restaurants ../japan_restaurant_with_rating_interest.json --sync
+python manage.py import_pois ../japan_with_rating_interest.json --sync
 ```
 
 ### Restaurant Recommendation Example

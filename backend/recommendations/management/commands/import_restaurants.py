@@ -11,7 +11,17 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
         parser.add_argument("json_path", type=str)
-        parser.add_argument("--replace", action="store_true", help="Delete existing restaurants before import.")
+        mode_group = parser.add_mutually_exclusive_group()
+        mode_group.add_argument(
+            "--replace",
+            action="store_true",
+            help="Delete existing restaurants before import.",
+        )
+        mode_group.add_argument(
+            "--sync",
+            action="store_true",
+            help="Delete restaurants that are not present in the JSON file after import.",
+        )
 
     def handle(self, *args, **options):
         json_path = Path(options["json_path"]).expanduser().resolve()
@@ -25,11 +35,14 @@ class Command(BaseCommand):
         if not isinstance(rows, list):
             raise CommandError("JSON payload must be a list.")
 
+        source_ids = set()
         created_count = 0
         updated_count = 0
         for row in rows:
+            restaurant_id = row["id"]
+            source_ids.add(restaurant_id)
             _, created = Restaurant.objects.update_or_create(
-                restaurant_id=row["id"],
+                restaurant_id=restaurant_id,
                 defaults={
                     "name": self._as_text(row.get("name")),
                     "region": self._as_text(row.get("region")),
@@ -57,9 +70,14 @@ class Command(BaseCommand):
             else:
                 updated_count += 1
 
+        deleted_count = 0
+        if options["sync"]:
+            deleted_count, _ = Restaurant.objects.exclude(restaurant_id__in=source_ids).delete()
+
         self.stdout.write(
             self.style.SUCCESS(
-                f"Imported restaurants from {json_path.name}: created={created_count}, updated={updated_count}"
+                "Imported restaurants from "
+                f"{json_path.name}: created={created_count}, updated={updated_count}, deleted={deleted_count}"
             )
         )
 

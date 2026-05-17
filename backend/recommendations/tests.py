@@ -1,3 +1,8 @@
+import json
+import tempfile
+from pathlib import Path
+
+from django.core.management import call_command
 from django.contrib.auth import get_user_model
 from django.test import TestCase
 from rest_framework.test import APIClient
@@ -149,3 +154,58 @@ class RestaurantApiTests(TestCase):
             format="json",
         )
         self.assertEqual(response.status_code, 400)
+
+
+class ImportCommandTests(TestCase):
+    def _write_json(self, rows):
+        temp = tempfile.NamedTemporaryFile("w", encoding="utf-8", suffix=".json", delete=False)
+        with temp:
+            json.dump(rows, temp, ensure_ascii=False)
+        self.addCleanup(lambda: Path(temp.name).unlink(missing_ok=True))
+        return temp.name
+
+    def test_import_restaurants_sync_removes_missing_rows(self):
+        Restaurant.objects.create(
+            restaurant_id="OLD",
+            name="舊資料",
+            region="東京都",
+            category="拉麵",
+        )
+        json_path = self._write_json(
+            [
+                {
+                    "id": "R1",
+                    "name": "新餐廳",
+                    "region": "東京都",
+                    "category": "咖啡",
+                }
+            ]
+        )
+
+        call_command("import_restaurants", json_path, "--sync")
+
+        self.assertFalse(Restaurant.objects.filter(restaurant_id="OLD").exists())
+        self.assertTrue(Restaurant.objects.filter(restaurant_id="R1", name="新餐廳").exists())
+
+    def test_import_pois_sync_removes_missing_rows(self):
+        PointOfInterest.objects.create(
+            poi_id="OLD",
+            name="舊景點",
+            region="東京都",
+            category="景點",
+        )
+        json_path = self._write_json(
+            [
+                {
+                    "id": "P1",
+                    "name": "新景點",
+                    "region": "東京都",
+                    "category": "博物館",
+                }
+            ]
+        )
+
+        call_command("import_pois", json_path, "--sync")
+
+        self.assertFalse(PointOfInterest.objects.filter(poi_id="OLD").exists())
+        self.assertTrue(PointOfInterest.objects.filter(poi_id="P1", name="新景點").exists())

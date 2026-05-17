@@ -108,7 +108,7 @@ python manage.py migrate
 ### 3. Import POI Data
 
 ```bash
-python manage.py import_pois ../japan_with_rating_interest.json --replace
+python manage.py import_pois ../japan_with_rating_interest.json --sync
 ```
 
 目前已驗證可成功匯入約 4003 筆 POI。
@@ -116,10 +116,10 @@ python manage.py import_pois ../japan_with_rating_interest.json --replace
 ### 4. Import Restaurant Data
 
 ```bash
-python manage.py import_restaurants ../japan_restaurant_with_rating_interest.json
+python manage.py import_restaurants ../japan_restaurant_with_rating_interest.json --sync
 ```
 
-目前已驗證可成功匯入約 175979 筆餐廳資料。
+目前已驗證可成功匯入約 174977 筆餐廳資料。
 
 ### 5. Start Server
 
