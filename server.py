@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Union
 import logging
 logging.basicConfig(
     level=logging.INFO, 
@@ -34,7 +34,8 @@ app.add_middleware(
 
 # 對應前端的 TripPreferences
 class GenerateRequest(BaseModel):
-    destination: str = "京都" # 預設京都，前端也可傳入
+    # 🌟 核心修改 1：使用 Union 讓它同時接受 List (多城市) 或 str (單一城市)
+    destination: Union[List[str], str] = ["京都"] 
     days: int
     budget: int
     interests: List[str]
@@ -42,12 +43,16 @@ class GenerateRequest(BaseModel):
     foodVsAttractions: int
     mustVisit: Optional[str] = ""
     ragContent: Optional[str] = ""
+    # 🌟 核心修改 2：加上前端新增的 specialRequirements 欄位
+    specialRequirements: Optional[str] = "" 
 
 # 對應聊天室修改的需求
 class ModifyRequest(BaseModel):
-    destination: str
-    current_itinerary: Dict[str, Any] # 接收目前的完整 JSON
+    # 🌟 核心修改 3：這裡的 destination 也要跟著改成支援 List
+    destination: Union[List[str], str] 
+    current_itinerary: Dict[str, Any] 
     user_request: str
+    user_prefs: Optional[Dict[str, Any]] = None # 預留接收前端的 user_pref
 
 
 # --- 5. 建立 API 路由 (Endpoints) ---
@@ -61,7 +66,6 @@ async def api_generate(req: GenerateRequest):
     
     # 呼叫後端函數
     result = generate_itinerary(
-        destination=req.destination, 
         user_prefs=user_prefs_payload
     )
     
@@ -79,7 +83,6 @@ async def api_modify(req: ModifyRequest):
     print(f"收到修改請求：{req.user_request}")
     user_prefs = req.current_itinerary.get("preferences", {})
     result = modify_itinerary(
-        destination=req.destination,
         current_itinerary=req.current_itinerary,
         user_request=req.user_request,
         user_prefs=user_prefs

@@ -80,3 +80,8 @@
 2026-05-17 02:19:05,018 - INFO - 🔍 API 檢索成功：使用最低星等 4.2，找到 30 個候選景點
 2026-05-17 02:19:40,087 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
 2026-05-17 02:19:40,087 - INFO - ✅ 成功生成符合前端格式的 Trip 物件
+2026-05-18 01:10:42,329 - INFO - 🚀 收到前端生成請求，目的地：['大阪', '京都']
+2026-05-18 01:10:42,373 - INFO - 🔍 API 檢索成功：使用最低星等 4.2，找到 20 個候選景點
+2026-05-18 01:10:42,417 - INFO - 🔍 API 檢索成功：使用最低星等 4.2，找到 20 個候選景點
+2026-05-18 01:11:11,384 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-18 01:11:11,389 - INFO - ✅ 成功生成符合前端格式的 Trip 物件

@@ -530,8 +530,7 @@ export async function generateTrip(preferences: TripPreferences): Promise<Trip> 
       },
       // 把整個 preferences 丟給後端的 GenerateRequest 接收
       body: JSON.stringify({
-        destination: "京都", // 如果前端還沒做目的地選擇，先寫死
-        ...preferences
+        preferences
       }), 
     });
 

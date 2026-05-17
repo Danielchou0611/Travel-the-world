@@ -5,141 +5,85 @@
       "date": "第1天",
       "attractions": [
         {
-          "id": "ChIJZUfbq5oHAWARMRVTigRS2e4",
-          "name": "一般財団法人京都森林経営管理サポートセンター",
-          "image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=BA2MM7YbugV-4b_lYNgFiw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=195.20636&pitch=0&thumbfov=100",
-          "category": "景點",
-          "description": "探索京都森林管理中心，感受自然氣息。",
-          "duration": "1–2 小時",
-          "estimatedCost": "免費",
-          "location": "京都・南区",
-          "position": {
-            "lat": 34.9925229,
-            "lng": 135.7327416
-          },
-          "rating": 5.0,
-          "xai": {
-            "summary": "此景點符合您對自然的偏好，提供森林相關體驗。",
-            "scores": [
-              {
-                "label": "興趣符合度",
-                "value": 90
-              },
-              {
-                "label": "交通便利度",
-                "value": 85
-              }
-            ]
-          }
-        },
-        {
-          "id": "ChIJyTxcXK8PAWARex7hIiFby7I",
-          "name": "Jibo Kannon ( 慈母観音 )",
-          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFXRoRnKijd9CdOdPU7iInE5xcqD-EijYCXUnBs4E8Tmc3UEDUDtlyJ_0PEUBs7xjZOrSRmqP0QSHhNh1GpNQQPjxXmYbMf0hIWajJo2rY-KcBRg8urlwcye9aO1ZrjBetxeV0W=w426-h240-k-no",
-          "category": "景點",
-          "description": "參觀慈母觀音，感受寺社的寧靜與宗教氛圍。",
-          "duration": "1–1.5 小時",
-          "estimatedCost": "免費",
-          "location": "京都・東山区",
-          "position": {
-            "lat": 34.9690048,
-            "lng": 135.7746668
-          },
-          "rating": 5.0,
-          "xai": {
-            "summary": "此寺社提供秘境般的寧靜，符合您對自然與秘境的興趣。",
-            "scores": [
-              {
-                "label": "興趣符合度",
-                "value": 80
-              },
-              {
-                "label": "文化符合度",
-                "value": 90
-              }
-            ]
-          }
-        },
-        {
-          "id": "ChIJ-V8YiOUJAWARwBnLN25_I68",
-          "name": "京都とんかつ かつ田 四条烏丸店",
-          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHZ-IHwBvBA2viwC6EYqZ_AIvylXRKH6AXNRnk-FEMGiituxAcTPVEPzsXvknmZCewvcRdzeu7vRBjK-1_HI9-Z7FiBrso-YfswlOz6a2TQ4azr1_9rzylKi4h5pTQqABc4DCjlP-NgaSxB=w408-h272-k-no",
+          "id": "ChIJST9oPd7QDRQR5tLR0z2wTWo",
+          "name": "大阪焼肉ホルモンふたご 林森店",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH-HVvlAYm50karOBxtqNapwRv3XoYBAiiHJkIngSN2ES69cV_c0pingm6QCC22unKBfqC_S7LKqwvxAj7VR85kRPNig_uSlLc3UaOwiiCUBfGMyKrP8lGglftU5zu0vftUgapv0g=w426-h240-k-no",
           "category": "美食",
-          "description": "品嚐美味的京都炸豬排，享受日式料理。",
-          "duration": "1–1.5 小時",
-          "estimatedCost": "¥2,000–¥3,000",
-          "location": "京都・下京区",
+          "description": "品嚐道地日式燒肉，肉質鮮美。",
+          "duration": "1.5 小時",
+          "estimatedCost": "¥4,000",
+          "location": "大阪府",
           "position": {
-            "lat": 35.0012535,
-            "lng": 135.7594566
+            "lat": 25.050994,
+            "lng": 121.52767
           },
           "rating": 4.9,
           "xai": {
-            "summary": "此餐廳提供高評價的日式美食，滿足您的餐飲需求。",
-            "scores": [
-              {
-                "label": "美食體驗",
-                "value": 95
-              },
-              {
-                "label": "交通便利度",
-                "value": 80
-              }
-            ]
-          }
-        },
-        {
-          "id": "ChIJd9oYLwAJAWARgwI_alTcgbA",
-          "name": "レジャーシート",
-          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEeGwkM7s3PZnUWMRIh77DEc7-Qpdp3TmDrf9FSlvMUfElNzN-LN4niyaJpb3C9hwlU7PMktWiw5CGXd7uJ_-envNPv061xcMPEXtvjTD8WzBnqtd8wXoW1iLG2BB2OWRYi6gGKeIgdUJc=w426-h240-k-no",
-          "category": "景點",
-          "description": "在戶外享受悠閒時光，親近自然。",
-          "duration": "1–2 小時",
-          "estimatedCost": "免費",
-          "location": "京都・左京区",
-          "position": {
-            "lat": 35.0267513,
-            "lng": 135.770961
-          },
-          "rating": 5.0,
-          "xai": {
-            "summary": "此戶外景點符合您對自然的偏好，適合放鬆。",
+            "summary": "符合美食偏好，人氣燒肉店。",
             "scores": [
               {
                 "label": "興趣符合度",
-                "value": 85
+                "value": 95
               },
               {
-                "label": "放鬆程度",
-                "value": 75
+                "label": "人氣熱度",
+                "value": 90
               }
             ]
           }
         },
         {
-          "id": "ChIJv-EQDnurAWARUJpbIjr-APc",
-          "name": "ギャラリー祇王寺",
-          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHMHs89vG56I0GWkWyIpaPJ4s1abenbc_J656CpTSGOFEJZRMXZApZIS7XpCMmrXuCoIYmn94Tf45V3SGOXTGwv_6-rFxeQqcrxK0PCUHZhocSdFpcohDkESz_x_Rsy7mDxuX7Mhg=w408-h408-k-no",
-          "category": "景點",
-          "description": "探訪祇王寺藝廊，感受寺廟與藝術的結合。",
-          "duration": "1.5–2 小時",
-          "estimatedCost": "¥500",
-          "location": "京都・右京区",
+          "id": "ChIJfTm52RfnAGARxwXw74qw_tk",
+          "name": "月島もんじゃ もへじ ルクア大阪",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHDPFhQdmeYh9GdwIfDMKkRLzuGkYjBRhsNuIjuSQXwQqyjv-4DDZ-nx1HbxMVs68y8Ry3dBNI40pB_KfpN1B5xGIwTo94bwqAiXS3Ln67e9HQAvQOBgFrcnE6rnJFpm1s15OYPmp9r8q3Q=w426-h240-k-no",
+          "category": "美食",
+          "description": "體驗獨特文字燒，享受烹飪樂趣。",
+          "duration": "1.5 小時",
+          "estimatedCost": "¥2,500",
+          "location": "大阪府",
           "position": {
-            "lat": 35.0232338,
-            "lng": 135.6677401
+            "lat": 34.7032554,
+            "lng": 135.495578
           },
-          "rating": 5.0,
+          "rating": 4.9,
           "xai": {
-            "summary": "此景點結合自然與宗教，帶有秘境氛圍。",
+            "summary": "符合美食偏好，特色日式料理。",
+            "scores": [
+              {
+                "label": "興趣符合度",
+                "value": 90
+              },
+              {
+                "label": "獨特體驗",
+                "value": 85
+              }
+            ]
+          }
+        },
+        {
+          "id": "ChIJVSTzs2LnAGARQ6XVl3RTIcw",
+          "name": "mipig cafe 大阪店",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE_6ZVs7XiqliL-PLFEYlq4kjxOz-yL7K10WDB_IadOd23oNM95SoLARu6HTPhb8tac9fRhfHJHfKflms08Z4Ls1R096fpHIiIwY01r6BAFAF1DBkpUiqpmy8uG8pw4NpZFYVN7wg=w408-h305-k-no",
+          "category": "美食",
+          "description": "與可愛迷你豬互動，享受咖啡時光。",
+          "duration": "1 小時",
+          "estimatedCost": "¥1,500",
+          "location": "大阪府",
+          "position": {
+            "lat": 34.6717138,
+            "lng": 135.4987716
+          },
+          "rating": 4.8,
+          "xai": {
+            "summary": "符合美食偏好，獨特咖啡體驗。",
             "scores": [
               {
                 "label": "興趣符合度",
                 "value": 88
               },
               {
-                "label": "文化符合度",
-                "value": 85
+                "label": "新奇體驗",
+                "value": 92
               }
             ]
           }
@@ -151,52 +95,232 @@
       "date": "第2天",
       "attractions": [
         {
-          "id": "ChIJwSl3cPERAWAR2-jxkdUZF28",
-          "name": "もみじ谷",
-          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEYTSiZNTiZUWyULbIWq-GIEJi6FzbTSkFPz_nAokLu34FfrEftE89HleR_dzUJfoZbEnG6YSZEwwhJqgCTMedU4Bfzklof1RlThvitBpQ9GjSNjgy6_HXarmqWtZeu_l6armQHKYDYlx-n=w408-h612-k-no",
-          "category": "景點",
-          "description": "漫步於楓葉谷，欣賞京都的自然美景。",
-          "duration": "1.5–2.5 小時",
-          "estimatedCost": "免費",
-          "location": "京都・北区",
+          "id": "ChIJAY6UHADnAGARuLvli52ztFs",
+          "name": "牛かつもと村 道頓堀店",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHyoBUpMttfqCe2wDkgvbTO3K1umb6eaKQTLF7yPvPZ0LCuPcEDjuX61bSnryfH1nUhKWLjss6csvh0PC7bZUXQUPy2kqzYdhW_45653en8PhM5M808-agXUE2Uk_2iB-x3gByNSQ=w408-h306-k-no",
+          "category": "美食",
+          "description": "品嚐外酥內嫩的炸牛排，道頓堀必吃。",
+          "duration": "1 小時",
+          "estimatedCost": "¥2,000",
+          "location": "大阪府",
           "position": {
-            "lat": 34.8817414,
-            "lng": 135.8163967
+            "lat": 34.6692891,
+            "lng": 135.5006608
           },
-          "rating": 5.0,
+          "rating": 4.9,
           "xai": {
-            "summary": "此景點完美符合您對自然的偏好，景色優美。",
+            "summary": "符合美食偏好，人氣炸牛排。",
             "scores": [
               {
                 "label": "興趣符合度",
+                "value": 93
+              },
+              {
+                "label": "人氣熱度",
+                "value": 88
+              }
+            ]
+          }
+        },
+        {
+          "id": "ChIJAQDAJGvnAGARsNYBAW5zD1w",
+          "name": "焼肉 力丸 なんば 千日前店",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEkaHQo7k5MfOI4vcQcHDOnAaSt2vmBoeokg2v_hWVoh0Hx2oVCP54BegemcJPvSkoK7SZXDnnn4SzsEo06N74p4MHWlM-olrXoh4EvKXlT_wiEBX40PW0T4hlTro-5nLB0U90n5ApLO_HZ=w408-h306-k-no",
+          "category": "美食",
+          "description": "在難波享受美味燒肉，選擇多樣。",
+          "duration": "1.5 小時",
+          "estimatedCost": "¥3,500",
+          "location": "大阪府",
+          "position": {
+            "lat": 34.6668024,
+            "lng": 135.5034218
+          },
+          "rating": 4.8,
+          "xai": {
+            "summary": "符合美食偏好，高評價燒肉。",
+            "scores": [
+              {
+                "label": "興趣符合度",
+                "value": 90
+              },
+              {
+                "label": "交通便利度",
+                "value": 85
+              }
+            ]
+          }
+        },
+        {
+          "id": "ChIJY3ZsaWjnAGARfYbG652yYCo",
+          "name": "めいどりーみん 大阪 日本橋オタロード店",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEDAoo3tWs-KvLxzU0S7roLZBIPQnYkRszcPvkCT25QvDHfMvNxDNsTz9rTfeG_-bahQL4vKX5LQkWEl86CPahue7fwXpugbSsEGTgmbqbKEfmt54u5mpvFWbbP8ig9t-8MDZw=w425-h240-k-no",
+          "category": "美食",
+          "description": "體驗女僕咖啡廳文化，感受獨特氛圍。",
+          "duration": "1 小時",
+          "estimatedCost": "¥1,800",
+          "location": "大阪府",
+          "position": {
+            "lat": 34.660115,
+            "lng": 135.50481
+          },
+          "rating": 4.9,
+          "xai": {
+            "summary": "符合美食偏好，體驗日本文化。",
+            "scores": [
+              {
+                "label": "興趣符合度",
+                "value": 85
+              },
+              {
+                "label": "文化體驗",
+                "value": 90
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "date": "第3天",
+      "attractions": [
+        {
+          "id": "ChIJC6tdCvcJAWARcZNbv5hCQuk",
+          "name": "Kyoto Samurai",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFNm9GgNgw3pold2H3UHN1aAnS1Wj969SSTKkudyiY9kpHizA6JCA0pgtOJ1Srp38mVl0qOBA7T9sAg9hiehgPgscLf0UX-YWPD5Gc_MY3f-QE7BZNdAXByyjSSJDim0gMpR6zE=w408-h306-k-no",
+          "category": "景點",
+          "description": "體驗武士文化，了解日本歷史。",
+          "duration": "2 小時",
+          "estimatedCost": "¥3,000",
+          "location": "京都",
+          "position": {
+            "lat": 35.0071037,
+            "lng": 135.7671558
+          },
+          "rating": 5.0,
+          "xai": {
+            "summary": "符合文化偏好，體驗武士精神。",
+            "scores": [
+              {
+                "label": "文化符合度",
                 "value": 95
               },
               {
-                "label": "景觀美學",
+                "label": "體驗豐富度",
                 "value": 90
               }
             ]
           }
         },
         {
-          "id": "onigajo01",
+          "id": "ChIJyTxcXK8PAWARex7hIiFby7I",
+          "name": "Jibo Kannon ( 慈母観音 )",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFXRoRnKijd9CdOdPU7iInE5xcqD-EijYCXUnBs4E8Tmc3UEDUDtlyJ_0PEUBs7xjZOrSRmqP0QSHhNh1GpNQQPjxXmYbMf0hIWajJo2rY-KcBRg8urlwcye9aO1ZrjBetxeV0W=w426-h240-k-no",
+          "category": "景點",
+          "description": "參觀慈母觀音像，感受宗教氛圍。",
+          "duration": "1 小時",
+          "estimatedCost": "免費",
+          "location": "京都",
+          "position": {
+            "lat": 34.9690048,
+            "lng": 135.7746668
+          },
+          "rating": 5.0,
+          "xai": {
+            "summary": "符合文化偏好，感受宗教文化。",
+            "scores": [
+              {
+                "label": "文化符合度",
+                "value": 88
+              },
+              {
+                "label": "心靈沉澱",
+                "value": 80
+              }
+            ]
+          }
+        },
+        {
+          "id": "ChIJB1aZxO0HAWAR5ORAnau8OoU",
+          "name": "牛カツ京都勝牛 祇園八坂店",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF5w6yGClTYPtrzphbjCA5Y_x3kK-jNMYe1fZMgXlwErEq09RNS5eNOnLqbriZ-iCviOnfOSO33pBHyAogxIKAIuAWlBColATEzV0dFxKZi4MGJYbsBbPFHSr8Hhud9LDaSwz5tiFrk_jio=w408-h408-k-no",
+          "category": "美食",
+          "description": "在祇園品嚐美味炸牛排，方便觀光。",
+          "duration": "1 小時",
+          "estimatedCost": "¥2,000",
+          "location": "京都府",
+          "position": {
+            "lat": 35.0023488,
+            "lng": 135.7774725
+          },
+          "rating": 4.8,
+          "xai": {
+            "summary": "符合美食偏好，京都特色美食。",
+            "scores": [
+              {
+                "label": "興趣符合度",
+                "value": 92
+              },
+              {
+                "label": "交通便利度",
+                "value": 85
+              }
+            ]
+          }
+        },
+        {
+          "id": "ChIJfWp4_yYJAWARuOSfwhHbKQw",
+          "name": "Matcha Factory Kyoto",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAExiosEqXaZNXeeCUnC-KLweWGo-501lfbWBUfvvma3eaxCOsqBXp1PlbSn6pZlhJwqyoLWvyY3qU411toJGZAgmSB0LbEP-RKipABas5xedd3aywjlbWUNAIi4YZ0KGHym39UirdyIf0k3=w408-h272-k-no",
+          "category": "景點",
+          "description": "了解抹茶製作過程，品嚐道地抹茶。",
+          "duration": "1.5 小時",
+          "estimatedCost": "¥1,000",
+          "location": "京都",
+          "position": {
+            "lat": 35.0130999,
+            "lng": 135.7573894
+          },
+          "rating": 5.0,
+          "xai": {
+            "summary": "符合美食與文化，體驗抹茶文化。",
+            "scores": [
+              {
+                "label": "興趣符合度",
+                "value": 90
+              },
+              {
+                "label": "文化體驗",
+                "value": 88
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "date": "第4天",
+      "attractions": [
+        {
+          "id": "a05",
           "name": "Onigajō (鬼ヶ城)",
           "image": "",
           "category": "景點",
-          "description": "探索鬼ヶ城，感受其壯麗的自然景觀，遠離城市喧囂，享受海景與戶外體驗。",
-          "duration": "2–3 小時",
+          "description": "探索鬼ヶ城，感受大自然的鬼斧神工，遠離城市喧囂，享受海景與自然步道。",
+          "duration": "3-4 小時",
           "estimatedCost": "免費",
-          "location": "三重県熊野市",
+          "location": "三重県",
           "position": {
             "lat": 0,
             "lng": 0
           },
           "rating": 0,
           "xai": {
-            "summary": "此景點完美符合您遠離喧囂、親近自然的需求，提供壯麗的海景與戶外體驗。",
+            "summary": "符合遠離喧囂和戶外活動偏好，提供獨特的自然景觀體驗。",
             "scores": [
               {
-                "label": "興趣符合度",
+                "label": "自然探索度",
                 "value": 95
               },
               {
@@ -211,81 +335,53 @@
           "name": "和牛すき焼き 京都力山 京都駅前店",
           "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEgVoYngTX-yM1S38AEXghdgnmzkk_qa8rJKFuurrSeya5VGe_J75gpCfm3xGla-scBBSn7HYnA9xRiVq6LttQ1xHD-S7bgjWuNwd1iocA_uisW3f2Lh1P-WzXYi2FRx6omgnbJOQ=w427-h240-k-no",
           "category": "美食",
-          "description": "品嚐頂級和牛壽喜燒，享受奢華美食體驗。",
-          "duration": "1.5–2 小時",
-          "estimatedCost": "¥5,000–¥8,000",
-          "location": "京都・下京区",
+          "description": "品嚐頂級和牛壽喜燒，京都車站附近。",
+          "duration": "1.5 小時",
+          "estimatedCost": "¥6,000",
+          "location": "京都府",
           "position": {
             "lat": 34.9891719,
             "lng": 135.7607067
           },
           "rating": 4.9,
           "xai": {
-            "summary": "此餐廳提供高品質日式料理，滿足您的美食期待。",
+            "summary": "符合美食偏好，享受奢華體驗。",
             "scores": [
               {
-                "label": "美食體驗",
-                "value": 98
+                "label": "興趣符合度",
+                "value": 95
               },
               {
-                "label": "服務品質",
+                "label": "餐飲品質",
                 "value": 90
               }
             ]
           }
         },
         {
-          "id": "ChIJOZEonloJAWARBU3ReCtS0bI",
-          "name": "Samurai Gyoza Factory Kyoto",
-          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG_xJnl91jjaYTDELOiU3SWtfgRuwV-n4RH2VqIvpjoPd3ddAsTmQU9KZE1M_9J-o6lVkr6acX1XoZUWX-kxcjb2ZTagKCgWeJDXZ2xVkX-EHE4T8xdf92OSjOspKueXvj0NQkI=w408-h271-k-no",
-          "category": "景點",
-          "description": "體驗製作武士餃子，感受日本料理文化。",
-          "duration": "1.5–2 小時",
-          "estimatedCost": "¥3,000–¥5,000",
-          "location": "京都・東山区",
+          "id": "ChIJDUUCe48JAWAREOEGYuUs5VQ",
+          "name": "mipig cafe 京都店",
+          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEssoNNLdIfNM1IoFO8SElS6OcMFmwvHNUR4lGD3DtCxyrvKVj2F4fuVmW1EJzapIjEew6SlFEDQ0gI_d3tOuMj5EfcD7jKgr0zgBw4yC_fzXHi9yjnN2giREXiO6bBreMMg_aOuUWnqZ71=w408-h543-k-no",
+          "category": "美食",
+          "description": "在京都與可愛迷你豬互動，放鬆身心。",
+          "duration": "1 小時",
+          "estimatedCost": "¥1,500",
+          "location": "京都府",
           "position": {
-            "lat": 35.0130999,
-            "lng": 135.7573894
+            "lat": 35.0040508,
+            "lng": 135.7671373
           },
-          "rating": 5.0,
+          "rating": 4.9,
           "xai": {
-            "summary": "此景點提供獨特的文化體驗，適合互動參與。",
+            "summary": "符合美食偏好，獨特咖啡體驗。",
             "scores": [
               {
-                "label": "文化體驗",
-                "value": 80
+                "label": "興趣符合度",
+                "value": 88
               },
               {
-                "label": "互動性",
-                "value": 90
-              }
-            ]
-          }
-        },
-        {
-          "id": "ChIJfWp4_yYJAWARuOSfwhHbKQw",
-          "name": "Matcha Factory Kyoto",
-          "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAExiosEqXaZNXeeCUnC-KLweWGo-501lfbWBUfvvma3eaxCOsqBXp1PlbSn6pZlhJwqyoLWvyY3qU411toJGZAgmSB0LbEP-RKipABas5xedd3aywjlbWUNAIi4YZ0KGHym39UirdyIf0k3=w408-h272-k-no",
-          "category": "景點",
-          "description": "參觀抹茶工廠，了解抹茶製作過程並品嚐。",
-          "duration": "1–1.5 小時",
-          "estimatedCost": "¥1,000–¥2,000",
-          "location": "京都・東山区",
-          "position": {
-            "lat": 35.0130999,
-            "lng": 135.7573894
-          },
-          "rating": 5.0,
-          "xai": {
-            "summary": "此景點提供獨特的日本文化體驗，適合抹茶愛好者。",
-            "scores": [
-              {
-                "label": "文化體驗",
-                "value": 85
-              },
-              {
-                "label": "獨特性",
-                "value": 80
+                "label": "新奇體驗",
+                "value": 92
               }
             ]
           }

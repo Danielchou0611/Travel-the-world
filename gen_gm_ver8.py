@@ -81,46 +81,52 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 # --- 1. RAG 檢索器 (Retriever) - 【改為呼叫 Django API】 ---
-def retrieve_local_knowledge(destination: str, required_count: int, user_prefs: dict) -> str:
+def retrieve_local_knowledge(destinations: list, required_count: int, user_prefs: dict) -> str:
     """
     呼叫組員的 Django API 讀取景點資料。若符合的高分景點數量不足，會自動降低星等標準。
     """
     DJANGO_API_URL = "http://127.0.0.1:8000/api/pois/"
     url_mapping = {}
+    if isinstance(destinations, str):
+        destinations = [destinations]
+    num_dests = len(destinations) if len(destinations) > 0 else 1
+    per_dest_required = max(required_count // num_dests, 8) # 每個城市至少抓 8 個點防呆
     try:
         # 建立降級策略：從嚴格到寬鬆 (4.2 -> 3.8 -> 3.0 -> 0.0)
         thresholds = [4.2, 3.8, 3.0, 0.0]
         top_places = []
-        rest_region = normalize_region_name(destination)
-        for min_rating in thresholds:
-            params = {
-                "region": rest_region,
-                "page_size": 50, # 拿多一點來方便 Python 端過濾
-                "ordering": "-google_rating" # 讓 Django 幫忙由高到低排序
-            }
-            
-            response = requests.get(DJANGO_API_URL, params=params)
-            
-            if response.status_code == 200:
-                api_data = response.json()
-                all_results = api_data.get("results", [])
+        
+        for dest in destinations:
+            rest_region = normalize_region_name(dest)
+            for min_rating in thresholds:
+                params = {
+                    "region": rest_region,
+                    "page_size": 50, # 拿多一點來方便 Python 端過濾
+                    "ordering": "-google_rating" # 讓 Django 幫忙由高到低排序
+                }
                 
-                # 篩選：確保評分達標
-                filtered_places = [
-                    place for place in all_results 
-                    if place.get("google_rating") is not None and place.get("google_rating", 0) >= min_rating
-                ]
+                response = requests.get(DJANGO_API_URL, params=params)
                 
-                # 如果找到的數量大於等於我們需要的數量，就停止降級
-                if len(filtered_places) >= required_count:
-                    top_places = filtered_places[:30] # 最多取前 30 名，避免 Token 爆炸
-                    logger.info(f"🔍 API 檢索成功：使用最低星等 {min_rating}，找到 {len(top_places)} 個候選景點")
-                    break
+                if response.status_code == 200:
+                    api_data = response.json()
+                    all_results = api_data.get("results", [])
+                    
+                    # 篩選：確保評分達標
+                    filtered_places = [
+                        place for place in all_results 
+                        if place.get("google_rating") is not None and place.get("google_rating", 0) >= min_rating
+                    ]
+                    
+                    # 如果找到的數量大於等於我們需要的數量，就停止降級
+                    if len(filtered_places) >= per_dest_required:
+                        top_places = filtered_places[:20] # 最多取前 30 名，避免 Token 爆炸
+                        logger.info(f"🔍 API 檢索成功：使用最低星等 {min_rating}，找到 {len(top_places)} 個候選景點")
+                        break
+                    else:
+                        top_places = filtered_places[:20] 
                 else:
-                    top_places = filtered_places[:30] 
-            else:
-                logger.error(f"呼叫 Django API 失敗: HTTP {response.status_code}")
-                return "資料庫連線異常。"
+                    logger.error(f"呼叫 Django API 失敗: HTTP {response.status_code}")
+                    return "資料庫連線異常。"
 
         if not top_places:
             logger.warning(f"⚠️ Django API 完全沒有 {destination} 的資料！")
@@ -154,35 +160,37 @@ def retrieve_local_knowledge(destination: str, required_count: int, user_prefs: 
         base_rest_needed = days * 2
         buffer = 15 if food_weight < 30 else 8 # 偏好美食就給更多 Buffer
         rest_count = base_rest_needed + buffer
+        per_dest_rest_count = max(rest_count // num_dests, 4)
         context_lines.append("\n【🍜 官方餐廳與美食候選清單】")
         try:
             # 使用組員新增的 POST 推薦端點
-            rest_region = normalize_region_name(destination)
-            rest_payload = {
-                "region": rest_region,
-                "top_k": rest_count
-            }
-            res_resp = requests.post("http://127.0.0.1:8000/api/restaurants/recommendations/", json=rest_payload)
-            
-            if res_resp.status_code == 200:
-                rests = res_resp.json().get("results", [])
-                for r in rests:
-                    url_mapping[r['name']] = {
-                        "image": r.get('image_url', ''),
-                        "id": r.get('id', ''),
-                        "lat": r.get('lat', 0.0),            # 👈 新增
-                        "lng": r.get('lng', 0.0),            # 👈 新增
-                        "rating": r.get('google_rating', 0.0) # 👈 新增
-                    }
-                    interests_str = ", ".join(r.get("interests", []))
-                    line = (f"- {r['name']} ({r.get('category', '美食')}) | "
-                            f"地區: {r.get('region', '')} | "
-                            f"評分: {r.get('google_rating', '無')} ({r.get('review_count', 0)}則) | "
-                            f"標籤: {interests_str} | "
-                            f"圖片: {r.get('image_url', '')}")
-                    context_lines.append(line)
-            else:
-                context_lines.append("- (目前無推薦餐廳資料)")
+            for dest in destinations:
+                rest_region = normalize_region_name(dest)
+                rest_payload = {
+                    "region": rest_region,
+                    "top_k": per_dest_rest_count
+                }
+                res_resp = requests.post("http://127.0.0.1:8000/api/restaurants/recommendations/", json=rest_payload)
+                
+                if res_resp.status_code == 200:
+                    rests = res_resp.json().get("results", [])
+                    for r in rests:
+                        url_mapping[r['name']] = {
+                            "image": r.get('image_url', ''),
+                            "id": r.get('id', ''),
+                            "lat": r.get('lat', 0.0),            # 👈 新增
+                            "lng": r.get('lng', 0.0),            # 👈 新增
+                            "rating": r.get('google_rating', 0.0) # 👈 新增
+                        }
+                        interests_str = ", ".join(r.get("interests", []))
+                        line = (f"- {r['name']} ({r.get('category', '美食')}) | "
+                                f"地區: {r.get('region', '')} | "
+                                f"評分: {r.get('google_rating', '無')} ({r.get('review_count', 0)}則) | "
+                                f"標籤: {interests_str} | "
+                                f"圖片: {r.get('image_url', '')}")
+                        context_lines.append(line)
+                else:
+                    context_lines.append("- (目前無推薦餐廳資料)")
         except Exception as e:
             logger.error(f"抓取餐廳失敗: {e}")
             context_lines.append("- (餐廳 API 連線異常)")
@@ -225,12 +233,12 @@ def build_modify_prompt(current_itinerary: dict, user_request: str, rag_context:
     6. 🚨 【絕不重複】：修改後的所有景點與餐廳絕對不可重複出現。
     7. "image" 請填空字串 ""，而 "position" 中的 "lat" 和 "lng"、以及 "rating" 欄位請一律直接填入數字 0！系統會在後續自動為你補上正確的真實數值。
     """
-def modify_itinerary(destination: str, current_itinerary: dict, user_request: str, user_prefs: dict, max_retries: int = 3) -> dict:
+def modify_itinerary( current_itinerary: dict, user_request: str, user_prefs: dict, max_retries: int = 3) -> dict:
     """
     處理使用者從前端聊天室發出的修改請求
     """
     logger.info(f"💬 收到使用者的修改需求: {user_request}")
-     
+    destination = user_prefs.get('destination', ["京都"])
     # 步驟 1：檢索 RAG 知識 (一樣需要載入候選名單供 AI 替換)
     rag_context,url_mapping = retrieve_local_knowledge(destination, required_count=15, user_prefs=user_prefs)
     if not rag_context or "無該城市" in rag_context:
@@ -309,12 +317,12 @@ def modify_itinerary(destination: str, current_itinerary: dict, user_request: st
             
     return {"status": "error", "message": "行程修改失敗，請換個說法再試一次。"}
 # --- 2. RAG 專屬 Prompt ---
-def build_rag_prompt(destination: str, user_prefs: dict, rag_context: str) -> str:
+def build_rag_prompt(destination: list, user_prefs: dict, rag_context: str) -> str:
     # 直接從對齊前端格式的字典中取值
     days = user_prefs.get('days', 3)
     budget = user_prefs.get('budget', 30000)
     interests = "、".join(user_prefs.get('interests', []))
-    
+    destinations_str = "、".join(destination)
     # 解析滑桿數值邏輯，轉換成 AI 易懂的指令
     exp_val = user_prefs.get('explorationStyle', 50)
     pace_desc = "非常悠閒，每天安排 2 個點即可" if exp_val < 30 else "步調緊湊，每天安排 4-5 個點" if exp_val > 70 else "步調適中，每天安排 3-4 個點"
@@ -326,13 +334,14 @@ def build_rag_prompt(destination: str, user_prefs: dict, rag_context: str) -> st
     rag_note = f"並參考使用者提供的攻略內容：{user_prefs.get('ragContent')}" if user_prefs.get('ragContent') else ""
 
     return f"""
-    你是一位嚴謹的旅遊 AI 嚮導。請為使用者規劃 {days} 天的【{destination}】行程。
+    你是一位嚴謹的旅遊 AI 嚮導。請為使用者規劃 {days} 天跨越【{destinations_str}】的豐富行程。
 
     【使用者偏好與參數】
+    - 目的地城市：{destinations_str}
     - 興趣標籤：{interests}
     - 預算：NT$ {budget}
-    - 旅遊步調：{pace_desc} (數值: {exp_val}/100)
-    - 內容偏重：{focus_desc} (數值: {food_val}/100)
+    - 旅遊步調：{pace_desc}
+    - 內容偏重：{focus_desc}
     - 必去景點：{must_visit}
     {rag_note}
 
@@ -344,16 +353,16 @@ def build_rag_prompt(destination: str, user_prefs: dict, rag_context: str) -> st
 
     【任務邏輯規範】
     1. 行程密度：請嚴格遵守「{pace_desc}」的規範安排每日景點數量。
-    2. 美食安排：🚨【強制要求】每一天的行程中，務必「至少」安排 1 到 2 間【官方餐廳與美食候選清單】中的店家作為午餐或晚餐！絕不可出現沒有安排任何餐廳的天數。請注意「地理位置合理性」，餐廳應盡量安排在當天景點的附近。
-    3. 偏好權重：請根據「{focus_desc}」來篩選景點與餐廳的比例。
-    4. 欄位極速輸出規範：為了大幅提升生成速度，"image" 欄位請一律直接填入空字串 ""；；而 "position" 中的 "lat"、"lng" 以及 "rating" 請直接填入數字 0，系統會自動在後續補上真實數值。
-    5. "xai" 欄位規範：
+    2. 美食安排：每一天的行程中，務必安排 1 到 2 間美食餐廳作為午餐或晚餐！
+    3. 🚨【跨城市路線合理性】：本次行程包含多個城市（{destinations_str}）。請在天數分配上進行合理的「區域塊狀分組」（例如 7 天行程：第 1~3 天完全集中在大阪，第 4~7 天完全移動並集中在京都）。【絕對禁止】在同一天內或相鄰天數來回切換不同縣市，務必將跨縣市的大型交通移動次數降到最低！
+    4. 🚨【絕不重複】：整趟旅程的所有景點與餐廳「絕對不可以重複出現」。
+    5. 欄位極速輸出規範：為了大幅提升生成速度，"image" 欄位請一律直接填入空字串 ""；；而 "position" 中的 "lat"、"lng" 以及 "rating" 請直接填入數字 0，系統會自動在後續補上真實數值。
+    6. "xai" 欄位規範：
        - `summary`: 必須直接提及使用者的興趣（如 {", ".join(user_prefs.get('interests', []))}）與此景點的關聯。
        - `scores`: 請提供 2-3 個評分維度，例如：「興趣符合度」、「交通便利度」、「人氣熱度」。
        - 20字以內
-    6. 🚨 【格式絕對限制】：請直接輸出 JSON 內容，絕對不要加上 ```json 的 Markdown 標記，也絕對不要在 JSON 前後加上任何問候語或額外文字！
-    7. ⚡ 【速度與長度最佳化】：為了加快你的輸出速度，請將所有景點與餐廳的 `description` (詳細介紹) 嚴格控制在「30字以內」的精華短語！
-    8. 🚨 【絕不重複】：行程中的所有景點與餐廳「絕對不可以重複出現」，每一個地點在整趟旅程中只能被安排一次！
+    7. 🚨 【格式絕對限制】：請直接輸出 JSON 內容，絕對不要加上 ```json 的 Markdown 標記，也絕對不要在 JSON 前後加上任何問候語或額外文字！
+    8. ⚡ 【速度與長度最佳化】：為了加快你的輸出速度，請將所有景點與餐廳的 `description` (詳細介紹) 嚴格控制在「30字以內」的精華短語！
     """
 # --- 1. 定義更新後的 JSON Schema ---
 # 加入 day_number 讓行程有時間序
@@ -460,12 +469,12 @@ def save_to_db(user_id: str, destination: str, itinerary_data: dict):
 # --- 4. 服務層：生成、重試與驗證 ---
 client = genai.Client(api_key=GEMINI_KEY)
 #model = genai.GenerativeModel('gemma-4-31b-it') 
-def generate_itinerary(destination: str, user_prefs: dict, max_retries: int = 3) -> dict:
+def generate_itinerary(user_prefs: dict, max_retries: int = 3) -> dict:
     # 步驟 1：檢索 RAG 知識
     days = user_prefs.get('days', 3)
     required_count = days * 3 
     exp_style = user_prefs.get('explorationStyle', 50)
-    
+    destination = user_prefs.get('destination', ["京都"])
     # 根據步調決定每天「最少需要」幾個點
     if exp_style > 70:
         points_per_day = 4  # 緊湊：每天排 4 點
@@ -556,20 +565,21 @@ def generate_itinerary(destination: str, user_prefs: dict, max_retries: int = 3)
 if __name__ == "__main__":
     # --- 測試執行與模擬前端流程 ---
     logger.info("=== 階段 1：模擬前端首次請求行程 ===")
-    test_prefs = {
-        "days": 2,
+    frontend_payload = {
+        "days": 4,
         "budget": 30000,
-        "interests": ["自然", "秘境"],
-        "explorationStyle": 80, # 偏向緊湊
-        "foodVsAttractions": 70, # 偏向景點
+        "interests": ["美食", "文化"],
+        "destination": ["大阪", "京都"], # 🌟 多城市陣列
+        "explorationStyle": 50,
+        "foodVsAttractions": 50,
         "mustVisit": "",
-        "ragContent": ""
+        "ragContent": "",
+        "specialRequirements": ""
     }
     
     # 移除不存在的 user_id 參數
     initial_result = generate_itinerary(
-        destination="京都", 
-        user_prefs=test_prefs
+        user_prefs=frontend_payload
     )
     
     if initial_result["status"] == "success":
@@ -593,7 +603,6 @@ if __name__ == "__main__":
         
         # 2. 呼叫對話修改服務
         modify_result = modify_itinerary(
-            destination="京都",
             current_itinerary=current_itinerary_state, # 傳入剛剛生成的狀態
             user_request=user_chat_message,
             user_prefs=current_itinerary_state.get("preferences")
