@@ -513,8 +513,17 @@ function normalizeAttraction(raw: any, index: number): any {
     ? rawXai.scores.map((s: any) => ({
         label: s.label ?? '指標',
         value: typeof s.value === 'number' ? s.value : 0,
+        color: typeof s.color === 'string' ? s.color : undefined,
       }))
     : [];
+
+  const rawPosition = raw.position;
+  const position = rawPosition
+    && typeof rawPosition === 'object'
+    && typeof rawPosition.lat === 'number'
+    && typeof rawPosition.lng === 'number'
+      ? { lat: rawPosition.lat, lng: rawPosition.lng }
+      : undefined;
 
   return {
     id: raw.id ?? `auto-${index}`,
@@ -525,6 +534,7 @@ function normalizeAttraction(raw: any, index: number): any {
     duration: raw.duration ?? '-',
     estimatedCost: raw.estimatedCost ?? '-',
     location: raw.location ?? '-',
+    position,
     // nameEn 已移除
     rating: typeof raw.rating === 'number' ? raw.rating : 0,
     baseScore: typeof raw.baseScore === 'number' ? raw.baseScore : 70,
@@ -684,11 +694,33 @@ export async function modifyTrip(destination: string, current_itinerary: Trip, u
       modifiedData = backendResponse.data;
     }
 
+    const previousAttractionsById = new Map(
+      current_itinerary.days.flatMap(day => day.attractions).map(attraction => [attraction.id, attraction]),
+    );
+
+    const mergedDays = Array.isArray(modifiedData.days || modifiedData.itinerary)
+      ? (modifiedData.days || modifiedData.itinerary).map((day: any, dayIndex: number) => ({
+          day: day.day ?? dayIndex + 1,
+          date: day.date ?? '',
+          warning: day.warning,
+          attractions: Array.isArray(day.attractions)
+            ? day.attractions.map((attraction: any, attractionIndex: number) => {
+                const normalized = normalizeAttraction(attraction, attractionIndex);
+                const previous = previousAttractionsById.get(normalized.id);
+                return {
+                  ...normalized,
+                  position: normalized.position ?? previous?.position,
+                };
+              })
+            : [],
+        }))
+      : current_itinerary.days;
+
     // Merge modified data with original trip to preserve ID, preferences, summary
     // modify endpoint typically returns {"days": [...]} based on schema
     const updatedTrip: Trip = {
       ...current_itinerary,
-      days: modifiedData.days || modifiedData.itinerary || modifiedData, // Handle different possible structures
+      days: mergedDays, // Handle different possible structures
       generatedAt: new Date().toISOString(),
     };
 

@@ -16,12 +16,18 @@ export interface TripPreferences {
 export interface XAIScore {
   label: string;
   value: number; // 0-100
+  color?: string;
 }
 
 export interface XAIExplanation {
   summary: string;
   scores: XAIScore[];
   matchedInterests: Interest[];
+}
+
+export interface Coordinates {
+  lat: number;
+  lng: number;
 }
 
 export interface Attraction {
@@ -34,6 +40,7 @@ export interface Attraction {
   rating: number;
   estimatedCost: string; // e.g. "¥500"
   location: string; // area name
+  position?: Coordinates | null;
   xai: XAIExplanation;
   baseScore: number; // for re-ranking
   foodScore: number; // weight for food preference

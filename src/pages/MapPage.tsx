@@ -6,6 +6,8 @@ import { MOCK_TRIP } from '../services/api';
 import { TripContext } from '../contexts/TripContext';
 import Navbar from '../components/Navbar';
 
+type Coordinates = { lat: number; lng: number };
+
 const CATEGORY_COLORS: Record<string, string> = {
   '景點': '#C45A3F',
   '文化': '#6366F1',
@@ -54,6 +56,49 @@ const MAP_OPTIONS: google.maps.MapOptions = {
   streetViewControl: false,
   fullscreenControl: false,
 };
+
+function isValidCoordinates(value: unknown): value is Coordinates {
+  return !!value
+    && typeof value === 'object'
+    && typeof (value as Coordinates).lat === 'number'
+    && typeof (value as Coordinates).lng === 'number'
+    && Number.isFinite((value as Coordinates).lat)
+    && Number.isFinite((value as Coordinates).lng);
+}
+
+function getAttractionCoordinates(attraction: Attraction): Coordinates | null {
+  if (isValidCoordinates(attraction.position)) {
+    return attraction.position;
+  }
+
+  return ATTRACTION_COORDS[attraction.id] ?? null;
+}
+
+function getDayCenter(attractions: Attraction[], dayIndex: number): Coordinates {
+  const coords = attractions
+    .map(getAttractionCoordinates)
+    .filter((value): value is Coordinates => value !== null);
+
+  if (coords.length > 0) {
+    const total = coords.reduce(
+      (acc, coord) => ({ lat: acc.lat + coord.lat, lng: acc.lng + coord.lng }),
+      { lat: 0, lng: 0 },
+    );
+
+    return {
+      lat: total.lat / coords.length,
+      lng: total.lng / coords.length,
+    };
+  }
+
+  return DAY_CENTERS[dayIndex] ?? { lat: 35.0116, lng: 135.7681 };
+}
+
+function getDayCoordinates(attractions: Attraction[]): Coordinates[] {
+  return attractions
+    .map(getAttractionCoordinates)
+    .filter((value): value is Coordinates => value !== null);
+}
 
 // ── InfoWindow content ────────────────────────────────────────────
 function AttractionInfoWindow({ attraction }: { attraction: Attraction }) {
@@ -108,9 +153,7 @@ function AttractionInfoWindow({ attraction }: { attraction: Attraction }) {
         fontSize: 12, color: '#555', lineHeight: 1.6, marginBottom: 8,
         paddingLeft: 8, borderLeft: `3px solid ${color}`,
       }}>
-        {(attraction.xai?.summary || attraction.description)
-          ? (attraction.xai?.summary || attraction.description).slice(0, 90) + '…'
-          : '暫無推薦說明'}
+        {attraction.xai?.summary || attraction.description || '暫無推薦說明'}
       </div>
 
       {/* Duration + Cost */}
@@ -311,18 +354,54 @@ export default function MapPage() {
   const onUnmount = useCallback(() => { mapRef.current = null; }, []);
 
   const dayAttractions = trip.days[activeDay]?.attractions ?? [];
+  const dayCenter = getDayCenter(dayAttractions, activeDay);
 
-  // When day changes, pan to day center and reset selection
+  // When day changes, frame the whole day on the map and reset selection
   useEffect(() => {
-    const center = DAY_CENTERS[activeDay] ?? { lat: 35.0116, lng: 135.7681 };
-    setMapCenter(center);
-    setMapZoom(13);
     setSelectedAttraction(null);
-    if (mapRef.current) {
-      mapRef.current.panTo(center);
-      mapRef.current.setZoom(13);
+
+    const map = mapRef.current;
+    if (!isLoaded || !map) return;
+
+    const coords = getDayCoordinates(dayAttractions);
+    if (coords.length === 0) {
+      const center = DAY_CENTERS[activeDay] ?? dayCenter;
+      setMapCenter(center);
+      setMapZoom(13);
+      map.panTo(center);
+      map.setZoom(13);
+      return;
     }
-  }, [activeDay]);
+
+    if (coords.length === 1) {
+      const center = coords[0];
+      setMapCenter(center);
+      setMapZoom(16);
+      map.panTo(center);
+      map.setZoom(16);
+      return;
+    }
+
+    const bounds = new google.maps.LatLngBounds();
+    coords.forEach(coord => bounds.extend(coord));
+    map.fitBounds(bounds, 72);
+
+    const idleListener = google.maps.event.addListenerOnce(map, 'idle', () => {
+      const center = map.getCenter();
+      const zoom = map.getZoom();
+
+      if (center) {
+        setMapCenter({ lat: center.lat(), lng: center.lng() });
+      }
+      if (typeof zoom === 'number') {
+        setMapZoom(zoom);
+      }
+    });
+
+    return () => {
+      idleListener.remove();
+    };
+  }, [activeDay, dayAttractions, isLoaded]);
 
   // Scroll selected card into view
   useEffect(() => {
@@ -332,15 +411,24 @@ export default function MapPage() {
     }
   }, [selectedAttraction]);
 
-  function focusAttraction(attraction: Attraction) {
-    const coords = ATTRACTION_COORDS[attraction.id];
-    setSelectedAttraction(prev => prev?.id === attraction.id ? null : attraction);
-    if (coords && mapRef.current) {
+  // Keep the map centered on the selected attraction after selection changes.
+  useEffect(() => {
+    if (!selectedAttraction) return;
+
+    const coords = getAttractionCoordinates(selectedAttraction);
+    if (!coords) return;
+
+    setMapCenter(coords);
+    setMapZoom(16);
+
+    if (mapRef.current) {
       mapRef.current.panTo(coords);
       mapRef.current.setZoom(16);
-      setMapCenter(coords);
-      setMapZoom(16);
     }
+  }, [selectedAttraction]);
+
+  function focusAttraction(attraction: Attraction) {
+    setSelectedAttraction(prev => prev?.id === attraction.id ? null : attraction);
   }
 
   const accentColor = '#C45A3F';
@@ -440,7 +528,7 @@ export default function MapPage() {
                     attraction={attraction}
                     idx={idx}
                     isSelected={selectedAttraction?.id === attraction.id}
-                    hasCoords={!!ATTRACTION_COORDS[attraction.id]}
+                    hasCoords={!!getAttractionCoordinates(attraction)}
                     onClick={() => focusAttraction(attraction)}
                   />
                 </div>
@@ -495,7 +583,7 @@ export default function MapPage() {
             >
               {/* Markers */}
               {dayAttractions.map((attraction, idx) => {
-                const coords = ATTRACTION_COORDS[attraction.id];
+                const coords = getAttractionCoordinates(attraction);
                 if (!coords) return null;
                 const color = CATEGORY_COLORS[attraction.category] ?? accentColor;
                 const isSelected = selectedAttraction?.id === attraction.id;
@@ -525,9 +613,9 @@ export default function MapPage() {
               })}
 
               {/* InfoWindow — synced with selected card */}
-              {selectedAttraction && ATTRACTION_COORDS[selectedAttraction.id] && (
+              {selectedAttraction && getAttractionCoordinates(selectedAttraction) && (
                 <InfoWindow
-                  position={ATTRACTION_COORDS[selectedAttraction.id]}
+                  position={getAttractionCoordinates(selectedAttraction) ?? undefined}
                   onCloseClick={() => setSelectedAttraction(null)}
                   options={{ pixelOffset: new google.maps.Size(0, -24) }}
                 >
@@ -560,7 +648,7 @@ export default function MapPage() {
           )}
 
           {/* No-coord warning badge */}
-          {isLoaded && dayAttractions.some(a => !ATTRACTION_COORDS[a.id]) && (
+          {isLoaded && dayAttractions.some(a => !getAttractionCoordinates(a)) && (
             <div style={{
               position: 'absolute',
               top: 16,
