@@ -56,10 +56,13 @@
         {
           "id": "a01",                  // 景點唯一識別碼 (String)
           "name": "伏見稻荷大社",         // 景點名稱 (String)
-          "nameEn": "Fushimi Inari Taisha", // 英文名稱 (String)
           "category": "景點",             // 類別 (String: "景點" | "文化" | "購物" | "自然")
           "description": "千本鳥居是京都最具代表性的景點...", // 景點描述 (String)
           "image": "https://...",       // 外部圖床圖片 URL (String)
+          "position": {                 // 地理座標 (Object)
+            "lat": 34.9671,             // 緯度 (Float, WGS84)
+            "lng": 135.7727             // 經度 (Float, WGS84)
+          },
           "duration": "2–3 小時",        // 建議停留時間 (String)
           "rating": 4.8,                // 評分 (Float)
           "estimatedCost": "免費",       // 預估花費 (String)
@@ -73,9 +76,9 @@
             "summary": "根據您選擇的「文化」興趣，AI 將此...", // 解釋摘要 (String)
             "matchedInterests": ["文化"], // 匹配的興趣標籤 (Array of Strings)
             "scores": [                 // 指標分析 (Array of Objects, 固定長度 3)
-              { "label": "文化符合度", "value": 95, "color": "#6366F1" },
-              { "label": "評分熱度",   "value": 88, "color": "#10B981" },//rating average
-              { "label": "探索指數",   "value": 72, "color": "#F59E0B" }
+              { "label": "文化符合度", "value": 95 },
+              { "label": "評分熱度",   "value": 88 },
+              { "label": "探索指數",   "value": 72 }
             ]
           }
         }
@@ -105,3 +108,8 @@
      "error": "無法依據目前的設定排定行程，請提高預算或修改偏好設定。"
    }
    ```
+
+5. **地理位置欄位 (Position Field):**
+  - 在景點物件中新增 `position` 欄位，結構為 `{ lat, lng }`，兩者均為十進制度數 (Float)，採用 WGS84 座標系。
+  - `lat` 範圍：-90 到 90；`lng` 範圍：-180 到 180。
+  - 此欄位用於地圖標記、路徑規劃、距離計算與聚合分析。若無座標資料，可回傳 `null` 或略過欄位（視情境而定）。
