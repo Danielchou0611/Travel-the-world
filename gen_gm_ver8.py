@@ -101,7 +101,10 @@ def retrieve_local_knowledge(destination: str, required_count: int, user_prefs: 
         for p in top_places:
             url_mapping[p['name']] = {
                 "image": p.get('image_url', ''),
-                "id": p.get('id', '')
+                "id": p.get('id', ''),
+                "lat": p.get('lat', 0.0),            # 👈 新增
+                "lng": p.get('lng', 0.0),            # 👈 新增
+                "rating": p.get('google_rating', 0.0) # 👈 新增
             }
             interests_str = ", ".join(p.get("interests", []))
             line = (f"- {p['name']} ({p.get('google_name_matched', '')}) | "
@@ -135,7 +138,10 @@ def retrieve_local_knowledge(destination: str, required_count: int, user_prefs: 
                 for r in rests:
                     url_mapping[r['name']] = {
                         "image": r.get('image_url', ''),
-                        "id": r.get('id', '')
+                        "id": r.get('id', ''),
+                        "lat": r.get('lat', 0.0),            # 👈 新增
+                        "lng": r.get('lng', 0.0),            # 👈 新增
+                        "rating": r.get('google_rating', 0.0) # 👈 新增
                     }
                     interests_str = ", ".join(r.get("interests", []))
                     line = (f"- {r['name']} ({r.get('category', '美食')}) | "
@@ -149,6 +155,8 @@ def retrieve_local_knowledge(destination: str, required_count: int, user_prefs: 
         except Exception as e:
             logger.error(f"抓取餐廳失敗: {e}")
             context_lines.append("- (餐廳 API 連線異常)")
+        with open("sql_history.json", "w", encoding="utf-8") as f:
+                json.dump(context_lines, f, ensure_ascii=False, indent=2)
         return "\n".join(context_lines), url_mapping
         
     except requests.exceptions.RequestException as e:
@@ -179,9 +187,12 @@ def build_modify_prompt(current_itinerary: dict, user_request: str, rag_context:
 
     【修改邏輯規範】
     1. 【精準修改】：只針對使用者提到的需求進行修改（例如替換某個景點、刪除某個行程）。使用者沒提到的天數或時段，請**盡可能保持原樣**。
-    2. 【交通合理性】：修改後，請再次確認該天的行程串接是否合理。
-    3. 輸出必須是一份完整的、包含所有天數的最新 JSON 行程表，格式必須與原始結構完全一致。
-    4. 🚨 【格式絕對限制】：請「直接」輸出 JSON 內容，絕對不要加上 ```json 的 Markdown 標記，也絕對不要在 JSON 前後加上任何問候語、解釋或額外文字！
+    2. 美食安排：🚨【強制要求】每一天的行程中，務必「至少」安排 1 到 2 間【官方餐廳與美食候選清單】中的店家作為午餐或晚餐！絕不可出現沒有安排任何餐廳的天數。請注意「地理位置合理性」，餐廳應盡量安排在當天景點的附近。
+    3. 【交通合理性】：修改後，請再次確認該天的行程串接是否合理。
+    4. 輸出必須是一份完整的、包含所有天數的最新 JSON 行程表，格式必須與原始結構完全一致。
+    5. 🚨 【格式絕對限制】：請「直接」輸出 JSON 內容，絕對不要加上 ```json 的 Markdown 標記，也絕對不要在 JSON 前後加上任何問候語、解釋或額外文字！
+    6. 🚨 【絕不重複】：修改後的所有景點與餐廳絕對不可重複出現。
+    7. "image" 請填空字串 ""，而 "position" 中的 "lat" 和 "lng"、以及 "rating" 欄位請一律直接填入數字 0！系統會在後續自動為你補上正確的真實數值。
     """
 def modify_itinerary(destination: str, current_itinerary: dict, user_request: str, user_prefs: dict, max_retries: int = 3) -> dict:
     """
@@ -240,6 +251,11 @@ def modify_itinerary(destination: str, current_itinerary: dict, user_request: st
                     if place_name in url_mapping:
                         attr['image'] = url_mapping[place_name]['image']
                         attr['id'] = url_mapping[place_name]['id']
+                        attr['position'] = {
+                            'lat': url_mapping[place_name]['lat'],
+                            'lng': url_mapping[place_name]['lng']
+                        }
+                        attr['rating'] = url_mapping[place_name]['rating'] # 👈 塞入真實評分
             # (可選) 這裡一樣可以加入 verify_place_with_google_maps 來做二次防護
             
             logger.info("✅ 行程修改成功！")
@@ -299,13 +315,14 @@ def build_rag_prompt(destination: str, user_prefs: dict, rag_context: str) -> st
     1. 行程密度：請嚴格遵守「{pace_desc}」的規範安排每日景點數量。
     2. 美食安排：🚨【強制要求】每一天的行程中，務必「至少」安排 1 到 2 間【官方餐廳與美食候選清單】中的店家作為午餐或晚餐！絕不可出現沒有安排任何餐廳的天數。請注意「地理位置合理性」，餐廳應盡量安排在當天景點的附近。
     3. 偏好權重：請根據「{focus_desc}」來篩選景點與餐廳的比例。
-    4. "image" 欄位：為了大幅提升生成速度，請一律直接填入空字串 "" 即可！系統會在後續自動為你補上正確的圖片網址。
+    4. 欄位極速輸出規範：為了大幅提升生成速度，"image" 欄位請一律直接填入空字串 ""；；而 "position" 中的 "lat"、"lng" 以及 "rating" 請直接填入數字 0，系統會自動在後續補上真實數值。
     5. "xai" 欄位規範：
        - `summary`: 必須直接提及使用者的興趣（如 {", ".join(user_prefs.get('interests', []))}）與此景點的關聯。
        - `scores`: 請提供 2-3 個評分維度，例如：「興趣符合度」、「交通便利度」、「人氣熱度」。
        - 20字以內
     6. 🚨 【格式絕對限制】：請直接輸出 JSON 內容，絕對不要加上 ```json 的 Markdown 標記，也絕對不要在 JSON 前後加上任何問候語或額外文字！
     7. ⚡ 【速度與長度最佳化】：為了加快你的輸出速度，請將所有景點與餐廳的 `description` (詳細介紹) 嚴格控制在「30字以內」的精華短語！
+    8. 🚨 【絕不重複】：行程中的所有景點與餐廳「絕對不可以重複出現」，每一個地點在整趟旅程中只能被安排一次！
     """
 # --- 1. 定義更新後的 JSON Schema ---
 # 加入 day_number 讓行程有時間序
@@ -332,8 +349,15 @@ itinerary_schema = {
                                 "duration": {"type": "string", "description": "預計停留時間，如 '2–3 小時'"},
                                 "estimatedCost": {"type": "string", "description": "預計花費，如 '免費' 或 '¥2,000'"},
                                 "location": {"type": "string", "description": "地區，如 '京都・東山区'"},
-                                "lat": {"type": "number"},
-                                "lng": {"type": "number"},
+                                "position": {
+                                    "type": "object",
+                                    "properties": {
+                                        "lat": {"type": "number"},
+                                        "lng": {"type": "number"}
+                                    },
+                                    "required": ["lat", "lng"]
+                                },
+                                "rating": {"type": "number", "description": "Google評分"},
                                 "xai": {
                                     "type": "object",
                                     "properties": {
@@ -353,7 +377,7 @@ itinerary_schema = {
                                     "required": ["summary", "scores"]
                                 }
                             },
-                            "required": ["id", "name", "image", "category", "description", "duration", "estimatedCost", "location", "lat", "lng", "xai"]
+                            "required": ["id", "name", "image", "category", "description", "duration", "estimatedCost", "location", "rating", "position", "xai"]
                         }
                     }
                 },
@@ -462,6 +486,11 @@ def generate_itinerary(destination: str, user_prefs: dict, max_retries: int = 3)
                     if place_name in url_mapping:
                         attr['image'] = url_mapping[place_name]['image']  # 注入真實圖片網址
                         attr['id'] = url_mapping[place_name]['id']        # 注入真實資料庫 ID
+                        attr['position'] = {
+                            'lat': url_mapping[place_name]['lat'],
+                            'lng': url_mapping[place_name]['lng']
+                        }
+                        attr['rating'] = url_mapping[place_name]['rating'] # 👈 塞入真實評分
             # --- 步驟 3：包裝前端所需的完整 Trip 物件 ---
             total_attractions = sum(len(day['attractions']) for day in generated_data['days'])
             
