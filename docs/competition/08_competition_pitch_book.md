@@ -547,7 +547,7 @@ v0 階段不收費,純驗證 + 累積 email。v1.0(2026 Q3)推 Pro 訂閱 $4.99/
   - 早期交付 1141 篇 Reddit 痛點分析 + 3 Persona + 完整 wireframe
   - 4/26 後 12 天停滯後 5/9 回神,證明「PM 不應太早裁判團隊成員」
 
-**Ray 自己**(R14458007 · 材料碩一 台大,Solo Founder)的可驗證貢獻在 P3 已列:
+**Ray 自己**(R14458007 · 醫材所碩一 台大,Solo Founder)的可驗證貢獻在 P3 已列:
 - 5/14 push **ray branch 入口層**(19 檔 / +4,975 行):brand_preview 1100 行 + QuizPage / ResultPage / PlanJ / PlanP / Explore 5 頁 + ParticleBackground / CursorTrail 2 元件
 - 16 份競賽 / PM 文件 30,000 字 + 6 份個人評價 12,000 字 + 200K+ tokens 累計
 - Notion 自動化 1922 行 + 18 秒 Hero 影片
