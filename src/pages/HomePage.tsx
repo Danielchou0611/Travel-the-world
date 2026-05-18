@@ -53,6 +53,7 @@ export default function HomePage() {
   const [ragContent, setRagContent] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [loadingDots, setLoadingDots] = useState('');
   const [jpyRate, setJpyRate] = useState<number>(4.76);
   const destinationInputRef = useRef<HTMLInputElement>(null);
   const normalizedDestinationInput = destinationInput.trim();
@@ -70,6 +71,25 @@ export default function HomePage() {
       })
       .catch(err => console.error('Failed to fetch exchange rate', err));
   }, []);
+
+  // Animate loading dots while `loading` is true.
+  useEffect(() => {
+    if (!loading) {
+      setLoadingDots('');
+      return;
+    }
+
+    const frames = ['.', '..', '...', '..'];
+    let idx = 0;
+    // show first frame immediately
+    setLoadingDots(frames[0]);
+    const id = setInterval(() => {
+      idx = (idx + 1) % frames.length;
+      setLoadingDots(frames[idx]);
+    }, 400);
+
+    return () => clearInterval(id);
+  }, [loading]);
 
   const toggleInterest = (interest: Interest) => {
     setInterests(prev =>
@@ -239,7 +259,7 @@ export default function HomePage() {
                       onClick={() => setViewState('form')}
                       className="glass-card"
                       style={{ 
-                        flex: 1, 
+                        flex: 1,
                         padding: '24px 24px', 
                         textAlign: 'center', 
                         cursor: 'pointer', 
@@ -609,18 +629,26 @@ export default function HomePage() {
                     className="glass-input"
                     style={{ height: 72, resize: 'none' }}
                   />
-                  <div style={{ fontSize: 11, color: 'var(--color-text-muted)', marginTop: 6, lineHeight: 1.5 }}>
-                    描述您對這趣行程的期望與感受，AI 將根據此將內容更貼近您的理想
-                  </div>
+
                 </div>
 
                 <button
                   className="btn-primary"
                   onClick={handleSubmit}
                   disabled={loading}
-                  style={{ marginTop: 8 }}
+                  style={{ marginTop: 8, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}
                 >
-                  {loading ? 'AI 行程規劃中...（可能需要1-2分鐘）' : '開始安排行程'}
+                  {loading ? (
+                    <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8, color: '#ffffff' }}>
+                      <span style={{ textAlign: 'center' }}>行程規劃中</span>
+                      <span className="loading-dots" aria-hidden>
+                        <span>.</span>
+                        <span>.</span>
+                        <span>.</span>
+                      </span>
+                      <span style={{ color: '#ffffff', fontSize: 12 }}>（可能需要1-2分鐘）</span>
+                    </span>
+                  ) : '開始安排行程'}
                 </button>
               </div>
             </div>
