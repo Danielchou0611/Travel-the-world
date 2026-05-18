@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef, useEffect, useContext } from 'react';
+import { useState, useCallback, useRef, useEffect, useContext, useMemo } from 'react';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import { GoogleMap, useJsApiLoader, Marker, InfoWindow } from '@react-google-maps/api';
 import type { Trip, Attraction } from '../types';
@@ -348,8 +348,8 @@ export default function MapPage() {
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY ?? '',
   });
 
-  const dayAttractions = trip.days[activeDay]?.attractions ?? [];
-  const dayCenter = getDayCenter(dayAttractions, activeDay);
+  const dayAttractions = useMemo(() => trip.days[activeDay]?.attractions ?? [], [trip.days, activeDay]);
+  const dayCenter = useMemo(() => getDayCenter(dayAttractions, activeDay), [dayAttractions, activeDay]);
 
   const applyDayViewport = useCallback((map?: google.maps.Map | null) => {
     const targetMap = map ?? mapRef.current;
@@ -381,11 +381,10 @@ export default function MapPage() {
   }, [applyDayViewport]);
   const onUnmount = useCallback(() => { mapRef.current = null; }, []);
 
-  // When day changes, frame the whole day on the map and reset selection
+  // When day changes, frame the whole day on the map
   useEffect(() => {
-    setSelectedAttraction(null);
-    return applyDayViewport();
-  }, [activeDay, applyDayViewport]);
+    applyDayViewport();
+  }, [applyDayViewport]);
 
   // Scroll selected card into view
   useEffect(() => {
@@ -462,7 +461,10 @@ export default function MapPage() {
             {trip.days.map((day, i) => (
               <button
                 key={i}
-                onClick={() => setActiveDay(i)}
+                onClick={() => {
+                  setActiveDay(i);
+                  setSelectedAttraction(null);
+                }}
                 style={{
                   padding: '5px 12px',
                   borderRadius: 20,
