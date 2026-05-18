@@ -238,18 +238,67 @@ export default function HomePage() {
                     <button
                       onClick={() => setViewState('form')}
                       className="glass-card"
-                      style={{ flex: 1, padding: '32px 24px', textAlign: 'center', cursor: 'pointer', transition: 'all 0.2s', border: 'none', boxShadow: '0 8px 24px rgba(0,0,0,0.06)' }}
+                      style={{ 
+                        flex: 1, 
+                        padding: '24px 24px', 
+                        textAlign: 'center', 
+                        cursor: 'pointer', 
+                        transition: 'all 0.2s', 
+                        border: 'none', 
+                        boxShadow: '0 8px 24px rgba(0,0,0,0.12)',
+                        background: 'linear-gradient(180deg, #2c4563 0%, #1a3a52 100%)',
+                        position: 'relative',
+                        overflow: 'hidden'
+                      }}
                     >
-                      <div style={{ fontSize: 28, fontWeight: 700, color: 'var(--color-primary-dark)', fontFamily: 'var(--font-serif)' }}>J 人</div>
-                      <div style={{ fontSize: 14, color: 'var(--color-text-muted)', marginTop: 12, whiteSpace: 'nowrap' }}>精打細算，完美計畫</div>
+                      {/* Wave pattern */}
+                      <div style={{
+                        position: 'absolute',
+                        bottom: 0,
+                        left: 0,
+                        right: 0,
+                        height: '50px',
+                        background: 'url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 120%22 preserveAspectRatio=%22none%22%3E%3Cpath d=%22M0,30 Q300,10 600,30 T1200,30 L1200,120 L0,120 Z%22 fill=%22%234a7ba7%22 opacity=%220.8%22/%3E%3Cpath d=%22M0,50 Q300,30 600,50 T1200,50 L1200,120 L0,120 Z%22 fill=%22%232c5282%22 opacity=%220.6%22/%3E%3C/svg%3E")',
+                        backgroundSize: '100% 100%',
+                        backgroundRepeat: 'repeat-x'
+                      }} />
+                      <div style={{ position: 'relative', zIndex: 1 }}>
+                        <div style={{ fontSize: 28, fontWeight: 700, color: '#ffffff', fontFamily: 'var(--font-serif)' }}>J 人</div>
+                        <div style={{ fontSize: 14, color: '#b0c5d8', marginTop: 12, whiteSpace: 'nowrap' }}>精打細算，完美計畫</div>
+                      </div>
                     </button>
                     <button
                       onClick={() => setViewState('form')}
                       className="glass-card"
-                      style={{ flex: 1, padding: '32px 24px', textAlign: 'center', cursor: 'pointer', transition: 'all 0.2s', border: 'none', boxShadow: '0 8px 24px rgba(0,0,0,0.06)' }}
+                      style={{ 
+                        flex: 1, 
+                        padding: '24px 24px', 
+                        textAlign: 'center', 
+                        cursor: 'pointer', 
+                        transition: 'all 0.2s', 
+                        border: 'none', 
+                        boxShadow: '0 8px 24px rgba(0,0,0,0.12)',
+                        background: 'linear-gradient(180deg, #d4603c 0%, #c85a3a 100%)',
+                        position: 'relative',
+                        overflow: 'hidden'
+                      }}
                     >
-                      <div style={{ fontSize: 28, fontWeight: 700, color: 'var(--color-primary-dark)', fontFamily: 'var(--font-serif)' }}>P 人</div>
-                      <div style={{ fontSize: 14, color: 'var(--color-text-muted)', marginTop: 12, whiteSpace: 'nowrap' }}>隨心所欲，說走就走</div>
+                      {/* Cherry blossom tree on right */}
+                      <div style={{
+                        position: 'absolute',
+                        right: -10,
+                        top: -20,
+                        width: '120px',
+                        height: '120px',
+                        opacity: 0.4,
+                        background: 'url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22%3E%3C!-- tree trunk --%3E%3Cpath d=%22M95 120 Q90 150 95 200 Q100 150 105 120%22 fill=%22%238b6f47%22/%3E%3C!-- cherry blossoms --%3E%3Ccircle cx=%22100%22 cy=%2260%22 r=%2250%22 fill=%22%23e8b4c8%22/%3E%3Ccircle cx=%2270%22 cy=%2280%22 r=%2235%22 fill=%22%23f0a6c3%22/%3E%3Ccircle cx=%22130%22 cy=%2280%22 r=%2235%22 fill=%22%23f0a6c3%22/%3E%3Ccircle cx=%2280%22 cy=%22110%22 r=%2225%22 fill=%22%23e89bc3%22/%3E%3Ccircle cx=%22120%22 cy=%22110%22 r=%2225%22 fill=%22%23e89bc3%22/%3E%3C/svg%3E")',
+                        backgroundSize: '100% 100%',
+                        backgroundRepeat: 'no-repeat'
+                      }} />
+                      <div style={{ position: 'relative', zIndex: 1 }}>
+                        <div style={{ fontSize: 28, fontWeight: 700, color: '#ffffff', fontFamily: 'var(--font-serif)' }}>P 人</div>
+                        <div style={{ fontSize: 14, color: '#f5d5c0', marginTop: 12, whiteSpace: 'nowrap' }}>隨心所欲，說走就走</div>
+                      </div>
                     </button>
                   </div>
                 )}
