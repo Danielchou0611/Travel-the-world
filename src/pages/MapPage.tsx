@@ -9,7 +9,7 @@ import Navbar from '../components/Navbar';
 type Coordinates = { lat: number; lng: number };
 
 const CATEGORY_COLORS: Record<string, string> = {
-  '景點': '#C45A3F',
+  '美食': '#C45A3F',
   '文化': '#6366F1',
   '購物': '#10B981',
   '自然': '#2D9B6F',
@@ -341,8 +341,6 @@ export default function MapPage() {
 
   const [activeDay, setActiveDay] = useState(0);
   const [selectedAttraction, setSelectedAttraction] = useState<Attraction | null>(null);
-  const [mapCenter, setMapCenter] = useState(DAY_CENTERS[0] ?? { lat: 35.0116, lng: 135.7681 });
-  const [mapZoom, setMapZoom] = useState(13);
   const mapRef = useRef<google.maps.Map | null>(null);
   const cardRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
@@ -360,8 +358,6 @@ export default function MapPage() {
     const coords = getDayCoordinates(dayAttractions);
     if (coords.length === 0) {
       const center = DAY_CENTERS[activeDay] ?? dayCenter;
-      setMapCenter(center);
-      setMapZoom(13);
       targetMap.panTo(center);
       targetMap.setZoom(13);
       return;
@@ -369,8 +365,6 @@ export default function MapPage() {
 
     if (coords.length === 1) {
       const center = coords[0];
-      setMapCenter(center);
-      setMapZoom(16);
       targetMap.panTo(center);
       targetMap.setZoom(16);
       return;
@@ -379,22 +373,6 @@ export default function MapPage() {
     const bounds = new google.maps.LatLngBounds();
     coords.forEach(coord => bounds.extend(coord));
     targetMap.fitBounds(bounds, 72);
-
-    const idleListener = google.maps.event.addListenerOnce(targetMap, 'idle', () => {
-      const center = targetMap.getCenter();
-      const zoom = targetMap.getZoom();
-
-      if (center) {
-        setMapCenter({ lat: center.lat(), lng: center.lng() });
-      }
-      if (typeof zoom === 'number') {
-        setMapZoom(zoom);
-      }
-    });
-
-    return () => {
-      idleListener.remove();
-    };
   }, [activeDay, dayAttractions, dayCenter, isLoaded]);
 
   const onLoad = useCallback((map: google.maps.Map) => {
@@ -423,9 +401,6 @@ export default function MapPage() {
 
     const coords = getAttractionCoordinates(selectedAttraction);
     if (!coords) return;
-
-    setMapCenter(coords);
-    setMapZoom(16);
 
     if (mapRef.current) {
       mapRef.current.panTo(coords);
@@ -581,8 +556,6 @@ export default function MapPage() {
           {isLoaded && (
             <GoogleMap
               mapContainerStyle={MAP_CONTAINER_STYLE}
-              center={mapCenter}
-              zoom={mapZoom}
               options={MAP_OPTIONS}
               onLoad={onLoad}
               onUnmount={onUnmount}

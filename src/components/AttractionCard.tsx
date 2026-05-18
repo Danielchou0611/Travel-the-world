@@ -87,6 +87,7 @@ export default function AttractionCard({
   onSelect,
 }: AttractionCardProps) {
   const [confirmDelete, setConfirmDelete] = useState(false);
+  const [imgError, setImgError] = useState(false);
 
   function handleDeleteClick(e: React.MouseEvent) {
     e.stopPropagation();
@@ -178,10 +179,11 @@ export default function AttractionCard({
 
         {/* ── Image side ──────────────────────────────────────── */}
         <div style={{ width: 200, flexShrink: 0, position: 'relative', overflow: 'hidden', borderRight: '1px solid var(--color-border)', backgroundColor: 'var(--color-surface)', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 200 }}>
-          {attraction.image ? (
+          {attraction.image && !imgError ? (
             <img
               src={attraction.image}
               alt={attraction.name}
+              onError={() => setImgError(true)}
               style={{ width: '100%', height: '100%', minHeight: 200, objectFit: 'cover', display: 'block', position: 'absolute', inset: 0 }}
             />
           ) : (

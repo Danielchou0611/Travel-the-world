@@ -282,11 +282,11 @@ export default function HomePage() {
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
                 Back
               </button>
-              <div className="glass-card" style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: 28 }}>
+              <div className="glass-card" style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: 16 }}>
 
                 {/* Destination */}
                 <div>
-                  <label className="form-label">想去的城市</label>
+                  <label className="form-label">想去的城市 <span style={{ color: 'var(--color-accent)' }}>*</span></label>
                   <div style={{ position: 'relative' }}>
                     <div
                       className="glass-input"
@@ -387,7 +387,7 @@ export default function HomePage() {
                 {/* Days & Budget */}
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
                   <div>
-                    <label className="form-label">旅遊天數</label>
+                    <label className="form-label">旅遊天數 <span style={{ color: 'var(--color-accent)' }}>*</span></label>
                     <div style={{ position: 'relative' }}>
                       <input
                         type="number"
@@ -423,7 +423,7 @@ export default function HomePage() {
                   </div>
 
                   <div>
-                    <label className="form-label">總預算 (台幣)</label>
+                    <label className="form-label">總預算 (台幣) <span style={{ color: 'var(--color-accent)' }}>*</span></label>
                     <div style={{ position: 'relative' }}>
                       <span style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)', fontSize: 14, color: 'var(--color-text)', fontWeight: 500 }}>NT$</span>
                       <input
@@ -462,12 +462,9 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                {/* Divider */}
-                <div style={{ borderTop: '1px solid var(--color-border)' }} />
-
                 {/* Interests */}
                 <div>
-                  <label className="form-label mb-3">興趣偏好</label>
+                  <label className="form-label mb-3">興趣偏好 <span style={{ color: 'var(--color-accent)' }}>*</span></label>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 10 }}>
                     {INTERESTS.map(item => (
                       <div
@@ -487,12 +484,9 @@ export default function HomePage() {
                   {error && <p style={{ fontSize: 12, color: '#DC2626', marginTop: 8 }}>{error}</p>}
                 </div>
 
-                {/* Divider */}
-                <div style={{ borderTop: '1px solid var(--color-border)' }} />
-
                 {/* Style Sliders */}
-                <div>
-                  <label className="form-label">旅遊風格</label>
+                <div style={{ marginTop: 12, marginBottom: 12 }}>
+                  <label className="form-label">旅遊風格 <span style={{ color: 'var(--color-accent)' }}>*</span></label>
 
                   <div style={{ marginBottom: 20 }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
@@ -533,11 +527,9 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div style={{ borderTop: '1px solid var(--color-border)' }} />
-
                 {/* Inputs */}
                 <div>
-                  <label className="form-label">必去地點（選填）</label>
+                  <label className="form-label">必去景點</label>
                   <input
                     type="text"
                     placeholder="例如：清水寺、藍瓶咖啡..."
@@ -547,8 +539,8 @@ export default function HomePage() {
                   />
                 </div>
 
-                <div>
-                  <label className="form-label">參考攻略（貼入文字）</label>
+                <div style={{ marginTop: 0 }}>
+                  <label className="form-label">參考攻略</label>
                   <textarea
                     placeholder="貼入想納入行程的攻略或筆記..."
                     value={ragContent}
@@ -558,8 +550,8 @@ export default function HomePage() {
                   />
                 </div>
 
-                <div>
-                  <label className="form-label">行程期望（選填）</label>
+                <div style={{ marginTop: 0 }}>
+                  <label className="form-label">行程期望</label>
                   <textarea
                     id="special-requirements"
                     placeholder="例如：希望這趣旅行能放鬆心情、希望深入體驗地方文化、希望行程緊湊充實、希望有浪漫氛圍..."
