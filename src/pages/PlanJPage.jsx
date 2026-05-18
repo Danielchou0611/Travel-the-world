@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import ParticleBackground from "../components/ParticleBackground";
-import { generateTrip, MOCK_TRIP_FALLBACK } from "../services/api";
+import { generateTrip, MOCK_TRIP_FALLBACK, normalizeTrip, dedupeAttractions } from "../services/api";
 
 const INTERESTS = [
   { emoji: "⛩", label: "文化" },
@@ -52,6 +52,9 @@ export default function PlanJPage() {
     try {
       const res = await generateTrip(prefs);
       trip = res.trip || res.itinerary || res;
+      // Wen ver8 真實回傳已有 position,但缺 baseScore/foodScore 等 rerank 欄位
+      // 同時 5/17 Apple 回報部分景點重複 3-4 次 → 一律 dedupe
+      trip = dedupeAttractions(normalizeTrip(trip));
     } catch (err) {
       console.warn("Wen :8001 無回應,使用 MOCK_TRIP fallback:", err.message);
       trip = { ...MOCK_TRIP_FALLBACK, preferences: { ...MOCK_TRIP_FALLBACK.preferences, ...prefs } };
