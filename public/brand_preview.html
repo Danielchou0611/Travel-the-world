@@ -3,7 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Occupath — Brand Preview · 浮世繪 v3 (動態版)</title>
+
+  <!-- ============ Primary SEO ============ -->
+  <title>Occupath · 日本自由行 AI 規劃 · 看得見每個推薦的理由</title>
+  <meta name="description" content="Occupath 是日本自由行的可解釋 AI 規劃工具。每個推薦景點都告訴你「為什麼」,點 ⓘ 看 4 因子分解,拖滑桿即時重排。NTU AI Builders Challenge · 矽谷種子競賽參賽。" />
+  <meta name="keywords" content="日本旅遊, AI 規劃, 可解釋 AI, XAI, Occupath, 自由行, 日本自由行, 行程規劃, 京都, 東京, 大阪" />
+  <meta name="author" content="Occupath Team · O 組 · NTU × NTUST" />
+  <meta name="theme-color" content="#091A2B" />
+  <link rel="canonical" href="https://occupath.app/" />
+
+  <!-- ============ Open Graph(Facebook / Threads / LinkedIn)============ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://occupath.app/" />
+  <meta property="og:title" content="Occupath · 日本自由行 AI 規劃 · 看得見每個推薦的理由" />
+  <meta property="og:description" content="不是再一個 AI 行程產生器。每一個推薦都告訴你「為什麼」 — 4 因子可解釋 + 局部修改不打掉重練 + AI 不確定時會說。" />
+  <meta property="og:image" content="https://occupath.app/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Occupath — 日本浮世繪美學 × AI 旅遊規劃" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:site_name" content="Occupath" />
+
+  <!-- ============ Twitter / X Card ============ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Occupath · 日本自由行 AI 規劃" />
+  <meta name="twitter:description" content="可解釋 AI:每個推薦都告訴你「為什麼」。4 因子分解 + 局部修改 + 信心標註。" />
+  <meta name="twitter:image" content="https://occupath.app/og-image.jpg" />
+
+  <!-- ============ PWA / Manifest ============ -->
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- ============ Plausible Analytics(隱私優先 · 不用 cookie banner)============ -->
+  <script defer data-domain="occupath.app" src="https://plausible.io/js/script.js"></script>
+
+  <!-- ============ Structured Data(JSON-LD,讓 Google 認知產品)============ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Occupath",
+    "description": "日本自由行的可解釋 AI 規劃工具。每個推薦景點都附 4 因子分解 + 信心標註,使用者可拖拉編輯、What-if 即時重排、ChatBox 局部修改。",
+    "url": "https://occupath.app/",
+    "applicationCategory": "TravelApplication",
+    "operatingSystem": "Web",
+    "inLanguage": ["zh-Hant", "en"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Free during 2026 Q2-Q3 beta"
+    },
+    "creator": {
+      "@type": "Organization",
+      "name": "Occupath Team",
+      "url": "https://github.com/Danielchou0611/Travel-the-world"
+    }
+  }
+  </script>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,6 +106,31 @@
     .font-display { font-family: 'Cormorant Garamond', 'Shippori Mincho', serif; font-weight: 300; }
     .font-mincho { font-family: 'Shippori Mincho', 'Noto Serif TC', serif; }
     html { scroll-behavior: smooth; }
+
+    /* Screen-reader only(視覺隱藏但 screen reader 可讀)*/
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* 無障礙:尊重使用者的動畫敏感偏好 */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      video { display: none; }
+    }
 
     /* ========== 和紙紋理 ========== */
     .washi-texture::before {
@@ -476,7 +561,7 @@
         <a href="business.html" class="nav-link" data-page="business">商業</a>
         <a href="/quiz" class="nav-link nav-cta" data-page="app">進入產品 →</a>
       </div>
-      <button class="md:hidden text-prussian-deep">☰</button>
+      <button class="md:hidden text-prussian-deep" aria-label="開啟手機選單" type="button">☰</button>
     </div>
 
     <!-- ============================================
@@ -599,28 +684,30 @@
     <div class="absolute inset-0 bg-gradient-to-b from-prussian-night via-prussian to-prussian-deep"></div>
 
     <!-- 前導片影片 (5 幕季節循環) -->
-    <video autoplay muted loop playsinline preload="auto"
+    <video autoplay muted loop playsinline preload="metadata"
+           aria-label="Occupath 品牌影片:春夏秋冬日本五幕季節循環"
            class="absolute inset-0 w-full h-full object-cover z-[5]">
       <source src="intro.mp4" type="video/mp4">
+      您的瀏覽器不支援嵌入影片。
     </video>
     <!-- 影片之上加深一層暗色 overlay 確保 Logo/文字可讀 -->
     <div class="absolute inset-0 z-[6] bg-gradient-to-b from-prussian-night/30 via-prussian-deep/50 to-prussian-night/85 pointer-events-none"></div>
 
     <!-- 雲朵 (3 層,不同速度與高度) -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
-      <svg class="absolute cloud-1" style="top: 12%; opacity: 0.18" width="280" height="60" viewBox="0 0 280 60">
+      <svg aria-hidden="true" focusable="false" class="absolute cloud-1" style="top: 12%; opacity: 0.18" width="280" height="60" viewBox="0 0 280 60">
         <path d="M40,40 Q70,20 110,35 Q150,15 200,35 Q235,20 260,40 Q220,55 40,40 Z" fill="#F5EFE3"/>
       </svg>
-      <svg class="absolute cloud-2" style="top: 22%; opacity: 0.12" width="220" height="50" viewBox="0 0 220 50">
+      <svg aria-hidden="true" focusable="false" class="absolute cloud-2" style="top: 22%; opacity: 0.12" width="220" height="50" viewBox="0 0 220 50">
         <path d="M30,30 Q60,15 95,30 Q130,12 170,28 Q200,18 215,32 Q180,45 30,30 Z" fill="#F5EFE3"/>
       </svg>
-      <svg class="absolute cloud-3" style="top: 35%; opacity: 0.1" width="180" height="40" viewBox="0 0 180 40">
+      <svg aria-hidden="true" focusable="false" class="absolute cloud-3" style="top: 35%; opacity: 0.1" width="180" height="40" viewBox="0 0 180 40">
         <path d="M20,25 Q50,10 80,22 Q110,8 145,22 Q170,15 175,28 Q140,35 20,25 Z" fill="#F5EFE3"/>
       </svg>
     </div>
 
     <!-- 富士山 (中後景, 呼吸動畫) -->
-    <svg class="fuji-breath absolute" style="bottom: 22%; left: 50%; width: 80%; max-width: 1200px; opacity: 0.7" viewBox="0 0 1200 360" preserveAspectRatio="xMidYMax meet">
+    <svg aria-hidden="true" focusable="false" class="fuji-breath absolute" style="bottom: 22%; left: 50%; width: 80%; max-width: 1200px; opacity: 0.7" viewBox="0 0 1200 360" preserveAspectRatio="xMidYMax meet">
       <!-- 山體 -->
       <path d="M0,360 L300,360 L450,180 Q500,135 530,180 L600,75 Q620,55 640,75 L710,180 Q740,135 790,180 L900,360 L1200,360 Z"
             fill="#091A2B"/>
@@ -648,15 +735,15 @@
     <!-- 動態海浪 (3 層 parallax,前後速度不同) -->
     <div class="absolute bottom-0 left-0 w-full h-72 overflow-hidden pointer-events-none">
       <!-- Wave back -->
-      <svg class="wave-back absolute bottom-0 left-0" style="width: 200%; height: 180px;" viewBox="0 0 2400 180" preserveAspectRatio="none">
+      <svg aria-hidden="true" focusable="false" class="wave-back absolute bottom-0 left-0" style="width: 200%; height: 180px;" viewBox="0 0 2400 180" preserveAspectRatio="none">
         <path d="M0,90 Q150,50 300,90 T600,90 T900,90 T1200,90 T1500,90 T1800,90 T2100,90 T2400,90 V180 H0 Z" fill="#1B3A5C" opacity="0.55"/>
       </svg>
       <!-- Wave mid -->
-      <svg class="wave-mid absolute bottom-0 left-0" style="width: 200%; height: 160px;" viewBox="0 0 2400 160" preserveAspectRatio="none">
+      <svg aria-hidden="true" focusable="false" class="wave-mid absolute bottom-0 left-0" style="width: 200%; height: 160px;" viewBox="0 0 2400 160" preserveAspectRatio="none">
         <path d="M0,80 Q200,30 400,80 T800,80 T1200,80 T1600,80 T2000,80 T2400,80 V160 H0 Z" fill="#0F2942" opacity="0.7"/>
       </svg>
       <!-- Wave front -->
-      <svg class="wave-front absolute bottom-0 left-0" style="width: 200%; height: 140px;" viewBox="0 0 2400 140" preserveAspectRatio="none">
+      <svg aria-hidden="true" focusable="false" class="wave-front absolute bottom-0 left-0" style="width: 200%; height: 140px;" viewBox="0 0 2400 140" preserveAspectRatio="none">
         <path d="M0,70 Q120,20 240,70 T480,70 T720,70 T960,70 T1200,70 T1440,70 T1680,70 T1920,70 T2160,70 T2400,70 V140 H0 Z" fill="#091A2B"/>
       </svg>
     </div>
@@ -671,8 +758,8 @@
       二〇二六 · 春
     </div>
 
-    <!-- Logo + tagline + 產品定位 -->
-    <div class="absolute bottom-32 left-12 md:left-24 max-w-2xl z-20">
+    <!-- Logo + tagline + 產品定位 + CTAs -->
+    <div class="absolute bottom-24 left-12 md:left-24 max-w-2xl z-20">
       <p class="ink-bleed ink-1 text-xs tracking-[0.5em] uppercase text-ochre mb-6 font-display">
         Occupy your path · Own your reason
       </p>
@@ -681,26 +768,33 @@
         Occupath
       </h1>
 
-      <p class="ink-bleed ink-3 font-mincho text-lg md:text-xl text-washi/85 tracking-[0.2em] mb-4">
+      <p class="ink-bleed ink-3 font-mincho text-lg md:text-xl text-washi/85 tracking-[0.2em] mb-3">
         讓你的路,由你自己佔據
       </p>
 
-      <!-- 產品定位副標 (新增,讓使用者第一眼識別) -->
-      <div class="ink-bleed ink-4 flex items-center gap-3 text-washi/55">
-        <div class="h-px w-12 bg-vermillion"></div>
-        <p class="font-display text-sm tracking-[0.3em] uppercase">
-          Explainable AI Trip Planner · Japan
-        </p>
-      </div>
-      <p class="ink-bleed ink-4 font-mincho text-sm md:text-base text-washi/50 tracking-wider mt-2 ml-15">
-        日本自由行 · AI 規劃 · 看得見每個推薦的理由
+      <!-- 產品定位副標 -->
+      <p class="ink-bleed ink-4 font-mincho text-sm md:text-base text-washi/55 tracking-wider mb-10">
+        日本自由行 · AI 規劃 · <span class="text-ochre">看得見每個推薦的理由</span>
       </p>
+
+      <!-- 雙 CTA -->
+      <div class="ink-bleed ink-4 flex flex-wrap items-center gap-4">
+        <a href="/tour"
+           class="inline-flex items-center gap-3 bg-vermillion text-washi px-8 py-4 rounded-md text-sm tracking-[0.25em] uppercase font-display font-medium hover:bg-vermillion-soft transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 group">
+          <span>60 秒體驗</span>
+          <span class="w-6 h-px bg-washi/80 group-hover:w-10 transition-all"></span>
+        </a>
+        <a href="/quiz"
+           class="inline-flex items-center gap-3 border border-washi/40 text-washi/90 px-8 py-4 rounded-md text-sm tracking-[0.25em] uppercase font-display hover:border-washi hover:text-washi transition-all duration-300">
+          <span>直接開始 →</span>
+        </a>
+      </div>
     </div>
 
-    <!-- 進入按鈕 -->
-    <a href="#story" class="ink-bleed ink-4 absolute bottom-12 right-12 inline-flex items-center gap-3 text-washi/70 hover:text-ochre transition-all duration-700 group z-20">
-      <span class="text-xs tracking-[0.4em] uppercase font-display">enter</span>
-      <span class="w-12 h-px bg-ochre group-hover:w-20 transition-all duration-500"></span>
+    <!-- 滑下提示(只是 scroll indicator,不再是 CTA)-->
+    <a href="#story" class="ink-bleed ink-4 absolute bottom-12 right-12 inline-flex items-center gap-3 text-washi/40 hover:text-ochre transition-all duration-700 group z-20">
+      <span class="text-[10px] tracking-[0.4em] uppercase font-display">scroll · 看故事</span>
+      <span class="w-8 h-px bg-washi/40 group-hover:w-14 group-hover:bg-ochre transition-all duration-500"></span>
     </a>
 
   </section>
@@ -717,7 +811,7 @@
     </div>
 
     <!-- 雲紋裝飾 -->
-    <svg class="absolute top-20 left-0 w-96 opacity-30" viewBox="0 0 400 100">
+    <svg aria-hidden="true" focusable="false" class="absolute top-20 left-0 w-96 opacity-30" viewBox="0 0 400 100">
       <path d="M50,60 Q80,30 130,55 Q170,25 220,55 Q260,30 320,60 Q280,75 50,60 Z"
             fill="none" stroke="#1B3A5C" stroke-width="1"/>
     </svg>
@@ -780,15 +874,15 @@
   <section class="relative bg-prussian-deep washi-texture overflow-hidden min-h-screen flex items-center">
 
     <!-- 雲朵飄移 -->
-    <svg class="absolute cloud-1" style="top: 18%; opacity: 0.12" width="200" viewBox="0 0 200 50">
+    <svg aria-hidden="true" focusable="false" class="absolute cloud-1" style="top: 18%; opacity: 0.12" width="200" viewBox="0 0 200 50">
       <path d="M30,30 Q60,15 95,30 Q130,12 170,28 Q200,18 215,32 Q180,45 30,30 Z" fill="#F5EFE3"/>
     </svg>
-    <svg class="absolute cloud-2" style="top: 32%; opacity: 0.08" width="160" viewBox="0 0 160 40">
+    <svg aria-hidden="true" focusable="false" class="absolute cloud-2" style="top: 32%; opacity: 0.08" width="160" viewBox="0 0 160 40">
       <path d="M20,25 Q50,10 80,22 Q110,8 145,22 Z" fill="#F5EFE3"/>
     </svg>
 
     <!-- 富士山 (背景,呼吸) -->
-    <svg class="fuji-breath absolute" style="bottom: 0; left: 50%; width: 100%; max-width: 1400px; opacity: 0.5" viewBox="0 0 1400 500">
+    <svg aria-hidden="true" focusable="false" class="fuji-breath absolute" style="bottom: 0; left: 50%; width: 100%; max-width: 1400px; opacity: 0.5" viewBox="0 0 1400 500">
       <path d="M-100,500 L150,500 L400,200 Q450,150 480,200 L600,80 Q620,55 645,80 L760,200 Q815,150 870,200 L1100,500 L1500,500 Z" fill="#091A2B"/>
       <path d="M460,200 Q480,175 495,190 L600,80 Q620,55 645,80 L750,190 Q765,175 785,200 Q730,175 705,190 L645,140 L600,190 Q525,175 460,200 Z" fill="#F5EFE3" opacity="0.85"/>
     </svg>
@@ -801,7 +895,7 @@
     <!-- 內容 -->
     <div class="relative z-10 max-w-2xl ml-12 md:ml-32 py-32">
 
-      <svg viewBox="0 0 600 100" class="w-full max-w-md mb-12">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 600 100" class="w-full max-w-md mb-12">
         <path d="M 20 50 Q 150 0 300 50 T 580 50" fill="none" stroke="#BC4630" stroke-width="2" class="draw-stroke"/>
         <circle cx="20" cy="50" r="6" fill="#BC4630"/>
         <circle cx="580" cy="50" r="6" fill="#D4A574"/>
@@ -880,7 +974,7 @@
         </p>
       </div>
       <div class="md:col-span-5 hidden md:flex justify-center reveal">
-        <svg viewBox="0 0 200 280" class="w-56">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 200 280" class="w-56">
           <!-- 四根柱子(各自呼吸) -->
           <line class="pillar-1" x1="40" y1="20" x2="40" y2="240" stroke="#1B3A5C" stroke-width="3" stroke-linecap="round"/>
           <line class="pillar-2" x1="80" y1="20" x2="80" y2="240" stroke="#1B3A5C" stroke-width="3" stroke-linecap="round"/>
@@ -918,7 +1012,7 @@
   <section class="relative bg-washi washi-texture py-32 px-6">
     <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
       <div class="md:col-span-5 hidden md:flex justify-center reveal">
-        <svg viewBox="0 0 240 120" class="w-64">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 240 120" class="w-64">
           <!-- 軌道線 -->
           <line x1="20" y1="60" x2="220" y2="60" stroke="#1B3A5C" stroke-width="2" stroke-linecap="round"/>
           <!-- 軌道刻度 -->
@@ -985,7 +1079,7 @@
         </p>
       </div>
       <div class="md:col-span-5 hidden md:flex justify-center reveal">
-        <svg viewBox="0 0 220 220" class="w-56">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 220 220" class="w-56">
           <!-- 紙張底色(呼吸)-->
           <rect class="paper-breath" x="20" y="20" width="180" height="180" fill="#F5EFE3" stroke="#1B3A5C" stroke-width="1" stroke-dasharray="3,3" opacity="0.7"/>
           <!-- 隨機消失的內容線(暗示「資料不足」)-->
@@ -1018,7 +1112,7 @@
   <section class="relative bg-prussian-night washi-texture py-48 px-6 overflow-hidden">
 
     <!-- 動態雲 -->
-    <svg class="absolute cloud-1" style="top: 15%; opacity: 0.08" width="240" viewBox="0 0 240 60">
+    <svg aria-hidden="true" focusable="false" class="absolute cloud-1" style="top: 15%; opacity: 0.08" width="240" viewBox="0 0 240 60">
       <path d="M30,35 Q70,15 110,35 Q150,12 200,32 Q230,18 240,38 Q200,50 30,35 Z" fill="#F5EFE3"/>
     </svg>
 
@@ -1041,7 +1135,7 @@
       <!-- 「同行」象徵:兩個行者 (琥珀=你,朱紅=AI) 連接一條輕巧的路 -->
       <div class="flex items-center justify-center gap-8 mb-16">
         <div class="h-px w-20 bg-ochre/40"></div>
-        <svg viewBox="0 0 120 32" class="w-32 h-10" xmlns="http://www.w3.org/2000/svg">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 120 32" class="w-32 h-10" xmlns="http://www.w3.org/2000/svg">
           <!-- 連接的弧線路徑(stroke-dasharray 動畫 = 路徑流動) -->
           <path d="M 12 16 Q 60 -2 108 16" stroke="#D4A574" stroke-width="1" fill="none" opacity="0.6"
                 stroke-dasharray="3 4">
@@ -1088,7 +1182,7 @@
 
     <!-- 動態波紋裝飾 -->
     <div class="absolute bottom-0 left-0 w-full h-32 overflow-hidden opacity-30 pointer-events-none">
-      <svg class="wave-front absolute bottom-0 left-0" style="width: 200%; height: 100%" viewBox="0 0 2400 100" preserveAspectRatio="none">
+      <svg aria-hidden="true" focusable="false" class="wave-front absolute bottom-0 left-0" style="width: 200%; height: 100%" viewBox="0 0 2400 100" preserveAspectRatio="none">
         <path d="M0,50 Q200,10 400,50 T800,50 T1200,50 T1600,50 T2000,50 T2400,50" fill="none" stroke="#F5EFE3" stroke-width="2"/>
       </svg>
     </div>
@@ -1110,9 +1204,501 @@
         永遠該由你自己佔據。
       </p>
 
-      <a href="/quiz" class="inline-block border-2 border-washi text-washi px-16 py-4 text-sm tracking-[0.4em] uppercase font-display hover:bg-washi hover:text-vermillion transition-all duration-700">
-        進入產品
+      <a href="/tour" class="inline-block border-2 border-washi text-washi px-16 py-4 text-sm tracking-[0.4em] uppercase font-display hover:bg-washi hover:text-vermillion transition-all duration-700">
+        60 秒體驗
       </a>
+      <a href="/quiz" class="inline-block ml-4 text-washi/70 px-8 py-4 text-sm tracking-[0.4em] uppercase font-display hover:text-ochre transition-all duration-700 underline decoration-dotted underline-offset-8">
+        或直接開始 →
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ==================================================================== -->
+  <!-- ⑥.5 PROOF · 產品截圖牆                                                 -->
+  <!-- ==================================================================== -->
+  <section class="relative bg-washi washi-texture py-32 px-6 overflow-hidden">
+
+    <div class="max-w-6xl mx-auto reveal">
+      <p class="text-xs tracking-[0.4em] uppercase text-vermillion mb-3 text-center font-display">
+        Inside the Product
+      </p>
+      <h2 class="font-display text-3xl md:text-5xl text-prussian-deep text-center mb-4 leading-tight">
+        每一個畫面,都在解釋自己。
+      </h2>
+      <p class="font-mincho text-sm md:text-base text-sumi/70 text-center mb-6 max-w-2xl mx-auto leading-loose">
+        六個產品畫面 — MBTI 引導、富士山粒子、行程卡片、XAI 因子展開、對話式修改、地圖視覺。<br/>
+        每一個都不只是「好看」,而是「能解釋 AI 為什麼這樣推薦」。
+      </p>
+
+      <!-- 誠實處理:目前是設計稿,5/22 真版上線 -->
+      <div class="flex justify-center mb-12">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-ochre/15 border border-ochre/40 rounded-full text-xs">
+          <span class="w-1.5 h-1.5 bg-ochre rounded-full animate-pulse"></span>
+          <span class="font-display tracking-wider text-prussian-deep">DESIGN PREVIEW</span>
+          <span class="text-sumi-warm">·</span>
+          <span class="font-mincho text-sumi-warm">真實互動版 5/22 上線,點 <a href="/tour" class="text-vermillion underline decoration-dotted underline-offset-2 hover:no-underline">60 秒體驗</a> 看可玩 demo</span>
+        </div>
+      </div>
+
+      <!-- 5 個產品畫面區塊 - 用 SVG mock + 描述 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- 畫面 1: MBTI 意境引導 -->
+        <div class="reveal group">
+          <div class="aspect-[4/3] bg-prussian-night rounded-lg overflow-hidden mb-4 relative border border-prussian/20">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+              <p class="text-ochre text-[10px] tracking-[0.4em] uppercase mb-3 font-display opacity-70">Before You Begin</p>
+              <p class="font-mincho text-washi text-lg mb-4">先把自己,<br/>安頓下來。</p>
+              <div class="w-12 h-px bg-ochre/60 mb-3"></div>
+              <p class="text-washi/40 text-[10px] tracking-[0.3em]">深呼吸,開始 →</p>
+            </div>
+            <!-- floating particles hint -->
+            <div class="absolute top-4 left-4 w-1 h-1 bg-ochre rounded-full animate-pulse"></div>
+            <div class="absolute top-10 right-8 w-1 h-1 bg-vermillion rounded-full animate-pulse" style="animation-delay: 0.5s"></div>
+            <div class="absolute bottom-6 left-10 w-1 h-1 bg-kohaku rounded-full animate-pulse" style="animation-delay: 1s"></div>
+          </div>
+          <p class="font-display text-xs tracking-[0.3em] uppercase text-vermillion mb-1">/quiz</p>
+          <p class="font-mincho text-sm text-prussian-deep">MBTI 意境引導</p>
+          <p class="text-xs text-sumi/60 mt-1">不問你「天數預算」,問你「想要什麼樣的旅行」。</p>
+        </div>
+
+        <!-- 畫面 2: J人 富士山粒子 -->
+        <div class="reveal group">
+          <div class="aspect-[4/3] bg-prussian-night rounded-lg overflow-hidden mb-4 relative border border-prussian/20">
+            <!-- 富士山 SVG -->
+            <svg aria-hidden="true" focusable="false" class="absolute inset-0 w-full h-full" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+              <polygon points="200,80 100,260 300,260" fill="#1B3A5C" opacity="0.5"/>
+              <polygon points="200,80 170,140 230,140" fill="#F4EEE2" opacity="0.85"/>
+              <!-- 粒子點 -->
+              <circle cx="180" cy="180" r="1.5" fill="#D4A574" opacity="0.8"><animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/></circle>
+              <circle cx="220" cy="200" r="1.5" fill="#BC4630" opacity="0.6"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite" begin="0.5s"/></circle>
+              <circle cx="160" cy="220" r="1.5" fill="#92BED2" opacity="0.7"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" repeatCount="indefinite" begin="1s"/></circle>
+              <circle cx="240" cy="190" r="1.5" fill="#D4A574" opacity="0.6"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.2s" repeatCount="indefinite" begin="0.3s"/></circle>
+            </svg>
+            <div class="absolute inset-0 flex flex-col justify-end p-4">
+              <p class="text-ochre text-[10px] tracking-[0.3em] mb-1 font-display">The Conductor</p>
+              <p class="font-mincho text-washi text-base">行程指揮官</p>
+            </div>
+          </div>
+          <p class="font-display text-xs tracking-[0.3em] uppercase text-vermillion mb-1">/result/j</p>
+          <p class="font-mincho text-sm text-prussian-deep">J 人 · 富士山粒子</p>
+          <p class="text-xs text-sumi/60 mt-1">280 個粒子組成富士山形狀,呼吸 + 漂浮。</p>
+        </div>
+
+        <!-- 畫面 3: 行程卡 + XAI 展開 -->
+        <div class="reveal group">
+          <div class="aspect-[4/3] bg-washi rounded-lg overflow-hidden mb-4 relative border border-prussian/10 p-4">
+            <!-- mock 卡片 -->
+            <div class="bg-white rounded shadow-sm p-3 mb-2 border border-prussian/8">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-[10px] bg-prussian/8 text-prussian px-2 py-0.5 rounded-full font-medium">#1</span>
+                <span class="font-mincho text-prussian-deep text-sm font-semibold">伏見稻荷大社</span>
+                <span class="ml-auto w-5 h-5 rounded-full bg-prussian text-washi text-[10px] flex items-center justify-center">i</span>
+              </div>
+              <p class="text-[10px] text-sumi/60 mb-2">千本鳥居蜿蜒於山坡,朱紅鳥居在晨光中格外壯觀。</p>
+              <div class="bg-washi-warm border-l-2 border-vermillion p-2 rounded-r">
+                <p class="text-[9px] text-sumi/70 mb-1">與您的「文化」興趣高度匹配。</p>
+                <div class="flex justify-between text-[8px] text-prussian mb-0.5"><span>文化符合度</span><span class="font-bold">95</span></div>
+                <div class="h-1 bg-prussian/10 rounded mb-1.5"><div class="h-1 bg-prussian rounded" style="width: 95%"></div></div>
+                <div class="flex justify-between text-[8px] text-prussian mb-0.5"><span>評分熱度</span><span class="font-bold">88</span></div>
+                <div class="h-1 bg-prussian/10 rounded"><div class="h-1 bg-vermillion rounded" style="width: 88%"></div></div>
+              </div>
+            </div>
+          </div>
+          <p class="font-display text-xs tracking-[0.3em] uppercase text-vermillion mb-1">/itinerary · XAI</p>
+          <p class="font-mincho text-sm text-prussian-deep">推薦因子可視化</p>
+          <p class="text-xs text-sumi/60 mt-1">點 ⓘ 看 AI 為什麼把這個排第一。</p>
+        </div>
+
+        <!-- 畫面 4: What-if 滑桿 -->
+        <div class="reveal group">
+          <div class="aspect-[4/3] bg-washi-warm rounded-lg overflow-hidden mb-4 relative border border-ochre/30 p-5">
+            <p class="text-[10px] font-display text-prussian-deep mb-3 tracking-wider">WHAT-IF · 即時重排</p>
+            <div class="space-y-3">
+              <div>
+                <div class="flex justify-between text-[10px] text-sumi/70 mb-1"><span>輕鬆 ↔ 探索</span><span class="text-vermillion font-bold">68</span></div>
+                <div class="h-1.5 bg-prussian/15 rounded-full relative">
+                  <div class="absolute h-1.5 bg-prussian rounded-full" style="width: 68%"></div>
+                  <div class="absolute w-3 h-3 bg-vermillion rounded-full -mt-[3px] shadow-md" style="left: 65%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-[10px] text-sumi/70 mb-1"><span>美食 ↔ 景點</span><span class="text-vermillion font-bold">42</span></div>
+                <div class="h-1.5 bg-prussian/15 rounded-full relative">
+                  <div class="absolute h-1.5 bg-prussian rounded-full" style="width: 42%"></div>
+                  <div class="absolute w-3 h-3 bg-vermillion rounded-full -mt-[3px] shadow-md" style="left: 39%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-[10px] text-sumi/70 mb-1"><span>自然 ↔ 都會</span><span class="text-vermillion font-bold">55</span></div>
+                <div class="h-1.5 bg-prussian/15 rounded-full relative">
+                  <div class="absolute h-1.5 bg-prussian rounded-full" style="width: 55%"></div>
+                  <div class="absolute w-3 h-3 bg-vermillion rounded-full -mt-[3px] shadow-md" style="left: 52%"></div>
+                </div>
+              </div>
+            </div>
+            <p class="text-[9px] text-sumi/50 mt-4 italic">拖動任一滑桿 → 景點 0.3 秒內重排</p>
+          </div>
+          <p class="font-display text-xs tracking-[0.3em] uppercase text-vermillion mb-1">/itinerary · What-if</p>
+          <p class="font-mincho text-sm text-prussian-deep">前端即時重排</p>
+          <p class="text-xs text-sumi/60 mt-1">不打 LLM、純算術重新排序,0 延遲。</p>
+        </div>
+
+        <!-- 畫面 5: ChatBox 對話 -->
+        <div class="reveal group">
+          <div class="aspect-[4/3] bg-white rounded-lg overflow-hidden mb-4 relative border border-prussian/10 flex flex-col">
+            <div class="bg-washi px-3 py-2 border-b border-prussian/8 flex justify-between items-center">
+              <span class="font-mincho text-prussian-deep text-xs font-semibold">對話式調整</span>
+              <span class="text-[8px] text-sumi/50">Wen Gemini · :8001</span>
+            </div>
+            <div class="flex-1 p-3 space-y-2 overflow-hidden">
+              <div class="flex justify-start">
+                <div class="bg-washi-warm text-prussian-deep text-[10px] px-2.5 py-1.5 rounded-xl max-w-[80%] leading-snug">已為您生成 3 天行程,想調整哪一段?</div>
+              </div>
+              <div class="flex justify-end">
+                <div class="bg-prussian text-washi text-[10px] px-2.5 py-1.5 rounded-xl max-w-[80%] leading-snug">把 D1 第二個換成嵐山</div>
+              </div>
+              <div class="flex justify-start">
+                <div class="bg-washi-warm text-prussian-deep text-[10px] px-2.5 py-1.5 rounded-xl max-w-[80%] leading-snug">好的,已將「錦市場」替換為「嵐山竹林」,並保留下午的茶屋安排。</div>
+              </div>
+            </div>
+            <div class="border-t border-prussian/8 px-2 py-1.5 flex gap-1">
+              <div class="flex-1 bg-prussian/5 rounded px-2 py-1 text-[9px] text-sumi/40 italic">例如:把第二個景點換成…</div>
+              <div class="bg-vermillion text-washi text-[9px] px-2 py-1 rounded font-medium">送出</div>
+            </div>
+          </div>
+          <p class="font-display text-xs tracking-[0.3em] uppercase text-vermillion mb-1">/itinerary · ChatBox</p>
+          <p class="font-mincho text-sm text-prussian-deep">對話式局部修改</p>
+          <p class="text-xs text-sumi/60 mt-1">不打掉重練,AI 配合你保留的部分。</p>
+        </div>
+
+        <!-- 畫面 6: 地圖 -->
+        <div class="reveal group">
+          <div class="aspect-[4/3] bg-gradient-to-br from-kohaku/40 to-washi-warm rounded-lg overflow-hidden mb-4 relative border border-prussian/10">
+            <!-- mock 地圖路徑 -->
+            <svg aria-hidden="true" focusable="false" class="absolute inset-0 w-full h-full" viewBox="0 0 400 300">
+              <path d="M 80 200 Q 150 100, 220 150 T 340 80" fill="none" stroke="#BC4630" stroke-width="2" stroke-dasharray="4 4" opacity="0.6"/>
+              <circle cx="80" cy="200" r="8" fill="#BC4630"/><text x="80" y="205" text-anchor="middle" fill="white" font-size="10" font-weight="bold">1</text>
+              <circle cx="200" cy="130" r="8" fill="#1B3A5C"/><text x="200" y="135" text-anchor="middle" fill="white" font-size="10" font-weight="bold">2</text>
+              <circle cx="280" cy="170" r="8" fill="#D4A574"/><text x="280" y="175" text-anchor="middle" fill="white" font-size="10" font-weight="bold">3</text>
+              <circle cx="340" cy="80" r="8" fill="#92BED2"/><text x="340" y="85" text-anchor="middle" fill="white" font-size="10" font-weight="bold">4</text>
+            </svg>
+            <div class="absolute bottom-3 left-3 bg-white/80 backdrop-blur px-2 py-1 rounded text-[9px] text-prussian-deep font-mincho">D1 · 京都 · 4 景點</div>
+          </div>
+          <p class="font-display text-xs tracking-[0.3em] uppercase text-vermillion mb-1">/itinerary · Map</p>
+          <p class="font-mincho text-sm text-prussian-deep">地圖動線視覺化</p>
+          <p class="text-xs text-sumi/60 mt-1">Google Maps 標記 + 分日色票 + 路徑虛線。</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================================================================== -->
+  <!-- ⑥.6 VOICES · Reddit 真實痛點 quote                                     -->
+  <!-- ==================================================================== -->
+  <section class="relative bg-prussian-deep washi-texture py-32 px-6 overflow-hidden">
+
+    <!-- 縱書章節 -->
+    <div class="hidden md:block absolute top-32 right-20 text-ochre/40 vertical-rl font-mincho text-sm tracking-[0.5em]">
+      第六章 ・ 旅人的聲音
+    </div>
+
+    <div class="max-w-5xl mx-auto reveal">
+      <p class="text-xs tracking-[0.4em] uppercase text-ochre mb-3 text-center font-display">
+        Voices from 1,141 Travelers
+      </p>
+      <h2 class="font-display text-3xl md:text-5xl text-washi text-center mb-4 leading-tight">
+        我們不是憑空想像痛點。
+      </h2>
+      <p class="font-mincho text-sm md:text-base text-washi/60 text-center mb-16 max-w-2xl mx-auto leading-loose">
+        2026 年 3-4 月,我們用 Pushshift API 抓取 Reddit 三個社群<br/>
+        共 <span class="text-ochre font-bold">1,141 篇</span> 與「Japan trip planning」相關的貼文,做主題聚類。
+      </p>
+
+      <!-- 6 條真實 quote -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <blockquote class="bg-washi/5 backdrop-blur border-l-4 border-vermillion p-6 rounded-r-lg">
+          <p class="font-mincho text-washi/90 text-base leading-relaxed mb-3 italic">
+            "I have 50 tabs open and I'm more confused than before."
+          </p>
+          <p class="text-[11px] text-ochre tracking-wider font-display">
+            — r/JapanTravel · 31% 共鳴(資訊過載痛點)
+          </p>
+        </blockquote>
+
+        <blockquote class="bg-washi/5 backdrop-blur border-l-4 border-ochre p-6 rounded-r-lg">
+          <p class="font-mincho text-washi/90 text-base leading-relaxed mb-3 italic">
+            "It just gave me the top 10 tourist spots. I could've Googled that."
+          </p>
+          <p class="text-[11px] text-ochre tracking-wider font-display">
+            — r/SoloTravel · 24% 共鳴(AI 推薦太一般)
+          </p>
+        </blockquote>
+
+        <blockquote class="bg-washi/5 backdrop-blur border-l-4 border-kohaku p-6 rounded-r-lg">
+          <p class="font-mincho text-washi/90 text-base leading-relaxed mb-3 italic">
+            "I had to retype my whole prompt every time I wanted to swap one place."
+          </p>
+          <p class="text-[11px] text-ochre tracking-wider font-display">
+            — r/travel · 18% 共鳴(無法局部修改)
+          </p>
+        </blockquote>
+
+        <blockquote class="bg-washi/5 backdrop-blur border-l-4 border-vermillion p-6 rounded-r-lg">
+          <p class="font-mincho text-washi/90 text-base leading-relaxed mb-3 italic">
+            "Some blog says go in spring, another says fall — what do I believe?"
+          </p>
+          <p class="text-[11px] text-ochre tracking-wider font-display">
+            — r/JapanTravel · 11% 共鳴(資訊衝突難辨)
+          </p>
+        </blockquote>
+
+        <blockquote class="bg-washi/5 backdrop-blur border-l-4 border-ochre p-6 rounded-r-lg">
+          <p class="font-mincho text-washi/90 text-base leading-relaxed mb-3 italic">
+            "AI scheduled Tokyo and Hakone in the same morning. Lol."
+          </p>
+          <p class="text-[11px] text-ochre tracking-wider font-display">
+            — r/JapanTravel · 7% 共鳴(動線不合理)
+          </p>
+        </blockquote>
+
+        <blockquote class="bg-washi/5 backdrop-blur border-l-4 border-kohaku p-6 rounded-r-lg">
+          <p class="font-mincho text-washi/90 text-base leading-relaxed mb-3 italic">
+            "Every list is identical. Where do locals actually go?"
+          </p>
+          <p class="text-[11px] text-ochre tracking-wider font-display">
+            — r/travel · 3% 共鳴(長尾景點被埋沒)
+          </p>
+        </blockquote>
+
+      </div>
+
+      <p class="text-center text-washi/40 text-xs mt-12 font-mincho italic">
+        前三大痛點(73%)的本質:<span class="text-ochre">使用者對 AI 推薦失去信任,因為看不到理由,也無法保有控制權。</span>
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ==================================================================== -->
+  <!-- ⑥.65 BREATH · 三個關鍵數字(節奏緩衝)                                    -->
+  <!-- ==================================================================== -->
+  <section class="relative bg-prussian-night washi-texture py-40 px-6 overflow-hidden">
+
+    <!-- 微妙裝飾:淡的雲紋 -->
+    <svg aria-hidden="true" focusable="false" class="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] opacity-[0.04]" viewBox="0 0 600 100">
+      <path d="M0,50 Q150,20 300,50 T600,50" stroke="#F5EFE3" stroke-width="1" fill="none"/>
+    </svg>
+
+    <div class="max-w-5xl mx-auto reveal text-center">
+      <p class="text-[10px] tracking-[0.6em] uppercase text-ochre/70 mb-16 font-display">
+        — 5 週,我們做到了 —
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-6">
+
+        <!-- 數字 1: 5 週 -->
+        <div class="flex flex-col items-center">
+          <div class="flex items-baseline gap-1 mb-3">
+            <span class="font-mincho text-7xl md:text-9xl text-washi font-black leading-none tracking-tighter" style="font-weight: 800; letter-spacing: -0.04em;">5</span>
+            <span class="font-mincho text-xl text-ochre tracking-wider">週</span>
+          </div>
+          <p class="font-mincho text-sm text-washi/60 tracking-wider leading-relaxed max-w-[200px]">
+            從 wireframe<br/>
+            到 v0 整合
+          </p>
+        </div>
+
+        <!-- 數字 2: 6 個人 -->
+        <div class="flex flex-col items-center md:border-l md:border-r md:border-washi/10 md:px-6">
+          <div class="flex items-baseline gap-1 mb-3">
+            <span class="font-mincho text-7xl md:text-9xl text-washi font-black leading-none tracking-tighter" style="font-weight: 800; letter-spacing: -0.04em;">6</span>
+            <span class="font-mincho text-xl text-ochre tracking-wider">人</span>
+          </div>
+          <p class="font-mincho text-sm text-washi/60 tracking-wider leading-relaxed max-w-[200px]">
+            5 個科系 ·<br/>
+            原本彼此不熟
+          </p>
+        </div>
+
+        <!-- 數字 3: 30 萬 -->
+        <div class="flex flex-col items-center">
+          <div class="flex items-baseline gap-1 mb-3">
+            <span class="font-mincho text-7xl md:text-9xl text-washi font-black leading-none tracking-tighter" style="font-weight: 800; letter-spacing: -0.04em;">300K+</span>
+          </div>
+          <p class="font-mincho text-sm text-washi/60 tracking-wider leading-relaxed max-w-[220px]">
+            日本觀光資料<br/>
+            108K 景點 · 190K 餐廳
+          </p>
+        </div>
+
+      </div>
+
+      <p class="font-mincho text-base md:text-lg italic text-washi/50 mt-20 max-w-2xl mx-auto leading-loose">
+        「不是一個人撐起來,而是六個人各推一段,中間用 AI 對齊。」
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ==================================================================== -->
+  <!-- ⑥.7 TEAM · 6 個人 + AI 怎麼一起做出 Occupath                            -->
+  <!-- ==================================================================== -->
+  <section class="relative bg-washi washi-texture py-32 px-6 overflow-hidden">
+
+    <div class="max-w-4xl mx-auto reveal">
+      <p class="text-xs tracking-[0.4em] uppercase text-vermillion mb-3 text-center font-display">
+        Behind Occupath
+      </p>
+      <h2 class="font-display text-3xl md:text-5xl text-prussian-deep text-center mb-4 leading-tight">
+        Occupath 是 6 個人 + AI 一起做的。
+      </h2>
+      <p class="font-mincho text-sm md:text-base text-sumi/70 text-center mb-16 max-w-2xl mx-auto leading-loose">
+        我們是來自台大 / 台科大 5 個科系的學生,5 週前彼此還不熟。<br/>
+        每個人在自己的 GitHub branch 上推進,直到 5/15 才整合成一個產品。
+      </p>
+
+      <!-- 6 人卡片 grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-16">
+
+        <!-- Daniel -->
+        <div class="bg-white/60 backdrop-blur p-5 rounded-lg border border-prussian/8 hover:border-vermillion/40 transition-colors duration-300">
+          <div class="flex items-baseline gap-2 mb-2">
+            <h3 class="font-mincho text-prussian-deep text-lg font-bold">周珥豪 Daniel</h3>
+            <span class="text-[10px] text-mist tracking-wider">資工碩一 · 台科大</span>
+          </div>
+          <p class="text-[11px] text-vermillion font-display tracking-wider uppercase mb-2">資料工程 · Daniel branch</p>
+          <p class="font-mincho text-sm text-sumi-warm leading-relaxed">
+            5/13 爬出 108K 景點(8 大類);5/15 又補上 19 萬筆日本餐廳。Occupath 真實數據的源頭。
+          </p>
+        </div>
+
+        <!-- 李冠霖 -->
+        <div class="bg-white/60 backdrop-blur p-5 rounded-lg border border-prussian/8 hover:border-vermillion/40 transition-colors duration-300">
+          <div class="flex items-baseline gap-2 mb-2">
+            <h3 class="font-mincho text-prussian-deep text-lg font-bold">李冠霖</h3>
+            <span class="text-[10px] text-mist tracking-wider">資工二 · 台大</span>
+          </div>
+          <p class="text-[11px] text-vermillion font-display tracking-wider uppercase mb-2">資料平台 · Gary branch</p>
+          <p class="font-mincho text-sm text-sumi-warm leading-relaxed">
+            Django + DRF 寫 9 個 endpoint(POI + 餐廳 + 座標推薦);定義 4 因子評分公式;5/17 加入座標過濾,排除誤抓的台灣資料。
+          </p>
+        </div>
+
+        <!-- Wen -->
+        <div class="bg-white/60 backdrop-blur p-5 rounded-lg border border-prussian/8 hover:border-vermillion/40 transition-colors duration-300">
+          <div class="flex items-baseline gap-2 mb-2">
+            <h3 class="font-mincho text-prussian-deep text-lg font-bold">溫晨楷 Wen</h3>
+            <span class="text-[10px] text-mist tracking-wider">電信碩一 · 台大</span>
+          </div>
+          <p class="text-[11px] text-vermillion font-display tracking-wider uppercase mb-2">LLM 服務 · wen branch</p>
+          <p class="font-mincho text-sm text-sumi-warm leading-relaxed">
+            FastAPI + Gemini 1.5 Flash JSON mode,讓使用者的偏好變成有溫度的行程。5/18 升 ver8:多城市、餐廳、地名正則化。
+          </p>
+        </div>
+
+        <!-- Austin -->
+        <div class="bg-white/60 backdrop-blur p-5 rounded-lg border border-prussian/8 hover:border-vermillion/40 transition-colors duration-300">
+          <div class="flex items-baseline gap-2 mb-2">
+            <h3 class="font-mincho text-prussian-deep text-lg font-bold">顏伯亨 Austin</h3>
+            <span class="text-[10px] text-mist tracking-wider">機械碩一 · 台大</span>
+          </div>
+          <p class="text-[11px] text-vermillion font-display tracking-wider uppercase mb-2">RAG + 全棧 · Austin fork</p>
+          <p class="font-mincho text-sm text-sumi-warm leading-relaxed">
+            ChromaDB + Ollama 向量庫,把使用者貼的攻略文字轉成可用景點。5/18 加入日文標準化 + RAGAS 評估資料集。
+          </p>
+        </div>
+
+        <!-- Apple -->
+        <div class="bg-white/60 backdrop-blur p-5 rounded-lg border border-prussian/8 hover:border-vermillion/40 transition-colors duration-300">
+          <div class="flex items-baseline gap-2 mb-2">
+            <h3 class="font-mincho text-prussian-deep text-lg font-bold">王孟蘋 Apple</h3>
+            <span class="text-[10px] text-mist tracking-wider">資管碩一 · 台科大</span>
+          </div>
+          <p class="text-[11px] text-vermillion font-display tracking-wider uppercase mb-2">前端 UI · Apple branch</p>
+          <p class="font-mincho text-sm text-sumi-warm leading-relaxed">
+            HomePage / ItineraryPage / ChatBox / MapPage 一手包辦;早期分析 1,141 篇 Reddit 痛點 + 3 Persona,是產品需求的源頭。
+          </p>
+        </div>
+
+        <!-- Ray -->
+        <div class="bg-white/60 backdrop-blur p-5 rounded-lg border border-prussian/8 hover:border-vermillion/40 transition-colors duration-300">
+          <div class="flex items-baseline gap-2 mb-2">
+            <h3 class="font-mincho text-prussian-deep text-lg font-bold">周宜學 Ray</h3>
+            <span class="text-[10px] text-mist tracking-wider">醫材所碩一 · 台大</span>
+          </div>
+          <p class="text-[11px] text-vermillion font-display tracking-wider uppercase mb-2">PM + 整合 + 品牌 · ray branch</p>
+          <p class="font-mincho text-sm text-sumi-warm leading-relaxed">
+            負責治理與串接 — 整合層(5 個 branch 串通)+ 品牌站 + MBTI 入口流程 + 全部文件。讓彼此不熟的 5 個人匯流成一個產品。
+          </p>
+        </div>
+
+      </div>
+
+      <!-- 我們的協作觀點 -->
+      <div class="max-w-3xl mx-auto">
+        <p class="font-mincho text-base md:text-lg text-prussian-deep leading-loose mb-6">
+          5 週前,我們是 6 個從沒一起做過專案的學生。沒有 standup、沒有 sprint planning、沒有 Jira。
+        </p>
+        <p class="font-mincho text-base md:text-lg text-prussian-deep leading-loose mb-6">
+          我們用的是 <span class="font-bold text-vermillion">GitHub branch + LINE 群組 + 每週一次的對齊會議</span> — 加上每個人手上的 AI 工具(Claude / Cursor / Copilot / Gemini)。Daniel 用 AI 寫爬蟲,李冠霖用 AI 寫 Django,Wen 用 AI 串 Gemini,Austin 用 AI 寫 RAG,Apple 用 AI 寫 React,Ray 用 AI 寫整合層 + 文件 + 品牌。
+        </p>
+        <p class="font-mincho text-base md:text-lg text-prussian-deep leading-loose mb-6">
+          AI 不是替代我們任何一個人,而是讓<span class="font-bold">每個人能用同樣的時間做平常 5-10 倍的事</span>。最後拼起來就是這個產品。
+        </p>
+        <p class="font-mincho text-base md:text-lg italic text-sumi/70 border-l-4 border-ochre pl-6 my-8">
+          我們相信,未來 5 年最有意義的不是「最會用 AI 的個人」,而是「能讓 AI 把不同專業的人串起來的小團隊」。<br/>
+          這份協作模式,本身就是 Occupath 的證明。
+        </p>
+        <p class="font-mincho text-sm text-sumi-warm leading-loose">
+          完整協作歷程 + 個人貢獻記錄,可在我們的 GitHub 上驗證:
+          <a href="https://github.com/Danielchou0611/Travel-the-world" target="_blank" rel="noopener" class="text-vermillion hover:underline">github.com/Danielchou0611/Travel-the-world</a>
+        </p>
+        <p class="text-sm text-mist mt-12 leading-relaxed">
+          ──<br/>
+          Occupath 團隊 · 2026 NTU AI Builders Challenge · O 組<br/>
+          <a href="mailto:garylabclaude@gmail.com" class="text-vermillion hover:underline">garylabclaude@gmail.com</a>(對外聯繫:Ray)
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================================================================== -->
+  <!-- ⑥.8 SUBSCRIBE · Email capture(Build in Public)                       -->
+  <!-- ==================================================================== -->
+  <section class="relative bg-washi-warm washi-texture py-24 px-6 overflow-hidden border-t border-ochre/20">
+
+    <div class="max-w-2xl mx-auto text-center reveal">
+      <p class="text-xs tracking-[0.4em] uppercase text-vermillion mb-3 font-display">
+        Build in Public
+      </p>
+      <h2 class="font-display text-3xl md:text-4xl text-prussian-deep mb-4 leading-tight">
+        每週一封,看 Solo Founder 怎麼用 AI 做產品。
+      </h2>
+      <p class="font-mincho text-sm text-sumi/70 mb-8 leading-loose">
+        不灌雞湯、不教 prompt。<br/>
+        只給 changelog:這週做了什麼、學到什麼、下週要試什麼。
+      </p>
+
+      <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" aria-label="訂閱 Occupath 每週開發 changelog" onsubmit="event.preventDefault(); alert('感謝!email capture 將於 W9 接上 Plausible + Buttondown / Substack 後啟用');">
+        <label for="newsletter-email" class="sr-only">Email 訂閱地址</label>
+        <input id="newsletter-email" name="email" type="email" required autocomplete="email" placeholder="your@email.com"
+               aria-required="true"
+               class="flex-1 px-4 py-3 bg-washi border border-prussian/20 rounded text-prussian-deep text-sm font-mincho focus:outline-none focus:border-vermillion focus:ring-2 focus:ring-vermillion/30 transition"/>
+        <button type="submit"
+                class="bg-prussian text-washi px-6 py-3 rounded text-xs tracking-[0.3em] uppercase font-display hover:bg-vermillion focus:outline-none focus:ring-2 focus:ring-ochre/60 transition-colors duration-300">
+          訂閱 Changelog
+        </button>
+      </form>
+
+      <p class="text-[10px] text-mist mt-4 tracking-wider">
+        no spam · unsubscribe anytime · ~50 個 early subscriber 將獲 v1.0 Pro 終身 50% 折扣
+      </p>
     </div>
   </section>
 

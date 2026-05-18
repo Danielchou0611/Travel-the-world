@@ -1,0 +1,21 @@
+{
+  "name": "Occupath · 日本自由行 AI 規劃",
+  "short_name": "Occupath",
+  "description": "看得見每個推薦理由的日本自由行 AI 規劃工具",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F4EEE2",
+  "theme_color": "#091A2B",
+  "orientation": "portrait",
+  "lang": "zh-Hant",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["travel", "lifestyle", "productivity"]
+}
