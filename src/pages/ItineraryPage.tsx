@@ -301,7 +301,7 @@ export default function ItineraryPage() {
         backLabel="返回"
         backPath="/"
         rightActions={
-          <div style={{ display: 'flex', gap: 8 }}>
+          <div className="nav-right-actions" style={{ display: 'flex', gap: 8 }}>
             {isEditing ? (
               <>
                 <button
@@ -355,7 +355,7 @@ export default function ItineraryPage() {
         </div>
       )}
 
-      <div style={{ flex: 1, padding: '32px 48px 160px', maxWidth: 1200, margin: '0 auto', width: '100%' }}>
+      <div className="itinerary-main">
 
         {/* Show loading or error if trip data is not ready */}
         {!trip?.preferences?.days || trip.days?.length === 0 ? (
@@ -391,7 +391,7 @@ export default function ItineraryPage() {
           )}
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16, marginBottom: 32 }}>
+        <div className="stat-grid">
           {[
             { label: '設定天數', value: `${trip.summary.totalDays} 天`, icon: <IconCalendar /> },
             { label: '估計費用', value: trip.summary.totalBudget, icon: <IconYen /> },
@@ -447,10 +447,10 @@ export default function ItineraryPage() {
           </div>
         )}
 
-        <div style={{ display: 'flex', gap: 32, alignItems: 'flex-start' }}>
+        <div className="itinerary-layout">
 
           {/* Left: Days */}
-          <div style={{ width: 120, flexShrink: 0, display: 'flex', flexDirection: 'column', gap: 8, position: 'sticky', top: 90 }}>
+          <div className="day-tabs-container">
             {trip.days.map((day, i) => (
               <div
                 key={i}

@@ -437,17 +437,10 @@ export default function MapPage() {
         }
       />
 
-      <div style={{ flex: 1, display: 'flex', overflow: 'hidden' }}>
+      <div className="map-layout">
 
         {/* ── Sidebar ── */}
-        <div style={{
-          width: 360,
-          borderRight: '1px solid var(--color-border)',
-          display: 'flex',
-          flexDirection: 'column',
-          flexShrink: 0,
-          background: '#FAFAF8',
-        }}>
+        <div className="map-sidebar">
 
           {/* Day tabs */}
           <div style={{

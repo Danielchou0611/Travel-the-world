@@ -177,7 +177,7 @@ export default function HomePage() {
     <div className="bg-hero" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
 
       {/* Navbar Minimal */}
-      <nav className="homepage-nav" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 48px', borderBottom: '1px solid rgba(0,0,0,0.05)', background: 'transparent' }}>
+      <nav className="homepage-nav">
         <div style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }} onClick={() => setViewState('initial')}>
           <img src={occupathLogo} alt="Occupath Logo" style={{ height: 50, width: 'auto', objectFit: 'contain', margin: '-4px 0' }} />
         </div>
@@ -187,22 +187,22 @@ export default function HomePage() {
       </nav>
 
       {/* Main Container */}
-      <div className="homepage-main" style={{ display: 'flex', flex: 1, gap: 48, padding: viewState === 'form' ? '24px 48px 48px' : '48px', maxWidth: 1200, margin: '0 auto', width: '100%', alignItems: 'flex-start' }}>
+      <div className={`homepage-main ${viewState === 'form' ? 'form-view' : ''}`}>
 
         {/* ─── Left: Form ─── */}
-        <div className="homepage-left" style={{ flex: 1, maxWidth: viewState === 'form' ? 560 : 760, display: 'flex', flexDirection: 'column', gap: 24, marginTop: viewState === 'form' ? 0 : 60, transition: 'max-width 0.3s' }}>
+        <div className={`homepage-left ${viewState === 'form' ? 'form-view' : ''}`}>
 
           {viewState !== 'form' && (
-            <div className="animate-fade-up" style={{ display: 'flex', gap: 32, alignItems: 'flex-start', marginLeft: -80 }}>
+            <div className="animate-fade-up hero-content">
 
               {/* Left Column: Icon */}
               <img src={occupathIcon} alt="Occupath Icon" style={{ width: 180, height: 180, objectFit: 'contain', flexShrink: 0 }} />
 
               {/* Right Column: Text and Actions */}
-              <div style={{ display: 'flex', flexDirection: 'column' }}>
+              <div className="hero-text-container">
 
                 {/* Logo alignment block: exactly matches the height of the icon (180px) */}
-                <div style={{ height: 180, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', paddingBottom: 8 }}>
+                <div className="hero-logo">
                   <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 72, fontWeight: 400, color: 'var(--color-primary-dark)', margin: 0, lineHeight: 1, letterSpacing: '-0.02em', paddingTop: 32 }}>
                     Occupath
                   </h1>
@@ -230,13 +230,6 @@ export default function HomePage() {
                     className="animate-fade-up"
                     style={{
                       marginTop: 40,
-                      background: 'var(--color-accent)',
-                      color: 'white',
-                      border: 'none',
-                      borderRadius: 6,
-                      padding: '14px 28px',
-                      fontSize: 16,
-                      fontWeight: 500,
                       cursor: 'pointer',
                       display: 'flex',
                       alignItems: 'center',
@@ -254,7 +247,7 @@ export default function HomePage() {
                 )}
 
                 {viewState === 'personality' && (
-                  <div className="animate-fade-up" style={{ marginTop: 40, display: 'flex', gap: 16 }}>
+                  <div className="animate-fade-up personality-btns">
                     <button
                       onClick={() => setViewState('form')}
                       className="glass-card"
@@ -454,7 +447,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Days & Budget */}
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
+                <div className="form-grid">
                   <div>
                     <label className="form-label">旅遊天數 <span style={{ color: 'var(--color-accent)' }}>*</span></label>
                     <div style={{ position: 'relative' }}>
@@ -534,7 +527,7 @@ export default function HomePage() {
                 {/* Interests */}
                 <div>
                   <label className="form-label mb-3">興趣偏好 <span style={{ color: 'var(--color-accent)' }}>*</span></label>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 10 }}>
+                  <div className="interest-grid">
                     {INTERESTS.map(item => (
                       <div
                         key={item.key}

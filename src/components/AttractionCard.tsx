@@ -175,16 +175,16 @@ export default function AttractionCard({
         </button>
       )}
 
-      <div style={{ display: 'flex' }}>
+      <div className="attraction-card-inner">
 
         {/* ── Image side ──────────────────────────────────────── */}
-        <div style={{ width: 200, flexShrink: 0, position: 'relative', overflow: 'hidden', borderRight: '1px solid var(--color-border)', backgroundColor: 'var(--color-surface)', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 200 }}>
+        <div className="attraction-card-img">
           {attraction.image && !imgError ? (
             <img
               src={attraction.image}
               alt={attraction.name}
               onError={() => setImgError(true)}
-              style={{ width: '100%', height: '100%', minHeight: 200, objectFit: 'cover', display: 'block', position: 'absolute', inset: 0 }}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', position: 'absolute', inset: 0 }}
             />
           ) : (
             <div style={{ color: 'var(--color-text-muted)', fontSize: 14, fontFamily: 'var(--font-serif)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
@@ -212,7 +212,7 @@ export default function AttractionCard({
         </div>
 
         {/* ── Content side ────────────────────────────────────── */}
-        <div style={{ flex: 1, minWidth: 0, padding: '24px', display: 'flex', flexDirection: 'column', gap: 16 }}>
+        <div className="attraction-card-content">
           <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
             <div>
               <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 18, fontWeight: 600, color: 'var(--color-text)', margin: 0, marginBottom: 4 }}>{attraction.name}</h3>
@@ -248,17 +248,7 @@ export default function AttractionCard({
 
         {/* ── Drag handle strip — right side ──────────────────── */}
         {isEditing && (
-          <div style={{
-            width: 36,
-            flexShrink: 0,
-            borderLeft: '1px solid var(--color-border)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            cursor: 'grab',
-            background: '#FAFAF9',
-            borderRadius: '0 12px 12px 0',
-          }}>
+          <div className="attraction-drag-handle">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B3B1AC" strokeWidth="2.5" strokeLinecap="round">
               <line x1="6" y1="8" x2="18" y2="8" />
               <line x1="6" y1="13" x2="18" y2="13" />

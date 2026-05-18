@@ -13,20 +13,7 @@ export default function Navbar({ showBack, backLabel = '返回', backPath = '/',
   const navigate = useNavigate();
 
   return (
-    <nav
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: '12px 48px',
-        borderBottom: '1px solid var(--color-border)',
-        background: 'var(--color-surface)',
-        position: 'sticky',
-        top: 0,
-        zIndex: 50,
-        flexShrink: 0,
-      }}
-    >
+    <nav className="page-navbar">
       <div
         onClick={() => navigate('/')}
         style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}
