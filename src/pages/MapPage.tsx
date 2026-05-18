@@ -350,26 +350,20 @@ export default function MapPage() {
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY ?? '',
   });
 
-  const onLoad = useCallback((map: google.maps.Map) => { mapRef.current = map; }, []);
-  const onUnmount = useCallback(() => { mapRef.current = null; }, []);
-
   const dayAttractions = trip.days[activeDay]?.attractions ?? [];
   const dayCenter = getDayCenter(dayAttractions, activeDay);
 
-  // When day changes, frame the whole day on the map and reset selection
-  useEffect(() => {
-    setSelectedAttraction(null);
-
-    const map = mapRef.current;
-    if (!isLoaded || !map) return;
+  const applyDayViewport = useCallback((map?: google.maps.Map | null) => {
+    const targetMap = map ?? mapRef.current;
+    if (!isLoaded || !targetMap) return;
 
     const coords = getDayCoordinates(dayAttractions);
     if (coords.length === 0) {
       const center = DAY_CENTERS[activeDay] ?? dayCenter;
       setMapCenter(center);
       setMapZoom(13);
-      map.panTo(center);
-      map.setZoom(13);
+      targetMap.panTo(center);
+      targetMap.setZoom(13);
       return;
     }
 
@@ -377,18 +371,18 @@ export default function MapPage() {
       const center = coords[0];
       setMapCenter(center);
       setMapZoom(16);
-      map.panTo(center);
-      map.setZoom(16);
+      targetMap.panTo(center);
+      targetMap.setZoom(16);
       return;
     }
 
     const bounds = new google.maps.LatLngBounds();
     coords.forEach(coord => bounds.extend(coord));
-    map.fitBounds(bounds, 72);
+    targetMap.fitBounds(bounds, 72);
 
-    const idleListener = google.maps.event.addListenerOnce(map, 'idle', () => {
-      const center = map.getCenter();
-      const zoom = map.getZoom();
+    const idleListener = google.maps.event.addListenerOnce(targetMap, 'idle', () => {
+      const center = targetMap.getCenter();
+      const zoom = targetMap.getZoom();
 
       if (center) {
         setMapCenter({ lat: center.lat(), lng: center.lng() });
@@ -401,7 +395,19 @@ export default function MapPage() {
     return () => {
       idleListener.remove();
     };
-  }, [activeDay, dayAttractions, isLoaded]);
+  }, [activeDay, dayAttractions, dayCenter, isLoaded]);
+
+  const onLoad = useCallback((map: google.maps.Map) => {
+    mapRef.current = map;
+    applyDayViewport(map);
+  }, [applyDayViewport]);
+  const onUnmount = useCallback(() => { mapRef.current = null; }, []);
+
+  // When day changes, frame the whole day on the map and reset selection
+  useEffect(() => {
+    setSelectedAttraction(null);
+    return applyDayViewport();
+  }, [activeDay, applyDayViewport]);
 
   // Scroll selected card into view
   useEffect(() => {

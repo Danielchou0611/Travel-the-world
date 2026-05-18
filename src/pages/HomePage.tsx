@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import type { TripPreferences, Interest } from '../types';
 import { generateTrip } from '../services/api';
@@ -18,16 +18,25 @@ const INTERESTS: { key: Interest; label: string; icon: React.ReactNode }[] = [
   { key: '自然', label: '自然', icon: <IconNature /> },
 ];
 
+const DESTINATION_OPTIONS = [
+  '東京',
+  '大阪',
+  '京都',
+  '北海道',
+  '札幌',
+  '福岡',
+  '沖繩',
+  '名古屋',
+  '橫濱',
+  '神戶',
+  '奈良',
+  '廣島',
+  '仙台',
+  '金澤',
+  '箱根',
+];
 
 
-// Reusable icons for features/stats
-const IconDatabase = () => <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" /><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" /></svg>;
-const IconReviews = () => <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>;
-const IconXAI = () => <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 3a9 9 0 0 0-9 9 9 9 0 0 0 9 9 9 9 0 0 0 9-9 9 9 0 0 0-9-9z" /><path d="M12 8v8" /><path d="M8 12h8" /></svg>;
-const IconTarget = () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></svg>;
-const IconRefresh = () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8" /><path d="M21 3v5h-5" /></svg>;
-const IconBook = () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg>;
-const IconMap = () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21" /><line x1="9" y1="3" x2="9" y2="18" /><line x1="15" y1="6" x2="15" y2="21" /></svg>;
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -35,6 +44,8 @@ export default function HomePage() {
   const [days, setDays] = useState(7);
   const [budget, setBudget] = useState<number | ''>(30000);
   const [interests, setInterests] = useState<Interest[]>(['美食', '文化']);
+  const [destinationInput, setDestinationInput] = useState('');
+  const [destinations, setDestinations] = useState<string[]>([]);
   const [explorationStyle, setExplorationStyle] = useState(50);
   const [foodVsAttractions, setFoodVsAttractions] = useState(50);
   const [mustVisit, setMustVisit] = useState('');
@@ -43,6 +54,11 @@ export default function HomePage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [jpyRate, setJpyRate] = useState<number>(4.76);
+  const destinationInputRef = useRef<HTMLInputElement>(null);
+  const normalizedDestinationInput = destinationInput.trim();
+  const destinationSuggestions = normalizedDestinationInput
+    ? DESTINATION_OPTIONS.filter(option => option.includes(normalizedDestinationInput) && !destinations.includes(option))
+    : DESTINATION_OPTIONS.filter(option => !destinations.includes(option)).slice(0, 6);
 
   useEffect(() => {
     fetch('https://api.exchangerate-api.com/v4/latest/TWD')
@@ -63,9 +79,43 @@ export default function HomePage() {
     );
   };
 
+  const addDestination = (value: string) => {
+    const nextDestination = value.trim();
+    if (!nextDestination) return;
+
+    setDestinations(prev => (prev.includes(nextDestination) ? prev : [...prev, nextDestination]));
+    setDestinationInput('');
+    requestAnimationFrame(() => {
+      if (destinationInputRef.current) {
+        destinationInputRef.current.value = '';
+      }
+    });
+  };
+
+  const removeDestination = (value: string) => {
+    setDestinations(prev => prev.filter(destination => destination !== value));
+  };
+
+  const handleDestinationKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Backspace' && !destinationInput && destinations.length > 0) {
+      setDestinations(prev => prev.slice(0, -1));
+    }
+  };
+
+  const handleDestinationKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      addDestination(destinationSuggestions[0] ?? destinationInput);
+    }
+  };
+
   const handleSubmit = async () => {
     if (interests.length === 0) {
       setError('請至少選擇一個興趣偏好');
+      return;
+    }
+    if (destinations.length === 0) {
+      setError('請至少選擇一個想去的城市');
       return;
     }
     setError('');
@@ -75,6 +125,7 @@ export default function HomePage() {
       days,
       budget: Number(budget) || 0,
       interests,
+      destination: destinations,
       explorationStyle,
       foodVsAttractions,
       mustVisit,
@@ -106,7 +157,7 @@ export default function HomePage() {
     <div className="bg-hero" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
 
       {/* Navbar Minimal */}
-      <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 48px', borderBottom: '1px solid rgba(0,0,0,0.05)', background: 'transparent' }}>
+      <nav className="homepage-nav" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 48px', borderBottom: '1px solid rgba(0,0,0,0.05)', background: 'transparent' }}>
         <div style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }} onClick={() => setViewState('initial')}>
           <img src={occupathLogo} alt="Occupath Logo" style={{ height: 50, width: 'auto', objectFit: 'contain', margin: '-4px 0' }} />
         </div>
@@ -116,10 +167,10 @@ export default function HomePage() {
       </nav>
 
       {/* Main Container */}
-      <div style={{ display: 'flex', flex: 1, gap: 48, padding: viewState === 'form' ? '24px 48px 48px' : '48px', maxWidth: 1200, margin: '0 auto', width: '100%', alignItems: 'flex-start' }}>
+      <div className="homepage-main" style={{ display: 'flex', flex: 1, gap: 48, padding: viewState === 'form' ? '24px 48px 48px' : '48px', maxWidth: 1200, margin: '0 auto', width: '100%', alignItems: 'flex-start' }}>
 
         {/* ─── Left: Form ─── */}
-        <div style={{ flex: 1, maxWidth: viewState === 'form' ? 560 : 760, display: 'flex', flexDirection: 'column', gap: 24, marginTop: viewState === 'form' ? 0 : 60, transition: 'max-width 0.3s' }}>
+        <div className="homepage-left" style={{ flex: 1, maxWidth: viewState === 'form' ? 560 : 760, display: 'flex', flexDirection: 'column', gap: 24, marginTop: viewState === 'form' ? 0 : 60, transition: 'max-width 0.3s' }}>
 
           {viewState !== 'form' && (
             <div className="animate-fade-up" style={{ display: 'flex', gap: 32, alignItems: 'flex-start', marginLeft: -80 }}>
@@ -232,6 +283,106 @@ export default function HomePage() {
                 Back
               </button>
               <div className="glass-card" style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: 28 }}>
+
+                {/* Destination */}
+                <div>
+                  <label className="form-label">想去的城市</label>
+                  <div style={{ position: 'relative' }}>
+                    <div
+                      className="glass-input"
+                      style={{ minHeight: 46, display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 8, padding: '8px 12px' }}
+                    >
+                      {destinations.map(destination => (
+                        <span
+                          key={destination}
+                          style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: 6,
+                            padding: '6px 10px',
+                            borderRadius: 999,
+                            background: '#F6F1EC',
+                            color: 'var(--color-text)',
+                            fontSize: 12,
+                            fontWeight: 500,
+                          }}
+                        >
+                          {destination}
+                          <button
+                            type="button"
+                            onClick={() => removeDestination(destination)}
+                            style={{
+                              width: 16,
+                              height: 16,
+                              border: 'none',
+                              background: 'transparent',
+                              color: 'var(--color-text-muted)',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              cursor: 'pointer',
+                              padding: 0,
+                            }}
+                            aria-label={`刪除 ${destination}`}
+                          >
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M18 6 6 18" />
+                              <path d="m6 6 12 12" />
+                            </svg>
+                          </button>
+                        </span>
+                      ))}
+                      <input
+                        ref={destinationInputRef}
+                        type="text"
+                        value={destinationInput}
+                        onChange={e => setDestinationInput(e.target.value)}
+                        onKeyDown={handleDestinationKeyDown}
+                        onKeyUp={handleDestinationKeyUp}
+                        onFocus={() => setError('')}
+                        placeholder={destinations.length === 0 ? '輸入城市名稱，例如：東京' : '輸入更多城市'}
+                        className="destination-input"
+                        style={{
+                          border: 'none',
+                          outline: 'none',
+                          flex: 1,
+                          minWidth: 120,
+                          fontSize: 14,
+                          fontFamily: 'inherit',
+                          background: 'transparent',
+                          color: 'var(--color-text)',
+                        }}
+                      />
+                    </div>
+
+                    {destinationSuggestions.length > 0 && normalizedDestinationInput && (
+                      <div className="glass-card" style={{ position: 'absolute', top: 'calc(100% + 8px)', left: 0, right: 0, zIndex: 20, overflow: 'hidden' }}>
+                        {destinationSuggestions.map(option => (
+                          <button
+                            key={option}
+                            type="button"
+                            onClick={() => addDestination(option)}
+                            style={{
+                              width: '100%',
+                              textAlign: 'left',
+                              border: 'none',
+                              background: '#FFF',
+                              padding: '12px 14px',
+                              cursor: 'pointer',
+                              fontSize: 14,
+                              fontFamily: 'inherit',
+                              color: 'var(--color-text)',
+                              borderBottom: '1px solid var(--color-border)',
+                            }}
+                          >
+                            {option}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                </div>
 
                 {/* Days & Budget */}
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
@@ -428,7 +579,7 @@ export default function HomePage() {
                   disabled={loading}
                   style={{ marginTop: 8 }}
                 >
-                  {loading ? 'AI 行程規劃中...（可能需要1-3分鐘）' : '開始安排行程'}
+                  {loading ? 'AI 行程規劃中...（可能需要1-2分鐘）' : '開始安排行程'}
                 </button>
               </div>
             </div>
@@ -436,7 +587,7 @@ export default function HomePage() {
         </div>
 
         {/* ─── Right: Spacer ─── */}
-        <div style={{ flex: 1 }} />
+        <div className="homepage-right" style={{ flex: 1 }} />
       </div>
     </div>
   );

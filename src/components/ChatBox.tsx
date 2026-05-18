@@ -75,9 +75,7 @@ export default function ChatBox({ trip, setTrip }: ChatBoxProps) {
     setIsLoading(true);
 
     try {
-      // Note: Using hardcoded destination if not present. Should get from preferences ideally
-      // For Occupath, we assume "京都" or from trip.preferences if we had it
-      const destination = '京都'; // default or extract from somewhere
+      const destination = trip.preferences.destination?.join('、') || '京都';
 
       const updatedTrip = await modifyTrip(destination, trip, userText);
       setTrip(updatedTrip);

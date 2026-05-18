@@ -28,6 +28,7 @@ export const MOCK_TRIP: Trip = {
     days: 7,
     budget: 50000,
     interests: ['美食', '文化', '自然'],
+    destination: ['京都', '東京'],
     explorationStyle: 60,
     foodVsAttractions: 40,
     mustVisit: '清水寺',

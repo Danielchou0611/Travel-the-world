@@ -6,6 +6,7 @@ export interface TripPreferences {
   days: number;
   budget: number; // in TWD
   interests: Interest[];
+  destination: string[];
   explorationStyle: number; // 0=輕鬆 100=探索
   foodVsAttractions: number; // 0=美食優先 100=景點優先
   mustVisit: string;
