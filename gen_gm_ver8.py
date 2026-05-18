@@ -129,7 +129,7 @@ def retrieve_local_knowledge(destinations: list, required_count: int, user_prefs
                     return "資料庫連線異常。"
 
         if not top_places:
-            logger.warning(f"⚠️ Django API 完全沒有 {destination} 的資料！")
+            logger.warning(f"⚠️ Django API 完全沒有 {destinations} 的資料！")
             return "目前資料庫無該地區的景點資料。"
             
         # 轉為文字 Context
@@ -384,7 +384,7 @@ itinerary_schema = {
                                 "id": {"type": "string", "description": "唯一編號，如 'a01'"},
                                 "name": {"type": "string"},
                                 "image": {"type": "string", "description": "景點圖片的 URL 網址"},
-                                "category": {"type": "string", "enum": ["景點", "美食", "購物", "住宿"]},
+                                "category": {"type": "string", "enum": ["文化", "美食", "購物", "自然"]},
                                 "description": {"type": "string", "description": "詳細介紹景點"},
                                 "duration": {"type": "string", "description": "預計停留時間，如 '2–3 小時'"},
                                 "estimatedCost": {"type": "string", "description": "預計花費，如 '免費' 或 '¥2,000'"},

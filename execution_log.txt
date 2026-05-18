@@ -146,3 +146,20 @@
 2026-05-18 01:02:10,883 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
 2026-05-18 01:02:10,886 - INFO - ✅ 行程修改成功！
 2026-05-18 01:02:10,886 - INFO - 🎉 行程修改成功！(寫入 updated_itinerary.json)
+2026-05-18 16:08:37,516 - INFO - === 階段 1：模擬前端首次請求行程 ===
+2026-05-18 16:08:39,542 - ERROR - 與 Django API 連線失敗！請確認組員的伺服器有開啟: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/pois/?region=%E5%A4%A7%E9%98%AA%E5%BA%9C&page_size=50&ordering=-google_rating (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [WinError 10061] 無法連線，因為目標電腦拒絕連線。"))
+2026-05-18 16:09:13,203 - INFO - === 階段 1：模擬前端首次請求行程 ===
+2026-05-18 16:09:13,266 - INFO - 🔍 API 檢索成功：使用最低星等 4.2，找到 20 個候選景點
+2026-05-18 16:09:13,311 - INFO - 🔍 API 檢索成功：使用最低星等 4.2，找到 20 個候選景點
+2026-05-18 16:09:34,433 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-18 16:09:34,437 - INFO - ✅ 成功生成符合前端格式的 Trip 物件
+2026-05-18 16:09:34,439 - INFO - 🎉 初版行程生成成功！(寫入 initial_itinerary.json)
+2026-05-18 16:09:34,452 - INFO - 
+=== 階段 2：模擬使用者在聊天室提出修改 ===
+2026-05-18 16:09:34,452 - INFO - 使用者輸入: 我覺得人潮眾多的地方太多了，能不能把其中一個景點換成可以看海或是遠離喧囂爬山的地方？
+2026-05-18 16:09:34,453 - INFO - 💬 收到使用者的修改需求: 我覺得人潮眾多的地方太多了，能不能把其中一個景點換成可以看海或是遠離喧囂爬山的地方？
+2026-05-18 16:09:34,506 - INFO - 🔍 API 檢索成功：使用最低星等 4.2，找到 20 個候選景點
+2026-05-18 16:09:34,547 - INFO - 🔍 API 檢索成功：使用最低星等 4.2，找到 20 個候選景點
+2026-05-18 16:10:02,375 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-18 16:10:02,378 - INFO - ✅ 行程修改成功！
+2026-05-18 16:10:02,378 - INFO - 🎉 行程修改成功！(寫入 updated_itinerary.json)
