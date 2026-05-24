@@ -167,6 +167,7 @@ class ExtractRequest(BaseModel):
     query: str = Field(default="請列出文章中的旅遊景點名稱")
     top_k: int = Field(default=4, ge=1, le=200)
     reset_db: bool = False
+    require_poi_match: bool = False
     debug: bool = True
 
 
@@ -1646,40 +1647,24 @@ def build_spots_payload(result: dict[str, Any], spot_names: list[str]) -> list[d
     return spots
 
 
-# FastAPI app 主體：提供健康檢查與 RAG 景點抽取 endpoint。
-app = FastAPI(title="Japan Travel RAG API", version="0.1.0")
-
-# CORS 設定：允許本機 Vite dev server 與 preview server 呼叫 API。
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-        "http://localhost:4173",
-        "http://127.0.0.1:4173",
-    ],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+def is_poi_matched_spot(spot: dict[str, Any]) -> bool:
+    """判斷景點是否已在 POI 或餐廳資料庫中找到可用資料。"""
+    return bool(spot.get("poiMatch", {}).get("matched"))
 
 
-@app.get("/health")
-def health() -> dict[str, Any]:
-    """健康檢查 endpoint，回報 Ollama 是否可用與本機模型清單。"""
-    ollama_models = list_ollama_models()
-    return {
-        "status": "ok",
-        "provider": "ollama",
-        "ollama_base_url": OLLAMA_BASE_URL,
-        "ollama_ready": bool(ollama_models),
-        "ollama_models": ollama_models,
-    }
+def extract_returned_spot_names(spots: list[dict[str, Any]]) -> list[str]:
+    """從 spots payload 取出前端應顯示的景點名稱，保留原順序並去重。"""
+    return dedupe_keep_order(
+        [
+            str(spot.get("extracted_name") or spot.get("name") or "").strip()
+            for spot in spots
+            if str(spot.get("extracted_name") or spot.get("name") or "").strip()
+        ]
+    )
 
 
-@app.post("/api/rag/extract")
-def extract_spots(payload: ExtractRequest) -> dict[str, Any]:
-    """RAG 抽取主 endpoint：接受文字或 URL，回傳景點、POI 補強資料與 debug 指標。"""
+def run_rag_spot_name_extraction(payload: ExtractRequest) -> dict[str, Any]:
+    """執行文字/URL 讀取、RAG 抽取與景點名稱清理，回傳共用中間結果。"""
     text = payload.text.strip()
     url = payload.url.strip()
     input_source = "text"
@@ -1717,15 +1702,92 @@ def extract_spots(payload: ExtractRequest) -> dict[str, Any]:
         spot_names = dedupe_keep_order(extract_names_with_fallback(" ".join(result.get("retrieved_chunks") or [])))
     spot_names, spot_clean_debug = clean_spot_names_with_debug(spot_names)
 
-    # 將乾淨的景點名稱補上 POI/餐廳資料，並建立行程分組。
+    return {
+        "text": text,
+        "url": url,
+        "input_source": input_source,
+        "effective_top_k": effective_top_k,
+        "read_full_document": read_full_document,
+        "result": result,
+        "spot_names": spot_names,
+        "spot_clean_debug": spot_clean_debug,
+    }
+
+
+# FastAPI app 主體：提供健康檢查與 RAG 景點抽取 endpoint。
+app = FastAPI(title="Japan Travel RAG API", version="0.1.0")
+
+# CORS 設定：允許本機 Vite dev server 與 preview server 呼叫 API。
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "http://localhost:4173",
+        "http://127.0.0.1:4173",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+@app.get("/health")
+def health() -> dict[str, Any]:
+    """健康檢查 endpoint，回報 Ollama 是否可用與本機模型清單。"""
+    ollama_models = list_ollama_models()
+    return {
+        "status": "ok",
+        "provider": "ollama",
+        "ollama_base_url": OLLAMA_BASE_URL,
+        "ollama_ready": bool(ollama_models),
+        "ollama_models": ollama_models,
+    }
+
+
+@app.post("/api/rag/extract/spot-names")
+def extract_spot_names(payload: ExtractRequest) -> dict[str, list[str]]:
+    """精簡版 RAG endpoint：只回傳景點名稱清單，供外部服務呼叫。"""
+    extraction = run_rag_spot_name_extraction(payload)
+    spot_names = extraction["spot_names"]
+
+    if payload.require_poi_match:
+        spots = build_spots_payload(extraction["result"], spot_names)
+        spot_names = extract_returned_spot_names([spot for spot in spots if is_poi_matched_spot(spot)])
+
+    return {"spot_names": spot_names}
+
+
+@app.post("/api/rag/extract")
+def extract_spots(payload: ExtractRequest) -> dict[str, Any]:
+    """RAG 抽取主 endpoint：接受文字或 URL，回傳景點、POI 補強資料與 debug 指標。"""
+    extraction = run_rag_spot_name_extraction(payload)
+    text = extraction["text"]
+    url = extraction["url"]
+    input_source = extraction["input_source"]
+    effective_top_k = extraction["effective_top_k"]
+    read_full_document = extraction["read_full_document"]
+    result = extraction["result"]
+    spot_names = extraction["spot_names"]
+    spot_clean_debug = extraction["spot_clean_debug"]
+
+    # 將乾淨的景點名稱補上 POI/餐廳資料，再依需求濾掉未命中的 RAG-only 景點。
     spots = build_spots_payload(result, spot_names)
-    matched_count = sum(1 for spot in spots if spot.get("poiMatch", {}).get("matched"))
+    all_spots_count = len(spots)
+    matched_count = sum(1 for spot in spots if is_poi_matched_spot(spot))
     restaurant_matched_count = sum(1 for spot in spots if spot.get("restaurantMatch", {}).get("matched"))
     poi_matched_count = sum(
         1
         for spot in spots
-        if spot.get("poiMatch", {}).get("matched") and spot.get("matchSourceType") != "restaurant"
+        if is_poi_matched_spot(spot) and spot.get("matchSourceType") != "restaurant"
     )
+    unmatched_spot_names = extract_returned_spot_names([spot for spot in spots if not is_poi_matched_spot(spot)])
+
+    if payload.require_poi_match:
+        spots = [spot for spot in spots if is_poi_matched_spot(spot)]
+        spot_names = extract_returned_spot_names(spots)
+
+    # 建立行程分組；若 require_poi_match=true，分組只會保留資料庫命中的景點。
     itinerary_groups, group_debug = build_itinerary_groups_with_debug(result, spot_names)
 
     # debug_metrics 給前端或開發者觀察 RAG、清理、POI 匹配與分組效果。
@@ -1739,10 +1801,13 @@ def extract_spots(payload: ExtractRequest) -> dict[str, Any]:
         "spot_clean_count": spot_clean_debug.get("clean_count", 0),
         "spot_dropped_count": spot_clean_debug.get("dropped_count", 0),
         "poi_api_base_url": POI_API_BASE_URL,
+        "require_poi_match": payload.require_poi_match,
+        "all_spots_count": all_spots_count,
+        "returned_spots_count": len(spots),
         "matched_count": matched_count,
         "poi_matched_count": poi_matched_count,
         "restaurant_matched_count": restaurant_matched_count,
-        "lookup_unmatched_count": max(0, len(spots) - matched_count),
+        "lookup_unmatched_count": max(0, all_spots_count - matched_count),
         "group_count": len(itinerary_groups),
         "sections_total": group_debug.get("sections_total", 0),
         "sections_auto_title": group_debug.get("sections_auto_title", 0),
@@ -1755,6 +1820,7 @@ def extract_spots(payload: ExtractRequest) -> dict[str, Any]:
     debug_samples = {
         "spot_drop_reason_counts": spot_clean_debug.get("drop_reason_counts", {}),
         "spot_dropped_samples": spot_clean_debug.get("dropped_samples", []),
+        "lookup_unmatched_spot_names": unmatched_spot_names[:20],
         "group_dropped_sections": group_debug.get("dropped_sections", []),
     }
 

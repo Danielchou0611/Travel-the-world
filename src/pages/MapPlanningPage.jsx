@@ -328,18 +328,20 @@ export default function MapPlanningPage() {
     setStatusText("RAG 驗證中：呼叫 API -> 向量化 -> 檢索 -> 萃取景點...");
 
     try {
+      const extractRequestBody = {
+        text,
+        url,
+        query: "請列出文章中的旅遊景點名稱",
+        top_k: 4,
+        reset_db: false,
+        require_poi_match: true,
+      };
       const response = await fetch(`${ragApiBaseUrl}/api/rag/extract`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          text,
-          url,
-          query: "請列出文章中的旅遊景點名稱",
-          top_k: 4,
-          reset_db: false,
-        }),
+        body: JSON.stringify(extractRequestBody),
       });
 
       if (!response.ok) {
@@ -354,6 +356,23 @@ export default function MapPlanningPage() {
       }
 
       const payload = await response.json();
+      fetch(`${ragApiBaseUrl}/api/rag/extract/spot-names`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(extractRequestBody),
+      })
+        .then(async (spotNamesResponse) => {
+          if (!spotNamesResponse.ok) {
+            throw new Error(`spot-names API error (${spotNamesResponse.status})`);
+          }
+          await spotNamesResponse.json();
+        })
+        .catch((error) => {
+          console.warn("POST /api/rag/extract/spot-names failed", error);
+        });
+
       const names = dedupe((payload.spot_names || []).map((item) => normalizeSpotName(item)));
       const backendSpotMap = new Map();
       (payload.spots || []).forEach((item) => {
@@ -389,12 +408,12 @@ export default function MapPlanningPage() {
       });
 
       if (nextSpots.length === 0) {
-        setStatusText("RAG 已執行，但沒有萃取到景點名稱。");
+        setStatusText("RAG 已執行，但沒有找到 POI 資料庫中可匹配的景點。");
       } else {
         setStatusText(
           nextGroups.length > 1
-            ? `驗證成功：已萃取 ${nextSpots.length} 個景點，並分成 ${nextGroups.length} 組行程。`
-            : `驗證成功：已萃取 ${nextSpots.length} 個景點，可逐一加入右側行程。`
+            ? `驗證成功：已萃取並匹配 ${nextSpots.length} 個 POI 景點，分成 ${nextGroups.length} 組行程。`
+            : `驗證成功：已萃取並匹配 ${nextSpots.length} 個 POI 景點，可逐一加入右側行程。`
         );
       }
 
@@ -473,7 +492,7 @@ export default function MapPlanningPage() {
     <main className="layout">
       <section className="layout__intro">
         <h1>日本旅遊行程規劃</h1>
-        <p>貼入攻略文字後直接呼叫後端 RAG，驗證能否萃取景點名稱並映射到地圖。</p>
+        <p>貼入攻略文字後直接呼叫後端 RAG，萃取景點並只保留 POI 資料庫可匹配的結果。</p>
       </section>
 
       <section className="layout__content">
@@ -481,7 +500,7 @@ export default function MapPlanningPage() {
           <Card className="input-card">
             <CardHeader>
               <CardTitle>RAG 輸入區（已串接後端）</CardTitle>
-              <CardDescription>API Endpoint: {ragApiBaseUrl}/api/rag/extract</CardDescription>
+              <CardDescription>API Endpoint: {ragApiBaseUrl}/api/rag/extract（require_poi_match=true）</CardDescription>
             </CardHeader>
             <CardContent>
               <label className="field-label" htmlFor="guide-input">
@@ -529,7 +548,7 @@ export default function MapPlanningPage() {
           <Card className="results-card">
             <CardHeader>
               <CardTitle>萃取結果</CardTitle>
-              <CardDescription>點擊景點卡可同步右側地圖焦點</CardDescription>
+              <CardDescription>僅顯示 POI / 餐廳資料庫匹配成功的景點</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="result-meta">
