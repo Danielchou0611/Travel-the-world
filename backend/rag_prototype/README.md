@@ -86,6 +86,45 @@ VITE_RAG_API_BASE_URL=http://127.0.0.1:8010
 
 RAG API 會透過 `POI_API_BASE_URL` 串接 `Travel-the-world-Gary/backend`。
 
+## 攻略文字萃取 POI 景點
+
+前端目前使用：
+
+```text
+POST /api/rag/extract
+```
+
+Request body 範例：
+
+```json
+{
+  "text": "貼上攻略文字",
+  "url": "",
+  "query": "請列出文章中的旅遊景點名稱",
+  "top_k": 4,
+  "reset_db": false,
+  "require_poi_match": true
+}
+```
+
+`require_poi_match=true` 時，API 仍會先從攻略萃取景點名稱，再查 `POI_API_BASE_URL` 的 POI / restaurant API；沒有資料庫命中的景點會從 `spot_names`、`spots` 與 `itinerary_groups` 中移除。
+
+若外部服務只需要景點名稱清單，可以呼叫精簡版 endpoint：
+
+```text
+POST /api/rag/extract/spot-names
+```
+
+Request body 與 `/api/rag/extract` 相同，response 只保留景點清單：
+
+```json
+{
+  "spot_names": ["淺草寺", "東京晴空塔", "上野公園"]
+}
+```
+
+需要只保留 POI / restaurant 資料庫命中的景點時，同樣在 request body 傳 `"require_poi_match": true`。
+
 啟動 Gary API：
 
 ```bash
