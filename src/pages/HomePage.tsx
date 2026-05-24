@@ -120,12 +120,12 @@ export default function HomePage() {
     if (e.key === 'Backspace' && !destinationInput && destinations.length > 0) {
       setDestinations(prev => prev.slice(0, -1));
     }
-  };
-
-  const handleDestinationKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
-      e.preventDefault();
-      addDestination(destinationSuggestions[0] ?? destinationInput);
+      const trimmed = destinationInput.trim();
+      if (trimmed) {
+        e.preventDefault();
+        addDestination(destinationSuggestions[0] ?? destinationInput);
+      }
     }
   };
 
@@ -344,7 +344,7 @@ export default function HomePage() {
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
                 Back
               </button>
-              <div className="glass-card" style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: 16 }}>
+              <form onSubmit={(e) => { e.preventDefault(); handleSubmit(); }} className="glass-card" style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: 16 }}>
 
                 {/* Destination */}
                 <div>
@@ -400,7 +400,6 @@ export default function HomePage() {
                         value={destinationInput}
                         onChange={e => setDestinationInput(e.target.value)}
                         onKeyDown={handleDestinationKeyDown}
-                        onKeyUp={handleDestinationKeyUp}
                         onFocus={() => setError('')}
                         placeholder={destinations.length === 0 ? '輸入城市名稱，例如：東京' : '輸入更多城市'}
                         className="destination-input"
@@ -466,6 +465,7 @@ export default function HomePage() {
                       {[3, 5, 7, 10, 14].map(d => (
                         <button
                           key={d}
+                          type="button"
                           onClick={() => setDays(d)}
                           style={{
                             padding: '2px 8px',
@@ -505,6 +505,7 @@ export default function HomePage() {
                       {[30000, 50000, 80000, 100000].map(b => (
                         <button
                           key={b}
+                          type="button"
                           onClick={() => setBudget(b)}
                           style={{
                             padding: '2px 8px',
@@ -626,8 +627,8 @@ export default function HomePage() {
                 </div>
 
                 <button
+                  type="submit"
                   className="btn-primary"
-                  onClick={handleSubmit}
                   disabled={loading}
                   style={{ marginTop: 8, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}
                 >
@@ -643,7 +644,7 @@ export default function HomePage() {
                     </span>
                   ) : '開始安排行程'}
                 </button>
-              </div>
+              </form>
             </div>
           )}
         </div>
