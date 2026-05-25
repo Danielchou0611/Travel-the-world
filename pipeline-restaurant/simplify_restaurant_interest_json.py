@@ -423,6 +423,7 @@ def simplify_row(row: dict[str, str]) -> dict[str, Any]:
         "name": convert_scalar(row["name"]),
         "region": convert_scalar(row["region"]),
         "category": category,
+        "context": convert_scalar(row.get("context", "")),
         "venue_type": venue_type,
         "interests": build_interests(row["name"], raw_type, category, venue_type),
         "google_rating": convert_scalar(row["google_rating"]),

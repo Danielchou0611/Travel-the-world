@@ -5,7 +5,7 @@
 目前保留 4 個腳本：
 
 - `build_japan_restaurants.py`
-  把原始餐廳 JSON 整理成標準化 CSV 與評分後 CSV
+  把原始餐廳 JSON 或各縣市 JSON 資料夾整理成標準化 CSV 與評分後 CSV
 - `simplify_restaurant_interest_json.py`
   把 scored CSV 轉成較適合推薦使用的餐廳 JSON
 - `run_restaurant_pipeline.py`
@@ -17,7 +17,7 @@
 
 用途：
 
-- 讀取原始餐廳 JSON
+- 讀取原始餐廳 JSON，或一個包含各縣市 JSON 的資料夾
 - 整理欄位格式
 - 補 prefecture / category / lat / lng
 - 產生標準化資料與評分後資料
@@ -28,6 +28,12 @@
 
 ```bash
 python3 build_japan_restaurants.py ../raw-data/restaurant/日本全_v1_with_rating.json ./output
+```
+
+或直接吃各縣市資料夾：
+
+```bash
+python3 build_japan_restaurants.py ../raw-data/japan_restaurant_with_rating_interest ./output
 ```
 
 輸出檔名預設會用 input 檔名 stem：
@@ -51,7 +57,7 @@ python3 build_japan_restaurants.py ../raw-data/restaurant/日本全_v1_with_rati
 
 參數：
 
-- `input_json`: 原始 JSON 路徑
+- `input_json`: 原始 JSON 路徑，或各縣市 JSON 資料夾路徑
 - `output_dir`: 輸出資料夾
 - `--prefecture-lookup`: 自訂 lookup CSV；預設使用 `reference/source_id_metadata_lookup.csv`
 - `--prefecture-json-dir`: 指定各縣市 JSON 資料夾，會用檔名當 prefecture 回填地區
@@ -69,10 +75,12 @@ python3 build_japan_restaurants.py ../raw-data/restaurant/日本全_v1_with_rati
 - `google_review_count`
 - `google_name_matched`
 - `image` 或 `image_url`
+- `context`
 
 補充：
 
 - 如果輸入檔旁邊存在 `japan_data_v1_with_rating/`，腳本會自動把那個資料夾當成各縣市 lookup 來源
+- 如果輸入本身就是一個資料夾，腳本會自動讀取底下所有 `*.json`，並用檔名當該筆資料的 prefecture
 - 如果輸入本身就是 `japan_data_v1_with_rating/東京都.json` 這種單一縣市檔案，腳本會自動把檔名當成 prefecture
 - 仍會保留 `station_anchor`、`distance_to_station_km`、`station_distance_efficiency`
 - 但這三個欄位不再參與 `static_score`
@@ -153,6 +161,7 @@ python3 simplify_restaurant_interest_json.py output/日本全_v1_with_rating_sco
 - `name`
 - `region`
 - `category`
+- `context`
 - `venue_type`
 - `interests`
 - `google_rating`
@@ -476,7 +485,7 @@ python3 csv_to_json.py input.csv output.json
 
 ```bash
 cd pipline-restaurant
-python3 run_restaurant_pipeline.py ../raw-data/restaurant/日本全_v1_with_rating.json
+python3 run_restaurant_pipeline.py ../raw-data/japan_restaurant_with_rating_interest
 ```
 
 通常會得到這幾份結果：

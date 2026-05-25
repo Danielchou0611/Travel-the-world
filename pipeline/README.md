@@ -5,19 +5,19 @@
 目前有 4 個主要腳本：
 
 - `build_japan_attractions.py`
-  把原始景點 JSON 整理成標準化 CSV 與評分後 CSV，並保留原始景點 ID
+  把原始景點 JSON 或各縣市 JSON 資料夾整理成標準化 CSV 與評分後 CSV，並保留原始景點 ID
 - `csv_to_json.py`
   把 CSV 直接轉成 JSON
 - `simplify_interest_json.py`
   把 scored CSV 轉成較適合推薦或 interest 使用的 JSON
 - `run_pipeline.py`
-  一次跑完整的推薦資料流程，預設輸出 `interest.json`
+  一次跑完整的推薦資料流程，支援單一 JSON 或各縣市資料夾，預設輸出 `interest.json`
 
 ## 1. build_japan_attractions.py
 
 用途：
 
-- 讀取原始景點 JSON
+- 讀取原始景點 JSON，或一個內含各縣市 JSON 的資料夾
 - 整理欄位格式
 - 補 prefecture / category / lat / lng
 - 產生標準化資料與評分後資料
@@ -27,9 +27,10 @@
 ```bash
 cd pipline
 python3 build_japan_attractions.py /path/to/input.json /path/to/output-dir
+python3 build_japan_attractions.py /path/to/input-dir /path/to/output-dir
 ```
 
-輸出檔名預設會用 input 檔名 stem：
+輸出檔名預設會用 input 檔名或資料夾名稱：
 
 - `<stem>_normalized.csv`
 - `<stem>_scored.csv`
@@ -50,7 +51,7 @@ python3 build_japan_attractions.py ../raw-data/japan_with_rating.json ./output
 
 參數：
 
-- `input_json`: 原始 JSON 路徑
+- `input_json`: 原始 JSON 路徑，或各縣市 JSON 資料夾路徑
 - `output_dir`: 輸出資料夾
 - `--prefecture-lookup`: 自訂 lookup CSV；預設使用 `pipline/reference/source_id_metadata_lookup.csv`
 - `--prefecture-json-dir`: 指定各縣市 JSON 資料夾，會用檔名當 prefecture 回填地區
@@ -70,6 +71,7 @@ python3 build_japan_attractions.py ../raw-data/japan_with_rating.json ./output
 - `google_review_count`
 - `google_name_matched`
 - `image` 或 `image_url`
+- `context`
 
 如果 JSON 沒有 `prefecture`、`category`、`lat`、`lng`，會優先用 `source_id` 去 lookup CSV 回填。
 
@@ -77,6 +79,7 @@ python3 build_japan_attractions.py ../raw-data/japan_with_rating.json ./output
 
 - 如果輸入檔旁邊存在 `japan_data_v2_with_rating/`，腳本會自動把那個資料夾當成各縣市 lookup 來源
 - 如果輸入本身就是 `japan_data_v2_with_rating/東京都.json` 這種單一縣市檔案，腳本會自動把檔名當成 prefecture
+- 如果輸入本身是一個資料夾，腳本會把每個 `*.json` 檔名當成該批資料的 prefecture 後再合併處理
 - 各縣市檔之間若有重複 `source_id`，會保留第一個找到的 prefecture，並在 pipeline report 記錄 `prefecture_json_conflicts`
 
 ## 2. csv_to_json.py
@@ -123,6 +126,7 @@ python3 csv_to_json.py input.csv output.json
 - 移除 `source_id`
 - 移除 `interest_tags`
 - 保留較乾淨的主分類 `category`
+- 保留原始的 `context`
 - 額外產生推薦可用的 `interests` 陣列標籤
 
 預設用法：
@@ -165,6 +169,7 @@ python3 simplify_interest_json.py input.csv output.json
 ```bash
 cd pipline
 python3 run_pipeline.py ../raw-data/japan_with_rating.json
+python3 run_pipeline.py ../raw-data/japan_with_rating_interest
 ```
 
 預設會輸出：
@@ -179,6 +184,7 @@ python3 run_pipeline.py ../raw-data/japan_with_rating.json
 ```bash
 cd pipline
 python3 run_pipeline.py input.json ./output --output-prefix my_data
+python3 run_pipeline.py input_dir ./output --output-prefix my_data
 ```
 
 可選參數：
@@ -201,6 +207,7 @@ python3 run_pipeline.py input.json ./output --output-prefix my_data
 - `name`: 景點名稱
 - `region`: 地區
 - `category`: 主分類
+- `context`: 景點描述文字
 - `interests`: interest 標籤陣列
 - `google_rating`: Google 評分
 - `review_count`: Google 評論數
@@ -245,13 +252,13 @@ python3 run_pipeline.py input.json ./output --output-prefix my_data
 
 ```bash
 cd pipline
-python3 run_pipeline.py ../raw-data/japan_with_rating.json
+python3 run_pipeline.py ../raw-data/japan_with_rating_interest
 ```
 
 通常會得到這幾份結果：
 
-- `output/japan_with_rating_normalized.csv`
-- `output/japan_with_rating_scored.csv`
+- `output/japan_with_rating_interest_normalized.csv`
+- `output/japan_with_rating_interest_scored.csv`
 - `output/japan_with_rating_interest.json`
 
 如果你另外需要 `scored.json`，再補跑：

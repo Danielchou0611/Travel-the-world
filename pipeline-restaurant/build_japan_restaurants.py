@@ -146,6 +146,7 @@ NORMALIZED_FIELDS = [
     "name",
     "prefecture",
     "category",
+    "context",
     "lat",
     "lng",
     "google_rating",
@@ -162,6 +163,7 @@ SCORED_FIELDS = [
     "name",
     "region",
     "category",
+    "context",
     "google_rating",
     "review_count",
     "interest_tags",
@@ -181,9 +183,9 @@ SCORED_FIELDS = [
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Convert a Japan restaurants JSON file into normalized/scored CSV outputs.",
+        description="Convert a Japan restaurants JSON file or directory into normalized/scored CSV outputs.",
     )
-    parser.add_argument("input_json", help="Path to the source JSON file.")
+    parser.add_argument("input_json", help="Path to the source JSON file or a directory of per-prefecture JSON files.")
     parser.add_argument("output_dir", help="Directory where the CSV and report files will be written.")
     parser.add_argument(
         "--prefecture-lookup",
@@ -284,6 +286,9 @@ def discover_prefecture_json_dir(input_json: Path, configured_dir: str) -> Path 
         path = Path(configured_dir)
         return path if path.exists() else None
 
+    if input_json.is_dir():
+        return input_json
+
     candidate = input_json.parent / DEFAULT_PREFECTURE_JSON_DIRNAME
     if candidate.exists():
         return candidate
@@ -293,9 +298,37 @@ def discover_prefecture_json_dir(input_json: Path, configured_dir: str) -> Path 
 def infer_source_prefecture(input_json: Path, configured_prefecture: str) -> str:
     if configured_prefecture:
         return configured_prefecture.strip()
+    if input_json.is_dir():
+        return ""
     if input_json.parent.name == DEFAULT_PREFECTURE_JSON_DIRNAME and input_json.stem in STATION_ANCHORS:
         return input_json.stem
     return ""
+
+
+def load_input_records(input_json: Path) -> tuple[list[dict[str, Any]], int]:
+    if input_json.is_dir():
+        records: list[dict[str, Any]] = []
+        file_count = 0
+        for prefecture_file in sorted(input_json.glob("*.json")):
+            raw_data = json.loads(prefecture_file.read_text(encoding="utf-8"))
+            if not isinstance(raw_data, list):
+                continue
+
+            file_count += 1
+            prefecture = prefecture_file.stem.strip()
+            for record in raw_data:
+                if not isinstance(record, dict):
+                    continue
+                merged = dict(record)
+                if not coalesce(merged, ["prefecture", "region", "address_prefecture", "address_region"]):
+                    merged["prefecture"] = prefecture
+                records.append(merged)
+        return records, file_count
+
+    raw_data = json.loads(input_json.read_text(encoding="utf-8"))
+    if not isinstance(raw_data, list):
+        raise ValueError("Input JSON must be a list of restaurant objects.")
+    return raw_data, 1
 
 
 def merge_lookup_rows(
@@ -375,10 +408,8 @@ def load_normalized_rows(
     input_json: Path,
     prefecture_lookup: dict[str, dict[str, str]],
     source_prefecture: str,
-) -> tuple[list[dict[str, str]], dict[str, int], list[dict[str, str]]]:
-    raw_data = json.loads(input_json.read_text(encoding="utf-8"))
-    if not isinstance(raw_data, list):
-        raise ValueError("Input JSON must be a list of restaurant objects.")
+) -> tuple[list[dict[str, str]], dict[str, int], list[dict[str, str]], int]:
+    raw_data, input_file_count = load_input_records(input_json)
 
     stats = {
         "raw_rows": len(raw_data),
@@ -430,6 +461,7 @@ def load_normalized_rows(
                         ["google_review_count", "review_count", "reviews", "rating_count"],
                     ),
                     "google_name_matched": coalesce(record, ["google_name_matched", "matched_name"]),
+                    "context": coalesce(record, ["context"]),
                     "reason": "outside_japan_bbox",
                 }
             )
@@ -461,6 +493,7 @@ def load_normalized_rows(
                         ["google_review_count", "review_count", "reviews", "rating_count"],
                     ),
                     "google_name_matched": coalesce(record, ["google_name_matched", "matched_name"]),
+                    "context": coalesce(record, ["context"]),
                     "reason": "excluded_non_restaurant_type",
                 }
             )
@@ -475,6 +508,7 @@ def load_normalized_rows(
             "name": coalesce(record, ["name"]) or lookup_row.get("name", ""),
             "prefecture": prefecture.strip(),
             "category": category,
+            "context": coalesce(record, ["context"]),
             "lat": lat,
             "lng": lng,
             "google_rating": coalesce(record, ["google_rating", "google_star", "rating"]),
@@ -511,7 +545,7 @@ def load_normalized_rows(
             stats["rows_missing_review_count"] += 1
 
     normalized_rows.sort(key=lambda row: (row["prefecture"], row["name"], row["source_id"]))
-    return normalized_rows, stats, excluded_rows
+    return normalized_rows, stats, excluded_rows, input_file_count
 
 
 def haversine_km(lat1: float, lng1: float, lat2: float, lng2: float) -> float:
@@ -563,6 +597,7 @@ def build_scored_rows(rows: list[dict[str, str]]) -> tuple[list[dict[str, str]],
                 "name": row["name"],
                 "region": row["prefecture"],
                 "category": row["category"],
+                "context": row["context"],
                 "google_rating": f"{google_rating:.1f}",
                 "review_count": str(review_count),
                 "interest_tags": row["category"],
@@ -626,7 +661,7 @@ def main() -> None:
     prefecture_lookup = combine_prefecture_lookups(csv_lookup, prefecture_json_lookup)
     source_prefecture = infer_source_prefecture(input_json, args.source_prefecture)
 
-    normalized_rows, normalize_stats, excluded_rows = load_normalized_rows(
+    normalized_rows, normalize_stats, excluded_rows, input_file_count = load_normalized_rows(
         input_json,
         prefecture_lookup,
         source_prefecture,
@@ -646,6 +681,8 @@ def main() -> None:
         **normalize_stats,
         **score_stats,
         "input_json": str(input_json),
+        "input_is_directory": input_json.is_dir(),
+        "input_file_count": input_file_count,
         "prefecture_lookup": report_lookup_path(args),
         "prefecture_lookup_rows": len(csv_lookup),
         "prefecture_json_dir": str(prefecture_json_dir) if prefecture_json_dir else "",

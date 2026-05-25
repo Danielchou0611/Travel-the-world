@@ -17,7 +17,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Run build_japan_attractions.py and simplify_interest_json.py in sequence.",
     )
-    parser.add_argument("input_json", help="Path to the source JSON file.")
+    parser.add_argument("input_json", help="Path to the source JSON file or a directory of JSON files.")
     parser.add_argument(
         "output_dir",
         nargs="?",
@@ -58,6 +58,12 @@ def run_step(command: list[str]) -> None:
     subprocess.run(command, check=True)
 
 
+def interest_output_path(output_dir: Path, prefix: str) -> Path:
+    if prefix.endswith("_interest"):
+        return output_dir / f"{prefix}.json"
+    return output_dir / f"{prefix}{DEFAULT_INTEREST_SUFFIX}"
+
+
 def main() -> None:
     args = parse_args()
 
@@ -67,7 +73,7 @@ def main() -> None:
     prefix = args.output_prefix or input_json.stem
 
     scored_csv = output_dir / f"{prefix}_scored.csv"
-    interest_json = output_dir / f"{prefix}{DEFAULT_INTEREST_SUFFIX}"
+    interest_json = interest_output_path(output_dir, prefix)
 
     build_command = [
         sys.executable,

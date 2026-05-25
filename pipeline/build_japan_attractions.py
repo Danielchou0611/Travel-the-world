@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Standalone Japan attraction pipeline: JSON -> normalized CSV -> scored CSV."""
+"""Standalone Japan attraction pipeline: JSON/directory -> normalized CSV -> scored CSV."""
 
 from __future__ import annotations
 
@@ -76,6 +76,7 @@ NORMALIZED_FIELDS = [
     "name",
     "prefecture",
     "category",
+    "context",
     "lat",
     "lng",
     "google_rating",
@@ -92,6 +93,7 @@ SCORED_FIELDS = [
     "name",
     "region",
     "category",
+    "context",
     "google_rating",
     "review_count",
     "interest_tags",
@@ -111,9 +113,9 @@ SCORED_FIELDS = [
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Convert a Japan attractions JSON file into normalized/scored CSV outputs.",
+        description="Convert Japan attractions JSON data into normalized/scored CSV outputs.",
     )
-    parser.add_argument("input_json", help="Path to the source JSON file.")
+    parser.add_argument("input_json", help="Path to the source JSON file or a directory of JSON files.")
     parser.add_argument("output_dir", help="Directory where the CSV and report files will be written.")
     parser.add_argument(
         "--prefecture-lookup",
@@ -192,6 +194,9 @@ def discover_prefecture_json_dir(input_json: Path, configured_dir: str) -> Path 
         path = Path(configured_dir)
         return path if path.exists() else None
 
+    if input_json.is_dir():
+        return None
+
     candidate = input_json.parent / DEFAULT_PREFECTURE_JSON_DIRNAME
     if candidate.exists():
         return candidate
@@ -201,6 +206,8 @@ def discover_prefecture_json_dir(input_json: Path, configured_dir: str) -> Path 
 def infer_source_prefecture(input_json: Path, configured_prefecture: str) -> str:
     if configured_prefecture:
         return configured_prefecture.strip()
+    if input_json.is_dir():
+        return ""
     if input_json.parent.name == DEFAULT_PREFECTURE_JSON_DIRNAME and input_json.stem in STATION_ANCHORS:
         return input_json.stem
     return ""
@@ -270,6 +277,25 @@ def combine_prefecture_lookups(
     return combined
 
 
+def load_input_records(input_path: Path) -> list[tuple[dict[str, Any], str]]:
+    if input_path.is_dir():
+        records: list[tuple[dict[str, Any], str]] = []
+        for json_file in sorted(input_path.glob("*.json")):
+            raw_data = json.loads(json_file.read_text(encoding="utf-8"))
+            if not isinstance(raw_data, list):
+                continue
+            prefecture = json_file.stem.strip()
+            for record in raw_data:
+                if isinstance(record, dict):
+                    records.append((record, prefecture))
+        return records
+
+    raw_data = json.loads(input_path.read_text(encoding="utf-8"))
+    if not isinstance(raw_data, list):
+        raise ValueError("Input JSON must be a list of attraction objects.")
+    return [(record, "") for record in raw_data if isinstance(record, dict)]
+
+
 def metadata_score(row: dict[str, str]) -> tuple[int, int, int, int]:
     return (
         1 if row["prefecture"] else 0,
@@ -284,12 +310,10 @@ def load_normalized_rows(
     prefecture_lookup: dict[str, dict[str, str]],
     source_prefecture: str,
 ) -> tuple[list[dict[str, str]], dict[str, int]]:
-    raw_data = json.loads(input_json.read_text(encoding="utf-8"))
-    if not isinstance(raw_data, list):
-        raise ValueError("Input JSON must be a list of attraction objects.")
+    raw_records = load_input_records(input_json)
 
     stats = {
-        "raw_rows": len(raw_data),
+        "raw_rows": len(raw_records),
         "duplicate_rows_removed": 0,
         "lookup_prefecture_hits": 0,
         "rows_missing_prefecture": 0,
@@ -300,10 +324,7 @@ def load_normalized_rows(
     }
 
     deduped: dict[str, dict[str, str]] = {}
-    for record in raw_data:
-        if not isinstance(record, dict):
-            continue
-
+    for record, record_prefecture in raw_records:
         source_id = coalesce(record, ["id", "source_id"])
         if not source_id:
             continue
@@ -316,6 +337,7 @@ def load_normalized_rows(
 
         prefecture = (
             coalesce(record, ["prefecture", "region", "address_prefecture", "address_region"])
+            or record_prefecture
             or source_prefecture
         )
         if not prefecture and lookup_row:
@@ -334,6 +356,7 @@ def load_normalized_rows(
             "name": coalesce(record, ["name"]) or lookup_row.get("name", ""),
             "prefecture": prefecture.strip(),
             "category": category,
+            "context": coalesce(record, ["context"]),
             "lat": lat,
             "lng": lng,
             "google_rating": coalesce(record, ["google_rating", "google_star", "rating"]),
@@ -421,6 +444,7 @@ def build_scored_rows(rows: list[dict[str, str]]) -> tuple[list[dict[str, str]],
                 "name": row["name"],
                 "region": row["prefecture"],
                 "category": row["category"],
+                "context": row["context"],
                 "google_rating": f"{google_rating:.1f}",
                 "review_count": str(review_count),
                 "interest_tags": row["category"],
