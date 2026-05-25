@@ -66,6 +66,52 @@ npm run build
 
 打包完成的靜態檔案將輸出至專案根目錄的 `dist/` 資料夾。
 
+
+**啟動後端**：
+根據Wan's branch的readme進行後端設定及啟動
+
+1. **進入後端目錄**  
+建立虛擬環境：
+```bash
+python -m venv venv
+source venv/bin/activate  # Windows 請用 venv\\Scripts\\activate
+```
+2. **安裝必要套件**
+```bash
+pip install fastapi uvicorn python-dotenv requests pydantic google-genai
+```
+3. **設定環境變數:**  
+在後端根目錄建立 .env 檔案，並填入你的 API Key：
+```bash
+GEMINI_API_KEY=你的_GEMINI_API_KEY
+GOOGLE_MAPS_API_KEY=你的_GOOGLE_MAPS_API_KEY
+```
+4. **啟動後端伺服器:**
+```bash
+uvicorn server:app --reload --port 8001
+```
+預設會執行在 http://127.0.0.1:8001
+
+
+**啟動後端資料庫**：
+根據Gary's branch的readme進行資料庫初始設定及啟動
+
+Run Migrations
+cd backend
+```Bash
+python manage.py migrate
+```
+
+Import POI Data
+```Bash
+python manage.py import_pois ../japan_with_rating_interest.json --replace
+```
+Start Server
+```Bash
+python manage.py runserver
+```
+
+
 ## 專案結構簡介 (Project Structure)
 
 ```text

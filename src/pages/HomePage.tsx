@@ -709,7 +709,6 @@ export default function HomePage() {
                       <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
                         <span>行程規劃中</span>
                         <span className="loading-dots" aria-hidden><span>.</span><span>.</span><span>.</span></span>
-                        <span style={{ fontSize: 12, opacity: 0.8 }}>（可能需要1-2分鐘）</span>
                       </span>
                     ) : '開始安排行程'}
                   </button>

@@ -58,12 +58,22 @@ const MAP_OPTIONS: google.maps.MapOptions = {
 };
 
 function isValidCoordinates(value: unknown): value is Coordinates {
-  return !!value
-    && typeof value === 'object'
-    && typeof (value as Coordinates).lat === 'number'
-    && typeof (value as Coordinates).lng === 'number'
-    && Number.isFinite((value as Coordinates).lat)
-    && Number.isFinite((value as Coordinates).lng);
+  if (
+    !value ||
+    typeof value !== 'object' ||
+    typeof (value as Coordinates).lat !== 'number' ||
+    typeof (value as Coordinates).lng !== 'number' ||
+    !Number.isFinite((value as Coordinates).lat) ||
+    !Number.isFinite((value as Coordinates).lng)
+  ) return false;
+
+  const { lat, lng } = value as Coordinates;
+  // Reject null island (0,0) and any coordinate where both axes are zero
+  if (lat === 0 && lng === 0) return false;
+  // Also reject if either axis is exactly 0 – likely an unset sentinel from the API
+  if (lat === 0 || lng === 0) return false;
+
+  return true;
 }
 
 function getAttractionCoordinates(attraction: Attraction): Coordinates | null {
@@ -423,11 +433,12 @@ export default function MapPage() {
           <button style={{
             padding: '6px 14px',
             width: 'auto',
-            fontSize: 13,
+            fontSize: 15,
             fontWeight: 600,
             fontFamily: 'var(--font-serif)',
             cursor: 'default',
             borderRadius: 6,
+            minHeight: 44,
             border: `1.5px dashed ${accentColor}`,
             background: `${accentColor}0D`,
             color: accentColor,
@@ -611,6 +622,7 @@ export default function MapPage() {
               boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
               border: '1px solid var(--color-border)',
               fontSize: 11,
+              fontFamily: 'var(--font-serif)',
             }}>
               {Object.entries(CATEGORY_COLORS).map(([cat, color]) => (
                 <div key={cat} style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 4, color: 'var(--color-text)' }}>

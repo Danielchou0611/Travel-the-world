@@ -8,8 +8,8 @@ import AttractionCard from '../components/AttractionCard';
 import WhatIfSliders from '../components/WhatIfSliders';
 import ChatBox from '../components/ChatBox';
 // @ts-ignore
-import html2pdf from 'html2pdf.js';
-import PdfTemplate from '../components/PdfTemplate';
+import { pdf } from '@react-pdf/renderer';
+import PdfDocument from '../components/PdfDocument';
 
 const IconCalendar = () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>;
 const IconYen = () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="12" y1="9" x2="12" y2="22" /><polyline points="6 4 12 9 18 4" /><line x1="8" y1="13" x2="16" y2="13" /><line x1="8" y1="17" x2="16" y2="17" /></svg>;
@@ -56,24 +56,14 @@ export default function ItineraryPage() {
   async function handleDownloadPdf() {
     if (!trip) return;
     setIsDownloadingPdf(true);
-    
-    // We get the hidden element
-    const element = document.getElementById('pdf-itinerary-content');
-    if (!element) {
-      setIsDownloadingPdf(false);
-      return;
-    }
-
-    const opt = {
-      margin:       10, // mm
-      filename:     `專屬行程規劃_${trip.preferences?.days ?? '未知'}天.pdf`,
-      image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { scale: 2, useCORS: true, letterRendering: true },
-      jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
-    };
-
     try {
-      await html2pdf().set(opt).from(element).save();
+      const blob = await pdf(<PdfDocument trip={trip} />).toBlob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `專屬行程規劃_${trip.preferences?.days ?? '未知'}天.pdf`;
+      a.click();
+      URL.revokeObjectURL(url);
     } catch (err) {
       console.error('PDF generation failed', err);
     } finally {
@@ -649,10 +639,7 @@ export default function ItineraryPage() {
       />
       {!isEditing && <ChatBox trip={trip} setTrip={setTrip} />}
       
-      {/* Hidden PDF template for html2pdf.js to render */}
-      <div style={{ position: 'absolute', top: '-9999px', left: '-9999px', zIndex: -1 }}>
-        <PdfTemplate trip={trip} />
-      </div>
+
     </div>
   );
 }

@@ -16,5 +16,12 @@ export default defineConfig({
       },
     },
   },
+  define: {
+    // @react-pdf/renderer needs process.env
+    'process.env': {},
+  },
+  optimizeDeps: {
+    include: ['@react-pdf/renderer'],
+  },
 })
 

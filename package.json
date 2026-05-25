@@ -12,6 +12,7 @@
   "dependencies": {
     "@ant-design/icons": "^6.1.1",
     "@react-google-maps/api": "^2.20.8",
+    "@react-pdf/renderer": "^4.5.1",
     "@types/google.maps": "^3.64.1",
     "antd": "^6.3.5",
     "framer-motion": "^12.40.0",

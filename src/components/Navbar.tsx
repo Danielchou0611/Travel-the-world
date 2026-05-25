@@ -31,10 +31,11 @@ export default function Navbar({ showBack, backLabel = '返回', backPath = '/',
               borderRadius: 6,
               padding: '6px 14px',
               color: 'var(--color-text-muted)',
-              fontSize: 13,
+              fontSize: 15,
               cursor: 'pointer',
               fontFamily: 'var(--font-serif)',
               transition: 'all 0.2s',
+              minHeight: 44,
             }}
           >
             {backLabel}

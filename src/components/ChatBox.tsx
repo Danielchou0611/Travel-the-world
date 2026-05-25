@@ -124,6 +124,7 @@ export default function ChatBox({ trip, setTrip }: ChatBoxProps) {
               boxShadow: '0 4px 16px rgba(0,0,0,0.1)',
               border: '1px solid var(--color-border)',
               pointerEvents: 'none',
+              fontFamily: 'var(--font-serif)',
             }}
           >
             有需要修改行程嗎？來問 AI 助手吧！ ✨
@@ -192,6 +193,7 @@ export default function ChatBox({ trip, setTrip }: ChatBoxProps) {
         zIndex: 999,
         overflow: 'hidden',
         border: '1px solid var(--color-border)',
+        fontFamily: 'var(--font-serif)',
       }}
     >
       {/* Header */}
@@ -203,7 +205,7 @@ export default function ChatBox({ trip, setTrip }: ChatBoxProps) {
         alignItems: 'center',
         justifyContent: 'space-between',
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontWeight: 500 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontWeight: 500, fontFamily: 'var(--font-serif)', letterSpacing: '0.04em' }}>
           <IconSparkles />
           AI 旅遊助手
         </div>
@@ -278,7 +280,7 @@ export default function ChatBox({ trip, setTrip }: ChatBoxProps) {
             boxShadow: '0 1px 2px rgba(0,0,0,0.02)',
           }}>
             <span className="dot-flashing"></span>
-            <span style={{ marginLeft: 16 }}>AI 正在為您修改行程...</span>
+            <span style={{ marginLeft: 16 }}>AI 正在為您修改行程</span>
           </div>
         )}
         <div ref={messagesEndRef} />
