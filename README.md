@@ -88,6 +88,7 @@
 ## Setup
 ```bash
 unzip japan_restaurant_with_rating_interest.json.zip
+unzip japan_with_rating_interest.json.zip
 ```
 
 ### 1. Create Virtualenv
