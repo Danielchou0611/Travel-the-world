@@ -31,7 +31,7 @@ function XAIBadge({ xai }: XAIBadgeProps) {
         </div>
         <button
           onClick={() => setExpanded(!expanded)}
-          style={{ background: '#FFFFFF', border: '1px solid var(--color-border)', borderRadius: 6, padding: '4px 10px', color: 'var(--color-text)', fontSize: 11, cursor: 'pointer', flexShrink: 0, fontFamily: 'inherit' }}
+          style={{ background: '#FFFFFF', border: '1px solid var(--color-border)', borderRadius: 6, padding: '4px 10px', color: 'var(--color-text)', fontSize: 11, cursor: 'pointer', flexShrink: 0, fontFamily: 'var(--font-serif)' }}
         >
           {expanded ? '收起' : '分析詳情'}
         </button>
@@ -141,13 +141,13 @@ export default function AttractionCard({
           <div style={{ display: 'flex', gap: 10 }}>
             <button
               onClick={handleCancel}
-              style={{ padding: '8px 20px', borderRadius: 6, border: '1px solid var(--color-border)', background: '#FFF', fontSize: 13, cursor: 'pointer', fontFamily: 'inherit' }}
+              style={{ padding: '8px 20px', borderRadius: 6, border: '1px solid var(--color-border)', background: '#FFF', fontSize: 13, cursor: 'pointer', fontFamily: 'var(--font-serif)' }}
             >
               取消
             </button>
             <button
               onClick={handleConfirm}
-              style={{ padding: '8px 20px', borderRadius: 6, border: 'none', background: '#EF4444', color: '#FFF', fontSize: 13, fontWeight: 500, cursor: 'pointer', fontFamily: 'inherit' }}
+              style={{ padding: '8px 20px', borderRadius: 6, border: 'none', background: '#EF4444', color: '#FFF', fontSize: 13, fontWeight: 500, cursor: 'pointer', fontFamily: 'var(--font-serif)' }}
             >
               確定刪除
             </button>

@@ -1,26 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Serif+TC:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap');
 
 @import "tailwindcss";
 
 :root {
   /* Minimalist Zen Palette */
   --color-primary: #2C363F;
-  /* Charcoal */
   --color-primary-dark: #1A1F24;
   --color-accent: #C45A3F;
-  /* Warm burnt orange */
   --color-bg: #FAF7F2;
-  /* Warmer cream to match image */
   --color-surface: #FFFFFF;
   --color-border: #E8E6E1;
   --color-text: #2C2C2A;
   --color-text-muted: #7E7C73;
-  --font-serif: 'Playfair Display', 'Noto Serif TC', serif;
+  --font-serif: 'Playfair Display', 'Noto Serif TC', Georgia, serif;
+  --font-sans: 'Inter', 'Noto Sans TC', system-ui, -apple-system, sans-serif;
+
+  /* ── Quiz Design Spec Tokens ── */
+  --washi: #fffaf6;
+  --sumi-warm: #2b2b2b;
+  --prussian: #123041;
+  --prussian-deep: #0f2836;
+  --vermillion: #d9483b;
+  --ochre: #d7a23a;
+  --mist: #6b7b86;
+  --washi-veil: rgba(255,250,246,0.6);
+  --glass: rgba(255,255,255,0.8);
+
+  /* Spacing (8-point grid) */
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+
+  /* Elevation */
+  --shadow-sm: 0 6px 18px rgba(11,27,42,0.06);
+  --shadow-md: 0 12px 34px rgba(11,27,42,0.08);
 }
 
 .bg-hero {
-  background-color: var(--color-bg);
-  background-image: linear-gradient(to right, var(--color-bg) 45%, rgba(250, 247, 242, 0.85) 60%, transparent 85%),
+  background-color: var(--washi);
+  background-image: linear-gradient(to right, var(--washi) 42%, rgba(255, 250, 246, 0.8) 60%, transparent 85%),
     url('./assets/background.png');
   background-size: cover;
   background-position: center right;
@@ -38,13 +60,34 @@ html,
 body {
   width: 100%;
   height: 100%;
-  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+  font-family: var(--font-sans);
 }
 
 body {
   background: var(--color-bg);
   color: var(--color-text);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Global Typography ──────────────────────────────────────
+   All headings default to serif (Playfair Display + Noto Serif TC).
+   All UI text inherits from body (Inter + Noto Sans TC).
+   ─────────────────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+/* Paragraphs, labels, buttons → unified serif (Playfair Display + Noto Serif TC) */
+p, span, label, button {
+  font-family: var(--font-serif);
+}
+
+/* Form inputs stay in sans-serif for better legibility */
+input, textarea, select {
+  font-family: var(--font-sans);
 }
 
 #root {
@@ -72,17 +115,217 @@ body {
 
 /* Flat minimalist card */
 .glass-card {
-  background: rgba(255, 255, 255, 0.75);
+  background: var(--glass);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--shadow-sm);
+  border-radius: 14px;
+}
+
+/* Quiz-style personality card */
+.quiz-personality-card {
+  flex: 1;
+  padding: var(--space-xl) var(--space-lg);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 16px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: transform 180ms cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 180ms cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: var(--shadow-md);
+}
+.quiz-personality-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 20px 48px rgba(11,27,42,0.16);
+}
+.quiz-personality-card:active {
+  transform: scale(0.97);
+}
+.quiz-personality-card.j-card {
+  background: linear-gradient(160deg, #1b4060 0%, var(--prussian-deep) 100%);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.quiz-personality-card.p-card {
+  background: linear-gradient(160deg, #e05040 0%, #b83328 100%);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* Quiz intro CTA button */
+.quiz-intro-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: var(--space-sm);
+  padding: 14px var(--space-xl);
+  border-radius: 8px;
+  border: 1.5px solid var(--prussian);
+  background: transparent;
+  color: var(--prussian);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: var(--font-serif);
+  min-height: 48px;
+  letter-spacing: 0.05em;
+  /* Premium smooth transition — all properties at once */
+  transition:
+    background   300ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    color        300ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform    400ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow   400ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    border-color 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 2px 0 rgba(18, 48, 65, 0.05);
+  will-change: transform, box-shadow;
+}
+
+.bubble-particle {
+  pointer-events: none;
+  animation: float-out linear infinite;
+  opacity: 0;
+}
+
+@keyframes float-out {
+  0% {
+    transform: translate(0, 0) scale(0.5);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.35;
+  }
+  80% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: translate(var(--tx), var(--ty)) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.quiz-intro-cta:hover {
+  background: var(--prussian);
+  color: #fff;
+  border-color: var(--prussian);
+  transform: translateY(-6px);
+  box-shadow:
+    0 6px 16px rgba(18, 48, 65, 0.12),
+    0 20px 48px rgba(18, 48, 65, 0.20);
+}
+.quiz-intro-cta:active {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(18, 48, 65, 0.14);
+  transition-duration: 80ms;
+}
+
+/* Quiz option button */
+.quiz-option {
+  width: 100%;
+  padding: var(--space-md) var(--space-lg);
+  margin: var(--space-sm) 0;
   border-radius: 12px;
+  border: 1px solid var(--color-border);
+  background: #FFFFFF;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  font-size: 15px;
+  font-family: var(--font-serif);
+  color: var(--sumi-warm);
+  text-align: center;
+  transition: transform 150ms cubic-bezier(0.22,1,0.36,1),
+              box-shadow 150ms;
+  min-height: 44px;
+}
+.quiz-option:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: var(--shadow-md);
+  border-color: var(--ochre);
+}
+.quiz-option:active {
+  transform: scale(0.97);
+}
+
+/* Progress bar */
+.quiz-progress-track {
+  height: 8px;
+  background: rgba(0,0,0,0.06);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.quiz-progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--ochre), var(--prussian));
+  transition: width 600ms ease-out;
+}
+
+/* Explore spot card */
+.explore-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 180ms cubic-bezier(0.22,1,0.36,1),
+              box-shadow 180ms,
+              border-color 180ms;
+}
+.explore-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: var(--shadow-md);
+  border-color: var(--vermillion);
+}
+.explore-card:active {
+  transform: scale(0.98);
+}
+.explore-card-img {
+  height: 130px;
+  background: #f0ece6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--mist);
+}
+.explore-card-body {
+  padding: var(--space-md);
+}
+.explore-card-title {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--sumi-warm);
+  margin-bottom: var(--space-xs);
+}
+.explore-card-desc {
+  font-size: 13px;
+  color: var(--mist);
+  line-height: 1.55;
+}
+.explore-card-btn {
+  width: 100%;
+  margin-top: var(--space-md);
+  padding: 9px 0;
+  border-radius: 8px;
+  border: 1.5px solid var(--vermillion);
+  background: transparent;
+  color: var(--vermillion);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 44px;
+  transition: background 150ms, color 150ms;
+}
+.explore-card-btn:hover {
+  background: var(--vermillion);
+  color: #fff;
 }
 
 /* Solid Minimal Button */
 .btn-primary {
-  background: var(--color-accent);
+  background: var(--prussian);
   color: white;
   border: none;
   border-radius: 8px;
@@ -90,19 +333,20 @@ body {
   font-size: 15px;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background 150ms, transform 150ms cubic-bezier(0.22,1,0.36,1);
   letter-spacing: 0.04em;
-  font-family: inherit;
+  font-family: var(--font-serif);
   width: 100%;
+  min-height: 44px;
 }
 
 .btn-primary:hover:not(:disabled) {
-  background: #A9482F;
-  /* Slightly darker burnt orange */
+  background: var(--prussian-deep);
+  transform: translateY(-2px) scale(1.02);
 }
 
 .btn-primary:active:not(:disabled) {
-  transform: translateY(1px);
+  transform: scale(0.97);
 }
 
 .btn-primary:disabled {
@@ -125,8 +369,8 @@ body {
 }
 
 .glass-input:focus {
-  border-color: #A3A09A;
-  box-shadow: 0 0 0 1px #A3A09A;
+  border-color: var(--prussian);
+  box-shadow: 0 0 0 2px rgba(18,48,65,0.12);
 }
 
 .glass-input::placeholder {
@@ -152,18 +396,19 @@ body {
 .style-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background: var(--color-accent);
+  background: var(--prussian);
   cursor: grab;
   border: 2px solid white;
-  transition: all 0.2s;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 150ms cubic-bezier(0.22,1,0.36,1), box-shadow 150ms;
+  box-shadow: 0 2px 6px rgba(11,27,42,0.18);
 }
 
 .style-slider::-webkit-slider-thumb:hover {
-  transform: scale(1.2);
+  transform: scale(1.25);
+  box-shadow: 0 3px 10px rgba(11,27,42,0.25);
 }
 
 /* XAI tag */
@@ -215,6 +460,7 @@ body {
   user-select: none;
   background: #FAF9F7;
   text-align: left;
+  font-family: var(--font-serif);
 }
 
 .day-tab:hover {
@@ -446,6 +692,23 @@ body {
   margin-top: 0;
 }
 
+/* ── Centered view (J form & P explore) ──────────────────────────
+   When user picks J or P, content expands to center of full page.
+   ────────────────────────────────────────────────────────────── */
+.homepage-main.centered-view {
+  justify-content: center;
+  gap: 0;
+}
+.homepage-left.centered-view {
+  max-width: 720px;
+  margin: 0 auto;
+  width: 100%;
+  flex: 0 0 auto;
+}
+.homepage-left.form-view.centered-view {
+  max-width: 600px;
+}
+
 .hero-content {
   display: flex;
   gap: 32px;
@@ -484,15 +747,7 @@ body {
   gap: 10px;
 }
 
-.hero-text-container > button.animate-fade-up {
-  background: var(--color-accent);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 14px 28px;
-  font-size: 16px;
-  font-weight: 500;
-}
+/* Removed: was overriding .quiz-intro-cta with wrong color/border */
 
 /* =========================================================
    ItineraryPage & MapPage Layout Base Styles
@@ -743,5 +998,22 @@ body {
   }
   .attraction-drag-handle svg {
     transform: rotate(90deg);
+  }
+}
+/* P-style Explore Cards Responsive Container */
+.explore-spots-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .explore-spots-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .explore-spots-container > div {
+    flex: 1; /* Make cards take equal width */
   }
 }

@@ -46,7 +46,7 @@ export default function WhatIfSliders({
             color: 'var(--color-text-muted)',
             fontSize: 12,
             cursor: 'pointer',
-            fontFamily: 'inherit',
+            fontFamily: 'var(--font-serif)',
             display: 'flex',
             alignItems: 'center',
             gap: 4

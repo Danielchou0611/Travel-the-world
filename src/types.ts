@@ -12,6 +12,7 @@ export interface TripPreferences {
   mustVisit: string;
   ragContent: string;
   specialRequirements?: string;
+  type?: 'J' | 'P'; // J人 or P人 flow
 }
 
 export interface XAIScore {

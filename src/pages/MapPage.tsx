@@ -106,7 +106,7 @@ function AttractionInfoWindow({ attraction }: { attraction: Attraction }) {
   const [imgError, setImgError] = useState(false);
 
   return (
-    <div style={{ maxWidth: 260, fontFamily: 'Inter, sans-serif', lineHeight: 1.5 }}>
+    <div style={{ maxWidth: 260, fontFamily: 'var(--font-sans)', lineHeight: 1.5 }}>
       {/* Image */}
       {attraction.image && !imgError ? (
         <img
@@ -425,7 +425,7 @@ export default function MapPage() {
             width: 'auto',
             fontSize: 13,
             fontWeight: 600,
-            fontFamily: 'inherit',
+            fontFamily: 'var(--font-serif)',
             cursor: 'default',
             borderRadius: 6,
             border: `1.5px dashed ${accentColor}`,
@@ -468,7 +468,7 @@ export default function MapPage() {
                   background: i === activeDay ? accentColor : '#FFFFFF',
                   color: i === activeDay ? '#FFFFFF' : 'var(--color-text-muted)',
                   transition: 'all 0.2s',
-                  fontFamily: 'inherit',
+                  fontFamily: 'var(--font-serif)',
                 }}
               >
                 Day {day.day}

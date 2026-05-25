@@ -33,7 +33,7 @@ export default function Navbar({ showBack, backLabel = '返回', backPath = '/',
               color: 'var(--color-text-muted)',
               fontSize: 13,
               cursor: 'pointer',
-              fontFamily: 'inherit',
+              fontFamily: 'var(--font-serif)',
               transition: 'all 0.2s',
             }}
           >

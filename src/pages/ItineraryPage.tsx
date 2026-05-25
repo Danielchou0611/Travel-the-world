@@ -449,7 +449,7 @@ export default function ItineraryPage() {
           <div className="alert-banner animate-fade-up" style={{ marginBottom: 24 }}>
             <span style={{ color: '#B45309' }}><IconAlert /></span>
             <div style={{ flex: 1 }}>
-              <p style={{ fontSize: 13, fontWeight: 600, color: '#92400E', margin: 0 }}>
+              <p style={{ fontFamily: 'var(--font-serif)', fontSize: 13, fontWeight: 600, color: '#92400E', margin: 0 }}>
                 行程提示：Day {currentDay.day}
               </p>
               <p style={{ fontSize: 12, color: '#B45309', marginTop: 4, lineHeight: 1.5 }}>
@@ -505,7 +505,7 @@ export default function ItineraryPage() {
                   transition: 'all 0.15s',
                 }}
               >
-                <div style={{ fontWeight: 600 }}>Day {day.day}</div>
+                <div style={{ fontWeight: 600, fontFamily: 'var(--font-serif)' }}>Day {day.day}</div>
               </div>
             ))}
           </div>
