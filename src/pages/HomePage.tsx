@@ -182,7 +182,6 @@ export default function HomePage() {
   const [ragContent, setRagContent] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const [loadingDots, setLoadingDots] = useState('');
   const [jpyRate, setJpyRate] = useState<number>(4.76);
   const destinationInputRef = useRef<HTMLInputElement>(null);
   const normalizedDestinationInput = destinationInput.trim();
@@ -200,25 +199,6 @@ export default function HomePage() {
       })
       .catch(err => console.error('Failed to fetch exchange rate', err));
   }, []);
-
-  // Animate loading dots while `loading` is true.
-  useEffect(() => {
-    if (!loading) {
-      setLoadingDots('');
-      return;
-    }
-
-    const frames = ['.', '..', '...', '..'];
-    let idx = 0;
-    // show first frame immediately
-    setLoadingDots(frames[0]);
-    const id = setInterval(() => {
-      idx = (idx + 1) % frames.length;
-      setLoadingDots(frames[idx]);
-    }, 400);
-
-    return () => clearInterval(id);
-  }, [loading]);
 
   const toggleInterest = (interest: Interest) => {
     setInterests(prev =>
@@ -922,4 +902,3 @@ export default function HomePage() {
     </div>
   );
 }
-

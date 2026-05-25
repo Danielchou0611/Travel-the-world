@@ -1,13 +1,14 @@
 import { useState, useEffect, useMemo, useRef, useLayoutEffect, useContext } from 'react';
-import { useParams, useLocation, useNavigate } from 'react-router-dom';
-import type { Trip, Attraction } from '../types';
-import { MOCK_TRIP, rerankAttractions } from '../services/api';
+import { useParams, useNavigate } from 'react-router-dom';
+import type { Attraction } from '../types';
+import { rerankAttractions } from '../services/api';
 import { TripContext } from '../contexts/TripContext';
 import Navbar from '../components/Navbar';
 import AttractionCard from '../components/AttractionCard';
 import WhatIfSliders from '../components/WhatIfSliders';
 import ChatBox from '../components/ChatBox';
 import { generateItineraryHtml } from '../utils/htmlExport';
+import ItineraryAddAttractionPanel from '../components/ItineraryAddAttractionPanel';
 
 const IconCalendar = () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>;
 const IconYen = () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="12" y1="9" x2="12" y2="22" /><polyline points="6 4 12 9 18 4" /><line x1="8" y1="13" x2="16" y2="13" /><line x1="8" y1="17" x2="16" y2="17" /></svg>;
@@ -17,7 +18,6 @@ const IconAlert = () => <svg width="16" height="16" viewBox="0 0 24 24" fill="no
 
 export default function ItineraryPage() {
   const { tripId } = useParams();
-  const location = useLocation();
   const navigate = useNavigate();
 
   // Use shared trip state from context (hydrated from navigation state by provider)
@@ -50,6 +50,10 @@ export default function ItineraryPage() {
   // Selected card index for external up/down buttons
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [isDownloadingHtml, setIsDownloadingHtml] = useState(false);
+  const [nearbyRestaurantRequest, setNearbyRestaurantRequest] = useState<{
+    attraction: Attraction;
+    token: number;
+  } | null>(null);
 
   async function handleDownloadHtml() {
     if (!trip) return;
@@ -237,6 +241,48 @@ export default function ItineraryPage() {
     setEditAttractions(trip?.days?.[activeDay]?.attractions ?? []);
     setIsEditing(false);
     setSelectedIndex(null);
+  }
+
+  function handleAddAttraction(attraction: Attraction, options?: { afterAttractionId?: string }) {
+    const source = isEditing
+      ? editAttractions
+      : (trip?.days?.[activeDay]?.attractions ?? []);
+    const insertAfterId = options?.afterAttractionId;
+    const insertIndex = insertAfterId
+      ? Math.max(source.findIndex(item => item.id === insertAfterId) + 1, 0)
+      : source.length;
+
+    const insertAt = insertIndex > source.length ? source.length : insertIndex;
+
+    const insertIntoList = (list: Attraction[]) => {
+      const next = [...list];
+      next.splice(insertAt, 0, attraction);
+      return next;
+    };
+
+    if (isEditing) {
+      setEditAttractions(prev => insertIntoList(prev));
+    } else {
+      setTrip(prev => ({
+        ...prev,
+        days: prev.days.map((day, index) => (
+          index === activeDay
+            ? { ...day, attractions: insertIntoList(day.attractions) }
+            : day
+        )),
+      }));
+    }
+
+    setManualOrderDays(prev => new Set(prev).add(activeDay));
+    setSelectedIndex(insertAt);
+  }
+
+  function handleFindNearbyRestaurants(attraction: Attraction) {
+    if (!attraction.position) return;
+    setNearbyRestaurantRequest({
+      attraction,
+      token: Date.now(),
+    });
   }
 
   // ── Up/Down reorder via buttons ───────────────────────────────────
@@ -500,7 +546,7 @@ export default function ItineraryPage() {
           </div>
 
           {/* Right: Attractions */}
-          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 16 }}>
+          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 16, minWidth: 0 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8 }}>
               <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 16, fontWeight: 600, color: 'var(--color-text)', margin: 0 }}>
                 Day {currentDay?.day}
@@ -607,6 +653,32 @@ export default function ItineraryPage() {
                         <polygon points="6,10 0,0 12,0" fill={isLast ? 'var(--color-border)' : 'var(--color-text)'} />
                       </svg>
                     </button>
+
+                    {!isEditing && attraction.position && (
+                      <button
+                        onClick={e => { e.stopPropagation(); handleFindNearbyRestaurants(attraction); }}
+                        title="增加附近餐廳"
+                        style={{
+                          marginTop: 6,
+                          padding: '8px 10px',
+                          background: 'rgba(255,255,255,0.96)',
+                          border: '1px solid var(--color-border)',
+                          borderRadius: 10,
+                          cursor: 'pointer',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          fontSize: 11,
+                          color: 'var(--color-text)',
+                          fontWeight: 600,
+                          whiteSpace: 'nowrap',
+                          boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
+                          backdropFilter: 'blur(4px)',
+                        }}
+                      >
+                        附近餐廳
+                      </button>
+                    )}
                   </div>
                 </div>
               );
@@ -624,9 +696,17 @@ export default function ItineraryPage() {
                 今天的行程已全部刪除
               </div>
             )}
-            </div>
-
           </div>
+
+          <ItineraryAddAttractionPanel
+            trip={trip}
+            currentDay={currentDay}
+            existingAttractions={displayAttractions}
+            onAddAttraction={handleAddAttraction}
+            nearbyRestaurantRequest={nearbyRestaurantRequest}
+          />
+
+        </div>
           </>
         )}
       </div>

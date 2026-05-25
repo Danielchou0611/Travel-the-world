@@ -800,6 +800,221 @@ input, textarea, select {
   align-items: flex-start;
 }
 
+.add-attraction-panel {
+  width: 320px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 90px;
+}
+
+.add-attraction-panel-body {
+  margin-top: 12px;
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(250, 247, 242, 0.96)),
+    #fff;
+  box-shadow: 0 18px 36px rgba(44, 44, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.panel-chip {
+  flex: 1;
+  border: 1px solid var(--color-border);
+  background: #fff;
+  color: var(--color-text-muted);
+  border-radius: 999px;
+  padding: 8px 10px;
+  font-size: 12px;
+  font-family: var(--font-serif);
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.panel-chip.active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+
+.panel-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.panel-field label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.panel-select {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px 12px;
+  font-size: 13px;
+  color: var(--color-text);
+}
+
+.panel-input {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px 12px;
+  font-size: 13px;
+  color: var(--color-text);
+}
+
+.panel-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.interest-slider-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 320px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.interest-slider-row {
+  display: grid;
+  grid-template-columns: 92px 1fr 32px;
+  gap: 10px;
+  align-items: center;
+  font-size: 12px;
+  color: var(--color-text);
+}
+
+.interest-slider-row input[type="range"] {
+  width: 100%;
+}
+
+.interest-slider-row strong {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  text-align: right;
+}
+
+.panel-status {
+  padding: 12px;
+  border-radius: 10px;
+  background: #f6f4ef;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.panel-status.error {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.poi-results {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 700px;
+  overflow: auto;
+}
+
+.poi-result-card {
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.94);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.poi-result-top {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.poi-result-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.poi-result-thumb {
+  width: 92px;
+  height: 92px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #f3f0ea;
+  border: 1px solid var(--color-border);
+}
+
+.poi-result-thumb.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: var(--color-text-muted);
+  font-size: 11px;
+}
+
+.poi-result-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.poi-result-meta {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.poi-score {
+  min-width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: #fbe7d8;
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.poi-interest-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.poi-interest-tags span {
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #f6f1ec;
+  color: var(--color-text-muted);
+  font-size: 11px;
+}
+
+.poi-result-summary {
+  font-size: 12px;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
 .day-tabs-container {
   width: 120px;
   flex-shrink: 0;
@@ -1055,6 +1270,11 @@ input, textarea, select {
   .itinerary-layout {
     flex-direction: column;
     gap: 24px;
+  }
+
+  .add-attraction-panel {
+    width: 100%;
+    position: static;
   }
 
   .day-tabs-container {

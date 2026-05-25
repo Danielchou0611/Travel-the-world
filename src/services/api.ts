@@ -1,4 +1,12 @@
-import type { Trip, TripPreferences } from '../types';
+import type {
+  PreferenceProfile,
+  RecommendationMetadata,
+  RecommendationPoi,
+  RestaurantMetadata,
+  RestaurantVenue,
+  Trip,
+  TripPreferences,
+} from '../types';
 
 // ─── Image placeholders using Unsplash (Japan-themed) ─────────────
 const IMAGES = {
@@ -299,7 +307,7 @@ export const MOCK_TRIP: Trip = {
           rating: 4.4,
           estimatedCost: '¥0–不限',
           location: '東京・千代田区',
-          explorationScore: 78,
+          baseScore: 78,
           foodScore: 20,
           explorationScore: 65,
           xai: {
@@ -506,7 +514,10 @@ export const MOCK_TRIP: Trip = {
 // ─── API service ─────────────────────────────────────────────────
 
 // ─── API Configuration ───────────────────────────────────────────
-const API_BASE_URL = ''; // 透過 Vite proxy 轉發至後端，避免 CORS（proxy 設定在 vite.config.ts）
+const TRIP_API_BASE_URL = '/trip-api'; // 透過 Vite proxy 轉發至 8001
+const RECOMMENDATION_API_BASE_URL = '/rec-api'; // 透過 Vite proxy 轉發至 8000
+const ALL_POI_PAGE_SIZE = 5000;
+const ALL_RESTAURANT_PAGE_SIZE = 5000;
 function normalizeAttraction(raw: any, index: number): any {
   // 正規化 xai 物件
   const rawXai = raw.xai ?? {};
@@ -561,7 +572,7 @@ export async function generateTrip(preferences: TripPreferences): Promise<Trip> 
     // const controller = new AbortController();
     // const timeoutId = setTimeout(() => controller.abort(), API_TIMEOUT);
 
-    const response = await fetch(`${API_BASE_URL}/api/generate`, {
+    const response = await fetch(`${TRIP_API_BASE_URL}/api/generate`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -668,7 +679,7 @@ export function rerankAttractions(
  */
 export async function modifyTrip(destination: string, current_itinerary: Trip, user_request: string): Promise<Trip> {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/modify`, {
+    const response = await fetch(`${TRIP_API_BASE_URL}/api/modify`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -733,4 +744,240 @@ export async function modifyTrip(destination: string, current_itinerary: Trip, u
     console.error('❌ Modify API call failed:', error);
     throw error;
   }
+}
+
+export async function getRecommendationMetadata(): Promise<RecommendationMetadata> {
+  const response = await fetch(`${RECOMMENDATION_API_BASE_URL}/api/metadata/`);
+  if (!response.ok) {
+    throw new Error(`無法取得推薦篩選資料：${response.status} ${response.statusText}`);
+  }
+
+  const data = await response.json() as Partial<RecommendationMetadata>;
+  return {
+    regions: Array.isArray(data.regions) ? data.regions : [],
+    categories: Array.isArray(data.categories) ? data.categories : [],
+    poi_count: typeof data.poi_count === 'number' ? data.poi_count : undefined,
+  };
+}
+
+export async function getRestaurantMetadata(): Promise<RestaurantMetadata> {
+  const response = await fetch(`${RECOMMENDATION_API_BASE_URL}/api/restaurants/metadata/`);
+  if (!response.ok) {
+    throw new Error(`無法取得餐廳篩選資料：${response.status} ${response.statusText}`);
+  }
+
+  const data = await response.json() as Partial<RestaurantMetadata>;
+  return {
+    regions: Array.isArray(data.regions) ? data.regions : [],
+    categories: Array.isArray(data.categories) ? data.categories : [],
+    venue_types: Array.isArray(data.venue_types) ? data.venue_types : [],
+    restaurant_count: typeof data.restaurant_count === 'number' ? data.restaurant_count : undefined,
+  };
+}
+
+type PoiQuery = {
+  region: string;
+  category?: string;
+};
+
+type PaginatedResponse<T> = {
+  count?: number;
+  next?: string | null;
+  previous?: string | null;
+  results?: T[];
+};
+
+function normalizeRecommendationPoi(raw: any): RecommendationPoi {
+  return {
+    id: String(raw?.id ?? ''),
+    name: raw?.name ?? '未命名景點',
+    region: raw?.region ?? '',
+    category: raw?.category ?? '景點',
+    interests: Array.isArray(raw?.interests) ? raw.interests.map(String) : [],
+    image_url: typeof raw?.image_url === 'string' ? raw.image_url : undefined,
+    final_score: typeof raw?.final_score === 'number' ? raw.final_score : undefined,
+    score_breakdown: raw?.score_breakdown && typeof raw.score_breakdown === 'object'
+      ? {
+          interest_match: typeof raw.score_breakdown.interest_match === 'number' ? raw.score_breakdown.interest_match : undefined,
+          static_score: typeof raw.score_breakdown.static_score === 'number' ? raw.score_breakdown.static_score : undefined,
+        }
+      : undefined,
+    google_rating: typeof raw?.google_rating === 'number' ? raw.google_rating : undefined,
+    static_score: typeof raw?.static_score === 'number' ? raw.static_score : undefined,
+    lat: typeof raw?.lat === 'number' ? raw.lat : undefined,
+    lng: typeof raw?.lng === 'number' ? raw.lng : undefined,
+    context: typeof raw?.context === 'string' ? raw.context : undefined,
+    description: typeof raw?.description === 'string' ? raw.description : undefined,
+  };
+}
+
+function normalizeRecommendationPageUrl(url: string): string {
+  if (url.startsWith('http://') || url.startsWith('https://')) {
+    const parsed = new URL(url);
+    return `${RECOMMENDATION_API_BASE_URL}${parsed.pathname}${parsed.search}`;
+  }
+
+  return url.startsWith('/rec-api') ? url : `${RECOMMENDATION_API_BASE_URL}${url}`;
+}
+
+function parseCoordinates(raw: unknown): { lat?: number; lng?: number } {
+  if (typeof raw !== 'string') return {};
+  const match = raw.match(/Point\(([-\d.]+)\s+([-\d.]+)\)/);
+  if (!match) return {};
+
+  const lng = Number(match[1]);
+  const lat = Number(match[2]);
+  return {
+    lat: Number.isFinite(lat) ? lat : undefined,
+    lng: Number.isFinite(lng) ? lng : undefined,
+  };
+}
+
+async function fetchAllPoiPages(initialUrl: string): Promise<any[]> {
+  const allResults: any[] = [];
+  const visited = new Set<string>();
+  let nextUrl: string | null = initialUrl;
+
+  while (nextUrl) {
+    const requestUrl = normalizeRecommendationPageUrl(nextUrl);
+    if (visited.has(requestUrl)) break;
+    visited.add(requestUrl);
+
+    const response = await fetch(requestUrl);
+    if (!response.ok) {
+      throw new Error(`無法取得景點清單：${response.status} ${response.statusText}`);
+    }
+
+    const data = await response.json() as PaginatedResponse<any> | any[];
+    if (Array.isArray(data)) {
+      allResults.push(...data);
+      break;
+    }
+
+    if (Array.isArray(data.results)) {
+      allResults.push(...data.results);
+    }
+
+    nextUrl = typeof data.next === 'string' && data.next.length > 0
+      ? data.next
+      : null;
+  }
+
+  return allResults;
+}
+
+export async function getPois({ region, category }: PoiQuery): Promise<RecommendationPoi[]> {
+  const params = new URLSearchParams();
+  params.set('region', region);
+  if (category) params.set('category', category);
+  params.set('page_size', String(ALL_POI_PAGE_SIZE));
+
+  const results = await fetchAllPoiPages(`${RECOMMENDATION_API_BASE_URL}/api/pois/?${params.toString()}`);
+  return results.map(normalizeRecommendationPoi).filter(poi => poi.id);
+}
+
+type RestaurantQuery = {
+  region: string;
+  category?: string;
+};
+
+type NearbyRestaurantQuery = {
+  lat: number;
+  lng: number;
+  radiusM: number;
+  topK: number;
+  category?: string;
+};
+
+function normalizeRestaurantVenue(raw: any): RestaurantVenue {
+  const parsedCoordinates = parseCoordinates(raw?.coordinates);
+  return {
+    id: String(raw?.id ?? ''),
+    name: raw?.name ?? '未命名餐廳',
+    region: raw?.region ?? '',
+    category: raw?.category ?? raw?.type ?? '餐廳',
+    image_url: typeof raw?.image_url === 'string' ? raw.image_url : typeof raw?.image === 'string' ? raw.image : undefined,
+    google_rating: typeof raw?.google_rating === 'number' ? raw.google_rating : typeof raw?.rating === 'number' ? raw.rating : undefined,
+    static_score: typeof raw?.static_score === 'number' ? raw.static_score : undefined,
+    final_score: typeof raw?.final_score === 'number' ? raw.final_score : undefined,
+    lat: typeof raw?.lat === 'number' ? raw.lat : parsedCoordinates.lat,
+    lng: typeof raw?.lng === 'number' ? raw.lng : parsedCoordinates.lng,
+    context: typeof raw?.context === 'string' ? raw.context : undefined,
+    description: typeof raw?.description === 'string' ? raw.description : undefined,
+  };
+}
+
+export async function getRestaurants({ region, category }: RestaurantQuery): Promise<RestaurantVenue[]> {
+  const params = new URLSearchParams();
+  params.set('region', region);
+  if (category) params.set('category', category);
+  params.set('page_size', String(ALL_RESTAURANT_PAGE_SIZE));
+
+  const results = await fetchAllPoiPages(`${RECOMMENDATION_API_BASE_URL}/api/restaurants/?${params.toString()}`);
+  return results.map(normalizeRestaurantVenue).filter(restaurant => restaurant.id);
+}
+
+export async function getNearbyRestaurants({
+  lat,
+  lng,
+  radiusM,
+  topK,
+  category,
+}: NearbyRestaurantQuery): Promise<RestaurantVenue[]> {
+  const response = await fetch(`${RECOMMENDATION_API_BASE_URL}/api/restaurants/recommendations/`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      lat,
+      lng,
+      radius_m: radiusM,
+      top_k: topK,
+      category: category || undefined,
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`無法取得附近餐廳：${response.status} ${response.statusText}`);
+  }
+
+  const data = await response.json() as { results?: any[] };
+  const results = Array.isArray(data.results) ? data.results : [];
+  return results.map(normalizeRestaurantVenue).filter(restaurant => restaurant.id);
+}
+
+type RecommendationQuery = {
+  region: string;
+  category?: string;
+  preferences: PreferenceProfile;
+  topK: number;
+};
+
+export async function getRecommendedPois({
+  region,
+  category,
+  preferences,
+  topK,
+}: RecommendationQuery): Promise<RecommendationPoi[]> {
+  const response = await fetch(`${RECOMMENDATION_API_BASE_URL}/api/recommendations/`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      region,
+      category: category || undefined,
+      preferences,
+      top_k: topK,
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`無法取得景點推薦：${response.status} ${response.statusText}`);
+  }
+
+  const data = await response.json() as { results?: any[] };
+  const results = Array.isArray(data.results) ? data.results : [];
+  return results.map(normalizeRecommendationPoi).filter(poi => poi.id);
 }
