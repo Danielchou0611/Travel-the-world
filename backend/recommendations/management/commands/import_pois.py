@@ -47,6 +47,7 @@ class Command(BaseCommand):
                     "name": self._as_text(row.get("name")),
                     "region": self._as_text(row.get("region")),
                     "category": self._as_text(row.get("category")),
+                    "context": self._as_text(row.get("context")),
                     "interests": row.get("interests") or [],
                     "google_rating": row.get("google_rating"),
                     "review_count": row.get("review_count") or 0,

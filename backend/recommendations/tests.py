@@ -25,6 +25,7 @@ class RecommendationApiTests(TestCase):
             name="歷史景點",
             region="東京都",
             category="景點",
+            context="江戶時代歷史景點",
             interests=["歷史", "戶外"],
             static_score=0.8,
         )
@@ -33,6 +34,7 @@ class RecommendationApiTests(TestCase):
             name="藝術景點",
             region="東京都",
             category="景點",
+            context="當代藝術展館",
             interests=["藝術"],
             static_score=0.75,
         )
@@ -49,6 +51,7 @@ class RecommendationApiTests(TestCase):
         )
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.data["results"][0]["id"], "Q1")
+        self.assertEqual(response.data["results"][0]["context"], "江戶時代歷史景點")
 
     def test_user_preference_upsert_and_reuse(self):
         user = get_user_model().objects.create_user(username="gary", password="secret")
@@ -62,6 +65,11 @@ class RecommendationApiTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.data["results"][0]["id"], "Q2")
 
+    def test_poi_list_returns_context(self):
+        response = self.client.get("/api/pois/")
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.data["results"][0]["context"], "江戶時代歷史景點")
+
 
 class RestaurantApiTests(TestCase):
     def setUp(self):
@@ -72,6 +80,7 @@ class RestaurantApiTests(TestCase):
             region="東京都",
             category="拉麵",
             venue_type="餐廳",
+            context="車站附近的熱門拉麵店",
             static_score=0.95,
             google_rating=4.8,
             review_count=1000,
@@ -85,6 +94,7 @@ class RestaurantApiTests(TestCase):
             region="東京都",
             category="咖啡",
             venue_type="小店",
+            context="適合下午休息的咖啡廳",
             static_score=0.85,
             google_rating=4.6,
             review_count=500,
@@ -98,6 +108,7 @@ class RestaurantApiTests(TestCase):
             region="大阪府",
             category="壽司",
             venue_type="餐廳",
+            context="在地人常去的壽司店",
             static_score=0.92,
             google_rating=4.7,
             review_count=800,
@@ -112,6 +123,7 @@ class RestaurantApiTests(TestCase):
         self.assertEqual(response.data["count"], 1)
         self.assertEqual(response.data["results"][0]["id"], "R1")
         self.assertEqual(response.data["results"][0]["raw_type"], "拉麵店")
+        self.assertEqual(response.data["results"][0]["context"], "車站附近的熱門拉麵店")
 
     def test_restaurant_metadata_includes_venue_types(self):
         response = self.client.get("/api/restaurants/metadata/")
@@ -131,6 +143,7 @@ class RestaurantApiTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.data["count"], 2)
         self.assertEqual(response.data["results"][0]["id"], "R1")
+        self.assertEqual(response.data["results"][0]["context"], "車站附近的熱門拉麵店")
         self.assertEqual(response.data["results"][0]["final_score"], 0.95)
         self.assertIsNone(response.data["results"][0]["distance_m"])
 
@@ -178,6 +191,7 @@ class ImportCommandTests(TestCase):
                     "name": "新餐廳",
                     "region": "東京都",
                     "category": "咖啡",
+                    "context": "深夜也營業",
                 }
             ]
         )
@@ -185,7 +199,13 @@ class ImportCommandTests(TestCase):
         call_command("import_restaurants", json_path, "--sync")
 
         self.assertFalse(Restaurant.objects.filter(restaurant_id="OLD").exists())
-        self.assertTrue(Restaurant.objects.filter(restaurant_id="R1", name="新餐廳").exists())
+        self.assertTrue(
+            Restaurant.objects.filter(
+                restaurant_id="R1",
+                name="新餐廳",
+                context="深夜也營業",
+            ).exists()
+        )
 
     def test_import_pois_sync_removes_missing_rows(self):
         PointOfInterest.objects.create(
@@ -201,6 +221,7 @@ class ImportCommandTests(TestCase):
                     "name": "新景點",
                     "region": "東京都",
                     "category": "博物館",
+                    "context": "親子友善的互動式博物館",
                 }
             ]
         )
@@ -208,4 +229,10 @@ class ImportCommandTests(TestCase):
         call_command("import_pois", json_path, "--sync")
 
         self.assertFalse(PointOfInterest.objects.filter(poi_id="OLD").exists())
-        self.assertTrue(PointOfInterest.objects.filter(poi_id="P1", name="新景點").exists())
+        self.assertTrue(
+            PointOfInterest.objects.filter(
+                poi_id="P1",
+                name="新景點",
+                context="親子友善的互動式博物館",
+            ).exists()
+        )

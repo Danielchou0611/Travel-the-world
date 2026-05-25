@@ -48,6 +48,7 @@ class Command(BaseCommand):
                     "region": self._as_text(row.get("region")),
                     "category": self._as_text(row.get("category")),
                     "venue_type": self._as_text(row.get("venue_type")),
+                    "context": self._as_text(row.get("context")),
                     "interests": row.get("interests") if isinstance(row.get("interests"), list) else [],
                     "google_rating": row.get("google_rating"),
                     "review_count": row.get("review_count") or 0,
