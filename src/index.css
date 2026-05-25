@@ -133,12 +133,12 @@ input, textarea, select {
   border: none;
   position: relative;
   overflow: hidden;
-  transition: transform 180ms cubic-bezier(0.22, 1, 0.36, 1),
-              box-shadow 180ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   box-shadow: var(--shadow-md);
 }
 .quiz-personality-card:hover {
-  transform: translateY(-4px) scale(1.03);
+  transform: translateY(-6px);
   box-shadow: 0 20px 48px rgba(11,27,42,0.16);
 }
 .quiz-personality-card:active {
@@ -234,12 +234,12 @@ input, textarea, select {
   font-family: var(--font-serif);
   color: var(--sumi-warm);
   text-align: center;
-  transition: transform 150ms cubic-bezier(0.22,1,0.36,1),
-              box-shadow 150ms;
+  transition: transform 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   min-height: 44px;
 }
 .quiz-option:hover {
-  transform: translateY(-2px) scale(1.02);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-md);
   border-color: var(--ochre);
 }
@@ -333,7 +333,9 @@ input, textarea, select {
   font-size: 15px;
   font-weight: 500;
   cursor: pointer;
-  transition: background 150ms, transform 150ms cubic-bezier(0.22,1,0.36,1);
+  transition: background 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              transform 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              box-shadow 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   letter-spacing: 0.04em;
   font-family: var(--font-serif);
   width: 100%;
@@ -342,7 +344,8 @@ input, textarea, select {
 
 .btn-primary:hover:not(:disabled) {
   background: var(--prussian-deep);
-  transform: translateY(-2px) scale(1.02);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(18, 48, 65, 0.16);
 }
 
 .btn-primary:active:not(:disabled) {
@@ -352,6 +355,22 @@ input, textarea, select {
 .btn-primary:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+/* Generic slow hover float */
+.slow-hover-float {
+  transition: all 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+.slow-hover-float:hover:not(:disabled) {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08) !important;
+}
+.slow-hover-float-lg {
+  transition: all 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+.slow-hover-float-lg:hover:not(:disabled) {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 12px 24px rgba(18,48,65,0.16) !important;
 }
 
 /* Custom input style */
