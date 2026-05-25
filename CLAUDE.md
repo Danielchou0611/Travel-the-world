@@ -36,7 +36,7 @@
 | 姓名 | 學號 | 系所 | 角色 | 主要負責 |
 |------|------|------|------|---------|
 | 周珥豪 | M11415067 | 資工碩一　台科大 | 後端 / 爬蟲 / API / 部署 | Django、REST API、Google Maps 串接、Railway 部署 |
-| 周宜學 | R14458007 | 材料碩一　台大 | PM / 後端協作 / 報告 | 進度追蹤、API Contract、資料整理、報告統籌 |
+| 周宜學 | R14458007 | 醫材所碩一　台大 | PM / 後端協作 / 報告 | 進度追蹤、API Contract、資料整理、報告統籌 |
 | 王孟蘋 | M11409105 | 資管碩一　台科大 | 前端 / UIUX / 資料分析 | React UI、Wireframe、Persona、XAI 展示 |
 | 顏伯亨 | R14522742 | 機械碩一　台大 | 前端 / UI / RAG | 地圖 UI、RAG 架構、Google Maps popup |
 | 李冠霖 | B13902028 | 資工二　台大 | 資料分析 / 評分系統 / UI | 景點評分公式、行程編輯器、評估測試 |
@@ -56,22 +56,34 @@
 
 ---
 
-## 📊 Current Progress Snapshot（截至 4/13）
+## 📊 Current Progress Snapshot(截至 5/8,由 PM 整合 GitHub + 6 份狀態表更新)
 
-### 已完成 ✅
-- 孟蘋：Wireframe 3頁、React 專案、首頁表單、Persona 分析、What-if 滑桿、行程過密警示
-- 伯亨：RAG 架構文件、RAG prototype（Gemini Embedding + ChromaDB）、Google Maps 標記
-- 冠霖：景點評分公式（finalScore = 0.7×baseScore + 0.3×scheduleScore）、行程編輯器框架
-- 宜學：進度追蹤 Google Sheet、企業分析報告、組員評語文件
+> 4/13 快照已過時。此處為 5/8 現況。專案重大轉向:**Django + JWT + 6 表 SQL 路線被團隊用腳投票否決,改走 FastAPI + JSON / Vector DB**。架構決策見 `docs/competition/05_architecture_decision.md`。
+
+### 已完成 ✅(可在 GitHub 驗證)
+- **Daniel(周珥豪 M11415067 · 資工碩一 台科大,後端轉資料工程)**:資料來源評估歷程(ptt / reddit / dcard → 選 wikidata)→ Wikidata SPARQL + Google Maps 評分 + 47 縣市拆檔 + 40K POI `日本全_with_ratings.json` — Daniel branch · 5/8 狀態表確認接下走資料工程,W7 補神社/購物中心類型 + 去重,W8 可能加餐廳資料
+
+**全員學號 / 系所**:Ray R14458007 醫材所碩一 台大 / Daniel M11415067 資工碩一 台科大 / Apple M11409105 資管碩一 台科大 / Austin R14522742 機械碩一 台大 / 李冠霖 B13902028 資工二 台大 / Wen R14942134 電信碩一 台大。**組別**:O 組。
+- **李冠霖(資料 pipeline)**:`pipeline/build_japan_attractions.py` + `simplify_interest_json.py` 把爬蟲資料轉成 `japan_with_rating_interest.json` + 獨立 demo-web(地圖 + 篩選 + 路線查詢)— Gary branch
+- **Wen(LLM 後端)**:FastAPI `server.py` + `gen_gm_ver7.py` Gemini 行程生成 + 對話式修改 — wen branch
+- **Austin(全棧最完整,23 commits)**:RAG 後端(FastAPI + Ollama + ChromaDB)+ React 前端(MapPlanningPage + GoogleMapPanel)+ source excerpt + itinerary groups + URL 全文解析 + fallback — Austin fork
+- **Apple(前端 UI shell,5/8 後狀態未明)**:React 19 + TS + AntD + Vite,HomePage / ItineraryPage / MapPage / WhatIfSliders / AttractionCard / Navbar — Apple branch(4/26 後停滯 12 天)
+- **Ray(品牌 + PM)**:品牌站 brand_preview.html(712 行)+ 18s Hero 影片(intro.mp4)+ Notion 自動化(setup_notion.py 1922 行)+ 競賽策略文件 + 全員 sync 通訊包
 
 ### 進行中 🔄
-- 冠霖：景點評分資料（等真實資料來源）
-- 冠霖：行程編輯器與後端 API 串接（等珥豪 API）
-- 晨楷：Gemini JSON mode POC（有在測試但進度表未更新）
+- **Ray**:整合測試(5/9-5/10 跑 `scripts/integration/01-05.sh`)+ 架構決策(已寫,待 5/12 啟動會公告)
+- **Ray**:競賽報告書 10 頁(目標 5/29 截止)
+- **HW5-1 期末作業 5**:Ray 5/18 截止,W7 內找 4 小時寫完
 
-### 尚未開始 ⬜（關鍵卡點）
-- 珥豪：Django 專案 init、GitHub repo、基本 API endpoint（全部未開始）
-- 晨楷：Prompt Template、後端 AI 服務層
+### 尚未開始 ⬜
+- 5/12 之後的「Wen 整合 endpoint 進 Austin api_server.py」
+- 5/12 之後的「Apple port AttractionCard / WhatIfSliders 到 Austin 前端」
+- 5/19 開始的「社群投放(Reddit / Threads / Dcard)取 traction」
+- 5/25 部署(Vercel + Railway)
+
+### 過時(原規劃但已決定不做)
+- ~~Django 專案 + JWT + 6 表 SQL~~ → 改 FastAPI + JSON / ChromaDB
+- ~~Notion T-W6-Daniel-01~04~~ → 已 archive,Daniel 改補爬蟲
 
 ---
 

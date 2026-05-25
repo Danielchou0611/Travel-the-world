@@ -5,6 +5,48 @@
 
 ---
 
+## Week 8（5/19–5/25）— 5/25 組員進度匯報
+
+### 李冠霖（Backend / Data Pipeline）— 2026/05/25 17:33
+
+**Backend 重大更新**：API 現在會回傳 `context`（XAI 因子上下文）。
+
+#### 資料 zip 化
+因 JSON 過大，已壓縮提交：
+- `japan_with_rating_interest.json.zip`
+- `japan_restaurant_with_rating_interest.json.zip`
+
+#### 完整 Setup 流程（同 branch README.md）
+
+```bash
+# Step 0 — 解壓資料
+unzip japan_restaurant_with_rating_interest.json.zip
+unzip japan_with_rating_interest.json.zip
+
+# Step 1 — 建立 virtualenv
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+# Step 2 — Django Migration
+cd backend
+python manage.py migrate
+
+# Step 3 — 匯入資料至 DB
+python manage.py import_pois ../japan_with_rating_interest.json --sync
+python manage.py import_restaurants ../japan_restaurant_with_rating_interest.json --sync
+
+# Step 4 — 啟動 Server
+python manage.py runserver
+```
+
+#### 對 5/8 PM 評估的影響
+- 5/8 PM 整合報告認定「Django 路線被否決，全員改走 FastAPI + JSON」**已不正確**。
+- 冠霖實際完成 Django backend：含 `manage.py migrate` + 自訂 `import_pois` / `import_restaurants` management commands + ORM 持久化。
+- **下一步行動**：CLAUDE.md 的 Tech Stack 與 Current Progress Snapshot 需重新校正，明確標示 Gary branch 已採 Django + ORM，不再僅是 pipeline 工具。
+
+---
+
 ## Week 2（4/7–4/13）
 
 ### 完成事項
