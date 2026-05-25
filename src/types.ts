@@ -49,6 +49,58 @@ export interface Attraction {
   explorationScore: number; // weight for exploration preference
 }
 
+export interface PreferenceProfile {
+  [key: string]: number;
+}
+
+export interface RecommendationPoi {
+  id: string;
+  name: string;
+  region: string;
+  category: string;
+  interests?: string[];
+  image_url?: string;
+  final_score?: number;
+  score_breakdown?: {
+    interest_match?: number;
+    static_score?: number;
+  };
+  google_rating?: number;
+  static_score?: number;
+  lat?: number;
+  lng?: number;
+  context?: string;
+  description?: string;
+}
+
+export interface RecommendationMetadata {
+  regions: string[];
+  categories: string[];
+  poi_count?: number;
+}
+
+export interface RestaurantMetadata {
+  regions: string[];
+  categories: string[];
+  venue_types?: string[];
+  restaurant_count?: number;
+}
+
+export interface RestaurantVenue {
+  id: string;
+  name: string;
+  region: string;
+  category: string;
+  image_url?: string;
+  google_rating?: number;
+  static_score?: number;
+  final_score?: number;
+  lat?: number;
+  lng?: number;
+  context?: string;
+  description?: string;
+}
+
 export interface DayPlan {
   day: number;
   date: string;
