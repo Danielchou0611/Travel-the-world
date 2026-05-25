@@ -322,6 +322,8 @@ export default function ChatBox({ trip, setTrip }: ChatBoxProps) {
             alignItems: 'center',
             justifyContent: 'center',
             whiteSpace: 'nowrap',
+            background: 'var(--color-accent)',
+            borderColor: 'var(--color-accent)',
           }}
         >
           送出
