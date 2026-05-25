@@ -381,7 +381,7 @@ input, textarea, select {
   padding: 10px 14px;
   color: var(--color-text);
   font-size: 14px;
-  font-family: inherit;
+  font-family: var(--font-serif);
   width: 100%;
   outline: none;
   transition: all 0.2s;
@@ -399,6 +399,14 @@ input, textarea, select {
 .glass-input option {
   background: #FFFFFF;
   color: var(--color-text);
+}
+
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-family: var(--font-serif);
 }
 
 /* Custom range slider */
@@ -858,6 +866,41 @@ input, textarea, select {
   border-radius: 0 12px 12px 0;
 }
 
+/* ── Hero & Quiz layout base classes ── */
+.hero-accent-line {
+  transform-origin: left;
+}
+
+.hero-cta-wrapper {
+  align-self: flex-start;
+}
+
+.quiz-personality-card {
+  width: 280px;
+  min-height: 280px;
+  padding: 36px 24px;
+  gap: 16px;
+}
+
+.quiz-personality-card .card-title {
+  font-size: 24px;
+}
+
+.quiz-personality-card .card-desc {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.quiz-personality-card .card-subtitle {
+  font-size: 11px;
+}
+
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
 /* =========================================================
    Mobile RWD Styles (max-width: 768px)
    ========================================================= */
@@ -907,6 +950,16 @@ input, textarea, select {
   .hero-text-container {
     align-items: center;
   }
+  
+  .hero-accent-line {
+    transform-origin: center !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-cta-wrapper {
+    align-self: center !important;
+  }
 
   .hero-logo {
     height: auto;
@@ -926,7 +979,53 @@ input, textarea, select {
 
   .personality-btns {
     flex-direction: column;
+    align-items: center;
+    gap: 16px !important;
+  }
+  
+  .quiz-personality-card {
+    width: 100% !important;
+    max-width: 320px !important;
+    min-height: 200px !important;
+    padding: 24px 20px !important;
+    gap: 12px !important;
+  }
+  
+  .quiz-personality-card .card-title {
+    font-size: 20px !important;
+  }
+  
+  .quiz-personality-card .card-desc {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+  }
+  
+  .quiz-personality-card .card-subtitle {
+    font-size: 10px !important;
+    margin-top: 6px !important;
+  }
+
+  .mood-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
     width: 100%;
+    /* Ensure they fit without scrolling */
+  }
+  
+  .mood-grid > button {
+    flex: 1;
+    padding: 12px 4px !important;
+    gap: 4px !important;
+  }
+  
+  .mood-grid > button > span:first-child {
+    font-size: 20px !important;
+  }
+  
+  .mood-grid > button > span:last-child {
+    font-size: 11px !important;
+    white-space: nowrap;
   }
 
   .form-grid {

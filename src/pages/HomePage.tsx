@@ -246,6 +246,8 @@ export default function HomePage() {
   };
 
   const handleDestinationKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.nativeEvent.isComposing) return;
+    
     if (e.key === 'Backspace' && !destinationInput && destinations.length > 0) {
       setDestinations(prev => prev.slice(0, -1));
     }
@@ -380,9 +382,10 @@ export default function HomePage() {
                     </motion.h1>
                     {/* Accent rule */}
                     <motion.div
+                      className="hero-accent-line"
                       initial={{ opacity: 0, scaleX: 0 }} animate={{ opacity: 1, scaleX: 1 }} transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 1.0 }}
                       exit={{ opacity: 0, scaleX: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.3 } }}
-                      style={{ width: 100, height: 2, background: 'var(--ochre)', marginTop: 16, transformOrigin: 'left' }} />
+                      style={{ width: 100, height: 2, background: 'var(--ochre)', marginTop: 16 }} />
                   </div>
 
                   <motion.h2
@@ -400,9 +403,10 @@ export default function HomePage() {
                   </motion.p>
 
                   <motion.div
+                    className="hero-cta-wrapper"
                     initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 2.4 }}
                     exit={{ opacity: 0, y: -15, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.0 } }}
-                    style={{ marginTop: 40, alignSelf: 'flex-start' }}
+                    style={{ marginTop: 40 }}
                   >
                     <button
                       className="quiz-intro-cta"
@@ -466,7 +470,7 @@ export default function HomePage() {
                       className="quiz-personality-card j-card"
                       onClick={() => setViewState('form')}
                       aria-label="行程指揮官"
-                      style={{ width: 280, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '36px 24px', minHeight: 280, gap: 16, position: 'relative', overflow: 'hidden' }}
+                      style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', position: 'relative', overflow: 'hidden' }}
                     >
                       {/* Wave decoration */}
                       <div style={{
@@ -500,9 +504,9 @@ export default function HomePage() {
                         ))}
                       </div>
                       <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12 }}>
-                        <div style={{ fontSize: 24, fontWeight: 700, color: '#ffffff', fontFamily: 'var(--font-serif)', letterSpacing: '0.02em' }}>行程指揮官</div>
-                        <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.85)', fontFamily: 'var(--font-serif)', lineHeight: 1.6, padding: '0 8px' }}>「天數、預算、想去什麼都先說清楚,讓 AI 一次排好」</div>
-                        <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.6)', letterSpacing: '0.15em', fontWeight: 500, marginTop: 8 }}>THE CONDUCTOR · J 人</div>
+                        <div className="card-title" style={{ fontWeight: 700, color: '#ffffff', fontFamily: 'var(--font-serif)', letterSpacing: '0.02em' }}>行程指揮官</div>
+                        <div className="card-desc" style={{ color: 'rgba(255,255,255,0.85)', fontFamily: 'var(--font-serif)', padding: '0 8px' }}>「天數、預算、想去什麼都先說清楚,讓 AI 一次排好」</div>
+                        <div className="card-subtitle" style={{ color: 'rgba(255,255,255,0.6)', letterSpacing: '0.15em', fontWeight: 500, marginTop: 8 }}>THE CONDUCTOR · J 人</div>
                       </div>
                     </button>
                   </motion.div>
@@ -513,7 +517,7 @@ export default function HomePage() {
                       className="quiz-personality-card p-card"
                       onClick={() => setViewState('explore')}
                       aria-label="隨興探險家"
-                      style={{ width: 280, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '36px 24px', minHeight: 280, gap: 16, position: 'relative', overflow: 'hidden' }}
+                      style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', position: 'relative', overflow: 'hidden' }}
                     >
                       {/* Cherry blossom */}
                       <div style={{
@@ -547,9 +551,9 @@ export default function HomePage() {
                         ))}
                       </div>
                       <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12 }}>
-                        <div style={{ fontSize: 24, fontWeight: 700, color: '#ffffff', fontFamily: 'var(--font-serif)', letterSpacing: '0.02em' }}>隨興探險家</div>
-                        <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.85)', fontFamily: 'var(--font-serif)', lineHeight: 1.6, padding: '0 8px' }}>「看心情慢慢挑,不要時間表,只要一個方向」</div>
-                        <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.6)', letterSpacing: '0.15em', fontWeight: 500, marginTop: 8 }}>THE WANDERER · P 人</div>
+                        <div className="card-title" style={{ fontWeight: 700, color: '#ffffff', fontFamily: 'var(--font-serif)', letterSpacing: '0.02em' }}>隨興探險家</div>
+                        <div className="card-desc" style={{ color: 'rgba(255,255,255,0.85)', fontFamily: 'var(--font-serif)', padding: '0 8px' }}>「看心情慢慢挑,不要時間表,只要一個方向」</div>
+                        <div className="card-subtitle" style={{ color: 'rgba(255,255,255,0.6)', letterSpacing: '0.15em', fontWeight: 500, marginTop: 8 }}>THE WANDERER · P 人</div>
                       </div>
                     </button>
                   </motion.div>
@@ -746,7 +750,7 @@ export default function HomePage() {
                       <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 26, fontWeight: 400, color: 'var(--sumi-warm)', marginBottom: 6, lineHeight: 1.2 }}>今天，你想做什麼？</h3>
                       <p style={{ fontFamily: 'var(--font-serif)', fontSize: 14, color: 'var(--mist)', marginBottom: 24, lineHeight: 1.6 }}>不用想得太久。一個閃過腦海的詞就好。</p>
 
-                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12 }}>
+                      <div className="mood-grid">
                         {MOODS.map((m, i) => (
                           <motion.button
                             key={m.label}
