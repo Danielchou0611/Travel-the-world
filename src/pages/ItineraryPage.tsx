@@ -49,28 +49,72 @@ export default function ItineraryPage() {
   const [manualOrderDays, setManualOrderDays] = useState<Set<number>>(new Set());
   // Selected card index for external up/down buttons
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const [isDownloadingHtml, setIsDownloadingHtml] = useState(false);
+  const [isDownloadingPdf, setIsDownloadingPdf] = useState(false);
   const [nearbyRestaurantRequest, setNearbyRestaurantRequest] = useState<{
     attraction: Attraction;
     token: number;
   } | null>(null);
 
-  async function handleDownloadHtml() {
+  async function handleDownloadPdf() {
     if (!trip) return;
-    setIsDownloadingHtml(true);
+    setIsDownloadingPdf(true);
     try {
       const htmlContent = generateItineraryHtml(trip);
-      const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `專屬行程規劃_${trip.preferences?.days ?? '未知'}天.html`;
-      a.click();
-      URL.revokeObjectURL(url);
+
+      const iframe = document.createElement('iframe');
+      // 使用絕對防禦的隱藏方式：放在畫面底層但仍屬於 viewport 內，強迫瀏覽器載入並渲染圖片
+      // 將高度設得極大，確保所有圖片都位於 "畫面上"，不會被瀏覽器當作在畫面外而延遲載入
+      iframe.style.position = 'fixed';
+      iframe.style.bottom = '0';
+      iframe.style.right = '0';
+      iframe.style.width = '800px';
+      iframe.style.height = '30000px';
+      iframe.style.border = 'none';
+      iframe.style.zIndex = '-1000';
+      iframe.style.opacity = '0.01';
+      iframe.style.pointerEvents = 'none';
+      document.body.appendChild(iframe);
+
+      const doc = iframe.contentDocument || iframe.contentWindow?.document;
+      if (doc) {
+        doc.open();
+        // 寫入完整的 HTML 結構以確保原生排版與字體完全生效
+        doc.write(`<!DOCTYPE html><html><head><meta charset="utf-8"></head><body style="margin:0;padding:0;background-color:#FAF8F4;">${htmlContent}</body></html>`);
+        doc.close();
+
+        // 嚴格等待 iframe 內所有圖片都載入完成，最多等 5 秒避免卡死
+        const images = Array.from(doc.querySelectorAll('img'));
+        const imagePromises = images.map(img => {
+          if (img.complete) return Promise.resolve();
+          return new Promise(resolve => {
+            img.onload = resolve;
+            img.onerror = resolve; // 若圖片真的掛了也不要卡死
+          });
+        });
+        
+        await Promise.race([
+          Promise.all(imagePromises),
+          new Promise(r => setTimeout(r, 5000))
+        ]);
+
+        // 稍微等待字體套用及畫面渲染
+        await new Promise(r => setTimeout(r, 500));
+      }
+
+      if (iframe.contentWindow) {
+        iframe.contentWindow.focus();
+        iframe.contentWindow.print(); // 喚起原生列印
+      }
+      
+      // 列印視窗關閉後的清理
+      setTimeout(() => {
+        document.body.removeChild(iframe);
+        setIsDownloadingPdf(false);
+      }, 1000);
     } catch (err) {
-      console.error('HTML generation failed', err);
-    } finally {
-      setIsDownloadingHtml(false);
+      console.error('PDF generation failed', err);
+      alert('產生 PDF 失敗，請重試。');
+      setIsDownloadingPdf(false);
     }
   }
 
@@ -397,12 +441,12 @@ export default function ItineraryPage() {
                   儲存
                 </button>
                 <button
-                  onClick={handleDownloadHtml}
-                  disabled={isDownloadingHtml}
-                  className="slow-hover-float"
-                  style={{ background: '#FFFFFF', color: 'var(--color-text)', border: '1px solid var(--color-border)', padding: '6px 14px', width: 'auto', opacity: isDownloadingHtml ? 0.6 : 1 }}
+                  onClick={handleDownloadPdf}
+                  disabled={isDownloadingPdf}
+                  className="btn-primary"
+                  style={{ background: '#FFFFFF', color: 'var(--color-text)', border: '1px solid var(--color-border)', padding: '6px 14px', width: 'auto', opacity: isDownloadingPdf ? 0.6 : 1 }}
                 >
-                  {isDownloadingHtml ? '處理中...' : '下載 HTML 網頁'}
+                  {isDownloadingPdf ? '處理中...' : '下載 PDF'}
                 </button>
                 <button
                   onClick={() => navigate(`/map/${tripId}`, { state: { trip } })}
@@ -451,250 +495,250 @@ export default function ItineraryPage() {
                 </h1>
                 <div style={{ fontSize: 13, color: 'var(--color-text-muted)', marginTop: 6, display: 'flex', alignItems: 'center', gap: 8 }}>
                   <span>{trip?.preferences?.interests?.join(' ・ ') ?? '未知'}</span>
-              <span style={{ color: 'var(--color-border)' }}>|</span>
-              <span>NT$ {trip?.preferences?.budget?.toLocaleString() ?? 0}</span>
-              <span style={{ color: 'var(--color-border)' }}>|</span>
-              <span style={{ color: 'var(--color-accent)' }}>生成於 {trip?.generatedAt ? new Date(trip.generatedAt).toLocaleString('zh-TW', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' }) : '未知'}</span>
-            </div>
-          </div>
-          {!isEditing && (
-            <button
-              onClick={() => { setEditAttractions(trip?.days?.[activeDay]?.attractions ?? []); setIsEditing(true); }}
-              className="btn-primary"
-              style={{ background: '#FFFFFF', color: 'var(--color-text)', border: '1px solid var(--color-border)', padding: '6px 16px', width: 'auto', flexShrink: 0, fontSize: 13 }}
-            >
-              編輯行程
-            </button>
-          )}
-        </div>
-
-        <div className="stat-grid">
-          {[
-            { label: '設定天數', value: `${trip.summary.totalDays} 天`, icon: <IconCalendar /> },
-            { label: '估計費用', value: trip.summary.totalBudget, icon: <IconYen /> },
-            { label: '景點數量', value: `${trip.summary.totalAttractions} 處`, icon: <IconPin /> },
-            { label: '日均行程', value: `${trip.summary.avgPerDay} 處`, icon: <IconChart /> },
-          ].map(stat => (
-            <div key={stat.label} className="stat-card animate-fade-up">
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 13, fontWeight: 500, color: 'var(--color-text-muted)', marginBottom: 8, display: 'flex', alignItems: 'center', gap: 8 }}>
-                {stat.icon}
-                {stat.label}
-              </div>
-              <div style={{ fontFamily: 'var(--font-serif)', fontSize: 22, fontWeight: 600, color: 'var(--color-text)' }}>{stat.value}</div>
-            </div>
-          ))}
-        </div>
-
-        {currentDay?.warning && (
-          <div className="alert-banner animate-fade-up" style={{ marginBottom: 24 }}>
-            <span style={{ color: '#B45309' }}><IconAlert /></span>
-            <div style={{ flex: 1 }}>
-              <p style={{ fontFamily: 'var(--font-serif)', fontSize: 13, fontWeight: 600, color: '#92400E', margin: 0 }}>
-                行程提示：Day {currentDay.day}
-              </p>
-              <p style={{ fontSize: 12, color: '#B45309', marginTop: 4, lineHeight: 1.5 }}>
-                {currentDay.warning} 目前排定了 {currentDay.attractions.length} 個行程，若要確保旅遊節奏，建議減至 3-4 個。
-              </p>
-            </div>
-          </div>
-        )}
-
-        {reranked && !isEditing && (
-          <div style={{
-            position: 'fixed',
-            top: 90,
-            right: 32,
-            zIndex: 200,
-            padding: '12px 16px',
-            background: 'var(--color-accent)',
-            borderRadius: 8,
-            fontSize: 12,
-            fontWeight: 500,
-            color: 'white',
-            display: 'flex',
-            alignItems: 'center',
-            gap: 10,
-            boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-            animation: 'fadeUp 0.3s ease',
-          }}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-              <polyline points="20 6 9 17 4 12" />
-            </svg>
-            景點排序已更新
-          </div>
-        )}
-
-        <div className="itinerary-layout">
-
-          {/* Left: Days */}
-          <div className="day-tabs-container">
-            {trip.days.map((day, i) => (
-              <div
-                key={i}
-                className={`day-tab ${i === activeDay ? 'active' : ''} ${day.warning ? 'warn' : ''}`}
-                onClick={() => switchDay(i)}
-                onDragOver={isEditing && i !== activeDay ? e => { e.preventDefault(); setDragOverDayTab(i); } : undefined}
-                onDragLeave={isEditing ? () => setDragOverDayTab(null) : undefined}
-                onDrop={isEditing && i !== activeDay ? e => { e.preventDefault(); handleDropOnDay(i); } : undefined}
-                style={{
-                  opacity: dragOverDayTab !== null && dragOverDayTab !== i && i !== activeDay ? 0.5 : 1,
-                  cursor: 'pointer',
-                  background: dragOverDayTab === i ? '#FDE8EC' : undefined,
-                  border: dragOverDayTab === i ? '2px dashed var(--color-accent)' : undefined,
-                  transform: dragOverDayTab === i ? 'scale(1.04)' : 'scale(1)',
-                  transition: 'all 0.15s',
-                }}
-              >
-                <div style={{ fontWeight: 600, fontFamily: 'var(--font-serif)' }}>Day {day.day}</div>
-              </div>
-            ))}
-          </div>
-
-          {/* Right: Attractions */}
-          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 16, minWidth: 0 }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8 }}>
-              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 16, fontWeight: 600, color: 'var(--color-text)', margin: 0 }}>
-                Day {currentDay?.day}
-              </h2>
-              <span style={{ fontSize: 12, padding: '2px 10px', borderRadius: 4, background: '#F0EEE9', color: 'var(--color-text-muted)' }}>
-                {displayAttractions.length} 個景點
-              </span>
-            </div>
-
-            {displayAttractions.map((attraction, i) => {
-              const isSelected = selectedIndex === i;
-              const isFirst = i === 0;
-              const isLast = i === displayAttractions.length - 1;
-              return (
-                <div
-                  key={attraction.id}
-                  ref={el => {
-                    if (el) cardWrapperRefs.current.set(attraction.id, el);
-                    else cardWrapperRefs.current.delete(attraction.id);
-                  }}
-                  style={{ position: 'relative', zIndex: 0 }}
-                >
-                  <AttractionCard
-                    attraction={attraction}
-                    index={i}
-                    isEditing={isEditing}
-                    onDelete={() => handleDelete(i)}
-                    onDragStart={() => handleDragStart(i)}
-                    onDragOver={() => handleDragOver(i)}
-                    onDrop={() => handleDrop(i)}
-                    isDragOver={dragOverIndex === i}
-                    isSelected={isSelected}
-                    onSelect={e => { 
-                      e.stopPropagation(); 
-                      const nextSelected = isSelected ? null : i;
-                      setSelectedIndex(nextSelected); 
-                      if (nextSelected !== null && isEditing) {
-                        handleFindNearbyRestaurants(attraction);
-                      }
-                    }}
-                  />
-
-                  {/* ── External up/down triangle buttons ── */}
-                  <div
-                    style={{
-                      position: 'absolute',
-                      top: '50%',
-                      left: 'calc(100% + 12px)',
-                      transform: 'translateY(-50%)',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      alignItems: 'center',
-                      gap: 6,
-                      opacity: isSelected ? 1 : 0,
-                      pointerEvents: isSelected ? 'auto' : 'none',
-                      transition: 'opacity 0.2s ease',
-                    }}
-                  >
-                    {/* Up triangle */}
-                    <button
-                      onClick={e => { e.stopPropagation(); handleMoveUp(i); }}
-                      title="上移"
-                      disabled={isFirst}
-                      style={{
-                        width: 32,
-                        height: 32,
-                        background: isFirst ? 'transparent' : 'rgba(255,255,255,0.9)',
-                        border: '1px solid var(--color-border)',
-                        borderRadius: 8,
-                        cursor: isFirst ? 'default' : 'pointer',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        opacity: isFirst ? 0.25 : 1,
-                        boxShadow: isFirst ? 'none' : '0 2px 8px rgba(0,0,0,0.10)',
-                        transition: 'opacity 0.15s, box-shadow 0.15s',
-                        padding: 0,
-                        backdropFilter: 'blur(4px)',
-                      }}
-                    >
-                      {/* Solid upward triangle */}
-                      <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
-                        <polygon points="6,0 12,10 0,10" fill={isFirst ? 'var(--color-border)' : 'var(--color-text)'} />
-                      </svg>
-                    </button>
-
-                    {/* Down triangle */}
-                    <button
-                      onClick={e => { e.stopPropagation(); handleMoveDown(i, displayAttractions.length); }}
-                      title="下移"
-                      disabled={isLast}
-                      style={{
-                        width: 32,
-                        height: 32,
-                        background: isLast ? 'transparent' : 'rgba(255,255,255,0.9)',
-                        border: '1px solid var(--color-border)',
-                        borderRadius: 8,
-                        cursor: isLast ? 'default' : 'pointer',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        opacity: isLast ? 0.25 : 1,
-                        boxShadow: isLast ? 'none' : '0 2px 8px rgba(0,0,0,0.10)',
-                        transition: 'opacity 0.15s, box-shadow 0.15s',
-                        padding: 0,
-                        backdropFilter: 'blur(4px)',
-                      }}
-                    >
-                      {/* Solid downward triangle */}
-                      <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
-                        <polygon points="6,10 0,0 12,0" fill={isLast ? 'var(--color-border)' : 'var(--color-text)'} />
-                      </svg>
-                    </button>
-                  </div>
+                  <span style={{ color: 'var(--color-border)' }}>|</span>
+                  <span>NT$ {trip?.preferences?.budget?.toLocaleString() ?? 0}</span>
+                  <span style={{ color: 'var(--color-border)' }}>|</span>
+                  <span style={{ color: 'var(--color-accent)' }}>生成於 {trip?.generatedAt ? new Date(trip.generatedAt).toLocaleString('zh-TW', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' }) : '未知'}</span>
                 </div>
-              );
-            })}
+              </div>
+              {!isEditing && (
+                <button
+                  onClick={() => { setEditAttractions(trip?.days?.[activeDay]?.attractions ?? []); setIsEditing(true); }}
+                  className="btn-primary"
+                  style={{ background: '#FFFFFF', color: 'var(--color-text)', border: '1px solid var(--color-border)', padding: '6px 16px', width: 'auto', flexShrink: 0, fontSize: 13 }}
+                >
+                  編輯行程
+                </button>
+              )}
+            </div>
 
-            {isEditing && displayAttractions.length === 0 && (
-              <div style={{
-                textAlign: 'center',
-                padding: '48px',
-                color: 'var(--color-text-muted)',
-                fontSize: 14,
-                border: '2px dashed var(--color-border)',
-                borderRadius: 12,
-              }}>
-                今天的行程已全部刪除
+            <div className="stat-grid">
+              {[
+                { label: '設定天數', value: `${trip.summary.totalDays} 天`, icon: <IconCalendar /> },
+                { label: '估計費用', value: trip.summary.totalBudget, icon: <IconYen /> },
+                { label: '景點數量', value: `${trip.summary.totalAttractions} 處`, icon: <IconPin /> },
+                { label: '日均行程', value: `${trip.summary.avgPerDay} 處`, icon: <IconChart /> },
+              ].map(stat => (
+                <div key={stat.label} className="stat-card animate-fade-up">
+                  <div style={{ fontFamily: 'var(--font-serif)', fontSize: 13, fontWeight: 500, color: 'var(--color-text-muted)', marginBottom: 8, display: 'flex', alignItems: 'center', gap: 8 }}>
+                    {stat.icon}
+                    {stat.label}
+                  </div>
+                  <div style={{ fontFamily: 'var(--font-serif)', fontSize: 22, fontWeight: 600, color: 'var(--color-text)' }}>{stat.value}</div>
+                </div>
+              ))}
+            </div>
+
+            {currentDay?.warning && (
+              <div className="alert-banner animate-fade-up" style={{ marginBottom: 24 }}>
+                <span style={{ color: '#B45309' }}><IconAlert /></span>
+                <div style={{ flex: 1 }}>
+                  <p style={{ fontFamily: 'var(--font-serif)', fontSize: 13, fontWeight: 600, color: '#92400E', margin: 0 }}>
+                    行程提示：Day {currentDay.day}
+                  </p>
+                  <p style={{ fontSize: 12, color: '#B45309', marginTop: 4, lineHeight: 1.5 }}>
+                    {currentDay.warning} 目前排定了 {currentDay.attractions.length} 個行程，若要確保旅遊節奏，建議減至 3-4 個。
+                  </p>
+                </div>
               </div>
             )}
-          </div>
 
-          {isEditing && (
-            <ItineraryAddAttractionPanel
-              trip={trip}
-              currentDay={currentDay}
-              existingAttractions={displayAttractions}
-              onAddAttraction={handleAddAttraction}
-              nearbyRestaurantRequest={nearbyRestaurantRequest}
-            />
-          )}
+            {reranked && !isEditing && (
+              <div style={{
+                position: 'fixed',
+                top: 90,
+                right: 32,
+                zIndex: 200,
+                padding: '12px 16px',
+                background: 'var(--color-accent)',
+                borderRadius: 8,
+                fontSize: 12,
+                fontWeight: 500,
+                color: 'white',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 10,
+                boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                animation: 'fadeUp 0.3s ease',
+              }}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                景點排序已更新
+              </div>
+            )}
 
-        </div>
+            <div className="itinerary-layout">
+
+              {/* Left: Days */}
+              <div className="day-tabs-container">
+                {trip.days.map((day, i) => (
+                  <div
+                    key={i}
+                    className={`day-tab ${i === activeDay ? 'active' : ''} ${day.warning ? 'warn' : ''}`}
+                    onClick={() => switchDay(i)}
+                    onDragOver={isEditing && i !== activeDay ? e => { e.preventDefault(); setDragOverDayTab(i); } : undefined}
+                    onDragLeave={isEditing ? () => setDragOverDayTab(null) : undefined}
+                    onDrop={isEditing && i !== activeDay ? e => { e.preventDefault(); handleDropOnDay(i); } : undefined}
+                    style={{
+                      opacity: dragOverDayTab !== null && dragOverDayTab !== i && i !== activeDay ? 0.5 : 1,
+                      cursor: 'pointer',
+                      background: dragOverDayTab === i ? '#FDE8EC' : undefined,
+                      border: dragOverDayTab === i ? '2px dashed var(--color-accent)' : undefined,
+                      transform: dragOverDayTab === i ? 'scale(1.04)' : 'scale(1)',
+                      transition: 'all 0.15s',
+                    }}
+                  >
+                    <div style={{ fontWeight: 600, fontFamily: 'var(--font-serif)' }}>Day {day.day}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Right: Attractions */}
+              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 16, minWidth: 0 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 8 }}>
+                  <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 16, fontWeight: 600, color: 'var(--color-text)', margin: 0 }}>
+                    Day {currentDay?.day}
+                  </h2>
+                  <span style={{ fontSize: 12, padding: '2px 10px', borderRadius: 4, background: '#F0EEE9', color: 'var(--color-text-muted)' }}>
+                    {displayAttractions.length} 個景點
+                  </span>
+                </div>
+
+                {displayAttractions.map((attraction, i) => {
+                  const isSelected = selectedIndex === i;
+                  const isFirst = i === 0;
+                  const isLast = i === displayAttractions.length - 1;
+                  return (
+                    <div
+                      key={attraction.id}
+                      ref={el => {
+                        if (el) cardWrapperRefs.current.set(attraction.id, el);
+                        else cardWrapperRefs.current.delete(attraction.id);
+                      }}
+                      style={{ position: 'relative', zIndex: 0 }}
+                    >
+                      <AttractionCard
+                        attraction={attraction}
+                        index={i}
+                        isEditing={isEditing}
+                        onDelete={() => handleDelete(i)}
+                        onDragStart={() => handleDragStart(i)}
+                        onDragOver={() => handleDragOver(i)}
+                        onDrop={() => handleDrop(i)}
+                        isDragOver={dragOverIndex === i}
+                        isSelected={isSelected}
+                        onSelect={e => {
+                          e.stopPropagation();
+                          const nextSelected = isSelected ? null : i;
+                          setSelectedIndex(nextSelected);
+                          if (nextSelected !== null && isEditing) {
+                            handleFindNearbyRestaurants(attraction);
+                          }
+                        }}
+                      />
+
+                      {/* ── External up/down triangle buttons ── */}
+                      <div
+                        style={{
+                          position: 'absolute',
+                          top: '50%',
+                          left: 'calc(100% + 12px)',
+                          transform: 'translateY(-50%)',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          alignItems: 'center',
+                          gap: 6,
+                          opacity: isSelected ? 1 : 0,
+                          pointerEvents: isSelected ? 'auto' : 'none',
+                          transition: 'opacity 0.2s ease',
+                        }}
+                      >
+                        {/* Up triangle */}
+                        <button
+                          onClick={e => { e.stopPropagation(); handleMoveUp(i); }}
+                          title="上移"
+                          disabled={isFirst}
+                          style={{
+                            width: 32,
+                            height: 32,
+                            background: isFirst ? 'transparent' : 'rgba(255,255,255,0.9)',
+                            border: '1px solid var(--color-border)',
+                            borderRadius: 8,
+                            cursor: isFirst ? 'default' : 'pointer',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            opacity: isFirst ? 0.25 : 1,
+                            boxShadow: isFirst ? 'none' : '0 2px 8px rgba(0,0,0,0.10)',
+                            transition: 'opacity 0.15s, box-shadow 0.15s',
+                            padding: 0,
+                            backdropFilter: 'blur(4px)',
+                          }}
+                        >
+                          {/* Solid upward triangle */}
+                          <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                            <polygon points="6,0 12,10 0,10" fill={isFirst ? 'var(--color-border)' : 'var(--color-text)'} />
+                          </svg>
+                        </button>
+
+                        {/* Down triangle */}
+                        <button
+                          onClick={e => { e.stopPropagation(); handleMoveDown(i, displayAttractions.length); }}
+                          title="下移"
+                          disabled={isLast}
+                          style={{
+                            width: 32,
+                            height: 32,
+                            background: isLast ? 'transparent' : 'rgba(255,255,255,0.9)',
+                            border: '1px solid var(--color-border)',
+                            borderRadius: 8,
+                            cursor: isLast ? 'default' : 'pointer',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            opacity: isLast ? 0.25 : 1,
+                            boxShadow: isLast ? 'none' : '0 2px 8px rgba(0,0,0,0.10)',
+                            transition: 'opacity 0.15s, box-shadow 0.15s',
+                            padding: 0,
+                            backdropFilter: 'blur(4px)',
+                          }}
+                        >
+                          {/* Solid downward triangle */}
+                          <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                            <polygon points="6,10 0,0 12,0" fill={isLast ? 'var(--color-border)' : 'var(--color-text)'} />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })}
+
+                {isEditing && displayAttractions.length === 0 && (
+                  <div style={{
+                    textAlign: 'center',
+                    padding: '48px',
+                    color: 'var(--color-text-muted)',
+                    fontSize: 14,
+                    border: '2px dashed var(--color-border)',
+                    borderRadius: 12,
+                  }}>
+                    今天的行程已全部刪除
+                  </div>
+                )}
+              </div>
+
+              {isEditing && (
+                <ItineraryAddAttractionPanel
+                  trip={trip}
+                  currentDay={currentDay}
+                  existingAttractions={displayAttractions}
+                  onAddAttraction={handleAddAttraction}
+                  nearbyRestaurantRequest={nearbyRestaurantRequest}
+                />
+              )}
+
+            </div>
           </>
         )}
       </div>
@@ -705,7 +749,7 @@ export default function ItineraryPage() {
         onFoodChange={setFoodVsAttractions}
       />
       {!isEditing && <ChatBox trip={trip} setTrip={setTrip} />}
-      
+
 
     </div>
   );

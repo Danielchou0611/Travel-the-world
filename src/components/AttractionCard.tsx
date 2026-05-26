@@ -148,7 +148,7 @@ export default function AttractionCard({
             </button>
             <button
               onClick={handleConfirm}
-              style={{ padding: '8px 20px', borderRadius: 6, border: 'none', background: '#EF4444', color: '#FFF', fontSize: 13, fontWeight: 500, cursor: 'pointer', fontFamily: 'var(--font-serif)' }}
+              style={{ padding: '8px 20px', borderRadius: 6, border: 'none', background: 'var(--color-accent)', color: '#FFF', fontSize: 13, fontWeight: 500, cursor: 'pointer', fontFamily: 'var(--font-serif)' }}
             >
               確定刪除
             </button>
@@ -163,7 +163,7 @@ export default function AttractionCard({
           style={{
             position: 'absolute', top: 10, right: 10, zIndex: 10,
             width: 28, height: 28, borderRadius: '50%',
-            background: '#EF4444', border: 'none', cursor: 'pointer',
+            background: 'var(--color-accent)', border: 'none', cursor: 'pointer',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             boxShadow: '0 2px 8px rgba(0,0,0,0.25)',
             animation: 'wiggle 0.4s ease',

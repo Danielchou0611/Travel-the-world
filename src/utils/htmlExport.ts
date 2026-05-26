@@ -15,17 +15,12 @@ export function generateItineraryHtml(trip: Trip): string {
   ].filter(Boolean).join(' &nbsp;·&nbsp; ');
 
   const html = `
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Occupath 專屬行程規劃</title>
+<div class="occupath-itinerary-export">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    :root {
+    .occupath-itinerary-export {
       --prussian: #123041;
       --ochre: #C9843A;
       --mist: #7E7C73;
@@ -35,8 +30,6 @@ export function generateItineraryHtml(trip: Trip): string {
       --white: #FFFFFF;
       --font-serif: 'Noto Serif TC', serif;
       --font-sans: 'Noto Sans TC', sans-serif;
-    }
-    body {
       margin: 0;
       padding: 0;
       font-family: var(--font-sans);
@@ -340,7 +333,7 @@ export function generateItineraryHtml(trip: Trip): string {
                 <div class="badge">
                   <span class="badge-text">${idx + 1}</span>
                 </div>
-                ${a.image ? `<img src="${a.image}" alt="${a.name}" class="thumb" loading="lazy" />` : `
+                ${a.image ? `<img src="${a.image}" alt="${a.name}" class="thumb" loading="eager" />` : `
                   <div class="no-thumb"><span class="no-thumb-text">無圖片</span></div>
                 `}
                 <div class="card-content">
@@ -369,8 +362,8 @@ export function generateItineraryHtml(trip: Trip): string {
       <div class="footer-note">由 Occupath AI 行程規劃自動生成</div>
     </div>
   </div>
-</body>
-</html>
+  </div>
+</div>
   `;
 
   return html.trim();
