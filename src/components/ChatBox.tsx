@@ -299,7 +299,7 @@ export default function ChatBox({ trip, setTrip }: ChatBoxProps) {
           value={inputValue}
           onChange={e => setInputValue(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder="怎麼搭交通車..."
+          placeholder="我想更改行程.."
           disabled={isLoading}
           className="glass-input"
           style={{

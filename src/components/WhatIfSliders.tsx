@@ -13,7 +13,7 @@ export default function WhatIfSliders({
   onExplorationChange,
   onFoodChange,
 }: WhatIfSlidersProps) {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   return (
     <div className="whatif-panel">

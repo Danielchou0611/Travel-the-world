@@ -172,7 +172,7 @@ export default function HomePage() {
   }
   const [days, setDays] = useState(7);
   const [budget, setBudget] = useState<number | ''>(30000);
-  const [interests, setInterests] = useState<Interest[]>(['美食', '文化']);
+  const [interests, setInterests] = useState<Interest[]>([]);
   const [destinationInput, setDestinationInput] = useState('');
   const [destinations, setDestinations] = useState<string[]>([]);
   const [explorationStyle, setExplorationStyle] = useState(50);

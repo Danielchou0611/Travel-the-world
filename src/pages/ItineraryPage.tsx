@@ -279,6 +279,10 @@ export default function ItineraryPage() {
 
   function handleFindNearbyRestaurants(attraction: Attraction) {
     if (!attraction.position) return;
+    if (!isEditing) {
+      setEditAttractions(trip?.days?.[activeDay]?.attractions ?? []);
+      setIsEditing(true);
+    }
     setNearbyRestaurantRequest({
       attraction,
       token: Date.now(),
@@ -362,6 +366,7 @@ export default function ItineraryPage() {
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }} onClick={() => setSelectedIndex(null)}>
+      <div className="vignette-bg" />
 
       <Navbar
         showBack
@@ -579,7 +584,14 @@ export default function ItineraryPage() {
                     onDrop={() => handleDrop(i)}
                     isDragOver={dragOverIndex === i}
                     isSelected={isSelected}
-                    onSelect={e => { e.stopPropagation(); setSelectedIndex(isSelected ? null : i); }}
+                    onSelect={e => { 
+                      e.stopPropagation(); 
+                      const nextSelected = isSelected ? null : i;
+                      setSelectedIndex(nextSelected); 
+                      if (nextSelected !== null && isEditing) {
+                        handleFindNearbyRestaurants(attraction);
+                      }
+                    }}
                   />
 
                   {/* ── External up/down triangle buttons ── */}
@@ -653,32 +665,6 @@ export default function ItineraryPage() {
                         <polygon points="6,10 0,0 12,0" fill={isLast ? 'var(--color-border)' : 'var(--color-text)'} />
                       </svg>
                     </button>
-
-                    {!isEditing && attraction.position && (
-                      <button
-                        onClick={e => { e.stopPropagation(); handleFindNearbyRestaurants(attraction); }}
-                        title="增加附近餐廳"
-                        style={{
-                          marginTop: 6,
-                          padding: '8px 10px',
-                          background: 'rgba(255,255,255,0.96)',
-                          border: '1px solid var(--color-border)',
-                          borderRadius: 10,
-                          cursor: 'pointer',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          fontSize: 11,
-                          color: 'var(--color-text)',
-                          fontWeight: 600,
-                          whiteSpace: 'nowrap',
-                          boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
-                          backdropFilter: 'blur(4px)',
-                        }}
-                      >
-                        附近餐廳
-                      </button>
-                    )}
                   </div>
                 </div>
               );
@@ -698,13 +684,15 @@ export default function ItineraryPage() {
             )}
           </div>
 
-          <ItineraryAddAttractionPanel
-            trip={trip}
-            currentDay={currentDay}
-            existingAttractions={displayAttractions}
-            onAddAttraction={handleAddAttraction}
-            nearbyRestaurantRequest={nearbyRestaurantRequest}
-          />
+          {isEditing && (
+            <ItineraryAddAttractionPanel
+              trip={trip}
+              currentDay={currentDay}
+              existingAttractions={displayAttractions}
+              onAddAttraction={handleAddAttraction}
+              nearbyRestaurantRequest={nearbyRestaurantRequest}
+            />
+          )}
 
         </div>
           </>

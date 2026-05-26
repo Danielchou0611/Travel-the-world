@@ -115,7 +115,7 @@ function buildRestaurantSummary(restaurant: RestaurantVenue): string {
 function mapPoiToAttraction(poi: RecommendationPoi): Attraction {
   const matchedInterests = Array.isArray(poi.interests)
     ? poi.interests.filter((interest): interest is '美食' | '文化' | '購物' | '自然' =>
-        interest === '美食' || interest === '文化' || interest === '購物' || interest === '自然')
+      interest === '美食' || interest === '文化' || interest === '購物' || interest === '自然')
     : [];
 
   return {
@@ -151,6 +151,7 @@ function mapPoiToAttraction(poi: RecommendationPoi): Attraction {
         },
       ],
       matchedInterests,
+      isManual: true,
     },
   };
 }
@@ -180,6 +181,7 @@ function mapRestaurantToAttraction(restaurant: RestaurantVenue): Attraction {
         { label: 'Google 評分', value: Math.round((restaurant.google_rating ?? 0) * 20) },
       ],
       matchedInterests: ['美食'],
+      isManual: true,
     },
   };
 }
@@ -393,30 +395,30 @@ export default function ItineraryAddAttractionPanel({
       if (contentType === 'restaurant') {
         const nextRestaurants = restaurantMode === 'nearby' && nearbySourceAttraction?.position
           ? await getNearbyRestaurants({
-              lat: nearbySourceAttraction.position.lat,
-              lng: nearbySourceAttraction.position.lng,
-              radiusM: restaurantRadiusM,
-              topK: restaurantTopK,
-              category: selectedCategory || undefined,
-            })
+            lat: nearbySourceAttraction.position.lat,
+            lng: nearbySourceAttraction.position.lng,
+            radiusM: restaurantRadiusM,
+            topK: restaurantTopK,
+            category: selectedCategory || undefined,
+          })
           : await getRestaurants({
-              region: selectedRegion,
-              category: selectedCategory || undefined,
-            });
+            region: selectedRegion,
+            category: selectedCategory || undefined,
+          });
         setRestaurantResults(nextRestaurants);
         setResults([]);
       } else {
         const nextResults = mode === 'all'
           ? await getPois({
-              region: selectedRegion,
-              category: selectedCategory || undefined,
-            })
+            region: selectedRegion,
+            category: selectedCategory || undefined,
+          })
           : await getRecommendedPois({
-              region: selectedRegion,
-              category: selectedCategory || undefined,
-              preferences: compactPreferences(interestPreferences),
-              topK,
-            });
+            region: selectedRegion,
+            category: selectedCategory || undefined,
+            preferences: compactPreferences(interestPreferences),
+            topK,
+          });
         setResults(nextResults);
         setRestaurantResults([]);
       }
@@ -433,325 +435,288 @@ export default function ItineraryAddAttractionPanel({
     <aside className={`add-attraction-panel ${isOpen ? 'open' : ''}`}>
       <button
         onClick={() => setIsOpen(prev => !prev)}
-        className="btn-primary"
-        style={{ width: '100%', padding: '10px 16px', fontSize: 14 }}
+        className="add-attraction-floating-btn"
+        title={isOpen ? '收起面板' : '增加景點'}
       >
-        {isOpen ? '收起加景點面板' : '增加景點'}
+        {isOpen ? (
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg>
+        ) : (
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg>
+        )}
       </button>
 
       {isOpen && (
         <div className="add-attraction-panel-body">
-          <div style={{ display: 'flex', gap: 8 }}>
+          {/* ── Segmented Control: POI / Restaurant ── */}
+          <div className="segmented-control" data-active={contentType}>
+            <div className="segmented-slider" />
             <button
               type="button"
-              onClick={() => {
-                setContentType('poi');
-                setNearbySourceAttraction(null);
-              }}
-              className={`panel-chip ${contentType === 'poi' ? 'active' : ''}`}
+              onClick={() => { setContentType('poi'); setNearbySourceAttraction(null); }}
+              className={`segmented-btn ${contentType === 'poi' ? 'active' : ''}`}
             >
               添加景點
             </button>
             <button
               type="button"
-              onClick={() => {
-                setContentType('restaurant');
-                setRestaurantMode('all');
-              }}
-              className={`panel-chip ${contentType === 'restaurant' ? 'active' : ''}`}
+              onClick={() => { setContentType('restaurant'); setRestaurantMode('all'); }}
+              className={`segmented-btn ${contentType === 'restaurant' ? 'active' : ''}`}
             >
               添加餐廳
             </button>
           </div>
 
-          {contentType === 'poi' && (
-          <div style={{ display: 'flex', gap: 8 }}>
-            <button
-              type="button"
-              onClick={() => setMode('all')}
-              className={`panel-chip ${mode === 'all' ? 'active' : ''}`}
-            >
-              顯示全部該地點
-            </button>
-            <button
-              type="button"
-              onClick={() => setMode('recommended')}
-              className={`panel-chip ${mode === 'recommended' ? 'active' : ''}`}
-            >
-              興趣推薦
-            </button>
-          </div>
-          )}
+          {/* ── Two-column layout: filters left, results right ── */}
+          <div className="drawer-two-col">
 
-          {contentType === 'restaurant' && (
-            <div style={{ display: 'flex', gap: 8 }}>
+            {/* LEFT: filters */}
+            <div className="drawer-filters">
+
+              {contentType === 'poi' && (
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '4px 0' }}>
+                  <span style={{ fontSize: 13, fontWeight: 500, color: 'var(--color-text)' }}>啟用興趣推薦</span>
+                  <button
+                    type="button"
+                    onClick={() => setMode(mode === 'all' ? 'recommended' : 'all')}
+                    className={`toggle-switch ${mode === 'recommended' ? 'on' : 'off'}`}
+                  >
+                    <div className="toggle-thumb" />
+                  </button>
+                </div>
+              )}
+
+              {contentType === 'restaurant' && (
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '4px 0' }}>
+                  <span style={{ fontSize: 13, fontWeight: 500, color: 'var(--color-text)' }}>啟用附近餐廳推薦</span>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (restaurantMode === 'all') {
+                        setRestaurantMode('nearby');
+                      } else {
+                        setRestaurantMode('all');
+                        setNearbySourceAttraction(null);
+                      }
+                    }}
+                    className={`toggle-switch ${restaurantMode === 'nearby' ? 'on' : 'off'}`}
+                  >
+                    <div className="toggle-thumb" />
+                  </button>
+                </div>
+              )}
+
+              {contentType === 'restaurant' && restaurantMode === 'nearby' && !nearbySourceAttraction && (
+                <div className="panel-status" style={{ color: 'var(--color-accent)', background: '#FDE8EC' }}>
+                  * 請點選左側景點
+                </div>
+              )}
+
+              {!(contentType === 'restaurant' && restaurantMode === 'nearby') && (
+                <div className="panel-field">
+                  <label>地區</label>
+                  <select value={selectedRegion} onChange={e => setSelectedRegion(e.target.value)} className="panel-select">
+                    <option value="">請選擇地區</option>
+                    {(activeMetadata?.regions ?? []).map(region => (
+                      <option key={region} value={region}>{region}</option>
+                    ))}
+                  </select>
+                </div>
+              )}
+
+              {contentType === 'restaurant' && restaurantMode === 'nearby' && nearbySourceAttraction && (
+                <div className="panel-status">
+                  以「{nearbySourceAttraction.name}」為中心推薦附近餐廳
+                </div>
+              )}
+
+              <div className="panel-field">
+                <label>{contentType === 'poi' ? '類型' : '餐廳種類'}</label>
+                <select value={selectedCategory} onChange={e => setSelectedCategory(e.target.value)} className="panel-select">
+                  <option value="">全部類型</option>
+                  {(activeMetadata?.categories ?? []).map(category => (
+                    <option key={category} value={category}>{category}</option>
+                  ))}
+                </select>
+              </div>
+
+              {!(contentType === 'poi' && mode === 'recommended') && (
+                <div className="panel-field">
+                  <label>搜尋</label>
+                  <input
+                    type="text"
+                    value={searchTerm}
+                    onChange={e => setSearchTerm(e.target.value)}
+                    className="panel-input"
+                    placeholder={contentType === 'poi' ? '名稱、地區、興趣...' : '名稱、地區、種類...'}
+                  />
+                </div>
+              )}
+
+              {contentType === 'restaurant' && restaurantMode === 'nearby' && (
+                <>
+                  <div className="panel-field">
+                    <label>搜尋半徑</label>
+                    <select value={restaurantRadiusM} onChange={e => setRestaurantRadiusM(Number(e.target.value))} className="panel-select">
+                      {[300, 500, 800, 1200, 2000].map(v => <option key={v} value={v}>{v} 公尺</option>)}
+                    </select>
+                  </div>
+                  <div className="panel-field">
+                    <label>推薦數量</label>
+                    <select value={restaurantTopK} onChange={e => setRestaurantTopK(Number(e.target.value))} className="panel-select">
+                      {[5, 10, 20, 30].map(v => <option key={v} value={v}>{v} 間</option>)}
+                    </select>
+                  </div>
+                </>
+              )}
+
+              {contentType === 'poi' && mode === 'recommended' && (
+                <>
+                  <div className="panel-field">
+                    <label>推薦數量</label>
+                    <select value={topK} onChange={e => setTopK(Number(e.target.value))} className="panel-select">
+                      {[5, 10, 15, 20].map(v => <option key={v} value={v}>{v} 個</option>)}
+                    </select>
+                  </div>
+                  <div className="interest-slider-list">
+                    {INTEREST_FIELDS.map(field => (
+                      <label key={field.key} className="interest-slider-row">
+                        <span>{field.label}</span>
+                        <input
+                          type="range" min="0" max="1" step="0.1"
+                          value={interestPreferences[field.key] ?? 0}
+                          onChange={e => setInterestPreferences(prev => ({ ...prev, [field.key]: Number(e.target.value) }))}
+                        />
+                        <strong>{(interestPreferences[field.key] ?? 0).toFixed(1)}</strong>
+                      </label>
+                    ))}
+                  </div>
+                </>
+              )}
+
               <button
                 type="button"
-                onClick={() => {
-                  setRestaurantMode('all');
-                  setNearbySourceAttraction(null);
-                }}
-                className={`panel-chip ${restaurantMode === 'all' ? 'active' : ''}`}
+                onClick={handleFetch}
+                className="btn-primary"
+                style={{ width: '100%', padding: '10px 16px', marginTop: 4 }}
               >
-                顯示全部餐廳
+                {contentType === 'restaurant'
+                  ? restaurantMode === 'nearby' ? '搜尋附近餐廳' : '搜尋餐廳'
+                  : mode === 'all' ? '搜尋景點' : '開始推薦'}
               </button>
-              <button
-                type="button"
-                onClick={() => setRestaurantMode('nearby')}
-                className={`panel-chip ${restaurantMode === 'nearby' ? 'active' : ''}`}
-                disabled={!nearbySourceAttraction?.position}
-              >
-                附近餐廳
-              </button>
+
+              {error && <div className="panel-status error">{error}</div>}
+              {isLoading && <div className="panel-status">載入中...</div>}
             </div>
-          )}
 
-          {!(contentType === 'restaurant' && restaurantMode === 'nearby') && (
-            <div className="panel-field">
-              <label>地區</label>
-              <select value={selectedRegion} onChange={e => setSelectedRegion(e.target.value)} className="panel-select">
-                <option value="">請選擇地區</option>
-                {(activeMetadata?.regions ?? []).map(region => (
-                  <option key={region} value={region}>{region}</option>
-                ))}
-              </select>
-            </div>
-          )}
+            {/* RIGHT: results */}
+            <div className="drawer-results">
+              {!isLoading && !error && results.length === 0 && restaurantResults.length === 0 && (
+                <div className="panel-status">選好條件後，點擊載入{contentType === 'poi' ? '景點' : '餐廳'}，並直接加入 Day {currentDay?.day ?? 1}。</div>
+              )}
 
-          {contentType === 'restaurant' && restaurantMode === 'nearby' && nearbySourceAttraction && (
-            <div className="panel-status">
-              以「{nearbySourceAttraction.name}」為中心推薦附近餐廳
-            </div>
-          )}
-
-          <div className="panel-field">
-            <label>{contentType === 'poi' ? '類型' : '餐廳種類'}</label>
-            <select value={selectedCategory} onChange={e => setSelectedCategory(e.target.value)} className="panel-select">
-              <option value="">全部類型</option>
-              {(activeMetadata?.categories ?? []).map(category => (
-                <option key={category} value={category}>{category}</option>
-              ))}
-            </select>
-          </div>
-
-          <div className="panel-field">
-            <label>搜尋已載入{contentType === 'poi' ? '景點' : '餐廳'}</label>
-            <input
-              type="text"
-              value={searchTerm}
-              onChange={e => setSearchTerm(e.target.value)}
-              className="panel-input"
-              placeholder={contentType === 'poi' ? '輸入景點名、地區、類型或興趣' : '輸入餐廳名、地區或餐廳種類'}
-            />
-          </div>
-
-          {contentType === 'restaurant' && restaurantMode === 'nearby' && (
-            <>
-              <div className="panel-field">
-                <label>搜尋半徑</label>
-                <select value={restaurantRadiusM} onChange={e => setRestaurantRadiusM(Number(e.target.value))} className="panel-select">
-                  {[300, 500, 800, 1200, 2000].map(value => (
-                    <option key={value} value={value}>{value} 公尺</option>
-                  ))}
-                </select>
-              </div>
-              <div className="panel-field">
-                <label>推薦數量</label>
-                <select value={restaurantTopK} onChange={e => setRestaurantTopK(Number(e.target.value))} className="panel-select">
-                  {[5, 10, 20, 30].map(value => (
-                    <option key={value} value={value}>{value} 間</option>
-                  ))}
-                </select>
-              </div>
-            </>
-          )}
-
-          {contentType === 'poi' && mode === 'recommended' && (
-            <>
-              <div className="panel-field">
-                <label>推薦數量</label>
-                <select value={topK} onChange={e => setTopK(Number(e.target.value))} className="panel-select">
-                  {[5, 10, 15, 20].map(value => (
-                    <option key={value} value={value}>{value} 個</option>
-                  ))}
-                </select>
-              </div>
-
-              <div className="interest-slider-list">
-                {INTEREST_FIELDS.map(field => (
-                  <label key={field.key} className="interest-slider-row">
-                    <span>{field.label}</span>
-                    <input
-                      type="range"
-                      min="0"
-                      max="1"
-                      step="0.1"
-                      value={interestPreferences[field.key] ?? 0}
-                      onChange={e => setInterestPreferences(prev => ({
-                        ...prev,
-                        [field.key]: Number(e.target.value),
-                      }))}
-                    />
-                    <strong>{(interestPreferences[field.key] ?? 0).toFixed(1)}</strong>
-                  </label>
-                ))}
-              </div>
-            </>
-          )}
-
-          <button
-            type="button"
-            onClick={handleFetch}
-            className="btn-primary"
-            style={{ width: '100%', padding: '10px 16px', marginTop: 4 }}
-          >
-            {contentType === 'restaurant'
-              ? restaurantMode === 'nearby' ? '更新附近餐廳' : '載入全部餐廳'
-              : mode === 'all'
-                ? '載入全部景點'
-                : '取得推薦'}
-          </button>
-
-          {error && (
-            <div className="panel-status error">{error}</div>
-          )}
-
-          {isLoading && (
-            <div className="panel-status">載入中...</div>
-          )}
-
-          {contentType === 'poi' && !isLoading && results.length > 0 && (
-            <>
-            <div className="panel-status">
-              已載入 {results.length} 筆，顯示 {filteredPoiResults.length} 筆
-            </div>
-            <div className="poi-results">
-              {filteredPoiResults.map(poi => {
-                const isAdded = existingNames.has(poi.name);
-                return (
-                  <div key={`${poi.id}-${poi.name}`} className="poi-result-card">
-                    <div className="poi-result-top">
-                      <ResultThumbnail imageUrl={poi.image_url} name={poi.name} />
-                      <div className="poi-result-main">
-                        <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12 }}>
-                          <div>
-                            <div className="poi-result-title">{poi.name}</div>
-                            <div className="poi-result-meta">{poi.region} ・ {poi.category}</div>
+              {contentType === 'poi' && !isLoading && results.length > 0 && (
+                <>
+                  <div className="panel-status">已載入 {results.length} 筆，顯示 {filteredPoiResults.length} 筆</div>
+                  <div className="poi-results">
+                    {filteredPoiResults.map(poi => {
+                      const isAdded = existingNames.has(poi.name);
+                      return (
+                        <div key={`${poi.id}-${poi.name}`} className="poi-result-card">
+                          <div className="poi-result-top">
+                            <ResultThumbnail imageUrl={poi.image_url} name={poi.name} />
+                            <div className="poi-result-main">
+                              <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12 }}>
+                                <div>
+                                  <div className="poi-result-title">{poi.name}</div>
+                                  <div className="poi-result-meta">{poi.region} ・ {poi.category}</div>
+                                </div>
+                                {typeof poi.final_score === 'number' && (
+                                  <div className="poi-score">{Math.round(poi.final_score * 100)}</div>
+                                )}
+                              </div>
+                              {Array.isArray(poi.interests) && poi.interests.length > 0 && (
+                                <div className="poi-interest-tags">
+                                  {poi.interests.slice(0, 4).map(interest => <span key={interest}>{interest}</span>)}
+                                </div>
+                              )}
+                              <div className="poi-result-summary">{buildRecommendationSummary(poi)}</div>
+                            </div>
                           </div>
-                          {typeof poi.final_score === 'number' && (
-                            <div className="poi-score">{Math.round(poi.final_score * 100)}</div>
-                          )}
+                          <button
+                            type="button"
+                            onClick={() => onAddAttraction(mapPoiToAttraction(poi))}
+                            disabled={isAdded}
+                            className="btn-primary"
+                            style={{ width: '100%', padding: '9px 14px', background: isAdded ? '#D6D3D1' : undefined, cursor: isAdded ? 'not-allowed' : 'pointer' }}
+                          >
+                            {isAdded ? '今日已加入' : '加入今天行程'}
+                          </button>
                         </div>
-
-                        {Array.isArray(poi.interests) && poi.interests.length > 0 && (
-                          <div className="poi-interest-tags">
-                            {poi.interests.slice(0, 4).map(interest => (
-                              <span key={interest}>{interest}</span>
-                            ))}
-                          </div>
-                        )}
-
-                        <div className="poi-result-summary">
-                          {buildRecommendationSummary(poi)}
-                        </div>
-                      </div>
-                    </div>
-
-                    <button
-                      type="button"
-                      onClick={() => onAddAttraction(mapPoiToAttraction(poi))}
-                      disabled={isAdded}
-                      className="btn-primary"
-                      style={{
-                        width: '100%',
-                        padding: '9px 14px',
-                        background: isAdded ? '#D6D3D1' : undefined,
-                        cursor: isAdded ? 'not-allowed' : 'pointer',
-                      }}
-                    >
-                      {isAdded ? '今日已加入' : '加入今天行程'}
-                    </button>
+                      );
+                    })}
                   </div>
-                );
-              })}
-            </div>
-            </>
-          )}
+                  {results.length > 0 && filteredPoiResults.length === 0 && (
+                    <div className="panel-status">目前搜尋條件沒有匹配結果，請換個關鍵字。</div>
+                  )}
+                </>
+              )}
 
-          {contentType === 'restaurant' && !isLoading && restaurantResults.length > 0 && (
-            <>
-            <div className="panel-status">
-              已載入 {restaurantResults.length} 筆，顯示 {filteredRestaurantResults.length} 筆
-            </div>
-            <div className="poi-results">
-              {filteredRestaurantResults.map((restaurant) => {
-                const isAdded = existingNames.has(restaurant.name);
-                return (
-                  <div key={`${restaurant.id}-${restaurant.name}`} className="poi-result-card">
-                    <div className="poi-result-top">
-                      <ResultThumbnail imageUrl={restaurant.image_url} name={restaurant.name} />
-                      <div className="poi-result-main">
-                        <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12 }}>
-                          <div>
-                            <div className="poi-result-title">{restaurant.name}</div>
-                            <div className="poi-result-meta">{restaurant.region} ・ {restaurant.category}</div>
+              {contentType === 'restaurant' && !isLoading && restaurantResults.length > 0 && (
+                <>
+                  <div className="panel-status">已載入 {restaurantResults.length} 筆，顯示 {filteredRestaurantResults.length} 筆</div>
+                  <div className="poi-results">
+                    {filteredRestaurantResults.map(restaurant => {
+                      const isAdded = existingNames.has(restaurant.name);
+                      return (
+                        <div key={`${restaurant.id}-${restaurant.name}`} className="poi-result-card">
+                          <div className="poi-result-top">
+                            <ResultThumbnail imageUrl={restaurant.image_url} name={restaurant.name} />
+                            <div className="poi-result-main">
+                              <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12 }}>
+                                <div>
+                                  <div className="poi-result-title">{restaurant.name}</div>
+                                  <div className="poi-result-meta">{restaurant.region} ・ {restaurant.category}</div>
+                                </div>
+                                {typeof restaurant.google_rating === 'number' && (
+                                  <div className="poi-score">{restaurant.google_rating.toFixed(1)}</div>
+                                )}
+                              </div>
+                              <div className="poi-result-summary">{buildRestaurantSummary(restaurant)}</div>
+                            </div>
                           </div>
-                          {typeof restaurant.google_rating === 'number' && (
-                            <div className="poi-score">{restaurant.google_rating.toFixed(1)}</div>
-                          )}
+                          <button
+                            type="button"
+                            onClick={() => onAddAttraction(
+                              mapRestaurantToAttraction(restaurant),
+                              restaurantMode === 'nearby' && nearbySourceAttraction
+                                ? { afterAttractionId: nearbySourceAttraction.id }
+                                : undefined,
+                            )}
+                            disabled={isAdded}
+                            className="btn-primary"
+                            style={{ width: '100%', padding: '9px 14px', background: isAdded ? '#D6D3D1' : undefined, cursor: isAdded ? 'not-allowed' : 'pointer' }}
+                          >
+                            {isAdded ? '今日已加入' : '加入今天行程'}
+                          </button>
                         </div>
-
-                        <div className="poi-result-summary">
-                          {buildRestaurantSummary(restaurant)}
-                        </div>
-                      </div>
-                    </div>
-
-                    <button
-                      type="button"
-                      onClick={() => onAddAttraction(
-                        mapRestaurantToAttraction(restaurant),
-                        restaurantMode === 'nearby' && nearbySourceAttraction
-                          ? { afterAttractionId: nearbySourceAttraction.id }
-                          : undefined,
-                      )}
-                      disabled={isAdded}
-                      className="btn-primary"
-                      style={{
-                        width: '100%',
-                        padding: '9px 14px',
-                        background: isAdded ? '#D6D3D1' : undefined,
-                        cursor: isAdded ? 'not-allowed' : 'pointer',
-                      }}
-                    >
-                      {isAdded ? '今日已加入' : '加入今天行程'}
-                    </button>
+                      );
+                    })}
                   </div>
-                );
-              })}
+                  {restaurantResults.length > 0 && filteredRestaurantResults.length === 0 && (
+                    <div className="panel-status">目前搜尋條件沒有匹配結果，請換個關鍵字。</div>
+                  )}
+                </>
+              )}
             </div>
-            </>
-          )}
-
-          {!isLoading && !error && results.length === 0 && restaurantResults.length === 0 && (
-            <div className="panel-status">
-              選好條件後即可載入{contentType === 'poi' ? '景點' : '餐廳'}，並直接加入 Day {currentDay?.day ?? 1}。
-            </div>
-          )}
-
-          {contentType === 'poi' && !isLoading && !error && results.length > 0 && filteredPoiResults.length === 0 && (
-            <div className="panel-status">
-              目前搜尋條件沒有匹配結果，請換個關鍵字。
-            </div>
-          )}
-
-          {contentType === 'restaurant' && !isLoading && !error && restaurantResults.length > 0 && filteredRestaurantResults.length === 0 && (
-            <div className="panel-status">
-              目前搜尋條件沒有匹配結果，請換個關鍵字。
-            </div>
-          )}
+          </div>
         </div>
       )}
     </aside>
   );
 }
+
