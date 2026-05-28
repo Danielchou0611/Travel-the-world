@@ -1,0 +1,36 @@
+# Node
+node_modules/
+dist/
+.vite/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+execution_log.txt
+api_log.txt
+
+# Generated files
+initial_itinerary.json
+updated_itinerary.json
+sort_trip.json
+sql_history.json
+nature_poi_region_report.json
+nature_poi_region_report.csv
+poi_category_region_report.json
+poi_category_region_report.csv
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
