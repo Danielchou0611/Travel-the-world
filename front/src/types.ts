@@ -25,6 +25,7 @@ export interface XAIExplanation {
   summary: string;
   scores: XAIScore[];
   matchedInterests: Interest[];
+  isManual?: boolean; // 手動加入的景點不顯示 AI 分析
 }
 
 export interface Coordinates {

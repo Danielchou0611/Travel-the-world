@@ -17,6 +17,7 @@ interface XAIBadgeProps {
 function XAIBadge({ xai }: XAIBadgeProps) {
   const [expanded, setExpanded] = useState(false);
   if (!xai) return null;
+  if (xai.isManual) return null;
   const scores = xai.scores ?? [];
   const matchedInterests = xai.matchedInterests ?? [];
   return (
@@ -147,7 +148,7 @@ export default function AttractionCard({
             </button>
             <button
               onClick={handleConfirm}
-              style={{ padding: '8px 20px', borderRadius: 6, border: 'none', background: '#EF4444', color: '#FFF', fontSize: 13, fontWeight: 500, cursor: 'pointer', fontFamily: 'var(--font-serif)' }}
+              style={{ padding: '8px 20px', borderRadius: 6, border: 'none', background: 'var(--color-accent)', color: '#FFF', fontSize: 13, fontWeight: 500, cursor: 'pointer', fontFamily: 'var(--font-serif)' }}
             >
               確定刪除
             </button>
@@ -162,7 +163,7 @@ export default function AttractionCard({
           style={{
             position: 'absolute', top: 10, right: 10, zIndex: 10,
             width: 28, height: 28, borderRadius: '50%',
-            background: '#EF4444', border: 'none', cursor: 'pointer',
+            background: 'var(--color-accent)', border: 'none', cursor: 'pointer',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             boxShadow: '0 2px 8px rgba(0,0,0,0.25)',
             animation: 'wiggle 0.4s ease',
@@ -225,22 +226,30 @@ export default function AttractionCard({
           <p style={{ fontSize: 13, color: 'var(--color-text)', lineHeight: 1.6, margin: 0 }}>{attraction.description}</p>
 
           <div style={{ display: 'flex', gap: 16, alignItems: 'center', flexWrap: 'wrap' }}>
-            <span style={{ fontSize: 12, color: 'var(--color-text-muted)', display: 'flex', alignItems: 'center', gap: 6 }}>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
-              {attraction.duration}
-            </span>
-            <span style={{ fontSize: 12, color: 'var(--color-text-muted)', display: 'flex', alignItems: 'center', gap: 6 }}>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
-              {attraction.estimatedCost}
-            </span>
-            <span style={{ fontSize: 12, color: 'var(--color-text-muted)', display: 'flex', alignItems: 'center', gap: 6 }}>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
-              {attraction.location}
-            </span>
-            <span style={{ marginLeft: 'auto', fontSize: 12, color: 'var(--color-text)', display: 'flex', alignItems: 'center', gap: 4 }}>
-              <IconStar filled={attraction.rating >= 1} />
-              <div style={{ fontWeight: 600, marginLeft: 2 }}>{attraction.rating}</div>
-            </span>
+            {attraction.duration && !attraction.duration.includes('待') && (
+              <span style={{ fontSize: 12, color: 'var(--color-text-muted)', display: 'flex', alignItems: 'center', gap: 6 }}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                {attraction.duration}
+              </span>
+            )}
+            {attraction.estimatedCost && !attraction.estimatedCost.includes('待') && (
+              <span style={{ fontSize: 12, color: 'var(--color-text-muted)', display: 'flex', alignItems: 'center', gap: 6 }}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                {attraction.estimatedCost}
+              </span>
+            )}
+            {attraction.location && attraction.location !== '-' && (
+              <span style={{ fontSize: 12, color: 'var(--color-text-muted)', display: 'flex', alignItems: 'center', gap: 6 }}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
+                {attraction.location}
+              </span>
+            )}
+            {attraction.rating > 0 && (
+              <span style={{ marginLeft: 'auto', fontSize: 12, color: 'var(--color-text)', display: 'flex', alignItems: 'center', gap: 4 }}>
+                <IconStar filled={attraction.rating >= 1} />
+                <div style={{ fontWeight: 600, marginLeft: 2 }}>{attraction.rating}</div>
+              </span>
+            )}
           </div>
 
           <XAIBadge xai={attraction.xai} />

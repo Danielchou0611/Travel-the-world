@@ -643,6 +643,21 @@ input, textarea, select {
   }
 }
 
+
+.vignette-bg {
+  position: fixed;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  z-index: -1;
+  pointer-events: none;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(215, 162, 58, 0.07) 0%, transparent 45%),
+    radial-gradient(circle at 80% 80%, rgba(196, 90, 63, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(18, 48, 65, 0.05) 0%, transparent 40%);
+}
+
 /* Loading dots animation for submit button */
 .loading-dots {
   display: inline-flex;
@@ -801,14 +816,45 @@ input, textarea, select {
 }
 
 .add-attraction-panel {
-  width: 320px;
+  width: 0;
   flex-shrink: 0;
   position: sticky;
   top: 90px;
 }
 
+.add-attraction-panel.open {
+  width: 360px;
+}
+
+.add-attraction-floating-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 100;
+}
+
+.add-attraction-floating-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  color: var(--color-accent);
+}
+
+
+
 .add-attraction-panel-body {
-  margin-top: 12px;
+  margin-top: 56px; /* give space for the floating button */
   padding: 20px;
   border: 1px solid var(--color-border);
   border-radius: 16px;
@@ -819,6 +865,26 @@ input, textarea, select {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  max-height: calc(100vh - 180px);
+  overflow-y: auto;
+}
+
+.drawer-two-col {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.drawer-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.drawer-results {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .panel-chip {
@@ -850,6 +916,86 @@ input, textarea, select {
   font-size: 12px;
   font-weight: 600;
   color: var(--color-text);
+}
+
+
+.segmented-control {
+  position: relative;
+  display: flex;
+  background: #F0EEE9;
+  border-radius: 999px;
+  padding: 4px;
+  width: 100%;
+}
+
+.segmented-btn {
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: var(--font-serif);
+  color: var(--color-text-muted);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1;
+  transition: color 0.3s;
+}
+
+.segmented-btn.active {
+  color: var(--color-accent);
+}
+
+.segmented-slider {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  background: #fff;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 0;
+}
+
+.segmented-control[data-active="restaurant"] .segmented-slider {
+  transform: translateX(100%);
+}
+
+.toggle-switch {
+  width: 36px;
+  height: 20px;
+  border-radius: 20px;
+  background: #E5E0D8;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  padding: 2px;
+  transition: background 0.3s;
+}
+
+.toggle-switch.on {
+  background: var(--color-accent);
+}
+
+.toggle-switch:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.toggle-thumb {
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.toggle-switch.on .toggle-thumb {
+  transform: translateX(16px);
 }
 
 .panel-select {
@@ -894,8 +1040,69 @@ input, textarea, select {
   color: var(--color-text);
 }
 
-.interest-slider-row input[type="range"] {
+.interest-slider-row input[type="range"],
+.style-slider {
+  -webkit-appearance: none;
+  appearance: none;
   width: 100%;
+  height: 4px;
+  background: #E5E0D8; /* var(--color-border) equivalent */
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.interest-slider-row input[type="range"]:hover,
+.style-slider:hover {
+  background: #D5CFC4;
+}
+
+.interest-slider-row input[type="range"]::-webkit-slider-thumb,
+.style-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: grab;
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.2s;
+}
+
+.interest-slider-row input[type="range"]:active::-webkit-slider-thumb,
+.style-slider:active::-webkit-slider-thumb {
+  cursor: grabbing;
+  transform: scale(1.2);
+  box-shadow: 0 3px 6px rgba(230, 57, 70, 0.4);
+}
+
+.interest-slider-row input[type="range"]::-moz-range-thumb,
+.style-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: grab;
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.2s;
+}
+
+.interest-slider-row input[type="range"]:active::-moz-range-thumb,
+.style-slider:active::-moz-range-thumb {
+  cursor: grabbing;
+  transform: scale(1.2);
+  box-shadow: 0 3px 6px rgba(230, 57, 70, 0.4);
+}
+
+.interest-slider-row input[type="range"]::-moz-range-progress,
+.style-slider::-moz-range-progress {
+  background: var(--color-accent);
+  height: 4px;
+  border-radius: 4px;
 }
 
 .interest-slider-row strong {
@@ -922,8 +1129,6 @@ input, textarea, select {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  max-height: 700px;
-  overflow: auto;
 }
 
 .poi-result-card {

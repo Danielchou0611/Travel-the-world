@@ -9,7 +9,7 @@ uvicorn server:app --reload --port 8001
 
 pdf下載的時候後端報錯的話: uvicorn server:app --loop asyncio --port 8001
 
-cd frontend
+cd front
 npm install
 npm run dev
 

@@ -474,6 +474,10 @@ async function handleDownloadPdf() {
 
   function handleFindNearbyRestaurants(attraction: Attraction) {
     if (!attraction.position) return;
+    if (!isEditing) {
+      setEditAttractions(trip?.days?.[activeDay]?.attractions ?? []);
+      setIsEditing(true);
+    }
     setNearbyRestaurantRequest({
       attraction,
       token: Date.now(),
@@ -557,6 +561,7 @@ async function handleDownloadPdf() {
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }} onClick={() => setSelectedIndex(null)}>
+      <div className="vignette-bg" />
 
       <Navbar
         showBack
@@ -591,10 +596,10 @@ async function handleDownloadPdf() {
                   //disabled={isDownloadingHtml}
                   onClick={handleDownloadPdf}
                   disabled={isDownloadingPdf}
-                  className="slow-hover-float"
+                  className="btn-primary"
                   style={{ background: '#FFFFFF', color: 'var(--color-text)', border: '1px solid var(--color-border)', padding: '6px 14px', width: 'auto', opacity: isDownloadingPdf ? 0.6 : 1 }}
                 >
-                  {isDownloadingPdf ? '處理中...' : '下載 HTML 網頁'}
+                  {isDownloadingPdf ? '處理中...' : '下載 PDF'}
                 </button>
                 <button
                   onClick={() => navigate(`/map/${tripId}`, { state: { trip } })}
@@ -776,7 +781,14 @@ async function handleDownloadPdf() {
                     onDrop={() => handleDrop(i)}
                     isDragOver={dragOverIndex === i}
                     isSelected={isSelected}
-                    onSelect={e => { e.stopPropagation(); setSelectedIndex(isSelected ? null : i); }}
+                    onSelect={e => { 
+                      e.stopPropagation(); 
+                      const nextSelected = isSelected ? null : i;
+                      setSelectedIndex(nextSelected); 
+                      if (nextSelected !== null && isEditing) {
+                        handleFindNearbyRestaurants(attraction);
+                      }
+                    }}
                   />
 
                   {/* ── External up/down triangle buttons ── */}
@@ -851,31 +863,6 @@ async function handleDownloadPdf() {
                       </svg>
                     </button>
 
-                    {!isEditing && attraction.position && (
-                      <button
-                        onClick={e => { e.stopPropagation(); handleFindNearbyRestaurants(attraction); }}
-                        title="增加附近餐廳"
-                        style={{
-                          marginTop: 6,
-                          padding: '8px 10px',
-                          background: 'rgba(255,255,255,0.96)',
-                          border: '1px solid var(--color-border)',
-                          borderRadius: 10,
-                          cursor: 'pointer',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          fontSize: 11,
-                          color: 'var(--color-text)',
-                          fontWeight: 600,
-                          whiteSpace: 'nowrap',
-                          boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
-                          backdropFilter: 'blur(4px)',
-                        }}
-                      >
-                        附近餐廳
-                      </button>
-                    )}
                   </div>
                 </div>
               );
@@ -895,13 +882,15 @@ async function handleDownloadPdf() {
             )}
           </div>
 
-          <ItineraryAddAttractionPanel
-            trip={trip}
-            currentDay={currentDay}
-            existingAttractions={displayAttractions}
-            onAddAttraction={handleAddAttraction}
-            nearbyRestaurantRequest={nearbyRestaurantRequest}
-          />
+          {isEditing && (
+            <ItineraryAddAttractionPanel
+              trip={trip}
+              currentDay={currentDay}
+              existingAttractions={displayAttractions}
+              onAddAttraction={handleAddAttraction}
+              nearbyRestaurantRequest={nearbyRestaurantRequest}
+            />
+          )}
 
         </div>
           </>
