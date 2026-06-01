@@ -1,0 +1,1703 @@
+[
+    {
+        "id": "Q30923413",
+        "name": "人間国宝美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.11069167 35.15313611)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11270320",
+        "name": "そごう美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.62530556 35.46555556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Shitoshi%20Bld.jpg"
+    },
+    {
+        "id": "Q11543551",
+        "name": "橫須賀美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.737936 35.259442)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokosuka%20Museum%20of%20Art%202009.jpg"
+    },
+    {
+        "id": "Q1046970",
+        "name": "讀賣樂園",
+        "type": "主題樂園",
+        "coordinates": "Point(139.519 35.6258)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yomiuriland-20100411.jpg"
+    },
+    {
+        "id": "Q11478412",
+        "name": "川崎市市民博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(139.64725 35.588583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kawasaki%20City%20Museum.jpg"
+    },
+    {
+        "id": "Q11415860",
+        "name": "向丘遊園地",
+        "type": "主題樂園",
+        "coordinates": "Point(139.571944 35.608889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mukogaokayuen%200208228as.jpg"
+    },
+    {
+        "id": "Q11543025",
+        "name": "横浜市民ギャラリー",
+        "type": "美術館",
+        "coordinates": "Point(139.626944 35.449444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Civic%20Art%20Gallery.JPG"
+    },
+    {
+        "id": "Q1134422",
+        "name": "箱根雕刻森林美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.05150556 35.24471944)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hakone5.jpg"
+    },
+    {
+        "id": "Q3192586",
+        "name": "金澤文庫",
+        "type": "歷史博物館",
+        "coordinates": "Point(139.62875 35.34391)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E7%AB%8B%E9%87%91%E6%B2%A2%E6%96%87%E5%BA%AB%20-%20panoramio%20%281%29.jpg"
+    },
+    {
+        "id": "Q11478345",
+        "name": "川崎・砂子の里資料館",
+        "type": "美術館",
+        "coordinates": "Point(139.701833 35.532028)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11262875",
+        "name": "橫濱宇宙樂園",
+        "type": "主題樂園",
+        "coordinates": "Point(139.636681 35.455203)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama-Japon112.JPG"
+    },
+    {
+        "id": "Q11478412",
+        "name": "川崎市市民博物館",
+        "type": "美術館",
+        "coordinates": "Point(139.64725 35.588583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kawasaki%20City%20Museum.jpg"
+    },
+    {
+        "id": "Q3363841",
+        "name": "兒童國 (橫濱市)",
+        "type": "主題樂園",
+        "coordinates": "Point(139.491424 35.562325)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Colorful%20boats%20kodomonokuni.jpg"
+    },
+    {
+        "id": "Q24876689",
+        "name": "山内龍雄芸術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.465388888 35.342027777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%B1%B1%E5%86%85%E9%BE%8D%E9%9B%84%E8%8A%B8%E8%A1%93%E9%A4%A8%E3%81%AE%E5%A4%96%E8%A6%B3.jpg"
+    },
+    {
+        "id": "Q61058198",
+        "name": "町立湯河原美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.071027777 35.148166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yugawara%20Art%20Museum.JPG"
+    },
+    {
+        "id": "Q864499",
+        "name": "新橫濱拉麵博物館",
+        "type": "主題樂園",
+        "coordinates": "Point(139.614537 35.509874)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shin-Yokohama%20Raumen%20Museum%20DSCN3985.jpg"
+    },
+    {
+        "id": "Q24807748",
+        "name": "平塚市美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.347595 35.338079)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hiratsuka%20MOA.JPG"
+    },
+    {
+        "id": "Q3363841",
+        "name": "兒童國 (橫濱市)",
+        "type": "兒童國",
+        "coordinates": "Point(139.491424 35.562325)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Colorful%20boats%20kodomonokuni.jpg"
+    },
+    {
+        "id": "Q11603346",
+        "name": "箱根ガラスの森美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.01775 35.266278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hakone%20Venetian%20Glass%20Museum.jpg"
+    },
+    {
+        "id": "Q861588",
+        "name": "橫濱美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.631 35.4571)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Museum%20of%20Art%202009.jpg"
+    },
+    {
+        "id": "Q1134422",
+        "name": "箱根雕刻森林美術館",
+        "type": "戶外博物館",
+        "coordinates": "Point(139.05150556 35.24471944)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hakone5.jpg"
+    },
+    {
+        "id": "Q3192586",
+        "name": "金澤文庫",
+        "type": "文庫",
+        "coordinates": "Point(139.6287 35.34398)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E7%AB%8B%E9%87%91%E6%B2%A2%E6%96%87%E5%BA%AB%20-%20panoramio%20%281%29.jpg"
+    },
+    {
+        "id": "Q11603353",
+        "name": "箱根拉利克博物館",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.009164 35.269564)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/170721%20Lalique%20Museum%20Hakone%20Japan04n.jpg"
+    },
+    {
+        "id": "Q22119727",
+        "name": "中川一政美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.15166667 35.14444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nakagawa.JPG"
+    },
+    {
+        "id": "Q1134422",
+        "name": "箱根雕刻森林美術館",
+        "type": "雕塑公园",
+        "coordinates": "Point(139.05150556 35.24471944)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hakone5.jpg"
+    },
+    {
+        "id": "Q7686506",
+        "name": "川崎市冈本太郎美术馆",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.557 35.6076)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Taro%20Okamoto%20Museum5.jpg"
+    },
+    {
+        "id": "Q10855979",
+        "name": "成川美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.031158 35.200028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/230909%20Narukawa%20Art%20Museum%20Hakone%20Japan05s3.jpg"
+    },
+    {
+        "id": "Q11644400",
+        "name": "酔鯨館",
+        "type": "美術館",
+        "coordinates": "Point(139.57541667 35.32077778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Suigeikan.jpg"
+    },
+    {
+        "id": "Q11388213",
+        "name": "光と緑の美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.363683 35.564286)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q3192586",
+        "name": "金澤文庫",
+        "type": "文庫",
+        "coordinates": "Point(139.62875 35.34391)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E7%AB%8B%E9%87%91%E6%B2%A2%E6%96%87%E5%BA%AB%20-%20panoramio%20%281%29.jpg"
+    },
+    {
+        "id": "Q3192586",
+        "name": "金澤文庫",
+        "type": "美術館",
+        "coordinates": "Point(139.6287 35.34398)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E7%AB%8B%E9%87%91%E6%B2%A2%E6%96%87%E5%BA%AB%20-%20panoramio%20%281%29.jpg"
+    },
+    {
+        "id": "Q11531611",
+        "name": "松永記念館",
+        "type": "美術館",
+        "coordinates": "Point(139.141472 35.249028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/R%C5%8Dky%C5%8Ds%C5%8D.jpg"
+    },
+    {
+        "id": "Q863153",
+        "name": "橫濱八景島海洋公園",
+        "type": "主題樂園",
+        "coordinates": "Point(139.647333333 35.337441666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Hakkeijima%20Sea%20Paradise.jpg"
+    },
+    {
+        "id": "Q864499",
+        "name": "新橫濱拉麵博物館",
+        "type": "食品主题園區",
+        "coordinates": "Point(139.614537 35.509874)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shin-Yokohama%20Raumen%20Museum%20DSCN3985.jpg"
+    },
+    {
+        "id": "Q864499",
+        "name": "新橫濱拉麵博物館",
+        "type": "食物博物館",
+        "coordinates": "Point(139.614537 35.509874)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shin-Yokohama%20Raumen%20Museum%20DSCN3985.jpg"
+    },
+    {
+        "id": "Q127432181",
+        "name": "中村正義の美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.513333333 35.6225)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q24876689",
+        "name": "山内龍雄芸術館",
+        "type": "美術館",
+        "coordinates": "Point(139.465388888 35.342027777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%B1%B1%E5%86%85%E9%BE%8D%E9%9B%84%E8%8A%B8%E8%A1%93%E9%A4%A8%E3%81%AE%E5%A4%96%E8%A6%B3.jpg"
+    },
+    {
+        "id": "Q3192586",
+        "name": "金澤文庫",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(139.6287 35.34398)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E7%AB%8B%E9%87%91%E6%B2%A2%E6%96%87%E5%BA%AB%20-%20panoramio%20%281%29.jpg"
+    },
+    {
+        "id": "Q3192586",
+        "name": "金澤文庫",
+        "type": "美術館",
+        "coordinates": "Point(139.62875 35.34391)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E7%AB%8B%E9%87%91%E6%B2%A2%E6%96%87%E5%BA%AB%20-%20panoramio%20%281%29.jpg"
+    },
+    {
+        "id": "Q104967760",
+        "name": "茅崎市美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.406277777 35.326194444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chigasaki%20City%20Art%20museum.jpg"
+    },
+    {
+        "id": "Q1134422",
+        "name": "箱根雕刻森林美術館",
+        "type": "彫刻美術館",
+        "coordinates": "Point(139.05150556 35.24471944)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hakone5.jpg"
+    },
+    {
+        "id": "Q127432181",
+        "name": "中村正義の美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.513333333 35.6225)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q863153",
+        "name": "橫濱八景島海洋公園",
+        "type": "水族館",
+        "coordinates": "Point(139.647333333 35.337441666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Hakkeijima%20Sea%20Paradise.jpg"
+    },
+    {
+        "id": "Q11543026",
+        "name": "横浜市民ギャラリーあざみ野",
+        "type": "美術館",
+        "coordinates": "Point(139.55394444 35.56494444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Art%20Forum%20Azamino%202025.jpg"
+    },
+    {
+        "id": "Q48763537",
+        "name": "藤泽市藤泽浮世绘馆",
+        "type": "美術館",
+        "coordinates": "Point(139.44777778 35.34061111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11603353",
+        "name": "箱根拉利克博物館",
+        "type": "美術館",
+        "coordinates": "Point(139.009164 35.269564)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/170721%20Lalique%20Museum%20Hakone%20Japan04n.jpg"
+    },
+    {
+        "id": "Q1574475",
+        "name": "POLA美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.021145 35.256711)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/191103%20Pola%20Museum%20of%20Art%20Hakone%20Japan02s3.jpg"
+    },
+    {
+        "id": "Q17224006",
+        "name": "岡田美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.04611111 35.23808333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/251122%20Okada%20Museum%20of%20Art%20Hakone%20Japan03s3.jpg"
+    },
+    {
+        "id": "Q11346041",
+        "name": "ヨコハマ猫の美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.65025 35.43852778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Cat%20Museum.jpg"
+    },
+    {
+        "id": "Q3192586",
+        "name": "金澤文庫",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(139.62875 35.34391)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E7%AB%8B%E9%87%91%E6%B2%A2%E6%96%87%E5%BA%AB%20-%20panoramio%20%281%29.jpg"
+    },
+    {
+        "id": "Q3192586",
+        "name": "金澤文庫",
+        "type": "歷史博物館",
+        "coordinates": "Point(139.6287 35.34398)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E7%AB%8B%E9%87%91%E6%B2%A2%E6%96%87%E5%BA%AB%20-%20panoramio%20%281%29.jpg"
+    },
+    {
+        "id": "Q7686506",
+        "name": "川崎市冈本太郎美术馆",
+        "type": "美術館",
+        "coordinates": "Point(139.557 35.6076)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Taro%20Okamoto%20Museum5.jpg"
+    },
+    {
+        "id": "Q22119727",
+        "name": "中川一政美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.15166667 35.14444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nakagawa.JPG"
+    },
+    {
+        "id": "Q7827637",
+        "name": "東芝未來科學館",
+        "type": "科學博物館",
+        "coordinates": "Point(139.69305556 35.53185833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lazona%20Kawasaki%20Toshiba%20Building.jpg"
+    },
+    {
+        "id": "Q11499008",
+        "name": "放送圖書館",
+        "type": "archival material",
+        "coordinates": "Point(139.642889 35.446222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Media%20and%20Communications%20Center%2020100619-001.jpg"
+    },
+    {
+        "id": "Q17230652",
+        "name": "ヨコハマおもしろ水族館",
+        "type": "水族館",
+        "coordinates": "Point(139.644583 35.442944)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Fortune%20Aquarium.jpg"
+    },
+    {
+        "id": "Q102045963",
+        "name": "赤坂弥生学習室",
+        "type": "設施",
+        "coordinates": "Point(139.62952778 35.18669444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q8054641",
+        "name": "橫濱兒童科學館",
+        "type": "兒童博物館",
+        "coordinates": "Point(139.595 35.3771)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Science%20Center.JPG"
+    },
+    {
+        "id": "Q110937150",
+        "name": "史跡田名向原遺跡旧石器時代学習館",
+        "type": "考古博物館",
+        "coordinates": "Point(139.355944444 35.529055555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11542858",
+        "name": "橫濱Sky Walk",
+        "type": "步行者專用道路",
+        "coordinates": "Point(139.67627778 35.45886111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama-Skywalk%2CSkytower.JPG"
+    },
+    {
+        "id": "Q696891",
+        "name": "三笠號戰艦",
+        "type": "前無畏艦",
+        "coordinates": "Point(139.67416667 35.285)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokosuka-mikasa-08-2010.png"
+    },
+    {
+        "id": "Q11542838",
+        "name": "橫濱港博物館",
+        "type": "港口博物館",
+        "coordinates": "Point(139.633 35.453667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Port%20Museum%202022%20-%2002.jpg"
+    },
+    {
+        "id": "Q11528262",
+        "name": "東芝科学館",
+        "type": "公司博物館",
+        "coordinates": "Point(139.693056 35.55)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/TOSHIBA%20research%20and%20development%20center%20Komukaitoshiba.jpg"
+    },
+    {
+        "id": "Q39048210",
+        "name": "日産ヘリテージコレクション",
+        "type": "汽車博物館",
+        "coordinates": "Point(139.425034 35.494179)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11542838",
+        "name": "橫濱港博物館",
+        "type": "海事博物館",
+        "coordinates": "Point(139.633 35.453667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Port%20Museum%202022%20-%2002.jpg"
+    },
+    {
+        "id": "Q2496472",
+        "name": "橫濱麵包超人兒童博物館暨購物中心",
+        "type": "商場",
+        "coordinates": "Point(139.628722222 35.463055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Anpanman%20Children%27s%20Museum%202019%20-%2003.jpg"
+    },
+    {
+        "id": "Q7040952",
+        "name": "日産エンジン博物館",
+        "type": "公司博物館",
+        "coordinates": "Point(139.66219444 35.48180556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/NissanGuesthall.jpg"
+    },
+    {
+        "id": "Q11589135",
+        "name": "神奈川县立生命之星·地球博物馆",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(139.12125 35.239222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kanagawa%20Prefectural%20Museum%20of%20Natural%20History1.jpg"
+    },
+    {
+        "id": "Q102045963",
+        "name": "赤坂弥生学習室",
+        "type": "博物館",
+        "coordinates": "Point(139.62952778 35.18669444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q116205305",
+        "name": "観音崎自然博物館",
+        "type": "自然歷史博物館",
+        "coordinates": "Point(139.742444444 35.252)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kannonzaki%20Park%2003.jpg"
+    },
+    {
+        "id": "Q123466798",
+        "name": "旧ウィトリッヒ邸",
+        "type": "建成遗产",
+        "coordinates": "Point(139.529916666 35.405833333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11409250",
+        "name": "厚木市兒童科學館",
+        "type": "科學博物館",
+        "coordinates": "Point(139.36641 35.441081)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Atsugi%20city%20plaza%2020161002.jpg"
+    },
+    {
+        "id": "Q11499008",
+        "name": "放送圖書館",
+        "type": "メディア図書館",
+        "coordinates": "Point(139.642889 35.446222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Media%20and%20Communications%20Center%2020100619-001.jpg"
+    },
+    {
+        "id": "Q65263796",
+        "name": "小田原文学馆",
+        "type": "文學館",
+        "coordinates": "Point(139.153722222 35.244777777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%94%B0%E4%B8%AD%E5%85%89%E9%A1%95%E9%82%B8.jpg"
+    },
+    {
+        "id": "Q11257362",
+        "name": "安藤百福發明紀念館",
+        "type": "公司博物館",
+        "coordinates": "Point(139.638861 35.455472)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cupnoodles-Museum-Yokohama.jpg"
+    },
+    {
+        "id": "Q113547154",
+        "name": "茅ヶ崎市民俗資料館",
+        "type": "民俗博物館",
+        "coordinates": "Point(139.412472222 35.362416666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q1207989",
+        "name": "橫濱海洋塔",
+        "type": "觀光塔",
+        "coordinates": "Point(139.6509 35.44393)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Marine%20Tower%202022%20-%2001.jpg"
+    },
+    {
+        "id": "Q11528262",
+        "name": "東芝科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(139.693056 35.55)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/TOSHIBA%20research%20and%20development%20center%20Komukaitoshiba.jpg"
+    },
+    {
+        "id": "Q20043481",
+        "name": "大山街道ふるさと館",
+        "type": "交通博物館",
+        "coordinates": "Point(139.612718 35.603478)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%B7%9D%E5%B4%8E%E5%B8%82%E5%A4%A7%E5%B1%B1%E8%A1%97%E9%81%93%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E9%A4%A8.JPG"
+    },
+    {
+        "id": "Q5214583",
+        "name": "镰仓文学馆",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(139.53894444 35.3156)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Literature%20Museum%20kamakura.jpg"
+    },
+    {
+        "id": "Q11550565",
+        "name": "江之岛展望灯台",
+        "type": "觀光塔",
+        "coordinates": "Point(139.478333 35.299722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Enoshima%20Sea%20Candle%201.jpg"
+    },
+    {
+        "id": "Q11542858",
+        "name": "橫濱Sky Walk",
+        "type": "觀景台",
+        "coordinates": "Point(139.67627778 35.45886111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama-Skywalk%2CSkytower.JPG"
+    },
+    {
+        "id": "Q131011021",
+        "name": "京急ミュージアム",
+        "type": "公司博物館",
+        "coordinates": "Point(139.6267257 35.4635979)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Keikyu%20Group%20Headquarters%2003%20%28KEIKYU%20MUSEUM%29.jpg"
+    },
+    {
+        "id": "Q11660619",
+        "name": "電車與巴士的博物館",
+        "type": "鐵路博物館",
+        "coordinates": "Point(139.592386 35.587858)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokyu%20Train%20and%20Bus%20Museum.jpg"
+    },
+    {
+        "id": "Q11573589",
+        "name": "理科HOUSE",
+        "type": "科學博物館",
+        "coordinates": "Point(139.59180556 35.30272222)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q843426",
+        "name": "宇宙時鐘21",
+        "type": "摩天輪",
+        "coordinates": "Point(139.637 35.4554)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/CosmoClock21%202006-05-21.JPG"
+    },
+    {
+        "id": "Q102045964",
+        "name": "赤星直忠博士文化財資料館",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.62047222 35.22827778)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q107638557",
+        "name": "横浜市三殿台考古館",
+        "type": "考古博物館",
+        "coordinates": "Point(139.610777777 35.421111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%A8%AA%E6%B5%9C%E5%B8%82%E4%B8%89%E6%AE%BF%E5%8F%B0%E8%80%83%E5%8F%A4%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11374325",
+        "name": "京急油壺海洋公園",
+        "type": "水族館",
+        "coordinates": "Point(139.612556 35.161472)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/A-marinepark-01.JPG"
+    },
+    {
+        "id": "Q23905885",
+        "name": "Orbi Yokohama",
+        "type": "主題公園",
+        "coordinates": "Point(139.632194444 35.45725)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Orbi%20Yokohama%2002.JPG"
+    },
+    {
+        "id": "Q20043481",
+        "name": "大山街道ふるさと館",
+        "type": "地方文化館",
+        "coordinates": "Point(139.612718 35.603478)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%B7%9D%E5%B4%8E%E5%B8%82%E5%A4%A7%E5%B1%B1%E8%A1%97%E9%81%93%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E9%A4%A8.JPG"
+    },
+    {
+        "id": "Q2496472",
+        "name": "橫濱麵包超人兒童博物館暨購物中心",
+        "type": "博物館",
+        "coordinates": "Point(139.628722222 35.463055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Anpanman%20Children%27s%20Museum%202019%20-%2003.jpg"
+    },
+    {
+        "id": "Q11499008",
+        "name": "放送圖書館",
+        "type": "廣播博物館",
+        "coordinates": "Point(139.642889 35.446222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Media%20and%20Communications%20Center%2020100619-001.jpg"
+    },
+    {
+        "id": "Q105438533",
+        "name": "橫濱鋼彈工廠",
+        "type": "主題公園",
+        "coordinates": "Point(139.6540782 35.446711)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/GUNDAM%20FACTORY%20YOKOHAMA%202023.jpg"
+    },
+    {
+        "id": "Q30924159",
+        "name": "いすゞプラザ",
+        "type": "公司博物館",
+        "coordinates": "Point(139.45666667 35.39888889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Isuzu%20Plaza%202017%20March.jpg"
+    },
+    {
+        "id": "Q7040952",
+        "name": "日産エンジン博物館",
+        "type": "汽車博物館",
+        "coordinates": "Point(139.66219444 35.48180556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/NissanGuesthall.jpg"
+    },
+    {
+        "id": "Q30928683",
+        "name": "神奈川県埋蔵文化財センター",
+        "type": "考古博物館",
+        "coordinates": "Point(139.62766667 35.43319444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q20043481",
+        "name": "大山街道ふるさと館",
+        "type": "交通博物館",
+        "coordinates": "Point(139.61271944 35.60331667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%B7%9D%E5%B4%8E%E5%B8%82%E5%A4%A7%E5%B1%B1%E8%A1%97%E9%81%93%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E9%A4%A8.JPG"
+    },
+    {
+        "id": "Q8054641",
+        "name": "橫濱兒童科學館",
+        "type": "科學博物館",
+        "coordinates": "Point(139.595 35.3771)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Science%20Center.JPG"
+    },
+    {
+        "id": "Q2496472",
+        "name": "橫濱麵包超人兒童博物館暨購物中心",
+        "type": "兒童博物館",
+        "coordinates": "Point(139.628722222 35.463055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Anpanman%20Children%27s%20Museum%202019%20-%2003.jpg"
+    },
+    {
+        "id": "Q104103957",
+        "name": "浪漫特快博物館",
+        "type": "建築物",
+        "coordinates": "Point(139.390166666 35.453055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/ROMANCECAR%20MUSEUM%2020210423.jpg"
+    },
+    {
+        "id": "Q97169050",
+        "name": "カワスイ 川崎水族館",
+        "type": "水族館",
+        "coordinates": "Point(139.696305555 35.529611111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11257362",
+        "name": "安藤百福發明紀念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.638861 35.455472)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cupnoodles-Museum-Yokohama.jpg"
+    },
+    {
+        "id": "Q1207989",
+        "name": "橫濱海洋塔",
+        "type": "燈塔",
+        "coordinates": "Point(139.6509 35.44393)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Marine%20Tower%202022%20-%2001.jpg"
+    },
+    {
+        "id": "Q11550565",
+        "name": "江之岛展望灯台",
+        "type": "燈塔",
+        "coordinates": "Point(139.478333 35.299722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Enoshima%20Sea%20Candle%201.jpg"
+    },
+    {
+        "id": "Q102045963",
+        "name": "赤坂弥生学習室",
+        "type": "考古博物館",
+        "coordinates": "Point(139.62952778 35.18669444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104103957",
+        "name": "浪漫特快博物館",
+        "type": "鐵路博物館",
+        "coordinates": "Point(139.390166666 35.453055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/ROMANCECAR%20MUSEUM%2020210423.jpg"
+    },
+    {
+        "id": "Q20043481",
+        "name": "大山街道ふるさと館",
+        "type": "地方文化館",
+        "coordinates": "Point(139.61271944 35.60331667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%B7%9D%E5%B4%8E%E5%B8%82%E5%A4%A7%E5%B1%B1%E8%A1%97%E9%81%93%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E9%A4%A8.JPG"
+    },
+    {
+        "id": "Q113547154",
+        "name": "茅ヶ崎市民俗資料館",
+        "type": "戶外博物館",
+        "coordinates": "Point(139.412472222 35.362416666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q39048210",
+        "name": "日産ヘリテージコレクション",
+        "type": "车库",
+        "coordinates": "Point(139.425034 35.494179)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q6956071",
+        "name": "日本邮船历史博物馆",
+        "type": "公司博物館",
+        "coordinates": "Point(139.63944444 35.45027778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/NYK%20maritime%20museum01s3200.jpg"
+    },
+    {
+        "id": "Q11357023",
+        "name": "三菱みなとみらい技術館",
+        "type": "公司博物館",
+        "coordinates": "Point(139.629889 35.455861)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q30928683",
+        "name": "神奈川県埋蔵文化財センター",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(139.62766667 35.43319444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q6956071",
+        "name": "日本邮船历史博物馆",
+        "type": "海事博物館",
+        "coordinates": "Point(139.63944444 35.45027778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/NYK%20maritime%20museum01s3200.jpg"
+    },
+    {
+        "id": "Q65263796",
+        "name": "小田原文学馆",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(139.153722222 35.244777777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%94%B0%E4%B8%AD%E5%85%89%E9%A1%95%E9%82%B8.jpg"
+    },
+    {
+        "id": "Q696891",
+        "name": "三笠號戰艦",
+        "type": "博物館船",
+        "coordinates": "Point(139.67416667 35.285)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokosuka-mikasa-08-2010.png"
+    },
+    {
+        "id": "Q11502657",
+        "name": "新江之島水族館",
+        "type": "水族館",
+        "coordinates": "Point(139.479889 35.309667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/New%20Enoshima%20Aquarium.JPG"
+    },
+    {
+        "id": "Q135456670",
+        "name": "Kawakita Memorial Film Institute",
+        "type": "電影博物館",
+        "coordinates": "Point(139.5525 35.32427)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kawakita%20Filmmuseum%20in%20Kamakura.jpg"
+    },
+    {
+        "id": "Q7398960",
+        "name": "相模原Campus (JAXA)",
+        "type": "科學博物館",
+        "coordinates": "Point(139.39527778 35.55833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Front%20Entrance%20to%20ISAS.jpeg"
+    },
+    {
+        "id": "Q11409250",
+        "name": "厚木市兒童科學館",
+        "type": "兒童博物館",
+        "coordinates": "Point(139.36641 35.441081)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Atsugi%20city%20plaza%2020161002.jpg"
+    },
+    {
+        "id": "Q8054623",
+        "name": "横浜税関資料展示室",
+        "type": "海關博物館",
+        "coordinates": "Point(139.642 35.4495)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Customs%20Museum%20%2815711879357%29.jpg"
+    },
+    {
+        "id": "Q132181320",
+        "name": "ポケパーク カントー",
+        "type": "主題公園",
+        "coordinates": "Point(139.520425973 35.625745812)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q30924159",
+        "name": "いすゞプラザ",
+        "type": "汽車博物館",
+        "coordinates": "Point(139.45666667 35.39888889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Isuzu%20Plaza%202017%20March.jpg"
+    },
+    {
+        "id": "Q11582155",
+        "name": "相模川ふれあい科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(139.328889 35.547417)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%A4%96%E8%A6%B3%EF%BC%88%E6%96%9C%EF%BC%89.jpg"
+    },
+    {
+        "id": "Q7827637",
+        "name": "東芝未來科學館",
+        "type": "公司博物館",
+        "coordinates": "Point(139.69305556 35.53185833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lazona%20Kawasaki%20Toshiba%20Building.jpg"
+    },
+    {
+        "id": "Q696891",
+        "name": "三笠號戰艦",
+        "type": "保存された船舶",
+        "coordinates": "Point(139.67416667 35.285)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokosuka-mikasa-08-2010.png"
+    },
+    {
+        "id": "Q11357023",
+        "name": "三菱みなとみらい技術館",
+        "type": "科技博物館",
+        "coordinates": "Point(139.629889 35.455861)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q5214583",
+        "name": "镰仓文学馆",
+        "type": "文學館",
+        "coordinates": "Point(139.53894444 35.3156)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Literature%20Museum%20kamakura.jpg"
+    },
+    {
+        "id": "Q11589135",
+        "name": "神奈川县立生命之星·地球博物馆",
+        "type": "自然歷史博物館",
+        "coordinates": "Point(139.12125 35.239222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kanagawa%20Prefectural%20Museum%20of%20Natural%20History1.jpg"
+    },
+    {
+        "id": "Q7398960",
+        "name": "相模原Campus (JAXA)",
+        "type": "實驗室",
+        "coordinates": "Point(139.39527778 35.55833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Front%20Entrance%20to%20ISAS.jpeg"
+    },
+    {
+        "id": "Q11438299",
+        "name": "大磯長灘",
+        "type": "水上遊樂園",
+        "coordinates": "Point(139.28333333 35.30166667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/OISO.jpg"
+    },
+    {
+        "id": "Q11257362",
+        "name": "安藤百福發明紀念館",
+        "type": "食物博物館",
+        "coordinates": "Point(139.638861 35.455472)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cupnoodles-Museum-Yokohama.jpg"
+    },
+    {
+        "id": "Q104103957",
+        "name": "浪漫特快博物館",
+        "type": "公司博物館",
+        "coordinates": "Point(139.390166666 35.453055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/ROMANCECAR%20MUSEUM%2020210423.jpg"
+    },
+    {
+        "id": "Q11582155",
+        "name": "相模川ふれあい科学館",
+        "type": "水族館",
+        "coordinates": "Point(139.328889 35.547417)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%A4%96%E8%A6%B3%EF%BC%88%E6%96%9C%EF%BC%89.jpg"
+    },
+    {
+        "id": "Q108581210",
+        "name": "池子遺跡群資料館",
+        "type": "考古博物館",
+        "coordinates": "Point(139.587194444 35.306277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ikego%20Artifacts%20Museum%EF%BC%88%E6%B1%A0%E5%AD%90%E9%81%BA%E8%B7%A1%E7%BE%A4%E8%B3%87%E6%96%99%E9%A4%A8%EF%BC%89.jpg"
+    },
+    {
+        "id": "Q11660619",
+        "name": "電車與巴士的博物館",
+        "type": "汽車博物館",
+        "coordinates": "Point(139.592386 35.587858)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokyu%20Train%20and%20Bus%20Museum.jpg"
+    },
+    {
+        "id": "Q102045964",
+        "name": "赤星直忠博士文化財資料館",
+        "type": "考古博物館",
+        "coordinates": "Point(139.62047222 35.22827778)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q131011021",
+        "name": "京急ミュージアム",
+        "type": "鐵路博物館",
+        "coordinates": "Point(139.6267257 35.4635979)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Keikyu%20Group%20Headquarters%2003%20%28KEIKYU%20MUSEUM%29.jpg"
+    },
+    {
+        "id": "Q11543182",
+        "name": "橫濱市電保存館",
+        "type": "電車博物館",
+        "coordinates": "Point(139.62456944 35.42048611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama-Tramport-00.jpg"
+    },
+    {
+        "id": "Q11432376",
+        "name": "大佛次郎纪念馆",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.65525 35.439306)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Osaragi%20Jiro%20Memorial%20musieum%20Out.jpg"
+    },
+    {
+        "id": "Q11582112",
+        "name": "相模原市立博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(139.39306111 35.55926944)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hayabusa-5.jpg"
+    },
+    {
+        "id": "Q11614758",
+        "name": "蘆之湖遊覽船",
+        "type": "游览船",
+        "coordinates": "Point(138.997832111 35.234073)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/AshinokoYuransen8382.jpg"
+    },
+    {
+        "id": "Q11589405",
+        "name": "神奈川近代文学馆",
+        "type": "文學館",
+        "coordinates": "Point(139.656083333 35.438638888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kanabun004.jpg"
+    },
+    {
+        "id": "Q21652572",
+        "name": "海老名市温故館",
+        "type": "地方政府大樓",
+        "coordinates": "Point(139.39736111 35.45408333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ebinashi%20onkokan.JPG"
+    },
+    {
+        "id": "Q11432376",
+        "name": "大佛次郎纪念馆",
+        "type": "文學館",
+        "coordinates": "Point(139.65525 35.439306)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Osaragi%20Jiro%20Memorial%20musieum%20Out.jpg"
+    },
+    {
+        "id": "Q113415666",
+        "name": "茅ヶ崎市博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(139.4125 35.363333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chigasaki%20City%20Museum%20-%202024%20May%203%20various%2022%2010%2041%20339000.jpg"
+    },
+    {
+        "id": "Q6156562",
+        "name": "海上保安資料館横浜館",
+        "type": "海事博物館",
+        "coordinates": "Point(139.64430556 35.45430556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kousaku%20sen.JPG"
+    },
+    {
+        "id": "Q5365233",
+        "name": "神奈川县立历史博物馆",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(139.636 35.4492)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kanagawa%20Prefectural%20Museum%20of%20Cultural%20History%202009.jpg"
+    },
+    {
+        "id": "Q5363525",
+        "name": "鐵皮玩具博物館",
+        "type": "玩具博物館",
+        "coordinates": "Point(139.65439444 35.43831389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tintoy%20museum.JPG"
+    },
+    {
+        "id": "Q104708570",
+        "name": "平塚市博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(139.348647 35.336836)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hiratsuka%20City%20Museum.jpg"
+    },
+    {
+        "id": "Q11262871",
+        "name": "横浜人形の家",
+        "type": "人形博物館",
+        "coordinates": "Point(139.65211111 35.44316667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/YokohamaDollHouse.JPG"
+    },
+    {
+        "id": "Q5365233",
+        "name": "神奈川县立历史博物馆",
+        "type": "银行建筑物",
+        "coordinates": "Point(139.636 35.4492)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kanagawa%20Prefectural%20Museum%20of%20Cultural%20History%202009.jpg"
+    },
+    {
+        "id": "Q5365233",
+        "name": "神奈川县立历史博物馆",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(139.636275 35.449130555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kanagawa%20Prefectural%20Museum%20of%20Cultural%20History%202009.jpg"
+    },
+    {
+        "id": "Q30932992",
+        "name": "鎌倉歴史文化交流館",
+        "type": "地方文化館",
+        "coordinates": "Point(139.54765278 35.322375)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kamakura%20Museum%20of%20History%20%26%20Culture%201.jpg"
+    },
+    {
+        "id": "Q124956468",
+        "name": "ふじさわ宿交流館",
+        "type": "游客中心",
+        "coordinates": "Point(139.4873 35.34655)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%B5%E3%81%98%E3%81%95%E3%82%8F%E5%AE%BF%E4%BA%A4%E6%B5%81%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q5365233",
+        "name": "神奈川县立历史博物馆",
+        "type": "歷史博物館",
+        "coordinates": "Point(139.636 35.4492)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kanagawa%20Prefectural%20Museum%20of%20Cultural%20History%202009.jpg"
+    },
+    {
+        "id": "Q100269008",
+        "name": "あつぎ郷土博物館",
+        "type": "地方文化館",
+        "coordinates": "Point(139.3495 35.495361111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q48746867",
+        "name": "御林展望公園",
+        "type": "公園",
+        "coordinates": "Point(139.15083333 35.14388889)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q5365233",
+        "name": "神奈川县立历史博物馆",
+        "type": "银行建筑物",
+        "coordinates": "Point(139.636275 35.449130555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kanagawa%20Prefectural%20Museum%20of%20Cultural%20History%202009.jpg"
+    },
+    {
+        "id": "Q11589405",
+        "name": "神奈川近代文学馆",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(139.656083333 35.438638888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kanabun004.jpg"
+    },
+    {
+        "id": "Q3330314",
+        "name": "镰仓国宝馆",
+        "type": "市立博物館",
+        "coordinates": "Point(139.557036 35.324667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kamakura%20Museum%20of%20National%20Treasures%20panoramic.jpg"
+    },
+    {
+        "id": "Q30929285",
+        "name": "横浜市八聖殿郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(139.66497222 35.41511111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Hasseiden%20Local%20museum.jpg"
+    },
+    {
+        "id": "Q11478414",
+        "name": "川崎市和平馆",
+        "type": "和平博物館",
+        "coordinates": "Point(139.659 35.56874444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Japanese%20Kawasaki%20Peace%20Museum.jpg"
+    },
+    {
+        "id": "Q98381287",
+        "name": "横滨海洋科学博物馆",
+        "type": "海事博物館",
+        "coordinates": "Point(139.650833333 35.443888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Marine%20Tower%2001.JPG"
+    },
+    {
+        "id": "Q30932992",
+        "name": "鎌倉歴史文化交流館",
+        "type": "博物館",
+        "coordinates": "Point(139.54765278 35.322375)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kamakura%20Museum%20of%20History%20%26%20Culture%201.jpg"
+    },
+    {
+        "id": "Q11462975",
+        "name": "小田原市鄉土文化館",
+        "type": "地方文化館",
+        "coordinates": "Point(139.154917 35.249694)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%B0%8F%E7%94%B0%E5%8E%9F%E5%B8%82%E9%83%B7%E5%9C%9F%E6%96%87%E5%8C%96%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q5365233",
+        "name": "神奈川县立历史博物馆",
+        "type": "歷史博物館",
+        "coordinates": "Point(139.636275 35.449130555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kanagawa%20Prefectural%20Museum%20of%20Cultural%20History%202009.jpg"
+    },
+    {
+        "id": "Q11589187",
+        "name": "神奈川縣立近代美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(139.554786 35.324697)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Museum%20of%20Modern%20Art%2C%20Kamakura%202009.jpg"
+    },
+    {
+        "id": "Q21652572",
+        "name": "海老名市温故館",
+        "type": "地方文化館",
+        "coordinates": "Point(139.39736111 35.45408333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ebinashi%20onkokan.JPG"
+    },
+    {
+        "id": "Q104708393",
+        "name": "大磯町郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(139.290882 35.305381)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%A4%A7%E7%A3%AF%E7%94%BA%E9%83%B7%E5%9C%9F%E8%B3%87%E6%96%99%E9%A4%A8%E5%85%A5%E5%8F%A3.jpg"
+    },
+    {
+        "id": "Q11589187",
+        "name": "神奈川縣立近代美術館",
+        "type": "现代美术馆",
+        "coordinates": "Point(139.554786 35.324697)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Museum%20of%20Modern%20Art%2C%20Kamakura%202009.jpg"
+    },
+    {
+        "id": "Q124956468",
+        "name": "ふじさわ宿交流館",
+        "type": "地方文化館",
+        "coordinates": "Point(139.4873 35.34655)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%B5%E3%81%98%E3%81%95%E3%82%8F%E5%AE%BF%E4%BA%A4%E6%B5%81%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q48746867",
+        "name": "御林展望公園",
+        "type": "风景点",
+        "coordinates": "Point(139.15083333 35.14388889)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11628518",
+        "name": "西村京太郎紀念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.091358 35.140728)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nishimura%20Kyotaro%20Museum-P1010867.JPG"
+    },
+    {
+        "id": "Q18515604",
+        "name": "箱根小王子博物館",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.013194444 35.266666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/170721%20Cin%C3%A9ma%20-%20Mus%C3%A9e%20du%20Petit%20Prince%20de%20Saint-Exup%C3%A9ry%20Hakone%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q11623792",
+        "name": "藤子·F·不二雄博物館",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.573611 35.61)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fujiko%EF%BD%A5F%EF%BD%A5Fujio%20Museum%20-01.jpg"
+    },
+    {
+        "id": "Q114727484",
+        "name": "澤田美喜記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.313805555 35.310194444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q18515604",
+        "name": "箱根小王子博物館",
+        "type": "博物館",
+        "coordinates": "Point(139.013194444 35.266666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/170721%20Cin%C3%A9ma%20-%20Mus%C3%A9e%20du%20Petit%20Prince%20de%20Saint-Exup%C3%A9ry%20Hakone%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q114727484",
+        "name": "澤田美喜記念館",
+        "type": "キリスト教博物館",
+        "coordinates": "Point(139.313805555 35.310194444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11623792",
+        "name": "藤子·F·不二雄博物館",
+        "type": "動漫博物館",
+        "coordinates": "Point(139.573611 35.61)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fujiko%EF%BD%A5F%EF%BD%A5Fujio%20Museum%20-01.jpg"
+    },
+    {
+        "id": "Q11653596",
+        "name": "長興山のシダレザクラ",
+        "type": "一本櫻",
+        "coordinates": "Point(139.115361 35.243806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Weeping%20Cherry%20Tree%20in%20Ch%C5%8Dk%C5%8Dzan%20Sh%C5%8Dtai-ji%20Temple.jpg"
+    },
+    {
+        "id": "Q120703507",
+        "name": "有馬のハルニレ",
+        "type": "巨樹",
+        "coordinates": "Point(139.407944444 35.418555555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Arima-Harunire1.JPG"
+    },
+    {
+        "id": "Q11284659",
+        "name": "箱根美術館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(139.042667 35.248167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%AE%B1%E6%A0%B9%E7%BE%8E%E8%A1%93%E9%A4%A8%E6%9C%AC%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q6135572",
+        "name": "横滨三塔",
+        "type": "地貌景观",
+        "coordinates": "Point(139.6485 35.4526)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Prefectural%20office%20of%20Kanagawa.jpg"
+    },
+    {
+        "id": "Q6135572",
+        "name": "横滨三塔",
+        "type": "地貌景观",
+        "coordinates": "Point(139.6485 35.4526)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20customs02s3200.jpg"
+    },
+    {
+        "id": "Q6135572",
+        "name": "横滨三塔",
+        "type": "地貌景观",
+        "coordinates": "Point(139.6485 35.4526)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20kaiko%20kinenkaikan05s3200.jpg"
+    },
+    {
+        "id": "Q6135572",
+        "name": "横滨三塔",
+        "type": "地貌景观",
+        "coordinates": "Point(139.6485 35.4526)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama3Towers%20From%20Akarenga.JPG"
+    },
+    {
+        "id": "Q11653596",
+        "name": "長興山のシダレザクラ",
+        "type": "巨樹",
+        "coordinates": "Point(139.115361 35.243806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Weeping%20Cherry%20Tree%20in%20Ch%C5%8Dk%C5%8Dzan%20Sh%C5%8Dtai-ji%20Temple.jpg"
+    },
+    {
+        "id": "Q11588985",
+        "name": "神奈川縣水道記念館",
+        "type": "水廠博物館",
+        "coordinates": "Point(139.379639 35.3715)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kanagawa%20Water%20Memorial%20Park%2001.jpg"
+    },
+    {
+        "id": "Q8054642",
+        "name": "シルク博物館",
+        "type": "織物博物館",
+        "coordinates": "Point(139.645 35.4476)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Silk%20Museum%20001.JPG"
+    },
+    {
+        "id": "Q120703507",
+        "name": "有馬のハルニレ",
+        "type": "古树",
+        "coordinates": "Point(139.407944444 35.418555555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Arima-Harunire1.JPG"
+    },
+    {
+        "id": "Q6135572",
+        "name": "横滨三塔",
+        "type": "三者並稱",
+        "coordinates": "Point(139.6485 35.4526)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Prefectural%20office%20of%20Kanagawa.jpg"
+    },
+    {
+        "id": "Q6135572",
+        "name": "横滨三塔",
+        "type": "三者並稱",
+        "coordinates": "Point(139.6485 35.4526)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20customs02s3200.jpg"
+    },
+    {
+        "id": "Q6135572",
+        "name": "横滨三塔",
+        "type": "三者並稱",
+        "coordinates": "Point(139.6485 35.4526)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20kaiko%20kinenkaikan05s3200.jpg"
+    },
+    {
+        "id": "Q6135572",
+        "name": "横滨三塔",
+        "type": "三者並稱",
+        "coordinates": "Point(139.6485 35.4526)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama3Towers%20From%20Akarenga.JPG"
+    },
+    {
+        "id": "Q105448979",
+        "name": "曾我梅林",
+        "type": "觀光景點",
+        "coordinates": "Point(139.193055555 35.299444444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q30937292",
+        "name": "早川毘蘭樹",
+        "type": "巨樹",
+        "coordinates": "Point(139.13733333 35.24211111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hayakawa%20no%20Biranju.jpeg"
+    },
+    {
+        "id": "Q30929301",
+        "name": "埋蔵文化財センター (横浜市)",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(139.57894444 35.34644444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Y-MaibunCenter.jpg"
+    },
+    {
+        "id": "Q104708681",
+        "name": "日本新聞博物館",
+        "type": "新聞博物館",
+        "coordinates": "Point(139.642818 35.446248)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q105448979",
+        "name": "曾我梅林",
+        "type": "農業用地",
+        "coordinates": "Point(139.193055555 35.299444444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q22120804",
+        "name": "橫濱歐亞文化館",
+        "type": "文化博物館",
+        "coordinates": "Point(139.64325611 35.44627111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eurasia%20bunka%201.JPG"
+    },
+    {
+        "id": "Q26919614",
+        "name": "横浜水道記念館",
+        "type": "水廠博物館",
+        "coordinates": "Point(139.571727777 35.465925)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20waterworks%20commemoration%20hall%2001.jpg"
+    },
+    {
+        "id": "Q11466545",
+        "name": "山北鉄道公園",
+        "type": "鉄道公園",
+        "coordinates": "Point(139.07861111 35.36027778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%B1%B1%E5%8C%97%E7%94%BA%E9%89%84%E9%81%93%E5%85%AC%E5%9C%92%E3%81%AE%E5%85%A8%E6%99%AF.JPG"
+    },
+    {
+        "id": "Q6135572",
+        "name": "横滨三塔",
+        "type": "觀光景點",
+        "coordinates": "Point(139.6485 35.4526)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Prefectural%20office%20of%20Kanagawa.jpg"
+    },
+    {
+        "id": "Q6135572",
+        "name": "横滨三塔",
+        "type": "觀光景點",
+        "coordinates": "Point(139.6485 35.4526)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20customs02s3200.jpg"
+    },
+    {
+        "id": "Q6135572",
+        "name": "横滨三塔",
+        "type": "觀光景點",
+        "coordinates": "Point(139.6485 35.4526)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20kaiko%20kinenkaikan05s3200.jpg"
+    },
+    {
+        "id": "Q6135572",
+        "name": "横滨三塔",
+        "type": "觀光景點",
+        "coordinates": "Point(139.6485 35.4526)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama3Towers%20From%20Akarenga.JPG"
+    },
+    {
+        "id": "Q6135572",
+        "name": "横滨三塔",
+        "type": "结构或建筑群",
+        "coordinates": "Point(139.6485 35.4526)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Prefectural%20office%20of%20Kanagawa.jpg"
+    },
+    {
+        "id": "Q6135572",
+        "name": "横滨三塔",
+        "type": "结构或建筑群",
+        "coordinates": "Point(139.6485 35.4526)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20customs02s3200.jpg"
+    },
+    {
+        "id": "Q6135572",
+        "name": "横滨三塔",
+        "type": "结构或建筑群",
+        "coordinates": "Point(139.6485 35.4526)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20kaiko%20kinenkaikan05s3200.jpg"
+    },
+    {
+        "id": "Q6135572",
+        "name": "横滨三塔",
+        "type": "结构或建筑群",
+        "coordinates": "Point(139.6485 35.4526)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama3Towers%20From%20Akarenga.JPG"
+    },
+    {
+        "id": "Q17216274",
+        "name": "女子美術大学美術館",
+        "type": "大学美术馆",
+        "coordinates": "Point(139.38996 35.528116)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Joshibi%20UNIV%2002.jpg"
+    },
+    {
+        "id": "Q111103855",
+        "name": "都筑民家園",
+        "type": "民家園",
+        "coordinates": "Point(139.581694444 35.550305555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Residence%20of%20Nagasawa%20Family%2001.jpg"
+    },
+    {
+        "id": "Q85869186",
+        "name": "つる舞の里歴史資料館",
+        "type": "博物館",
+        "coordinates": "Point(139.45425 35.513694444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tsurumai-no-sato-historic-museum.png"
+    },
+    {
+        "id": "Q942479",
+        "name": "玉楠之木／橫濱開港資料館",
+        "type": "博物館",
+        "coordinates": "Point(139.644 35.4475)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Archives%20of%20History02.jpg"
+    },
+    {
+        "id": "Q17217536",
+        "name": "馬之博物館",
+        "type": "博物館",
+        "coordinates": "Point(139.639583 35.422667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Uma%202007%2001%2028.JPG"
+    },
+    {
+        "id": "Q4902594",
+        "name": "橫濱市歷史博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(139.578 35.5502)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20History%20Museum%2020150201.jpg"
+    },
+    {
+        "id": "Q17229268",
+        "name": "東海道かわさき宿交流館",
+        "type": "社區中心",
+        "coordinates": "Point(139.702944 35.532472)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokaido%20Kawasaki%20Shuku%20Koryukan%20Building.jpg"
+    },
+    {
+        "id": "Q11660383",
+        "name": "電気の史料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(139.672856 35.533887)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%9B%BB%E6%B0%97%E3%81%AE%E5%8F%B2%E6%96%99%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q116688571",
+        "name": "神崎遺跡資料館",
+        "type": "博物館",
+        "coordinates": "Point(139.4065852 35.4098148)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kanzaki-Iseki6.JPG"
+    },
+    {
+        "id": "Q58205524",
+        "name": "大和市下鶴間ふるさと館",
+        "type": "博物館",
+        "coordinates": "Point(139.464222222 35.501036111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%97%A7%E5%B0%8F%E5%80%89%E5%AE%B6%E4%BD%8F%E5%AE%85%E6%AF%8D%E5%B1%8B%EF%BC%88%E4%B8%8B%E9%B6%B4%E9%96%93%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E9%A4%A8%EF%BC%89.jpg"
+    },
+    {
+        "id": "Q11660383",
+        "name": "電気の史料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(139.673028 35.533875)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%9B%BB%E6%B0%97%E3%81%AE%E5%8F%B2%E6%96%99%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q5653524",
+        "name": "原鉄道模型博物館",
+        "type": "鐵路博物館",
+        "coordinates": "Point(139.62472222 35.46305556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hara%20Model%20Railway%20Museum%20entrance%2020120711.jpg"
+    },
+    {
+        "id": "Q101096659",
+        "name": "はだの歴史博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(139.189055555 35.386555555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q113141986",
+        "name": "相模原市古民家園",
+        "type": "民家園",
+        "coordinates": "Point(139.311361111 35.575694444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q24874945",
+        "name": "尊徳記念館",
+        "type": "教育設施",
+        "coordinates": "Point(139.145722 35.302611)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q942479",
+        "name": "玉楠之木／橫濱開港資料館",
+        "type": "历史档案",
+        "coordinates": "Point(139.644 35.4475)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Archives%20of%20History02.jpg"
+    },
+    {
+        "id": "Q1989934",
+        "name": "日本民家園",
+        "type": "民家園",
+        "coordinates": "Point(139.56189036 35.6098989)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kawasaki%20Nihon%20Minkaen-3.jpg"
+    },
+    {
+        "id": "Q942479",
+        "name": "玉楠之木／橫濱開港資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(139.644 35.4475)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokohama%20Archives%20of%20History02.jpg"
+    },
+    {
+        "id": "Q109826839",
+        "name": "玉縄歴史館",
+        "type": "歷史博物館",
+        "coordinates": "Point(139.519444444 35.351194444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q17229268",
+        "name": "東海道かわさき宿交流館",
+        "type": "歷史博物館",
+        "coordinates": "Point(139.702944 35.532472)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokaido%20Kawasaki%20Shuku%20Koryukan%20Building.jpg"
+    },
+    {
+        "id": "Q133287900",
+        "name": "横浜山手テニス発祥記念館",
+        "type": "博物館",
+        "coordinates": "Point(139.648383841 35.434930377)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104708749",
+        "name": "明治大学平和教育登戸研究所資料館",
+        "type": "博物館",
+        "coordinates": "Point(139.54704 35.611359)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q21655117",
+        "name": "橫濱都市發展紀念館",
+        "type": "歷史博物館",
+        "coordinates": "Point(139.64325611 35.44627111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Museum%20of%20yokohama%20urban%20history001.JPG"
+    },
+    {
+        "id": "Q11543534",
+        "name": "橫須賀市自然人文博物館",
+        "type": "博物館",
+        "coordinates": "Point(139.673613 35.274531)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokosuka%20City%20Museum.JPG"
+    },
+    {
+        "id": "Q24874945",
+        "name": "尊徳記念館",
+        "type": "博物館",
+        "coordinates": "Point(139.145722 35.302611)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q137583649",
+        "name": "西丹沢ビジターセンター",
+        "type": "遊客中心",
+        "coordinates": "Point(139.063 35.472)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11660383",
+        "name": "電気の史料館",
+        "type": "エネルギー博物館",
+        "coordinates": "Point(139.672856 35.533887)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%9B%BB%E6%B0%97%E3%81%AE%E5%8F%B2%E6%96%99%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q56640503",
+        "name": "横浜・さとうのふるさと館",
+        "type": "博物館",
+        "coordinates": "Point(139.669222222 35.468388888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q125763321",
+        "name": "山口蓬春記念館",
+        "type": "博物館",
+        "coordinates": "Point(139.57575445 35.26646471)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Research%20survey%20Hoshun%20Yamaguchi%20Memorial%20Hall%201953%201.jpg"
+    },
+    {
+        "id": "Q11660383",
+        "name": "電気の史料館",
+        "type": "エネルギー博物館",
+        "coordinates": "Point(139.673028 35.533875)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%9B%BB%E6%B0%97%E3%81%AE%E5%8F%B2%E6%96%99%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q111244119",
+        "name": "箱根駅伝ミュージアム",
+        "type": "體育博物館",
+        "coordinates": "Point(139.024833333 35.189444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%AE%B1%E6%A0%B9%E9%A7%85%E4%BC%9D%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%A2%E3%83%A0%202015%20%2824190623542%29.jpg"
+    },
+    {
+        "id": "Q11543534",
+        "name": "橫須賀市自然人文博物館",
+        "type": "博物館",
+        "coordinates": "Point(139.673611 35.274583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokosuka%20City%20Museum.JPG"
+    }
+]

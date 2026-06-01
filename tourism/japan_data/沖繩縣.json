@@ -1,0 +1,597 @@
+[
+    {
+        "id": "Q55434454",
+        "name": "大石林山",
+        "type": "觀光景點",
+        "coordinates": "Point(128.255138888 26.861944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Daisekirinzan.jpg"
+    },
+    {
+        "id": "Q55434454",
+        "name": "大石林山",
+        "type": "喀斯特地形",
+        "coordinates": "Point(128.255138888 26.861944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Daisekirinzan.jpg"
+    },
+    {
+        "id": "Q132561386",
+        "name": "八重瀬町立具志頭歴史民俗資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(127.743394 26.122251)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11552583",
+        "name": "沖縄こどもの国",
+        "type": "兒童國",
+        "coordinates": "Point(127.803417 26.327833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%B2%96%E7%B8%84%E5%AD%90%E4%BE%9B%E3%81%AE%E5%9B%BD%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q132567818",
+        "name": "豊見城市歴史民俗資料展示室",
+        "type": "博物館",
+        "coordinates": "Point(127.674441 26.173764)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q907052",
+        "name": "首里城",
+        "type": "御城",
+        "coordinates": "Point(127.719475 26.217030555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Naha%20Shuri%20Castle51s3s4200.jpg"
+    },
+    {
+        "id": "Q111735646",
+        "name": "沖縄県立芸術大学. 図書芸術資料館",
+        "type": "大學圖書館",
+        "coordinates": "Point(127.719267 26.21881)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q60986412",
+        "name": "西表野生生物保護中心",
+        "type": "博物館",
+        "coordinates": "Point(123.908888888 24.330833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iriomote%20wildlife%20conservation%20centre.jpg"
+    },
+    {
+        "id": "Q48744697",
+        "name": "沖縄空手会館",
+        "type": "博物館",
+        "coordinates": "Point(127.68305556 26.18691667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okinawa%20Karate%20Kaikan%2001.JPG"
+    },
+    {
+        "id": "Q11553011",
+        "name": "沖縄郵政資料センター",
+        "type": "郵政博物館",
+        "coordinates": "Point(127.679417 26.205222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Naha%20Post%20Office.JPG"
+    },
+    {
+        "id": "Q11558303",
+        "name": "浦添市美術館",
+        "type": "美術館",
+        "coordinates": "Point(127.719472 26.249917)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Urasoe%20Art%20Museum04s4s2940.jpg"
+    },
+    {
+        "id": "Q11393732",
+        "name": "具志堅用高記念館",
+        "type": "體育博物館",
+        "coordinates": "Point(124.146167 24.349806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ishigaki%20gushiken%20yoko%20museum.jpg"
+    },
+    {
+        "id": "Q11458206",
+        "name": "對馬丸紀念館",
+        "type": "博物館",
+        "coordinates": "Point(127.672806 26.220111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tsushima-maru%20Memorial%20Museum03n.jpg"
+    },
+    {
+        "id": "Q1619050",
+        "name": "姬百合和平祈念資料館",
+        "type": "和平博物館",
+        "coordinates": "Point(127.6903303 26.0963537)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Himeyuri%20Peace%20Museum02n3104.jpg"
+    },
+    {
+        "id": "Q28154171",
+        "name": "久米島博物館",
+        "type": "博物館",
+        "coordinates": "Point(126.763778 26.341643)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11452301",
+        "name": "宜野湾市立博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(127.740611 26.269806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ginowan%20City%20Museum03n3104.jpg"
+    },
+    {
+        "id": "Q111735646",
+        "name": "沖縄県立芸術大学. 図書芸術資料館",
+        "type": "大學博物館",
+        "coordinates": "Point(127.719267 26.21881)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11609171",
+        "name": "美濱美國村",
+        "type": "主題公園",
+        "coordinates": "Point(127.756668 26.316183)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mihama%20AV%20D%20Japan.jpg"
+    },
+    {
+        "id": "Q4617100",
+        "name": "沖繩縣立博物館、美術館",
+        "type": "博物館",
+        "coordinates": "Point(127.694103 26.226593)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okinawa%20Prefectural%20Museum%20%26%20Art%20Museum02bss3200.jpg"
+    },
+    {
+        "id": "Q11365521",
+        "name": "中村家住宅",
+        "type": "古民家",
+        "coordinates": "Point(127.80067778 26.29)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nakamura%20House%20Kitanakagusuku01n3104.jpg"
+    },
+    {
+        "id": "Q4555530",
+        "name": "沖縄県平和祈念資料館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(127.725391 26.096447)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okinawa%20prefectural%20Peace%20memorial%20Museum-2007-06-27%201.jpg"
+    },
+    {
+        "id": "Q10947551",
+        "name": "上野德國文化村",
+        "type": "主題公園",
+        "coordinates": "Point(125.322647222 24.719336111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Uenodoitsubunkamura.jpg"
+    },
+    {
+        "id": "Q11365521",
+        "name": "中村家住宅",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(127.80067778 26.29)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nakamura%20House%20Kitanakagusuku01n3104.jpg"
+    },
+    {
+        "id": "Q11585382",
+        "name": "石垣八重山民俗村",
+        "type": "主題公園",
+        "coordinates": "Point(124.144361 24.404333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%9F%B3%E5%9E%A3%E3%82%84%E3%81%84%E3%81%BE%E6%9D%91%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q25112734",
+        "name": "琉球村",
+        "type": "主題公園",
+        "coordinates": "Point(127.775258065 26.429467873)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ryukyu%20Mura%20entrance.jpg"
+    },
+    {
+        "id": "Q11383094",
+        "name": "佐喜眞美術館",
+        "type": "美術館",
+        "coordinates": "Point(127.774972 26.278028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sakima%20Art%20Museum03n3000.jpg"
+    },
+    {
+        "id": "Q4617100",
+        "name": "沖繩縣立博物館、美術館",
+        "type": "美術館",
+        "coordinates": "Point(127.694103 26.226593)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okinawa%20Prefectural%20Museum%20%26%20Art%20Museum02bss3200.jpg"
+    },
+    {
+        "id": "Q127420567",
+        "name": "沖縄市立郷土博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(127.795166 26.331614)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q17989733",
+        "name": "ヒストリート",
+        "type": "歷史博物館",
+        "coordinates": "Point(127.800972 26.337611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Histreet2018.jpg"
+    },
+    {
+        "id": "Q67991212",
+        "name": "恩納村博物館",
+        "type": "博物館",
+        "coordinates": "Point(127.793373 26.436235)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Onna%20Village%20Culture%20And%20Information%20Center%202019-09-13%20%2813%29%20sa.jpg"
+    },
+    {
+        "id": "Q4555530",
+        "name": "沖縄県平和祈念資料館",
+        "type": "和平博物館",
+        "coordinates": "Point(127.725391 26.096447)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okinawa%20prefectural%20Peace%20memorial%20Museum-2007-06-27%201.jpg"
+    },
+    {
+        "id": "Q907052",
+        "name": "首里城",
+        "type": "政府機關",
+        "coordinates": "Point(127.719475 26.217030555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Naha%20Shuri%20Castle51s3s4200.jpg"
+    },
+    {
+        "id": "Q11585382",
+        "name": "石垣八重山民俗村",
+        "type": "民家園",
+        "coordinates": "Point(124.144361 24.404333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%9F%B3%E5%9E%A3%E3%82%84%E3%81%84%E3%81%BE%E6%9D%91%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q1445750",
+        "name": "沖繩美麗海水族館",
+        "type": "水族館",
+        "coordinates": "Point(127.87794444 26.69438889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%B2%96%E7%B8%84%E7%BE%8E%E3%82%89%E6%B5%B7%E6%B0%B4%E6%97%8F%E9%A4%A8%EF%BC%BF%E5%A4%A7.jpg"
+    },
+    {
+        "id": "Q127420256",
+        "name": "世界遺産座喜味城跡ユンタンザミュージアム",
+        "type": "歷史博物館",
+        "coordinates": "Point(127.742672 26.40693)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11552583",
+        "name": "沖縄こどもの国",
+        "type": "博物館",
+        "coordinates": "Point(127.803417 26.327833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%B2%96%E7%B8%84%E5%AD%90%E4%BE%9B%E3%81%AE%E5%9B%BD%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q907052",
+        "name": "首里城",
+        "type": "博物館",
+        "coordinates": "Point(127.719475 26.217030555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Naha%20Shuri%20Castle51s3s4200.jpg"
+    },
+    {
+        "id": "Q104784709",
+        "name": "那覇市立壺屋焼物博物館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(127.690698607 26.21380095)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tsuboya%20Pottery%20Museum08s3s4350.jpg"
+    },
+    {
+        "id": "Q132157350",
+        "name": "みんさー工芸館",
+        "type": "織物博物館",
+        "coordinates": "Point(124.170906 24.341645)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q48756878",
+        "name": "大濱信泉記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(124.159667 24.336028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ohama%20Nobumoto%20Memorial%20Hall01s3s4380.jpg"
+    },
+    {
+        "id": "Q60986071",
+        "name": "一中学徒隊資料展示室",
+        "type": "軍事博物館",
+        "coordinates": "Point(127.714055555 26.217388888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%80%E4%B8%AD%E5%AD%A6%E5%BE%92%E9%9A%8A%E5%B1%95%E7%A4%BA%E5%AE%A4.jpg"
+    },
+    {
+        "id": "Q104784712",
+        "name": "南風原町立南風原文化センター",
+        "type": "博物館",
+        "coordinates": "Point(127.73047 26.186946)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q4617100",
+        "name": "沖繩縣立博物館、美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(127.694103 26.226593)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okinawa%20Prefectural%20Museum%20%26%20Art%20Museum02bss3200.jpg"
+    },
+    {
+        "id": "Q11393732",
+        "name": "具志堅用高記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(124.146167 24.349806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ishigaki%20gushiken%20yoko%20museum.jpg"
+    },
+    {
+        "id": "Q85866572",
+        "name": "OKINAWAフルーツらんど",
+        "type": "主題公園",
+        "coordinates": "Point(127.969111111 26.617777777)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q60986071",
+        "name": "一中学徒隊資料展示室",
+        "type": "教育博物館",
+        "coordinates": "Point(127.714055555 26.217388888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%80%E4%B8%AD%E5%AD%A6%E5%BE%92%E9%9A%8A%E5%B1%95%E7%A4%BA%E5%AE%A4.jpg"
+    },
+    {
+        "id": "Q132156591",
+        "name": "伊平屋村歴史民俗資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(127.968122 27.037944)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q19459000",
+        "name": "石垣市立八重山博物館",
+        "type": "博物館",
+        "coordinates": "Point(124.16 24.338)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yaeyama%20Museum%2C%20Ishigaki%2C%20Japan.JPG"
+    },
+    {
+        "id": "Q11060860",
+        "name": "平安名埼燈塔",
+        "type": "觀景台",
+        "coordinates": "Point(125.46861111 24.71944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Miyako%20higashi%20hennazaki%20lighthouse.JPG"
+    },
+    {
+        "id": "Q113480812",
+        "name": "ヌチドゥタカラの家",
+        "type": "和平博物館",
+        "coordinates": "Point(127.825388888 26.710666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%83%8C%E3%83%81%E3%83%89%E3%82%A5%E3%82%BF%E3%82%AB%E3%83%A9%E3%81%AE%E5%AE%B6%20%E5%8F%8D%E6%88%A6%E5%B9%B3%E5%92%8C%E8%B3%87%E6%96%99%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q48744697",
+        "name": "沖縄空手会館",
+        "type": "武館",
+        "coordinates": "Point(127.68305556 26.18691667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okinawa%20Karate%20Kaikan%2001.JPG"
+    },
+    {
+        "id": "Q123263237",
+        "name": "沖縄県立埋蔵文化財センター",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(127.759518 26.24333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okinawa%20Prefecture%20Archaeological%20Center.JPG"
+    },
+    {
+        "id": "Q132561356",
+        "name": "多良間村ふるさと民俗学習館",
+        "type": "地方文化館",
+        "coordinates": "Point(124.696149 24.670295)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q133054629",
+        "name": "八重山平和祈念館",
+        "type": "和平博物館",
+        "coordinates": "Point(124.146113 24.349272)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q22952141",
+        "name": "那霸市歷史博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(127.67925408 26.21378075)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pallet%20Kumoji%20Naha%20Okinawa03s3s4500.jpg"
+    },
+    {
+        "id": "Q17226861",
+        "name": "ひんぷんガジュマル",
+        "type": "巨樹",
+        "coordinates": "Point(127.985944444 26.587333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hinpun-Gajumaru.jpg"
+    },
+    {
+        "id": "Q56347666",
+        "name": "DMM Kariyushi水族館",
+        "type": "水族館",
+        "coordinates": "Point(127.650416666 26.156305555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/DMM%20Kariyushi%20Aquarium%20202006.jpg"
+    },
+    {
+        "id": "Q132156460",
+        "name": "本部町立博物館",
+        "type": "地方文化館",
+        "coordinates": "Point(127.883729 26.655883)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132154132",
+        "name": "エイサー会館",
+        "type": "博物館",
+        "coordinates": "Point(127.799429 26.335097)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%82%A8%E3%82%A4%E3%82%B5%E3%83%BC%E4%BC%9A%E9%A4%A8%E5%85%A5%E5%8F%A3.jpg"
+    },
+    {
+        "id": "Q11609171",
+        "name": "美濱美國村",
+        "type": "度假村",
+        "coordinates": "Point(127.756668 26.316183)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mihama%20AV%20D%20Japan.jpg"
+    },
+    {
+        "id": "Q132156950",
+        "name": "沖縄平和祈念堂",
+        "type": "和平博物館",
+        "coordinates": "Point(127.723746 26.097423)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okinawa%20Heiwakinen%20Memorial%20Hall01n3104.jpg"
+    },
+    {
+        "id": "Q108585016",
+        "name": "琉球温泉",
+        "type": "温泉镇",
+        "coordinates": "Point(127.641046 26.176571)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q4555530",
+        "name": "沖縄県平和祈念資料館",
+        "type": "軍事博物館",
+        "coordinates": "Point(127.725391 26.096447)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okinawa%20prefectural%20Peace%20memorial%20Museum-2007-06-27%201.jpg"
+    },
+    {
+        "id": "Q48751932",
+        "name": "宮古島海宝館",
+        "type": "自然歷史博物館",
+        "coordinates": "Point(125.429417 24.730028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Miyako%20kaihokan%201.jpg"
+    },
+    {
+        "id": "Q132157338",
+        "name": "DiDi与那国交流館",
+        "type": "博物館",
+        "coordinates": "Point(123.008675 24.469114)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q22111842",
+        "name": "琉球大学博物館（風樹館）",
+        "type": "大學博物館",
+        "coordinates": "Point(127.764663 26.250263)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104784491",
+        "name": "宜野座村立博物館",
+        "type": "博物館",
+        "coordinates": "Point(127.972717 26.482855)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ginoza%20Village%20Museum%20202411.jpg"
+    },
+    {
+        "id": "Q11274224",
+        "name": "なごみの塔",
+        "type": "觀光塔",
+        "coordinates": "Point(124.085528 24.330722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagomi%20no%20Tou%2001.jpg"
+    },
+    {
+        "id": "Q30593667",
+        "name": "宮古島市総合博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(125.317717 24.796468)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Miyako%20paantou.jpg"
+    },
+    {
+        "id": "Q907052",
+        "name": "首里城",
+        "type": "官邸",
+        "coordinates": "Point(127.719475 26.217030555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Naha%20Shuri%20Castle51s3s4200.jpg"
+    },
+    {
+        "id": "Q132151557",
+        "name": "北谷町立博物館",
+        "type": "博物館",
+        "coordinates": "Point(127.759041 26.323584)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chatan%20Museum%2002.jpg"
+    },
+    {
+        "id": "Q133878783",
+        "name": "JUNGLIA沖繩",
+        "type": "主題公園",
+        "coordinates": "Point(127.973622222 26.642236111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q123140996",
+        "name": "琉球新報新聞博物館",
+        "type": "新聞博物館",
+        "coordinates": "Point(127.685444 26.234489)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132156762",
+        "name": "今帰仁村歴史文化センター",
+        "type": "地方文化館",
+        "coordinates": "Point(127.927398 26.691796)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nakijin%20Okinawa%20Japan%20Nakijin-village-Center-for-History-and-Culture-01.jpg"
+    },
+    {
+        "id": "Q11552583",
+        "name": "沖縄こどもの国",
+        "type": "動物園",
+        "coordinates": "Point(127.803417 26.327833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%B2%96%E7%B8%84%E5%AD%90%E4%BE%9B%E3%81%AE%E5%9B%BD%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q132563392",
+        "name": "沖縄愛楽園交流会館",
+        "type": "醫學博物館",
+        "coordinates": "Point(128.020041 26.678506)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11361703",
+        "name": "不屈館",
+        "type": "歷史博物館",
+        "coordinates": "Point(127.67484444 26.22236944)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kamejiro%20Senaga%20and%20the%20People%27s%20History%20Museum.JPG"
+    },
+    {
+        "id": "Q19568958",
+        "name": "名護博物館",
+        "type": "博物館",
+        "coordinates": "Point(127.9878 26.597969)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nago%20Museum%202025%2001%2031.jpg"
+    },
+    {
+        "id": "Q17219624",
+        "name": "沖繩縣立博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(127.7175 26.22055556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okinawa%20Prefectural%20Museum.JPG"
+    },
+    {
+        "id": "Q17217588",
+        "name": "海の文化資料館",
+        "type": "海事博物館",
+        "coordinates": "Point(127.928833 26.332528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Marine%20History%20Museum%2C%20Uruma.JPG"
+    },
+    {
+        "id": "Q132562103",
+        "name": "島村屋観光公園民俗資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(127.804054 26.716153)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104784476",
+        "name": "東村立山と水の生活博物館",
+        "type": "博物館",
+        "coordinates": "Point(128.167056 26.641069)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132156661",
+        "name": "伊是名村ふれあい民俗館",
+        "type": "民俗博物館",
+        "coordinates": "Point(127.940937 26.92274)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Izenamuse.jpg"
+    },
+    {
+        "id": "Q11060860",
+        "name": "平安名埼燈塔",
+        "type": "燈塔",
+        "coordinates": "Point(125.46861111 24.71944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Miyako%20higashi%20hennazaki%20lighthouse.JPG"
+    },
+    {
+        "id": "Q132156886",
+        "name": "漫湖水鳥・湿地センター",
+        "type": "自然中心",
+        "coordinates": "Point(127.681765 26.194036)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Manko%20Waterbird%20and%20Wetland%20Center%20202206.jpg"
+    }
+]

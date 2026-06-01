@@ -1,0 +1,625 @@
+[
+    {
+        "id": "Q11260764",
+        "name": "うめ振興館",
+        "type": "道之驛",
+        "coordinates": "Point(135.327083333 33.790694444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Minabe%20Ume-shinkokan01n4272.jpg"
+    },
+    {
+        "id": "Q11662592",
+        "name": "青洲之里",
+        "type": "主題公園",
+        "coordinates": "Point(135.441138888 34.281194444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Roadside%20station%20Seishu%20no%20sato.jpg"
+    },
+    {
+        "id": "Q11417477",
+        "name": "和歌山縣立近代美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(135.171417 34.225)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/121013%20The%20museum%20of%20modern%20art%2C%20wakayama01s3.jpg"
+    },
+    {
+        "id": "Q11510122",
+        "name": "日美修交紀念館",
+        "type": "博物館",
+        "coordinates": "Point(135.852278 33.461806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/180428%20United%20States%E2%80%93Japan%20Friendship%20Memorial%20Museum02s10.jpg"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "天文博物館",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%BF%E3%81%95%E3%81%A8%E5%A4%A9%E6%96%87%E5%8F%B0.jpg"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "天文博物館",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%BF%E3%81%95%E3%81%A8%E5%A4%A9%E6%96%87%E5%8F%B0%20%E5%85%A8%E6%99%AF.png"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "天文博物館",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%BF%E3%81%95%E3%81%A8%E5%A4%A9%E6%96%87%E5%8F%B0%20%E5%85%A8%E6%99%AF%E4%B8%8A%E7%A9%BA%E3%81%8B%E3%82%89.png"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "天文博物館",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%BF%E3%81%95%E3%81%A8%E5%A4%A9%E6%96%87%E5%8F%B0%E3%83%97%E3%83%A9%E3%83%8D%E3%82%BF%E3%83%AA%E3%82%A6%E3%83%A0%E6%8A%95%E5%BD%B1%E5%AE%A4.png"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "天文博物館",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%BF%E3%81%95%E3%81%A8%E5%A4%A9%E6%96%87%E5%8F%B0%E5%A4%A9%E4%BD%93%E8%A6%B3%E6%B8%AC%E3%83%89%E3%83%BC%E3%83%A0%E5%86%85.png"
+    },
+    {
+        "id": "Q11641408",
+        "name": "道の駅田辺市龍神ごまさんスカイタワー",
+        "type": "道之驛",
+        "coordinates": "Point(135.564333333 34.061222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michinoeki%20RyujinGomasan.JPG"
+    },
+    {
+        "id": "Q11417336",
+        "name": "和歌山市立兒童科學館",
+        "type": "兒童博物館",
+        "coordinates": "Point(135.169056 34.232889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Wakayama%20City%20Childrens%20Museum02bs3200.jpg"
+    },
+    {
+        "id": "Q11580019",
+        "name": "白濱海中展望塔",
+        "type": "觀光塔",
+        "coordinates": "Point(135.335766666 33.676122222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131221%20Shirahama%20Onsen%20Shirahama%20Wakayama%20pref%20Japan20s3t.jpg"
+    },
+    {
+        "id": "Q11322055",
+        "name": "土耳其紀念館",
+        "type": "博物館",
+        "coordinates": "Point(135.858611 33.469167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Turkish%20Memorial%20and%20Museum%20Kushimoto%20Wakayama%20pref%20Japan02-b.jpg"
+    },
+    {
+        "id": "Q2587322",
+        "name": "冒險大世界",
+        "type": "水族館",
+        "coordinates": "Point(135.375797 33.66775)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Panda%20Adventure%20World%20Shirahama.JPG"
+    },
+    {
+        "id": "Q11333600",
+        "name": "花山博物館",
+        "type": "人物紀念館",
+        "coordinates": "Point(135.44175 34.280722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/FHM05s3200.jpg"
+    },
+    {
+        "id": "Q11568880",
+        "name": "熊野古道なかへち美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.606167 33.813444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nakahechi%20artsalon%20exterior.jpg"
+    },
+    {
+        "id": "Q11662592",
+        "name": "青洲之里",
+        "type": "道之驛",
+        "coordinates": "Point(135.441138888 34.281194444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Roadside%20station%20Seishu%20no%20sato.jpg"
+    },
+    {
+        "id": "Q11577335",
+        "name": "田辺市立美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.40075 33.697389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131222%20Tanabe%20City%20Museum%20of%20Art%20Wakayama%20pref%20Japan01bs3.jpg"
+    },
+    {
+        "id": "Q121019069",
+        "name": "海南市歴史民俗資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(135.276257 34.1556062)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11529857",
+        "name": "松山常次郎記念館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(135.559889 34.292083)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11384093",
+        "name": "佐藤春夫纪念馆",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(135.984633 33.731861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sato%20Haruo%20Memorial%20Museum03s1800.jpg"
+    },
+    {
+        "id": "Q11260764",
+        "name": "うめ振興館",
+        "type": "博物館",
+        "coordinates": "Point(135.327083333 33.790694444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Minabe%20Ume-shinkokan01n4272.jpg"
+    },
+    {
+        "id": "Q11620580",
+        "name": "落合博滿野球紀念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(135.957833 33.586139)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hiromitsu%20Ochiai%20Baseball%20Hall%202019-11-30.jpg"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "天象儀",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%98%9F%E3%81%AE%E5%A1%94%E5%8F%8A%E3%81%B3%E7%A9%BA%E3%81%AE%E5%AD%A6%E8%88%8E%EF%BC%88%E3%83%97%E3%83%A9%E3%83%8D%E3%82%BF%E3%83%AA%E3%82%A6%E3%83%A0%E6%A3%9F%EF%BC%89%E3%80%818%EF%BD%8D%E9%9B%BB%E6%B3%A2%E6%9C%9B%E9%81%A0%E9%8F%A1.jpg"
+    },
+    {
+        "id": "Q11417475",
+        "name": "和歌山縣立自然博物館",
+        "type": "水族館",
+        "coordinates": "Point(135.192083 34.158639)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Wakayama%20Prefectural%20Museum%20of%20Natural%20History.jpg"
+    },
+    {
+        "id": "Q22119215",
+        "name": "太地町立石垣紀念館",
+        "type": "美術館",
+        "coordinates": "Point(135.94288889 33.60169444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q121019069",
+        "name": "海南市歴史民俗資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.276257 34.1556062)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11417414",
+        "name": "和歌山县书道资料馆",
+        "type": "書法美術館",
+        "coordinates": "Point(135.167194 34.229111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Wakayama%20Pref%20Syodou%20Museum.JPG"
+    },
+    {
+        "id": "Q11529857",
+        "name": "松山常次郎記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(135.559889 34.292083)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q22119215",
+        "name": "太地町立石垣紀念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(135.94288889 33.60169444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "天文台",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%98%9F%E3%81%AE%E5%A1%94%E5%8F%8A%E3%81%B3%E7%A9%BA%E3%81%AE%E5%AD%A6%E8%88%8E%EF%BC%88%E3%83%97%E3%83%A9%E3%83%8D%E3%82%BF%E3%83%AA%E3%82%A6%E3%83%A0%E6%A3%9F%EF%BC%89%E3%80%818%EF%BD%8D%E9%9B%BB%E6%B3%A2%E6%9C%9B%E9%81%A0%E9%8F%A1.jpg"
+    },
+    {
+        "id": "Q11265357",
+        "name": "鯨魚博物館",
+        "type": "博物館",
+        "coordinates": "Point(135.945806 33.601917)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Taiji%20Whale%20Museum%20201908-2.jpg"
+    },
+    {
+        "id": "Q11605041",
+        "name": "紀州備長炭振興館",
+        "type": "博物館",
+        "coordinates": "Point(135.39516667 33.85127778)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11417339",
+        "name": "和歌山市立博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(135.163111 34.233194)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Wakayama%20City%20Museum1.jpg"
+    },
+    {
+        "id": "Q7397301",
+        "name": "熊野速玉神社のナギ",
+        "type": "神木",
+        "coordinates": "Point(135.983972 33.731667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sacred%20Nagi%20Tree%20of%20Kumano%20Hayatama%20Taisha%20%281%29.jpg"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "天象儀",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%BF%E3%81%95%E3%81%A8%E5%A4%A9%E6%96%87%E5%8F%B0.jpg"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "天象儀",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%BF%E3%81%95%E3%81%A8%E5%A4%A9%E6%96%87%E5%8F%B0%20%E5%85%A8%E6%99%AF.png"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "天象儀",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%BF%E3%81%95%E3%81%A8%E5%A4%A9%E6%96%87%E5%8F%B0%20%E5%85%A8%E6%99%AF%E4%B8%8A%E7%A9%BA%E3%81%8B%E3%82%89.png"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "天象儀",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%BF%E3%81%95%E3%81%A8%E5%A4%A9%E6%96%87%E5%8F%B0%E3%83%97%E3%83%A9%E3%83%8D%E3%82%BF%E3%83%AA%E3%82%A6%E3%83%A0%E6%8A%95%E5%BD%B1%E5%AE%A4.png"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "天象儀",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%BF%E3%81%95%E3%81%A8%E5%A4%A9%E6%96%87%E5%8F%B0%E5%A4%A9%E4%BD%93%E8%A6%B3%E6%B8%AC%E3%83%89%E3%83%BC%E3%83%A0%E5%86%85.png"
+    },
+    {
+        "id": "Q23017542",
+        "name": "稻垛之火館",
+        "type": "海嘯博物館",
+        "coordinates": "Point(135.17305556 34.02583333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Inamura%20no%20hi%20no%20yakata.jpg"
+    },
+    {
+        "id": "Q11673069",
+        "name": "高野山靈寶館",
+        "type": "博物館",
+        "coordinates": "Point(135.581472 34.211278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Autumn%20Koyasan%20Reihokan02n3200.jpg"
+    },
+    {
+        "id": "Q11417475",
+        "name": "和歌山縣立自然博物館",
+        "type": "自然歷史博物館",
+        "coordinates": "Point(135.192083 34.158639)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Wakayama%20Prefectural%20Museum%20of%20Natural%20History.jpg"
+    },
+    {
+        "id": "Q11417336",
+        "name": "和歌山市立兒童科學館",
+        "type": "科學博物館",
+        "coordinates": "Point(135.169056 34.232889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Wakayama%20City%20Childrens%20Museum02bs3200.jpg"
+    },
+    {
+        "id": "Q11628672",
+        "name": "西村伊作記念館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(135.992639 33.727861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Former%20Nishimura%20House%202021-10%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q17219170",
+        "name": "周參見町立蝦和蟹之水族館",
+        "type": "水族館",
+        "coordinates": "Point(135.588806 33.504556)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11474211",
+        "name": "岩出市民俗資料館",
+        "type": "民俗博物館",
+        "coordinates": "Point(135.317722 34.285806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iwade%20Municipal%20Museum%20of%20Folk%20Materials01s3.jpg"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "公開天文台",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%98%9F%E3%81%AE%E5%A1%94%E5%8F%8A%E3%81%B3%E7%A9%BA%E3%81%AE%E5%AD%A6%E8%88%8E%EF%BC%88%E3%83%97%E3%83%A9%E3%83%8D%E3%82%BF%E3%83%AA%E3%82%A6%E3%83%A0%E6%A3%9F%EF%BC%89%E3%80%818%EF%BD%8D%E9%9B%BB%E6%B3%A2%E6%9C%9B%E9%81%A0%E9%8F%A1.jpg"
+    },
+    {
+        "id": "Q11641408",
+        "name": "道の駅田辺市龍神ごまさんスカイタワー",
+        "type": "觀光塔",
+        "coordinates": "Point(135.564333333 34.061222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michinoeki%20RyujinGomasan.JPG"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "天文台",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%BF%E3%81%95%E3%81%A8%E5%A4%A9%E6%96%87%E5%8F%B0.jpg"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "天文台",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%BF%E3%81%95%E3%81%A8%E5%A4%A9%E6%96%87%E5%8F%B0%20%E5%85%A8%E6%99%AF.png"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "天文台",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%BF%E3%81%95%E3%81%A8%E5%A4%A9%E6%96%87%E5%8F%B0%20%E5%85%A8%E6%99%AF%E4%B8%8A%E7%A9%BA%E3%81%8B%E3%82%89.png"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "天文台",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%BF%E3%81%95%E3%81%A8%E5%A4%A9%E6%96%87%E5%8F%B0%E3%83%97%E3%83%A9%E3%83%8D%E3%82%BF%E3%83%AA%E3%82%A6%E3%83%A0%E6%8A%95%E5%BD%B1%E5%AE%A4.png"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "天文台",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%BF%E3%81%95%E3%81%A8%E5%A4%A9%E6%96%87%E5%8F%B0%E5%A4%A9%E4%BD%93%E8%A6%B3%E6%B8%AC%E3%83%89%E3%83%BC%E3%83%A0%E5%86%85.png"
+    },
+    {
+        "id": "Q11580007",
+        "name": "白濱能量樂園",
+        "type": "主題公園",
+        "coordinates": "Point(135.346361111 33.680444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%99%BD%E6%B5%9C%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89.JPG"
+    },
+    {
+        "id": "Q11417386",
+        "name": "和歌山県世界遺産センター",
+        "type": "遊客中心",
+        "coordinates": "Point(135.775556 33.838389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kumano%20Hongu%20Heritage%20Center.jpg"
+    },
+    {
+        "id": "Q11605043",
+        "name": "紀州博物館",
+        "type": "美術館",
+        "coordinates": "Point(135.34725 33.670472)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kisyu%20museum001.JPG"
+    },
+    {
+        "id": "Q11417470",
+        "name": "和歌山縣立紀伊風土記之丘",
+        "type": "考古博物館",
+        "coordinates": "Point(135.229583 34.227861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kiifudoki-no-oka%20museum%20of%20history.jpg"
+    },
+    {
+        "id": "Q11417470",
+        "name": "和歌山縣立紀伊風土記之丘",
+        "type": "風土記之丘",
+        "coordinates": "Point(135.229583 34.227861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kiifudoki-no-oka%20museum%20of%20history.jpg"
+    },
+    {
+        "id": "Q17224027",
+        "name": "ひき岩群ふるさと自然公園センター",
+        "type": "遊客中心",
+        "coordinates": "Point(135.386472 33.760139)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q4707960",
+        "name": "和歌山縣立博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(135.172 34.2244)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/121013%20Wakayama%20Prefectural%20Museum01s5.jpg"
+    },
+    {
+        "id": "Q11384093",
+        "name": "佐藤春夫纪念馆",
+        "type": "人物紀念館",
+        "coordinates": "Point(135.984633 33.731861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sato%20Haruo%20Memorial%20Museum03s1800.jpg"
+    },
+    {
+        "id": "Q4707960",
+        "name": "和歌山縣立博物館",
+        "type": "建築結構",
+        "coordinates": "Point(135.172 34.2244)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/121013%20Wakayama%20Prefectural%20Museum01s5.jpg"
+    },
+    {
+        "id": "Q7397301",
+        "name": "熊野速玉神社のナギ",
+        "type": "巨樹",
+        "coordinates": "Point(135.983972 33.731667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sacred%20Nagi%20Tree%20of%20Kumano%20Hayatama%20Taisha%20%281%29.jpg"
+    },
+    {
+        "id": "Q11407875",
+        "name": "南方熊楠紀念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(135.336278 33.693722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%8D%97%E6%96%B9%E7%86%8A%E6%A5%A0%E8%A8%98%E5%BF%B5%E9%A4%A8.JPG"
+    },
+    {
+        "id": "Q132299658",
+        "name": "片男波公園万葉館",
+        "type": "博物館",
+        "coordinates": "Point(135.173428 34.181724)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11339346",
+        "name": "ポルトヨーロッパ",
+        "type": "主題公園",
+        "coordinates": "Point(135.176917 34.154167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%83%9D%E3%83%AB%E3%83%88%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91.jpg"
+    },
+    {
+        "id": "Q11265357",
+        "name": "鯨魚博物館",
+        "type": "鯨豚水族館",
+        "coordinates": "Point(135.945806 33.601917)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Taiji%20Whale%20Museum%20201908-2.jpg"
+    },
+    {
+        "id": "Q18337271",
+        "name": "田辺市立歴史民俗資料館",
+        "type": "民俗博物館",
+        "coordinates": "Point(135.38243333 33.72659444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tanabe%20City%20International%20Exchange%20Center%20TANABERU%20ac.jpg"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "公開天文台",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%BF%E3%81%95%E3%81%A8%E5%A4%A9%E6%96%87%E5%8F%B0.jpg"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "公開天文台",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%BF%E3%81%95%E3%81%A8%E5%A4%A9%E6%96%87%E5%8F%B0%20%E5%85%A8%E6%99%AF.png"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "公開天文台",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%BF%E3%81%95%E3%81%A8%E5%A4%A9%E6%96%87%E5%8F%B0%20%E5%85%A8%E6%99%AF%E4%B8%8A%E7%A9%BA%E3%81%8B%E3%82%89.png"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "公開天文台",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%BF%E3%81%95%E3%81%A8%E5%A4%A9%E6%96%87%E5%8F%B0%E3%83%97%E3%83%A9%E3%83%8D%E3%82%BF%E3%83%AA%E3%82%A6%E3%83%A0%E6%8A%95%E5%BD%B1%E5%AE%A4.png"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "公開天文台",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%BF%E3%81%95%E3%81%A8%E5%A4%A9%E6%96%87%E5%8F%B0%E5%A4%A9%E4%BD%93%E8%A6%B3%E6%B8%AC%E3%83%89%E3%83%BC%E3%83%A0%E5%86%85.png"
+    },
+    {
+        "id": "Q11384093",
+        "name": "佐藤春夫纪念馆",
+        "type": "文學館",
+        "coordinates": "Point(135.984633 33.731861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sato%20Haruo%20Memorial%20Museum03s1800.jpg"
+    },
+    {
+        "id": "Q121019069",
+        "name": "海南市歴史民俗資料館",
+        "type": "民俗博物館",
+        "coordinates": "Point(135.276257 34.1556062)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11417477",
+        "name": "和歌山縣立近代美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.171417 34.225)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/121013%20The%20museum%20of%20modern%20art%2C%20wakayama01s3.jpg"
+    },
+    {
+        "id": "Q11278847",
+        "name": "みさと天文台",
+        "type": "天文博物館",
+        "coordinates": "Point(135.406139 34.144528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%98%9F%E3%81%AE%E5%A1%94%E5%8F%8A%E3%81%B3%E7%A9%BA%E3%81%AE%E5%AD%A6%E8%88%8E%EF%BC%88%E3%83%97%E3%83%A9%E3%83%8D%E3%82%BF%E3%83%AA%E3%82%A6%E3%83%A0%E6%A3%9F%EF%BC%89%E3%80%818%EF%BD%8D%E9%9B%BB%E6%B3%A2%E6%9C%9B%E9%81%A0%E9%8F%A1.jpg"
+    },
+    {
+        "id": "Q11417339",
+        "name": "和歌山市立博物館",
+        "type": "建築結構",
+        "coordinates": "Point(135.163111 34.233194)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Wakayama%20City%20Museum1.jpg"
+    },
+    {
+        "id": "Q133288792",
+        "name": "熊野那智大社宝物殿",
+        "type": "宝物館",
+        "coordinates": "Point(135.890221 33.668449)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kumano-Nachi-shrine003.JPG"
+    },
+    {
+        "id": "Q11417475",
+        "name": "和歌山縣立自然博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(135.192083 34.158639)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Wakayama%20Prefectural%20Museum%20of%20Natural%20History.jpg"
+    },
+    {
+        "id": "Q11620580",
+        "name": "落合博滿野球紀念館",
+        "type": "體育博物館",
+        "coordinates": "Point(135.957833 33.586139)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hiromitsu%20Ochiai%20Baseball%20Hall%202019-11-30.jpg"
+    },
+    {
+        "id": "Q11367892",
+        "name": "串本應拳蘆雪館",
+        "type": "美術館",
+        "coordinates": "Point(135.778278 33.470444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kushimoto%20oukyo%20rosetsu.JPG"
+    },
+    {
+        "id": "Q11407877",
+        "name": "南方熊楠顯彰館",
+        "type": "人物紀念館",
+        "coordinates": "Point(135.37775 33.731083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/251011%20Minakata%20Kumagusu%20Archives%20Tanabe%20Wakayama%20prefecture%20Japan04s3.jpg"
+    },
+    {
+        "id": "Q18337271",
+        "name": "田辺市立歴史民俗資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.38243333 33.72659444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tanabe%20City%20International%20Exchange%20Center%20TANABERU%20ac.jpg"
+    },
+    {
+        "id": "Q2587322",
+        "name": "冒險大世界",
+        "type": "動物園",
+        "coordinates": "Point(135.375797 33.66775)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Panda%20Adventure%20World%20Shirahama.JPG"
+    },
+    {
+        "id": "Q11322055",
+        "name": "土耳其紀念館",
+        "type": "紀念建築物",
+        "coordinates": "Point(135.858611 33.469167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Turkish%20Memorial%20and%20Museum%20Kushimoto%20Wakayama%20pref%20Japan02-b.jpg"
+    },
+    {
+        "id": "Q11628672",
+        "name": "西村伊作記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(135.992639 33.727861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Former%20Nishimura%20House%202021-10%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q2587322",
+        "name": "冒險大世界",
+        "type": "主題公園",
+        "coordinates": "Point(135.375797 33.66775)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Panda%20Adventure%20World%20Shirahama.JPG"
+    }
+]

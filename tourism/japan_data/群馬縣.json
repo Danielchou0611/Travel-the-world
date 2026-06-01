@@ -1,0 +1,723 @@
+[
+    {
+        "id": "Q11657406",
+        "name": "阿左美沼",
+        "type": "人工池塘",
+        "coordinates": "Point(139.306683 36.396099)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11537352",
+        "name": "桐生自動車博物館",
+        "type": "汽車博物館",
+        "coordinates": "Point(139.35069444 36.37194444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Maehara%2020th%20Museum.JPG"
+    },
+    {
+        "id": "Q28554991",
+        "name": "スバルビジターセンター",
+        "type": "公司博物館",
+        "coordinates": "Point(139.373 36.27552778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Subaru%201500%20at%20SUBARU%20Visitor%20center%202014-2.jpg"
+    },
+    {
+        "id": "Q11576575",
+        "name": "田山花袋紀念文學館",
+        "type": "文學館",
+        "coordinates": "Point(139.545611 36.243889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tayama%20Katai%20Literature%20Museum.jpg"
+    },
+    {
+        "id": "Q11609637",
+        "name": "群馬県立土屋文明記念文学館",
+        "type": "文學館",
+        "coordinates": "Point(138.985361 36.382278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tsuchiya%20Memorial%20Museum.JPG"
+    },
+    {
+        "id": "Q110496169",
+        "name": "群馬県立日本絹の里",
+        "type": "織物博物館",
+        "coordinates": "Point(138.989722222 36.407277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%97%A5%E6%9C%AC%E7%B5%B9%E3%81%AE%E9%87%8C.jpg"
+    },
+    {
+        "id": "Q11609688",
+        "name": "群馬県立近代美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.078639 36.298722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Museum%20of%20Modern%20Art%2C%20Gunma.JPG"
+    },
+    {
+        "id": "Q108152784",
+        "name": "伊香保おもちゃと人形自動車博物館",
+        "type": "汽車博物館",
+        "coordinates": "Point(138.9691358 36.4637501)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ikaho%20Toy%2C%20Doll%20%26%20Car%20Museum.jpg"
+    },
+    {
+        "id": "Q30933837",
+        "name": "竹久夢二伊香保記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.92694444 36.49972222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takehisa%20Yumeji%20Ikaho%20Art%20Museum.JPG"
+    },
+    {
+        "id": "Q135140080",
+        "name": "浅原体験村",
+        "type": "景点",
+        "coordinates": "Point(139.291556 36.469972)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q20982941",
+        "name": "群馬県立歴史博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(139.07947222 36.2985)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gunma-pref-History-museum.jpg"
+    },
+    {
+        "id": "Q11537351",
+        "name": "桐生織物参考館“紫”",
+        "type": "工业博物馆",
+        "coordinates": "Point(139.34472 36.410337)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Textile%20Museum%20YUKARI.JPG"
+    },
+    {
+        "id": "Q7818931",
+        "name": "富岡製絲廠",
+        "type": "工业博物馆",
+        "coordinates": "Point(138.887667 36.255333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tomioka%20Silk%20Mill%20East%20Cocoon%20Warehouse05.jpg"
+    },
+    {
+        "id": "Q11415881",
+        "name": "向井千秋紀念兒童科學館",
+        "type": "天文台",
+        "coordinates": "Point(139.544806 36.244111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mukai%20Chiaki%20Children%27s%20Science%20Museum.jpg"
+    },
+    {
+        "id": "Q521611",
+        "name": "群馬縣立館林美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.50588889 36.26619444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gunma%20Museum%20of%20Art%2C%20Tatebayashi%201.jpg"
+    },
+    {
+        "id": "Q108152784",
+        "name": "伊香保おもちゃと人形自動車博物館",
+        "type": "人形博物館",
+        "coordinates": "Point(138.9691358 36.4637501)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ikaho%20Toy%2C%20Doll%20%26%20Car%20Museum.jpg"
+    },
+    {
+        "id": "Q11437813",
+        "name": "大理石村鎖心城堡",
+        "type": "城堡",
+        "coordinates": "Point(138.988056 36.630833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Marble%20Village%20Lockheart%20Castle%2C%20Lockheart%20Castle%20front%20exterior.jpg"
+    },
+    {
+        "id": "Q7818931",
+        "name": "富岡製絲廠",
+        "type": "工业博物馆",
+        "coordinates": "Point(138.887428 36.255121)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tomioka%20Silk%20Mill%20East%20Cocoon%20Warehouse05.jpg"
+    },
+    {
+        "id": "Q98815260",
+        "name": "相川考古館",
+        "type": "考古博物館",
+        "coordinates": "Point(139.191476 36.318624)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aikawa%20Archaeological%20Museum.JPG"
+    },
+    {
+        "id": "Q11609688",
+        "name": "群馬県立近代美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(139.078639 36.298722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Museum%20of%20Modern%20Art%2C%20Gunma.JPG"
+    },
+    {
+        "id": "Q11281524",
+        "name": "るなぱあく",
+        "type": "主題樂園",
+        "coordinates": "Point(139.063069 36.3953)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lunar%20Park%20%28Maebashi%29.JPG"
+    },
+    {
+        "id": "Q11537258",
+        "name": "桐生が岡公園",
+        "type": "公園",
+        "coordinates": "Point(139.341 36.42372222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%A1%90%E7%94%9F%E3%81%8C%E5%B2%A1%E5%85%AC%E5%9C%92%20%E9%81%8A%E5%9C%92%E5%9C%B0%E5%85%A8%E6%99%AF.JPG"
+    },
+    {
+        "id": "Q11447811",
+        "name": "嬬恋郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(138.54797778 36.516475)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%AC%AC%E6%81%8B%E9%83%B7%E5%9C%9F%E8%B3%87%E6%96%99%E9%A4%A8%281%29.jpg"
+    },
+    {
+        "id": "Q21653680",
+        "name": "天一美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.95486111 36.79022222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ten-ichi%20Museum.JPG"
+    },
+    {
+        "id": "Q28689358",
+        "name": "富岡市立美術博物館・福沢一郎記念美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.86488056 36.26821111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tomioka%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q11609531",
+        "name": "群馬サファリパーク",
+        "type": "野生动物园",
+        "coordinates": "Point(138.885194 36.22575)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/White%20tiger2.jpg"
+    },
+    {
+        "id": "Q21652793",
+        "name": "上毛野はにわの里公園",
+        "type": "考古学公園",
+        "coordinates": "Point(138.98611111 36.37888889)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104696800",
+        "name": "高崎市観音塚考古資料館",
+        "type": "考古博物館",
+        "coordinates": "Point(138.940161 36.340167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takasaki%20City%20Kannonduka%20Museum%20of%20Archaeololgy.JPG"
+    },
+    {
+        "id": "Q521611",
+        "name": "群馬縣立館林美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(139.50588889 36.26619444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gunma%20Museum%20of%20Art%2C%20Tatebayashi%201.jpg"
+    },
+    {
+        "id": "Q20982941",
+        "name": "群馬県立歴史博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(139.07947222 36.2985)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gunma-pref-History-museum.jpg"
+    },
+    {
+        "id": "Q11657406",
+        "name": "阿左美沼",
+        "type": "河跡湖",
+        "coordinates": "Point(139.306683 36.396099)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11609680",
+        "name": "群馬県立自然史博物館",
+        "type": "自然歷史博物館",
+        "coordinates": "Point(138.86713333 36.26953333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gunma%20Museum%20Of%20Natural%20History%20and%20Tomioka%20Kabura%20Bunka%20Hall.jpg"
+    },
+    {
+        "id": "Q11537258",
+        "name": "桐生が岡公園",
+        "type": "動物園",
+        "coordinates": "Point(139.341 36.42372222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%A1%90%E7%94%9F%E3%81%8C%E5%B2%A1%E5%85%AC%E5%9C%92%20%E9%81%8A%E5%9C%92%E5%9C%B0%E5%85%A8%E6%99%AF.JPG"
+    },
+    {
+        "id": "Q28554991",
+        "name": "スバルビジターセンター",
+        "type": "汽車博物館",
+        "coordinates": "Point(139.373 36.27552778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Subaru%201500%20at%20SUBARU%20Visitor%20center%202014-2.jpg"
+    },
+    {
+        "id": "Q120754528",
+        "name": "岩宿博物館",
+        "type": "考古博物館",
+        "coordinates": "Point(139.285315 36.398878)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iwajuku%20Museum%202.jpg"
+    },
+    {
+        "id": "Q60986994",
+        "name": "太田市美術館・図書館",
+        "type": "美術館",
+        "coordinates": "Point(139.37847222 36.29461111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Art%20Museum%20%26%20Library%2C%20Ota%20ac%20%282%29.jpg"
+    },
+    {
+        "id": "Q104696828",
+        "name": "玉村町歴史資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(139.122664 36.305566)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11537352",
+        "name": "桐生自動車博物館",
+        "type": "美術館",
+        "coordinates": "Point(139.35069444 36.37194444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Maehara%2020th%20Museum.JPG"
+    },
+    {
+        "id": "Q11537258",
+        "name": "桐生が岡公園",
+        "type": "主題樂園",
+        "coordinates": "Point(139.341 36.42372222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%A1%90%E7%94%9F%E3%81%8C%E5%B2%A1%E5%85%AC%E5%9C%92%20%E9%81%8A%E5%9C%92%E5%9C%B0%E5%85%A8%E6%99%AF.JPG"
+    },
+    {
+        "id": "Q11609528",
+        "name": "群馬ガラス工芸美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.95538889 36.49869444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gumma%20Glass%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q7902250",
+        "name": "碓冰嶺鐵道文化村",
+        "type": "观光铁路",
+        "coordinates": "Point(138.733888888 36.336388888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Usui%20village%20of%20railway%20culture%20%E7%A2%93%E6%B0%B7%E9%89%84%E9%81%93%E6%96%87%E5%8C%96%E3%82%80%E3%82%89%20%282771301308%29.jpg"
+    },
+    {
+        "id": "Q106388197",
+        "name": "太田市立藪塚本町歴史民俗資料館",
+        "type": "民俗博物館",
+        "coordinates": "Point(139.321666666 36.363333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yabuzukahonmachi%20Historical%20and%20Folklore%20Museum.JPG"
+    },
+    {
+        "id": "Q11537351",
+        "name": "桐生織物参考館“紫”",
+        "type": "織物博物館",
+        "coordinates": "Point(139.34472 36.410337)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Textile%20Museum%20YUKARI.JPG"
+    },
+    {
+        "id": "Q11279084",
+        "name": "綠市立富弘美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.371388888 36.556666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tomihiro%20Art%20Museum%201.jpg"
+    },
+    {
+        "id": "Q108152784",
+        "name": "伊香保おもちゃと人形自動車博物館",
+        "type": "玩具博物館",
+        "coordinates": "Point(138.9691358 36.4637501)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ikaho%20Toy%2C%20Doll%20%26%20Car%20Museum.jpg"
+    },
+    {
+        "id": "Q11609637",
+        "name": "群馬県立土屋文明記念文学館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(138.985361 36.382278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tsuchiya%20Memorial%20Museum.JPG"
+    },
+    {
+        "id": "Q28689358",
+        "name": "富岡市立美術博物館・福沢一郎記念美術館",
+        "type": "市立博物館",
+        "coordinates": "Point(138.86488056 36.26821111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tomioka%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q11415881",
+        "name": "向井千秋紀念兒童科學館",
+        "type": "科學博物館",
+        "coordinates": "Point(139.544806 36.244111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mukai%20Chiaki%20Children%27s%20Science%20Museum.jpg"
+    },
+    {
+        "id": "Q130638774",
+        "name": "毛塚記念館",
+        "type": "建成遗产",
+        "coordinates": "Point(139.530562 36.247462)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kezuka%20Kinenkan%20%28Tatebayashi%29%2001.jpg"
+    },
+    {
+        "id": "Q30933837",
+        "name": "竹久夢二伊香保記念館",
+        "type": "美術館",
+        "coordinates": "Point(138.92694444 36.49972222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takehisa%20Yumeji%20Ikaho%20Art%20Museum.JPG"
+    },
+    {
+        "id": "Q5157831",
+        "name": "大川美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.334 36.41683333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okawa%20Museum%20of%20Art.JPG"
+    },
+    {
+        "id": "Q11444234",
+        "name": "太田市立新田莊歷史資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(139.274778 36.260833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ota%20Gunma%20Ota%20City%20Nittanosho%20History%20Museum%201.JPG"
+    },
+    {
+        "id": "Q20982941",
+        "name": "群馬県立歴史博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(139.079482 36.298511)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gunma-pref-History-museum.jpg"
+    },
+    {
+        "id": "Q18700337",
+        "name": "Art前橋",
+        "type": "美術館",
+        "coordinates": "Point(139.07138611 36.390625)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Arts%20Maebashi.jpg"
+    },
+    {
+        "id": "Q106388197",
+        "name": "太田市立藪塚本町歴史民俗資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(139.321666666 36.363333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yabuzukahonmachi%20Historical%20and%20Folklore%20Museum.JPG"
+    },
+    {
+        "id": "Q11609680",
+        "name": "群馬県立自然史博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(138.86713333 36.26953333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gunma%20Museum%20Of%20Natural%20History%20and%20Tomioka%20Kabura%20Bunka%20Hall.jpg"
+    },
+    {
+        "id": "Q11669765",
+        "name": "高崎市美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.010611 36.320722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takasaki%20Museum%20of%20Art.jpg"
+    },
+    {
+        "id": "Q109594587",
+        "name": "やんば天明泥流ミュージアム",
+        "type": "火山博物館",
+        "coordinates": "Point(138.6798644 36.5438632)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yamba%20Tenmei%20Mudflow%20Museum.jpg"
+    },
+    {
+        "id": "Q96695273",
+        "name": "かみつけの里博物館",
+        "type": "考古博物館",
+        "coordinates": "Point(138.986055555 36.378805555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kamitsukeno-sato%20Museum%20of%20Archaeology.jpg"
+    },
+    {
+        "id": "Q104696778",
+        "name": "中之条町歴史と民俗の博物館",
+        "type": "民俗博物館",
+        "coordinates": "Point(138.84287 36.589429)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nakanojo%20Museum%20of%20Folk%20and%20History%202.jpg"
+    },
+    {
+        "id": "Q110496169",
+        "name": "群馬県立日本絹の里",
+        "type": "工业博物馆",
+        "coordinates": "Point(138.989722222 36.407277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%97%A5%E6%9C%AC%E7%B5%B9%E3%81%AE%E9%87%8C.jpg"
+    },
+    {
+        "id": "Q60986994",
+        "name": "太田市美術館・図書館",
+        "type": "市区町村立図書館",
+        "coordinates": "Point(139.37847222 36.29461111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Art%20Museum%20%26%20Library%2C%20Ota%20ac%20%282%29.jpg"
+    },
+    {
+        "id": "Q121118437",
+        "name": "旧花輪小学校記念館",
+        "type": "纪念博物馆",
+        "coordinates": "Point(139.308888888 36.522222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Former%20Hanawa%20elementary%20school%201.jpg"
+    },
+    {
+        "id": "Q7818931",
+        "name": "富岡製絲廠",
+        "type": "製糸場",
+        "coordinates": "Point(138.887667 36.255333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tomioka%20Silk%20Mill%20East%20Cocoon%20Warehouse05.jpg"
+    },
+    {
+        "id": "Q7902250",
+        "name": "碓冰嶺鐵道文化村",
+        "type": "鐵路博物館",
+        "coordinates": "Point(138.733888888 36.336388888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Usui%20village%20of%20railway%20culture%20%E7%A2%93%E6%B0%B7%E9%89%84%E9%81%93%E6%96%87%E5%8C%96%E3%82%80%E3%82%89%20%282771301308%29.jpg"
+    },
+    {
+        "id": "Q28689358",
+        "name": "富岡市立美術博物館・福沢一郎記念美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.86488056 36.26821111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tomioka%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q7818931",
+        "name": "富岡製絲廠",
+        "type": "官営模範工場",
+        "coordinates": "Point(138.887667 36.255333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tomioka%20Silk%20Mill%20East%20Cocoon%20Warehouse05.jpg"
+    },
+    {
+        "id": "Q11437813",
+        "name": "大理石村鎖心城堡",
+        "type": "主題公園",
+        "coordinates": "Point(138.988056 36.630833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Marble%20Village%20Lockheart%20Castle%2C%20Lockheart%20Castle%20front%20exterior.jpg"
+    },
+    {
+        "id": "Q11470074",
+        "name": "高崎市山田かまち美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.990306 36.317861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yamada%20Kamachi%20Museum%20of%20Art%2C%20Takasaki.jpg"
+    },
+    {
+        "id": "Q7818931",
+        "name": "富岡製絲廠",
+        "type": "製糸場",
+        "coordinates": "Point(138.887428 36.255121)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tomioka%20Silk%20Mill%20East%20Cocoon%20Warehouse05.jpg"
+    },
+    {
+        "id": "Q48749687",
+        "name": "広瀬川美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.068944444 36.395111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hirosegawa%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q60400398",
+        "name": "原美術館ARC",
+        "type": "博物馆建筑",
+        "coordinates": "Point(138.94528 36.50277)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Haramuseumarc.JPG"
+    },
+    {
+        "id": "Q7818931",
+        "name": "富岡製絲廠",
+        "type": "官営模範工場",
+        "coordinates": "Point(138.887428 36.255121)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tomioka%20Silk%20Mill%20East%20Cocoon%20Warehouse05.jpg"
+    },
+    {
+        "id": "Q20982941",
+        "name": "群馬県立歴史博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(139.079482 36.298511)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gunma-pref-History-museum.jpg"
+    },
+    {
+        "id": "Q48751949",
+        "name": "水と緑と詩のまち前橋文学館",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.07216667 36.39394444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Maebashi%20City%20Museum%20of%20Literature%201.jpg"
+    },
+    {
+        "id": "Q4803474",
+        "name": "浅间火山博物馆",
+        "type": "火山博物館",
+        "coordinates": "Point(138.53527778 36.44)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/ASAMA%20Volcano%20Museum%202017-04.jpg"
+    },
+    {
+        "id": "Q130724800",
+        "name": "旧上毛モスリン事務所",
+        "type": "建成遗产",
+        "coordinates": "Point(139.545483 36.244526)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Former%20Jomo%20Muslin%20Office%2003.jpg"
+    },
+    {
+        "id": "Q7902250",
+        "name": "碓冰嶺鐵道文化村",
+        "type": "人工地理实体",
+        "coordinates": "Point(138.733888888 36.336388888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Usui%20village%20of%20railway%20culture%20%E7%A2%93%E6%B0%B7%E9%89%84%E9%81%93%E6%96%87%E5%8C%96%E3%82%80%E3%82%89%20%282771301308%29.jpg"
+    },
+    {
+        "id": "Q104696778",
+        "name": "中之条町歴史と民俗の博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(138.84287 36.589429)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nakanojo%20Museum%20of%20Folk%20and%20History%202.jpg"
+    },
+    {
+        "id": "Q11281891",
+        "name": "渡良瀨自然館",
+        "type": "自然歷史博物館",
+        "coordinates": "Point(139.650583 36.223)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Itakura%20Watarase%20Museum%201.JPG"
+    },
+    {
+        "id": "Q60400398",
+        "name": "原美術館ARC",
+        "type": "美術館",
+        "coordinates": "Point(138.94528 36.50277)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Haramuseumarc.JPG"
+    },
+    {
+        "id": "Q11576575",
+        "name": "田山花袋紀念文學館",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.545611 36.243889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tayama%20Katai%20Literature%20Museum.jpg"
+    },
+    {
+        "id": "Q11609637",
+        "name": "群馬県立土屋文明記念文学館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.985361 36.382278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tsuchiya%20Memorial%20Museum.JPG"
+    },
+    {
+        "id": "Q22120584",
+        "name": "民話と紙芝居の家",
+        "type": "民俗博物館",
+        "coordinates": "Point(138.88991667 36.72836111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%B0%91%E8%A9%B1%E3%81%A8%E7%B4%99%E8%8A%9D%E5%B1%85%E3%81%AE%E5%AE%B6.jpg"
+    },
+    {
+        "id": "Q11279084",
+        "name": "綠市立富弘美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.371388888 36.556666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tomihiro%20Art%20Museum%201.jpg"
+    },
+    {
+        "id": "Q55534514",
+        "name": "横室の大カヤ",
+        "type": "巨樹",
+        "coordinates": "Point(139.05561111 36.44144444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokomuro%20no%20O-Kaya%20A.jpg"
+    },
+    {
+        "id": "Q11575663",
+        "name": "田中正造記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.53805556 36.24694444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ashio%20copper%20mine%20pollution%20incident%20Shozo%20Tanaka%20Museum%2020150628.jpg"
+    },
+    {
+        "id": "Q48751949",
+        "name": "水と緑と詩のまち前橋文学館",
+        "type": "文學館",
+        "coordinates": "Point(139.07216667 36.39394444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Maebashi%20City%20Museum%20of%20Literature%201.jpg"
+    },
+    {
+        "id": "Q98815260",
+        "name": "相川考古館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(139.191476 36.318624)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aikawa%20Archaeological%20Museum.JPG"
+    },
+    {
+        "id": "Q130724784",
+        "name": "館林市第二資料館",
+        "type": "博物館",
+        "coordinates": "Point(139.545671 36.244565)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q17222445",
+        "name": "太田市立緣切寺滿德寺資料館",
+        "type": "博物館",
+        "coordinates": "Point(139.286111 36.253389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ota%20Gunma%20Mantokuji%20Museum%201.JPG"
+    },
+    {
+        "id": "Q122817314",
+        "name": "みどり市大間々博物館",
+        "type": "博物館",
+        "coordinates": "Point(139.274639 36.435278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Conodont%20Museum%201.jpg"
+    },
+    {
+        "id": "Q55533662",
+        "name": "神流町恐竜センター",
+        "type": "古生物博物馆",
+        "coordinates": "Point(138.8204303 36.0919485)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kanna%20Dinosaur%20Center%202.jpg"
+    },
+    {
+        "id": "Q11606987",
+        "name": "絹撚記念館",
+        "type": "历史建筑",
+        "coordinates": "Point(139.333692 36.409733)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kennen%20Kinenkan%202.jpg"
+    },
+    {
+        "id": "Q104696827",
+        "name": "多胡碑記念館",
+        "type": "博物館",
+        "coordinates": "Point(138.9969 36.265285)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%A4%9A%E8%83%A1%E7%A2%91%E8%A8%98%E5%BF%B5%E9%A4%A8.JPG"
+    },
+    {
+        "id": "Q134440358",
+        "name": "小平の里",
+        "type": "觀光景點",
+        "coordinates": "Point(139.308583 36.466528)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104696776",
+        "name": "安中市学習の森　ふるさと学習館",
+        "type": "博物館",
+        "coordinates": "Point(138.894303 36.291799)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11606987",
+        "name": "絹撚記念館",
+        "type": "博物館",
+        "coordinates": "Point(139.333692 36.409733)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kennen%20Kinenkan%202.jpg"
+    },
+    {
+        "id": "Q11561571",
+        "name": "渋川市美術館・桑原巨守彫刻美術館",
+        "type": "彫刻美術館",
+        "coordinates": "Point(138.9977598 36.4919869)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shibukawa%20city%20office%20second%20building%202.jpg"
+    },
+    {
+        "id": "Q130619145",
+        "name": "製粉ミュージアム",
+        "type": "博物館",
+        "coordinates": "Point(139.525788 36.245593)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Seifun%20Museum.JPG"
+    },
+    {
+        "id": "Q55533662",
+        "name": "神流町恐竜センター",
+        "type": "古生物博物馆",
+        "coordinates": "Point(138.8204303 36.0919485)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kanna%20Dinosaur%20Center%201.jpg"
+    },
+    {
+        "id": "Q104696774",
+        "name": "榛東村耳飾り館",
+        "type": "博物館",
+        "coordinates": "Point(138.969867 36.450366)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Museum%20Of%20Earrings.jpg"
+    },
+    {
+        "id": "Q104696779",
+        "name": "館林市立資料館",
+        "type": "博物館",
+        "coordinates": "Point(139.540768 36.24487)",
+        "image": "No Image"
+    }
+]

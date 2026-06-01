@@ -1,0 +1,527 @@
+[
+    {
+        "id": "Q11657511",
+        "name": "阿波十郎兵衛屋敷",
+        "type": "剧院博物馆",
+        "coordinates": "Point(134.583972 34.091556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Awadeko201811%204.jpg"
+    },
+    {
+        "id": "Q28154087",
+        "name": "名頃",
+        "type": "觀光景點",
+        "coordinates": "Point(134.019827 33.85591)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q56034443",
+        "name": "エスカヒル鳴門",
+        "type": "電扶梯",
+        "coordinates": "Point(134.639916666 34.235805555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eskahill%20Naruto01s3200.jpg"
+    },
+    {
+        "id": "Q11657511",
+        "name": "阿波十郎兵衛屋敷",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(134.583972 34.091556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Awadeko201811%204.jpg"
+    },
+    {
+        "id": "Q11668622",
+        "name": "高の瀬峡",
+        "type": "觀光景點",
+        "coordinates": "Point(134.078962 33.788591)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11489920",
+        "name": "德島縣立大鳴門橋架橋紀念館",
+        "type": "觀景台",
+        "coordinates": "Point(134.640139 34.234917)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/EDDY02s3872.jpg"
+    },
+    {
+        "id": "Q11497340",
+        "name": "技の館",
+        "type": "博物館",
+        "coordinates": "Point(134.397444 34.132083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%8A%E6%9D%BF%E7%94%BA%20%E6%8A%80%E3%81%AE%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q28691992",
+        "name": "美郷ほたる館",
+        "type": "自然歷史博物館",
+        "coordinates": "Point(134.26245556 34.02226667)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11622548",
+        "name": "藍の館",
+        "type": "博物館",
+        "coordinates": "Point(134.482278 34.115611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aizumi%20Ai%20no%20Yakata.jpg"
+    },
+    {
+        "id": "Q11257446",
+        "name": "德島明日多夢樂園",
+        "type": "科學博物館",
+        "coordinates": "Point(134.441056 34.152278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/ASUTAMULAND%20TOKUSHIMA.JPG"
+    },
+    {
+        "id": "Q28154087",
+        "name": "名頃",
+        "type": "村",
+        "coordinates": "Point(134.019827 33.85591)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q48759843",
+        "name": "阿波市立土成歴史館",
+        "type": "歷史博物館",
+        "coordinates": "Point(134.34008333 34.11494444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11489972",
+        "name": "德島縣立近代美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(134.526694 34.039806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokushima%20Modern%20Art%20Museum.JPG"
+    },
+    {
+        "id": "Q11619959",
+        "name": "菘翁美術館",
+        "type": "書法美術館",
+        "coordinates": "Point(134.558889 34.0705)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Suou%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q7813764",
+        "name": "徳島県郷土文化会館",
+        "type": "音樂廳",
+        "coordinates": "Point(134.546 34.0751)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokushima%20Arts%20Foundation%20for%20Culture01n3872.jpg"
+    },
+    {
+        "id": "Q4707942",
+        "name": "德島縣立博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(134.526 34.0397)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokushima%20Prefectural%20Museum.JPG"
+    },
+    {
+        "id": "Q11582282",
+        "name": "相生森林美術館",
+        "type": "美術館",
+        "coordinates": "Point(134.452083 33.797722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aioi%20Shinrin%20Bijyutsukan.JPG"
+    },
+    {
+        "id": "Q11675413",
+        "name": "鳴門ガレの森美術館",
+        "type": "美術館",
+        "coordinates": "Point(134.620361 34.178278)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11668622",
+        "name": "高の瀬峡",
+        "type": "峽谷",
+        "coordinates": "Point(134.078962 33.788591)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11489812",
+        "name": "徳島市立考古資料館",
+        "type": "考古博物館",
+        "coordinates": "Point(134.469028 34.060889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokushima%20Koko%20Shiryokan.JPG"
+    },
+    {
+        "id": "Q62608804",
+        "name": "阿波池田うだつの家・たばこ資料館",
+        "type": "博物館",
+        "coordinates": "Point(133.809027777 34.029472222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Awa-Ikeda%20Udatsu%20House%20omoya%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q123564185",
+        "name": "上板町立歴史民俗資料館",
+        "type": "博物館",
+        "coordinates": "Point(134.395964 34.131932)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q130335552",
+        "name": "上板町歴史民俗資料館",
+        "type": "博物館",
+        "coordinates": "Point(134.395891666 34.131913888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%8A%E6%9D%BF%E7%94%BA%20%E6%AD%B4%E5%8F%B2%E6%B0%91%E4%BF%97%E8%B3%87%E6%96%99%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q107723579",
+        "name": "ひの字渓谷",
+        "type": "谷地",
+        "coordinates": "Point(133.8175 33.908333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%B2%E3%81%AE%E5%AD%97%E6%B8%93%E8%B0%B7%2001%2020200802.jpg"
+    },
+    {
+        "id": "Q11489972",
+        "name": "德島縣立近代美術館",
+        "type": "现代美术馆",
+        "coordinates": "Point(134.526694 34.039806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokushima%20Modern%20Art%20Museum.JPG"
+    },
+    {
+        "id": "Q11489984",
+        "name": "徳島県立鳥居龍蔵記念博物館",
+        "type": "人物紀念館",
+        "coordinates": "Point(134.52625 34.039861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokushima%20Prefectural%20Torii%20Ryuzo%20Memorial%20Museum.JPG"
+    },
+    {
+        "id": "Q11657295",
+        "name": "阿南市科学センター",
+        "type": "科學博物館",
+        "coordinates": "Point(134.681694 33.948861)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11562883",
+        "name": "渦之道",
+        "type": "觀景台",
+        "coordinates": "Point(134.647888888 34.237833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20air%20corridor%20of%20the%20Uzunomichi.jpg"
+    },
+    {
+        "id": "Q11657511",
+        "name": "阿波十郎兵衛屋敷",
+        "type": "puppetry building",
+        "coordinates": "Point(134.583972 34.091556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Awadeko201811%204.jpg"
+    },
+    {
+        "id": "Q123563377",
+        "name": "徳島木のおもちゃ美術館",
+        "type": "玩具博物館",
+        "coordinates": "Point(134.439323 34.151059)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q107723579",
+        "name": "ひの字渓谷",
+        "type": "river bend",
+        "coordinates": "Point(133.8175 33.908333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%B2%E3%81%AE%E5%AD%97%E6%B8%93%E8%B0%B7%2001%2020200802.jpg"
+    },
+    {
+        "id": "Q11489720",
+        "name": "徳島市天狗久資料館",
+        "type": "人物紀念館",
+        "coordinates": "Point(134.49275 34.072278)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11489793",
+        "name": "徳島市立徳島城博物館",
+        "type": "博物館",
+        "coordinates": "Point(134.555639 34.073528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokushima%20castle%20museum02s3872.jpg"
+    },
+    {
+        "id": "Q109595796",
+        "name": "阿波市立市場歴史民俗資料館",
+        "type": "博物館",
+        "coordinates": "Point(134.28498 34.09421)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q3329659",
+        "name": "大塚國際美術館",
+        "type": "美術館",
+        "coordinates": "Point(134.638 34.2324)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Otsuka%20Museum%20of%20Art01s3200.jpg"
+    },
+    {
+        "id": "Q3740674",
+        "name": "鳴門市ドイツ館",
+        "type": "建築物",
+        "coordinates": "Point(134.499083 34.164722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/140712%20Naruto%20German%20House%20Naruto%20Tokushima%20pref%20Japan02s3.jpg"
+    },
+    {
+        "id": "Q3740674",
+        "name": "鳴門市ドイツ館",
+        "type": "博物館",
+        "coordinates": "Point(134.499083 34.164722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/140712%20Naruto%20German%20House%20Naruto%20Tokushima%20pref%20Japan02s3.jpg"
+    },
+    {
+        "id": "Q28691969",
+        "name": "阿波和紙伝統産業会館",
+        "type": "紙博物館",
+        "coordinates": "Point(134.23102778 34.04594444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11657545",
+        "name": "阿波木偶人形会館",
+        "type": "剧院博物馆",
+        "coordinates": "Point(134.918194 34.091833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Awadeko201811%201.jpg"
+    },
+    {
+        "id": "Q17209243",
+        "name": "鳴門市賀川豊彦記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(134.49875 34.163278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/140712%20Naruto%20City%20Kagawa%20Toyohiko%20Museum%20Naruto%20Tokushima%20pref%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q123562902",
+        "name": "「人形のムラ」阿波木偶文化資料館",
+        "type": "博物館",
+        "coordinates": "Point(134.466653 34.090371)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11532225",
+        "name": "松茂町歴史民俗資料館・人形浄瑠璃芝居資料館",
+        "type": "博物館",
+        "coordinates": "Point(134.582694 34.136917)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%9D%BE%E8%8C%82%E7%94%BA%E6%AD%B4%E5%8F%B2%E6%B0%91%E4%BF%97%E8%B3%87%E6%96%99%E9%A4%A8%E3%83%BB%E4%BA%BA%E5%BD%A2%E6%B5%84%E7%91%A0%E7%92%83%E8%8A%9D%E5%B1%85%E8%B3%87%E6%96%99%E9%A4%A8%2020210504.jpg"
+    },
+    {
+        "id": "Q11489939",
+        "name": "徳島県立文学書道館",
+        "type": "文學館",
+        "coordinates": "Point(134.554 34.080083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokushima%20bungakushodo01n3872.jpg"
+    },
+    {
+        "id": "Q1350120",
+        "name": "鳴門漩渦",
+        "type": "渦流",
+        "coordinates": "Point(134.651388888 34.238333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Naruto%20Whirlpools%20taken%204-21-2008.jpg"
+    },
+    {
+        "id": "Q65266462",
+        "name": "平家屋敷民俗資料館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(133.781277777 33.883277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/150503%20The%20Folklore%20Museum%20of%20the%20Heike%20Estate%20Miyoshi%20Tokushima%20pref%20Japan02s3.jpg"
+    },
+    {
+        "id": "Q11489939",
+        "name": "徳島県立文学書道館",
+        "type": "書法美術館",
+        "coordinates": "Point(134.554 34.080083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokushima%20bungakushodo01n3872.jpg"
+    },
+    {
+        "id": "Q11562883",
+        "name": "渦之道",
+        "type": "人行道",
+        "coordinates": "Point(134.647888888 34.237833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20air%20corridor%20of%20the%20Uzunomichi.jpg"
+    },
+    {
+        "id": "Q11489920",
+        "name": "德島縣立大鳴門橋架橋紀念館",
+        "type": "科學博物館",
+        "coordinates": "Point(134.640139 34.234917)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/EDDY02s3872.jpg"
+    },
+    {
+        "id": "Q7813764",
+        "name": "徳島県郷土文化会館",
+        "type": "文化中心",
+        "coordinates": "Point(134.546 34.0751)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokushima%20Arts%20Foundation%20for%20Culture01n3872.jpg"
+    },
+    {
+        "id": "Q1350120",
+        "name": "鳴門漩渦",
+        "type": "觀光景點",
+        "coordinates": "Point(134.651388888 34.238333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Naruto%20Whirlpools%20taken%204-21-2008.jpg"
+    },
+    {
+        "id": "Q11273086",
+        "name": "とくしまファミリーランド",
+        "type": "主題樂園",
+        "coordinates": "Point(134.518888888 34.013333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokushima%20Family%20Land2.JPG"
+    },
+    {
+        "id": "Q11641228",
+        "name": "道之站大歩危",
+        "type": "道之驛",
+        "coordinates": "Point(133.760055555 33.881583333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michinoeki%20Oboke%2001.JPG"
+    },
+    {
+        "id": "Q65266462",
+        "name": "平家屋敷民俗資料館",
+        "type": "民俗博物館",
+        "coordinates": "Point(133.781277777 33.883277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/150503%20The%20Folklore%20Museum%20of%20the%20Heike%20Estate%20Miyoshi%20Tokushima%20pref%20Japan02s3.jpg"
+    },
+    {
+        "id": "Q11505181",
+        "name": "日和佐うみがめ博物館カレッタ",
+        "type": "自然歷史博物館",
+        "coordinates": "Point(134.541028 33.734611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hiwasa%20Chelonian%20Museum%20Caretta%202025.jpg"
+    },
+    {
+        "id": "Q104783865",
+        "name": "東みよし町立歴史民俗資料館",
+        "type": "博物館",
+        "coordinates": "Point(133.949479 34.036077)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q56034443",
+        "name": "エスカヒル鳴門",
+        "type": "觀景台",
+        "coordinates": "Point(134.639916666 34.235805555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eskahill%20Naruto01s3200.jpg"
+    },
+    {
+        "id": "Q7813764",
+        "name": "徳島県郷土文化会館",
+        "type": "博物館",
+        "coordinates": "Point(134.546 34.0751)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokushima%20Arts%20Foundation%20for%20Culture01n3872.jpg"
+    },
+    {
+        "id": "Q11657519",
+        "name": "阿波大正浪漫 バルトの庭",
+        "type": "电影布景",
+        "coordinates": "Point(134.496555555 34.159027777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/140712%20Baruto-no-niwa%20in%20Bando%20Naruto%20Tokushima%20pref%20Japan19bs7.jpg"
+    },
+    {
+        "id": "Q123562726",
+        "name": "阿陽史料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(134.542962 34.07193)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11344566",
+        "name": "モラスコむぎ",
+        "type": "水族館",
+        "coordinates": "Point(134.443611 33.667056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Morasukomugi20220524%201.jpg"
+    },
+    {
+        "id": "Q11657519",
+        "name": "阿波大正浪漫 バルトの庭",
+        "type": "主題公園",
+        "coordinates": "Point(134.496555555 34.159027777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/140712%20Baruto-no-niwa%20in%20Bando%20Naruto%20Tokushima%20pref%20Japan19bs7.jpg"
+    },
+    {
+        "id": "Q4829638",
+        "name": "阿波舞會館",
+        "type": "舞蹈博物館",
+        "coordinates": "Point(134.545 34.07027778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Awa-dance%20memorial%20hall01s3200.jpg"
+    },
+    {
+        "id": "Q11657578",
+        "name": "阿波銀プラザ",
+        "type": "美術館",
+        "coordinates": "Point(134.547 34.070306)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Awagin-Plaza.jpeg"
+    },
+    {
+        "id": "Q65268183",
+        "name": "恐竜の里",
+        "type": "主題公園",
+        "coordinates": "Point(134.459694 33.893)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11489915",
+        "name": "徳島県立埋蔵文化財総合センター",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(134.451389 34.142889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rekishiru%20Tokushima.jpg"
+    },
+    {
+        "id": "Q11641228",
+        "name": "道之站大歩危",
+        "type": "博物館",
+        "coordinates": "Point(133.760055555 33.881583333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Michinoeki%20Oboke%2001.JPG"
+    },
+    {
+        "id": "Q123561299",
+        "name": "ＮＦＴ鳴門美術館",
+        "type": "美術館",
+        "coordinates": "Point(134.620301 34.178292)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11619959",
+        "name": "菘翁美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(134.558889 34.0705)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Suou%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q11489972",
+        "name": "德島縣立近代美術館",
+        "type": "美術館",
+        "coordinates": "Point(134.526694 34.039806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokushima%20Modern%20Art%20Museum.JPG"
+    },
+    {
+        "id": "Q4829638",
+        "name": "阿波舞會館",
+        "type": "舞廳",
+        "coordinates": "Point(134.545 34.07027778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Awa-dance%20memorial%20hall01s3200.jpg"
+    },
+    {
+        "id": "Q11489939",
+        "name": "徳島県立文学書道館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(134.554 34.080083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokushima%20bungakushodo01n3872.jpg"
+    },
+    {
+        "id": "Q65291911",
+        "name": "阿南市立阿波公方・民俗資料館",
+        "type": "博物館",
+        "coordinates": "Point(134.655138888 33.952027777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%98%BF%E5%8D%97%E5%B8%82%E7%AB%8B%E9%98%BF%E6%B3%A2%E5%85%AC%E6%96%B9%20%E6%B0%91%E4%BF%97%E8%B3%87%E6%96%99%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11657512",
+        "name": "阿波史跡公園",
+        "type": "考古学公園",
+        "coordinates": "Point(134.46605556 34.05780556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Awa-siseki-koen.jpeg"
+    },
+    {
+        "id": "Q11257446",
+        "name": "德島明日多夢樂園",
+        "type": "公園",
+        "coordinates": "Point(134.441056 34.152278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/ASUTAMULAND%20TOKUSHIMA.JPG"
+    },
+    {
+        "id": "Q11489637",
+        "name": "徳島ガラススタジオ",
+        "type": "博物館",
+        "coordinates": "Point(134.555 34.020056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokushima%20glass%20studio.jpg"
+    }
+]

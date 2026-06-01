@@ -1,0 +1,569 @@
+[
+    {
+        "id": "Q28684385",
+        "name": "礪波散居村博物館",
+        "type": "博物館",
+        "coordinates": "Point(136.96383333 36.62588889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tonami%20Sankyoson%20Museum%20johokan.jpg"
+    },
+    {
+        "id": "Q11674014",
+        "name": "魚津埋没林博物館",
+        "type": "博物館",
+        "coordinates": "Point(137.395 36.8225)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Uozu%20Buried%20Forest%20Museum%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q28687459",
+        "name": "富山市民俗民芸村",
+        "type": "美術館",
+        "coordinates": "Point(137.189444 36.710278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Thatched%20Roof%20Folk%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q30931030",
+        "name": "高岡市伏木気象資料館",
+        "type": "氣象站",
+        "coordinates": "Point(137.05581128 36.79236078)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%AB%98%E5%B2%A1%E5%B8%82%E4%BC%8F%E6%9C%A8%E6%B0%97%E8%B1%A1%E8%B3%87%E6%96%99%E9%A4%A8%EF%BC%88%E6%97%A7%E4%BC%8F%E6%9C%A8%E6%B8%AC%E5%80%99%E6%89%80%EF%BC%8920240211-P1039017.jpg"
+    },
+    {
+        "id": "Q11669507",
+        "name": "高岡市立博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(137.021028 36.746472)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%AB%98%E5%B2%A1%E5%B8%82%E7%AB%8B%E5%8D%9A%E7%89%A9%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11342840",
+        "name": "蜃景樂園",
+        "type": "主題樂園",
+        "coordinates": "Point(137.385833333 36.8)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mirage%20Land.jpg"
+    },
+    {
+        "id": "Q30925155",
+        "name": "氷見市立博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(136.98680556 36.85288889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Himi%20City%20Museum.jpg"
+    },
+    {
+        "id": "Q48763471",
+        "name": "冰見市潮風畫廊",
+        "type": "美術館",
+        "coordinates": "Point(136.987333 36.859139)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11456516",
+        "name": "富山縣立山博物館",
+        "type": "博物館",
+        "coordinates": "Point(137.393489 36.582711)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tateyama-museum%20toyama-pref.jpg"
+    },
+    {
+        "id": "Q28687459",
+        "name": "富山市民俗民芸村",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(137.189444 36.710278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Thatched%20Roof%20Folk%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q104708926",
+        "name": "高岡市万葉歴史館",
+        "type": "文學館",
+        "coordinates": "Point(137.046103 36.795594)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q21653817",
+        "name": "富山市玻璃美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.21475 36.688583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/TOYAMA%E3%82%AD%E3%83%A9%E3%83%AA.jpg"
+    },
+    {
+        "id": "Q6940951",
+        "name": "富山縣立近代美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.21277778 36.68013889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toyama%20Museum%20of%20Modern%20Art.jpg"
+    },
+    {
+        "id": "Q28687459",
+        "name": "富山市民俗民芸村",
+        "type": "民俗博物館",
+        "coordinates": "Point(137.189444 36.710278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Thatched%20Roof%20Folk%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q11458551",
+        "name": "射水市大島絵本館",
+        "type": "繪本博物館",
+        "coordinates": "Point(137.073972 36.734167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%A4%A7%E5%B3%B6%E7%B5%B5%E6%9C%AC%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q24862337",
+        "name": "福野文化創造センターヘリオス",
+        "type": "文化中心",
+        "coordinates": "Point(136.91816667 36.59133333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukuno%20HELiOS.jpg"
+    },
+    {
+        "id": "Q79462052",
+        "name": "早月川河川敷の水溜り",
+        "type": "河跡湖",
+        "coordinates": "Point(137.381125 36.799302777)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11678850",
+        "name": "黒部市吉田科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(137.425639 36.901333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/KUROBE%20YOSHIDA%20SCIENCE%20MUSEUM%202022-09.jpg"
+    },
+    {
+        "id": "Q28684363",
+        "name": "滑川市立博物館",
+        "type": "美術館",
+        "coordinates": "Point(137.39161111 36.74191667)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104708822",
+        "name": "南砺市埋蔵文化財センター",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(136.948608 36.565278)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q55526676",
+        "name": "樂翠亭美術館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(137.21716667 36.70619444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q24862337",
+        "name": "福野文化創造センターヘリオス",
+        "type": "博物館",
+        "coordinates": "Point(136.91816667 36.59133333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukuno%20HELiOS.jpg"
+    },
+    {
+        "id": "Q11674043",
+        "name": "魚津歴史民俗博物館",
+        "type": "民俗博物館",
+        "coordinates": "Point(137.449027777 36.826111111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132196956",
+        "name": "富山県北方領土史料室",
+        "type": "遊客中心",
+        "coordinates": "Point(137.418973 36.891855)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11456417",
+        "name": "富山市鄉土博物館",
+        "type": "天守",
+        "coordinates": "Point(137.211389 36.692778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toyama%20Municipal%20Folk%20Museum%20%28mock%20keep%20tower%20of%20the%20Toyama%20Castle%29%2020180503.jpg"
+    },
+    {
+        "id": "Q6940951",
+        "name": "富山縣立近代美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(137.21277778 36.68013889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toyama%20Museum%20of%20Modern%20Art.jpg"
+    },
+    {
+        "id": "Q11456417",
+        "name": "富山市鄉土博物館",
+        "type": "民俗博物館",
+        "coordinates": "Point(137.211389 36.692778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toyama%20Municipal%20Folk%20Museum%20%28mock%20keep%20tower%20of%20the%20Toyama%20Castle%29%2020180503.jpg"
+    },
+    {
+        "id": "Q11456516",
+        "name": "富山縣立山博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(137.393489 36.582711)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tateyama-museum%20toyama-pref.jpg"
+    },
+    {
+        "id": "Q55526676",
+        "name": "樂翠亭美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.21716667 36.70619444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104708926",
+        "name": "高岡市万葉歴史館",
+        "type": "万葉植物園",
+        "coordinates": "Point(137.046103 36.795594)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11674044",
+        "name": "魚津水族館",
+        "type": "水族館",
+        "coordinates": "Point(137.38815 36.798389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/UOZU%20AQUARIUM.jpg"
+    },
+    {
+        "id": "Q30112754",
+        "name": "立川破火山口水土流失预防博物馆",
+        "type": "博物館",
+        "coordinates": "Point(137.445861 36.582278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/080503%20Tateyama%20Caldera%20Sabo%20Museum%20Tatetana%20Japan10s.jpg"
+    },
+    {
+        "id": "Q133237578",
+        "name": "民族薬物資料館",
+        "type": "大學博物館",
+        "coordinates": "Point(137.141669 36.678763)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q116972269",
+        "name": "ミュゼふくおかカメラ館",
+        "type": "攝影博物館",
+        "coordinates": "Point(136.929805555 36.711472222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukuoka%20Camera%20Museum.jpg"
+    },
+    {
+        "id": "Q117043485",
+        "name": "高岡市福岡歴史民俗資料館",
+        "type": "博物館",
+        "coordinates": "Point(136.906555555 36.714777777)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q126116503",
+        "name": "砺波市埋蔵文化財センター",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(137.011194444 36.635972222)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q122878638",
+        "name": "朝日町立ふるさと美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.552333 36.92025)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Japanese%20Map%20symbol%20%28Museum%29%20w.svg"
+    },
+    {
+        "id": "Q11669915",
+        "name": "高志之國文學館",
+        "type": "文學館",
+        "coordinates": "Point(137.206278 36.6955)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/T-48301%2001.jpg"
+    },
+    {
+        "id": "Q28684363",
+        "name": "滑川市立博物館",
+        "type": "博物館",
+        "coordinates": "Point(137.39161111 36.74191667)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q22119820",
+        "name": "南砺市立福光美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(136.85227778 36.57313889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%A6%8F%E5%85%89%E7%BE%8E%E8%A1%93%E9%A4%A82.jpg"
+    },
+    {
+        "id": "Q30927870",
+        "name": "世界一かわいい美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.29712428 36.74383197)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Art%20Museum%20in%20Mizuhashi%2CToyama.jpg"
+    },
+    {
+        "id": "Q30112754",
+        "name": "立川破火山口水土流失预防博物馆",
+        "type": "博物館",
+        "coordinates": "Point(137.446855 36.58305)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/080503%20Tateyama%20Caldera%20Sabo%20Museum%20Tatetana%20Japan10s.jpg"
+    },
+    {
+        "id": "Q11669515",
+        "name": "高岡市美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.026533 36.751264)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takaoka%20Art%20Museum%201-1.jpg"
+    },
+    {
+        "id": "Q28690458",
+        "name": "Gallery·MILLET",
+        "type": "美術館",
+        "coordinates": "Point(137.21897222 36.68977778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/HOKUGIN%20GALERIE%20MILLET.jpg"
+    },
+    {
+        "id": "Q30112754",
+        "name": "立川破火山口水土流失预防博物馆",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(137.445861 36.582278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/080503%20Tateyama%20Caldera%20Sabo%20Museum%20Tatetana%20Japan10s.jpg"
+    },
+    {
+        "id": "Q11456392",
+        "name": "富山市科學博物館",
+        "type": "科學博物館",
+        "coordinates": "Point(137.211771 36.681461)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toyama%20Science%20Museum.JPG"
+    },
+    {
+        "id": "Q135090699",
+        "name": "朝日町埋蔵文化財保存活用施設 まいぶんKAN",
+        "type": "歷史博物館",
+        "coordinates": "Point(137.557222222 36.922166666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q30927608",
+        "name": "富山県埋蔵文化財センター",
+        "type": "考古博物館",
+        "coordinates": "Point(137.18077778 36.71038889)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11456392",
+        "name": "富山市科學博物館",
+        "type": "科學博物館",
+        "coordinates": "Point(137.211667 36.680833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toyama%20Science%20Museum.JPG"
+    },
+    {
+        "id": "Q28684384",
+        "name": "礪波鄉土資料館",
+        "type": "博物館",
+        "coordinates": "Point(136.96130556 36.63872222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tonami%20provincial%20museum%2001.jpg"
+    },
+    {
+        "id": "Q30931030",
+        "name": "高岡市伏木気象資料館",
+        "type": "気象博物館",
+        "coordinates": "Point(137.05581128 36.79236078)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%AB%98%E5%B2%A1%E5%B8%82%E4%BC%8F%E6%9C%A8%E6%B0%97%E8%B1%A1%E8%B3%87%E6%96%99%E9%A4%A8%EF%BC%88%E6%97%A7%E4%BC%8F%E6%9C%A8%E6%B8%AC%E5%80%99%E6%89%80%EF%BC%8920240211-P1039017.jpg"
+    },
+    {
+        "id": "Q112107169",
+        "name": "下山藝術之森發電所美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.530888888 36.907194444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kokuto%20III%20power%20station%20and%20Nizayama%20Forest%20Art%20Museum%201.jpg"
+    },
+    {
+        "id": "Q11456481",
+        "name": "富山縣水墨美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.1965 36.699056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%AF%8C%E5%B1%B1%E6%B0%B4%E5%A2%A8%E7%BE%8E%E8%A1%93%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q28687459",
+        "name": "富山市民俗民芸村",
+        "type": "ミュージアム・コンプレックス",
+        "coordinates": "Point(137.189444 36.710278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Thatched%20Roof%20Folk%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q104708926",
+        "name": "高岡市万葉歴史館",
+        "type": "歷史博物館",
+        "coordinates": "Point(137.046103 36.795594)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q28689689",
+        "name": "富山県美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.21 36.71055556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toyama%20Prefectural%20Museum%20of%20Art%20and%20Design%20seen%20from%20Fugan%20Unga%20Kansui%20Park%2020180504.jpg"
+    },
+    {
+        "id": "Q30921640",
+        "name": "射水市新湊博物館",
+        "type": "博物館",
+        "coordinates": "Point(137.08466667 36.75247222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%B0%84%E6%B0%B4%E5%B8%82%E6%96%B0%E6%B9%8A%E5%8D%9A%E7%89%A9%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q30112754",
+        "name": "立川破火山口水土流失预防博物馆",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(137.446855 36.58305)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/080503%20Tateyama%20Caldera%20Sabo%20Museum%20Tatetana%20Japan10s.jpg"
+    },
+    {
+        "id": "Q11277755",
+        "name": "螢火魷博物館",
+        "type": "博物館",
+        "coordinates": "Point(137.344444 36.774444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hotaruika%20Museum%2C%20Toyama%2C%20Japan.jpg"
+    },
+    {
+        "id": "Q99677105",
+        "name": "八尾おわら資料館",
+        "type": "博物館",
+        "coordinates": "Point(137.135833333 36.577027777)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q30927608",
+        "name": "富山県埋蔵文化財センター",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(137.18077778 36.71038889)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11674043",
+        "name": "魚津歴史民俗博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(137.449027777 36.826111111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q30921640",
+        "name": "射水市新湊博物館",
+        "type": "美術館",
+        "coordinates": "Point(137.08466667 36.75247222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%B0%84%E6%B0%B4%E5%B8%82%E6%96%B0%E6%B9%8A%E5%8D%9A%E7%89%A9%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11384443",
+        "name": "佐藤紀念美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.211833 36.693889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sato%20Memorial%20Art%20Museum%20Toyama02st3200.jpg"
+    },
+    {
+        "id": "Q55537764",
+        "name": "西田美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.36355556 36.71869444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E8%A5%BF%E7%94%B0%E7%BE%8E%E8%A1%93%E9%A4%A8%E5%A4%96%E8%A6%B3.jpg"
+    },
+    {
+        "id": "Q11456481",
+        "name": "富山縣水墨美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(137.1965 36.699056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%AF%8C%E5%B1%B1%E6%B0%B4%E5%A2%A8%E7%BE%8E%E8%A1%93%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11456417",
+        "name": "富山市鄉土博物館",
+        "type": "地方文化館",
+        "coordinates": "Point(137.211389 36.692778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toyama%20Municipal%20Folk%20Museum%20%28mock%20keep%20tower%20of%20the%20Toyama%20Castle%29%2020180503.jpg"
+    },
+    {
+        "id": "Q11465160",
+        "name": "尾崎かまぼこ館",
+        "type": "食物博物館",
+        "coordinates": "Point(137.408166666 36.812138888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q79462052",
+        "name": "早月川河川敷の水溜り",
+        "type": "人工池塘",
+        "coordinates": "Point(137.381125 36.799302777)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11465160",
+        "name": "尾崎かまぼこ館",
+        "type": "公司博物館",
+        "coordinates": "Point(137.408166666 36.812138888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q126116503",
+        "name": "砺波市埋蔵文化財センター",
+        "type": "博物館",
+        "coordinates": "Point(137.011194444 36.635972222)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q28689689",
+        "name": "富山県美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(137.21 36.71055556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toyama%20Prefectural%20Museum%20of%20Art%20and%20Design%20seen%20from%20Fugan%20Unga%20Kansui%20Park%2020180504.jpg"
+    },
+    {
+        "id": "Q26424152",
+        "name": "秋水美术馆",
+        "type": "美術館",
+        "coordinates": "Point(137.211667 36.687361)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mori%20Shuhei%20Museum%20of%20Art.jpg"
+    },
+    {
+        "id": "Q11669915",
+        "name": "高志之國文學館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(137.206278 36.6955)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/T-48301%2001.jpg"
+    },
+    {
+        "id": "Q30925818",
+        "name": "松村外次郎記念庄川美術館",
+        "type": "美術館",
+        "coordinates": "Point(136.99480556 36.57238889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shogawa%20Memorial%20Museum%20of%20Sotojiro%20Matsumura.jpg"
+    },
+    {
+        "id": "Q11669915",
+        "name": "高志之國文學館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(137.206278 36.6955)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/T-48301%2001.jpg"
+    },
+    {
+        "id": "Q133237578",
+        "name": "民族薬物資料館",
+        "type": "製薬博物館",
+        "coordinates": "Point(137.141669 36.678763)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q22119820",
+        "name": "南砺市立福光美術館",
+        "type": "美術館",
+        "coordinates": "Point(136.85227778 36.57313889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%A6%8F%E5%85%89%E7%BE%8E%E8%A1%93%E9%A4%A82.jpg"
+    },
+    {
+        "id": "Q124481497",
+        "name": "吉久",
+        "type": "人類聚居地",
+        "coordinates": "Point(137.056666666 36.781944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%90%89%E4%B9%85%E3%81%AE%E8%A1%97%E4%B8%A6%E3%81%BF.jpg"
+    },
+    {
+        "id": "Q124481497",
+        "name": "吉久",
+        "type": "觀光景點",
+        "coordinates": "Point(137.056666666 36.781944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%90%89%E4%B9%85%E3%81%AE%E8%A1%97%E4%B8%A6%E3%81%BF.jpg"
+    },
+    {
+        "id": "Q124481497",
+        "name": "吉久",
+        "type": "町字",
+        "coordinates": "Point(137.056666666 36.781944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%90%89%E4%B9%85%E3%81%AE%E8%A1%97%E4%B8%A6%E3%81%BF.jpg"
+    }
+]

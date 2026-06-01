@@ -1,0 +1,695 @@
+[
+    {
+        "id": "Q11607744",
+        "name": "緑と花と彫刻の博物館",
+        "type": "植物園",
+        "coordinates": "Point(131.28175 33.94855556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/UBE%20tokiwa%20Museum.JPG"
+    },
+    {
+        "id": "Q131324777",
+        "name": "防府市青少年科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(131.56172 34.049272)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104783687",
+        "name": "商家博物館　むろやの園",
+        "type": "博物館",
+        "coordinates": "Point(132.109627 33.968952)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Muroya-no-sono%202021-08%20ac.jpg"
+    },
+    {
+        "id": "Q11466848",
+        "name": "山口情報芸術センター",
+        "type": "美術館",
+        "coordinates": "Point(131.46727778 34.16961111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/YCAM.jpg"
+    },
+    {
+        "id": "Q11607744",
+        "name": "緑と花と彫刻の博物館",
+        "type": "雕塑公园",
+        "coordinates": "Point(131.28175 33.94855556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/UBE%20tokiwa%20Museum.JPG"
+    },
+    {
+        "id": "Q104783688",
+        "name": "下関市立歴史博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(130.984032 33.995932)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shimonoseki%20Municipal%20Shimonoseki%20History%20Museum.jpg"
+    },
+    {
+        "id": "Q28003784",
+        "name": "熊谷美術館",
+        "type": "美術館",
+        "coordinates": "Point(131.39599 34.416842)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Im%20Kumaya%20Museum.jpg"
+    },
+    {
+        "id": "Q11594892",
+        "name": "秋吉台サファリランド",
+        "type": "野生动物园",
+        "coordinates": "Point(131.332888888 34.284305555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Baison%20%E3%82%A2%E3%83%A1%E3%83%AA%E3%82%AB%E3%83%90%E3%82%A4%E3%82%BD%E3%83%B3%E3%81%A8%E3%83%96%E3%83%A9%E3%83%83%E3%82%AF%E3%83%90%E3%83%83%E3%82%AF%E3%81%AE%E7%BE%A4%E3%82%8C.jpg"
+    },
+    {
+        "id": "Q132476267",
+        "name": "龍福寺資料館",
+        "type": "博物館",
+        "coordinates": "Point(131.479699 34.184206)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yoshioki%20Ouchi%27s%20statue.JPG"
+    },
+    {
+        "id": "Q132496806",
+        "name": "中山神社宝物殿",
+        "type": "宝物館",
+        "coordinates": "Point(130.917649 34.00634)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Treasure%20museum%20of%20Nakayama%20Shrine%20in%20Shimonoseki%2C%20Yamaguchi.jpg"
+    },
+    {
+        "id": "Q17216562",
+        "name": "はい!からっと横丁",
+        "type": "主題樂園",
+        "coordinates": "Point(130.941222222 33.953083333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Haikarat%20yokocho.jpg"
+    },
+    {
+        "id": "Q11633980",
+        "name": "豊田ホタルの里ミュージアム",
+        "type": "自然歷史博物館",
+        "coordinates": "Point(131.078111 34.19825)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toyota%20Hotaru%20no%20sato%20museum.JPG"
+    },
+    {
+        "id": "Q11361420",
+        "name": "關門廣場",
+        "type": "交通博物館",
+        "coordinates": "Point(130.9563117 33.9658135)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%96%A2%E9%96%80%E3%83%97%E3%83%A9%E3%82%B6%E5%85%A8%E6%99%AF202309.jpg"
+    },
+    {
+        "id": "Q132496894",
+        "name": "乃木神社宝物館",
+        "type": "宝物館",
+        "coordinates": "Point(130.986035 33.999374)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Treasure%20Museum%20of%20Nogi%20Shrine%20in%20Chofu%2C%20Shimonoseki%2C%20Yamaguchi.JPG"
+    },
+    {
+        "id": "Q11523480",
+        "name": "村田清風記念館",
+        "type": "纪念博物馆",
+        "coordinates": "Point(131.214972 34.369694)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132473187",
+        "name": "吉田松陰歴史館",
+        "type": "歷史博物館",
+        "coordinates": "Point(131.416759 34.412321)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yoshida%20Shoin%20History%20Museum%20in%20Shoin%20Shrine%202.jpg"
+    },
+    {
+        "id": "Q123478231",
+        "name": "岩国学校教育資料館",
+        "type": "教育博物館",
+        "coordinates": "Point(132.184028 34.164111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iwakuni%20School%20Education%20Museum%2020180501-2.jpg"
+    },
+    {
+        "id": "Q123478322",
+        "name": "伊藤公資料館",
+        "type": "人物紀念館",
+        "coordinates": "Point(131.995521 34.008596)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11620299",
+        "name": "萩博物館",
+        "type": "博物館",
+        "coordinates": "Point(131.390472 34.41325)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hagi%20museum%20main%20building.JPG"
+    },
+    {
+        "id": "Q11658604",
+        "name": "陸奥記念館",
+        "type": "海軍博物館",
+        "coordinates": "Point(132.4375 33.950638888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MUTSU%20SHUBYOU.JPG"
+    },
+    {
+        "id": "Q11420194",
+        "name": "回天記念館",
+        "type": "纪念博物馆",
+        "coordinates": "Point(131.717389 33.993333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kaitenkinenkan01.jpg"
+    },
+    {
+        "id": "Q7881987",
+        "name": "山口縣立美術館",
+        "type": "美術館",
+        "coordinates": "Point(131.474 34.1795)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/140720%20Yamaguchi%20Prefectural%20Art%20Museum%20Yamaguchi%20Japan03s3.jpg"
+    },
+    {
+        "id": "Q11528306",
+        "name": "東行記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(131.071124 34.085876)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132473396",
+        "name": "萩史料館",
+        "type": "博物館",
+        "coordinates": "Point(131.381746 34.415619)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hagi%20Historical%20Museum%2020170504.jpg"
+    },
+    {
+        "id": "Q109666473",
+        "name": "下関市立近代先人顕彰館",
+        "type": "人物紀念館",
+        "coordinates": "Point(130.941194444 33.959055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/141122%20Tanaka%20Kinuyo%20Cultural%20Museum%20Shimonoseki%20Yamaguchi%20pref%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q11467091",
+        "name": "山口県立萩美術館・浦上記念館",
+        "type": "美術館",
+        "coordinates": "Point(131.394361 34.409444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hagi%20Uragami%20Mus.JPG"
+    },
+    {
+        "id": "Q132477039",
+        "name": "のむら美術館",
+        "type": "美術館",
+        "coordinates": "Point(131.47161 34.187998)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q61732106",
+        "name": "日清議和紀念館",
+        "type": "博物館",
+        "coordinates": "Point(130.948333333 33.959)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Museum%20of%20Treaty%20of%20Shimonoseki%20in%20Shumpanro%20Hotel.JPG"
+    },
+    {
+        "id": "Q11416870",
+        "name": "周南市美術博物館",
+        "type": "美術館",
+        "coordinates": "Point(131.812083 34.060194)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shunan%20City%20Museum%20of%20Art%20and%20History.JPG"
+    },
+    {
+        "id": "Q132473321",
+        "name": "須佐歴史民俗資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(131.599075 34.61948)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q7881987",
+        "name": "山口縣立美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(131.474 34.1795)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/140720%20Yamaguchi%20Prefectural%20Art%20Museum%20Yamaguchi%20Japan03s3.jpg"
+    },
+    {
+        "id": "Q132496860",
+        "name": "赤間神宮宝物殿",
+        "type": "博物館",
+        "coordinates": "Point(130.948481 33.959546)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104783695",
+        "name": "梅光学院大学博物館",
+        "type": "大學博物館",
+        "coordinates": "Point(130.932387 33.967798)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104783674",
+        "name": "山口市歴史民俗資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(131.470334 34.182723)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11607744",
+        "name": "緑と花と彫刻の博物館",
+        "type": "彫刻美術館",
+        "coordinates": "Point(131.28175 33.94855556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/UBE%20tokiwa%20Museum.JPG"
+    },
+    {
+        "id": "Q104783675",
+        "name": "山口大学埋蔵文化財資料館",
+        "type": "考古博物館",
+        "coordinates": "Point(131.469377 34.147928)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11467091",
+        "name": "山口県立萩美術館・浦上記念館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(131.394361 34.409444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hagi%20Uragami%20Mus.JPG"
+    },
+    {
+        "id": "Q132482997",
+        "name": "あざかみ美術館",
+        "type": "美術館",
+        "coordinates": "Point(131.182763 33.997571)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11513103",
+        "name": "星野哲郎記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(132.355028 33.908083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%98%9F%E9%87%8E%E5%93%B2%E9%83%8E%E8%A8%98%E5%BF%B5%E9%A4%A8%20%E5%85%A5%E5%8F%A3.JPG"
+    },
+    {
+        "id": "Q11467018",
+        "name": "山口縣廳舍",
+        "type": "历史建筑",
+        "coordinates": "Point(131.472028 34.185083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%B1%B1%E5%8F%A3%E7%9C%8C%E6%94%BF%E8%B3%87%E6%96%99%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11467018",
+        "name": "山口縣廳舍",
+        "type": "历史建筑",
+        "coordinates": "Point(131.472028 34.185083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/140720%20Former%20Yamaguchi%20Prefectural%20Assembly%20building%20Yamaguchi%20Japan01bs5.jpg"
+    },
+    {
+        "id": "Q131327176",
+        "name": "田布施町郷土館",
+        "type": "地方文化館",
+        "coordinates": "Point(132.043859 33.955855)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132472371",
+        "name": "長門市総合文化財センター ヒストリアながと",
+        "type": "博物館",
+        "coordinates": "Point(131.181784 34.365623)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11422937",
+        "name": "土井濱遺蹟",
+        "type": "遺跡",
+        "coordinates": "Point(130.886222 34.293528)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132473256",
+        "name": "阿武川歴史民族資料館",
+        "type": "博物館",
+        "coordinates": "Point(131.48807 34.355843)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11547697",
+        "name": "舊毛利家本邸",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(131.58746256 34.06337421)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hofu%20Mouri%20Residence%20and%20Museum.JPG"
+    },
+    {
+        "id": "Q17209837",
+        "name": "三国志城博物館",
+        "type": "廃止された博物館",
+        "coordinates": "Point(132.024889 33.991861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%89%E5%9B%BD%E5%BF%97%E5%9F%8E%E5%8D%9A%E7%89%A9%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q131327983",
+        "name": "逍雲堂美術館",
+        "type": "美術館",
+        "coordinates": "Point(131.248168 33.948985)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/2004%E5%B9%B4%E9%80%8D%E9%9B%B2%E5%A0%82%E7%BE%8E%E8%A1%93%E9%A4%A8%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q104783677",
+        "name": "防府天満宮歴史館",
+        "type": "歷史博物館",
+        "coordinates": "Point(131.573757 34.062704)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132493371",
+        "name": "美祢市歴史民俗資料館",
+        "type": "博物館",
+        "coordinates": "Point(131.20746 34.165973)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132479089",
+        "name": "防府市文化財郷土資料館",
+        "type": "博物館",
+        "coordinates": "Point(131.562702 34.049022)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hofu%20City%20Cultural%20Property%20Folk%20Museum%202021-08%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q132472853",
+        "name": "金子みすゞ記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(131.198666 34.391485)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Misuzu-museum.jpg"
+    },
+    {
+        "id": "Q98231521",
+        "name": "吉川史料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(132.177694444 34.170444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20Kikkawa%20Historical%20Museum.jpg"
+    },
+    {
+        "id": "Q100965041",
+        "name": "海峽夢之塔",
+        "type": "觀光塔",
+        "coordinates": "Point(130.929468 33.950109)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yamaguchi%20international%20synthesis%20center%2020130721.jpg"
+    },
+    {
+        "id": "Q4982385",
+        "name": "下関市立考古博物館",
+        "type": "考古博物館",
+        "coordinates": "Point(130.92611111 34.01138889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%8B%E9%96%A2%E5%B8%82%E7%AB%8B%E8%80%83%E5%8F%A4%E5%8D%9A%E7%89%A9%E9%A4%A8.JPG"
+    },
+    {
+        "id": "Q104783799",
+        "name": "松陰神社宝物殿至誠館",
+        "type": "人物紀念館",
+        "coordinates": "Point(131.417411 34.411849)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shiseikan%20Hall%20in%20Shoin%20Shrine%203.jpg"
+    },
+    {
+        "id": "Q98456383",
+        "name": "岩国徴古館",
+        "type": "歷史博物館",
+        "coordinates": "Point(132.177195 34.170937)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iwakuni%20Chokokan%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q131329187",
+        "name": "酒井酒造美術館・五橋文庫",
+        "type": "美術館",
+        "coordinates": "Point(132.177886 34.169399)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11363110",
+        "name": "中原中也紀念館",
+        "type": "文學館",
+        "coordinates": "Point(131.457861 34.16475)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%AD%E5%8E%9F%E4%B8%AD%E4%B9%9F%E8%A8%98%E5%BF%B5%E9%A4%A8%20%2826489554980%29.jpg"
+    },
+    {
+        "id": "Q104783860",
+        "name": "山陽小野田市歴史民俗資料館",
+        "type": "博物館",
+        "coordinates": "Point(131.176194 33.990994)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104783681",
+        "name": "菊屋家住宅",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(131.393784 34.412782)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Residence%20of%20Kikuya%20Family%2020170504.jpg"
+    },
+    {
+        "id": "Q4707661",
+        "name": "山口县立山口博物馆",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(131.473 34.1825)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/140720%20Yamaguchi%20Museum%20Yamaguchi%20Japan01s39.jpg"
+    },
+    {
+        "id": "Q28690114",
+        "name": "柏原美術館",
+        "type": "美術館",
+        "coordinates": "Point(132.17486111 34.17138889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iwakuni%20Art%20Museum%2020180501-1.jpg"
+    },
+    {
+        "id": "Q132480639",
+        "name": "山頭火ふるさと館",
+        "type": "博物館",
+        "coordinates": "Point(131.572601 34.061169)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104783682",
+        "name": "月性展示館",
+        "type": "博物館",
+        "coordinates": "Point(132.146259 33.957392)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q48752477",
+        "name": "なぎさ水族館",
+        "type": "水族館",
+        "coordinates": "Point(132.43791667 33.95125)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/NagisaAquarium.jpg"
+    },
+    {
+        "id": "Q132472853",
+        "name": "金子みすゞ記念館",
+        "type": "文學館",
+        "coordinates": "Point(131.198666 34.391485)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Misuzu-museum.jpg"
+    },
+    {
+        "id": "Q17217516",
+        "name": "宇部市学びの森くすのき",
+        "type": "公共圖書館",
+        "coordinates": "Point(131.223722 34.045167)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q97342261",
+        "name": "下関市立美術館",
+        "type": "美術館",
+        "coordinates": "Point(130.990812 33.989738)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shimonoseki%20Municipal%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q17217516",
+        "name": "宇部市学びの森くすのき",
+        "type": "歷史博物館",
+        "coordinates": "Point(131.223722 34.045167)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q131328929",
+        "name": "下関市烏山民俗資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(130.939478 34.137725)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132496714",
+        "name": "住吉神社宝物館",
+        "type": "宝物館",
+        "coordinates": "Point(130.95683 33.998872)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Treasure%20museum%20of%20Sumiyoshi%20Shrine.jpg"
+    },
+    {
+        "id": "Q132493850",
+        "name": "美祢市化石館",
+        "type": "古生物博物馆",
+        "coordinates": "Point(131.207557 34.167336)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11361458",
+        "name": "下関市立長府博物館",
+        "type": "博物館",
+        "coordinates": "Point(130.982231 33.995472)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shimonoseki%20Chofu%20Museum.JPG"
+    },
+    {
+        "id": "Q132473356",
+        "name": "石井茶碗美術館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(131.393206 34.410605)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11416870",
+        "name": "周南市美術博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(131.812083 34.060194)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shunan%20City%20Museum%20of%20Art%20and%20History.JPG"
+    },
+    {
+        "id": "Q98456383",
+        "name": "岩国徴古館",
+        "type": "历史建筑",
+        "coordinates": "Point(132.177195 34.170937)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iwakuni%20Chokokan%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q56224457",
+        "name": "基拉拉玻璃未來館",
+        "type": "生涯学習センター",
+        "coordinates": "Point(131.170361111 33.943111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kirara%20Glass%20Miraikan.jpg"
+    },
+    {
+        "id": "Q11422937",
+        "name": "土井濱遺蹟",
+        "type": "博物館",
+        "coordinates": "Point(130.886222 34.293528)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q56224457",
+        "name": "基拉拉玻璃未來館",
+        "type": "美術館",
+        "coordinates": "Point(131.170361111 33.943111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kirara%20Glass%20Miraikan.jpg"
+    },
+    {
+        "id": "Q132472767",
+        "name": "萩陶芸美術館「吉賀大眉記念館」",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(131.4157 34.424877)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132496054",
+        "name": "土井ヶ浜遺跡・人類学ミュージアム",
+        "type": "考古博物館",
+        "coordinates": "Point(130.885703 34.294351)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q131329109",
+        "name": "美祢市長登銅山文化交流館",
+        "type": "礦業博物館",
+        "coordinates": "Point(131.341124 34.243789)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Naganoboridouzan-bunkakouryukan.JPG"
+    },
+    {
+        "id": "Q11467018",
+        "name": "山口縣廳舍",
+        "type": "博物館",
+        "coordinates": "Point(131.472028 34.185083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%B1%B1%E5%8F%A3%E7%9C%8C%E6%94%BF%E8%B3%87%E6%96%99%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11467018",
+        "name": "山口縣廳舍",
+        "type": "博物館",
+        "coordinates": "Point(131.472028 34.185083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/140720%20Former%20Yamaguchi%20Prefectural%20Assembly%20building%20Yamaguchi%20Japan01bs5.jpg"
+    },
+    {
+        "id": "Q123269260",
+        "name": "山口県埋蔵文化財センター",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(131.47138 34.182022)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yamaguchi%20Prefecture%20Buried%20Cultural%20Properties%20Center.jpg"
+    },
+    {
+        "id": "Q132496054",
+        "name": "土井ヶ浜遺跡・人類学ミュージアム",
+        "type": "人類学博物館",
+        "coordinates": "Point(130.885703 34.294351)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104783674",
+        "name": "山口市歴史民俗資料館",
+        "type": "民俗博物館",
+        "coordinates": "Point(131.470334 34.182723)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q131327364",
+        "name": "香月泰男美術館",
+        "type": "美術館",
+        "coordinates": "Point(131.262766 34.358706)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104783685",
+        "name": "下関市立豊北歴史民俗資料館",
+        "type": "博物館",
+        "coordinates": "Point(130.947559 34.289997)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11506736",
+        "name": "日本ハワイ移民資料館",
+        "type": "博物館",
+        "coordinates": "Point(132.20008 33.92124)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%97%A5%E6%9C%AC%E3%83%8F%E3%83%AF%E3%82%A4%E7%A7%BB%E6%B0%91%E8%B3%87%E6%96%99%E9%A4%A8.JPG"
+    },
+    {
+        "id": "Q104783864",
+        "name": "山口市小郡文化資料館",
+        "type": "博物館",
+        "coordinates": "Point(131.39365 34.102486)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132496666",
+        "name": "忌宮神社宝物館",
+        "type": "宝物館",
+        "coordinates": "Point(130.987131 33.998977)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Treasure%20Museum%20of%20Iminomiya%20Shrine%20in%20Chofu%2C%20Shimonoseki%2C%20Yamaguchi.JPG"
+    },
+    {
+        "id": "Q11361443",
+        "name": "下關水族館",
+        "type": "水族館",
+        "coordinates": "Point(130.942417 33.954472)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shimonoseki%20Aquarium%2020170811-1.jpg"
+    },
+    {
+        "id": "Q132478312",
+        "name": "瑠璃光寺資料館",
+        "type": "宝物館",
+        "coordinates": "Point(131.472114 34.189507)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132479539",
+        "name": "阿弥陀寺宝物館",
+        "type": "宝物館",
+        "coordinates": "Point(131.615083 34.076892)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q131329041",
+        "name": "美祢市立秋吉台科学博物館",
+        "type": "自然歷史博物館",
+        "coordinates": "Point(131.307345 34.234997)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mine%20City%20Akiyoshidai%20Science%20Museum%20from%20Akiyoshidai%20Karst%20Observation%20Deck.jpg"
+    },
+    {
+        "id": "Q132472767",
+        "name": "萩陶芸美術館「吉賀大眉記念館」",
+        "type": "美術館",
+        "coordinates": "Point(131.4157 34.424877)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104783675",
+        "name": "山口大学埋蔵文化財資料館",
+        "type": "大學博物館",
+        "coordinates": "Point(131.469377 34.147928)",
+        "image": "No Image"
+    }
+]

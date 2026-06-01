@@ -1,0 +1,709 @@
+[
+    {
+        "id": "Q11526186",
+        "name": "東北大学総合学術博物館",
+        "type": "大學博物館",
+        "coordinates": "Point(140.83733333 38.25791667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Tohoku%20University%20Museum.jpg"
+    },
+    {
+        "id": "Q133043187",
+        "name": "石巻市博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(141.305803 38.458903)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q61058067",
+        "name": "伝統芸能伝承館森舞台",
+        "type": "剧院博物馆",
+        "coordinates": "Point(141.280277777 38.659444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Moributai%2CTome.jpg"
+    },
+    {
+        "id": "Q21652440",
+        "name": "石巻市立門脇小学校",
+        "type": "海嘯博物館",
+        "coordinates": "Point(141.305194 38.421528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kadonowaki%20Elementary%20School.jpg"
+    },
+    {
+        "id": "Q11304896",
+        "name": "サトル・サトウ・アート・ミュージアム",
+        "type": "美術館",
+        "coordinates": "Point(141.2435 38.71908333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Satoru%20museum-1-.jpg"
+    },
+    {
+        "id": "Q105944997",
+        "name": "気仙沼市東日本大震災遺構・伝承館",
+        "type": "旧学校施設",
+        "coordinates": "Point(141.590972222 38.83125)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ruins%20of%20the%20Great%20East%20Japan%20Earthquake%20Kesennuma%20City%20Memorial%20Museum.jpg"
+    },
+    {
+        "id": "Q11624739",
+        "name": "藤田喬平ガラス美術館",
+        "type": "美術館",
+        "coordinates": "Point(141.07175 38.37594444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q59760131",
+        "name": "武山米店炊飯博物館",
+        "type": "公司博物館",
+        "coordinates": "Point(141.572777777 38.906944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takeyama%20Rice%20Museum.jpg"
+    },
+    {
+        "id": "Q132911456",
+        "name": "栗原市一迫埋蔵文化財センター",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(140.947108 38.742056)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q22119783",
+        "name": "中本誠司現代美術館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(140.863056 38.294722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Seishinakamotomuseum.jpg"
+    },
+    {
+        "id": "Q87746275",
+        "name": "仙台市歴史民俗資料館",
+        "type": "历史建筑",
+        "coordinates": "Point(140.898305555 38.260916666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D0%B5%D0%BD%D0%B4%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9%20%D0%BC%D1%83%D0%B7%D0%B5%D0%B9%20%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%B8%20%D0%B8%20%D0%B1%D1%8B%D1%82%D0%B0%201.jpg"
+    },
+    {
+        "id": "Q59159655",
+        "name": "警察資料館",
+        "type": "警察博物館",
+        "coordinates": "Point(141.281277777 38.651388888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Police%20museum%20toyoma.jpg"
+    },
+    {
+        "id": "Q11505556",
+        "name": "日本こけし館",
+        "type": "人形博物館",
+        "coordinates": "Point(140.6975 38.736111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Japan%20Kokeshi%20Museum.jpg"
+    },
+    {
+        "id": "Q61058067",
+        "name": "伝統芸能伝承館森舞台",
+        "type": "能舞台",
+        "coordinates": "Point(141.280277777 38.659444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Moributai%2CTome.jpg"
+    },
+    {
+        "id": "Q124655131",
+        "name": "仙臺緑彩館",
+        "type": "遊客中心",
+        "coordinates": "Point(140.858793 38.257101)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sendai%20Ryokusaikan%2020230806a.jpg"
+    },
+    {
+        "id": "Q11621865",
+        "name": "蔵の郷土館齋理屋敷",
+        "type": "地方文化館",
+        "coordinates": "Point(140.761944 37.913333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sairi%20Residence.jpg"
+    },
+    {
+        "id": "Q59760131",
+        "name": "武山米店炊飯博物館",
+        "type": "米穀店",
+        "coordinates": "Point(141.572777777 38.906944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takeyama%20Rice%20Museum.jpg"
+    },
+    {
+        "id": "Q60988262",
+        "name": "南三陸町民俗資料館",
+        "type": "旧学校施設",
+        "coordinates": "Point(141.522916666 38.719166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Minamisanriku%20minzoku%20Museum.jpg"
+    },
+    {
+        "id": "Q4416112",
+        "name": "仙台天文台",
+        "type": "社会教育施設",
+        "coordinates": "Point(140.7549667 38.25823889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sendaishi%20Tenmondai%202008-07-01a.jpg"
+    },
+    {
+        "id": "Q108603935",
+        "name": "追分溫泉",
+        "type": "温泉镇",
+        "coordinates": "Point(141.368189 38.581477)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q21652335",
+        "name": "アクアテラス錦ケ丘",
+        "type": "水族館",
+        "coordinates": "Point(140.76505556 38.25711111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q20043654",
+        "name": "風の沢ミュージアム",
+        "type": "古民家",
+        "coordinates": "Point(140.95705556 38.78105556)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11548030",
+        "name": "気仙沼市大谷鉱山歴史資料館",
+        "type": "礦業博物館",
+        "coordinates": "Point(141.527361 38.814667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oya%20Gold%20Mine%20Historical%20Museum.jpg"
+    },
+    {
+        "id": "Q22118917",
+        "name": "塩竈市杉村惇美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(141.01666667 38.31583333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/211030%20Shiogama%20Sugimura%20Jun%20Museum%20of%20Art%20Shiogama%20Miyagi%20pref%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q4391562",
+        "name": "石之森萬畫館",
+        "type": "人物紀念館",
+        "coordinates": "Point(141.31069 38.429631)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MangattanMuseum002.jpg"
+    },
+    {
+        "id": "Q4416112",
+        "name": "仙台天文台",
+        "type": "天象儀",
+        "coordinates": "Point(140.7549667 38.25823889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sendaishi%20Tenmondai%202008-07-01a.jpg"
+    },
+    {
+        "id": "Q24899769",
+        "name": "晩翠草堂",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(140.869333 38.259417)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/BansuiSoudou.jpg"
+    },
+    {
+        "id": "Q22119783",
+        "name": "中本誠司現代美術館",
+        "type": "現代美術館",
+        "coordinates": "Point(140.863056 38.294722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Seishinakamotomuseum.jpg"
+    },
+    {
+        "id": "Q105944997",
+        "name": "気仙沼市東日本大震災遺構・伝承館",
+        "type": "纪念博物馆",
+        "coordinates": "Point(141.590972222 38.83125)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ruins%20of%20the%20Great%20East%20Japan%20Earthquake%20Kesennuma%20City%20Memorial%20Museum.jpg"
+    },
+    {
+        "id": "Q21652440",
+        "name": "石巻市立門脇小学校",
+        "type": "日本小学",
+        "coordinates": "Point(141.305194 38.421528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kadonowaki%20Elementary%20School.jpg"
+    },
+    {
+        "id": "Q11294808",
+        "name": "カメイ美術館",
+        "type": "美術館",
+        "coordinates": "Point(140.881306 38.254717)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Museum%20of%20Kamei%20Collection.jpg"
+    },
+    {
+        "id": "Q85881218",
+        "name": "東北学院大学博物館",
+        "type": "大學博物館",
+        "coordinates": "Point(140.879916666 38.248805555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q84590471",
+        "name": "原阿佐緒記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(140.846861111 38.405305555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hara%20Asao%20Memorial%20Hall.jpg"
+    },
+    {
+        "id": "Q4416112",
+        "name": "仙台天文台",
+        "type": "天文台",
+        "coordinates": "Point(140.7549667 38.25823889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sendaishi%20Tenmondai%202008-07-01a.jpg"
+    },
+    {
+        "id": "Q11400686",
+        "name": "化女沼レジャーランド",
+        "type": "主題樂園",
+        "coordinates": "Point(140.966444444 38.632277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kejonumarejaarando.JPG"
+    },
+    {
+        "id": "Q22118153",
+        "name": "大衡村ふるさと美術館",
+        "type": "美術館",
+        "coordinates": "Point(140.881944444 38.469166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ohira%20Furusato1.JPG"
+    },
+    {
+        "id": "Q20043654",
+        "name": "風の沢ミュージアム",
+        "type": "美術館",
+        "coordinates": "Point(140.95705556 38.78105556)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q105944997",
+        "name": "気仙沼市東日本大震災遺構・伝承館",
+        "type": "震災遺構",
+        "coordinates": "Point(141.590972222 38.83125)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ruins%20of%20the%20Great%20East%20Japan%20Earthquake%20Kesennuma%20City%20Memorial%20Museum.jpg"
+    },
+    {
+        "id": "Q7741262",
+        "name": "冰水族馆",
+        "type": "水族館",
+        "coordinates": "Point(141.58 38.9001)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kesennuma%20uminoiti.jpg"
+    },
+    {
+        "id": "Q28691703",
+        "name": "登米市歴史博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(141.19494444 38.69391667)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q7830685",
+        "name": "旧登米高等尋常小学校校舎",
+        "type": "旧学校施設",
+        "coordinates": "Point(141.28 38.6553)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toyoma%20school%20museum050807.jpg"
+    },
+    {
+        "id": "Q81950736",
+        "name": "みちのく伊達政宗歴史館",
+        "type": "歷史博物館",
+        "coordinates": "Point(141.065555555 38.371638888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%BF%E3%81%A1%E3%81%AE%E3%81%8F%E4%BC%8A%E9%81%94%E6%94%BF%E5%AE%97%E6%AD%B4%E5%8F%B2%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11391333",
+        "name": "八木山ベニーランド",
+        "type": "主題樂園",
+        "coordinates": "Point(140.848611111 38.246666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yagiyama%20BenyLand%202022.jpg"
+    },
+    {
+        "id": "Q3330092",
+        "name": "仙台市博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(140.856685 38.256065)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sendai%20City%20Museum%2020251221a.jpg"
+    },
+    {
+        "id": "Q48744156",
+        "name": "石ノ森章太郎ふるさと記念館",
+        "type": "動漫博物館",
+        "coordinates": "Point(141.213539 38.719874)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11621865",
+        "name": "蔵の郷土館齋理屋敷",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(140.761944 37.913333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sairi%20Residence.jpg"
+    },
+    {
+        "id": "Q105944997",
+        "name": "気仙沼市東日本大震災遺構・伝承館",
+        "type": "海嘯博物館",
+        "coordinates": "Point(141.590972222 38.83125)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ruins%20of%20the%20Great%20East%20Japan%20Earthquake%20Kesennuma%20City%20Memorial%20Museum.jpg"
+    },
+    {
+        "id": "Q64143388",
+        "name": "奥松島縄文村歴史資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(141.147488 38.338025)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mt.%20Ootakamori%2002.JPG"
+    },
+    {
+        "id": "Q4416112",
+        "name": "仙台天文台",
+        "type": "公開天文台",
+        "coordinates": "Point(140.7549667 38.25823889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sendaishi%20Tenmondai%202008-07-01a.jpg"
+    },
+    {
+        "id": "Q78121486",
+        "name": "東北福祉大学芹沢銈介美術工芸館",
+        "type": "大学美术馆",
+        "coordinates": "Point(140.847277777 38.279555555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q38267005",
+        "name": "仙台万華鏡美術館",
+        "type": "美術館",
+        "coordinates": "Point(140.74008333 38.22138889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sendai%20Kaleidoscope%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q109265542",
+        "name": "名取市震災復興伝承館",
+        "type": "海嘯博物館",
+        "coordinates": "Point(140.9538187 38.1768724)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Natori%20City%20Earthquake%20Reconstruction%20Tradition%20Center%201.jpg"
+    },
+    {
+        "id": "Q21652440",
+        "name": "石巻市立門脇小学校",
+        "type": "旧学校施設",
+        "coordinates": "Point(141.305194 38.421528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kadonowaki%20Elementary%20School.jpg"
+    },
+    {
+        "id": "Q61398113",
+        "name": "リアス・アーク美術館",
+        "type": "美術館",
+        "coordinates": "Point(141.550111111 38.881027777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Riasu%20ark%20museum.jpg"
+    },
+    {
+        "id": "Q7830685",
+        "name": "旧登米高等尋常小学校校舎",
+        "type": "教育博物館",
+        "coordinates": "Point(141.28 38.6553)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toyoma%20school%20museum050807.jpg"
+    },
+    {
+        "id": "Q11619469",
+        "name": "菅野美術館",
+        "type": "彫刻美術館",
+        "coordinates": "Point(141.00555556 38.31138889)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q81950736",
+        "name": "みちのく伊達政宗歴史館",
+        "type": "人物紀念館",
+        "coordinates": "Point(141.065555555 38.371638888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%BF%E3%81%A1%E3%81%AE%E3%81%8F%E4%BC%8A%E9%81%94%E6%94%BF%E5%AE%97%E6%AD%B4%E5%8F%B2%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q3246933",
+        "name": "東北歷史博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(140.994 38.3)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tohoku%20Rekishi%20Hakubutsukan%202008-11.jpg"
+    },
+    {
+        "id": "Q17995372",
+        "name": "仙台麵包超人兒童博物館暨購物中心",
+        "type": "主題公園",
+        "coordinates": "Point(140.887444 38.264278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sendai%20Anpanman%20Children%27s%20Museum%20%26%20Mall.JPG"
+    },
+    {
+        "id": "Q11378011",
+        "name": "仙台文学館",
+        "type": "文學館",
+        "coordinates": "Point(140.876086 38.296622)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sendai%20Bungaku%20kan1%20crop.jpg"
+    },
+    {
+        "id": "Q11454001",
+        "name": "宮城藏王狐狸村",
+        "type": "動物園",
+        "coordinates": "Point(140.530308 38.040994)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kitsune%20mura%20H26Dec13.JPG"
+    },
+    {
+        "id": "Q11494971",
+        "name": "感覚ミュージアム",
+        "type": "美術館",
+        "coordinates": "Point(140.870667 38.656583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kankaku-Museum%20101218.jpg"
+    },
+    {
+        "id": "Q22118917",
+        "name": "塩竈市杉村惇美術館",
+        "type": "美術館",
+        "coordinates": "Point(141.01666667 38.31583333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/211030%20Shiogama%20Sugimura%20Jun%20Museum%20of%20Art%20Shiogama%20Miyagi%20pref%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q11424312",
+        "name": "地底の森ミュージアム",
+        "type": "考古博物館",
+        "coordinates": "Point(140.8725 38.222777777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sendai%20City%20Tomizawa%20Site%20Museum1.jpg"
+    },
+    {
+        "id": "Q11435024",
+        "name": "大崎市三本木亜炭記念館",
+        "type": "礦業博物館",
+        "coordinates": "Point(140.938381 38.5216)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sanbongi%20Brown%20Coal%20Memorial%20Hall%20exterior%2C%20in%202010-03-06.jpg"
+    },
+    {
+        "id": "Q109255730",
+        "name": "みやぎ東日本大震災津波伝承館",
+        "type": "海嘯博物館",
+        "coordinates": "Point(141.304805555 38.418083333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q59760131",
+        "name": "武山米店炊飯博物館",
+        "type": "食物博物館",
+        "coordinates": "Point(141.572777777 38.906944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takeyama%20Rice%20Museum.jpg"
+    },
+    {
+        "id": "Q11453791",
+        "name": "宮城县美术馆",
+        "type": "美術館",
+        "coordinates": "Point(140.854917 38.264056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20miyagi%20museum%20of%20art01s3872.jpg"
+    },
+    {
+        "id": "Q135973129",
+        "name": "川島美術館",
+        "type": "美術館",
+        "coordinates": "Point(140.873970698 38.264606571)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11454001",
+        "name": "宮城藏王狐狸村",
+        "type": "主題公園",
+        "coordinates": "Point(140.530308 38.040994)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kitsune%20mura%20H26Dec13.JPG"
+    },
+    {
+        "id": "Q11341120",
+        "name": "マリンピア松島水族館",
+        "type": "水族館",
+        "coordinates": "Point(141.059833 38.367556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Matsushima%20Suizokukan%202008-07.jpg"
+    },
+    {
+        "id": "Q87746275",
+        "name": "仙台市歴史民俗資料館",
+        "type": "民俗博物館",
+        "coordinates": "Point(140.898305555 38.260916666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D0%B5%D0%BD%D0%B4%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9%20%D0%BC%D1%83%D0%B7%D0%B5%D0%B9%20%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%B8%20%D0%B8%20%D0%B1%D1%8B%D1%82%D0%B0%201.jpg"
+    },
+    {
+        "id": "Q109276969",
+        "name": "MEET門脇",
+        "type": "海嘯博物館",
+        "coordinates": "Point(141.304277777 38.420555555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q4391562",
+        "name": "石之森萬畫館",
+        "type": "動漫博物館",
+        "coordinates": "Point(141.31069 38.429631)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MangattanMuseum002.jpg"
+    },
+    {
+        "id": "Q48744156",
+        "name": "石ノ森章太郎ふるさと記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(141.213539 38.719874)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q4416112",
+        "name": "仙台天文台",
+        "type": "天文博物館",
+        "coordinates": "Point(140.7549667 38.25823889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sendaishi%20Tenmondai%202008-07-01a.jpg"
+    },
+    {
+        "id": "Q60988262",
+        "name": "南三陸町民俗資料館",
+        "type": "民俗博物館",
+        "coordinates": "Point(141.522916666 38.719166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Minamisanriku%20minzoku%20Museum.jpg"
+    },
+    {
+        "id": "Q24899769",
+        "name": "晩翠草堂",
+        "type": "文學館",
+        "coordinates": "Point(140.869333 38.259417)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/BansuiSoudou.jpg"
+    },
+    {
+        "id": "Q11377856",
+        "name": "仙台市科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(140.883104 38.298994)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sendai%20City%20Science%20Museum.jpg"
+    },
+    {
+        "id": "Q11453791",
+        "name": "宮城县美术馆",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(140.854917 38.264056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20miyagi%20museum%20of%20art01s3872.jpg"
+    },
+    {
+        "id": "Q28692054",
+        "name": "にしぴりかの美術館",
+        "type": "美術館",
+        "coordinates": "Point(140.883611 38.446389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/NishipirikanoArt.jpg"
+    },
+    {
+        "id": "Q11435026",
+        "name": "大崎市松山ふるさと歴史館",
+        "type": "地方文化館",
+        "coordinates": "Point(141.051628 38.511922)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osaki%20City%20Matsuyama%20Furusato%20History%20Museum%20exterior%2C%20in%20Osaki%2C%20Miyagi.jpg"
+    },
+    {
+        "id": "Q78121486",
+        "name": "東北福祉大学芹沢銈介美術工芸館",
+        "type": "工藝博物館",
+        "coordinates": "Point(140.847277777 38.279555555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q105859324",
+        "name": "Whale Town牡鹿",
+        "type": "遊客中心",
+        "coordinates": "Point(141.50975 38.294805555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Whale%20Town%20Oshika.jpg"
+    },
+    {
+        "id": "Q81950736",
+        "name": "みちのく伊達政宗歴史館",
+        "type": "蠟像博物館",
+        "coordinates": "Point(141.065555555 38.371638888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%BF%E3%81%A1%E3%81%AE%E3%81%8F%E4%BC%8A%E9%81%94%E6%94%BF%E5%AE%97%E6%AD%B4%E5%8F%B2%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q59760131",
+        "name": "武山米店炊飯博物館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(141.572777777 38.906944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takeyama%20Rice%20Museum.jpg"
+    },
+    {
+        "id": "Q17222417",
+        "name": "仙台海之杜水族館",
+        "type": "水族館",
+        "coordinates": "Point(140.98066667 38.27108333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sendai%20Umino-Mori%20Aquarium.JPG"
+    },
+    {
+        "id": "Q22118153",
+        "name": "大衡村ふるさと美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(140.881944444 38.469166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ohira%20Furusato1.JPG"
+    },
+    {
+        "id": "Q123483175",
+        "name": "多賀城市埋蔵文化財調査センター",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(141.005504 38.295735)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q87746275",
+        "name": "仙台市歴史民俗資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(140.898305555 38.260916666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D0%B5%D0%BD%D0%B4%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9%20%D0%BC%D1%83%D0%B7%D0%B5%D0%B9%20%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%B8%20%D0%B8%20%D0%B1%D1%8B%D1%82%D0%B0%201.jpg"
+    },
+    {
+        "id": "Q21652440",
+        "name": "石巻市立門脇小学校",
+        "type": "震災遺構",
+        "coordinates": "Point(141.305194 38.421528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kadonowaki%20Elementary%20School.jpg"
+    },
+    {
+        "id": "Q84590471",
+        "name": "原阿佐緒記念館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(140.846861111 38.405305555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hara%20Asao%20Memorial%20Hall.jpg"
+    },
+    {
+        "id": "Q11548030",
+        "name": "気仙沼市大谷鉱山歴史資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(141.527361 38.814667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oya%20Gold%20Mine%20Historical%20Museum.jpg"
+    },
+    {
+        "id": "Q11435027",
+        "name": "大崎市松山酒ミュージアム",
+        "type": "日本清酒博物館",
+        "coordinates": "Point(141.051997 38.511644)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osaki%20City%20Matsuyama%20Sake%20Museum%20exterior%2C%20in%20Osaki%2C%20Miyagi.jpg"
+    },
+    {
+        "id": "Q11353371",
+        "name": "七濱國際村",
+        "type": "音樂廳",
+        "coordinates": "Point(141.067583 38.298306)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Amphitheatre%20of%20Shichigahama%20Kokusai-mura%201.JPG"
+    },
+    {
+        "id": "Q11377845",
+        "name": "仙台市戦災復興記念館",
+        "type": "音樂廳",
+        "coordinates": "Point(140.867111 38.260833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sendai%20City%20War%20Reconstruction%20Memorial%20Hall%20cropped.jpg"
+    },
+    {
+        "id": "Q21653531",
+        "name": "七夕ミュージアム",
+        "type": "博物館",
+        "coordinates": "Point(140.955936 38.257472)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tanabata%20Museum%2C%20Miyagi%2001.jpg"
+    },
+    {
+        "id": "Q85883931",
+        "name": "輪王寺",
+        "type": "觀光景點",
+        "coordinates": "Point(140.858732 38.283273)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rinnoji%20%287399308806%29.jpg"
+    },
+    {
+        "id": "Q11353371",
+        "name": "七濱國際村",
+        "type": "博物館",
+        "coordinates": "Point(141.067583 38.298306)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Amphitheatre%20of%20Shichigahama%20Kokusai-mura%201.JPG"
+    },
+    {
+        "id": "Q11377845",
+        "name": "仙台市戦災復興記念館",
+        "type": "博物館",
+        "coordinates": "Point(140.867111 38.260833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sendai%20City%20War%20Reconstruction%20Memorial%20Hall%20cropped.jpg"
+    },
+    {
+        "id": "Q61058058",
+        "name": "鲨鱼博物馆",
+        "type": "博物館",
+        "coordinates": "Point(141.579355638 38.900836165)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kesennuma%20uminoiti.jpg"
+    }
+]

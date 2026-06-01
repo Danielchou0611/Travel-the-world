@@ -1,0 +1,408 @@
+[
+    {
+        "id": "Q104243226",
+        "name": "TDK歴史みらい館",
+        "type": "科技博物館",
+        "coordinates": "Point(139.957222222 39.291666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/TDK%20Museum.jpg"
+    },
+    {
+        "id": "Q84520666",
+        "name": "石坂洋次郎文学記念館",
+        "type": "文學館",
+        "coordinates": "Point(140.56575 39.324166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ishizaka%20Yojiro%20Literature%20Museum.jpg"
+    },
+    {
+        "id": "Q38266963",
+        "name": "橫手市增田漫畫美術館",
+        "type": "動漫博物館",
+        "coordinates": "Point(140.55047222 39.20466667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokote-Masuda%20Manga%20Museum%2020190503.jpg"
+    },
+    {
+        "id": "Q119961646",
+        "name": "はまなす展望台",
+        "type": "觀光塔",
+        "coordinates": "Point(139.998333333 40.208916666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hamanasu%20Observatory%2020200126.jpg"
+    },
+    {
+        "id": "Q11595294",
+        "name": "秋田大学附属鉱業博物館",
+        "type": "大學博物館",
+        "coordinates": "Point(140.136567 39.729294)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mining%20Museum%20of%20Akita%20University.jpg"
+    },
+    {
+        "id": "Q110990382",
+        "name": "秋田犬の里",
+        "type": "遊客中心",
+        "coordinates": "Point(140.556127777 40.286738888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Akita%20Dog%20Visitor%20Center%2020200613.jpg"
+    },
+    {
+        "id": "Q104696381",
+        "name": "秋田市立秋田城跡歴史資料館",
+        "type": "考古博物館",
+        "coordinates": "Point(140.077902 39.739617)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Akita%20City%20History%20Museum%20of%20Akita%20Fort%20Ruins.jpg"
+    },
+    {
+        "id": "Q133272635",
+        "name": "大潟村干拓博物館",
+        "type": "博物館",
+        "coordinates": "Point(139.951463 40.016296)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Polder%20Museum%20of%20Ogata-Mura%2020200118.jpg"
+    },
+    {
+        "id": "Q11332704",
+        "name": "フェライト子ども科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(139.960917 39.284889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Children%27s%20Ferrite%20and%20Science%20Museum.jpg"
+    },
+    {
+        "id": "Q11325862",
+        "name": "ノースアジア大学雪国民俗館",
+        "type": "民俗博物館",
+        "coordinates": "Point(140.156444 39.715472)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/North%20Asia%20University%2C%20Folk%20museum%20of%20snow%20country.JPG"
+    },
+    {
+        "id": "Q11436065",
+        "name": "大村美術館",
+        "type": "美術館",
+        "coordinates": "Point(140.562972 39.59925)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ohmura%20Art%20Museum%20in%20Kakunodate%2020190414.jpg"
+    },
+    {
+        "id": "Q20043438",
+        "name": "大館郷土博物館",
+        "type": "地方文化館",
+        "coordinates": "Point(140.58225 40.300222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%C3%94date%20kyodo%20hakibutukan.jpg"
+    },
+    {
+        "id": "Q11483668",
+        "name": "秋田縣立美術館·平野政吉收藏庫",
+        "type": "美術館",
+        "coordinates": "Point(140.1215 39.71742778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Akita%20Museum%20of%20Art%2020180520.jpg"
+    },
+    {
+        "id": "Q123177858",
+        "name": "伊勢堂岱縄文館",
+        "type": "考古博物館",
+        "coordinates": "Point(140.350826 40.201975)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Isedotai%20Jomonkan%20202003.jpg"
+    },
+    {
+        "id": "Q98206589",
+        "name": "仙北市立角館樺細工伝承館",
+        "type": "工藝博物館",
+        "coordinates": "Point(140.561 39.599888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kakunodate%20Cherry%20Bark%20Handicrafts%20Denshokan%20Hall.jpg"
+    },
+    {
+        "id": "Q126116556",
+        "name": "秋田市文化創造館",
+        "type": "活動場地",
+        "coordinates": "Point(140.122833 39.719276)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Akita%20City%20Cultural%20Creation%20Center%2020240525.jpg"
+    },
+    {
+        "id": "Q126116556",
+        "name": "秋田市文化創造館",
+        "type": "廃止された博物館",
+        "coordinates": "Point(140.122833 39.719276)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Akita%20City%20Cultural%20Creation%20Center%2020240525.jpg"
+    },
+    {
+        "id": "Q11459440",
+        "name": "小坂町総合博物館郷土館",
+        "type": "地方文化館",
+        "coordinates": "Point(140.740944 40.323861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kosaka%20Museum%20Kyodokan.jpg"
+    },
+    {
+        "id": "Q11595517",
+        "name": "秋田県立農業科学館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(140.438819 39.436792)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Akita%20Prefectural%20Museum%20of%20Agricultural%20Science.jpg"
+    },
+    {
+        "id": "Q11264974",
+        "name": "きみまち阪",
+        "type": "觀光景點",
+        "coordinates": "Point(140.255 40.219444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Autumn%20leaves%20of%20Kimimachizaka%20in%20October%202022d.jpg"
+    },
+    {
+        "id": "Q132910556",
+        "name": "秋田県埋蔵文化財センター",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(140.548543 39.464617)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11483668",
+        "name": "秋田縣立美術館·平野政吉收藏庫",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(140.1215 39.71742778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Akita%20Museum%20of%20Art%2020180520.jpg"
+    },
+    {
+        "id": "Q48747294",
+        "name": "生剝鬼館",
+        "type": "博物館",
+        "coordinates": "Point(139.76658333 39.92916667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Entrance%20of%20Namahage%20Museum%2C%20Oga%2C%20Akita.JPG"
+    },
+    {
+        "id": "Q11595519",
+        "name": "秋田県立近代美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(140.5475 39.2925)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Akita%20Museum%20of%20Modern%20Art%2020190503.jpg"
+    },
+    {
+        "id": "Q65279338",
+        "name": "能代市子ども館",
+        "type": "兒童博物館",
+        "coordinates": "Point(140.024805555 40.216388888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Noshiro%20City%20Children%27s%20Hall%2020200126.jpg"
+    },
+    {
+        "id": "Q11595485",
+        "name": "秋田縣立男鹿水族館",
+        "type": "水族館",
+        "coordinates": "Point(139.704583 39.942167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oga%20Aquarium%2020210618.jpg"
+    },
+    {
+        "id": "Q11595445",
+        "name": "秋田縣立博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(140.06611111 39.81722222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Exterior%20of%20Akita%20Prefectural%20Museum%2020180818a.jpg"
+    },
+    {
+        "id": "Q108683253",
+        "name": "山の手温泉",
+        "type": "温泉镇",
+        "coordinates": "Point(140.435839 39.440312)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q136824623",
+        "name": "仙北市立角館町平福記念美術館",
+        "type": "美術館",
+        "coordinates": "Point(140.560189679 39.601931984)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hirafuku%20Memorial%20Art%20Museum%20in%20Kakunodate%2020221025a.jpg"
+    },
+    {
+        "id": "Q11595519",
+        "name": "秋田県立近代美術館",
+        "type": "现代美术馆",
+        "coordinates": "Point(140.5475 39.2925)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Akita%20Museum%20of%20Modern%20Art%2020190503.jpg"
+    },
+    {
+        "id": "Q135476486",
+        "name": "鹿角市歴史民俗資料館",
+        "type": "博物館",
+        "coordinates": "Point(140.792 40.190722222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kazuno%20City%20Museum%20of%20History%20and%20Folklore%20001.jpg"
+    },
+    {
+        "id": "Q11314514",
+        "name": "秋田市港灣塔",
+        "type": "觀光塔",
+        "coordinates": "Point(140.061 39.752722222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Akita%20Port%20Tower%20SELION%2020170805-1.jpg"
+    },
+    {
+        "id": "Q108441095",
+        "name": "かすみ温泉",
+        "type": "温泉镇",
+        "coordinates": "Point(140.18931 39.428666)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11595517",
+        "name": "秋田県立農業科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(140.438819 39.436792)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Akita%20Prefectural%20Museum%20of%20Agricultural%20Science.jpg"
+    },
+    {
+        "id": "Q104243226",
+        "name": "TDK歴史みらい館",
+        "type": "公司博物館",
+        "coordinates": "Point(139.957222222 39.291666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/TDK%20Museum.jpg"
+    },
+    {
+        "id": "Q136647394",
+        "name": "大太鼓の館",
+        "type": "柏林乐器博物馆",
+        "coordinates": "Point(140.376186 40.251036)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Great%20Drum%20Museum.jpg"
+    },
+    {
+        "id": "Q110990382",
+        "name": "秋田犬の里",
+        "type": "動物学博物館",
+        "coordinates": "Point(140.556127777 40.286738888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Akita%20Dog%20Visitor%20Center%2020200613.jpg"
+    },
+    {
+        "id": "Q11595345",
+        "name": "秋田市立紅磚鄉土館",
+        "type": "美術館",
+        "coordinates": "Point(140.115644 39.716689)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Akarenga-kan%20Museum%20in%20Akita%2020190707a.jpg"
+    },
+    {
+        "id": "Q104696379",
+        "name": "後三年合戦金沢資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(140.569555555 39.374416666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokote%20Municipal%20Museum%20for%20the%20battle%20of%20Gosannen.jpg"
+    },
+    {
+        "id": "Q104243226",
+        "name": "TDK歴史みらい館",
+        "type": "歷史博物館",
+        "coordinates": "Point(139.957222222 39.291666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/TDK%20Museum.jpg"
+    },
+    {
+        "id": "Q110558146",
+        "name": "新潮社記念文学館",
+        "type": "文學館",
+        "coordinates": "Point(140.565611111 39.593083333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shinchosha%20Memorial%20Literature%20Museum.jpg"
+    },
+    {
+        "id": "Q11580064",
+        "name": "白瀨南極探險隊紀念館",
+        "type": "科學博物館",
+        "coordinates": "Point(139.926361 39.2685)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shirase%20Antaractic%20Expedition%20Memorial%20Museum%2020190420a.jpg"
+    },
+    {
+        "id": "Q11325862",
+        "name": "ノースアジア大学雪国民俗館",
+        "type": "大學博物館",
+        "coordinates": "Point(140.156444 39.715472)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/North%20Asia%20University%2C%20Folk%20museum%20of%20snow%20country.JPG"
+    },
+    {
+        "id": "Q84520666",
+        "name": "石坂洋次郎文学記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(140.56575 39.324166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ishizaka%20Yojiro%20Literature%20Museum.jpg"
+    },
+    {
+        "id": "Q11595294",
+        "name": "秋田大学附属鉱業博物館",
+        "type": "礦業博物館",
+        "coordinates": "Point(140.136567 39.729294)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mining%20Museum%20of%20Akita%20University.jpg"
+    },
+    {
+        "id": "Q11646558",
+        "name": "金勇",
+        "type": "遊客中心",
+        "coordinates": "Point(140.025361 40.208972)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Exterior%20of%20the%20Kaneyu%2020200607a.jpg"
+    },
+    {
+        "id": "Q126116556",
+        "name": "秋田市文化創造館",
+        "type": "表演藝術場地",
+        "coordinates": "Point(140.122833 39.719276)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Akita%20City%20Cultural%20Creation%20Center%2020240525.jpg"
+    },
+    {
+        "id": "Q11595319",
+        "name": "秋田市立佐竹史料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(140.124739 39.719967)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Satake%20Historical%20Material%20Museum%20in%20Akita%2020251025.jpg"
+    },
+    {
+        "id": "Q11595197",
+        "name": "秋田故里村",
+        "type": "主題公園",
+        "coordinates": "Point(140.546206 39.29335)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Akita%20Furusato-mura%2C%20Wonder%20Castle%203.jpg"
+    },
+    {
+        "id": "Q65279338",
+        "name": "能代市子ども館",
+        "type": "宇宙工学博物館",
+        "coordinates": "Point(140.024805555 40.216388888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Noshiro%20City%20Children%27s%20Hall%2020200126.jpg"
+    },
+    {
+        "id": "Q11580064",
+        "name": "白瀨南極探險隊紀念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.926361 39.2685)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shirase%20Antaractic%20Expedition%20Memorial%20Museum%2020190420a.jpg"
+    },
+    {
+        "id": "Q11376326",
+        "name": "仁別森林博物館",
+        "type": "林業博物館",
+        "coordinates": "Point(140.262672 39.803208)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nibetu%20sinrin%20hakubutukan.jpg"
+    },
+    {
+        "id": "Q11595517",
+        "name": "秋田県立農業科学館",
+        "type": "農業博物館",
+        "coordinates": "Point(140.438819 39.436792)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Akita%20Prefectural%20Museum%20of%20Agricultural%20Science.jpg"
+    },
+    {
+        "id": "Q11595345",
+        "name": "秋田市立紅磚鄉土館",
+        "type": "民俗博物館",
+        "coordinates": "Point(140.115644 39.716689)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Akarenga-kan%20Museum%20in%20Akita%2020190707a.jpg"
+    },
+    {
+        "id": "Q11595323",
+        "name": "秋田市立千秋美術館",
+        "type": "美術館",
+        "coordinates": "Point(140.124583 39.717389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Entrance%20of%20the%20Akita%20Senshu%20Museum%20of%20Art.jpg"
+    },
+    {
+        "id": "Q38266963",
+        "name": "橫手市增田漫畫美術館",
+        "type": "美術館",
+        "coordinates": "Point(140.55047222 39.20466667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokote-Masuda%20Manga%20Museum%2020190503.jpg"
+    },
+    {
+        "id": "Q11595345",
+        "name": "秋田市立紅磚鄉土館",
+        "type": "银行建筑物",
+        "coordinates": "Point(140.115644 39.716689)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Akarenga-kan%20Museum%20in%20Akita%2020190707a.jpg"
+    },
+    {
+        "id": "Q104696379",
+        "name": "後三年合戦金沢資料館",
+        "type": "軍事博物館",
+        "coordinates": "Point(140.569555555 39.374416666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yokote%20Municipal%20Museum%20for%20the%20battle%20of%20Gosannen.jpg"
+    }
+]

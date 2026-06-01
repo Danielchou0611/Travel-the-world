@@ -1,0 +1,695 @@
+[
+    {
+        "id": "Q104708785",
+        "name": "阿賀野市立吉田東伍記念博物館",
+        "type": "纪念博物馆",
+        "coordinates": "Point(139.232353 37.775983)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yoshida%20Togo%20Memorial%20Museum%2C%20Agano%2C%20Niigata%2C%20Japan%2C%20August%202023.jpg"
+    },
+    {
+        "id": "Q110998809",
+        "name": "八方台",
+        "type": "风景点",
+        "coordinates": "Point(138.929444444 37.423333333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q28686116",
+        "name": "鉢&田島征三・絵本と木の実の美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.69361111 37.1125)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hachi%20%26%20Seizo%20Tashima%20Museum%20of%20Picture%20Book%20Art.jpg"
+    },
+    {
+        "id": "Q123516557",
+        "name": "春日山城跡ものがたり館",
+        "type": "歷史博物館",
+        "coordinates": "Point(138.22227 37.153023)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11650572",
+        "name": "小千谷市錦鯉の里",
+        "type": "水族館",
+        "coordinates": "Point(138.795277777 37.311111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ojiya%20Nishikigoi%20no%20Sato%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q11349396",
+        "name": "彩虹塔",
+        "type": "觀光塔",
+        "coordinates": "Point(139.05572222 37.91630556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Niigata%20Rainbow%20tower.JPG"
+    },
+    {
+        "id": "Q123517037",
+        "name": "美の川酒造酒造館",
+        "type": "日本清酒博物館",
+        "coordinates": "Point(138.84386 37.436577)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11332823",
+        "name": "フォッサマグナミュージアム",
+        "type": "地質学博物館",
+        "coordinates": "Point(137.870083 37.025556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fossa%20Magna%20Museum.JPG"
+    },
+    {
+        "id": "Q17227042",
+        "name": "中野邸記念館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(139.114222 37.75025)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q17209791",
+        "name": "新潟市漫畫家之家",
+        "type": "動漫博物館",
+        "coordinates": "Point(139.04475 37.920583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Niigata%20City%20Manga%20House%2020131106.jpg"
+    },
+    {
+        "id": "Q11503023",
+        "name": "新潟県立万代島美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.059528 37.925333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toki-Messe-01.jpg"
+    },
+    {
+        "id": "Q11234463",
+        "name": "NASPAコスモスガーデン",
+        "type": "主題公園",
+        "coordinates": "Point(138.813228 36.927717)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/NASPA%E3%82%B3%E3%82%B9%E3%83%A2%E3%82%B92.jpg"
+    },
+    {
+        "id": "Q28686072",
+        "name": "越後妻有里山現代美術館MonET",
+        "type": "現代美術館",
+        "coordinates": "Point(138.76027778 37.13888889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Echigo-Tsumari%20Satoyama%20Museum%20of%20Contemporary%20Art%20KINARE.JPG"
+    },
+    {
+        "id": "Q11502885",
+        "name": "新潟市北區鄉土博物館",
+        "type": "地方文化館",
+        "coordinates": "Point(139.22563889 37.91611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toysaka%20Museum%20001%20April2020.jpg"
+    },
+    {
+        "id": "Q17227042",
+        "name": "中野邸記念館",
+        "type": "美術館",
+        "coordinates": "Point(139.114222 37.75025)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11502895",
+        "name": "新潟市歷史博物館",
+        "type": "海事博物館",
+        "coordinates": "Point(139.057722222 37.929833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/160716%20Niigata%20City%20History%20Museum%20Main%20Building%20Niigata%20Japan01bs5.jpg"
+    },
+    {
+        "id": "Q104708819",
+        "name": "彌彦神社宝物殿",
+        "type": "宝物館",
+        "coordinates": "Point(138.82807 37.706523)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q28686074",
+        "name": "まつだい「農舞台」",
+        "type": "美術館",
+        "coordinates": "Point(138.615 37.13166667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Matsudai%20Nohbutai.jpg"
+    },
+    {
+        "id": "Q11502895",
+        "name": "新潟市歷史博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(139.057722222 37.929833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/160716%20Niigata%20City%20History%20Museum%20Main%20Building%20Niigata%20Japan01bs5.jpg"
+    },
+    {
+        "id": "Q17225142",
+        "name": "長岡市青少年文化センター",
+        "type": "文化中心",
+        "coordinates": "Point(138.861944444 37.446111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagaoka%20City%20Seisyonen%20Bunka%20Center.jpg"
+    },
+    {
+        "id": "Q11425083",
+        "name": "坂口記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.3425 37.180555555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sakaguchikinenkan.jpg"
+    },
+    {
+        "id": "Q11503023",
+        "name": "新潟県立万代島美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(139.059528 37.925333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toki-Messe-01.jpg"
+    },
+    {
+        "id": "Q17209769",
+        "name": "新潟市新津美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.112361 37.762528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Niitsu%20Art%20Museum%20201905.jpg"
+    },
+    {
+        "id": "Q78058843",
+        "name": "上越科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(138.252222222 37.153888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Joetsu%20Science%20Museum%20April2020.jpg"
+    },
+    {
+        "id": "Q11461452",
+        "name": "小林古径記念美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.254944444 37.110638888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Joetsu%20Municipal%20Museum.JPG"
+    },
+    {
+        "id": "Q11579494",
+        "name": "白壁兵舎",
+        "type": "軍事博物館",
+        "coordinates": "Point(139.3224425 37.95434583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/160717%20White%20wall%20barracks%20archives%20museum%20of%20public%20relations%20Shibata%20Niigata%20pref%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q11246368",
+        "name": "北方文化博物館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(139.152147 37.829617)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Northern%20Culture%20Museum%20002.jpg"
+    },
+    {
+        "id": "Q11305817",
+        "name": "サントピアワールド",
+        "type": "主題樂園",
+        "coordinates": "Point(139.252833333 37.764916666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/SUNTOPIA%20WORLD.JPG"
+    },
+    {
+        "id": "Q28669360",
+        "name": "木村茶道美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.544722194 37.359722194)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104708807",
+        "name": "上越市立歴史博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(138.25519 37.111692)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Joetsu%20Municipal%20Museum.JPG"
+    },
+    {
+        "id": "Q85162625",
+        "name": "相川郷土博物館",
+        "type": "礦業博物館",
+        "coordinates": "Point(138.24 38.0375)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aikawa%20History%20Museum%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q104708800",
+        "name": "長岡市馬高縄文館",
+        "type": "考古博物館",
+        "coordinates": "Point(138.76848 37.446619)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Umataka%20Jomon%20Museum.jpg"
+    },
+    {
+        "id": "Q11503129",
+        "name": "新潟县立近代美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(138.83208333 37.46447222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%96%B0%E6%BD%9F%E8%BF%91%E4%BB%A3%E7%BE%8E%E8%A1%93%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q106242079",
+        "name": "佐渡西三川ゴールドパーク",
+        "type": "主題公園",
+        "coordinates": "Point(138.296388888 37.898055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sado%20Nishimikawa%20Gold%20Park.jpg"
+    },
+    {
+        "id": "Q11502710",
+        "name": "新津記念館",
+        "type": "美術館",
+        "coordinates": "Point(139.037056 37.919028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Niitsu%20House%2001.JPG"
+    },
+    {
+        "id": "Q61721910",
+        "name": "Iyoboya會館",
+        "type": "水族館",
+        "coordinates": "Point(139.471388888 38.227777777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iyoboya%20Museum.jpg"
+    },
+    {
+        "id": "Q104708784",
+        "name": "巻菱湖記念時代館",
+        "type": "書法美術館",
+        "coordinates": "Point(139.10593 37.931214)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q63170507",
+        "name": "新潟県立こども自然王国",
+        "type": "主題樂園",
+        "coordinates": "Point(138.633055555 37.210833333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q85162625",
+        "name": "相川郷土博物館",
+        "type": "地方文化館",
+        "coordinates": "Point(138.24 38.0375)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aikawa%20History%20Museum%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q11450434",
+        "name": "安吾 風の館",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.037777777 37.926666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Niigata%20Ango-kaze-no-yakata%2020130811.JPG"
+    },
+    {
+        "id": "Q102442450",
+        "name": "塩沢つむぎ記念館",
+        "type": "零售店",
+        "coordinates": "Point(138.849724404 37.041042295)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shiozawa%20Tsumugi%20Pavilion.JPG"
+    },
+    {
+        "id": "Q11653568",
+        "name": "長者ケ原考古館",
+        "type": "考古博物館",
+        "coordinates": "Point(137.867806111 37.024611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chojagahara%20Archeological%20Museum.JPG"
+    },
+    {
+        "id": "Q11383307",
+        "name": "佐渡版画村美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.240889 38.035139)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sado%20Hangamura%20Art%20Museum%20ac.jpg"
+    },
+    {
+        "id": "Q11360174",
+        "name": "上越清里星のふるさと館",
+        "type": "天文博物館",
+        "coordinates": "Point(138.365 37.035833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Joetsu%20Kiyosato%20Star%20Town%20Museum%20exterior%20in%202013-09-06.jpg"
+    },
+    {
+        "id": "Q104708816",
+        "name": "良寛記念館",
+        "type": "纪念博物馆",
+        "coordinates": "Point(138.688157 37.542383)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ryokan%20Memorial%20Museum.jpg"
+    },
+    {
+        "id": "Q99933926",
+        "name": "長岡市栃尾美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.995277777 37.471666666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%95%B7%E5%B2%A1%E5%B8%82%E6%A0%83%E5%B0%BE%E7%BE%8E%E8%A1%93%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11360163",
+        "name": "上越市立水族博物館",
+        "type": "水族館",
+        "coordinates": "Point(138.23297222 37.1735)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Joetsu%20Aquarium%20Umigatari.jpg"
+    },
+    {
+        "id": "Q11503129",
+        "name": "新潟县立近代美術館",
+        "type": "现代美术馆",
+        "coordinates": "Point(138.83208333 37.46447222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%96%B0%E6%BD%9F%E8%BF%91%E4%BB%A3%E7%BE%8E%E8%A1%93%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11502710",
+        "name": "新津記念館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(139.037056 37.919028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Niitsu%20House%2001.JPG"
+    },
+    {
+        "id": "Q102442450",
+        "name": "塩沢つむぎ記念館",
+        "type": "織物博物館",
+        "coordinates": "Point(138.849724404 37.041042295)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shiozawa%20Tsumugi%20Pavilion.JPG"
+    },
+    {
+        "id": "Q61721910",
+        "name": "Iyoboya會館",
+        "type": "漁業博物館",
+        "coordinates": "Point(139.471388888 38.227777777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iyoboya%20Museum.jpg"
+    },
+    {
+        "id": "Q11569266",
+        "name": "燕市産業史料館",
+        "type": "工业博物馆",
+        "coordinates": "Point(138.919166666 37.652777777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tsubame%20Industrial%20Materials%20Museum%20Mar2022-001.jpg"
+    },
+    {
+        "id": "Q11502938",
+        "name": "新潟市美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.04172222 37.92841667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Niigata%20City%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q11569266",
+        "name": "燕市産業史料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(138.919166666 37.652777777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tsubame%20Industrial%20Materials%20Museum%20Mar2022-001.jpg"
+    },
+    {
+        "id": "Q11503121",
+        "name": "新潟縣立自然科学館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(139.04975 37.890722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/NIIGATA%20SCIENCE%20MUSEUM.JPG"
+    },
+    {
+        "id": "Q11342307",
+        "name": "米西拉藝術館",
+        "type": "美術館",
+        "coordinates": "Point(138.80436111 37.10941667)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11579494",
+        "name": "白壁兵舎",
+        "type": "軍營",
+        "coordinates": "Point(139.3224425 37.95434583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/160717%20White%20wall%20barracks%20archives%20museum%20of%20public%20relations%20Shibata%20Niigata%20pref%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q61722200",
+        "name": "寺泊水族博物館",
+        "type": "水族館",
+        "coordinates": "Point(138.760277777 37.633888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Teradomari%20Aquarium%2003.jpg"
+    },
+    {
+        "id": "Q11246368",
+        "name": "北方文化博物館",
+        "type": "文化博物館",
+        "coordinates": "Point(139.152147 37.829617)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Northern%20Culture%20Museum%20002.jpg"
+    },
+    {
+        "id": "Q17229556",
+        "name": "新潟市マンガ・アニメ情報館",
+        "type": "動漫博物館",
+        "coordinates": "Point(139.053056 37.916361)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bandai%20City%20BP2%20Sep2021-002.jpg"
+    },
+    {
+        "id": "Q85880606",
+        "name": "新潟県埋蔵文化財センター",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(139.11575 37.76125)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Niigata%20Prefecture%20Archaeological%20Research%20Center%2C%20Japan%2C%20August%202022.jpg"
+    },
+    {
+        "id": "Q123517194",
+        "name": "谷村美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.87611 37.042027)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11502898",
+        "name": "Marinpia日本海",
+        "type": "水族館",
+        "coordinates": "Point(139.027975 37.923633333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%96%B0%E6%BD%9F%E5%B8%82%E6%B0%B4%E6%97%8F%E9%A4%A8%E3%83%9E%E3%83%AA%E3%83%B3%E3%83%94%E3%82%A2%E6%97%A5%E6%9C%AC%E6%B5%B7.jpg"
+    },
+    {
+        "id": "Q11502893",
+        "name": "新潟市新津鐵道資料館",
+        "type": "鐵路博物館",
+        "coordinates": "Point(139.141806 37.801722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%96%B0%E6%BD%9F%E5%B8%82%E6%96%B0%E6%B4%A5%E9%89%84%E9%81%93%E8%B3%87%E6%96%99%E9%A4%A8.JPG"
+    },
+    {
+        "id": "Q11503104",
+        "name": "新潟県立歴史博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(138.76777778 37.43833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Niigata%20Prefectural%20Museum%20of%20History.jpg"
+    },
+    {
+        "id": "Q11425083",
+        "name": "坂口記念館",
+        "type": "酒博物館",
+        "coordinates": "Point(138.3425 37.180555555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sakaguchikinenkan.jpg"
+    },
+    {
+        "id": "Q132160355",
+        "name": "佐潟水鳥・湿地センター",
+        "type": "自然中心",
+        "coordinates": "Point(138.879915 37.819018)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11461452",
+        "name": "小林古径記念美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.254944444 37.110638888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Joetsu%20Municipal%20Museum.JPG"
+    },
+    {
+        "id": "Q15867362",
+        "name": "十日町市博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(138.755833333 37.140833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokamachi%20City%20Museum.JPG"
+    },
+    {
+        "id": "Q11360168",
+        "name": "上越市立総合博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(138.25516667 37.11172222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Joetsu%20Municipal%20Museum.JPG"
+    },
+    {
+        "id": "Q11503113",
+        "name": "新潟県立環境と人間のふれあい館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(139.238416666 37.912888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Niigata%20Learning%20Center%20For%20Humans%20%26%20The%20Environment%20April2020.jpg"
+    },
+    {
+        "id": "Q11405091",
+        "name": "十日町市立里山科学館 越後松之山「森の学校」キョロロ",
+        "type": "自然歷史博物館",
+        "coordinates": "Point(138.61722222 37.09972222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E8%B6%8A%E5%BE%8C%E6%9D%BE%E4%B9%8B%E5%B1%B1%E6%A3%AE%E3%81%AE%E5%AD%A6%E6%A0%A1%20%E3%82%AD%E3%83%A7%E3%83%AD%E3%83%AD1.jpg"
+    },
+    {
+        "id": "Q17225142",
+        "name": "長岡市青少年文化センター",
+        "type": "科學博物館",
+        "coordinates": "Point(138.861944444 37.446111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagaoka%20City%20Seisyonen%20Bunka%20Center.jpg"
+    },
+    {
+        "id": "Q11499516",
+        "name": "敦井美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.059583 37.914444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Niigata%2CHokuriku%20Building.JPG"
+    },
+    {
+        "id": "Q133227322",
+        "name": "新潟大学旭町学術資料展示館",
+        "type": "大學博物館",
+        "coordinates": "Point(139.03663 37.921185)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Niigata-Univ-Asahimachi-Museum-2014091401.jpg"
+    },
+    {
+        "id": "Q102240298",
+        "name": "鈴木牧之記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(138.852235847 37.042296859)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Suzuki%20Bokushi%20Memorial%20Hall.JPG"
+    },
+    {
+        "id": "Q11503121",
+        "name": "新潟縣立自然科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(139.04975 37.890722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/NIIGATA%20SCIENCE%20MUSEUM.JPG"
+    },
+    {
+        "id": "Q11503104",
+        "name": "新潟県立歴史博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(138.76777778 37.43833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Niigata%20Prefectural%20Museum%20of%20History.jpg"
+    },
+    {
+        "id": "Q106307296",
+        "name": "雪梁舎美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.017694444 37.863583333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%9B%AA%E6%A2%81%E8%88%8E%E7%BE%8E%E8%A1%93%E9%A4%A8%E5%A4%96%E8%A6%B3.jpg"
+    },
+    {
+        "id": "Q11594970",
+        "name": "秋山孝ポスター美術館長岡",
+        "type": "美術館",
+        "coordinates": "Point(138.841646 37.420393)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takashi%20Akiyama%20Poster%20Museum%20Nagaoka.jpg"
+    },
+    {
+        "id": "Q11621988",
+        "name": "蕗谷虹児記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.326806 37.951917)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/160717%20Koji%20Fukiya%20Memorial%20Museum%20of%20Art%20Shibata%20Niigata%20pref%20Japan01n.jpg"
+    },
+    {
+        "id": "Q11668358",
+        "name": "駒形十吉記念美術館",
+        "type": "美術館",
+        "coordinates": "Point(138.86111111 37.44927778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Komagata%20Jukichi%20Museum%20of%20Art.JPG"
+    },
+    {
+        "id": "Q11652115",
+        "name": "長岡戦災資料館",
+        "type": "博物館",
+        "coordinates": "Point(138.8525 37.448611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagaoka%20War%20Damage%20Exhibit%20Hall.JPG"
+    },
+    {
+        "id": "Q30267712",
+        "name": "長岡市立科学博物館",
+        "type": "博物館",
+        "coordinates": "Point(138.838888888 37.436388888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagaoka%20City%20Hall%20001.jpg"
+    },
+    {
+        "id": "Q22127721",
+        "name": "北雪酒造",
+        "type": "觀光景點",
+        "coordinates": "Point(138.41355 37.870961111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hokusetsu%20SHUZOU%20in%20Sado%20-%20Sep%2023%2C%202012.jpg"
+    },
+    {
+        "id": "Q85159020",
+        "name": "佐渡博物館",
+        "type": "博物館",
+        "coordinates": "Point(138.344722222 37.986111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%BD%90%E6%B8%A1%E5%8D%9A%E7%89%A9%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q104419568",
+        "name": "日本海フィッシャーマンズケープ",
+        "type": "觀光景點",
+        "coordinates": "Point(138.491111111 37.349444444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q30267712",
+        "name": "長岡市立科学博物館",
+        "type": "博物館",
+        "coordinates": "Point(138.840282 37.438695)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagaoka%20City%20Hall%20001.jpg"
+    },
+    {
+        "id": "Q11355840",
+        "name": "三條市歷史民俗產業資料館",
+        "type": "博物館",
+        "coordinates": "Point(138.956722 37.631917)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sanjo%20Heritage%20Museum.jpg"
+    },
+    {
+        "id": "Q11503008",
+        "name": "新潟縣政紀念館",
+        "type": "博物館",
+        "coordinates": "Point(139.040528 37.914611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Niigata%20Prefectural%20Government%20Memorial%20Hall1.JPG"
+    },
+    {
+        "id": "Q104708797",
+        "name": "藤橋歴史の広場",
+        "type": "博物館",
+        "coordinates": "Point(138.782538 37.42851)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11330973",
+        "name": "ビュー福島潟",
+        "type": "博物館",
+        "coordinates": "Point(139.240277777 37.913555555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/View%20fukushimagata.jpg"
+    },
+    {
+        "id": "Q11503008",
+        "name": "新潟縣政紀念館",
+        "type": "議會建築物",
+        "coordinates": "Point(139.040528 37.914611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Niigata%20Prefectural%20Government%20Memorial%20Hall1.JPG"
+    },
+    {
+        "id": "Q104708794",
+        "name": "縄文の里・朝日　奥三面歴史交流館",
+        "type": "博物館",
+        "coordinates": "Point(139.626141 38.239671)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104708789",
+        "name": "津南町歴史民俗資料館",
+        "type": "博物館",
+        "coordinates": "Point(138.668455 36.996461)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q22127721",
+        "name": "北雪酒造",
+        "type": "商號",
+        "coordinates": "Point(138.41355 37.870961111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hokusetsu%20SHUZOU%20in%20Sado%20-%20Sep%2023%2C%202012.jpg"
+    },
+    {
+        "id": "Q11535936",
+        "name": "新潟仙貝王國",
+        "type": "博物館",
+        "coordinates": "Point(139.163194 37.9295)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q87396765",
+        "name": "柏崎市立博物館",
+        "type": "博物館",
+        "coordinates": "Point(138.542777777 37.359166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kashiwazaki%20City%20Museum%2C%20Kashiwazaki%2C%20Niigata%2C%20Japan%2C%20November%202023.jpg"
+    },
+    {
+        "id": "Q104708815",
+        "name": "国指定重要文化財渡邉邸",
+        "type": "博物館",
+        "coordinates": "Point(139.564946 38.090191)",
+        "image": "No Image"
+    }
+]

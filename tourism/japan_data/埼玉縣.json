@@ -1,0 +1,877 @@
+[
+    {
+        "id": "Q5017775",
+        "name": "埼玉縣立SAKITAMA史跡博物館",
+        "type": "考古博物館",
+        "coordinates": "Point(139.47559 36.124928)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saitamaprefecturalmusuemofsakitamaancientburialmound-outside-may2011.jpg"
+    },
+    {
+        "id": "Q11527480",
+        "name": "東武スーパープール",
+        "type": "水上遊樂園",
+        "coordinates": "Point(139.7041779 36.0255522)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tobu%20Super%20Pool%20Entrance.jpg"
+    },
+    {
+        "id": "Q11596172",
+        "name": "秩父鐵道車両公園",
+        "type": "鉄道公園",
+        "coordinates": "Point(138.979222 35.960389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tetudoshiyariyo%20park2.jpg"
+    },
+    {
+        "id": "Q11248596",
+        "name": "埼玉市立博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(139.631611 35.911333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saitama%20Municipal%20Museum.JPG"
+    },
+    {
+        "id": "Q104696834",
+        "name": "吉見町埋蔵文化財センター",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(139.421373 36.038958)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q108335102",
+        "name": "桶川飛行学校平和祈念館",
+        "type": "和平博物館",
+        "coordinates": "Point(139.516194444 35.989388888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okegawa%20Saitama%20Okegawa%20Flight%20School%20Peace%20Memorial%20Hall%20Entrance%201.jpg"
+    },
+    {
+        "id": "Q104696835",
+        "name": "春日部市郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(139.758962 35.979439)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kasukabe%20city%20Education%20Center.jpg"
+    },
+    {
+        "id": "Q11344966",
+        "name": "Yaoko川越美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.489056 35.928556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yaoko%20Kawagoe%20Museum%20aka%20Yuji%20Misu%20Memorial%20Hall.jpg"
+    },
+    {
+        "id": "Q1041232",
+        "name": "所泽航空发祥纪念馆",
+        "type": "航空博物館",
+        "coordinates": "Point(139.472 35.7989)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokorozawa%20Aviation%20Museum%20in%20Koku-koen%20park%20060910.jpg"
+    },
+    {
+        "id": "Q11496511",
+        "name": "戸田市立郷土博物館",
+        "type": "地方文化館",
+        "coordinates": "Point(139.663096 35.819146)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toda%20Toda%20City%20Library%201.JPG"
+    },
+    {
+        "id": "Q28686133",
+        "name": "ふじみ野市立福岡河岸記念館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(139.522917 35.885278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fujinino%20Hukuokakasikinenkan%201.jpg"
+    },
+    {
+        "id": "Q11426656",
+        "name": "埼玉県立嵐山史跡の博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(139.323417 36.036861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Historical%20Museum%20of%20Ranzan%2001.JPG"
+    },
+    {
+        "id": "Q11554289",
+        "name": "河鍋曉齋紀念美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.693425 35.81582222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyosai%2020070210.jpg"
+    },
+    {
+        "id": "Q11517752",
+        "name": "朝霞テック",
+        "type": "主題樂園",
+        "coordinates": "Point(139.5813833 35.8088361)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104831949",
+        "name": "立正大学博物館",
+        "type": "大學博物館",
+        "coordinates": "Point(139.362186 36.108428)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11436948",
+        "name": "大澤家住宅",
+        "type": "町屋",
+        "coordinates": "Point(139.483203 35.924472)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%B7%9D%E8%B6%8A%E5%B8%82%E5%A4%A7%E6%B2%A2%E5%AE%B6%E4%BD%8F%E5%AE%852013-09.JPG"
+    },
+    {
+        "id": "Q109364231",
+        "name": "蓑虫美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.668333 35.988889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E8%93%91%E8%99%AB%E7%BE%8E%E8%A1%93%E9%A4%A8%20MinomushiMuseum%20MNMSM.jpg"
+    },
+    {
+        "id": "Q846106",
+        "name": "鐵道博物館",
+        "type": "公司博物館",
+        "coordinates": "Point(139.61833333 35.92055556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Railway%20Museum%20Park%20Zone%2020071014%20%281%29.jpg"
+    },
+    {
+        "id": "Q11655568",
+        "name": "關八州見晴台",
+        "type": "风景点",
+        "coordinates": "Point(139.22194444 35.94680556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%96%A2%E5%85%AB%E5%B7%9E%E8%A6%8B%E6%99%B4%E5%8F%B0.jpg"
+    },
+    {
+        "id": "Q116212967",
+        "name": "狭山市立博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(139.3954 35.8453)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sayama-City-Museum.JPG"
+    },
+    {
+        "id": "Q11479227",
+        "name": "川越市立博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(139.491431 35.925971)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kawagoe%20City%20Museum.JPG"
+    },
+    {
+        "id": "Q11426751",
+        "name": "埼玉縣立自然之博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(139.115905 36.08742)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ngatoro%20Saitamakenritu%20sizennohakubutukan%201.jpg"
+    },
+    {
+        "id": "Q7739750",
+        "name": "原爆圖丸木美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.35213889 36.02825)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Maruki%20museum.jpg"
+    },
+    {
+        "id": "Q21653719",
+        "name": "遠山記念館",
+        "type": "美術館",
+        "coordinates": "Point(139.493315 35.987707)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Toyama%20Memorial%20Museum%202015-2.jpg"
+    },
+    {
+        "id": "Q21654898",
+        "name": "三芳今昔村",
+        "type": "主題公園",
+        "coordinates": "Point(139.47886 35.83742)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11658528",
+        "name": "陸上自衛隊広報センター",
+        "type": "軍事博物館",
+        "coordinates": "Point(139.599694 35.784917)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/JGSDF%20Public%20Information%20Center20080405-02.JPG"
+    },
+    {
+        "id": "Q114873993",
+        "name": "丸沼芸術の森",
+        "type": "美術館",
+        "coordinates": "Point(139.605302369 35.829281185)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q846106",
+        "name": "鐵道博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(139.61833333 35.92055556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Railway%20Museum%20Park%20Zone%2020071014%20%281%29.jpg"
+    },
+    {
+        "id": "Q11248611",
+        "name": "埼玉縣立歷史與民俗博物館",
+        "type": "地方文化館",
+        "coordinates": "Point(139.63 35.92111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saitama-rekimin2006%200715.jpg"
+    },
+    {
+        "id": "Q11479242",
+        "name": "川越市立美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.490806 35.925833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kawagoe%20City%20Art%20Museum.JPG"
+    },
+    {
+        "id": "Q11479246",
+        "name": "川越市藏造資料館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(139.482777777 35.923722222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kawagoe%20Kuratsukuri%20Museum.JPG"
+    },
+    {
+        "id": "Q11527526",
+        "name": "东武动物园",
+        "type": "動物園",
+        "coordinates": "Point(139.719722 36.020083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ferris%20wheel%20in%20Tobu%20Zoo%20Park%20001.jpg"
+    },
+    {
+        "id": "Q11267493",
+        "name": "埼玉市立浦和生活博物館民家園",
+        "type": "民家園",
+        "coordinates": "Point(139.710611 35.878361)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saitama%20Saitama%20Livelihood%20Museum%20House%20Garden%201.JPG"
+    },
+    {
+        "id": "Q108677196",
+        "name": "柴原温泉",
+        "type": "温泉镇",
+        "coordinates": "Point(139.007338 35.971568)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q97754517",
+        "name": "城西大学水田美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.340988888 35.932808333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q28684346",
+        "name": "岩槻人形博物館",
+        "type": "人形博物館",
+        "coordinates": "Point(139.7 35.950833333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saitama%20Iwatsuki%20Ningyo%20Museum%20201902.jpg"
+    },
+    {
+        "id": "Q11267531",
+        "name": "埼玉綠之森博物館",
+        "type": "戶外博物館",
+        "coordinates": "Point(139.384056 35.786278)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q21654210",
+        "name": "塙保己一記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.12838333 36.19093056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aspia%20Kodama2.jpg"
+    },
+    {
+        "id": "Q108335102",
+        "name": "桶川飛行学校平和祈念館",
+        "type": "旧学校施設",
+        "coordinates": "Point(139.516194444 35.989388888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Okegawa%20Saitama%20Okegawa%20Flight%20School%20Peace%20Memorial%20Hall%20Entrance%201.jpg"
+    },
+    {
+        "id": "Q21653719",
+        "name": "遠山記念館",
+        "type": "歷史房屋",
+        "coordinates": "Point(139.493315 35.987707)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Toyama%20Memorial%20Museum%202015-2.jpg"
+    },
+    {
+        "id": "Q11527526",
+        "name": "东武动物园",
+        "type": "主題樂園",
+        "coordinates": "Point(139.719722 36.020083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ferris%20wheel%20in%20Tobu%20Zoo%20Park%20001.jpg"
+    },
+    {
+        "id": "Q11277080",
+        "name": "ふじみ野市立大井郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(139.504777777 35.857444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Oi%20Library%20and%20Folk%20Museum.JPG"
+    },
+    {
+        "id": "Q11426657",
+        "name": "埼玉県立川の博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(139.21975 36.115722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saitama%20Museum%20of%20Rivers.jpg"
+    },
+    {
+        "id": "Q108551984",
+        "name": "両神温泉",
+        "type": "温泉镇",
+        "coordinates": "Point(138.975 36.007777777)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q17224997",
+        "name": "埼玉古墳公園",
+        "type": "考古学公園",
+        "coordinates": "Point(139.479444 36.128333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Inariyama%20Kofun%20and%20Shogun-yama%20Kofun%20%28Gyoda%29.JPG"
+    },
+    {
+        "id": "Q11426751",
+        "name": "埼玉縣立自然之博物館",
+        "type": "自然歷史博物館",
+        "coordinates": "Point(139.116083 36.087444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ngatoro%20Saitamakenritu%20sizennohakubutukan%201.jpg"
+    },
+    {
+        "id": "Q11570113",
+        "name": "牛島之藤",
+        "type": "巨樹",
+        "coordinates": "Point(139.77319444 35.985)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kasukabe%20Wisteria%20Of%20Ushijima%201.jpg"
+    },
+    {
+        "id": "Q21653251",
+        "name": "澀澤榮一紀念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.263944 36.23425)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eiichi%20Shibusawa%20Memorial%20Museum.JPG"
+    },
+    {
+        "id": "Q11267517",
+        "name": "さいたま文学館",
+        "type": "文學館",
+        "coordinates": "Point(139.560639 35.996194)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hibikinomori.JPG"
+    },
+    {
+        "id": "Q11389080",
+        "name": "入間市博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(139.366806 35.8015)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iruma%20Irumasi-hakubutukan%201.jpg"
+    },
+    {
+        "id": "Q11269194",
+        "name": "白子鳩水上公園",
+        "type": "城市公園",
+        "coordinates": "Point(139.748472 35.913889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shirakobato%20Aquatic%20Park.JPG"
+    },
+    {
+        "id": "Q11369233",
+        "name": "久喜市鄉土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(139.665472 36.099167)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11344966",
+        "name": "Yaoko川越美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.489056 35.928556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yaoko%20Kawagoe%20Museum%20aka%20Yuji%20Misu%20Memorial%20Hall.jpg"
+    },
+    {
+        "id": "Q11271756",
+        "name": "秩父銘仙館",
+        "type": "工业博物馆",
+        "coordinates": "Point(139.087278 35.990556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chichibu%20Chichibumeisenkan%202.JPG"
+    },
+    {
+        "id": "Q11277076",
+        "name": "ふじみ野市立上福岡歴史民俗資料館",
+        "type": "民俗博物館",
+        "coordinates": "Point(139.52825 35.875667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kamifukuoka%20History%20and%20Folk%20Museum.JPG"
+    },
+    {
+        "id": "Q22118555",
+        "name": "行田市鄉土博物館",
+        "type": "地方文化館",
+        "coordinates": "Point(139.453333 36.138056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gyoda%20City%20Museum.JPG"
+    },
+    {
+        "id": "Q101456044",
+        "name": "八潮市立資料館",
+        "type": "市立博物館",
+        "coordinates": "Point(139.820916666 35.826805555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11554289",
+        "name": "河鍋曉齋紀念美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.693425 35.81582222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyosai%2020070210.jpg"
+    },
+    {
+        "id": "Q11426567",
+        "name": "埼玉縣和平資料館",
+        "type": "和平博物館",
+        "coordinates": "Point(139.365634 35.998611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Higashimatsuyama%20Peace%20Museum%20Of%20Saitama%201.JPG"
+    },
+    {
+        "id": "Q11269194",
+        "name": "白子鳩水上公園",
+        "type": "水上遊樂園",
+        "coordinates": "Point(139.748472 35.913889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shirakobato%20Aquatic%20Park.JPG"
+    },
+    {
+        "id": "Q104696837",
+        "name": "朝霞市博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(139.597468 35.812692)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q22118792",
+        "name": "埼玉県立深谷商業高等学校記念館",
+        "type": "教育博物館",
+        "coordinates": "Point(139.291277777 36.197)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukaya-Commercial-HighSchool-MemorialHall-2013081501.jpg"
+    },
+    {
+        "id": "Q11644497",
+        "name": "醤遊王国",
+        "type": "食品店",
+        "coordinates": "Point(139.34225 35.920667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hidaka%20Saitama%20Shoyu%20kingdom%201.JPG"
+    },
+    {
+        "id": "Q97754517",
+        "name": "城西大学水田美術館",
+        "type": "大學博物館",
+        "coordinates": "Point(139.340988888 35.932808333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11628910",
+        "name": "西武園遊園地",
+        "type": "主題樂園",
+        "coordinates": "Point(139.442194 35.768306)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/5D3K0201%20%2811152952796%29.jpg"
+    },
+    {
+        "id": "Q108452484",
+        "name": "和銅鉱泉",
+        "type": "温泉镇",
+        "coordinates": "Point(139.106448 36.039856)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11277076",
+        "name": "ふじみ野市立上福岡歴史民俗資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(139.52825 35.875667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kamifukuoka%20History%20and%20Folk%20Museum.JPG"
+    },
+    {
+        "id": "Q21653901",
+        "name": "長瀞町郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(139.107611 36.092417)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagatoro%20Town%20Museum.JPG"
+    },
+    {
+        "id": "Q11248611",
+        "name": "埼玉縣立歷史與民俗博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(139.63 35.92111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saitama-rekimin2006%200715.jpg"
+    },
+    {
+        "id": "Q11477989",
+        "name": "川口市立科學館",
+        "type": "公開天文台",
+        "coordinates": "Point(139.719917 35.827333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kawaguchi%20Science%20Museum.JPG"
+    },
+    {
+        "id": "Q30934286",
+        "name": "旧坂東家住宅見沼くらしっく館",
+        "type": "古民家",
+        "coordinates": "Point(139.69077778 35.90619444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Minuma%20Classic%20museum.jpg"
+    },
+    {
+        "id": "Q11304884",
+        "name": "SATOE紀念21世紀美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.64070278 36.09996944)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11644497",
+        "name": "醤遊王国",
+        "type": "食物博物館",
+        "coordinates": "Point(139.34225 35.920667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hidaka%20Saitama%20Shoyu%20kingdom%201.JPG"
+    },
+    {
+        "id": "Q11279549",
+        "name": "武藏野村",
+        "type": "主題樂園",
+        "coordinates": "Point(139.550444 36.137417)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Musashino-mura.JPG"
+    },
+    {
+        "id": "Q11436948",
+        "name": "大澤家住宅",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(139.483203 35.924472)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%B7%9D%E8%B6%8A%E5%B8%82%E5%A4%A7%E6%B2%A2%E5%AE%B6%E4%BD%8F%E5%AE%852013-09.JPG"
+    },
+    {
+        "id": "Q11426751",
+        "name": "埼玉縣立自然之博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(139.116083 36.087444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ngatoro%20Saitamakenritu%20sizennohakubutukan%201.jpg"
+    },
+    {
+        "id": "Q21654949",
+        "name": "メッツァ",
+        "type": "主題公園",
+        "coordinates": "Point(139.329333333 35.8725)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Moominvalley%20Park%202019e.jpg"
+    },
+    {
+        "id": "Q30934286",
+        "name": "旧坂東家住宅見沼くらしっく館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(139.69077778 35.90619444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Minuma%20Classic%20museum.jpg"
+    },
+    {
+        "id": "Q846106",
+        "name": "鐵道博物館",
+        "type": "建築物",
+        "coordinates": "Point(139.61833333 35.92055556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Railway%20Museum%20Park%20Zone%2020071014%20%281%29.jpg"
+    },
+    {
+        "id": "Q11426772",
+        "name": "埼玉縣立近代美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.642917 35.869611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Museum%20of%20Modern%20Art%20Saitama%202010.jpg"
+    },
+    {
+        "id": "Q11267473",
+        "name": "埼玉市立岩槻鄉土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(139.693528 35.945444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Iwatsuki%20Local%20History%20Museum%2001.jpg"
+    },
+    {
+        "id": "Q22118792",
+        "name": "埼玉県立深谷商業高等学校記念館",
+        "type": "学校建筑",
+        "coordinates": "Point(139.291277777 36.197)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukaya-Commercial-HighSchool-MemorialHall-2013081501.jpg"
+    },
+    {
+        "id": "Q5017775",
+        "name": "埼玉縣立SAKITAMA史跡博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(139.47559 36.124928)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saitamaprefecturalmusuemofsakitamaancientburialmound-outside-may2011.jpg"
+    },
+    {
+        "id": "Q104696830",
+        "name": "富士見市立水子貝塚資料館",
+        "type": "考古博物館",
+        "coordinates": "Point(139.562293 35.8458)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%AF%8C%E5%A3%AB%E8%A6%8B%E5%B8%82%E7%AB%8B%E6%B0%B4%E5%AD%90%E8%B2%9D%E5%A1%9A%E8%B3%87%E6%96%99%E9%A4%A8%20-%20Mapillary%20%283589427237942297%29.jpg"
+    },
+    {
+        "id": "Q11436141",
+        "name": "碧雅翠絲·波特資料館",
+        "type": "人物紀念館",
+        "coordinates": "Point(139.374556 35.998972)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Beatrix%20Potter%20Reference%20Library%2C%20Daito%20Bunka%20University%20-%20Apr%2029%2C%202023.jpg"
+    },
+    {
+        "id": "Q123516739",
+        "name": "ほくさい美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.61607 36.12619)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q846106",
+        "name": "鐵道博物館",
+        "type": "鐵路博物館",
+        "coordinates": "Point(139.61833333 35.92055556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Railway%20Museum%20Park%20Zone%2020071014%20%281%29.jpg"
+    },
+    {
+        "id": "Q11675671",
+        "name": "鴻沼資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(139.62825 35.851167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saitama%20Konuma%20Museum%201.JPG"
+    },
+    {
+        "id": "Q11267523",
+        "name": "埼玉水族館",
+        "type": "水族館",
+        "coordinates": "Point(139.597861 36.173139)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11260799",
+        "name": "浦和美術館",
+        "type": "美術館",
+        "coordinates": "Point(139.652444 35.860667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/UrawaCenturyCity201303.jpg"
+    },
+    {
+        "id": "Q11426751",
+        "name": "埼玉縣立自然之博物館",
+        "type": "自然歷史博物館",
+        "coordinates": "Point(139.115905 36.08742)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ngatoro%20Saitamakenritu%20sizennohakubutukan%201.jpg"
+    },
+    {
+        "id": "Q11271756",
+        "name": "秩父銘仙館",
+        "type": "織物博物館",
+        "coordinates": "Point(139.087278 35.990556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chichibu%20Chichibumeisenkan%202.JPG"
+    },
+    {
+        "id": "Q56345064",
+        "name": "さいたま市立漫画会館",
+        "type": "動漫博物館",
+        "coordinates": "Point(139.63180556 35.92561111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saitama%20Saitama%20Municipal%20Manga%20Hall%201.JPG"
+    },
+    {
+        "id": "Q17991646",
+        "name": "大宫盆栽美术馆",
+        "type": "美術館",
+        "coordinates": "Point(139.633333 35.928778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/OmiyaBonsaiVillage%20%C5%8Cmiya-Bonsai-Art-Museum%20001.jpg"
+    },
+    {
+        "id": "Q123517248",
+        "name": "桶川市歴史民俗資料館",
+        "type": "市立博物館",
+        "coordinates": "Point(139.52669 35.993843)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11426772",
+        "name": "埼玉縣立近代美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(139.642917 35.869611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Museum%20of%20Modern%20Art%20Saitama%202010.jpg"
+    },
+    {
+        "id": "Q11477989",
+        "name": "川口市立科學館",
+        "type": "科學博物館",
+        "coordinates": "Point(139.719917 35.827333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kawaguchi%20Science%20Museum.JPG"
+    },
+    {
+        "id": "Q11267531",
+        "name": "埼玉綠之森博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(139.384056 35.786278)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q22120897",
+        "name": "ワク井ミュージアム",
+        "type": "汽車博物館",
+        "coordinates": "Point(139.63631944 36.12376111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q101456044",
+        "name": "八潮市立資料館",
+        "type": "地方公文書館",
+        "coordinates": "Point(139.820916666 35.826805555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11234989",
+        "name": "NHK檔案館",
+        "type": "檔案館",
+        "coordinates": "Point(139.72119444 35.82769444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/NHK%20Archives%20Building.JPG"
+    },
+    {
+        "id": "Q104661157",
+        "name": "角川武蔵野ミュージアム",
+        "type": "圖書館",
+        "coordinates": "Point(139.50775 35.79767)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kadokawa%20Culture%20Museum%20at%20Tokorozawa%20Sakura%20Town%20%2850608208297%29.jpg"
+    },
+    {
+        "id": "Q1058730",
+        "name": "約翰·藍儂博物館",
+        "type": "博物館",
+        "coordinates": "Point(139.63083333 35.89488889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/John%20Lennon%20Museum.jpg"
+    },
+    {
+        "id": "Q136162980",
+        "name": "朝霞市博物館",
+        "type": "博物館",
+        "coordinates": "Point(139.597222222 35.812638888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Asaka%20City%20Museum.jpg"
+    },
+    {
+        "id": "Q104661157",
+        "name": "角川武蔵野ミュージアム",
+        "type": "博物馆建筑",
+        "coordinates": "Point(139.50775 35.79767)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kadokawa%20Culture%20Museum%20at%20Tokorozawa%20Sakura%20Town%20%2850608208297%29.jpg"
+    },
+    {
+        "id": "Q104661157",
+        "name": "角川武蔵野ミュージアム",
+        "type": "博物館",
+        "coordinates": "Point(139.50775 35.79767)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kadokawa%20Culture%20Museum%20at%20Tokorozawa%20Sakura%20Town%20%2850608208297%29.jpg"
+    },
+    {
+        "id": "Q21653084",
+        "name": "彩湖自然学習センター",
+        "type": "教育組織",
+        "coordinates": "Point(139.634277777 35.817888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saiko%20Nature%20Study%20Center.JPG"
+    },
+    {
+        "id": "Q21653084",
+        "name": "彩湖自然学習センター",
+        "type": "博物館",
+        "coordinates": "Point(139.634277777 35.817888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saiko%20Nature%20Study%20Center.JPG"
+    },
+    {
+        "id": "Q104696832",
+        "name": "熊谷市立熊谷図書館　美術・郷土資料展示室",
+        "type": "博物館",
+        "coordinates": "Point(139.38674 36.137237)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11596101",
+        "name": "秩父故鄉館",
+        "type": "博物館",
+        "coordinates": "Point(139.082417 35.997)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chichibu%20Furusato%20Kan.JPG"
+    },
+    {
+        "id": "Q107056127",
+        "name": "浦和市立郷土博物館",
+        "type": "博物館",
+        "coordinates": "Point(139.677611 35.890528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saitama%20Municipal%20Urawa%20Museum%202011.jpg"
+    },
+    {
+        "id": "Q11642535",
+        "name": "遷喬館",
+        "type": "博物館",
+        "coordinates": "Point(139.698111111 35.948888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Senkyokan%2002.jpg"
+    },
+    {
+        "id": "Q123516594",
+        "name": "長島記念館",
+        "type": "纪念博物馆",
+        "coordinates": "Point(139.43687 36.07949)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11267509",
+        "name": "埼玉市青少年宇宙科學館",
+        "type": "社会教育施設",
+        "coordinates": "Point(139.664611 35.872278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saitama%20Municupal%20Youth%20Astronomical%20Museum%201.JPG"
+    },
+    {
+        "id": "Q11479196",
+        "name": "川越祭會館",
+        "type": "山車会館",
+        "coordinates": "Point(139.482361 35.924306)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kawagoe%20Festival%20Museum.JPG"
+    },
+    {
+        "id": "Q132574952",
+        "name": "ハイパーミュージアム飯能",
+        "type": "現代美術館",
+        "coordinates": "Point(139.323856 35.871107)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q21652549",
+        "name": "浦山歷史民俗資料館",
+        "type": "民俗博物館",
+        "coordinates": "Point(139.05998889 35.96441389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Urayama%20Folk%20Museum.JPG"
+    },
+    {
+        "id": "Q104696836",
+        "name": "飯能市立博物館",
+        "type": "博物館",
+        "coordinates": "Point(139.310733 35.857286)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hanno%20Museum%2020191102a.jpg"
+    },
+    {
+        "id": "Q11248600",
+        "name": "埼玉市立浦和博物館",
+        "type": "博物館",
+        "coordinates": "Point(139.677611 35.890528)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saitama%20Municipal%20Urawa%20Museum%202011.jpg"
+    },
+    {
+        "id": "Q11642535",
+        "name": "遷喬館",
+        "type": "私塾",
+        "coordinates": "Point(139.698111111 35.948888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Senkyokan%2002.jpg"
+    },
+    {
+        "id": "Q21652654",
+        "name": "おがの化石館",
+        "type": "古生物博物馆",
+        "coordinates": "Point(139.04403333 36.01912222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fossil%20Museum%20of%20Ogano%201.jpg"
+    },
+    {
+        "id": "Q104696838",
+        "name": "坂戸市立歴史民俗資料館",
+        "type": "博物館",
+        "coordinates": "Point(139.419406 35.976619)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11642535",
+        "name": "遷喬館",
+        "type": "藩校",
+        "coordinates": "Point(139.698111111 35.948888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Senkyokan%2002.jpg"
+    },
+    {
+        "id": "Q11234989",
+        "name": "NHK檔案館",
+        "type": "博物館",
+        "coordinates": "Point(139.72119444 35.82769444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/NHK%20Archives%20Building.JPG"
+    },
+    {
+        "id": "Q11267509",
+        "name": "埼玉市青少年宇宙科學館",
+        "type": "天文博物館",
+        "coordinates": "Point(139.664611 35.872278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saitama%20Municupal%20Youth%20Astronomical%20Museum%201.JPG"
+    }
+]

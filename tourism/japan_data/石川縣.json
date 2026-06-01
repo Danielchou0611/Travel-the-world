@@ -1,0 +1,709 @@
+[
+    {
+        "id": "Q11559002",
+        "name": "海洋漁業科學館",
+        "type": "科學博物館",
+        "coordinates": "Point(137.148583 37.296806)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q130534097",
+        "name": "金沢市立玉川図書館近世史料館",
+        "type": "圖書館分館",
+        "coordinates": "Point(136.651611111 36.570083333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%87%91%E6%B2%A2%E5%B8%82%E7%AB%8B%E7%8E%89%E5%B7%9D%E5%9B%B3%E6%9B%B8%E9%A4%A8003.jpg"
+    },
+    {
+        "id": "Q11585938",
+        "name": "石川県九谷焼美術館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(136.310306 36.302758)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%B9%9D%E8%B0%B7%E7%84%BC%E7%BE%8E%E8%A1%93%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q101001030",
+        "name": "國立工藝館",
+        "type": "國立博物館",
+        "coordinates": "Point(136.661806 36.559167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/National%20Crafts%20Museum%20in%20Kanazawa%2020201116-001.jpg"
+    },
+    {
+        "id": "Q11529176",
+        "name": "松井秀喜棒球博物館",
+        "type": "人物紀念館",
+        "coordinates": "Point(136.43652778 36.43097222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Matsui%20Hideki%20Baseball%20Museum%201.jpg"
+    },
+    {
+        "id": "Q11508954",
+        "name": "日本汽車博物館",
+        "type": "汽車博物館",
+        "coordinates": "Point(136.43055556 36.33444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Motorcar%20Museum%20of%20Japan%20April%202023.jpg"
+    },
+    {
+        "id": "Q11585933",
+        "name": "石川県七尾美術館",
+        "type": "美術館",
+        "coordinates": "Point(136.953732 37.044811)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%9F%B3%E5%B7%9D%E7%9C%8C%E4%B8%83%E5%B0%BE%E7%BE%8E%E8%A1%93%E9%A4%A8%20Nanao%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q11586047",
+        "name": "石川縣輪島漆藝美術館",
+        "type": "美術館",
+        "coordinates": "Point(136.892083 37.389861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%9F%B3%E5%B7%9D%E7%9C%8C%E8%BC%AA%E5%B3%B6%E6%BC%86%E8%8A%B8%E7%BE%8E%E8%A1%93%E9%A4%A8%E5%A4%96%E8%A6%B3.jpg"
+    },
+    {
+        "id": "Q3297759",
+        "name": "石川縣立美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(136.661388888 36.56)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ishikawa%20Prefectural%20Museum%20of%20Art.JPG"
+    },
+    {
+        "id": "Q11436507",
+        "name": "大樋美術館",
+        "type": "私人博物館",
+        "coordinates": "Point(136.664494 36.569975)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ohimuseum%20MG%203362a.JPG"
+    },
+    {
+        "id": "Q130534097",
+        "name": "金沢市立玉川図書館近世史料館",
+        "type": "圖書館",
+        "coordinates": "Point(136.651611111 36.570083333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%87%91%E6%B2%A2%E5%B8%82%E7%AB%8B%E7%8E%89%E5%B7%9D%E5%9B%B3%E6%9B%B8%E9%A4%A8003.jpg"
+    },
+    {
+        "id": "Q4676340",
+        "name": "石川県立歴史博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(136.66277778 36.55861111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ishikawa-ken%20History%20Museum03s3s4272b.jpg"
+    },
+    {
+        "id": "Q82594996",
+        "name": "白山市立松任中川一政記念美術館",
+        "type": "美術館",
+        "coordinates": "Point(136.567888888 36.526722222)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q121286260",
+        "name": "加賀市美術館",
+        "type": "美術館",
+        "coordinates": "Point(136.351454084 36.319586671)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kaga%20City%20Art%20Museum%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q17226278",
+        "name": "中谷宇吉郎雪の科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(136.3625 36.35244444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nakaya%20Ukichoro%20Museum%20of%20Snow%20and%20Ice.JPG"
+    },
+    {
+        "id": "Q11648713",
+        "name": "鈴木大拙館",
+        "type": "人物紀念館",
+        "coordinates": "Point(136.660972 36.557639)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%88%B4%E6%9C%A8%E5%A4%A7%E6%8B%99%E9%A4%A8001.jpg"
+    },
+    {
+        "id": "Q11629456",
+        "name": "西茶屋資料館",
+        "type": "人物紀念館",
+        "coordinates": "Point(136.647328 36.556667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nishichayashiryokan003.jpg"
+    },
+    {
+        "id": "Q130534097",
+        "name": "金沢市立玉川図書館近世史料館",
+        "type": "博物馆建筑",
+        "coordinates": "Point(136.651611111 36.570083333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%87%91%E6%B2%A2%E5%B8%82%E7%AB%8B%E7%8E%89%E5%B7%9D%E5%9B%B3%E6%9B%B8%E9%A4%A8003.jpg"
+    },
+    {
+        "id": "Q5600400",
+        "name": "栢野大杉",
+        "type": "巨樹",
+        "coordinates": "Point(136.36 36.2275)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kayano%20%C5%8Csugi%2020070814.jpg"
+    },
+    {
+        "id": "Q82594996",
+        "name": "白山市立松任中川一政記念美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(136.567888888 36.526722222)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q126200035",
+        "name": "トレインパーク白山",
+        "type": "鐵路博物館",
+        "coordinates": "Point(136.533333 36.514444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%83%88%E3%83%AC%E3%82%A4%E3%83%B3%E3%83%91%E3%83%BC%E3%82%AF%E7%99%BD%E5%B1%B1.jpg"
+    },
+    {
+        "id": "Q11647356",
+        "name": "金澤古里偉人館",
+        "type": "人物紀念館",
+        "coordinates": "Point(136.657917 36.559167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Great%20People%20of%20Kanazawa%20Memorial%20Museum%2001.jpg"
+    },
+    {
+        "id": "Q17226278",
+        "name": "中谷宇吉郎雪の科学館",
+        "type": "人物紀念館",
+        "coordinates": "Point(136.3625 36.35244444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nakaya%20Ukichoro%20Museum%20of%20Snow%20and%20Ice.JPG"
+    },
+    {
+        "id": "Q11586386",
+        "name": "石川近代文学館",
+        "type": "文學館",
+        "coordinates": "Point(136.65577778 36.5625)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Forth%20High%20School%20Memorial%20Museum%20of%20Cultural%20Exchange%20Ishikawa05s3s3750.jpg"
+    },
+    {
+        "id": "Q11586272",
+        "name": "石川県銭屋五兵衛記念館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(136.59709722 36.59692222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%8A%AD%E5%B1%8B%E4%BA%94%E5%85%B5%E8%A1%9B%E8%A8%98%E5%BF%B5%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11647502",
+        "name": "金沢湯涌夢二館",
+        "type": "人物紀念館",
+        "coordinates": "Point(136.757444 36.485972)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131109%20Kanazawa%20Yuwaku%20Yumeji-kan%20Museum%20Kanazawa%20Ishikawa%20pref%20Japan02s3.jpg"
+    },
+    {
+        "id": "Q11586047",
+        "name": "石川縣輪島漆藝美術館",
+        "type": "工藝博物館",
+        "coordinates": "Point(136.892083 37.389861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%9F%B3%E5%B7%9D%E7%9C%8C%E8%BC%AA%E5%B3%B6%E6%BC%86%E8%8A%B8%E7%BE%8E%E8%A1%93%E9%A4%A8%E5%A4%96%E8%A6%B3.jpg"
+    },
+    {
+        "id": "Q133273176",
+        "name": "加賀国府ものがたり館",
+        "type": "考古博物館",
+        "coordinates": "Point(136.516944 36.411946)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132890597",
+        "name": "南惣美術館",
+        "type": "美術館",
+        "coordinates": "Point(137.067177 37.441)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q111585833",
+        "name": "堂形のシイノキ",
+        "type": "巨樹",
+        "coordinates": "Point(136.657833333 36.562166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Grand%20chinquapin%20tree%20in%20front%20of%20Shiinoki%20Cultural%20Complex%20of%20Ishikawa%20Prefecture.JPG"
+    },
+    {
+        "id": "Q11586008",
+        "name": "石川県立自然史資料館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(136.705694 36.523111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ishikawaken%20Shizenshi%20siryokan.JPG"
+    },
+    {
+        "id": "Q8061361",
+        "name": "加賀 伝統工芸村 ゆのくにの森",
+        "type": "主題公園",
+        "coordinates": "Point(136.437 36.3244)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yunokuni%20no%20mori%20echizen%20no%20yakata.jpg"
+    },
+    {
+        "id": "Q11586047",
+        "name": "石川縣輪島漆藝美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(136.892083 37.389861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%9F%B3%E5%B7%9D%E7%9C%8C%E8%BC%AA%E5%B3%B6%E6%BC%86%E8%8A%B8%E7%BE%8E%E8%A1%93%E9%A4%A8%E5%A4%96%E8%A6%B3.jpg"
+    },
+    {
+        "id": "Q104709114",
+        "name": "輪島塗会館",
+        "type": "工藝博物館",
+        "coordinates": "Point(136.900172 37.394093)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Wajima-nuri%20Kaikan%20ac.jpg"
+    },
+    {
+        "id": "Q7446985",
+        "name": "成巽閣",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(136.66305556 36.56111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131109%20Seisonkaku%20Kanazawa%20Ishikawa%20pref%20Japan10s3.jpg"
+    },
+    {
+        "id": "Q4676340",
+        "name": "石川県立歴史博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(136.66277778 36.55861111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ishikawa-ken%20History%20Museum03s3s4272b.jpg"
+    },
+    {
+        "id": "Q11586039",
+        "name": "石川縣能登島玻璃美術館",
+        "type": "美術館",
+        "coordinates": "Point(136.996388888 37.137222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ishikawa%20Prefecture%20Notojima%20Glass%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q42898428",
+        "name": "金泽市立安江金箔工艺馆",
+        "type": "工藝博物館",
+        "coordinates": "Point(136.66594444 36.57375)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yasuekinpakukogeikan003.jpg"
+    },
+    {
+        "id": "Q11647524",
+        "name": "金澤能樂美術館",
+        "type": "美術館",
+        "coordinates": "Point(136.658056 36.561611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kanazawanogakumuseum003.jpg"
+    },
+    {
+        "id": "Q11275197",
+        "name": "能登島臨海公園水族館",
+        "type": "水族館",
+        "coordinates": "Point(136.98222222 37.14916667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Notojima%20Suizokukan.jpg"
+    },
+    {
+        "id": "Q11490424",
+        "name": "徳田秋聲記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(136.667083 36.570917)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tokudashuseikinenkan002.jpg"
+    },
+    {
+        "id": "Q11647436",
+        "name": "金澤市立中村紀念美術館",
+        "type": "美術館",
+        "coordinates": "Point(136.660556 36.558889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%87%91%E6%B2%A2%E5%B8%82%E7%AB%8B%E4%B8%AD%E6%9D%91%E8%A8%98%E5%BF%B5%E7%BE%8E%E8%A1%93%E9%A4%A8002.jpg"
+    },
+    {
+        "id": "Q3242206",
+        "name": "金澤21世紀美術館",
+        "type": "藝廊",
+        "coordinates": "Point(136.658 36.5608)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/21st%20Century%20Museum%20of%20Contemporary%20Art%2C%20Kanazawa011.jpg"
+    },
+    {
+        "id": "Q11586272",
+        "name": "石川県銭屋五兵衛記念館",
+        "type": "海事博物館",
+        "coordinates": "Point(136.59709722 36.59692222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%8A%AD%E5%B1%8B%E4%BA%94%E5%85%B5%E8%A1%9B%E8%A8%98%E5%BF%B5%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11461140",
+        "name": "小松市立ポッポ汽車展示館",
+        "type": "鐵路博物館",
+        "coordinates": "Point(136.536139 36.296556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%83%9D%E3%83%83%E3%83%9D%E6%B1%BD%E8%BB%8A%E5%B1%95%E7%A4%BA%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11586011",
+        "name": "石川県立航空プラザ",
+        "type": "航空博物館",
+        "coordinates": "Point(136.685306 36.68025)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ishikawa%20Aviation%20Plaza%202.jpg"
+    },
+    {
+        "id": "Q11289253",
+        "name": "ウルトラマンスタジアム",
+        "type": "主題公園",
+        "coordinates": "Point(136.50925 36.459083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tedori%20Fish%20Land.jpg"
+    },
+    {
+        "id": "Q123517288",
+        "name": "太鼓の里資料館",
+        "type": "柏林乐器博物馆",
+        "coordinates": "Point(136.52412 36.491062)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q17192984",
+        "name": "石川県金沢港大野からくり記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(136.604389 36.618972)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ono%20karakuri%20museum.jpg"
+    },
+    {
+        "id": "Q11647524",
+        "name": "金澤能樂美術館",
+        "type": "剧院博物馆",
+        "coordinates": "Point(136.658056 36.561611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kanazawanogakumuseum003.jpg"
+    },
+    {
+        "id": "Q11585980",
+        "name": "石川縣立傳統产業工藝館",
+        "type": "工藝博物館",
+        "coordinates": "Point(136.66400556 36.56112222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ishikawa%20Prefectural%20Museum%20of%20Traditional%20Arts%20and%20Crafts.jpg"
+    },
+    {
+        "id": "Q11647504",
+        "name": "金沢湯涌江戸村",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(136.756028 36.49075)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131109%20Kanazawa%20Yuwaku%20Edomura%20Kanazawa%20Ishikawa%20pref%20Japan08bs9.jpg"
+    },
+    {
+        "id": "Q11585980",
+        "name": "石川縣立傳統产業工藝館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(136.66400556 36.56112222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ishikawa%20Prefectural%20Museum%20of%20Traditional%20Arts%20and%20Crafts.jpg"
+    },
+    {
+        "id": "Q11629456",
+        "name": "西茶屋資料館",
+        "type": "博物館",
+        "coordinates": "Point(136.647328 36.556667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nishichayashiryokan003.jpg"
+    },
+    {
+        "id": "Q11461143",
+        "name": "小松市立博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(136.44830556 36.40888889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Komatsu%20Municipal%20Museum.jpg"
+    },
+    {
+        "id": "Q11453044",
+        "name": "室生犀星記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(136.648194 36.559056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Muro%20Saisei%20Kinenkan%20Museum001.jpg"
+    },
+    {
+        "id": "Q11647461",
+        "name": "金沢市足軽資料館",
+        "type": "武家地",
+        "coordinates": "Point(136.65 36.566111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ashigaru%20Shiryokan%20Museum%2001.jpg"
+    },
+    {
+        "id": "Q11586272",
+        "name": "石川県銭屋五兵衛記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(136.59709722 36.59692222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%8A%AD%E5%B1%8B%E4%BA%94%E5%85%B5%E8%A1%9B%E8%A8%98%E5%BF%B5%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11417155",
+        "name": "和倉昭和博物館とおもちゃ館",
+        "type": "玩具博物館",
+        "coordinates": "Point(136.919777777 37.079888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Museum%20of%20Showa%20and%20Toy%2C%20Nanao.jpg"
+    },
+    {
+        "id": "Q130534097",
+        "name": "金沢市立玉川図書館近世史料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(136.651611111 36.570083333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%87%91%E6%B2%A2%E5%B8%82%E7%AB%8B%E7%8E%89%E5%B7%9D%E5%9B%B3%E6%9B%B8%E9%A4%A8003.jpg"
+    },
+    {
+        "id": "Q11302097",
+        "name": "COSMO ISLE羽咋",
+        "type": "宇宙工学博物館",
+        "coordinates": "Point(136.78827778 36.89813889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cosmo%20Isle%20Hakui.jpg"
+    },
+    {
+        "id": "Q11554950",
+        "name": "泉鏡花記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(136.663056 36.571444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%B3%89%E9%8F%A1%E8%8A%B1%E8%A8%98%E5%BF%B5%E9%A4%A8004.jpg"
+    },
+    {
+        "id": "Q11529176",
+        "name": "松井秀喜棒球博物館",
+        "type": "體育博物館",
+        "coordinates": "Point(136.43652778 36.43097222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Matsui%20Hideki%20Baseball%20Museum%201.jpg"
+    },
+    {
+        "id": "Q3242206",
+        "name": "金澤21世紀美術館",
+        "type": "現代美術館",
+        "coordinates": "Point(136.658 36.5608)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/21st%20Century%20Museum%20of%20Contemporary%20Art%2C%20Kanazawa011.jpg"
+    },
+    {
+        "id": "Q11647502",
+        "name": "金沢湯涌夢二館",
+        "type": "美術館",
+        "coordinates": "Point(136.757444 36.485972)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131109%20Kanazawa%20Yuwaku%20Yumeji-kan%20Museum%20Kanazawa%20Ishikawa%20pref%20Japan02s3.jpg"
+    },
+    {
+        "id": "Q11436507",
+        "name": "大樋美術館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(136.664494 36.569975)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ohimuseum%20MG%203362a.JPG"
+    },
+    {
+        "id": "Q107095847",
+        "name": "七尾城史資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(136.976138888 37.024611111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q20044418",
+        "name": "小松科學之丘科學館",
+        "type": "科學博物館",
+        "coordinates": "Point(136.45555556 36.40138889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Science%20hills%20komatsu%20entrance.jpg"
+    },
+    {
+        "id": "Q11647504",
+        "name": "金沢湯涌江戸村",
+        "type": "歷史博物館",
+        "coordinates": "Point(136.756028 36.49075)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131109%20Kanazawa%20Yuwaku%20Edomura%20Kanazawa%20Ishikawa%20pref%20Japan08bs9.jpg"
+    },
+    {
+        "id": "Q11586041",
+        "name": "石川縣西田幾多郎紀念哲學館",
+        "type": "人物紀念館",
+        "coordinates": "Point(136.693889 36.714167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nishida%20Museum.jpg"
+    },
+    {
+        "id": "Q101001030",
+        "name": "國立工藝館",
+        "type": "美術館",
+        "coordinates": "Point(136.661806 36.559167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/National%20Crafts%20Museum%20in%20Kanazawa%2020201116-001.jpg"
+    },
+    {
+        "id": "Q11579606",
+        "name": "金城学園白山美術館",
+        "type": "美術館",
+        "coordinates": "Point(136.530717 36.508451)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q17192984",
+        "name": "石川県金沢港大野からくり記念館",
+        "type": "博物館",
+        "coordinates": "Point(136.604389 36.618972)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ono%20karakuri%20museum.jpg"
+    },
+    {
+        "id": "Q123516881",
+        "name": "能美市九谷焼美術館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(136.52097 36.428097)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11417155",
+        "name": "和倉昭和博物館とおもちゃ館",
+        "type": "レトロテーマパーク",
+        "coordinates": "Point(136.919777777 37.079888888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Museum%20of%20Showa%20and%20Toy%2C%20Nanao.jpg"
+    },
+    {
+        "id": "Q7446985",
+        "name": "成巽閣",
+        "type": "武家地",
+        "coordinates": "Point(136.66305556 36.56111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131109%20Seisonkaku%20Kanazawa%20Ishikawa%20pref%20Japan10s3.jpg"
+    },
+    {
+        "id": "Q3297759",
+        "name": "石川縣立美術館",
+        "type": "美術館",
+        "coordinates": "Point(136.661388888 36.56)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ishikawa%20Prefectural%20Museum%20of%20Art.JPG"
+    },
+    {
+        "id": "Q11586008",
+        "name": "石川県立自然史資料館",
+        "type": "自然歷史博物館",
+        "coordinates": "Point(136.705694 36.523111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ishikawaken%20Shizenshi%20siryokan.JPG"
+    },
+    {
+        "id": "Q5600400",
+        "name": "栢野大杉",
+        "type": "神木",
+        "coordinates": "Point(136.36 36.2275)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kayano%20%C5%8Csugi%2020070814.jpg"
+    },
+    {
+        "id": "Q104709142",
+        "name": "金沢大学資料館",
+        "type": "大學博物館",
+        "coordinates": "Point(136.710826 36.548729)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11647461",
+        "name": "金沢市足軽資料館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(136.65 36.566111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ashigaru%20Shiryokan%20Museum%2001.jpg"
+    },
+    {
+        "id": "Q101001030",
+        "name": "國立工藝館",
+        "type": "工藝博物館",
+        "coordinates": "Point(136.661806 36.559167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/National%20Crafts%20Museum%20in%20Kanazawa%2020201116-001.jpg"
+    },
+    {
+        "id": "Q11496930",
+        "name": "手取魚樂園",
+        "type": "主題樂園",
+        "coordinates": "Point(136.50925 36.459083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tedori%20Fish%20Land.jpg"
+    },
+    {
+        "id": "Q11585933",
+        "name": "石川県七尾美術館",
+        "type": "博物馆建筑",
+        "coordinates": "Point(136.953732 37.044811)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%9F%B3%E5%B7%9D%E7%9C%8C%E4%B8%83%E5%B0%BE%E7%BE%8E%E8%A1%93%E9%A4%A8%20Nanao%20Art%20Museum.jpg"
+    },
+    {
+        "id": "Q11397505",
+        "name": "前田土佐守家資料館",
+        "type": "博物館",
+        "coordinates": "Point(136.65087222 36.56241667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%89%8D%E7%94%B0%E5%9C%9F%E4%BD%90%E5%AE%88%E5%AE%B6%E8%B3%87%E6%96%99%E9%A4%A8001.jpg"
+    },
+    {
+        "id": "Q130727051",
+        "name": "懐古館（旧飯田家住宅）",
+        "type": "有形文化財產",
+        "coordinates": "Point(136.976334 37.024332)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q130727051",
+        "name": "懐古館（旧飯田家住宅）",
+        "type": "博物館",
+        "coordinates": "Point(136.976334 37.024332)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11625080",
+        "name": "加賀本多博物館",
+        "type": "博物館",
+        "coordinates": "Point(136.66175 36.559083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ishikawa-ken%20History%20Museum03s3s4272b.jpg"
+    },
+    {
+        "id": "Q11579575",
+        "name": "白山市立鶴来博物館",
+        "type": "博物館",
+        "coordinates": "Point(136.63225 36.447777777)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q136486637",
+        "name": "魯山人寓居跡 いろは草庵",
+        "type": "博物館",
+        "coordinates": "Point(136.360634373 36.287933809)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q113163171",
+        "name": "輪島キリコ会館",
+        "type": "山車会館",
+        "coordinates": "Point(136.907655 37.397062)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Wajima%20Kiriko%20Art%20Museum%20ac%20%283%29.jpg"
+    },
+    {
+        "id": "Q136486637",
+        "name": "魯山人寓居跡 いろは草庵",
+        "type": "古蹟",
+        "coordinates": "Point(136.360634373 36.287933809)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q97274614",
+        "name": "和倉温泉お祭り会館",
+        "type": "山車会館",
+        "coordinates": "Point(136.91875 37.086583333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11420187",
+        "name": "四高記念文化交流館",
+        "type": "旧学校施設",
+        "coordinates": "Point(136.655778 36.5625)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Fourth%20High%20School%20Memorial%20Museum%20of%20Cultural%20Exchange%20Ishikawa.jpg"
+    },
+    {
+        "id": "Q11397505",
+        "name": "前田土佐守家資料館",
+        "type": "house archive",
+        "coordinates": "Point(136.65087222 36.56241667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%89%8D%E7%94%B0%E5%9C%9F%E4%BD%90%E5%AE%88%E5%AE%B6%E8%B3%87%E6%96%99%E9%A4%A8001.jpg"
+    },
+    {
+        "id": "Q11585931",
+        "name": "石川縣親睦昆蟲館",
+        "type": "昆虫博物館",
+        "coordinates": "Point(136.632222 36.444167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ishikawa%20Insect%20Museum.jpg"
+    },
+    {
+        "id": "Q11364345",
+        "name": "中島祭資料館·祭傳承館",
+        "type": "博物館",
+        "coordinates": "Point(136.8325 37.128889)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q65274349",
+        "name": "白山恐竜パーク白峰",
+        "type": "恐竜公園",
+        "coordinates": "Point(136.625611111 36.203694444)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q136486637",
+        "name": "魯山人寓居跡 いろは草庵",
+        "type": "古民家",
+        "coordinates": "Point(136.360634373 36.287933809)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11420187",
+        "name": "四高記念文化交流館",
+        "type": "博物館",
+        "coordinates": "Point(136.655778 36.5625)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Fourth%20High%20School%20Memorial%20Museum%20of%20Cultural%20Exchange%20Ishikawa.jpg"
+    },
+    {
+        "id": "Q43064611",
+        "name": "金沢蓄音器館",
+        "type": "博物館",
+        "coordinates": "Point(136.66272222 36.57130556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kanazawa%20Phonograph%20Museum%2002.jpg"
+    }
+]

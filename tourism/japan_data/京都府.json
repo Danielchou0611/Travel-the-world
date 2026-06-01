@@ -1,0 +1,1199 @@
+[
+    {
+        "id": "Q3478488",
+        "name": "泉屋博古馆",
+        "type": "美術館",
+        "coordinates": "Point(135.7929 35.0176)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/SenokuHakkoKan.jpg"
+    },
+    {
+        "id": "Q11622794",
+        "name": "藤井有邻馆",
+        "type": "美術館",
+        "coordinates": "Point(135.781278 35.011694)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yurinkan%20Museum.jpg"
+    },
+    {
+        "id": "Q132529351",
+        "name": "いけばな資料館",
+        "type": "美術館",
+        "coordinates": "Point(135.76008 35.008013)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q127602236",
+        "name": "大西清右衛門美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.755747 35.008477)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Onishi%20Seiwemon%20Museum.jpg"
+    },
+    {
+        "id": "Q11375286",
+        "name": "京都府立陶板名画の庭",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(135.76530556 35.05111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/LastSupper-GardenOfFineArtKyoto.jpg"
+    },
+    {
+        "id": "Q11402029",
+        "name": "北村美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.770361 35.028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Kitamura%20Art%20Museum%202013-08.JPG"
+    },
+    {
+        "id": "Q1055628",
+        "name": "京都國立近代美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.781943 35.012389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/National%20Museum%20of%20Modern%20Art%20Kyoto%202010.jpg"
+    },
+    {
+        "id": "Q11594325",
+        "name": "福知山市佐藤太清記念美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.130333 35.2975)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Taisei%20Sato%20Memorial%20Art%20Museum01st3200.jpg"
+    },
+    {
+        "id": "Q11375286",
+        "name": "京都府立陶板名画の庭",
+        "type": "戶外博物館",
+        "coordinates": "Point(135.76530556 35.05111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/LastSupper-GardenOfFineArtKyoto.jpg"
+    },
+    {
+        "id": "Q131431514",
+        "name": "福知山市児童科学館",
+        "type": "科學博物館",
+        "coordinates": "Point(135.136334 35.312214)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q6452177",
+        "name": "立命館大学国際平和ミュージアム",
+        "type": "大學博物館",
+        "coordinates": "Point(135.72730556 35.03369444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ritsumeikan-Univ-Kinugasa-04.jpg"
+    },
+    {
+        "id": "Q21190901",
+        "name": "大谷大学博物館",
+        "type": "大學博物館",
+        "coordinates": "Point(135.758854 35.041811)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Otani-Univ-03.jpg"
+    },
+    {
+        "id": "Q21019672",
+        "name": "高麗美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.750807 35.054292)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Koryo%20Museum.jpg"
+    },
+    {
+        "id": "Q11532219",
+        "name": "松花堂",
+        "type": "日本庭園",
+        "coordinates": "Point(135.701778 34.879583)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11645680",
+        "name": "野村美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.793333 35.012917)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%BE%8E%E8%A1%93%E9%A4%A8%E5%A4%96%E8%A6%B3.jpg"
+    },
+    {
+        "id": "Q11532219",
+        "name": "松花堂",
+        "type": "美術館",
+        "coordinates": "Point(135.701778 34.879583)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q18337620",
+        "name": "並河靖之七宝記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(135.781306 35.009889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Namikawa%20cloisonne%20museum%20of%20kyoto.jpg"
+    },
+    {
+        "id": "Q11381116",
+        "name": "伏見桃山城キャッスルランド",
+        "type": "主題樂園",
+        "coordinates": "Point(135.776805555 34.939472222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%BC%8F%E8%A6%8B%E6%A1%83%E5%B1%B1%E5%9F%8E06.jpg"
+    },
+    {
+        "id": "Q127598408",
+        "name": "京都精華大学ギャラリーTerra-S",
+        "type": "美術館",
+        "coordinates": "Point(135.770346 35.072821)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11533890",
+        "name": "染・清流館",
+        "type": "美術館",
+        "coordinates": "Point(135.758389 35.005583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dye%20museum%20Seiryu%2002.jpg"
+    },
+    {
+        "id": "Q30933052",
+        "name": "龙谷博物馆",
+        "type": "宗教博物馆",
+        "coordinates": "Point(135.75336111 34.99111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/170128%20Ryukoku%20Museum%20Kyoto%20Japan02n.jpg"
+    },
+    {
+        "id": "Q17230147",
+        "name": "古田織部美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.73275 35.057694)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%8F%A4%E7%94%B0%E7%B9%94%E9%83%A8%E7%BE%8E%E8%A1%93%E9%A4%A8%E5%A4%96%E8%A6%B3.jpg"
+    },
+    {
+        "id": "Q118145425",
+        "name": "京都清宗根付館",
+        "type": "美術館",
+        "coordinates": "Point(135.744638888 35.001444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Netsuke%20art%20museum%20%28Kyoto%29%20Minka%20outdoor%20hdsr%20S5%20a2.jpg"
+    },
+    {
+        "id": "Q17211497",
+        "name": "きっづ光科学館ふぉとん",
+        "type": "兒童博物館",
+        "coordinates": "Point(135.835778 34.713778)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q30266176",
+        "name": "京都市青少年科学センター",
+        "type": "科學博物館",
+        "coordinates": "Point(135.764512 34.954512)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Municipal%20Science%20Center.jpg"
+    },
+    {
+        "id": "Q1055628",
+        "name": "京都國立近代美術館",
+        "type": "國立博物館",
+        "coordinates": "Point(135.781943 35.012389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/National%20Museum%20of%20Modern%20Art%20Kyoto%202010.jpg"
+    },
+    {
+        "id": "Q132529053",
+        "name": "中信美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.753674 35.020048)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q3330657",
+        "name": "京都市美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.78356944 35.01283611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Municipal%20Museum%20of%20Art%201933%20%E2%85%B1.jpg"
+    },
+    {
+        "id": "Q11375242",
+        "name": "京都府立堂本印象美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.726056 35.035139)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Insho-Domoto%20Museum%20of%20Fine%20Arts01s5.jpg"
+    },
+    {
+        "id": "Q99551687",
+        "name": "京都市立芸術大学ギャラリー",
+        "type": "美術館",
+        "coordinates": "Point(135.752516655 35.011700488)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q30933052",
+        "name": "龙谷博物馆",
+        "type": "大學博物館",
+        "coordinates": "Point(135.75336111 34.99111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/170128%20Ryukoku%20Museum%20Kyoto%20Japan02n.jpg"
+    },
+    {
+        "id": "Q138315086",
+        "name": "千總ギャラリー",
+        "type": "美術館",
+        "coordinates": "Point(135.758937 35.008303)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11532219",
+        "name": "松花堂",
+        "type": "草庵",
+        "coordinates": "Point(135.701778 34.879583)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q118145425",
+        "name": "京都清宗根付館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(135.744638888 35.001444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Netsuke%20art%20museum%20%28Kyoto%29%20Minka%20outdoor%20hdsr%20S5%20a2.jpg"
+    },
+    {
+        "id": "Q61818339",
+        "name": "ヒカリ美術館",
+        "type": "美術館",
+        "coordinates": "Point(134.965 35.6442)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hikaribijyutukan.jpg"
+    },
+    {
+        "id": "Q6452177",
+        "name": "立命館大学国際平和ミュージアム",
+        "type": "和平博物館",
+        "coordinates": "Point(135.72730556 35.03369444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ritsumeikan-Univ-Kinugasa-04.jpg"
+    },
+    {
+        "id": "Q127598408",
+        "name": "京都精華大学ギャラリーTerra-S",
+        "type": "大學博物館",
+        "coordinates": "Point(135.770346 35.072821)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132529516",
+        "name": "遠藤剛熈美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.750666 34.999798)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q3959661",
+        "name": "掌美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.7799118 35.0005586)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q22118562",
+        "name": "京都佛立ミュージアム",
+        "type": "宗教博物馆",
+        "coordinates": "Point(135.7354143 35.027136)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/2012exhibition1.jpg"
+    },
+    {
+        "id": "Q18337620",
+        "name": "並河靖之七宝記念館",
+        "type": "美術館",
+        "coordinates": "Point(135.781306 35.009889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Namikawa%20cloisonne%20museum%20of%20kyoto.jpg"
+    },
+    {
+        "id": "Q11283175",
+        "name": "朝日啤酒大山崎山莊美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.679639 34.895556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/250504%20Asahi%20beer%20Oyamazaki%20Villa%20Museum%20%C5%8Cyamazaki%20Kyoto%20pref%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q11374929",
+        "name": "京都大學綜合博物館",
+        "type": "大學博物館",
+        "coordinates": "Point(135.779287 35.027263)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20University%20Museum%2020120805-001.jpg"
+    },
+    {
+        "id": "Q11374199",
+        "name": "京セラギャラリー",
+        "type": "美術館",
+        "coordinates": "Point(135.75072222 34.94683333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Kyocera%20Museum%20of%20Art1.JPG"
+    },
+    {
+        "id": "Q127503199",
+        "name": "京都工芸繊維大学. 美術工芸資料館",
+        "type": "大學博物館",
+        "coordinates": "Point(135.781189 35.049549)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q18336820",
+        "name": "京都希臘羅馬美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.771583 35.04875)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q17213428",
+        "name": "清水三年坂美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.781278 34.997417)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kiyomizu%20Sannenzaka%20Museum.jpg"
+    },
+    {
+        "id": "Q11606115",
+        "name": "細見美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.779639 35.013833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hosomi%20Museum%20ac.JPG"
+    },
+    {
+        "id": "Q102045484",
+        "name": "福田美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.676444 35.013917)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukuda%20art%20museum.jpg"
+    },
+    {
+        "id": "Q18337620",
+        "name": "並河靖之七宝記念館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(135.781306 35.009889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Namikawa%20cloisonne%20museum%20of%20kyoto.jpg"
+    },
+    {
+        "id": "Q22118562",
+        "name": "京都佛立ミュージアム",
+        "type": "美術館",
+        "coordinates": "Point(135.7354143 35.027136)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/2012exhibition1.jpg"
+    },
+    {
+        "id": "Q11283175",
+        "name": "朝日啤酒大山崎山莊美術館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(135.679639 34.895556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/250504%20Asahi%20beer%20Oyamazaki%20Villa%20Museum%20%C5%8Cyamazaki%20Kyoto%20pref%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q17230147",
+        "name": "古田織部美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(135.73275 35.057694)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%8F%A4%E7%94%B0%E7%B9%94%E9%83%A8%E7%BE%8E%E8%A1%93%E9%A4%A8%E5%A4%96%E8%A6%B3.jpg"
+    },
+    {
+        "id": "Q11375286",
+        "name": "京都府立陶板名画の庭",
+        "type": "美術館",
+        "coordinates": "Point(135.76530556 35.05111111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/LastSupper-GardenOfFineArtKyoto.jpg"
+    },
+    {
+        "id": "Q136472115",
+        "name": "何必館・京都現代美術館",
+        "type": "私人博物館",
+        "coordinates": "Point(135.775429671 35.004186514)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11533890",
+        "name": "染・清流館",
+        "type": "織物博物館",
+        "coordinates": "Point(135.758389 35.005583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dye%20museum%20Seiryu%2002.jpg"
+    },
+    {
+        "id": "Q11497319",
+        "name": "承天閣美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.762611 35.033583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/150815%20Jotenkaku%20Museum%20Kyoto%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q11375242",
+        "name": "京都府立堂本印象美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(135.726056 35.035139)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Insho-Domoto%20Museum%20of%20Fine%20Arts01s5.jpg"
+    },
+    {
+        "id": "Q17211497",
+        "name": "きっづ光科学館ふぉとん",
+        "type": "科學博物館",
+        "coordinates": "Point(135.835778 34.713778)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q21190901",
+        "name": "大谷大学博物館",
+        "type": "宗教博物馆",
+        "coordinates": "Point(135.758854 35.041811)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Otani-Univ-03.jpg"
+    },
+    {
+        "id": "Q11375124",
+        "name": "京都市考古資料館",
+        "type": "考古博物館",
+        "coordinates": "Point(135.749382 35.031957)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/KyotoArchaeologicalMuseum.jpg"
+    },
+    {
+        "id": "Q104721140",
+        "name": "京都府立丹後郷土資料館",
+        "type": "建築物",
+        "coordinates": "Point(135.178555555 35.579722222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Prefectural%20Tango%20Folk%20Museum%EF%BC%93.jpg"
+    },
+    {
+        "id": "Q132529130",
+        "name": "京指物資料館",
+        "type": "家具博物館",
+        "coordinates": "Point(135.762952 35.0149865)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11103541",
+        "name": "東映太秦映畫村",
+        "type": "电影布景",
+        "coordinates": "Point(135.708333 35.016389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toei%20Kyoto%20Studio%20Park%20from%20above.jpg"
+    },
+    {
+        "id": "Q24014029",
+        "name": "京都鐵道博物館",
+        "type": "建築物",
+        "coordinates": "Point(135.7425 34.987222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Railway%20Museum%2C%20enkei.jpg"
+    },
+    {
+        "id": "Q11103541",
+        "name": "東映太秦映畫村",
+        "type": "主題公園",
+        "coordinates": "Point(135.708333 35.016389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toei%20Kyoto%20Studio%20Park%20from%20above.jpg"
+    },
+    {
+        "id": "Q11300942",
+        "name": "グンゼ博物苑",
+        "type": "織物博物館",
+        "coordinates": "Point(135.25791667 35.30527778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gunze%20museum01s3200.jpg"
+    },
+    {
+        "id": "Q123516621",
+        "name": "宇治・上林記念館",
+        "type": "茶博物館",
+        "coordinates": "Point(135.80418 34.89103)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%AE%87%E6%B2%BB%20%E4%B8%8A%E6%9E%97%E8%A8%98%E5%BF%B5%E9%A4%A8%20%2814003018022%29.jpg"
+    },
+    {
+        "id": "Q24014029",
+        "name": "京都鐵道博物館",
+        "type": "鐵路博物館",
+        "coordinates": "Point(135.7425 34.987222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Railway%20Museum%2C%20enkei.jpg"
+    },
+    {
+        "id": "Q1049901",
+        "name": "梅小路蒸汽機關車館",
+        "type": "建築物",
+        "coordinates": "Point(135.743 34.9872)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Umekoji%20SL%20museum%20002%20JPN.jpg"
+    },
+    {
+        "id": "Q11103541",
+        "name": "東映太秦映畫村",
+        "type": "商號",
+        "coordinates": "Point(135.708333 35.016389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toei%20Kyoto%20Studio%20Park%20from%20above.jpg"
+    },
+    {
+        "id": "Q11375001",
+        "name": "京都市学校歴史博物館",
+        "type": "教育博物館",
+        "coordinates": "Point(135.765694 35.00075)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Museum%20of%20School%20History%20gate.JPG"
+    },
+    {
+        "id": "Q11375271",
+        "name": "京都府立綜合資料館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(135.766417 35.050556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Verbundarchiv%20Kyoto.jpg"
+    },
+    {
+        "id": "Q132529589",
+        "name": "安達くみひも館",
+        "type": "工藝博物館",
+        "coordinates": "Point(135.758579 35.021146)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11300944",
+        "name": "グンゼ記念館",
+        "type": "公司博物館",
+        "coordinates": "Point(135.25727778 35.30555556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gunze%20memorial%20hall01s3200.jpg"
+    },
+    {
+        "id": "Q11476799",
+        "name": "島津創業紀念資料館",
+        "type": "公司博物館",
+        "coordinates": "Point(135.770242 35.012886)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shimadzu-Foundation-Memorial-Hall-01.jpg"
+    },
+    {
+        "id": "Q11375124",
+        "name": "京都市考古資料館",
+        "type": "考古博物館",
+        "coordinates": "Point(135.749637 35.029913)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/KyotoArchaeologicalMuseum.jpg"
+    },
+    {
+        "id": "Q76445246",
+        "name": "加悦鉄道資料館",
+        "type": "鐵路博物館",
+        "coordinates": "Point(135.09475 35.504083333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kaya%20Railway%20Museum%20ac.jpg"
+    },
+    {
+        "id": "Q11374217",
+        "name": "京丹後市立郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(134.977806 35.652472)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyodoshiryokan%20kyotango.jpg"
+    },
+    {
+        "id": "Q11516157",
+        "name": "月桂冠大倉記念館",
+        "type": "公司博物館",
+        "coordinates": "Point(135.762167 34.929694)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gekkeikan%20Okura%20Sake%20Museum01nt3200.jpg"
+    },
+    {
+        "id": "Q1049901",
+        "name": "梅小路蒸汽機關車館",
+        "type": "鐵路博物館",
+        "coordinates": "Point(135.743 34.9872)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Umekoji%20SL%20museum%20002%20JPN.jpg"
+    },
+    {
+        "id": "Q123516621",
+        "name": "宇治・上林記念館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(135.80418 34.89103)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%AE%87%E6%B2%BB%20%E4%B8%8A%E6%9E%97%E8%A8%98%E5%BF%B5%E9%A4%A8%20%2814003018022%29.jpg"
+    },
+    {
+        "id": "Q7496444",
+        "name": "小倉百人一首殿堂時雨殿",
+        "type": "文學館",
+        "coordinates": "Point(135.673766 35.013696)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%B0%8F%E5%80%89%E7%99%BE%E4%BA%BA%E4%B8%80%E9%A6%96%E3%81%AE%E6%AE%BF%E5%A0%82%E3%83%BB%E6%99%82%E9%9B%A8%E6%AE%BF%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q11665410",
+        "name": "風俗博物館",
+        "type": "時裝博物館",
+        "coordinates": "Point(135.753333 34.993389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Izutsu-Samegai%20building.jpg"
+    },
+    {
+        "id": "Q85875943",
+        "name": "京都府立京都学・歴彩館",
+        "type": "都道府県立図書館",
+        "coordinates": "Point(135.766666666 35.048611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Institute%2C%20Library%20and%20Archives%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q60987195",
+        "name": "嵯峨嵐山文華館",
+        "type": "文學館",
+        "coordinates": "Point(135.673888888 35.013611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saga%20Arashiyama%20Museum%20of%20Arts%20and%20Culture.jpg"
+    },
+    {
+        "id": "Q11375001",
+        "name": "京都市学校歴史博物館",
+        "type": "博物館",
+        "coordinates": "Point(135.765694 35.00075)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Museum%20of%20School%20History%20gate.JPG"
+    },
+    {
+        "id": "Q11673927",
+        "name": "魚知識館",
+        "type": "水族館",
+        "coordinates": "Point(135.255228055 35.556153888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q85875943",
+        "name": "京都府立京都学・歴彩館",
+        "type": "公共檔案館",
+        "coordinates": "Point(135.766666666 35.048611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Institute%2C%20Library%20and%20Archives%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q11309480",
+        "name": "立体模型·京都·日本",
+        "type": "立體透視模型",
+        "coordinates": "Point(135.680139 35.018639)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Diorama%20Kyoto%2001.jpg"
+    },
+    {
+        "id": "Q1201304",
+        "name": "京都塔",
+        "type": "觀光塔",
+        "coordinates": "Point(135.759166666 34.9875)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Tower%202023-12%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q11375621",
+        "name": "京都水族館",
+        "type": "水族館",
+        "coordinates": "Point(135.747611 34.987556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Aquarium%20in%202013-5-2%20No%2C27.JPG"
+    },
+    {
+        "id": "Q56062380",
+        "name": "京都府立山城郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(135.833888888 34.752222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Prefectural%20Yamashiro%20Regional%20Museum%20exterior%20view.jpg"
+    },
+    {
+        "id": "Q11375124",
+        "name": "京都市考古資料館",
+        "type": "博物館",
+        "coordinates": "Point(135.749382 35.031957)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/KyotoArchaeologicalMuseum.jpg"
+    },
+    {
+        "id": "Q85875943",
+        "name": "京都府立京都学・歴彩館",
+        "type": "公共建築",
+        "coordinates": "Point(135.766666666 35.048611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Institute%2C%20Library%20and%20Archives%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q60987195",
+        "name": "嵯峨嵐山文華館",
+        "type": "博物館",
+        "coordinates": "Point(135.673888888 35.013611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Saga%20Arashiyama%20Museum%20of%20Arts%20and%20Culture.jpg"
+    },
+    {
+        "id": "Q11300944",
+        "name": "グンゼ記念館",
+        "type": "織物博物館",
+        "coordinates": "Point(135.25727778 35.30555556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gunze%20memorial%20hall01s3200.jpg"
+    },
+    {
+        "id": "Q11309480",
+        "name": "立体模型·京都·日本",
+        "type": "レイアウト",
+        "coordinates": "Point(135.680139 35.018639)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Diorama%20Kyoto%2001.jpg"
+    },
+    {
+        "id": "Q11375271",
+        "name": "京都府立綜合資料館",
+        "type": "都道府県立図書館",
+        "coordinates": "Point(135.766417 35.050556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Verbundarchiv%20Kyoto.jpg"
+    },
+    {
+        "id": "Q11300942",
+        "name": "グンゼ博物苑",
+        "type": "公司博物館",
+        "coordinates": "Point(135.25791667 35.30527778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gunze%20museum01s3200.jpg"
+    },
+    {
+        "id": "Q104721140",
+        "name": "京都府立丹後郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(135.178639 35.579722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Prefectural%20Tango%20Folk%20Museum%EF%BC%93.jpg"
+    },
+    {
+        "id": "Q11442700",
+        "name": "天橋立View Land",
+        "type": "主題公園",
+        "coordinates": "Point(135.18175 35.5525)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%83%AA%E3%83%95%E3%83%88%E5%B1%B1%E9%A0%82%E9%A7%85.jpg"
+    },
+    {
+        "id": "Q11516157",
+        "name": "月桂冠大倉記念館",
+        "type": "日本清酒博物館",
+        "coordinates": "Point(135.762167 34.929694)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gekkeikan%20Okura%20Sake%20Museum01nt3200.jpg"
+    },
+    {
+        "id": "Q11375124",
+        "name": "京都市考古資料館",
+        "type": "博物館",
+        "coordinates": "Point(135.749637 35.029913)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/KyotoArchaeologicalMuseum.jpg"
+    },
+    {
+        "id": "Q11375271",
+        "name": "京都府立綜合資料館",
+        "type": "公共檔案館",
+        "coordinates": "Point(135.766417 35.050556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Verbundarchiv%20Kyoto.jpg"
+    },
+    {
+        "id": "Q53737773",
+        "name": "漢検 漢字博物館・図書館",
+        "type": "语言博物馆",
+        "coordinates": "Point(135.776666666 35.003333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%BC%A2%E5%AD%97%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%A2%E3%83%A0%20-%20%E5%85%A5%E5%8F%A3.jpg"
+    },
+    {
+        "id": "Q104721140",
+        "name": "京都府立丹後郷土資料館",
+        "type": "建築物",
+        "coordinates": "Point(135.178639 35.579722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Prefectural%20Tango%20Folk%20Museum%EF%BC%93.jpg"
+    },
+    {
+        "id": "Q11594351",
+        "name": "福知山鉄道館ポッポランド",
+        "type": "鐵路博物館",
+        "coordinates": "Point(135.125611 35.301667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fukuchiyama%20Poppoland%20frontview.jpg"
+    },
+    {
+        "id": "Q11375001",
+        "name": "京都市学校歴史博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.765694 35.00075)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Museum%20of%20School%20History%20gate.JPG"
+    },
+    {
+        "id": "Q85875943",
+        "name": "京都府立京都学・歴彩館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(135.766666666 35.048611111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Institute%2C%20Library%20and%20Archives%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q11309480",
+        "name": "立体模型·京都·日本",
+        "type": "鐵路博物館",
+        "coordinates": "Point(135.680139 35.018639)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Diorama%20Kyoto%2001.jpg"
+    },
+    {
+        "id": "Q53737773",
+        "name": "漢検 漢字博物館・図書館",
+        "type": "會員圖書館",
+        "coordinates": "Point(135.776666666 35.003333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%BC%A2%E5%AD%97%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%A2%E3%83%A0%20-%20%E5%85%A5%E5%8F%A3.jpg"
+    },
+    {
+        "id": "Q783923",
+        "name": "京都國際漫畫博物館",
+        "type": "動漫博物館",
+        "coordinates": "Point(135.7591715 35.0116867)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%BA%AC%E9%83%BD%E5%9B%BD%E9%9A%9B%E3%83%9E%E3%83%B3%E3%82%AC%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%A2%E3%83%A0.jpg"
+    },
+    {
+        "id": "Q104721140",
+        "name": "京都府立丹後郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(135.178555555 35.579722222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Prefectural%20Tango%20Folk%20Museum%EF%BC%93.jpg"
+    },
+    {
+        "id": "Q123516621",
+        "name": "宇治・上林記念館",
+        "type": "纪念博物馆",
+        "coordinates": "Point(135.80418 34.89103)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%AE%87%E6%B2%BB%20%E4%B8%8A%E6%9E%97%E8%A8%98%E5%BF%B5%E9%A4%A8%20%2814003018022%29.jpg"
+    },
+    {
+        "id": "Q123124346",
+        "name": "任天堂博物館",
+        "type": "公司博物館",
+        "coordinates": "Point(135.784167 34.892778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nintendo%20Museum%20Entrance.jpg"
+    },
+    {
+        "id": "Q132529195",
+        "name": "京都祇園らんぷ美術館",
+        "type": "工藝博物館",
+        "coordinates": "Point(135.777329 35.003255)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11375592",
+        "name": "京都文化博物馆",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.762222222 35.009166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Museum%20of%20Kyoto%2020101204-002.jpg"
+    },
+    {
+        "id": "Q11559290",
+        "name": "海軍紀念館",
+        "type": "海軍博物館",
+        "coordinates": "Point(135.372111 35.475167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Naval%20museum%20Japan01s3200.jpg"
+    },
+    {
+        "id": "Q127588655",
+        "name": "北野天満宮宝物殿",
+        "type": "宝物館",
+        "coordinates": "Point(135.7356157 35.0305859)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kitano-tenmangu%20Kyoto%20Japan23s3s4500.jpg"
+    },
+    {
+        "id": "Q11375592",
+        "name": "京都文化博物馆",
+        "type": "文化博物館",
+        "coordinates": "Point(135.762222222 35.009166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Museum%20of%20Kyoto%2020101204-002.jpg"
+    },
+    {
+        "id": "Q3329667",
+        "name": "霊山歴史館",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.78263889 34.99894444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ryozen%20Museum%20of%20History.JPG"
+    },
+    {
+        "id": "Q125002905",
+        "name": "楽美術館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(135.753475 35.0255218)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Raku%20Museum%202013-08A.JPG"
+    },
+    {
+        "id": "Q127601370",
+        "name": "松本明慶佛像彫刻美術館",
+        "type": "彫刻美術館",
+        "coordinates": "Point(135.757554 35.022668)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11579925",
+        "name": "白沙村荘",
+        "type": "纪念博物馆",
+        "coordinates": "Point(135.793669 35.026881)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/090711%20Hakusasonsou%20Kyoto%20Japan30s3.jpg"
+    },
+    {
+        "id": "Q7380607",
+        "name": "るり渓",
+        "type": "觀光景點",
+        "coordinates": "Point(135.404608 35.035817)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Meibaku%2C%20Rurikei02.JPG"
+    },
+    {
+        "id": "Q3196329",
+        "name": "貴船",
+        "type": "門前町",
+        "coordinates": "Point(135.76277778 35.12166667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kibune%20Kawadoko01s5s4272.jpg"
+    },
+    {
+        "id": "Q11375006",
+        "name": "京都市平安京创世馆",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.738444 35.019)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Asny%20and%20City%20Central%20Library%2020090502-001.jpg"
+    },
+    {
+        "id": "Q11635286",
+        "name": "赤れんが博物館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(135.387444 35.476083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Red%20brick%20museum01s3200.jpg"
+    },
+    {
+        "id": "Q7380607",
+        "name": "るり渓",
+        "type": "谷地",
+        "coordinates": "Point(135.404608 35.035817)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Meibaku%2C%20Rurikei02.JPG"
+    },
+    {
+        "id": "Q123091932",
+        "name": "ウトロ平和祈念館",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.774166486 34.880611514)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11398627",
+        "name": "加悅SL廣場",
+        "type": "鉄道公園",
+        "coordinates": "Point(135.092806 35.481417)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%8A%A0%E6%82%A6SL%E5%BA%83%E5%A0%B4%20%E9%A7%85%E8%88%8E%20%E5%B1%95%E7%A4%BA%E5%AE%A42.jpg"
+    },
+    {
+        "id": "Q131911087",
+        "name": "芦田均記念館",
+        "type": "纪念博物馆",
+        "coordinates": "Point(135.178667 35.260139)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11579925",
+        "name": "白沙村荘",
+        "type": "日本庭園",
+        "coordinates": "Point(135.793669 35.026881)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/090711%20Hakusasonsou%20Kyoto%20Japan30s3.jpg"
+    },
+    {
+        "id": "Q11613699",
+        "name": "舞鶴市政記念館",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.385444 35.474667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Maizuru%20Commemoration%20hall.jpg"
+    },
+    {
+        "id": "Q133289013",
+        "name": "醍醐寺霊宝館",
+        "type": "宝物館",
+        "coordinates": "Point(135.819285 34.951018)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q123688246",
+        "name": "鴨川デルタ",
+        "type": "河岸",
+        "coordinates": "Point(135.7717 35.0299)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%B4%A8%E5%B7%9D%E3%83%87%E3%83%AB%E3%82%BF3.jpg"
+    },
+    {
+        "id": "Q123688246",
+        "name": "鴨川デルタ",
+        "type": "觀光景點",
+        "coordinates": "Point(135.7717 35.0299)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%B4%A8%E5%B7%9D%E3%83%87%E3%83%AB%E3%82%BF3.jpg"
+    },
+    {
+        "id": "Q147286",
+        "name": "京都國立博物館",
+        "type": "國立博物館",
+        "coordinates": "Point(135.773121 34.989993)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20National%20Museum%202009.jpg"
+    },
+    {
+        "id": "Q11579925",
+        "name": "白沙村荘",
+        "type": "歷史房屋",
+        "coordinates": "Point(135.793669 35.026881)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/090711%20Hakusasonsou%20Kyoto%20Japan30s3.jpg"
+    },
+    {
+        "id": "Q137773108",
+        "name": "チームラボ バイオヴォルテックス 京都",
+        "type": "現代美術館",
+        "coordinates": "Point(135.764948 34.983707)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132529270",
+        "name": "京都絞り工芸館",
+        "type": "織物博物館",
+        "coordinates": "Point(135.753707 35.010076)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11375592",
+        "name": "京都文化博物馆",
+        "type": "博物館",
+        "coordinates": "Point(135.762222222 35.009166666)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Museum%20of%20Kyoto%2020101204-002.jpg"
+    },
+    {
+        "id": "Q137917525",
+        "name": "丹波生活衣館",
+        "type": "民俗博物館",
+        "coordinates": "Point(135.129139 35.297442)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%B9%E6%B3%A2%E7%94%9F%E6%B4%BB%E8%A1%A3%E9%A4%A8.png"
+    },
+    {
+        "id": "Q11482389",
+        "name": "平安博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.762222222 35.00875)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Former%20Bank%20of%20Japan%20building%2C%20Kyoto%20Branch.jpg"
+    },
+    {
+        "id": "Q123688246",
+        "name": "鴨川デルタ",
+        "type": "匯流處",
+        "coordinates": "Point(135.7717 35.0299)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%B4%A8%E5%B7%9D%E3%83%87%E3%83%AB%E3%82%BF3.jpg"
+    },
+    {
+        "id": "Q11581197",
+        "name": "益富地学会館",
+        "type": "地質学博物館",
+        "coordinates": "Point(135.758689 35.021352)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%9B%8A%E5%AF%8C%E5%9C%B0%E5%AD%A6%E4%BC%9A%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q17210134",
+        "name": "ききょうの里",
+        "type": "觀光景點",
+        "coordinates": "Point(135.491388888 35.032083333)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q133269160",
+        "name": "広隆寺霊宝殿",
+        "type": "宝物館",
+        "coordinates": "Point(135.707472 35.0155)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/K%C3%B4ry%C3%BB-ji%20Temple%20-%20Reih%C3%B4-den.jpg"
+    },
+    {
+        "id": "Q3196329",
+        "name": "貴船",
+        "type": "觀光景點",
+        "coordinates": "Point(135.76277778 35.12166667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kibune%20Kawadoko01s5s4272.jpg"
+    },
+    {
+        "id": "Q133288972",
+        "name": "仁和寺霊宝館",
+        "type": "宝物館",
+        "coordinates": "Point(135.71437 35.029287)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q123688246",
+        "name": "鴨川デルタ",
+        "type": "公園",
+        "coordinates": "Point(135.7717 35.0299)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%B4%A8%E5%B7%9D%E3%83%87%E3%83%AB%E3%82%BF3.jpg"
+    },
+    {
+        "id": "Q11506183",
+        "name": "日本的鬼之交流博物館",
+        "type": "博物館",
+        "coordinates": "Point(135.144444 35.459028)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104721135",
+        "name": "亀岡市文化資料館",
+        "type": "博物館",
+        "coordinates": "Point(135.585487 35.013524)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kameoka%20City%20Cultural%20Museum.jpg"
+    },
+    {
+        "id": "Q11483478",
+        "name": "平等院鳳翔館",
+        "type": "博物館",
+        "coordinates": "Point(135.8073916 34.8887044)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Byodoin%20Uji%20Kyoto19s3s4410.jpg"
+    },
+    {
+        "id": "Q64143380",
+        "name": "向日市文化資料館",
+        "type": "文化機構",
+        "coordinates": "Point(135.69956 34.94954)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q131352233",
+        "name": "夜久野町化石・郷土資料館",
+        "type": "博物館",
+        "coordinates": "Point(134.92975 35.338333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%A4%9C%E4%B9%85%E9%87%8E%E7%94%BA%E5%8C%96%E7%9F%B3%E3%83%BB%E9%83%B7%E5%9C%9F%E8%B3%87%E6%96%99%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11594329",
+        "name": "福知山市治水記念館",
+        "type": "博物館",
+        "coordinates": "Point(135.125417 35.303556)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11630696",
+        "name": "角屋",
+        "type": "揚屋",
+        "coordinates": "Point(135.743139 34.992111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sumiya%20Kyoto%2001.JPG"
+    },
+    {
+        "id": "Q48757439",
+        "name": "丹後震災記念館",
+        "type": "博物館",
+        "coordinates": "Point(135.05611111 35.62580556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%B9%E5%BE%8C%E9%9C%87%E7%81%BD%E8%A8%98%E5%BF%B5%E9%A4%A8%20ac.jpg"
+    },
+    {
+        "id": "Q11613714",
+        "name": "舞鶴歸國紀念館",
+        "type": "博物館",
+        "coordinates": "Point(135.396583 35.5095)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hikiage051012.jpg"
+    },
+    {
+        "id": "Q64026339",
+        "name": "琴引濱鳴砂文化館",
+        "type": "博物館",
+        "coordinates": "Point(135.057194 35.697583)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kotohikihama%20Nakisuna%20Bunkakan%20exterior%20ac.jpg"
+    },
+    {
+        "id": "Q11278126",
+        "name": "まいづる智恵蔵",
+        "type": "红砖仓库",
+        "coordinates": "Point(135.385167 35.474722)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q18339063",
+        "name": "琵琶湖疏水紀念館",
+        "type": "博物館",
+        "coordinates": "Point(135.788156 35.012017)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lake%20biwa%20Canal%20Museum.jpg"
+    },
+    {
+        "id": "Q11630696",
+        "name": "角屋",
+        "type": "博物館",
+        "coordinates": "Point(135.743139 34.992111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sumiya%20Kyoto%2001.JPG"
+    },
+    {
+        "id": "Q11278126",
+        "name": "まいづる智恵蔵",
+        "type": "博物館",
+        "coordinates": "Point(135.385167 35.474722)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104721110",
+        "name": "与謝野町立古墳公園はにわ資料館",
+        "type": "博物館",
+        "coordinates": "Point(135.104658 35.506447)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q101244809",
+        "name": "京都市市民防災センター",
+        "type": "博物館",
+        "coordinates": "Point(135.746388888 34.973888888)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q64143380",
+        "name": "向日市文化資料館",
+        "type": "博物館",
+        "coordinates": "Point(135.69956 34.94954)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q48761574",
+        "name": "宮津市立前尾記念文庫",
+        "type": "博物館",
+        "coordinates": "Point(135.197278 35.538083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Miyazu%20City%20Maeo%20Memorial%20Library%20exterior%20ac.jpg"
+    },
+    {
+        "id": "Q101244809",
+        "name": "京都市市民防災センター",
+        "type": "建築物",
+        "coordinates": "Point(135.746388888 34.973888888)",
+        "image": "No Image"
+    }
+]

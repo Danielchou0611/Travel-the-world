@@ -1,0 +1,590 @@
+[
+    {
+        "id": "Q11564645",
+        "name": "滋賀縣立安土城考古博物館",
+        "type": "考古博物館",
+        "coordinates": "Point(136.14777778 35.15)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Spacam01s2816.jpg"
+    },
+    {
+        "id": "Q11463730",
+        "name": "小谷城戦国歴史資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(136.269472 35.452611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Odanij3.jpg"
+    },
+    {
+        "id": "Q11564689",
+        "name": "滋賀縣立陶藝之森",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(136.058583 34.886222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shigaraki%20Ceramic%20Cultural%20Park15s3872.jpg"
+    },
+    {
+        "id": "Q11577998",
+        "name": "甲賀流忍術屋敷",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(136.167361 34.918444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Koga-ryu%20Ninjya%20house%20%2C%20%E7%94%B2%E8%B3%80%E6%B5%81%20%E5%BF%8D%E8%A1%93%E5%B1%8B%E6%95%B7%20-%20panoramio%20%283%29.jpg"
+    },
+    {
+        "id": "Q17211447",
+        "name": "信楽古陶館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(136.06125 34.88608333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/071020%20Shigaraki%20Kotokan%20Koka%20Shiga%20pref%20Japan01s5.jpg"
+    },
+    {
+        "id": "Q11564666",
+        "name": "滋賀縣立琵琶湖文化館",
+        "type": "博物館",
+        "coordinates": "Point(135.874056 35.008083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Biwako-Bunkakan%20DSCN2823.jpg"
+    },
+    {
+        "id": "Q77824459",
+        "name": "草津宿本陣",
+        "type": "本陣",
+        "coordinates": "Point(135.96036 35.01774)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kusatsu-juku%20Honjin%20201905-1.jpg"
+    },
+    {
+        "id": "Q11558989",
+        "name": "海洋堂フィギュアミュージアム黒壁龍遊館",
+        "type": "公司博物館",
+        "coordinates": "Point(136.268389 35.381194)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kaiy%C5%8Dd%C5%8D%20Figure%20Museum%20Kurokabe%20Ry%C5%ABy%C5%ABkan%2020210626%2001.jpg"
+    },
+    {
+        "id": "Q11383085",
+        "name": "佐和山遊園",
+        "type": "主題樂園",
+        "coordinates": "Point(136.269083333 35.274555555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sawayamayuen.jpg"
+    },
+    {
+        "id": "Q104720770",
+        "name": "滋賀大学. 経済学部. 史料館",
+        "type": "大學博物館",
+        "coordinates": "Point(136.245972 35.277358)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132731973",
+        "name": "みなくち子どもの森自然館",
+        "type": "自然歷史博物館",
+        "coordinates": "Point(136.167529 34.958669)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11352217",
+        "name": "ヴォーリズ記念館",
+        "type": "美術館",
+        "coordinates": "Point(136.094722 35.139861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Old%20vories%20house01s3200.jpg"
+    },
+    {
+        "id": "Q11644483",
+        "name": "醒井木彫美術館",
+        "type": "彫刻美術館",
+        "coordinates": "Point(136.351722 35.329139)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/MWCS01s3200.jpg"
+    },
+    {
+        "id": "Q11494868",
+        "name": "愛知川手鞠瓶之館",
+        "type": "公立图书馆",
+        "coordinates": "Point(136.2149729 35.1711324)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Echigawa%20library.jpg"
+    },
+    {
+        "id": "Q11564683",
+        "name": "滋賀県立美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.942139 34.970444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shiga%20Museum%20of%20Art%20exterior.jpg"
+    },
+    {
+        "id": "Q11564667",
+        "name": "滋賀縣立琵琶湖博物館",
+        "type": "水族館",
+        "coordinates": "Point(135.934917 35.074139)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%BB%8B%E8%B3%80%E7%9C%8C%E7%AB%8B%E7%90%B5%E7%90%B6%E6%B9%96%E5%8D%9A%E7%89%A9%E9%A4%A8%E5%A4%96%E8%A6%B3.jpg"
+    },
+    {
+        "id": "Q137360848",
+        "name": "浅井能楽資料館",
+        "type": "博物館",
+        "coordinates": "Point(136.29668 35.457622)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11352217",
+        "name": "ヴォーリズ記念館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(136.094722 35.139861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Old%20vories%20house01s3200.jpg"
+    },
+    {
+        "id": "Q11352217",
+        "name": "ヴォーリズ記念館",
+        "type": "洋樓",
+        "coordinates": "Point(136.094722 35.139861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Old%20vories%20house01s3200.jpg"
+    },
+    {
+        "id": "Q11356025",
+        "name": "三橋節子美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.85727778 35.00733333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Setsuko-Mitsuhashi%20Memorial%20Museum01s3872.jpg"
+    },
+    {
+        "id": "Q11276855",
+        "name": "びわ湖わんわん王国",
+        "type": "主題樂園",
+        "coordinates": "Point(135.945889 35.123361)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E3%81%B3%E3%82%8F%E3%81%93%E3%81%86.jpg"
+    },
+    {
+        "id": "Q132725989",
+        "name": "長浜市曳山博物館",
+        "type": "山車会館",
+        "coordinates": "Point(136.268769 35.381264)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hikiyama%20Museum%20Nagahama%20Shiga%20pref01n3680.jpg"
+    },
+    {
+        "id": "Q6379677",
+        "name": "かわらミュージアム",
+        "type": "博物館",
+        "coordinates": "Point(136.09194444 35.14055556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kawara%20museum01s2000.jpg"
+    },
+    {
+        "id": "Q11420600",
+        "name": "國友鐵炮之里資料館",
+        "type": "博物館",
+        "coordinates": "Point(136.282472 35.408944)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kunitomo%20Gun%20Museum%2020210131%2001.jpg"
+    },
+    {
+        "id": "Q123274450",
+        "name": "守山市立埋蔵文化財センター",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(135.992545 35.108023)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11564689",
+        "name": "滋賀縣立陶藝之森",
+        "type": "城市公園",
+        "coordinates": "Point(136.058583 34.886222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shigaraki%20Ceramic%20Cultural%20Park15s3872.jpg"
+    },
+    {
+        "id": "Q55522393",
+        "name": "大津市科學館",
+        "type": "科學博物館",
+        "coordinates": "Point(135.89369444 34.99405556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Otsu-City-Science-Museum.jpg"
+    },
+    {
+        "id": "Q11577981",
+        "name": "甲賀家庭樂園",
+        "type": "主題樂園",
+        "coordinates": "Point(136.108527777 34.953)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q107269377",
+        "name": "井伊美術館",
+        "type": "美術館",
+        "coordinates": "Point(136.2525 35.275556)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q131910774",
+        "name": "近江聖人中江藤樹記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(136.031425 35.324643)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%C5%8Cmi%20Seijin%20Nakae%20T%C5%8Dju%20Memorial%20Museum%2020200919%2001.jpg"
+    },
+    {
+        "id": "Q11564683",
+        "name": "滋賀県立美術館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(135.942139 34.970444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shiga%20Museum%20of%20Art%20exterior.jpg"
+    },
+    {
+        "id": "Q132732063",
+        "name": "東近江市西堀榮三郎記念探検の殿堂",
+        "type": "纪念博物馆",
+        "coordinates": "Point(136.246955 35.132231)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tankennodendou%2001.jpg"
+    },
+    {
+        "id": "Q11326078",
+        "name": "ハイド記念館・教育会館",
+        "type": "人物紀念館",
+        "coordinates": "Point(136.095428 35.140028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hyde%20memorial%20Hall01s3200.jpg"
+    },
+    {
+        "id": "Q132733751",
+        "name": "布施美術館",
+        "type": "美術館",
+        "coordinates": "Point(136.216368 35.490924)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11494868",
+        "name": "愛知川手鞠瓶之館",
+        "type": "博物館",
+        "coordinates": "Point(136.2149729 35.1711324)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Echigawa%20library.jpg"
+    },
+    {
+        "id": "Q123144783",
+        "name": "比叡山国宝殿",
+        "type": "博物館",
+        "coordinates": "Point(135.839877 35.070389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Enryakuji%20kokuhoden.jpg"
+    },
+    {
+        "id": "Q99673823",
+        "name": "木下美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.830138888 35.027222222)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11450462",
+        "name": "安土城郭資料館",
+        "type": "博物館",
+        "coordinates": "Point(136.133389 35.142028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Azuchi%20Castle%20Museum.jpeg"
+    },
+    {
+        "id": "Q132731490",
+        "name": "滋賀県立陶芸の森陶芸館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(136.05771 34.884399)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shigaraki%20Ceramic%20Cultural%20Park15s3872.jpg"
+    },
+    {
+        "id": "Q11510914",
+        "name": "旧伊庭家住宅",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(136.136297 35.138514)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Old%20iba%20house02s2400.jpg"
+    },
+    {
+        "id": "Q11564667",
+        "name": "滋賀縣立琵琶湖博物館",
+        "type": "學術機構",
+        "coordinates": "Point(135.934917 35.074139)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%BB%8B%E8%B3%80%E7%9C%8C%E7%AB%8B%E7%90%B5%E7%90%B6%E6%B9%96%E5%8D%9A%E7%89%A9%E9%A4%A8%E5%A4%96%E8%A6%B3.jpg"
+    },
+    {
+        "id": "Q132733689",
+        "name": "滋賀県平和祈念館",
+        "type": "和平博物館",
+        "coordinates": "Point(136.262285 35.110834)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11487933",
+        "name": "彥根城博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(136.253528 35.275611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hikone%20Castle%20Museum01s3200.jpg"
+    },
+    {
+        "id": "Q132733822",
+        "name": "湖北野鳥センター",
+        "type": "自然中心",
+        "coordinates": "Point(136.189867 35.446548)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shiga%20prefectural%20road%20331.JPG"
+    },
+    {
+        "id": "Q107268943",
+        "name": "近江神宮時鐘館寶物館",
+        "type": "博物館",
+        "coordinates": "Point(135.852166666 35.031861111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Omi-jingu%20clock%20museum.jpg"
+    },
+    {
+        "id": "Q107269197",
+        "name": "膳所藩資料館",
+        "type": "博物館",
+        "coordinates": "Point(135.896666666 34.988055555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q107268943",
+        "name": "近江神宮時鐘館寶物館",
+        "type": "時計博物館",
+        "coordinates": "Point(135.852166666 35.031861111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Omi-jingu%20clock%20museum.jpg"
+    },
+    {
+        "id": "Q17209860",
+        "name": "観峰館",
+        "type": "書法美術館",
+        "coordinates": "Point(136.188933 35.154389)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kanp%C3%B4-kan.jpg"
+    },
+    {
+        "id": "Q11559016",
+        "name": "海津大崎",
+        "type": "觀光景點",
+        "coordinates": "Point(136.08763 35.44927)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Biwako123844.jpg"
+    },
+    {
+        "id": "Q132160193",
+        "name": "琵琶湖水鳥・湿地センター",
+        "type": "自然中心",
+        "coordinates": "Point(136.189922 35.446257)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q132733283",
+        "name": "大津絵美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.853196 35.014326)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104720767",
+        "name": "栗東歴史民俗博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(136.008861111 35.017972222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%A0%97%E6%9D%B1%E6%AD%B4%E5%8F%B2%E6%B0%91%E4%BF%97%E5%8D%9A%E7%89%A9%E9%A4%A82020.jpg"
+    },
+    {
+        "id": "Q11352217",
+        "name": "ヴォーリズ記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(136.094722 35.139861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Old%20vories%20house01s3200.jpg"
+    },
+    {
+        "id": "Q132731973",
+        "name": "みなくち子どもの森自然館",
+        "type": "公園",
+        "coordinates": "Point(136.167529 34.958669)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104720809",
+        "name": "野洲市歴史民俗博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(136.044866 35.072621)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yasu%20City%20History%20and%20Folklore%20Museum%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q123516533",
+        "name": "多賀町立博物館",
+        "type": "地方文化館",
+        "coordinates": "Point(136.30247 35.221146)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Taga%20Town%20Museum%2020211010%2002.jpg"
+    },
+    {
+        "id": "Q11564667",
+        "name": "滋賀縣立琵琶湖博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(135.934917 35.074139)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%BB%8B%E8%B3%80%E7%9C%8C%E7%AB%8B%E7%90%B5%E7%90%B6%E6%B9%96%E5%8D%9A%E7%89%A9%E9%A4%A8%E5%A4%96%E8%A6%B3.jpg"
+    },
+    {
+        "id": "Q132733674",
+        "name": "日登美美術館",
+        "type": "美術館",
+        "coordinates": "Point(136.298345 35.079451)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11326078",
+        "name": "ハイド記念館・教育会館",
+        "type": "学校建筑",
+        "coordinates": "Point(136.095428 35.140028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hyde%20memorial%20Hall01s3200.jpg"
+    },
+    {
+        "id": "Q17230301",
+        "name": "米原市醒井宿資料館",
+        "type": "博物館",
+        "coordinates": "Point(136.34725 35.327417)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/SPHFM01s3872.jpg"
+    },
+    {
+        "id": "Q88281532",
+        "name": "草津市立草津宿街道交流館",
+        "type": "交通博物館",
+        "coordinates": "Point(135.959083333 35.015694444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kaidoukoryukan-museum.jpg"
+    },
+    {
+        "id": "Q104720798",
+        "name": "近江八幡市立資料館",
+        "type": "市立博物館",
+        "coordinates": "Point(136.089228 35.138105)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11356025",
+        "name": "三橋節子美術館",
+        "type": "人物紀念館",
+        "coordinates": "Point(135.85727778 35.00733333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Setsuko-Mitsuhashi%20Memorial%20Museum01s3872.jpg"
+    },
+    {
+        "id": "Q11558989",
+        "name": "海洋堂フィギュアミュージアム黒壁龍遊館",
+        "type": "美術館",
+        "coordinates": "Point(136.268389 35.381194)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kaiy%C5%8Dd%C5%8D%20Figure%20Museum%20Kurokabe%20Ry%C5%ABy%C5%ABkan%2020210626%2001.jpg"
+    },
+    {
+        "id": "Q77824459",
+        "name": "草津宿本陣",
+        "type": "博物館",
+        "coordinates": "Point(135.96036 35.01774)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kusatsu-juku%20Honjin%20201905-1.jpg"
+    },
+    {
+        "id": "Q11678066",
+        "name": "黒壁ガラス館",
+        "type": "美術館",
+        "coordinates": "Point(136.267083 35.380667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kurokabe%20glass%20hall0s32001.jpg"
+    },
+    {
+        "id": "Q11495725",
+        "name": "成田美術館",
+        "type": "美術館",
+        "coordinates": "Point(136.268861 35.374667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Narita%20museum01s3200.jpg"
+    },
+    {
+        "id": "Q30931160",
+        "name": "大津市歷史博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.85283611 35.01544722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/181020%20Otsu%20City%20Museum%20of%20History%20Otsu%20Shiga%20pref%20Japan02n.jpg"
+    },
+    {
+        "id": "Q11573829",
+        "name": "琵琶湖周航之歌資料館",
+        "type": "音楽博物館",
+        "coordinates": "Point(136.034083 35.397669)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%90%B5%E7%90%B6%E6%B9%96%E5%91%A8%E8%88%AA%E3%81%AE%E6%AD%8C%E8%B3%87%E6%96%99%E9%A4%A82021.jpg"
+    },
+    {
+        "id": "Q3945402",
+        "name": "安土城天主信長之館",
+        "type": "博物館",
+        "coordinates": "Point(136.1479722 35.14875)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nobunaganoyakata2.jpg"
+    },
+    {
+        "id": "Q104082588",
+        "name": "滋賀サファリ博物館",
+        "type": "自然歷史博物館",
+        "coordinates": "Point(136.087077777 34.919013888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Safari%20museum.jpg"
+    },
+    {
+        "id": "Q104720989",
+        "name": "長浜城歴史博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(136.261463 35.377642)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%95%B7%E6%B5%9C%E5%9F%8E2%20Nagahama%20Castle%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q132717813",
+        "name": "愛荘町立歴史文化博物館",
+        "type": "地方文化館",
+        "coordinates": "Point(136.278248 35.163653)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aisho%20Town%20Museum%20of%20History%20and%20Culture%2020221117.jpg"
+    },
+    {
+        "id": "Q1268542",
+        "name": "美秀美術館",
+        "type": "美術館",
+        "coordinates": "Point(136.01582222 34.91592222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/241119%20MIHO%20MUSEUM%20Koga%20Shiga%20pref%20Japan08s3.jpg"
+    },
+    {
+        "id": "Q111034876",
+        "name": "近江日野商人館",
+        "type": "博物館",
+        "coordinates": "Point(136.247694444 35.011555555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Omi%20Hino%20Merchant%20Museum%202022-10%20ac%20%281%29.jpg"
+    },
+    {
+        "id": "Q30922619",
+        "name": "ヤンマーミュージアム",
+        "type": "公司博物館",
+        "coordinates": "Point(136.27022222 35.37433333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/YANMAR%20MUSEUM%2001.jpg"
+    },
+    {
+        "id": "Q132733421",
+        "name": "膳所焼美術館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(135.894924 34.988473)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q104720770",
+        "name": "滋賀大学. 経済学部. 史料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(136.245972 35.277358)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11653326",
+        "name": "长滨铁道广场",
+        "type": "鐵路博物館",
+        "coordinates": "Point(136.2658 35.376881)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagahama-Station-First-building2020.jpg"
+    },
+    {
+        "id": "Q11653326",
+        "name": "长滨铁道广场",
+        "type": "鐵路博物館",
+        "coordinates": "Point(136.2658 35.376881)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nagahama%20tetudo%20square02s3200.jpg"
+    },
+    {
+        "id": "Q11577976",
+        "name": "甲賀之里忍術村",
+        "type": "主題公園",
+        "coordinates": "Point(136.207417 34.919667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Koga-no-sato%20Ninja%20village%20%2C%20%E7%94%B2%E8%B3%80%E3%81%AE%E9%87%8C%20%E5%BF%8D%E8%A1%93%E6%9D%91%20-%20panoramio%20%288%29.jpg"
+    },
+    {
+        "id": "Q7399081",
+        "name": "佐川美术馆",
+        "type": "美術館",
+        "coordinates": "Point(135.94611111 35.10944444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sagawa%20art%20museum01s3200.jpg"
+    },
+    {
+        "id": "Q11338923",
+        "name": "ボーダレス・アートミュージアム NO-MA",
+        "type": "美術館",
+        "coordinates": "Point(136.09447222 35.13763889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Borderless%20Art%20Museum%20NO-MA%201.jpg"
+    },
+    {
+        "id": "Q132731830",
+        "name": "甲賀市立信楽産業展示館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(136.058472 34.886326)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shigaraki%20industry%20exhibition%20pavilion.jpg"
+    }
+]

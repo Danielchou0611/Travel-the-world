@@ -1,0 +1,1178 @@
+[
+    {
+        "id": "Q11617881",
+        "name": "茨木市立川端康成文学馆",
+        "type": "文學館",
+        "coordinates": "Point(135.570833 34.823194)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kawabata%20yasunari%20museum01s1760.jpg"
+    },
+    {
+        "id": "Q11440688",
+        "name": "大阪市立自然史博物館",
+        "type": "自然歷史博物館",
+        "coordinates": "Point(135.522611 34.610361)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osaka%20Museum%20of%20Natural%20History1.jpg"
+    },
+    {
+        "id": "Q138666211",
+        "name": "HEP FIVE",
+        "type": "購物中心",
+        "coordinates": "Point(135.500468514 34.704082644)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/HEP-FIVE%20in%20201409%20001.JPG"
+    },
+    {
+        "id": "Q1148463",
+        "name": "通天閣",
+        "type": "觀光塔",
+        "coordinates": "Point(135.506111111 34.652222222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/New%20Tsutenkaku%20in%20201409%20003.JPG"
+    },
+    {
+        "id": "Q11563573",
+        "name": "汤木美术馆",
+        "type": "美術館",
+        "coordinates": "Point(135.50225 34.6875)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yuki-museum.JPG"
+    },
+    {
+        "id": "Q118213997",
+        "name": "ハルカス300",
+        "type": "觀景台",
+        "coordinates": "Point(135.5135227 34.6459798)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Abeno%20Harukas%20SKY%20GARDEN%20300.jpg"
+    },
+    {
+        "id": "Q11440106",
+        "name": "大阪商業大學商業史博物館",
+        "type": "大學博物館",
+        "coordinates": "Point(135.584139 34.666833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osaka-Univ-of-Commerce-Tanioka-Memorial-Hall01.jpg"
+    },
+    {
+        "id": "Q123670541",
+        "name": "えびすタワー",
+        "type": "摩天輪",
+        "coordinates": "Point(135.5025 34.66888889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ebisu%20Tower%20%282023%2C%20Osaka%29.jpg"
+    },
+    {
+        "id": "Q11549303",
+        "name": "水道紀念館",
+        "type": "水族館",
+        "coordinates": "Point(135.50536111 34.72436111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Suido%20Kinenkan%20%28Osaka%293.jpg"
+    },
+    {
+        "id": "Q138666211",
+        "name": "HEP FIVE",
+        "type": "地标建筑",
+        "coordinates": "Point(135.500468514 34.704082644)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/HEP-FIVE%20in%20201409%20001.JPG"
+    },
+    {
+        "id": "Q11412294",
+        "name": "司馬遼太郎紀念館",
+        "type": "文學館",
+        "coordinates": "Point(135.585667 34.6605)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/ShibaRyotaroMemorialMuseum.jpg"
+    },
+    {
+        "id": "Q138666212",
+        "name": "HEP NAVIO",
+        "type": "複合商業設施",
+        "coordinates": "Point(135.49993193 34.70322136)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osaka%2C%20hep%20navio%2001.jpg"
+    },
+    {
+        "id": "Q11440200",
+        "name": "大阪市下水道科學館",
+        "type": "水廠博物館",
+        "coordinates": "Point(135.462472 34.693472)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osakashi%20gesuido%20kagakukan.jpg"
+    },
+    {
+        "id": "Q3329563",
+        "name": "藤田美术馆",
+        "type": "美術館",
+        "coordinates": "Point(135.525124 34.694978)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fujita%20museum01s3072.jpg"
+    },
+    {
+        "id": "Q11545519",
+        "name": "正木美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.392111 34.494639)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Landscape%20by%20Sesso%20%28Masaki%20Art%20Museum%29.jpeg"
+    },
+    {
+        "id": "Q11640228",
+        "name": "逸翁美术馆",
+        "type": "美術館",
+        "coordinates": "Point(135.428778 34.825556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/150214%20Itsuo%20Art%20Museum%20Ikeda%20Osaka%20pref%20Japan16n.jpg"
+    },
+    {
+        "id": "Q21654084",
+        "name": "NIFREL",
+        "type": "博物館",
+        "coordinates": "Point(135.53358333 34.80641667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/NIFREL.jpg"
+    },
+    {
+        "id": "Q123508358",
+        "name": "大阪芸術大学博物館",
+        "type": "大學博物館",
+        "coordinates": "Point(135.629218 34.512324)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11549303",
+        "name": "水道紀念館",
+        "type": "水廠博物館",
+        "coordinates": "Point(135.50536111 34.72436111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Suido%20Kinenkan%20%28Osaka%293.jpg"
+    },
+    {
+        "id": "Q11408411",
+        "name": "南蛮文化館",
+        "type": "美術館",
+        "coordinates": "Point(135.49175 34.709417)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q55532678",
+        "name": "大阪日本民艺馆",
+        "type": "工藝博物館",
+        "coordinates": "Point(135.53343889 34.81227778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Japan%20folk%20crafts%20museum%2C%20Osaka.jpg"
+    },
+    {
+        "id": "Q11296794",
+        "name": "Kids Plaza大阪",
+        "type": "兒童博物館",
+        "coordinates": "Point(135.510267 34.704697)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Headquarter%20of%20Kansai%20Telecasting%20Corporation.jpg"
+    },
+    {
+        "id": "Q11282212",
+        "name": "アイセルシュラホール",
+        "type": "社區中心",
+        "coordinates": "Point(135.59723056 34.56611944)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aicelshurahall01%201024.jpg"
+    },
+    {
+        "id": "Q11656297",
+        "name": "関西大学博物館",
+        "type": "大學博物館",
+        "coordinates": "Point(135.510583 34.775306)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/KANSAI%20UNIVERSITY%20MUSEUM.jpg"
+    },
+    {
+        "id": "Q7105564",
+        "name": "大阪国際平和センター",
+        "type": "和平博物館",
+        "coordinates": "Point(135.53 34.68166667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Peace-osaka.jpg"
+    },
+    {
+        "id": "Q11428215",
+        "name": "堺市立泉北すえむら資料館",
+        "type": "廃止された博物館",
+        "coordinates": "Point(135.510944 34.492083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%A4%A7%E9%98%AA%E5%BA%9C%E7%AB%8B%E6%B3%89%E5%8C%97%E8%80%83%E5%8F%A4%E8%B3%87%E6%96%99%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11440161",
+        "name": "大阪大學綜合學術博物館",
+        "type": "大學博物館",
+        "coordinates": "Point(135.453833 34.806444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Museum%20of%20Osaka%20University.JPG"
+    },
+    {
+        "id": "Q899319",
+        "name": "速食麵發明紀念館",
+        "type": "食物博物館",
+        "coordinates": "Point(135.426675 34.818038)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/240810%20Cupnoodles%20Museum%20Osaka%20Ikeda%20Ikeda%20Osaka%20pref%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q11249107",
+        "name": "三得利博物館",
+        "type": "美術館",
+        "coordinates": "Point(135.43 34.6538)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/DSC%200301%20Suntory%20Museum.jpg"
+    },
+    {
+        "id": "Q55532678",
+        "name": "大阪日本民艺馆",
+        "type": "民俗博物館",
+        "coordinates": "Point(135.53343889 34.81227778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Japan%20folk%20crafts%20museum%2C%20Osaka.jpg"
+    },
+    {
+        "id": "Q30934192",
+        "name": "レゴランド・ディスカバリー・センター大阪",
+        "type": "乐高探索中心",
+        "coordinates": "Point(135.430166666 34.655805555)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11259901",
+        "name": "いのちの塔",
+        "type": "觀光塔",
+        "coordinates": "Point(135.57491667 34.71019444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Statue%20of%20Life.JPG"
+    },
+    {
+        "id": "Q138666212",
+        "name": "HEP NAVIO",
+        "type": "購物中心",
+        "coordinates": "Point(135.49993193 34.70322136)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osaka%2C%20hep%20navio%2001.jpg"
+    },
+    {
+        "id": "Q751156",
+        "name": "HEP",
+        "type": "複合商業設施",
+        "coordinates": "Point(135.5004466 34.7040028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/TOHO%20CINEMAS%20Umeda%20in%20201409.JPG"
+    },
+    {
+        "id": "Q11381066",
+        "name": "伏見ビル",
+        "type": "建成遗产",
+        "coordinates": "Point(135.50569444 34.68897222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hushimi-bld.jpg"
+    },
+    {
+        "id": "Q548263",
+        "name": "天保山大摩天輪",
+        "type": "摩天輪",
+        "coordinates": "Point(135.431 34.6562)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tempozan%20giant%20wheel02s2048.jpg"
+    },
+    {
+        "id": "Q11440386",
+        "name": "大阪市立博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(135.526528 34.685861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/HeadQuarter4thDiv-Osaka.jpg"
+    },
+    {
+        "id": "Q138666212",
+        "name": "HEP NAVIO",
+        "type": "地标建筑",
+        "coordinates": "Point(135.49993193 34.70322136)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osaka%2C%20hep%20navio%2001.jpg"
+    },
+    {
+        "id": "Q138666211",
+        "name": "HEP FIVE",
+        "type": "購物中心",
+        "coordinates": "Point(135.500468514 34.704082644)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/HEP%20FIVE.jpg"
+    },
+    {
+        "id": "Q875709",
+        "name": "大阪市立科學館",
+        "type": "天象儀",
+        "coordinates": "Point(135.49152 34.69124)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osaka%20science%20museum01s3200.jpg"
+    },
+    {
+        "id": "Q11441568",
+        "name": "大阪科学技術館",
+        "type": "科學博物館",
+        "coordinates": "Point(135.496306 34.686472)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/OSTEC%20Exhibition%20Hall%20Osaka%20Japan01-r.jpg"
+    },
+    {
+        "id": "Q138666211",
+        "name": "HEP FIVE",
+        "type": "地标建筑",
+        "coordinates": "Point(135.500468514 34.704082644)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/HEP%20FIVE.jpg"
+    },
+    {
+        "id": "Q21654285",
+        "name": "東大阪市立郷土博物館",
+        "type": "地方文化館",
+        "coordinates": "Point(135.65086111 34.66086111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Higashi-osaka%20City%20Hometown%20Museum01.JPG"
+    },
+    {
+        "id": "Q133272800",
+        "name": "八尾市立しおんじやま古墳学習館",
+        "type": "考古博物館",
+        "coordinates": "Point(135.639644 34.639702)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q3275446",
+        "name": "太陽之塔",
+        "type": "塔式建築",
+        "coordinates": "Point(135.532 34.8096)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q3275446",
+        "name": "太陽之塔",
+        "type": "藝術作品",
+        "coordinates": "Point(135.532 34.8096)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q117794301",
+        "name": "江崎記念館",
+        "type": "公司博物館",
+        "coordinates": "Point(135.46125 34.718277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ezaki%20memorial%20hall.jpg"
+    },
+    {
+        "id": "Q11257046",
+        "name": "あくあぴあ芥川",
+        "type": "水族館",
+        "coordinates": "Point(135.592111 34.864111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aquapia%20Akutagawa01s3s4500.jpg"
+    },
+    {
+        "id": "Q1384663",
+        "name": "萬博樂園",
+        "type": "主題樂園",
+        "coordinates": "Point(135.535 34.80555556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Expoland%20Ferris%20wheel%20wide%20shot.jpg"
+    },
+    {
+        "id": "Q9004920",
+        "name": "大阪市立美术馆",
+        "type": "美術館",
+        "coordinates": "Point(135.510528 34.650111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osaka%20municipal%20museum%20of%20art01s3200.jpg"
+    },
+    {
+        "id": "Q127503070",
+        "name": "大阪大学中之島芸術センター",
+        "type": "大學博物館",
+        "coordinates": "Point(135.490434 34.692734)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q917073",
+        "name": "ダイダラザウルス",
+        "type": "スチール・ローラー・コースター",
+        "coordinates": "Point(135.535861 34.804384)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11405552",
+        "name": "千早赤阪村立郷土資料館",
+        "type": "地方文化館",
+        "coordinates": "Point(135.625389 34.463548)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chihaya-akasaka-v%20material%20pavilion.jpg"
+    },
+    {
+        "id": "Q59536065",
+        "name": "あべのハルカス美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.51407 34.645798)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Abeno%20Harukas%20Osaka%20Japan01-r.jpg"
+    },
+    {
+        "id": "Q138666211",
+        "name": "HEP FIVE",
+        "type": "建築物",
+        "coordinates": "Point(135.500468514 34.704082644)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/HEP-FIVE%20in%20201409%20001.JPG"
+    },
+    {
+        "id": "Q11440106",
+        "name": "大阪商業大學商業史博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.584139 34.666833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osaka-Univ-of-Commerce-Tanioka-Memorial-Hall01.jpg"
+    },
+    {
+        "id": "Q6875079",
+        "name": "岬公園",
+        "type": "主題樂園",
+        "coordinates": "Point(135.16116111 34.32804167)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q1448918",
+        "name": "堺市博物馆",
+        "type": "市立博物館",
+        "coordinates": "Point(135.48425 34.55886111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%A0%BA%E5%B8%82%E5%8D%9A%E7%89%A9%E9%A4%A8%20%2848814571636%29.jpg"
+    },
+    {
+        "id": "Q11416534",
+        "name": "吹田市立博物館",
+        "type": "市立博物館",
+        "coordinates": "Point(135.528389 34.783361)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/SuitaCityMuseum.JPG"
+    },
+    {
+        "id": "Q302897",
+        "name": "枚方公園",
+        "type": "動物園",
+        "coordinates": "Point(135.63813056 34.80577778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hirakata%20Park.jpg"
+    },
+    {
+        "id": "Q108585581",
+        "name": "石切温泉",
+        "type": "温泉镇",
+        "coordinates": "Point(135.653749 34.68038)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11440106",
+        "name": "大阪商業大學商業史博物館",
+        "type": "商業博物館",
+        "coordinates": "Point(135.584139 34.666833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osaka-Univ-of-Commerce-Tanioka-Memorial-Hall01.jpg"
+    },
+    {
+        "id": "Q11441052",
+        "name": "堺市立ビッグバン",
+        "type": "科學博物館",
+        "coordinates": "Point(135.513722 34.494861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Big-Bang-of-Osaka-Pref002.JPG"
+    },
+    {
+        "id": "Q1666643",
+        "name": "大阪府立国際児童文学館",
+        "type": "文學館",
+        "coordinates": "Point(135.535056 34.810806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/International%20Institute%20for%20Childrens%20Literature%20Osaka.jpg"
+    },
+    {
+        "id": "Q11656208",
+        "name": "関西サイクルスポーツセンター",
+        "type": "主題樂園",
+        "coordinates": "Point(135.529806 34.413167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kansai%20cycle%20sports%20center.JPG"
+    },
+    {
+        "id": "Q11574916",
+        "name": "生駒山上遊樂場",
+        "type": "主題樂園",
+        "coordinates": "Point(135.678861 34.679556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ikoma%20Hikoutou01.jpg"
+    },
+    {
+        "id": "Q11441080",
+        "name": "大阪府立彌生文化博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(135.427167 34.499222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osaka%20Prefectural%20Museum%20of%20Yayoi%20Culture01s3200.jpg"
+    },
+    {
+        "id": "Q86744876",
+        "name": "はりきゅうミュージアム",
+        "type": "私人博物館",
+        "coordinates": "Point(135.540138888 34.678611111)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q302897",
+        "name": "枚方公園",
+        "type": "主題樂園",
+        "coordinates": "Point(135.63813056 34.80577778)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hirakata%20Park.jpg"
+    },
+    {
+        "id": "Q61941295",
+        "name": "今城塚古墳公園",
+        "type": "考古学公園",
+        "coordinates": "Point(135.5786 34.8445)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Imashirozuka-kofun%20haniwa-1.JPG"
+    },
+    {
+        "id": "Q1191885",
+        "name": "海遊館",
+        "type": "水族館",
+        "coordinates": "Point(135.428888888 34.654472222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osaka%20Kaiyukan01s3872.jpg"
+    },
+    {
+        "id": "Q899319",
+        "name": "速食麵發明紀念館",
+        "type": "公司博物館",
+        "coordinates": "Point(135.426675 34.818038)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/240810%20Cupnoodles%20Museum%20Osaka%20Ikeda%20Ikeda%20Osaka%20pref%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q1055037",
+        "name": "國立國際美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.492024 34.691786)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/NMAO01s3200.jpg"
+    },
+    {
+        "id": "Q50375431",
+        "name": "大阪中之島美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.491472222 34.692388888)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Nakanoshima%20Museum%20of%20Art%20Osaka.jpg"
+    },
+    {
+        "id": "Q751156",
+        "name": "HEP",
+        "type": "購物中心",
+        "coordinates": "Point(135.5004466 34.7040028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/TOHO%20CINEMAS%20Umeda%20in%20201409.JPG"
+    },
+    {
+        "id": "Q11441052",
+        "name": "堺市立ビッグバン",
+        "type": "児童館",
+        "coordinates": "Point(135.513722 34.494861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Big-Bang-of-Osaka-Pref002.JPG"
+    },
+    {
+        "id": "Q11440688",
+        "name": "大阪市立自然史博物館",
+        "type": "学术出版社",
+        "coordinates": "Point(135.522611 34.610361)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osaka%20Museum%20of%20Natural%20History1.jpg"
+    },
+    {
+        "id": "Q11670799",
+        "name": "高槻市立歴史民俗資料館",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(135.622573 34.842534)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takatsuki-archives-museum%200.jpg"
+    },
+    {
+        "id": "Q11282212",
+        "name": "アイセルシュラホール",
+        "type": "考古博物館",
+        "coordinates": "Point(135.59723056 34.56611944)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aicelshurahall01%201024.jpg"
+    },
+    {
+        "id": "Q4557237",
+        "name": "大阪府立近飛鳥博物館",
+        "type": "都道府县立博物馆",
+        "coordinates": "Point(135.64361111 34.50305556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chikatsu%20asuka%20museum01s3592.jpg"
+    },
+    {
+        "id": "Q751156",
+        "name": "HEP",
+        "type": "地标建筑",
+        "coordinates": "Point(135.5004466 34.7040028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/TOHO%20CINEMAS%20Umeda%20in%20201409.JPG"
+    },
+    {
+        "id": "Q137773156",
+        "name": "商船三井ミュージアム「ふねしる」",
+        "type": "海事博物館",
+        "coordinates": "Point(135.411708 34.637851)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11296794",
+        "name": "Kids Plaza大阪",
+        "type": "科學博物館",
+        "coordinates": "Point(135.510267 34.704697)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Headquarter%20of%20Kansai%20Telecasting%20Corporation.jpg"
+    },
+    {
+        "id": "Q11289722",
+        "name": "エキスポタワー",
+        "type": "觀光塔",
+        "coordinates": "Point(135.53305 34.802542)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/EXPO%20TOWER.JPG"
+    },
+    {
+        "id": "Q117794301",
+        "name": "江崎記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(135.46125 34.718277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ezaki%20memorial%20hall.jpg"
+    },
+    {
+        "id": "Q3275446",
+        "name": "太陽之塔",
+        "type": "美術館",
+        "coordinates": "Point(135.532 34.8096)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11670799",
+        "name": "高槻市立歴史民俗資料館",
+        "type": "民俗博物館",
+        "coordinates": "Point(135.622573 34.842534)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takatsuki-archives-museum%200.jpg"
+    },
+    {
+        "id": "Q867148",
+        "name": "大阪市立海洋博物館",
+        "type": "海事博物館",
+        "coordinates": "Point(135.40457222 34.64004722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osaka%20maritime%20museum01s3200.jpg"
+    },
+    {
+        "id": "Q104125924",
+        "name": "马力欧赛车：酷霸王的挑战",
+        "type": "機動遊戲",
+        "coordinates": "Point(135.4305455 34.6679417)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mario%20Kart%20Koopa%27s%20Challenge%20%28Universal%20Studios%20Japan%29%201.jpg"
+    },
+    {
+        "id": "Q11617881",
+        "name": "茨木市立川端康成文学馆",
+        "type": "人物紀念館",
+        "coordinates": "Point(135.570833 34.823194)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kawabata%20yasunari%20museum01s1760.jpg"
+    },
+    {
+        "id": "Q11440200",
+        "name": "大阪市下水道科學館",
+        "type": "科學博物館",
+        "coordinates": "Point(135.462472 34.693472)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osakashi%20gesuido%20kagakukan.jpg"
+    },
+    {
+        "id": "Q11417787",
+        "name": "和泉市久保惣紀念美術館",
+        "type": "美術館",
+        "coordinates": "Point(135.453389 34.445056)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Izumi-Kubosou001NEW.JPG"
+    },
+    {
+        "id": "Q11441080",
+        "name": "大阪府立彌生文化博物館",
+        "type": "考古博物館",
+        "coordinates": "Point(135.427167 34.499222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osaka%20Prefectural%20Museum%20of%20Yayoi%20Culture01s3200.jpg"
+    },
+    {
+        "id": "Q899319",
+        "name": "速食麵發明紀念館",
+        "type": "科學博物館",
+        "coordinates": "Point(135.426675 34.818038)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/240810%20Cupnoodles%20Museum%20Osaka%20Ikeda%20Ikeda%20Osaka%20pref%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q11656208",
+        "name": "関西サイクルスポーツセンター",
+        "type": "運動場館",
+        "coordinates": "Point(135.529806 34.413167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kansai%20cycle%20sports%20center.JPG"
+    },
+    {
+        "id": "Q11428215",
+        "name": "堺市立泉北すえむら資料館",
+        "type": "考古博物館",
+        "coordinates": "Point(135.510944 34.492083)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E5%A4%A7%E9%98%AA%E5%BA%9C%E7%AB%8B%E6%B3%89%E5%8C%97%E8%80%83%E5%8F%A4%E8%B3%87%E6%96%99%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q28683749",
+        "name": "REDHORSE OSAKA WHEEL",
+        "type": "摩天輪",
+        "coordinates": "Point(135.53475 34.80625)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/OSAKA%20WHEEL%201.jpg"
+    },
+    {
+        "id": "Q917073",
+        "name": "ダイダラザウルス",
+        "type": "機動遊戲",
+        "coordinates": "Point(135.535861 34.804384)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q25110043",
+        "name": "ザ・フライング・ダイナソー",
+        "type": "スチール・ローラー・コースター",
+        "coordinates": "Point(135.4305 34.6634)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Flyingdinosaur.png"
+    },
+    {
+        "id": "Q138666211",
+        "name": "HEP FIVE",
+        "type": "建築物",
+        "coordinates": "Point(135.500468514 34.704082644)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/HEP%20FIVE.jpg"
+    },
+    {
+        "id": "Q4557237",
+        "name": "大阪府立近飛鳥博物館",
+        "type": "考古博物館",
+        "coordinates": "Point(135.64361111 34.50305556)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Chikatsu%20asuka%20museum01s3592.jpg"
+    },
+    {
+        "id": "Q1055037",
+        "name": "國立國際美術館",
+        "type": "國立博物館",
+        "coordinates": "Point(135.492024 34.691786)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/NMAO01s3200.jpg"
+    },
+    {
+        "id": "Q11412294",
+        "name": "司馬遼太郎紀念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(135.585667 34.6605)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/ShibaRyotaroMemorialMuseum.jpg"
+    },
+    {
+        "id": "Q21654084",
+        "name": "NIFREL",
+        "type": "水族館",
+        "coordinates": "Point(135.53358333 34.80641667)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/NIFREL.jpg"
+    },
+    {
+        "id": "Q899319",
+        "name": "速食麵發明紀念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(135.426675 34.818038)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/240810%20Cupnoodles%20Museum%20Osaka%20Ikeda%20Ikeda%20Osaka%20pref%20Japan01s3.jpg"
+    },
+    {
+        "id": "Q11463585",
+        "name": "小西家住宅",
+        "type": "历史房屋博物馆",
+        "coordinates": "Point(135.506889 34.688694)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Konishi%20Gisuke%20Shoten.jpg"
+    },
+    {
+        "id": "Q11670799",
+        "name": "高槻市立歴史民俗資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.622573 34.842534)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takatsuki-archives-museum%200.jpg"
+    },
+    {
+        "id": "Q875709",
+        "name": "大阪市立科學館",
+        "type": "科學博物館",
+        "coordinates": "Point(135.49152 34.69124)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osaka%20science%20museum01s3200.jpg"
+    },
+    {
+        "id": "Q1666643",
+        "name": "大阪府立国際児童文学館",
+        "type": "兒童圖書館",
+        "coordinates": "Point(135.535056 34.810806)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/International%20Institute%20for%20Childrens%20Literature%20Osaka.jpg"
+    },
+    {
+        "id": "Q11463585",
+        "name": "小西家住宅",
+        "type": "歷史房屋",
+        "coordinates": "Point(135.506889 34.688694)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Konishi%20Gisuke%20Shoten.jpg"
+    },
+    {
+        "id": "Q875709",
+        "name": "大阪市立科學館",
+        "type": "設施",
+        "coordinates": "Point(135.49152 34.69124)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osaka%20science%20museum01s3200.jpg"
+    },
+    {
+        "id": "Q1375103",
+        "name": "日本環球影城",
+        "type": "主題公園",
+        "coordinates": "Point(135.433 34.6647)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Harry%20Potter%20and%20the%20Forbidden%20Journey%20USJ.JPG"
+    },
+    {
+        "id": "Q11617860",
+        "name": "茨木市立吉利支丹遺物史料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.534389 34.888861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/KIRISHITAN-SHIRYOKAN.JPG"
+    },
+    {
+        "id": "Q133288994",
+        "name": "観心寺霊宝館",
+        "type": "宝物館",
+        "coordinates": "Point(135.597949 34.437622)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kanshinji%20Reihokan.jpg"
+    },
+    {
+        "id": "Q147157",
+        "name": "國立民族學博物館 (日本）",
+        "type": "國立博物館",
+        "coordinates": "Point(135.5296833 34.81286111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/National%20museum%20of%20ethnology%20Japan.jpg"
+    },
+    {
+        "id": "Q112113546",
+        "name": "妙国寺のソテツ",
+        "type": "巨樹",
+        "coordinates": "Point(135.481389 34.581028)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11603178",
+        "name": "箕面公園昆虫館",
+        "type": "昆虫館",
+        "coordinates": "Point(135.471528 34.841028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Minoh-kontyukan.jpg"
+    },
+    {
+        "id": "Q133261062",
+        "name": "堺市立みはら歴史博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.559931 34.547932)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q96338884",
+        "name": "大阪城天守閣",
+        "type": "天守",
+        "coordinates": "Point(135.52586964 34.687286863)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osaka%20Castle%20Nishinomaru%20Garden%20April%202005.JPG"
+    },
+    {
+        "id": "Q11603178",
+        "name": "箕面公園昆虫館",
+        "type": "昆虫博物館",
+        "coordinates": "Point(135.471528 34.841028)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Minoh-kontyukan.jpg"
+    },
+    {
+        "id": "Q11553490",
+        "name": "河内長野市立滝畑ふるさと文化財の森センター",
+        "type": "民俗博物館",
+        "coordinates": "Point(135.526388888 34.387583333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takihata%20furusato%20bunkazainomori%20center.jpg"
+    },
+    {
+        "id": "Q11508426",
+        "name": "日本民家集落博物館",
+        "type": "民家園",
+        "coordinates": "Point(135.488194 34.779167)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Old%20Japanese%20Farm%20House%20Museum%20Miyazaki.JPG"
+    },
+    {
+        "id": "Q96338884",
+        "name": "大阪城天守閣",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.52586964 34.687286863)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osaka%20Castle%20Nishinomaru%20Garden%20April%202005.JPG"
+    },
+    {
+        "id": "Q147157",
+        "name": "國立民族學博物館 (日本）",
+        "type": "民族誌学博物館",
+        "coordinates": "Point(135.5296833 34.81286111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/National%20museum%20of%20ethnology%20Japan.jpg"
+    },
+    {
+        "id": "Q11670762",
+        "name": "高槻市立しろあと歴史館",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.622887 34.844709)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Takatsuki-siroato-museum.jpg"
+    },
+    {
+        "id": "Q11440034",
+        "name": "大阪企業家ミュージアム",
+        "type": "人物紀念館",
+        "coordinates": "Point(135.50925 34.68388889)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Entrepreneurial%20museum%20of%20Challenge%20and%20Innovation.JPG"
+    },
+    {
+        "id": "Q11613133",
+        "name": "自行車博物館",
+        "type": "自転車博物館",
+        "coordinates": "Point(135.484611111 34.578972222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shimano%20Bicycle%20Museum%20001.jpg"
+    },
+    {
+        "id": "Q11456089",
+        "name": "富士正晴記念館",
+        "type": "人物紀念館",
+        "coordinates": "Point(135.565722222 34.827083333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fuji-masaharu-museum%2001.jpg"
+    },
+    {
+        "id": "Q11376793",
+        "name": "高槻市立今城塚古代歴史館",
+        "type": "博物館",
+        "coordinates": "Point(135.596014 34.852435)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Imasirotuka-museum%2001.jpg"
+    },
+    {
+        "id": "Q11440555",
+        "name": "大阪市立東洋陶瓷美術館",
+        "type": "陶瓷博物館",
+        "coordinates": "Point(135.50547222 34.69344444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Museum%20of%20Oriental%20Ceramics%2C%20Osaka%2020250831.jpg"
+    },
+    {
+        "id": "Q11329151",
+        "name": "松下博物馆：松下幸之助历史館",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.57272222 34.73811111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/PanasonicKonosukeMatsushitaMuseum.png"
+    },
+    {
+        "id": "Q114174315",
+        "name": "太子町立竹内街道歴史資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.656833333 34.517055555)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E7%AB%B9%E5%86%85%E8%A1%97%E9%81%93%E6%AD%B4%E5%8F%B2%E8%B3%87%E6%96%99%E9%A4%A8.jpg"
+    },
+    {
+        "id": "Q11440555",
+        "name": "大阪市立東洋陶瓷美術館",
+        "type": "アジア美術館",
+        "coordinates": "Point(135.50547222 34.69344444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Museum%20of%20Oriental%20Ceramics%2C%20Osaka%2020250831.jpg"
+    },
+    {
+        "id": "Q11670779",
+        "name": "高槻市立埋蔵文化財調査センター",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(135.588246 34.86237)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/150118Archaeological%20Research%20Center%20of%20Takatsuki%20City%20Osaka%20pref%20Japan01n.jpg"
+    },
+    {
+        "id": "Q6888914",
+        "name": "交通科學博物館",
+        "type": "鐵路博物館",
+        "coordinates": "Point(135.4619 34.6707)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Modern-Transportaion-Museum.jpg"
+    },
+    {
+        "id": "Q11617860",
+        "name": "茨木市立吉利支丹遺物史料館",
+        "type": "キリスト教博物館",
+        "coordinates": "Point(135.534389 34.888861)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/KIRISHITAN-SHIRYOKAN.JPG"
+    },
+    {
+        "id": "Q11329151",
+        "name": "松下博物馆：松下幸之助历史館",
+        "type": "人物紀念館",
+        "coordinates": "Point(135.57272222 34.73811111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/PanasonicKonosukeMatsushitaMuseum.png"
+    },
+    {
+        "id": "Q104721234",
+        "name": "四天王寺宝物館",
+        "type": "宝物館",
+        "coordinates": "Point(135.517345 34.654181)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shitennoji12.jpg"
+    },
+    {
+        "id": "Q17214457",
+        "name": "くすりの道修町資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.50599722 34.68863611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sukunahikona-jinja2.jpg"
+    },
+    {
+        "id": "Q11261312",
+        "name": "大阪歷史博物館",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.520806 34.682722)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/140923%20Osaka%20Museum%20of%20History%20Osaka%20Japan02s3.jpg"
+    },
+    {
+        "id": "Q117686603",
+        "name": "柏原市立歴史資料館",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.638968 34.573365)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kshiwara%20shiritsu%20rekishi%20siryokan.jpg"
+    },
+    {
+        "id": "Q11670779",
+        "name": "高槻市立埋蔵文化財調査センター",
+        "type": "埋藏文化財中心",
+        "coordinates": "Point(135.58825 34.862333333)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/150118Archaeological%20Research%20Center%20of%20Takatsuki%20City%20Osaka%20pref%20Japan01n.jpg"
+    },
+    {
+        "id": "Q11376793",
+        "name": "高槻市立今城塚古代歴史館",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.596014 34.852435)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Imasirotuka-museum%2001.jpg"
+    },
+    {
+        "id": "Q17214457",
+        "name": "くすりの道修町資料館",
+        "type": "製薬博物館",
+        "coordinates": "Point(135.50599722 34.68863611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sukunahikona-jinja2.jpg"
+    },
+    {
+        "id": "Q17239440",
+        "name": "大阪府立近つ飛鳥風土記の丘",
+        "type": "風土記之丘",
+        "coordinates": "Point(135.643778 34.503111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E8%BF%91%E3%81%A4%E9%A3%9B%E9%B3%A5%E9%A2%A8%E5%9C%9F%E8%A8%98%E3%81%AE%E4%B8%98%20%E7%B7%91%E3%81%AE%E5%BA%83%E5%A0%B4%202013.3.30%20-%20panoramio.jpg"
+    },
+    {
+        "id": "Q17230753",
+        "name": "歴史館いずみさの",
+        "type": "歷史博物館",
+        "coordinates": "Point(135.327839 34.404689)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Izumisano%20History%20Museum.JPG"
+    },
+    {
+        "id": "Q11508057",
+        "name": "日本工芸館",
+        "type": "博物館",
+        "coordinates": "Point(135.49863611 34.66115)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Japan%20folk%20art%20museum.jpg"
+    },
+    {
+        "id": "Q1451498",
+        "name": "生命誌研究館",
+        "type": "研究機構",
+        "coordinates": "Point(135.611086 34.853466)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Biohistory-Museums.jpg"
+    },
+    {
+        "id": "Q11439926",
+        "name": "大阪生活今昔館",
+        "type": "博物館",
+        "coordinates": "Point(135.511694 34.710306)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osaka%20Museum%20of%20Housing%20and%20Living%20in%202013.jpg"
+    },
+    {
+        "id": "Q11439926",
+        "name": "大阪生活今昔館",
+        "type": "博物館",
+        "coordinates": "Point(135.511694 34.710306)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tenjimbashi6%20on%20Tenjimbashisuji-Mall.JPG"
+    },
+    {
+        "id": "Q11271546",
+        "name": "造幣博物館",
+        "type": "貨幣博物館",
+        "coordinates": "Point(135.521667 34.695917)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mint%20Museum%20Osaka%20Japan01s5.jpg"
+    },
+    {
+        "id": "Q11502154",
+        "name": "新幹線公園",
+        "type": "公園",
+        "coordinates": "Point(135.567027777 34.775277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%96%B0%E5%B9%B9%E7%B7%9A%E5%85%AC%E5%9C%92.JPG"
+    },
+    {
+        "id": "Q24866421",
+        "name": "EXPO'70展館",
+        "type": "博物館",
+        "coordinates": "Point(135.53575 34.809278)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/131116%20Expo%20Commemoration%20Park%20Suita%20Osaka%20pref%20Japan46s3.jpg"
+    },
+    {
+        "id": "Q6541903",
+        "name": "大阪人権博物館",
+        "type": "博物館",
+        "coordinates": "Point(135.486666666 34.654444444)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Liberty%20Osaka%20Human%20Rights%20Museum.jpg"
+    },
+    {
+        "id": "Q11576543",
+        "name": "田尻歴史館",
+        "type": "博物館",
+        "coordinates": "Point(135.288028 34.394361)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tajiri%20historic%20house01s3200.jpg"
+    },
+    {
+        "id": "Q11463731",
+        "name": "小谷城郷土館",
+        "type": "博物館",
+        "coordinates": "Point(135.498389 34.493222)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Kotanijyo%20kyodokan.jpg"
+    },
+    {
+        "id": "Q11439926",
+        "name": "大阪生活今昔館",
+        "type": "建築博物館",
+        "coordinates": "Point(135.511694 34.710306)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Osaka%20Museum%20of%20Housing%20and%20Living%20in%202013.jpg"
+    },
+    {
+        "id": "Q11439926",
+        "name": "大阪生活今昔館",
+        "type": "建築博物館",
+        "coordinates": "Point(135.511694 34.710306)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tenjimbashi6%20on%20Tenjimbashisuji-Mall.JPG"
+    },
+    {
+        "id": "Q21653416",
+        "name": "大東市立歴史民俗資料館",
+        "type": "博物館",
+        "coordinates": "Point(135.6419 34.71678)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11441131",
+        "name": "大阪府立狹山池博物館",
+        "type": "博物館",
+        "coordinates": "Point(135.551861 34.507417)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sayamaike-Museum01.JPG"
+    },
+    {
+        "id": "Q11440995",
+        "name": "大阪府立上方演藝資料館",
+        "type": "博物館",
+        "coordinates": "Point(135.503056 34.664611)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Wahha.jpg"
+    },
+    {
+        "id": "Q11441681",
+        "name": "大阪音楽大学音楽博物館",
+        "type": "博物館",
+        "coordinates": "Point(135.463083 34.756417)",
+        "image": "No Image"
+    },
+    {
+        "id": "Q11502154",
+        "name": "新幹線公園",
+        "type": "博物館",
+        "coordinates": "Point(135.567027777 34.775277777)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%96%B0%E5%B9%B9%E7%B7%9A%E5%85%AC%E5%9C%92.JPG"
+    },
+    {
+        "id": "Q11428089",
+        "name": "堺HAMONOミュージアム",
+        "type": "博物館",
+        "coordinates": "Point(135.477389 34.582833)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sakai%20HAMONO%20Museum.jpg"
+    },
+    {
+        "id": "Q1451498",
+        "name": "生命誌研究館",
+        "type": "博物館",
+        "coordinates": "Point(135.611086 34.853466)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Biohistory-Museums.jpg"
+    },
+    {
+        "id": "Q82736373",
+        "name": "落語みゅーじあむ",
+        "type": "博物館",
+        "coordinates": "Point(135.425111111 34.825861111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rakugo%20museum%20%28Ikeda%2C%20Osaka%29.jpg"
+    },
+    {
+        "id": "Q11440634",
+        "name": "大阪市立環境学習センター",
+        "type": "博物館",
+        "coordinates": "Point(135.578583 34.712111)",
+        "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ikiiki%20chikyukan1.jpg"
+    },
+    {
+        "id": "Q11440165",
+        "name": "大阪大谷大学博物館",
+        "type": "博物館",
+        "coordinates": "Point(135.580444 34.48125)",
+        "image": "No Image"
+    }
+]
