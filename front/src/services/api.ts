@@ -1019,16 +1019,16 @@ export interface ExploreSpot {
 
 
 
-const POI_CATEGORY_BY_MOOD: Record<string, string> = {
+const RESTAURANT_CATEGORY_BY_MOOD: Record<string, string> = {
   拉麵: '拉麵',
   巷弄咖啡: '咖啡',
   居酒屋: '居酒屋',
 };
-function getPoiCategoryByMood(mood: string): string | undefined {
+function getRestaurantCategoryByMood(mood: string): string | undefined {
   const normalizedMood = mood.trim();
 
-  if (POI_CATEGORY_BY_MOOD[normalizedMood]) {
-    return POI_CATEGORY_BY_MOOD[normalizedMood];
+  if (RESTAURANT_CATEGORY_BY_MOOD[normalizedMood]) {
+    return RESTAURANT_CATEGORY_BY_MOOD[normalizedMood];
   }
 
   if (normalizedMood.includes('咖啡')) return '咖啡';
@@ -1231,6 +1231,21 @@ function normalizePoiToExploreSpot(
       lat: poi.lat,
       lng: poi.lng,
     },
+  };
+}
+
+function normalizeRestaurantToExploreSpot(
+  restaurant: RestaurantVenue,
+  mood: string,
+  index: number
+): ExploreSpot {
+  return {
+    id: String(restaurant.id ?? `${mood}-${Date.now()}-${index}`),
+    name: restaurant.name,
+    area: restaurant.region,
+    tag: mood,
+    whisper: restaurant.context ?? restaurant.description ?? restaurant.category ?? '在地餐廳推薦',
+    raw: restaurant as unknown as Record<string, unknown>,
   };
 }
 
@@ -1473,16 +1488,16 @@ function shuffleArray<T>(items: T[]): T[] {
 }
 
 
-async function drawPoiCategoryExploreSpots(
+async function drawRestaurantExploreSpots(
   mood: string,
   category: string,
   topK: number,
   lockedRegion?: string | null
 ): Promise<ExploreSpot[]> {
-  const metadata = await getRecommendationMetadata();
+  const metadata = await getRestaurantMetadata();
 
   if (!metadata.categories.includes(category)) {
-    console.warn('[drawPoiCategoryExploreSpots] category not in POI metadata:', {
+    console.warn('[drawRestaurantExploreSpots] category not in restaurant metadata:', {
       category,
       availableCategories: metadata.categories,
     });
@@ -1493,37 +1508,37 @@ async function drawPoiCategoryExploreSpots(
     : shuffleArray(metadata.regions ?? []);
 
   const picked: ExploreSpot[] = [];
-  const fallback: RecommendationPoi[] = [];
+  const fallback: RestaurantVenue[] = [];
 
   for (const region of regions) {
     try {
-      const pois = await getPois({
+      const restaurants = await getRestaurants({
         region,
         category,
       });
 
-      console.log('[drawPoiCategoryExploreSpots] query result:', {
+      console.log('[drawRestaurantExploreSpots] query result:', {
         region,
         category,
-        count: pois.length,
-        sample: pois.slice(0, 3).map(poi => ({
-          name: poi.name,
-          region: poi.region,
-          category: poi.category,
+        count: restaurants.length,
+        sample: restaurants.slice(0, 3).map(restaurant => ({
+          name: restaurant.name,
+          region: restaurant.region,
+          category: restaurant.category,
         })),
       });
 
-      if (pois.length === 0) continue;
+      if (restaurants.length === 0) continue;
 
-      fallback.push(...pois);
+      fallback.push(...restaurants);
 
-      const poi = shuffleArray(pois)[0];
+      const restaurant = shuffleArray(restaurants)[0];
 
-      picked.push( normalizePoiToExploreSpot(poi, mood, picked.length));
+      picked.push(normalizeRestaurantToExploreSpot(restaurant, mood, picked.length));
 
       if (picked.length >= topK) break;
     } catch (err) {
-      console.warn(`[drawPoiCategoryExploreSpots] 跳過 ${region}`, err);
+      console.warn(`[drawRestaurantExploreSpots] 跳過 ${region}`, err);
     }
   }
 
@@ -1534,28 +1549,27 @@ async function drawPoiCategoryExploreSpots(
   const usedIds = new Set(picked.map(card => card.id));
 
   const fallbackCards = shuffleArray(fallback)
-    .map((poi, index) => normalizePoiToExploreSpot(poi, mood, index))
+    .map((restaurant, index) => normalizeRestaurantToExploreSpot(restaurant, mood, index))
     .filter(card => !usedIds.has(card.id));
 
-    const merged = [...picked, ...fallbackCards].slice(0, topK);
+  const merged = [...picked, ...fallbackCards].slice(0, topK);
 
-    if (merged.length === 0) {
-      throw new Error(`目前找不到「${category}」相關資料`);
-    }
-
-    return merged;
+  if (merged.length === 0) {
+    throw new Error(`目前找不到「${category}」相關餐廳資料`);
   }
+
+  return merged;
+}
 
 export async function drawExploreSpots(
   mood: string,
   topK = 3,
   lockedRegion?: string | null
 ): Promise<ExploreSpot[]> {
-  const poiCategory = getPoiCategoryByMood(mood);
+  const restaurantCategory = getRestaurantCategoryByMood(mood);
 
-  // 餐廳相關 mood：資料目前在 /api/pois/，可用 category 查
-  if (poiCategory) {
-    return drawPoiCategoryExploreSpots(mood, poiCategory, topK, lockedRegion);
+  if (restaurantCategory) {
+    return drawRestaurantExploreSpots(mood, restaurantCategory, topK, lockedRegion);
   }
 
   // 景點相關 mood：不能用 category，也不要用 search

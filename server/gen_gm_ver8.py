@@ -16,6 +16,9 @@ load_dotenv()
 # 使用 os.getenv() 是最安全的做法，如果找不到該變數，它會回傳 None 而不會報錯導致程式當機
 GEMINI_KEY = os.getenv("GEMINI_API_KEY")
 GMAPS_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
+DJANGO_API_BASE_URL = os.getenv("DJANGO_API_BASE_URL", "http://127.0.0.1:8000").rstrip("/")
+DJANGO_POIS_API_URL = f"{DJANGO_API_BASE_URL}/api/pois/"
+DJANGO_RESTAURANTS_API_URL = f"{DJANGO_API_BASE_URL}/api/restaurants/"
 def verify_place_with_google_maps(place_name, destination, api_key=GMAPS_KEY):#"AIzaSyB968naig5ejBNau0ngGRCk3sIDm14pIxE"):
     """
     呼叫 Google Places API (Text Search) 驗證景點是否存在。
@@ -467,7 +470,6 @@ def add_place_to_mapping(url_mapping: dict, place: dict):
         "rating": place.get("google_rating", 0.0) or 0.0,
     }
 def fetch_restaurant_pois_for_region(region: str, per_dest_rest_count: int) -> list[dict]:
-    DJANGO_API_URL = "http://127.0.0.1:8000/api/pois/"
     restaurants = []
 
     # 每個分類抓一點，避免全部都是咖啡或全部都是拉麵
@@ -482,10 +484,10 @@ def fetch_restaurant_pois_for_region(region: str, per_dest_rest_count: int) -> l
                 "ordering": "-google_rating",
             }
 
-            response = requests.get(DJANGO_API_URL, params=params)
+            response = requests.get(DJANGO_RESTAURANTS_API_URL, params=params)
 
             if response.status_code != 200:
-                logger.warning(f"餐廳 POI 查詢失敗：region={region}, category={category}, status={response.status_code}")
+                logger.warning(f"餐廳查詢失敗：region={region}, category={category}, status={response.status_code}")
                 continue
 
             data = response.json()
@@ -494,7 +496,7 @@ def fetch_restaurant_pois_for_region(region: str, per_dest_rest_count: int) -> l
             restaurants.extend(results)
 
         except Exception as e:
-            logger.warning(f"餐廳 POI 查詢錯誤：region={region}, category={category}, error={e}")
+            logger.warning(f"餐廳查詢錯誤：region={region}, category={category}, error={e}")
 
     restaurants = dedupe_by_id_or_name(restaurants)
 
@@ -505,13 +507,14 @@ def fetch_restaurant_pois_for_region(region: str, per_dest_rest_count: int) -> l
     )
 
     return restaurants[:per_dest_rest_count]
-def fetch_pois_by_categories_for_region(
+
+
+def fetch_restaurants_by_categories_for_region(
     region: str,
     categories: list[str],
     total_limit: int,
     per_category_limit: int | None = None,
 ) -> list[dict]:
-    DJANGO_API_URL = "http://127.0.0.1:8000/api/pois/"
     items = []
 
     if not categories:
@@ -532,7 +535,64 @@ def fetch_pois_by_categories_for_region(
                 "ordering": "-google_rating",
             }
 
-            response = requests.get(DJANGO_API_URL, params=params)
+            response = requests.get(DJANGO_RESTAURANTS_API_URL, params=params)
+
+            if response.status_code != 200:
+                logger.warning(
+                    f"Restaurant 查詢失敗：region={region}, category={category}, status={response.status_code}"
+                )
+                continue
+
+            data = response.json()
+            results = data.get("results", [])
+
+            logger.info(
+                f"🍜 Restaurant category query: region={region}, category={category}, count={len(results)}"
+            )
+
+            items.extend(results)
+
+        except Exception as e:
+            logger.warning(
+                f"Restaurant 查詢錯誤：region={region}, category={category}, error={e}"
+            )
+
+    items = dedupe_by_id_or_name(items)
+
+    items = sorted(
+        items,
+        key=lambda item: item.get("google_rating") or 0,
+        reverse=True,
+    )
+
+    return items[:total_limit]
+def fetch_pois_by_categories_for_region(
+    region: str,
+    categories: list[str],
+    total_limit: int,
+    per_category_limit: int | None = None,
+) -> list[dict]:
+    items = []
+
+    if not categories:
+        return []
+
+    if per_category_limit is None:
+        per_category_limit = max(
+            3,
+            (total_limit + len(categories) - 1) // len(categories) + 2
+        )
+
+    for category in categories:
+        try:
+            params = {
+                "region": region,
+                "category": category,
+                "page_size": per_category_limit,
+                "ordering": "-google_rating",
+            }
+
+            response = requests.get(DJANGO_POIS_API_URL, params=params)
 
             if response.status_code != 200:
                 logger.warning(
@@ -632,7 +692,7 @@ def retrieve_local_knowledge(
             scenic_places.extend(region_scenic)
 
             # 2. 餐廳候選：美食興趣時多抓；非美食時少抓
-            region_restaurants = fetch_pois_by_categories_for_region(
+            region_restaurants = fetch_restaurants_by_categories_for_region(
                 region=region,
                 categories=RESTAURANT_CATEGORIES_FOR_RAG,
                 total_limit=per_dest_rest_count,
@@ -702,7 +762,6 @@ def retrieve_local_knowledge2(destinations: list, required_count: int, user_pref
     """
     呼叫組員的 Django API 讀取景點資料。若符合的高分景點數量不足，會自動降低星等標準。
     """
-    DJANGO_API_URL = "http://127.0.0.1:8000/api/pois/"
     url_mapping = {}
     if isinstance(destinations, str):
         destinations = [destinations]
@@ -723,7 +782,7 @@ def retrieve_local_knowledge2(destinations: list, required_count: int, user_pref
                     "ordering": "-google_rating" # 讓 Django 幫忙由高到低排序
                 }
                 
-                response = requests.get(DJANGO_API_URL, params=params)
+                response = requests.get(DJANGO_POIS_API_URL, params=params)
                 
                 if response.status_code == 200:
                     api_data = response.json()
