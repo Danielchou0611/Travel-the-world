@@ -78,6 +78,14 @@ Django 預設網址：
 - [http://127.0.0.1:8000/api/pois/](http://127.0.0.1:8000/api/pois/)
 - [http://127.0.0.1:8000/api/restaurants/](http://127.0.0.1:8000/api/restaurants/)
 
+## 設定前端
+第一次需填入your_google_maps_api_key
+```bash
+cd front
+cp .env.example .env
+```
+填入VITE_GOOGLE_MAPS_API_KEY
+
 ## 啟動前端
 
 ```bash
