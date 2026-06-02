@@ -1,0 +1,889 @@
+
+== Health ==
+{
+  "service": "travel-world recommendation api",
+  "status": "ok",
+  "endpoints": {
+    "admin": "/admin/",
+    "metadata": "/api/metadata/",
+    "pois": "/api/pois/",
+    "recommendations": "/api/recommendations/",
+    "restaurants": "/api/restaurants/",
+    "restaurant_metadata": "/api/restaurants/metadata/",
+    "restaurant_recommendations": "/api/restaurants/recommendations/"
+  }
+}
+
+== Restaurant Metadata ==
+{
+  "regions": [
+    "三重縣",
+    "京都府",
+    "佐賀縣",
+    "兵庫縣",
+    "北海道",
+    "千葉縣",
+    "和歌山縣",
+    "埼玉縣",
+    "大分縣",
+    "大阪府",
+    "奈良縣",
+    "宮城縣",
+    "宮崎縣",
+    "富山縣",
+    "山口縣",
+    "山形縣",
+    "山梨縣",
+    "岐阜縣",
+    "岡山縣",
+    "岩手縣",
+    "島根縣",
+    "廣島縣",
+    "德島縣",
+    "愛媛縣",
+    "愛知縣",
+    "新潟縣",
+    "東京都",
+    "栃木縣",
+    "沖繩縣",
+    "滋賀縣",
+    "熊本縣",
+    "石川縣",
+    "神奈川縣",
+    "福井縣",
+    "福岡縣",
+    "福島縣",
+    "秋田縣",
+    "群馬縣",
+    "茨城縣",
+    "長崎縣",
+    "長野縣",
+    "青森縣",
+    "靜岡縣",
+    "香川縣",
+    "高知縣",
+    "鳥取縣",
+    "鹿兒島縣"
+  ],
+  "categories": [
+    "中華",
+    "咖哩",
+    "咖啡",
+    "壽司",
+    "居酒屋",
+    "拉麵",
+    "日式",
+    "海鮮",
+    "燒肉",
+    "甜點",
+    "異國料理",
+    "綜合餐廳",
+    "義式",
+    "西式",
+    "酒吧",
+    "韓式",
+    "麵包輕食"
+  ],
+  "venue_types": [
+    "小店",
+    "餐廳"
+  ],
+  "restaurant_count": 175979
+}
+
+== Restaurant List In Tokyo ==
+{
+  "count": 7517,
+  "next": "http://127.0.0.1:8000/api/restaurants/?page=2&page_size=3&region=%E6%9D%B1%E4%BA%AC%E9%83%BD",
+  "previous": null,
+  "results": [
+    {
+      "id": "ChIJoSq01FyNGGARuu4izIPSdRs",
+      "name": "月島もんじゃ おこげ 渋谷",
+      "region": "東京都",
+      "category": "日式",
+      "venue_type": "餐廳",
+      "interests": [
+        "日式",
+        "餐廳",
+        "文字燒"
+      ],
+      "google_rating": 4.9,
+      "review_count": 29412,
+      "rating_norm": 0.98,
+      "review_norm": 0.8835,
+      "station_distance_efficiency": 0.4334,
+      "static_score": 0.951,
+      "distance_to_station_km": 6.5,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.6604493,
+      "lng": 139.699402,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHV-JFqbHwH_QABbPSC4apjjvA1_pb_k6FeAoJtB0LidFmUGSsFYswhdH83c4HBUC3ribxWW5LocqvCTEfjOPDiiv4ud3aitRBUNdB-F8Espnb9pAhV2t7tZwLG0JZ-SFUXCyH6CA=w408-h544-k-no",
+      "google_name_matched": "月島もんじゃ おこげ 渋谷",
+      "raw_type": "もんじゃ焼き屋"
+    },
+    {
+      "id": "ChIJJbYu9ZmNGGARQN-9DHwAl-E",
+      "name": "火ノ丸",
+      "region": "東京都",
+      "category": "燒肉",
+      "venue_type": "餐廳",
+      "interests": [
+        "燒肉",
+        "餐廳",
+        "聚餐"
+      ],
+      "google_rating": 4.9,
+      "review_count": 16574,
+      "rating_norm": 0.98,
+      "review_norm": 0.8343,
+      "station_distance_efficiency": 0.455,
+      "static_score": 0.9363,
+      "distance_to_station_km": 6.0,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.6937765,
+      "lng": 139.7026151,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHAtYCHjAdMyidHyG1IkXFCY9SfrZYYR312VvaheAm8c0ucYZDpzkcLo4vdR_OLbJsZoVLkIUPX0TVDybsl3kHTh8jrCtNN54zFyzsG3wIJLKW84Uag9vU4NHFJHkOCAVpikyu5=w408-h306-k-no",
+      "google_name_matched": "火ノ丸",
+      "raw_type": "焼肉店"
+    },
+    {
+      "id": "ChIJn2FoeFmLGGARnIog2ijRZXw",
+      "name": "牛かつもと村 渋谷店",
+      "region": "東京都",
+      "category": "日式",
+      "venue_type": "餐廳",
+      "interests": [
+        "日式",
+        "餐廳",
+        "炸豬排"
+      ],
+      "google_rating": 4.9,
+      "review_count": 14704,
+      "rating_norm": 0.98,
+      "review_norm": 0.824,
+      "station_distance_efficiency": 0.4423,
+      "static_score": 0.9332,
+      "distance_to_station_km": 6.3,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.656977,
+      "lng": 139.7039981,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE9K92PjxlK6e2XeS4_ObwrYqWtEmOE4bngeO_S1p0N3Gu9AYdmfaJd9rljPVviUvBbmcYX1JV2p1Sk1-KCUOL7WsACZ-yI_zVCXybyAgBspSWB77ttBAEuECPZPsUSiAn-OanO=w408-h296-k-no",
+      "google_name_matched": "牛かつもと村 渋谷店",
+      "raw_type": "とんかつ店"
+    }
+  ]
+}
+
+== Restaurant List In Tokyo Ramen ==
+{
+  "count": 571,
+  "next": "http://127.0.0.1:8000/api/restaurants/?category=%E6%8B%89%E9%BA%B5&page=2&page_size=3&region=%E6%9D%B1%E4%BA%AC%E9%83%BD",
+  "previous": null,
+  "results": [
+    {
+      "id": "ChIJazjtQgCNGGARO606yF6kY7I",
+      "name": "つじ田 神田末広町店",
+      "region": "東京都",
+      "category": "拉麵",
+      "venue_type": "餐廳",
+      "interests": [
+        "拉麵",
+        "餐廳",
+        "宵夜",
+        "快速用餐"
+      ],
+      "google_rating": 4.9,
+      "review_count": 3641,
+      "rating_norm": 0.98,
+      "review_norm": 0.7041,
+      "station_distance_efficiency": 0.67,
+      "static_score": 0.8972,
+      "distance_to_station_km": 2.5,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.7031126,
+      "lng": 139.7710666,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFNjYGCnMHOtjnpCPSKWhdP4qU5gb2D8M_5erVqbtcf1pkTbgnZcnUSiq8bO5sAeU4fKLc0oAdsgOOa2BrkDexSDa6xrRgZuUnGS4DLVzLT3lepO1e3Mh5-WSf108RQYCITTd-eBgFAuqES=w408-h272-k-no",
+      "google_name_matched": "つじ田 神田末広町店",
+      "raw_type": "ラーメン屋"
+    },
+    {
+      "id": "ChIJLTqRZRaNGGAR-9M2kJUCWhw",
+      "name": "Jikasei MENSHO",
+      "region": "東京都",
+      "category": "拉麵",
+      "venue_type": "餐廳",
+      "interests": [
+        "拉麵",
+        "餐廳",
+        "宵夜",
+        "快速用餐"
+      ],
+      "google_rating": 4.8,
+      "review_count": 4307,
+      "rating_norm": 0.96,
+      "review_norm": 0.7186,
+      "station_distance_efficiency": 0.4339,
+      "static_score": 0.8876,
+      "distance_to_station_km": 6.5,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.6620648,
+      "lng": 139.698835,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFucD0VtVBvx6YPULfGyyvmTcMOa9nbvirPFG9-4Qetzmq5vQ921cO3e5FyY_Ohz2JeRWBYaFLsJuY4LQYoh0OMJLL8l9JDMDLzvDvEjQ7QFmlGtkCxi5az4q8RBga28-jMKEeYule4yK0=w408-h306-k-no",
+      "google_name_matched": "Jikasei MENSHO",
+      "raw_type": "ラーメン屋"
+    },
+    {
+      "id": "ChIJ6-Rvg5-OGGAR99AELnNenOU",
+      "name": "らーめん 鴨to葱 上野御徒町本店",
+      "region": "東京都",
+      "category": "拉麵",
+      "venue_type": "餐廳",
+      "interests": [
+        "拉麵",
+        "餐廳",
+        "宵夜",
+        "快速用餐"
+      ],
+      "google_rating": 4.5,
+      "review_count": 13245,
+      "rating_norm": 0.9,
+      "review_norm": 0.815,
+      "station_distance_efficiency": 0.6165,
+      "static_score": 0.8745,
+      "distance_to_station_km": 3.1,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.7083768,
+      "lng": 139.7752537,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGacGt4InejxJnApX-_AFA7504sRvoCCJThbUNBHQaWNxNGqI3Gk0-VIovwnpe6ZTcSADqY0OqWPt6aRexx8ChdSNbobdvjLPVL0FWG0eM8DUM_dv_LPRXeggZhhUfrwnYGAX-vhhWDq5I5=w408-h408-k-no",
+      "google_name_matched": "らーめん 鴨to葱 上野御徒町本店",
+      "raw_type": "ラーメン屋"
+    }
+  ]
+}
+
+== Restaurant Recommendations By Region ==
+{
+  "count": 5,
+  "filters": {
+    "region": "東京都",
+    "category": "",
+    "venue_type": "",
+    "lat": null,
+    "lng": null,
+    "radius_m": null,
+    "top_k": 5
+  },
+  "results": [
+    {
+      "id": "ChIJoSq01FyNGGARuu4izIPSdRs",
+      "name": "月島もんじゃ おこげ 渋谷",
+      "region": "東京都",
+      "category": "日式",
+      "venue_type": "餐廳",
+      "interests": [
+        "日式",
+        "餐廳",
+        "文字燒"
+      ],
+      "google_rating": 4.9,
+      "review_count": 29412,
+      "rating_norm": 0.98,
+      "review_norm": 0.8835,
+      "station_distance_efficiency": 0.4334,
+      "static_score": 0.951,
+      "distance_to_station_km": 6.5,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.6604493,
+      "lng": 139.699402,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHV-JFqbHwH_QABbPSC4apjjvA1_pb_k6FeAoJtB0LidFmUGSsFYswhdH83c4HBUC3ribxWW5LocqvCTEfjOPDiiv4ud3aitRBUNdB-F8Espnb9pAhV2t7tZwLG0JZ-SFUXCyH6CA=w408-h544-k-no",
+      "google_name_matched": "月島もんじゃ おこげ 渋谷",
+      "raw_type": "もんじゃ焼き屋",
+      "distance_m": null,
+      "final_score": 0.951
+    },
+    {
+      "id": "ChIJJbYu9ZmNGGARQN-9DHwAl-E",
+      "name": "火ノ丸",
+      "region": "東京都",
+      "category": "燒肉",
+      "venue_type": "餐廳",
+      "interests": [
+        "燒肉",
+        "餐廳",
+        "聚餐"
+      ],
+      "google_rating": 4.9,
+      "review_count": 16574,
+      "rating_norm": 0.98,
+      "review_norm": 0.8343,
+      "station_distance_efficiency": 0.455,
+      "static_score": 0.9363,
+      "distance_to_station_km": 6.0,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.6937765,
+      "lng": 139.7026151,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHAtYCHjAdMyidHyG1IkXFCY9SfrZYYR312VvaheAm8c0ucYZDpzkcLo4vdR_OLbJsZoVLkIUPX0TVDybsl3kHTh8jrCtNN54zFyzsG3wIJLKW84Uag9vU4NHFJHkOCAVpikyu5=w408-h306-k-no",
+      "google_name_matched": "火ノ丸",
+      "raw_type": "焼肉店",
+      "distance_m": null,
+      "final_score": 0.9363
+    },
+    {
+      "id": "ChIJn2FoeFmLGGARnIog2ijRZXw",
+      "name": "牛かつもと村 渋谷店",
+      "region": "東京都",
+      "category": "日式",
+      "venue_type": "餐廳",
+      "interests": [
+        "日式",
+        "餐廳",
+        "炸豬排"
+      ],
+      "google_rating": 4.9,
+      "review_count": 14704,
+      "rating_norm": 0.98,
+      "review_norm": 0.824,
+      "station_distance_efficiency": 0.4423,
+      "static_score": 0.9332,
+      "distance_to_station_km": 6.3,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.656977,
+      "lng": 139.7039981,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE9K92PjxlK6e2XeS4_ObwrYqWtEmOE4bngeO_S1p0N3Gu9AYdmfaJd9rljPVviUvBbmcYX1JV2p1Sk1-KCUOL7WsACZ-yI_zVCXybyAgBspSWB77ttBAEuECPZPsUSiAn-OanO=w408-h296-k-no",
+      "google_name_matched": "牛かつもと村 渋谷店",
+      "raw_type": "とんかつ店",
+      "distance_m": null,
+      "final_score": 0.9332
+    },
+    {
+      "id": "ChIJPX8SqYKLGGAR8VJQllSsh6M",
+      "name": "肉汁水餃子 餃包 六本木交差点",
+      "region": "東京都",
+      "category": "居酒屋",
+      "venue_type": "餐廳",
+      "interests": [
+        "居酒屋",
+        "餐廳",
+        "聚餐",
+        "宵夜",
+        "酒類",
+        "快速用餐"
+      ],
+      "google_rating": 4.8,
+      "review_count": 18754,
+      "rating_norm": 0.96,
+      "review_norm": 0.8449,
+      "station_distance_efficiency": 0.5737,
+      "static_score": 0.9255,
+      "distance_to_station_km": 3.7,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.6635851,
+      "lng": 139.7321399,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFUEW0s1t3bo5xqt1ujrAnnvvvj4jOScUPJ63uZxQpyRaa-RGd0evNE80_S4lPBoXungtSBEDqTXA4_PfuZx2K9Q40ua9H2QNlsE_-biJqSR9EzWWPtsPCWGflxWANFZAZGrbUP3A=w408-h306-k-no",
+      "google_name_matched": "肉汁水餃子 餃包 六本木交差点",
+      "raw_type": "居酒屋",
+      "distance_m": null,
+      "final_score": 0.9255
+    },
+    {
+      "id": "ChIJ2bykGIWLGGARVfwuKdpfCmU",
+      "name": "MOHEJI 新丸ビル",
+      "region": "東京都",
+      "category": "日式",
+      "venue_type": "餐廳",
+      "interests": [
+        "日式",
+        "餐廳",
+        "文字燒"
+      ],
+      "google_rating": 4.9,
+      "review_count": 10144,
+      "rating_norm": 0.98,
+      "review_norm": 0.7921,
+      "station_distance_efficiency": 0.9451,
+      "static_score": 0.9236,
+      "distance_to_station_km": 0.3,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.682437,
+      "lng": 139.7642658,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGrS37mZ658f6fTmKyDbXQ0QRMR4ajWBFsC4c8Nh402YjB-vpNobVM0d9iJegUgAmKbSm8bZaWSwrDUUyM5m3gknrz0iM1AIurHXqGQ5R2ZviVYwZaQmZ6jKW8TZLu4cXLXHn5x=w408-h306-k-no",
+      "google_name_matched": "MOHEJI 新丸ビル",
+      "raw_type": "もんじゃ焼き屋",
+      "distance_m": null,
+      "final_score": 0.9236
+    }
+  ]
+}
+
+== Restaurant Recommendations By Region And Category ==
+{
+  "count": 5,
+  "filters": {
+    "region": "東京都",
+    "category": "拉麵",
+    "venue_type": "",
+    "lat": null,
+    "lng": null,
+    "radius_m": null,
+    "top_k": 5
+  },
+  "results": [
+    {
+      "id": "ChIJazjtQgCNGGARO606yF6kY7I",
+      "name": "つじ田 神田末広町店",
+      "region": "東京都",
+      "category": "拉麵",
+      "venue_type": "餐廳",
+      "interests": [
+        "拉麵",
+        "餐廳",
+        "宵夜",
+        "快速用餐"
+      ],
+      "google_rating": 4.9,
+      "review_count": 3641,
+      "rating_norm": 0.98,
+      "review_norm": 0.7041,
+      "station_distance_efficiency": 0.67,
+      "static_score": 0.8972,
+      "distance_to_station_km": 2.5,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.7031126,
+      "lng": 139.7710666,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFNjYGCnMHOtjnpCPSKWhdP4qU5gb2D8M_5erVqbtcf1pkTbgnZcnUSiq8bO5sAeU4fKLc0oAdsgOOa2BrkDexSDa6xrRgZuUnGS4DLVzLT3lepO1e3Mh5-WSf108RQYCITTd-eBgFAuqES=w408-h272-k-no",
+      "google_name_matched": "つじ田 神田末広町店",
+      "raw_type": "ラーメン屋",
+      "distance_m": null,
+      "final_score": 0.8972
+    },
+    {
+      "id": "ChIJLTqRZRaNGGAR-9M2kJUCWhw",
+      "name": "Jikasei MENSHO",
+      "region": "東京都",
+      "category": "拉麵",
+      "venue_type": "餐廳",
+      "interests": [
+        "拉麵",
+        "餐廳",
+        "宵夜",
+        "快速用餐"
+      ],
+      "google_rating": 4.8,
+      "review_count": 4307,
+      "rating_norm": 0.96,
+      "review_norm": 0.7186,
+      "station_distance_efficiency": 0.4339,
+      "static_score": 0.8876,
+      "distance_to_station_km": 6.5,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.6620648,
+      "lng": 139.698835,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFucD0VtVBvx6YPULfGyyvmTcMOa9nbvirPFG9-4Qetzmq5vQ921cO3e5FyY_Ohz2JeRWBYaFLsJuY4LQYoh0OMJLL8l9JDMDLzvDvEjQ7QFmlGtkCxi5az4q8RBga28-jMKEeYule4yK0=w408-h306-k-no",
+      "google_name_matched": "Jikasei MENSHO",
+      "raw_type": "ラーメン屋",
+      "distance_m": null,
+      "final_score": 0.8876
+    },
+    {
+      "id": "ChIJ6-Rvg5-OGGAR99AELnNenOU",
+      "name": "らーめん 鴨to葱 上野御徒町本店",
+      "region": "東京都",
+      "category": "拉麵",
+      "venue_type": "餐廳",
+      "interests": [
+        "拉麵",
+        "餐廳",
+        "宵夜",
+        "快速用餐"
+      ],
+      "google_rating": 4.5,
+      "review_count": 13245,
+      "rating_norm": 0.9,
+      "review_norm": 0.815,
+      "station_distance_efficiency": 0.6165,
+      "static_score": 0.8745,
+      "distance_to_station_km": 3.1,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.7083768,
+      "lng": 139.7752537,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGacGt4InejxJnApX-_AFA7504sRvoCCJThbUNBHQaWNxNGqI3Gk0-VIovwnpe6ZTcSADqY0OqWPt6aRexx8ChdSNbobdvjLPVL0FWG0eM8DUM_dv_LPRXeggZhhUfrwnYGAX-vhhWDq5I5=w408-h408-k-no",
+      "google_name_matched": "らーめん 鴨to葱 上野御徒町本店",
+      "raw_type": "ラーメン屋",
+      "distance_m": null,
+      "final_score": 0.8745
+    },
+    {
+      "id": "ChIJ1WzWeC-LGGARKltXcP7uLqg",
+      "name": "つじ田 銀座店",
+      "region": "東京都",
+      "category": "拉麵",
+      "venue_type": "餐廳",
+      "interests": [
+        "拉麵",
+        "餐廳",
+        "宵夜",
+        "快速用餐"
+      ],
+      "google_rating": 4.7,
+      "review_count": 4415,
+      "rating_norm": 0.94,
+      "review_norm": 0.7207,
+      "station_distance_efficiency": 0.8215,
+      "static_score": 0.8742,
+      "distance_to_station_km": 1.1,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.6714326,
+      "lng": 139.7673806,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFn9LC4p1ffLv7QUITmwAVc-yoADcVe3cANBW4A21PxUAyXqABFdreWqPz7400bmMAi_SKeHHUwf2NmvWico-7x8d9S5WQ5bYoWLCEnpmBFC7y-PIYd5fmT3OTJ77huyGus0Xxc=w408-h272-k-no",
+      "google_name_matched": "つじ田 銀座店",
+      "raw_type": "ラーメン屋",
+      "distance_m": null,
+      "final_score": 0.8742
+    },
+    {
+      "id": "ChIJpfT2xjyMGGAR0QPwOb_YydM",
+      "name": "らーめん大 姉妹店らーめん安",
+      "region": "東京都",
+      "category": "拉麵",
+      "venue_type": "餐廳",
+      "interests": [
+        "拉麵",
+        "餐廳",
+        "宵夜",
+        "快速用餐"
+      ],
+      "google_rating": 4.8,
+      "review_count": 1677,
+      "rating_norm": 0.96,
+      "review_norm": 0.6376,
+      "station_distance_efficiency": 0.6421,
+      "static_score": 0.8633,
+      "distance_to_station_km": 2.8,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.7058959,
+      "lng": 139.7618425,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFiyHDzABHRJgr27CD2RwnQaz1oN3CCML3TwBUD8lCpNGaYl38yjU6RO8FcMq77vQ8S5wPt_mYBQWuRBbm73K34dxf-sBeadBcG1mnqeUSGRwonFLyf2taY5o1-SwGLKSET8Z14ZdeOd5c4=w408-h306-k-no",
+      "google_name_matched": "らーめん大 姉妹店らーめん安",
+      "raw_type": "ラーメン屋",
+      "distance_m": null,
+      "final_score": 0.8633
+    }
+  ]
+}
+
+== Nearby Restaurant Recommendations ==
+{
+  "count": 5,
+  "filters": {
+    "region": "",
+    "category": "",
+    "venue_type": "",
+    "lat": 35.681236,
+    "lng": 139.767125,
+    "radius_m": 300.0,
+    "top_k": 5
+  },
+  "results": [
+    {
+      "id": "ChIJ2bykGIWLGGARVfwuKdpfCmU",
+      "name": "MOHEJI 新丸ビル",
+      "region": "東京都",
+      "category": "日式",
+      "venue_type": "餐廳",
+      "interests": [
+        "日式",
+        "餐廳",
+        "文字燒"
+      ],
+      "google_rating": 4.9,
+      "review_count": 10144,
+      "rating_norm": 0.98,
+      "review_norm": 0.7921,
+      "station_distance_efficiency": 0.9451,
+      "static_score": 0.9236,
+      "distance_to_station_km": 0.3,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.682437,
+      "lng": 139.7642658,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGrS37mZ658f6fTmKyDbXQ0QRMR4ajWBFsC4c8Nh402YjB-vpNobVM0d9iJegUgAmKbSm8bZaWSwrDUUyM5m3gknrz0iM1AIurHXqGQ5R2ZviVYwZaQmZ6jKW8TZLu4cXLXHn5x=w408-h306-k-no",
+      "google_name_matched": "MOHEJI 新丸ビル",
+      "raw_type": "もんじゃ焼き屋",
+      "distance_m": 290.7,
+      "final_score": 0.9236
+    },
+    {
+      "id": "ChIJB5FLUACLGGARTMeHgJ01zDw",
+      "name": "月島もんじゃ くうや 東京駅",
+      "region": "東京都",
+      "category": "日式",
+      "venue_type": "餐廳",
+      "interests": [
+        "日式",
+        "餐廳",
+        "文字燒"
+      ],
+      "google_rating": 4.9,
+      "review_count": 7448,
+      "rating_norm": 0.98,
+      "review_norm": 0.7656,
+      "station_distance_efficiency": 0.9704,
+      "static_score": 0.9157,
+      "distance_to_station_km": 0.2,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.6798702,
+      "lng": 139.7675145,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHnQpMK-2yAkX1_R4Q8QRPgSu_vqzoQIxiAP0JOlXSf2AejOFUOqlweMBQ7Jz8zr2-wmvEamr3bXxy4sgIqVys6XG_gW9cZm4SOYJwyc2JQnBGpUBpDXRBKvJA6Awtgqo_hg-vn_U02Myk=w408-h544-k-no",
+      "google_name_matched": "月島もんじゃ くうや 東京駅",
+      "raw_type": "もんじゃ焼き屋",
+      "distance_m": 155.9,
+      "final_score": 0.9157
+    },
+    {
+      "id": "ChIJ62-yyeiLGGARmpNGyNps2Ro",
+      "name": "月島もんじゃ たまとや 東京駅",
+      "region": "東京都",
+      "category": "日式",
+      "venue_type": "餐廳",
+      "interests": [
+        "日式",
+        "餐廳",
+        "文字燒"
+      ],
+      "google_rating": 4.8,
+      "review_count": 8348,
+      "rating_norm": 0.96,
+      "review_norm": 0.7754,
+      "station_distance_efficiency": 0.9656,
+      "static_score": 0.9046,
+      "distance_to_station_km": 0.2,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.6825784,
+      "lng": 139.7681097,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE0JKbzYw1kFDsk6SPJcgx_qZPIXyYQUboOLjOdc0BgEonwKsRhfC5MDANDAG_HlckEgzuQ53D3pQ5yeEBBhnhnRtvusTHMjFqDYx3alKdvoz5FN6G5lk95DPB9AV7T6jxjOiRPoPQyVpHN=w408-h306-k-no",
+      "google_name_matched": "月島もんじゃ たまとや 東京駅",
+      "raw_type": "もんじゃ焼き屋",
+      "distance_m": 173.8,
+      "final_score": 0.9046
+    },
+    {
+      "id": "ChIJtTLL9fuLGGARm6IP54k3xn4",
+      "name": "T's たんたん グランスタ東京（京葉ストリートエリア）",
+      "region": "東京都",
+      "category": "異國料理",
+      "venue_type": "餐廳",
+      "interests": [
+        "異國料理",
+        "餐廳",
+        "純素料理"
+      ],
+      "google_rating": 4.6,
+      "review_count": 2796,
+      "rating_norm": 0.92,
+      "review_norm": 0.6815,
+      "station_distance_efficiency": 0.9689,
+      "static_score": 0.8484,
+      "distance_to_station_km": 0.2,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.6797625,
+      "lng": 139.7669513,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFZhFspQLLA8yUmItnWzWPkvlo0xLd9GlGOnffL45GslS9cg8C3vvU3g5kQsqukVWg_lZv0gCfKd8Lx7N8a0wrp1BgywUe1l5NqcH5ylOLTHzqHR_t_b5xQqoywxP_B4Mi_HQYJrTSWlC8=w408-h306-k-no",
+      "google_name_matched": "T's たんたん グランスタ東京（京葉ストリートエリア）",
+      "raw_type": "ビーガン料理店",
+      "distance_m": 164.6,
+      "final_score": 0.8484
+    },
+    {
+      "id": "ChIJeUDSM7-LGGARjdgZ-MacvWk",
+      "name": "近畿大学水産研究所 はなれ グランスタ東京店",
+      "region": "東京都",
+      "category": "海鮮",
+      "venue_type": "餐廳",
+      "interests": [
+        "海鮮",
+        "餐廳",
+        "在地特色"
+      ],
+      "google_rating": 4.4,
+      "review_count": 3109,
+      "rating_norm": 0.88,
+      "review_norm": 0.6906,
+      "station_distance_efficiency": 0.9983,
+      "static_score": 0.8232,
+      "distance_to_station_km": 0.0,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.681277,
+      "lng": 139.7671167,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFCy9RZMNJBLdHsoXJxrPxWJn90wKhnfO-O7tnnYz_O5sZ4jPhq9sVoLs6LNgGR9BslQL2YOfgy2vHMyOvanj5TQWzJomzfAPdbx9kYOFIYgQkm3x3KOTPVUExuH9sf36wfUZv5=w426-h240-k-no",
+      "google_name_matched": "近畿大学水産研究所 はなれ グランスタ東京店",
+      "raw_type": "シーフード・海鮮料理店",
+      "distance_m": 4.6,
+      "final_score": 0.8232
+    }
+  ]
+}
+
+== Nearby Restaurant Recommendations With Category ==
+{
+  "count": 5,
+  "filters": {
+    "region": "",
+    "category": "咖啡",
+    "venue_type": "",
+    "lat": 35.681236,
+    "lng": 139.767125,
+    "radius_m": 500.0,
+    "top_k": 5
+  },
+  "results": [
+    {
+      "id": "ChIJGQNmBAiLGGARaYwG7xZzl80",
+      "name": "GOOD COFFEE FARMS Cafe & Bar",
+      "region": "東京都",
+      "category": "咖啡",
+      "venue_type": "小店",
+      "interests": [
+        "咖啡",
+        "小店",
+        "喫茶店",
+        "咖啡廳"
+      ],
+      "google_rating": 4.6,
+      "review_count": 909,
+      "rating_norm": 0.92,
+      "review_norm": 0.585,
+      "station_distance_efficiency": 0.9233,
+      "static_score": 0.8195,
+      "distance_to_station_km": 0.4,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.6810778,
+      "lng": 139.771698,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHn_zOrdMuX46eg4sW5X70FdHVCg7kY1h2kNro9Z9hYV3fmsvFp_I2RwLEqA_55HICUkXZ6EYiU920CrvQAT9uxKkwPQ_Kv8B2GwSDKitMRLoAa5cTdwdC4m2EdS6I3z6kvW6dwuw=w425-h240-k-no",
+      "google_name_matched": "GOOD COFFEE FARMS Cafe & Bar",
+      "raw_type": "カフェ・喫茶",
+      "distance_m": 413.4,
+      "final_score": 0.8195
+    },
+    {
+      "id": "ChIJtxODuv6LGGARuRRx6E2TZuM",
+      "name": "茶寮都路里 大丸東京店",
+      "region": "東京都",
+      "category": "咖啡",
+      "venue_type": "餐廳",
+      "interests": [
+        "咖啡",
+        "餐廳",
+        "茶屋"
+      ],
+      "google_rating": 4.4,
+      "review_count": 796,
+      "rating_norm": 0.88,
+      "review_norm": 0.5737,
+      "station_distance_efficiency": 0.9625,
+      "static_score": 0.7881,
+      "distance_to_station_km": 0.2,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.6814228,
+      "lng": 139.7692422,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG2l7NsZqAnh74XjUGJe14qHnTMBCCorSFQ_kjo54ROfdNU52IT3HJPfd8qgLyOZkq3A3OE0kFzISy82HUcQaSo1eHSkkLN2qJlXA7cfKaEUE2QT_Iv2nng5pPa_hs_Fu_948KbY10hMWtN=w408-h408-k-no",
+      "google_name_matched": "茶寮都路里 大丸東京店",
+      "raw_type": "ティーハウス",
+      "distance_m": 192.4,
+      "final_score": 0.7881
+    },
+    {
+      "id": "ChIJtxODuv6LGGARDffmTHxUNFM",
+      "name": "あんみつ みはし 東京駅一番街店",
+      "region": "東京都",
+      "category": "咖啡",
+      "venue_type": "小店",
+      "interests": [
+        "咖啡",
+        "小店",
+        "喫茶店",
+        "咖啡廳"
+      ],
+      "google_rating": 4.3,
+      "review_count": 802,
+      "rating_norm": 0.86,
+      "review_norm": 0.5743,
+      "station_distance_efficiency": 0.9779,
+      "static_score": 0.7743,
+      "distance_to_station_km": 0.1,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.6815824,
+      "lng": 139.7682573,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEFhRioY-aen7HuKjiJwd9dVgxV7fQ5wlt9JXlKaHaUIK88XcKd4r0e85fU2NCz3tBfxQJ9GS4zxe9Scj4FaToFNdqN2rG9sTNNkxwOoowMl1p5P3HdvatGkIzwo9zXEbWOnKC3=w408-h291-k-no",
+      "google_name_matched": "あんみつ みはし 東京駅一番街店",
+      "raw_type": "カフェ・喫茶",
+      "distance_m": 109.3,
+      "final_score": 0.7743
+    },
+    {
+      "id": "ChIJ8efq7_yLGGARSqt5H0m7D7o",
+      "name": "アロマ珈琲",
+      "region": "東京都",
+      "category": "咖啡",
+      "venue_type": "小店",
+      "interests": [
+        "咖啡",
+        "小店",
+        "喫茶店",
+        "咖啡廳"
+      ],
+      "google_rating": 4.1,
+      "review_count": 947,
+      "rating_norm": 0.82,
+      "review_norm": 0.5886,
+      "station_distance_efficiency": 0.928,
+      "static_score": 0.7506,
+      "distance_to_station_km": 0.4,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.6796077,
+      "lng": 139.770923,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEqP5eAH34FUwZX7Z4ihY_nFSPh6aeffxMdvDcqIV_nqgqw2CteiTaJV8G9HcR0VfTIOksRyGbLqKuMYo8fD24DnhytCKEmOsSGsVhHPOJi-zqYhWlPXIl21SeqtxNx1Tbg2Kz0MKQm8eKb=w408-h306-k-no",
+      "google_name_matched": "アロマ珈琲",
+      "raw_type": "コーヒーショップ・喫茶店",
+      "distance_m": 387.9,
+      "final_score": 0.7506
+    },
+    {
+      "id": "ChIJi85DkOiLGGAR6Mf-P98rIQc",
+      "name": "TORIBA COFFEE TOKYO",
+      "region": "東京都",
+      "category": "咖啡",
+      "venue_type": "小店",
+      "interests": [
+        "咖啡",
+        "小店",
+        "喫茶店",
+        "咖啡廳"
+      ],
+      "google_rating": 4.2,
+      "review_count": 402,
+      "rating_norm": 0.84,
+      "review_norm": 0.5151,
+      "station_distance_efficiency": 0.9508,
+      "static_score": 0.7425,
+      "distance_to_station_km": 0.3,
+      "station_anchor": "Tokyo Station",
+      "lat": 35.679817,
+      "lng": 139.7694012,
+      "image_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGru0svJK0BqBPBliixoaw3iOBKyU-FZObotiUWICLLUFtOlUeoIUBZIQYUGgQEnGSPo647pPPh3atPM01Ty4X5eVqXi5eVjm8McHTZXvGeHv-bs1rNTb_1_UdsNc0Jr3GuNQoa=w408-h272-k-no",
+      "google_name_matched": "TORIBA COFFEE TOKYO",
+      "raw_type": "カフェ・喫茶",
+      "distance_m": 259.2,
+      "final_score": 0.7425
+    }
+  ]
+}
+
+== Validation Error Check ==
+{
+  "non_field_errors": [
+    "lat and lng must be provided together."
+  ]
+}
+
+== Done ==
+Strict restaurant test completed successfully against http://127.0.0.1:8000

@@ -104,7 +104,7 @@ python manage.py migrate
 
 Import POI Data
 ```Bash
-python manage.py import_pois ../japan_with_rating_interest.json --replace
+python manage.py import_pois ../../japan_with_rating_interest.json --replace
 ```
 Start Server
 ```Bash

@@ -34,3 +34,7 @@ poi_category_region_report.csv
 Thumbs.db
 .vscode/
 .idea/
+
+*.sqlite3
+japan_with_rating_interest.json
+japan_restaurant_with_rating_interest.json
